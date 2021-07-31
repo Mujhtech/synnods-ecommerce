@@ -2,6 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\ProductController;
+use App\Http\Controllers\API\CategoryController;
+use App\Http\Controllers\API\SubCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +26,38 @@ Route::get('/', function (Request $request) {
     ], 200, $request->header());
 });
 
-Route::prefix('v1')->group(function () {
+Route::group(['prefix' => 'v1'], function () {
+
+    // Authentication routes
+
+    Route::prefix('auth')->name('auth.')->group(function () {
+
+        Route::post('login', [AuthController::class, 'login'])->name('login');
+
+        Route::post('register', [AuthController::class, 'register'])->name('register');
+
+        Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+        
+    });
+
+    // Product routes
+
+    Route::prefix('product')->name('product.')->group(function () {
+        
+    });
+
+    // Category routes 
+
+    Route::prefix('category')->name('category.')->group(function () {
+        
+    });
+
+
+    // User routes
+
+    Route::prefix('user')->name('user.')->group(function () {
+        
+    });
 
 });
 

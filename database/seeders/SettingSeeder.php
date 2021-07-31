@@ -15,7 +15,7 @@ class SettingSeeder extends Seeder
     public function run()
     {
         //
-        $methods = [
+        $settings = [
             [
                 "type" => "site_email",
                 "value" => "synnods@gmail.com"
