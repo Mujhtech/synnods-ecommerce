@@ -15,6 +15,8 @@ class CreateProductLabelsTable extends Migration
     {
         Schema::create('product_labels', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('color');
             $table->timestamps();
         });
     }

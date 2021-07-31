@@ -20,9 +20,9 @@ class CreateOrdersTable extends Migration
             $table->foreignId('shipment_id')->constrained();
             $table->foreignId('delivery_address_id')->constrained();
             $table->foreignId('payment_method_id')->constrained();
-            $table->timestamp('payment_date');
-            $table->timestamp('shipment_date');
-            $table->timestamp('order_date');
+            $table->dateTime('payment_date')->nullable();
+            $table->dateTime('shipment_date')->nullable();
+            $table->dateTime('order_date')->nullable();
             $table->longText('note');
             $table->boolean('status')->default(false);
             $table->boolean('confimed')->default(false);
