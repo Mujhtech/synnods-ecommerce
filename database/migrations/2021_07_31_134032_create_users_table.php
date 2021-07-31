@@ -19,10 +19,10 @@ class CreateUsersTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('user_name')->unique();
-            $table->string('country');
-            $table->string('state');
-            $table->string('city');
-            $table->string('address');
+            $table->string('country')->nullable();
+            $table->string('state')->nullable();
+            $table->string('city')->nullable();
+            $table->string('address')->nullable();
             $table->integer('phone');
             $table->boolean('active')->default(false);
             $table->string('email')->unique();

@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->integer('order_number');
             $table->integer('string');
             $table->foreignId('shipment_id')->constrained();
+            $table->foreignId('delivery_address_id')->constrained();
             $table->foreignId('payment_method_id')->constrained();
             $table->timestamp('payment_date');
             $table->timestamp('shipment_date');

@@ -20,8 +20,10 @@ class CreateDeliveryAddressesTable extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('country');
+            $table->string('phone');
             $table->integer('postal_code');
             $table->boolean('status')->default(false);
+            $table->boolean('is_default')->default(false);
             $table->timestamps();
         });
     }

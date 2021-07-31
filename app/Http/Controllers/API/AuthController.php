@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Auth;
@@ -47,6 +48,32 @@ class AuthController extends ApiController
 
         } else {
 
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Some error occurred, try again'
+            ]);
+
+        }
+
+    }
+
+    public function register(RegisterRequest $request){
+
+        $user = new User();
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->email = $request->email;
+        $user->user_name = $request->user_name;
+        $user->role_id = 3;
+        $user->password = bcrypt($request->password);
+
+        if ($user->save()){
+
+            return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+                'message' => 'User created successfully'
+            ]);
+
+        } else {
+            
             return $this->setStatusCode(500)->setStatusMessage('error')->respond([
                 'message' => 'Some error occurred, try again'
             ]);
