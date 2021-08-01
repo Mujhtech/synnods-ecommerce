@@ -8,7 +8,7 @@ use App\Http\Requests\CategoryRequest;
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 
-class APICategoryController extends ApiController
+class CategoryController extends ApiController
 {
     //
 
