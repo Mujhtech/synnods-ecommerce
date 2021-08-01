@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
 	        RoleSeeder::class,
 	        ProductLabelSeeder::class,
             PaymentMethodSeeder::class,
-            SettingSeeder::class
+            SettingSeeder::class,
+            EmailTemplateSeeder::class
 	    ]);
     }
 }
