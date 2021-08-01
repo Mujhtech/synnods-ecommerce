@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use App\Models\ErrorLog;
 
 class Handler extends ExceptionHandler
 {
@@ -79,7 +80,7 @@ class Handler extends ExceptionHandler
                 $response['responseError'] = $exception->original['errors'];
                 break;
             default:
-                $response['responseMessage'] = ($statusCode == 500) ? $exception->getTrace() : $exception->getMessage().', File: '.$exception->getFile().', Line: '.$exception->getLine();
+                $response['responseMessage'] = $this->logError($statusCode, $exception);
                 break;
         }
     
@@ -87,5 +88,32 @@ class Handler extends ExceptionHandler
         $response['responseCode'] = $statusCode;
     
         return response()->json(['status' => $response['responseCode'], 'message' => $response['responseMessage']], $statusCode);
+    }
+
+    private function logError($code, $exception){
+
+        if($code == 500){
+
+            $log = new ErrorLog;
+            $log->traces = json_encode($exception->getTrace());
+            $log->line = $exception->getLine();
+            $log->file = $exception->getFile();
+            $log->code = $code;
+            $log->save();
+
+            return $exception->getTrace();
+
+        } else {
+
+            $log = new ErrorLog;
+            $log->traces = $exception->getMessage();
+            $log->line = $exception->getLine();
+            $log->file = $exception->getFile();
+            $log->code = $code;
+            $log->save();
+
+            return $exception->getMessage().', File: '.$exception->getFile().', Line: '.$exception->getLine();
+        }
+
     }
 }

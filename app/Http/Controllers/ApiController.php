@@ -64,7 +64,7 @@ class ApiController extends Controller
         return response()->json([
             'status' => $this->getStatusMessage(),
             'data' => $data
-        ], $this->getStatusCode, $headers);
+        ], $this->getStatusCode(), $headers);
 
     }
 }
