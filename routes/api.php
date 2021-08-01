@@ -43,6 +43,8 @@ Route::group(['prefix' => 'v1'], function () {
     // Product routes
 
     Route::prefix('product')->name('product.')->group(function () {
+
+        Route::get('index', [ProductController::class, 'index'])->name('index');
         
     });
 

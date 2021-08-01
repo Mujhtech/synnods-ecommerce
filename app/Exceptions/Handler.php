@@ -37,5 +37,55 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+
+        $this->renderable(function (Throwable $e, $request) {
+
+            if ($request->is('api/*') || $request->wantsJson() || $request->expectsJson() || $request->isJson()) {
+                
+                return $this->customApiResponse($e);
+
+            }
+
+        });
+
+    }
+
+
+    private function customApiResponse($exception)
+    {
+        if (method_exists($exception, 'getStatusCode')) {
+            $statusCode = $exception->getStatusCode();
+        } else {
+            $statusCode = 500;
+        }
+    
+        $response = [];
+    
+        switch ($statusCode) {
+            case 401:
+                $response['responseMessage'] = 'Unauthorized';
+                break;
+            case 403:
+                $response['responseMessage'] = 'Forbidden';
+                break;
+            case 404:
+                $response['responseMessage'] = 'Not Found';
+                break;
+            case 405:
+                $response['responseMessage'] = 'Method Not Allowed';
+                break;
+            case 422:
+                $response['responseMessage'] = $exception->original['message'];
+                $response['responseError'] = $exception->original['errors'];
+                break;
+            default:
+                $response['responseMessage'] = ($statusCode == 500) ? $exception->getTrace() : $exception->getMessage().', File: '.$exception->getFile().', Line: '.$exception->getLine();
+                break;
+        }
+    
+    
+        $response['responseCode'] = $statusCode;
+    
+        return response()->json(['status' => $response['responseCode'], 'message' => $response['responseMessage']], $statusCode);
     }
 }
