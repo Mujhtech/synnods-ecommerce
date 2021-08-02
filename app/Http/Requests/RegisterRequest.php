@@ -29,7 +29,8 @@ class RegisterRequest extends FormRequest
             'email' => 'required|email|unique:users',
             'first_name' => 'required|string',
             'last_name' => 'required|string',
-            'user_name' => 'required|string|min:8|unique:users'
+            'user_name' => 'string|min:8|unique:users',
+            'phone' => 'required|max:11'
         ];
     }
 
@@ -44,7 +45,8 @@ class RegisterRequest extends FormRequest
             'last_name.string' => 'Last name must be a character',
             'first_name.required' => 'Last name is required',
             'first_name.string' => 'Last name must be a character',
-            'user_name.required' => 'User name is required',
+            'phone.required' => 'Phone number is required',
+            'phone.max' => 'Phone number must be 11 in digit',
             'user_name.string' => 'User name must be a character',
             'user_name.min' => 'User name must be 8 character',
             'user_name.unique' => 'Username already exist',

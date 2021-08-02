@@ -22,6 +22,7 @@ class AuthController extends ApiController
 
     public function login(LoginRequest $request){
 
+        $request->validated();
 
         // Authenticate user if user validation is true
         if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])){
@@ -62,6 +63,8 @@ class AuthController extends ApiController
     }
 
     public function register(RegisterRequest $request){
+
+        $request->validated();
 
         $user = new User();
         $user->first_name = $request->first_name;

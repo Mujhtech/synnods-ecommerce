@@ -99,9 +99,8 @@ export default {
         email: "",
         first_name: "",
         last_name: "",
-        user_name: "",
         phone: "",
-        password: "",
+        password: ""
       },
       errors: {},
       loading: false,

@@ -5,6 +5,8 @@ import Auth from "../pages/Auth";
 import Login from "../pages/auth/login";
 import Register from "../pages/auth/register";
 import ForgotPassword from "../pages/auth/forgot-password";
+import Verify from "../pages/auth/verify";
+import Reset from "../pages/auth/reset";
 import TrackOrder from "../pages/order/track";
 import Account from "../pages/pages/account";
 import Cart from "../pages/pages/cart";
@@ -69,6 +71,15 @@ const routes = [
                 path: "forgot-password",
                 component: ForgotPassword,
                 meta: { middleware: "guest" }
+            },
+            {
+                path: "reset/:token",
+                component: Reset,
+                meta: { middleware: "guest" }
+            },
+            {
+                path: "verify/:token",
+                component: Verify
             }
         ]
     }
