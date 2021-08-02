@@ -101,7 +101,9 @@ class Handler extends ExceptionHandler
             $log->code = $code;
             $log->save();
 
-            return $exception->getTrace();
+            //return $exception->getTrace();
+
+            return $exception->getMessage().', File: '.$exception->getFile().', Line: '.$exception->getLine();
 
         } else {
 
