@@ -1,31 +1,31 @@
 <template>
 	<div class="sticky-navbar">
 		<div class="sticky-info">
-			<nuxt-link to="/">
+			<router-link to="/">
 				<i class="icon-home"></i>Home
-			</nuxt-link>
+			</router-link>
 		</div>
 		<div class="sticky-info">
-			<nuxt-link to="/shop">
+			<router-link to="/shop">
 				<i class="icon-bars"></i>Categories
-			</nuxt-link>
+			</router-link>
 		</div>
 		<div class="sticky-info">
-			<nuxt-link to="/pages/wishlist">
+			<router-link to="/pages/wishlist">
 				<i class="icon-wishlist-2"></i>Wishlist
-			</nuxt-link>
+			</router-link>
 		</div>
 		<div class="sticky-info">
-			<nuxt-link to="/pages/login">
+			<router-link to="/pages/login">
 				<i class="icon-user-2"></i>Account
-			</nuxt-link>
+			</router-link>
 		</div>
 		<div class="sticky-info">
-			<nuxt-link to="/pages/cart">
+			<router-link to="/pages/cart">
 				<i class="icon-shopping-cart position-relative">
 					<span class="cart-count badge-circle">{{ totalCount }}</span>
 				</i>Cart
-			</nuxt-link>
+			</router-link>
 		</div>
 	</div>
 </template>

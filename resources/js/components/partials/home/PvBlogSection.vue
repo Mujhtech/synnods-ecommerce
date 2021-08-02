@@ -31,10 +31,10 @@
 </template>
 
 <script>
-import PvCarousel from '~/components/features/PvCarousel';
-import PvPostOne from '~/components/features/post/PvPostOne';
-import PvBrandSection from '~/components/partials/home/PvBrandSection';
-import { blogSlider } from '~/utils/data/carousel';
+import PvCarousel from '../../features/PvCarousel';
+import PvPostOne from '../../features/post/PvPostOne';
+import PvBrandSection from '../../partials/home/PvBrandSection';
+import { blogSlider } from '../../../utils/data/carousel';
 
 export default {
 	components: {

@@ -93,7 +93,7 @@
 					<div class="row">
 						<div class="col-lg-2 d-flex align-items-center">
 							<img
-								src="~/static/images/logo-footer.png"
+								src="../../static/images/logo-footer.png"
 								alt="Logo"
 								class="logo mb-3"
 							/>
@@ -101,16 +101,16 @@
 						<div class="col-lg-5 col-xl-6 d-flex align-items-center">
 							<ul class="links mb-3">
 								<li>
-									<nuxt-link to="/pages/about-us">About Us</nuxt-link>
+									<router-link to="/pages/about-us">About Us</router-link>
 								</li>
 								<li>
-									<nuxt-link to="/pages/blog">Blog</nuxt-link>
+									<router-link to="/pages/blog">Blog</router-link>
 								</li>
 								<li>
 									<a href="javascript:;">Order Tracking</a>
 								</li>
 								<li>
-									<nuxt-link to="/pages/contact-us">Contact Us</nuxt-link>
+									<router-link to="/pages/contact-us">Contact Us</router-link>
 								</li>
 							</ul>
 						</div>
@@ -173,8 +173,8 @@
 </template>
 
 <script>
-import PvCarousel from '~/components/features/PvCarousel.vue';
-import { instaSlider } from '~/utils/data/carousel';
+import PvCarousel from '../features/PvCarousel.vue';
+import { instaSlider } from '../../utils/data/carousel';
 
 export default {
 	components: {

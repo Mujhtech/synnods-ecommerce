@@ -16,16 +16,17 @@
 </template>
 
 <script>
-import PvIntroSection from '~/components/partials/home/PvIntroSection';
-import PvFeaturedCollection from '~/components/partials/home/PvFeaturedCollection';
-import PvCategorySection from '~/components/partials/home/PvCategorySection';
-import PvNewsletterSection from '~/components/partials/home/PvNewsletterSection';
-import PvBrandSection from '~/components/partials/home/PvBrandSection';
-import Api, { baseUrl } from '~/api';
-import { getProductsByAttri } from '~/utils/service';
-import { getCookie } from '~/utils';
+import PvIntroSection from '../components/partials/home/PvIntroSection';
+import PvFeaturedCollection from '../components/partials/home/PvFeaturedCollection';
+import PvCategorySection from '../components/partials/home/PvCategorySection';
+import PvNewsletterSection from '../components/partials/home/PvNewsletterSection';
+import PvBrandSection from '../components/partials/home/PvBrandSection';
+import Api, { baseUrl } from '../api';
+import { getProductsByAttri } from '../utils/service';
+import { getCookie } from '../utils';
 
 export default {
+	name: "Index",
 	components: {
 		PvIntroSection,
 		PvCategorySection,
@@ -59,7 +60,7 @@ export default {
 			) {
 				this.$modal.show(
 					() =>
-						import( '~/components/features/modal/PvNewsletterModal' ),
+						import( '../components/features/modal/PvNewsletterModal' ),
 					{},
 					{ width: '740', height: 'auto', adaptive: true, class: 'newsletter-modal' }
 				);

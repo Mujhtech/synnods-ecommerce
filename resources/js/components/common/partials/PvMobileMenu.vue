@@ -17,11 +17,11 @@
 				<nav class="mobile-nav">
 					<ul class="mobile-menu">
 						<li>
-							<nuxt-link to="/">Home</nuxt-link>
+							<router-link to="/">Home</router-link>
 						</li>
 
 						<li :class="{open: catOpened}">
-							<nuxt-link
+							<router-link
 								to="/shop"
 								class="sub-menu-link menu-with-ul"
 							>
@@ -30,7 +30,7 @@
 									class="mmenu-btn"
 									@click.prevent="catOpened = !catOpened"
 								></span>
-							</nuxt-link>
+							</router-link>
 
 							<vue-slide-toggle :open="catOpened">
 								<ul :class="{open: var1Opened}">
@@ -52,7 +52,7 @@
 										v-for="(item,index) in mainMenu.shop.variation1"
 										:key="'shop1' + index"
 									>
-										<nuxt-link :to="item.url">{{ item.title }}</nuxt-link>
+										<router-link :to="item.url">{{ item.title }}</router-link>
 									</li>
 							</vue-slide-toggle>
 						</li>
@@ -77,7 +77,7 @@
 							v-for="(item,index) in mainMenu.shop.variation2"
 							:key="'shop2' + index"
 						>
-							<nuxt-link :to="item.url">{{ item.title }}</nuxt-link>
+							<router-link :to="item.url">{{ item.title }}</router-link>
 						</li>
 						</vue-slide-toggle>
 						</li>
@@ -86,7 +86,7 @@
 					</li>
 
 					<li :class="{open: prodOpened}">
-						<nuxt-link
+						<router-link
 							to="/product/default/a-white-chair"
 							class="sub-menu-link menu-with-ul"
 						>
@@ -95,7 +95,7 @@
 								class="mmenu-btn"
 								@click.prevent="prodOpened = !prodOpened"
 							></span>
-						</nuxt-link>
+						</router-link>
 
 						<vue-slide-toggle :open="prodOpened">
 							<ul :class="{open: prod1Opened}">
@@ -117,7 +117,7 @@
 									v-for="(item,index) in mainMenu.product.pages"
 									:key="'product1' + index"
 								>
-									<nuxt-link :to="item.url">{{ item.title }}</nuxt-link>
+									<router-link :to="item.url">{{ item.title }}</router-link>
 								</li>
 						</vue-slide-toggle>
 					</li>
@@ -142,7 +142,7 @@
 							v-for="(item,index) in mainMenu.product.layout"
 							:key="'product2' + index"
 						>
-							<nuxt-link :to="item.url">{{ item.title }}</nuxt-link>
+							<router-link :to="item.url">{{ item.title }}</router-link>
 						</li>
 						</vue-slide-toggle>
 						</li>
@@ -151,7 +151,7 @@
 					</li>
 
 					<li :class="{open: pageOpened}">
-						<nuxt-link
+						<router-link
 							to="/pages/about-us"
 							class="sub-menu-link"
 						>
@@ -161,7 +161,7 @@
 								class="mmenu-btn"
 								@click.prevent="pageOpened = !pageOpened"
 							></span>
-						</nuxt-link>
+						</router-link>
 
 						<vue-slide-toggle :open="pageOpened">
 							<ul>
@@ -169,17 +169,17 @@
 									v-for="item in mainMenu.other"
 									:key="item.title"
 								>
-									<nuxt-link
+									<router-link
 										:to="item.url"
 										:class="{'sub-menu-link': item.subPages}"
-									>{{ item.title }}</nuxt-link>
+									>{{ item.title }}</router-link>
 
 									<ul v-if="item.subPages">
 										<li
 											v-for="subItem in item.subPages"
 											:key="subItem.title"
 										>
-											<nuxt-link :to="subItem.url">{{ subItem.title }}</nuxt-link>
+											<router-link :to="subItem.url">{{ subItem.title }}</router-link>
 										</li>
 									</ul>
 								</li>
@@ -188,10 +188,10 @@
 					</li>
 
 					<li>
-						<nuxt-link to="/pages/blog">Blog</nuxt-link>
+						<router-link to="/pages/blog">Blog</router-link>
 					</li>
 					<li>
-						<nuxt-link to="/pages/about-us">About Us</nuxt-link>
+						<router-link to="/pages/about-us">About Us</router-link>
 					</li>
 					</ul>
 
@@ -212,25 +212,25 @@
 
 					<ul class="mobile-menu">
 						<li>
-							<nuxt-link to="/pages/account">My Account</nuxt-link>
+							<router-link to="/pages/account">My Account</router-link>
 						</li>
 						<li>
-							<nuxt-link to="/pages/contact-us">Contact Us</nuxt-link>
+							<router-link to="/pages/contact-us">Contact Us</router-link>
 						</li>
 						<li>
-							<nuxt-link to="/pages/blog">Blog</nuxt-link>
+							<router-link to="/pages/blog">Blog</router-link>
 						</li>
 						<li>
-							<nuxt-link to="/pages/wishlist">My Wishlist</nuxt-link>
+							<router-link to="/pages/wishlist">My Wishlist</router-link>
 						</li>
 						<li>
-							<nuxt-link to="/pages/cart">Cart</nuxt-link>
+							<router-link to="/pages/cart">Cart</router-link>
 						</li>
 						<li>
-							<nuxt-link
+							<router-link
 								to="/pages/login"
 								class="login-link"
-							>Log In</nuxt-link>
+							>Log In</router-link>
 						</li>
 					</ul>
 				</nav>
@@ -274,7 +274,7 @@
 
 <script>
 import { VueSlideToggle } from 'vue-slide-toggle';
-import { mainMenu } from '~/utils/data/menu';
+import { mainMenu } from '../../../utils/data/menu';
 
 export default {
 	components: {

@@ -17,7 +17,7 @@
 					<div class="banner banner1">
 						<figure>
 							<img
-								src="~/static/images/home/banners/banner-1.jpg"
+								src="../../../static/images/home/banners/banner-1.jpg"
 								alt="banner"
 								width="779"
 								height="464"
@@ -46,10 +46,10 @@
 										<sup>$</sup>199<sup>99</sup>
 									</b>
 								</h5>
-								<nuxt-link
+								<router-link
 									to="/shop"
 									class="btn btn-sm text-uppercase ls-10"
-								>Shop Now</nuxt-link>
+								>Shop Now</router-link>
 							</div>
 						</div>
 					</div>
@@ -115,7 +115,7 @@
 					>
 						<figure>
 							<img
-								src="~/static/images/home/banners/banner-2.jpg"
+								src="../../../static/images/home/banners/banner-2.jpg"
 								alt="banner"
 								style="background: #eee"
 							/>
@@ -149,8 +149,8 @@
 <script>
 import isotope from 'vueisotope';
 import imagesLoaded from 'vue-images-loaded';
-import PvCarousel from '~/components/features/PvCarousel';
-import { baseSlider1 } from '~/utils/data/carousel';
+import PvCarousel from '../../features/PvCarousel';
+import { baseSlider1 } from '../../../utils/data/carousel';
 
 export default {
 	components: {

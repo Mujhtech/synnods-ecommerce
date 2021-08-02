@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VModal from 'vue-js-modal';
 import Notifications from 'vue-notification'
 import VueNouislider from 'vue-nouislider/dist/vue-nouislider.common';
-import VueAwesomeSwiper from 'vue-awesome-swiper/dist/ssr'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueLazyLoad from 'vue-lazyload';
 import 'vue-nouislider/dist/vue-nouislider.css';
 

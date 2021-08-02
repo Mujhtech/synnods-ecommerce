@@ -96,7 +96,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import { baseUrl } from '~/api';
+import { baseUrl } from '../../../api';
 
 export default {
 	data: function () {

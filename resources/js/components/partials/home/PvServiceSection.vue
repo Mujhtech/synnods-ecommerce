@@ -128,8 +128,8 @@
 </template>
 
 <script>
-import PvCarousel from '~/components/features/PvCarousel';
-import { serviceSlider, bannerSlider } from '~/utils/data/carousel'
+import PvCarousel from '../../features/PvCarousel';
+import { serviceSlider, bannerSlider } from '../../../utils/data/carousel'
 
 export default {
 	components: {

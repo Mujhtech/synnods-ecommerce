@@ -1,5 +1,5 @@
 import createPersistedState from 'vuex-persistedstate';
-import { currentDemo } from '~/api';
+import { currentDemo } from '../api';
 
 export default function ( { store } ) {
     let storage = localStorage.getItem( 'porto-vue' );

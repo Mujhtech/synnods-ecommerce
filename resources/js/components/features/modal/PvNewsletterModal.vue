@@ -6,7 +6,7 @@
 	>
 		<div class="newsletter-popup-content">
 			<img
-				src="~/static/images/logo-black.png"
+				src="../../../static/images/logo-black.png"
 				alt="Logo"
 				class="logo-newsletter"
 				width="101"
@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import { setCookie } from '~/utils/index';
+import { setCookie } from '../../../utils/index';
 
 export default {
 	methods: {

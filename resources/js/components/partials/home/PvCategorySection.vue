@@ -22,10 +22,10 @@
 						data-animation-delay="200"
 						v-animate
 					>
-						<nuxt-link :to="{path: '/shop', query: {category: 'fashion'}}">
+						<router-link :to="{path: '/shop', query: {category: 'fashion'}}">
 							<figure>
 								<img
-									src="~/static/images/home/products/categories/cat-1.jpg"
+									src="../../../static/images/home/products/categories/cat-1.jpg"
 									style="background: #eee"
 									alt="category"
 									width="280"
@@ -35,7 +35,7 @@
 							<div class="category-content">
 								<h3>Fashion</h3>
 							</div>
-						</nuxt-link>
+						</router-link>
 					</div>
 				</div>
 				<div
@@ -48,10 +48,10 @@
 						data-animation-delay="200"
 						v-animate
 					>
-						<nuxt-link :to="{path: '/shop', query: {category: 'furniture'}}">
+						<router-link :to="{path: '/shop', query: {category: 'furniture'}}">
 							<figure>
 								<img
-									src="~/static/images/home/products/categories/cat-2.jpg"
+									src="../../../static/images/home/products/categories/cat-2.jpg"
 									style="background: #eee"
 									alt="category"
 									width="580"
@@ -61,7 +61,7 @@
 							<div class="category-content">
 								<h3>Furniture</h3>
 							</div>
-						</nuxt-link>
+						</router-link>
 					</div>
 				</div>
 				<div
@@ -74,10 +74,10 @@
 						data-animation-delay="200"
 						v-animate
 					>
-						<nuxt-link :to="{path: '/shop', query: {category: 'decore'}}">
+						<router-link :to="{path: '/shop', query: {category: 'decore'}}">
 							<figure>
 								<img
-									src="~/static/images/home/products/categories/cat-3.jpg"
+									src="../../../static/images/home/products/categories/cat-3.jpg"
 									style="background: #eee"
 									alt="category"
 									width="280"
@@ -87,7 +87,7 @@
 							<div class="category-content">
 								<h3>Decore</h3>
 							</div>
-						</nuxt-link>
+						</router-link>
 					</div>
 				</div>
 				<div
@@ -100,10 +100,10 @@
 						data-animation-delay="200"
 						v-animate
 					>
-						<nuxt-link :to="{path: '/shop', query: {category: 'accessories'}}">
+						<router-link :to="{path: '/shop', query: {category: 'accessories'}}">
 							<figure>
 								<img
-									src="~/static/images/home/products/categories/cat-4.jpg"
+									src="../../../static/images/home/products/categories/cat-4.jpg"
 									style="background: #eee"
 									alt="category"
 									width="380"
@@ -113,7 +113,7 @@
 							<div class="category-content">
 								<h3>Accessories</h3>
 							</div>
-						</nuxt-link>
+						</router-link>
 					</div>
 				</div>
 				<div
@@ -126,10 +126,10 @@
 						data-animation-delay="200"
 						v-animate
 					>
-						<nuxt-link :to="{path: '/shop', query: {category: 'mobile'}}">
+						<router-link :to="{path: '/shop', query: {category: 'mobile'}}">
 							<figure>
 								<img
-									src="~/static/images/home/products/categories/cat-5.jpg"
+									src="../../../static/images/home/products/categories/cat-5.jpg"
 									style="background: #eee"
 									alt="category"
 									width="280"
@@ -139,7 +139,7 @@
 							<div class="category-content">
 								<h3>Mobile</h3>
 							</div>
-						</nuxt-link>
+						</router-link>
 					</div>
 				</div>
 				<div
@@ -152,10 +152,10 @@
 						data-animation-delay="200"
 						v-animate
 					>
-						<nuxt-link :to="{path: '/shop', query: {category: 'footwear'}}">
+						<router-link :to="{path: '/shop', query: {category: 'footwear'}}">
 							<figure>
 								<img
-									src="~/static/images/home/products/categories/cat-6.jpg"
+									src="../../../static/images/home/products/categories/cat-6.jpg"
 									style="background: #eee"
 									alt="category"
 									width="480"
@@ -165,7 +165,7 @@
 							<div class="category-content">
 								<h3>Footwear</h3>
 							</div>
-						</nuxt-link>
+						</router-link>
 					</div>
 				</div>
 				<div

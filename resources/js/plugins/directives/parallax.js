@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { parseOptions } from '~/utils';
+import { parseOptions } from '../../utils';
 
 let element;
 

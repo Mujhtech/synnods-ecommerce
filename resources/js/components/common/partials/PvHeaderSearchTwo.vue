@@ -93,7 +93,7 @@
 </template>
 <script>
 import { mapGetters } from 'vuex';
-import Api, { baseUrl, currentDemo } from '~/api';
+import Api, { baseUrl, currentDemo } from '../../../api';
 
 export default {
 	data: function () {

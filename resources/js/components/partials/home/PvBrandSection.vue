@@ -70,8 +70,8 @@
 </template>
 
 <script>
-import PvCarousel from '~/components/features/PvCarousel';
-import { brandSlider } from '~/utils/data/carousel';
+import PvCarousel from '../../features/PvCarousel';
+import { brandSlider } from '../../../utils/data/carousel';
 
 export default {
 	components: {

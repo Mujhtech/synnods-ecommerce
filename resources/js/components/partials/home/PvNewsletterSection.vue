@@ -23,10 +23,10 @@
 						<div class="banner-layer banner-layer-middle banner-layer-left">
 							<h3 class="m-b-1">Exclusive Shoes</h3>
 							<h4 class="text-uppercase mb-4">50% Off</h4>
-							<nuxt-link
+							<router-link
 								to="/shop"
 								class="btn"
-							>Shop Now</nuxt-link>
+							>Shop Now</router-link>
 						</div>
 
 						<div class="banner-layer banner-layer-right">
@@ -59,10 +59,10 @@
 							<h6 class="heading-border text-dark text-uppercase m-b-2">Amazing</h6>
 							<h3 class="ls-n-10 text-uppercase m-b-3">Collection</h3>
 							<h5 class="text-uppercase">Check our discounts</h5>
-							<nuxt-link
+							<router-link
 								to="/shop"
 								class="btn"
-							>Shop Now</nuxt-link>
+							>Shop Now</router-link>
 						</div>
 					</div>
 				</div>

@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import { baseUrl } from '~/api';
+import { baseUrl } from '../../../api';
 
 export default {
 	name: 'Notify',
