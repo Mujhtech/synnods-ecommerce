@@ -519,7 +519,7 @@ export default {
 							: this.product.price
 					};
 				}
-
+				
 				this.addToCart( { product: saledProduct } );
 			}
 		},

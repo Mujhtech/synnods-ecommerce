@@ -12,11 +12,24 @@ import {
     mutations as wishlistMutation,
     getters as wishlistGetter
 } from "./wishlist";
+import {
+    state as userState,
+    actions as userAction,
+    mutations as userMutation,
+    getters as userGetter
+} from "./user";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
     modules: {
+        user: {
+            namespaced: true,
+            state: userState,
+            actions: userAction,
+            mutations: userMutation,
+            getters: userGetter
+        },
         cart: {
             namespaced: true,
             state: cartState,

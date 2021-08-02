@@ -9,9 +9,9 @@
 			>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
-						<nuxt-link to="/">
+						<router-link to="/">
 							Home
-						</nuxt-link>
+						</router-link>
 					</li>
 					<li class="breadcrumb-item active">Shop</li>
 				</ol>

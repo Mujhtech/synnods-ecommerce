@@ -8,15 +8,17 @@
               <h2 class="title">Login</h2>
             </div>
 
-            <form action="#">
+            <form action="#" v-on:submit.prevent="login">
               <label for="login-email">
-                Username or email address
+                Email address
                 <span class="required">*</span>
               </label>
               <input
                 type="email"
                 class="form-input form-wide"
                 id="login-email"
+                v-model="user.email"
+                :disabled="loading"
                 required
               />
 
@@ -28,6 +30,8 @@
                 type="password"
                 class="form-input form-wide"
                 id="login-password"
+                v-model="user.password"
+                :disabled="loading"
                 required
               />
 
@@ -37,6 +41,7 @@
                     type="checkbox"
                     class="custom-control-input"
                     id="lost-password"
+                    v-model="user.remember_me"
                   />
                   <label class="custom-control-label mb-0" for="lost-password">
                     Remember me
@@ -50,8 +55,13 @@
                   Forgot Password?
                 </router-link>
               </div>
-              <button type="submit" class="btn btn-dark btn-md w-100">
-                LOGIN
+              <button
+                type="submit"
+                id="submit"
+                class="btn btn-dark btn-md w-100"
+                :disabled="loading"
+              >
+                Login
               </button>
             </form>
           </div>
@@ -62,5 +72,37 @@
 </template>
 
 <script>
-export default {};
+import * as auth from "../../services/auth";
+
+export default {
+  name: "Login",
+  data() {
+    return {
+      user: {
+        email: "",
+        password: "",
+        remember_me: false,
+      },
+      errors: {},
+      loading: false
+    };
+  },
+  methods: {
+    login: async function () {
+      let submit = document.getElementById("submit");
+      try {
+        this.loading = true;
+        submit.innerText = 'Loading...'
+        const response = await auth.login(this.user);
+        this.loading = false;
+        submit.innerText = 'Login'
+        console.log(response);
+      } catch (error) {
+        this.loading = false;
+        submit.innerText = 'Login'
+        console.log(error.response);
+      }
+    },
+  },
+};
 </script>

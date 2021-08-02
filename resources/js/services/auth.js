@@ -9,7 +9,7 @@ export function register(user) {
 export function login(user) {
     return http().post('/auth/login', user)
     .then(response => {
-        if(response.data.status_code === 200){
+        if(response.status === 200){
             setToken(response.data);
         }
         return response.data;

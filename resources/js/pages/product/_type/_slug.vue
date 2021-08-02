@@ -7,22 +7,22 @@
 			>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
-						<nuxt-link to="/">
+						<router-link to="/">
 							Home
-						</nuxt-link>
+						</router-link>
 					</li>
 					<li class="breadcrumb-item">
-						<nuxt-link to="/shop">Shop</nuxt-link>
+						<router-link to="/shop">Shop</router-link>
 					</li>
 					<li
 						class="breadcrumb-item"
 						v-if="loaded"
 					>
-						<nuxt-link
+						<router-link
 							:to="{path: '/shop', query: {category: category.slug}}"
 							v-for="(category, index) in productCategory"
 							:key="`product-category-${index}`"
-						>{{index === productCategory.length - 1 ? category.name : category.name + ', '}}</nuxt-link>
+						>{{index === productCategory.length - 1 ? category.name : category.name + ', '}}</router-link>
 					</li>
 					<li
 						class="breadcrumb-item active"
