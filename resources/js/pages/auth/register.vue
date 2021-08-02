@@ -120,6 +120,11 @@ export default {
         this.loading = false;
         submit.innerText = "Register";
         console.log(error.response);
+        this.$notify({
+          group: 'notify',
+          text: error.response.data.data.message,
+          color: 'red'
+        });
       }
     },
   },

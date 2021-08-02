@@ -43,6 +43,7 @@
 		</div>
 
 		<pv-cart-popup class="minipopup-area"></pv-cart-popup>
+		<pv-notify class="minipopup-area"></pv-notify>
 
 		<a
 			id="scroll-top"
@@ -64,6 +65,7 @@
 import PvHeader from './components/common/PvHeader';
 import PvFooter from './components/common/PvFooter';
 import PvCartPopup from './components/common/partials/PvCartPopup';
+import PvNotify from './components/common/partials/PvNotify';
 import PvMobileMenu from './components/common/partials/PvMobileMenu';
 import PvStickyFooter from './components/common/partials/PvStickyFooter';
 import {
@@ -83,7 +85,8 @@ export default {
 		PvFooter,
 		PvCartPopup,
 		PvMobileMenu,
-		PvStickyFooter
+		PvStickyFooter,
+		PvNotify
 	},
 	data: function () {
 		return {

@@ -7,12 +7,12 @@
 			<div class="container">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
-						<nuxt-link
+						<router-link
 							to="/"
 							class="router-link-active"
 						>
 							Home
-						</nuxt-link>
+						</router-link>
 					</li>
 					<li
 						aria-current="page"
@@ -40,34 +40,34 @@
 						<h4 class="text-primary">Here are some useful links</h4>
 						<ul class="nav nav-list">
 							<li class="nav-item">
-								<nuxt-link
+								<router-link
 									to="/"
 									class="nav-link router-link-active"
-								>Home</nuxt-link>
+								>Home</router-link>
 							</li>
 							<li class="nav-item">
-								<nuxt-link
-									to="/pages/account"
+								<router-link
+									to="/account"
 									class="nav-link router-link-active"
-								>Account</nuxt-link>
+								>Account</router-link>
 							</li>
 							<li class="nav-item">
-								<nuxt-link
-									to="/pages/forgot-password"
+								<router-link
+									to="/auth/forgot-password"
 									class="nav-link"
-								>Forget Password</nuxt-link>
+								>Forget Password</router-link>
 							</li>
 							<li class="nav-item">
-								<nuxt-link
-									to="/pages/about-us"
+								<router-link
+									to="/about-us"
 									class="nav-link"
-								>About Us</nuxt-link>
+								>About Us</router-link>
 							</li>
 							<li class="nav-item">
-								<nuxt-link
-									to="/pages/contact-us"
+								<router-link
+									to="/contact-us"
 									class="nav-link"
-								>Contact Us</nuxt-link>
+								>Contact Us</router-link>
 							</li>
 						</ul>
 					</div>

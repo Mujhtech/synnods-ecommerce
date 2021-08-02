@@ -100,6 +100,11 @@ export default {
       } catch (error) {
         this.loading = false;
         submit.innerText = 'Login'
+        this.$notify({
+          group: 'notify',
+          text: error.response.data.data.message,
+          color: 'red'
+        });
         console.log(error.response);
       }
     },
