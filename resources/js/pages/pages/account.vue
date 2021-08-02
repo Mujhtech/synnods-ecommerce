@@ -8,13 +8,13 @@
 				>
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item">
-							<nuxt-link to="/">Home</nuxt-link>
+							<router-link to="/">Home</router-link>
 						</li>
 						<li
 							class="breadcrumb-item"
 							aria-current="shop"
 						>
-							<nuxt-link to="/shop">Shop</nuxt-link>
+							<router-link to="/shop">Shop</router-link>
 						</li>
 						<li
 							class="breadcrumb-item active"
@@ -105,11 +105,11 @@
 								</li>
 
 								<li>
-									<nuxt-link to="/pages/wishlist">Wishlist</nuxt-link>
+									<router-link to="/wishlist">Wishlist</router-link>
 								</li>
 
 								<li>
-									<nuxt-link to="/">Logout</nuxt-link>
+									<router-link to="/">Logout</router-link>
 								</li>
 
 								<li class="nav-item d-none">
@@ -152,10 +152,10 @@
 								Hello
 								<strong class="text-dark">Editor</strong> (not
 								<strong class="text-dark">Editor</strong>?
-								<nuxt-link
+								<router-link
 									to="/pages/login"
 									class="btn btn-link"
-								>Log out</nuxt-link>)
+								>Log out</router-link>)
 							</p>
 
 							<p>
@@ -257,9 +257,9 @@
 
 								<div class="col-6 col-md-4">
 									<div class="feature-box text-center pb-4">
-										<nuxt-link to="/pages/wishlist">
+										<router-link to="/pages/wishlist">
 											<i class="sicon-heart"></i>
-										</nuxt-link>
+										</router-link>
 										<div class="feature-box-content">
 											<h3>WISHLIST</h3>
 										</div>
@@ -268,9 +268,9 @@
 
 								<div class="col-6 col-md-4">
 									<div class="feature-box text-center pb-4">
-										<nuxt-link to="/">
+										<router-link to="/">
 											<i class="sicon-logout"></i>
-										</nuxt-link>
+										</router-link>
 										<div class="feature-box-content">
 											<h3>LOGOUT</h3>
 										</div>
@@ -315,10 +315,10 @@
 								</table>
 								<hr class="mt-0 mb-3 pb-2" />
 
-								<nuxt-link
+								<router-link
 									to="/shop"
 									class="btn btn-dark"
-								>Go Shop</nuxt-link>
+								>Go Shop</router-link>
 							</div>
 						</div>
 					</div>
@@ -336,10 +336,10 @@
 							</h3>
 							<div class="download-table-container">
 								<p>No downloads available yet.</p>
-								<nuxt-link
+								<router-link
 									to="/shop"
 									class="btn btn-primary text-transform-none mb-2"
-								>GO SHOP</nuxt-link>
+								>GO SHOP</router-link>
 							</div>
 						</div>
 					</div>
@@ -825,7 +825,7 @@
 </template>
 
 <script>
-import PvTabs from '~/components/features/PvTabs';
+import PvTabs from '../../components/features/PvTabs';
 import Sticky from 'vue-sticky-directive';
 
 export default {

@@ -9,7 +9,7 @@
 					<div class="container">
 						<ol class="breadcrumb border-0 mb-1 mt-0">
 							<li class="breadcrumb-item">
-								<nuxt-link to="/">Home</nuxt-link>
+								<router-link to="/">Home</router-link>
 							</li>
 							<li
 								class="breadcrumb-item active"
@@ -73,7 +73,7 @@
 						>
 							<td>
 								<figure class="product-image-container">
-									<nuxt-link
+									<router-link
 										:to="'/product/default/' + product.slug"
 										class="product-image"
 									>
@@ -83,7 +83,7 @@
 											:width="product.small_pictures[0].width"
 											:height="product.small_pictures[0].height"
 										/>
-									</nuxt-link>
+									</router-link>
 
 									<a
 										href="javascript:;"
@@ -95,7 +95,7 @@
 							</td>
 							<td>
 								<h5 class="product-title">
-									<nuxt-link :to="'/product/default/' + product.slug">{{ product.name }}</nuxt-link>
+									<router-link :to="'/product/default/' + product.slug">{{ product.name }}</router-link>
 								</h5>
 							</td>
 
@@ -145,11 +145,11 @@
 									v-if="product.variants.length === 0"
 								>ADD TO CART</button>
 
-								<nuxt-link
+								<router-link
 									:to="'/product/default/' + product.slug"
 									class="btn btn-dark btn-add-cart btn-shop"
 									v-else
-								>SELECT OPTION</nuxt-link>
+								>SELECT OPTION</router-link>
 							</td>
 						</tr>
 					</tbody>
@@ -211,10 +211,10 @@
 									colspan="6"
 									class="px-3 text-center pb-5 pb-md-0"
 								>
-									<nuxt-link
+									<router-link
 										to="/shop"
 										class="btn btn-go-shop"
-									>GO SHOP</nuxt-link>
+									>GO SHOP</router-link>
 								</td>
 							</tr>
 						</tbody>
@@ -227,7 +227,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import { baseUrl, currentDemo } from '~/api';
+import { baseUrl, currentDemo } from '../../api';
 
 export default {
 	data: function () {
@@ -277,7 +277,7 @@ export default {
 			}, [] )
 		},
 		openQuickview: function ( product ) {
-			this.$modal.show( () => import( '~/components/features/product/PvQuickview' ), { slug: product.slug }, { width: '931', height: 'auto', adaptive: true, class: 'quickview-modal' } );
+			this.$modal.show( () => import( '../../components/features/product/PvQuickview' ), { slug: product.slug }, { width: '931', height: 'auto', adaptive: true, class: 'quickview-modal' } );
 		},
 		addCart: function ( product ) {
 			this.currentProduct = product;

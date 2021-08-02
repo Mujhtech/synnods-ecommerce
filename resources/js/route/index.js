@@ -6,6 +6,11 @@ import Login from "../pages/auth/login";
 import Register from "../pages/auth/register";
 import ForgotPassword from "../pages/auth/forgot-password";
 import TrackOrder from "../pages/order/track";
+import Account from "../pages/pages/account";
+import Cart from "../pages/pages/cart";
+import Checkout from "../pages/pages/checkout";
+import Wishlist from "../pages/pages/wishlist";
+import Shop from "../pages/shop/index";
 
 Vue.use(VueRouter);
 
@@ -17,22 +22,27 @@ const routes = [
     },
     {
         path: "/shop",
-        component: Index,
+        component: Shop,
         name: "Shop"
     },
     {
+        path: "/account",
+        component: Account,
+        name: "Account"
+    },
+    {
         path: "/carts",
-        component: Index,
+        component: Cart,
         name: "Carts"
     },
     {
         path: "/wishlist",
-        component: Index,
+        component: Wishlist,
         name: "Wishlist"
     },
     {
         path: "/checkout",
-        component: Index,
+        component: Checkout,
         name: "Checkout"
     },
     {

@@ -157,22 +157,22 @@
 				</div>
 
 				<div class="toolbox-item layout-modes">
-					<nuxt-link
+					<router-link
 						:to="{path: '/shop', query: $route.query}"
 						class="layout-btn btn-grid"
 						:class="{active: type !== 'list'}"
 						title="Grid"
 					>
 						<i class="icon-mode-grid"></i>
-					</nuxt-link>
-					<nuxt-link
+					</router-link>
+					<router-link
 						:to="{path: '/shop/list', query: $route.query}"
 						class="layout-btn btn-list"
 						:class="{active: type === 'list'}"
 						title="List"
 					>
 						<i class="icon-mode-list"></i>
-					</nuxt-link>
+					</router-link>
 				</div>
 			</div>
 		</nav>
@@ -274,11 +274,11 @@
 </template>
 
 <script>
-import PvProductOne from '~/components/features/product/PvProductOne';
-import PvProductTwo from '~/components/features/product/PvProductTwo';
-import PvPagination from '~/components/features/PvPagination';
-import { scrollTopHandler } from '~/utils';
-import Api, { baseUrl, currentDemo } from '~/api';
+import PvProductOne from '../../../features/product/PvProductOne';
+import PvProductTwo from '../../../features/product/PvProductTwo';
+import PvPagination from '../../../features/PvPagination';
+import { scrollTopHandler } from '../../../../utils';
+import Api, { baseUrl, currentDemo } from '../../../../api';
 
 export default {
 	components: {

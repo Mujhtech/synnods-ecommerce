@@ -5,7 +5,7 @@
 				<a href="javascript:;">Shopping Cart</a>
 			</li>
 			<li>
-				<nuxt-link to="/pages/checkout">Checkout</nuxt-link>
+				<router-link to="/checkout">Checkout</router-link>
 			</li>
 			<li class="disabled">
 				<a href="javascript:;">Order Complete</a>
@@ -38,7 +38,7 @@
 							>
 								<td>
 									<figure class="product-image-container">
-										<nuxt-link
+										<router-link
 											:to="'/product/default/' + product.slug"
 											class="product-image"
 										>
@@ -48,7 +48,7 @@
 												:height="product.small_pictures[0].height"
 												alt="product"
 											/>
-										</nuxt-link>
+										</router-link>
 
 										<a
 											href="javascript:;"
@@ -61,7 +61,7 @@
 
 								<td class="product-col">
 									<h5 class="product-title">
-										<nuxt-link :to="'/product/default/' + product.slug">{{ product.name }}</nuxt-link>
+										<router-link :to="'/product/default/' + product.slug">{{ product.name }}</router-link>
 									</h5>
 								</td>
 
@@ -226,13 +226,13 @@
 					</table>
 
 					<div class="checkout-methods">
-						<nuxt-link
+						<router-link
 							to="/pages/checkout"
 							class="btn btn-block btn-dark"
 						>
 							Proceed to Checkout
 							<i class="fa fa-arrow-right"></i>
-						</nuxt-link>
+						</router-link>
 					</div>
 				</div>
 			</div>
@@ -295,10 +295,10 @@
 							colspan="6"
 							class="px-3 text-center"
 						>
-							<nuxt-link
+							<router-link
 								to="/shop"
 								class="btn btn-go-shop"
-							>GO SHOP</nuxt-link>
+							>GO SHOP</router-link>
 						</td>
 					</tr>
 				</tbody>
@@ -311,8 +311,8 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import { baseUrl } from '~/api';
-import PvQuantityInput from '~/components/features/PvQuantityInput';
+import { baseUrl } from '../../api';
+import PvQuantityInput from '../../components/features/PvQuantityInput';
 
 export default {
 	components: {

@@ -143,7 +143,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import { baseUrl } from '~/api';
+import { baseUrl } from '../../../api';
 
 export default {
 	props: {
@@ -193,7 +193,7 @@ export default {
 		...mapActions( 'cart', [ 'addToCart' ] ),
 		openQuickview: function () {
 			this.$modal.show(
-				() => import( '~/components/features/product/PvQuickview' ),
+				() => import( '../../features/product/PvQuickview' ),
 				{ slug: this.product.slug },
 				{ width: '931', height: 'auto', adaptive: true, class: 'quickview-modal' }
 			);

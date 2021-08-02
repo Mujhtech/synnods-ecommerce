@@ -34,6 +34,8 @@
         "vue-nouislider": "^1.0.1",
         "vue-router": "^3.5.2",
         "vue-slide-toggle": "^1.1.1",
+        "vue-sticky-directive": "0.0.10",
+        "vue-tree-list": "^1.5.0",
         "vueisotope": "^3.1.2",
         "vuex": "^3.6.2",
         "vuex-persistedstate": "^4.0.0"

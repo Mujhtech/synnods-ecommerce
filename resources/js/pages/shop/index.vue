@@ -9,9 +9,9 @@
 			>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
-						<nuxt-link to="/">
+						<router-link to="/">
 							Home
-						</nuxt-link>
+						</router-link>
 					</li>
 					<li class="breadcrumb-item active">Shop</li>
 				</ol>
@@ -60,10 +60,10 @@
 <script>
 import { VueTreeList, Tree } from 'vue-tree-list';
 import Sticky from 'vue-sticky-directive';
-import PvShopBanner from '~/components/partials/shop/PvShopBanner';
-import PvSidebarFilterOne from '~/components/partials/shop/sidebar-filter/PvSidebarFilterOne';
-import PvProductListOne from '~/components/partials/shop/product-list/PvProductListOne';
-import Api, { baseUrl, currentDemo } from '~/api';
+import PvShopBanner from '../../components/partials/shop/PvShopBanner';
+import PvSidebarFilterOne from '../../components/partials/shop/sidebar-filter/PvSidebarFilterOne';
+import PvProductListOne from '../../components/partials/shop/product-list/PvProductListOne';
+import Api, { baseUrl, currentDemo } from '../../api';
 
 export default {
 	directives: {

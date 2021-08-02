@@ -27,13 +27,13 @@
 						:default-expanded="false"
 					>
 						<template v-slot:leafNameDisplay="slotProps">
-							<nuxt-link
+							<router-link
 								:to="{path: $route.path, query: {category: slotProps.model.slug, page: 1}}"
 								:class="{active: slotProps.model.slug === currentCategory}"
 							>
 								{{ slotProps.model.name }}
 								<span class="products-count">({{ slotProps.model.counts }})</span>
-							</nuxt-link>
+							</router-link>
 						</template>
 						<template v-slot:treeNodeIcon>
 							<span></span>
@@ -68,10 +68,10 @@
 						<div class="filter-price-action d-flex align-items-center justify-content-between flex-wrap">
 							<div class="filter-price-text">Price: ${{ prices[0] }} - ${{ prices[1] }}</div>
 
-							<nuxt-link
+							<router-link
 								:to="priceFilterRoute"
 								class="btn btn-primary"
-							>Filter</nuxt-link>
+							>Filter</router-link>
 						</div>
 					</form>
 				</div>
@@ -96,10 +96,10 @@
 							:key="'color-filter' + index"
 							:class="{active: isActivedColor(item)}"
 						>
-							<nuxt-link
+							<router-link
 								:to="colorFilterRoute(item)"
 								:style="{backgroundColor: item.color}"
-							><span>{{ item.name | capitalize }}</span></nuxt-link>
+							><span>{{ item.name | capitalize }}</span></router-link>
 						</li>
 					</ul>
 				</div>
@@ -126,7 +126,7 @@
 							:key="'size-filter' + index"
 							:class="{active: isActivedSize(item)}"
 						>
-							<nuxt-link :to="sizeFilterRoute(item)">{{ item.name }}</nuxt-link>
+							<router-link :to="sizeFilterRoute(item)">{{ item.name }}</router-link>
 						</li>
 					</ul>
 				</div>
@@ -135,10 +135,10 @@
 
 		<vue-slide-toggle :open="!isEmptyQuery">
 			<div class="widget">
-				<nuxt-link
+				<router-link
 					:to="{path: $router.path}"
 					class="btn btn-primary reset-filter-btn router-link-active"
-				>Reset All Filters</nuxt-link>
+				>Reset All Filters</router-link>
 			</div>
 		</vue-slide-toggle>
 
@@ -165,8 +165,8 @@
 <script>
 import { VueSlideToggle } from 'vue-slide-toggle';
 import { VueTreeList, Tree } from 'vue-tree-list';
-import PvSmallProduct from '~/components/features/product/PvSmallProduct';
-import { shopColors, shopSizes } from '~/utils/data/shop';
+import PvSmallProduct from '../../../features/product/PvSmallProduct';
+import { shopColors, shopSizes } from '../../../../utils/data/shop';
 
 export default {
 	components: {

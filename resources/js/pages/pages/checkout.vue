@@ -3,10 +3,10 @@
 		<div class="container checkout-container">
 			<ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
 				<li>
-					<nuxt-link to="/pages/cart">Shopping Cart</nuxt-link>
+					<router-link to="/cart">Shopping Cart</router-link>
 				</li>
 				<li class="active">
-					<nuxt-link to="/pages/checkout">Checkout</nuxt-link>
+					<router-link to="/checkout">Checkout</router-link>
 				</li>
 				<li class="disabled">
 					<a href="javascript:;">Order Complete</a>
@@ -90,10 +90,10 @@
 											</label>
 										</div>
 
-										<nuxt-link
+										<router-link
 											to="/pages/forgot-password"
 											class="forget-password"
-										>Lost your password?</nuxt-link>
+										>Lost your password?</router-link>
 									</div>
 								</form>
 							</div>
@@ -711,10 +711,10 @@
 								colspan="6"
 								class="px-3 text-center"
 							>
-								<nuxt-link
+								<router-link
 									to="/shop"
 									class="btn btn-go-shop"
-								>RETURN TO SHOP</nuxt-link>
+								>RETURN TO SHOP</router-link>
 							</td>
 						</tr>
 					</tbody>
