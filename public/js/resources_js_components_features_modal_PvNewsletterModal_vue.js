@@ -64,18 +64,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   methods: {
@@ -186,7 +174,7 @@ var render = function() {
         _c("img", {
           staticClass: "logo-newsletter",
           attrs: {
-            src: __webpack_require__(/*! ../../../static/images/logo-black.png */ "./resources/js/static/images/logo-black.png"),
+            src: "/assets/images/logo.png",
             alt: "Logo",
             width: "101",
             height: "40"
@@ -197,7 +185,7 @@ var render = function() {
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "\n\t\t\tSubscribe to the Porto mailing list to receive updates on new\n\t\t\tarrivals, special offers and our promotions.\n\t\t"
+            "\n            Subscribe to the Porto mailing list to receive updates on new\n            arrivals, special offers and our promotions.\n        "
           )
         ]),
         _vm._v(" "),

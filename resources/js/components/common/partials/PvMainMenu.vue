@@ -1,8 +1,46 @@
 <template>
-	<nav class="main-nav">
+	<nav class="main-nav d-none d-lg-flex flex-wrap">
+		<div
+			class="menu-depart"
+			:class="{'show-always': isHome}"
+		>
+			<a
+				href="javascript:;"
+				class="toggle"
+			><i class="fas fa-bars"></i>Shop by Category</a>
+			<div class="submenu">
+				<router-link :to="{path: '/'}"><i class="icon-category-home"></i>Home</router-link>
+
+				<router-link
+					:to="{path: '/shop',query: {category: category.slug}}"
+					v-for="(category,index) in headerCats"
+					:key="'header-cat-' + index"
+					:class="{active: category.slug === currentCategory}"
+				><i :class="category.icon"></i>{{ category.name }}</router-link>
+
+				<router-link :to="{path: '/shop'}">VIEW ALL <i class="icon-angle-right"></i></router-link>
+			</div>
+		</div>
+
 		<ul class="menu main-menu menu-arrow">
 			<li>
 				<router-link to="/">Home</router-link>
+			</li>
+
+			<li>
+				<router-link
+					to="/vendor"
+					class="sub-menu-link"
+					:class="{active: $route.path.indexOf('/vendor') > -1}"
+				>Vendor</router-link>
+				<ul>
+					<li>
+						<router-link to="/vendor/list">Store List</router-link>
+					</li>
+					<li>
+						<router-link to="/vendor/store">Vendor Store</router-link>
+					</li>
+				</ul>
 			</li>
 
 			<li>
@@ -56,7 +94,7 @@
 							<div class="menu-banner">
 								<figure>
 									<img
-										src="../../../static/images/menu-banner.jpg"
+										:src="'/assets/images/menu-banner.jpg'"
 										alt="Menu banner"
 										width="300"
 										height="300"
@@ -82,7 +120,7 @@
 
 			<li>
 				<router-link
-					to="/product/default/a-white-chair"
+					to="/product/default/highway-detection-system"
 					class="sub-menu-link menu-with-ul"
 					:class="{active: $route.path.indexOf('/product') > -1}"
 				>Products</router-link>
@@ -135,7 +173,7 @@
 							<div class="menu-banner menu-banner-2">
 								<figure>
 									<img
-										src="../../../static/images/menu-banner-1.jpg"
+										:src="'/assets/images/menu-banner-1.jpg'"
 										alt="Menu banner"
 										class="product-promo"
 										width="380"
@@ -161,6 +199,13 @@
 			</li>
 
 			<li>
+				<router-link
+					to="/pages/blog"
+					:class="{active: $route.path.indexOf('/pages/blog') > -1}"
+				>Blog</router-link>
+			</li>
+
+			<li class="d-none d-xl-block">
 				<a
 					href="javascript:;"
 					class="sub-menu-link"
@@ -188,16 +233,38 @@
 					</li>
 				</ul>
 			</li>
+			<!-- <li>
+				<router-link to="/pages/about-us">About Us</router-link>
+			</li>
+			<li>
+				<router-link to="/pages/contact-us">Contact Us</router-link>
+			</li> -->
+			<!-- <li class="float-right">
+				<a
+					href="https://1.envato.market/DdLk5"
+					class="nolink"
+					target="_blank"
+				>Buy Porto!</a>
+			</li>
+			<li class="float-right">
+				<a
+					href="javascript:;"
+					class="pl-5"
+				>Special Offer!</a>
+			</li> -->
 		</ul>
 	</nav>
 </template>
+
 <script>
 import { mainMenu } from '../../../utils/data/menu';
+import { headerCats } from '../../../utils/data/shop';
 
 export default {
 	data: function () {
 		return {
-			mainMenu
+			mainMenu: mainMenu,
+			headerCats: headerCats
 		};
 	},
 	computed: {
@@ -213,6 +280,14 @@ export default {
 			}
 
 			return false;
+		},
+		isHome: function () {
+			if ( this.$route.path === '/' ) return true;
+			return false;
+		},
+		currentCategory: function () {
+			if ( this.$route.query && this.$route.query.category ) return this.$route.query.category;
+			return '';
 		}
 	}
 };

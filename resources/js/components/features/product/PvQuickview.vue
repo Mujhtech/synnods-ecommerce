@@ -39,9 +39,9 @@
 </template>
 
 <script>
-import PvMediaOne from '~/components/partials/product/media/PvMediaOne';
-import PvDetailOne from '~/components/partials/product/detail/PvDetailOne';
-import Respository, { baseUrl, currentDemo } from '~/api';
+import PvMediaOne from '../../partials/product/media/PvMediaOne';
+import PvDetailOne from '../../partials/product/detail/PvDetailOne';
+import Respository, { baseUrl, currentDemo } from '../../../api';
 
 export default {
 	components: {

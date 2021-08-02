@@ -1,7 +1,7 @@
 <template>
     <div class="product-nav">
         <div class="product-prev" :class="{disabled: !prevProduct}">
-            <nuxt-link
+            <router-link
                 :to="`/product/${type}/${prevProduct.slug}`"
                 v-if="prevProduct"
                 key="toPrevProduct"
@@ -21,7 +21,7 @@
                         <span>{{ prevProduct.name }}</span>
                     </span>
                 </span>
-            </nuxt-link>
+            </router-link>
 
             <a href="javascript:;" v-else>
                 <span class="product-link"></span>
@@ -29,7 +29,7 @@
         </div>
 
         <div class="product-next" :class="{disabled: !nextProduct}">
-            <nuxt-link
+            <router-link
                 :to="`/product/${type}/${nextProduct.slug}`"
                 v-if="nextProduct"
                 key="toNexProduct"
@@ -49,7 +49,7 @@
                         <span>{{ nextProduct.name }}</span>
                     </span>
                 </span>
-            </nuxt-link>
+            </router-link>
 
             <a href="javascript:;" v-else>
                 <span class="product-link"></span>
@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import { baseUrl } from '~/api';
+import { baseUrl } from '../../../api';
 
 export default {
 	props: {

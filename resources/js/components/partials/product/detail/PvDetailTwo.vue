@@ -275,9 +275,9 @@
 						>
 							<template v-if="product.variants[curIndex].sale_price">
 								<del class="old-price">
-									<span>${{ product.variants[curIndex].sale_price | priceFormat }}</span>
+									<span>${{ product.variants[curIndex].price | priceFormat }}</span>
 								</del>
-								<span class="product-price">${{ product.variants[curIndex].price | priceFormat }}</span>
+								<span class="product-price">${{ product.variants[curIndex].sale_price | priceFormat }}</span>
 							</template>
 
 							<template v-else>
@@ -640,7 +640,7 @@ export default {
 			this.qty = quantity;
 		},
 		stickyCartHandler: function () {
-			let top = 600;
+			let top = 800;
 			let stickyHeader = document.querySelector( '.sticky-cart-header' );
 			let header = document.querySelector(
 				'.header .sticky-wrapper.desktop-sticky .sticky-header'
@@ -652,7 +652,7 @@ export default {
 			) {
 				stickyHeader.classList.remove( 'fixed' );
 			}
-			let headerHeight = 56;
+			let headerHeight = 46;
 
 			if ( window.pageYOffset >= top && window.innerWidth > 991 ) {
 				if ( stickyHeader ) {

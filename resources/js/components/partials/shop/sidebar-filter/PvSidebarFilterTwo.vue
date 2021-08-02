@@ -1,147 +1,178 @@
 <template>
-	<aside
-		class="sidebar-product col-lg-3 mobile-sidebar"
-		sticky-container
-	>
+	<aside class="toolbox-left sidebar-shop mobile-sidebar">
 		<div
-			class="sidebar-wrapper"
-			v-sticky="isSticky"
-			sticky-offset="{top: 75}"
+			class="toolbox-item toolbox-sort select-custom"
+			:class="{opened: isSizeOpened}"
 		>
-			<div
-				class="sidebar-content skeleton-body"
-				v-if="categoryList.length === 0"
-			>
-				<aside class="widget"></aside>
-			</div>
+			<a
+				class="sort-menu-trigger"
+				href="javascript:;"
+				@click.prevent="isSizeOpened = !isSizeOpened, isColorOpened = false, isPriceOpened = false"
+			>Size</a>
+			<ul class="sort-list">
+				<li
+					v-for="(item,index) in shopSizes"
+					:key="'size-filter' + index"
+					:class="{active: isActivedSize(item)}"
+				>
+					<nuxt-link :to="sizeFilterRoute(item)">{{ item.name }}</nuxt-link>
+				</li>
+			</ul>
+		</div>
 
-			<div
-				class="widget widget-product-categories mb-3"
-				v-else
-			>
-				<vue-slide-toggle :open="catOpened">
-					<vue-tree-list
-						:model="categoryTree"
-						:default-expanded="false"
-					>
-						<template v-slot:leafNameDisplay="slotProps">
-							<nuxt-link :to="{path: '/shop', query: {category: slotProps.model.slug, page: 1}}">{{ slotProps.model.name }}</nuxt-link>
-						</template>
-						<template v-slot:treeNodeIcon>
-							<span></span>
-						</template>
-					</vue-tree-list>
-				</vue-slide-toggle>
-			</div>
+		<div
+			class="toolbox-item toolbox-sort select-custom"
+			:class="{opened: isColorOpened}"
+		>
+			<a
+				class="sort-menu-trigger"
+				href="javascript:;"
+				@click.prevent="isColorOpened = !isColorOpened, isSizeOpened = false, isPriceOpened = false"
+			>Color</a>
+			<ul class="sort-list">
+				<li
+					v-for="(item,index) in shopColors"
+					:key="'color-filter' + index"
+					:class="{active: isActivedColor(item)}"
+				>
+					<nuxt-link :to="colorFilterRoute(item)">{{ item.name }}</nuxt-link>
+				</li>
+			</ul>
+		</div>
 
-			<div class="widget">
-				<div class="maga-sale-container">
-					<figure class="mega-image">
-						<img
-							v-lazy="'./images/banners/banner-sidebar.jpg'"
-							width="280"
-							height="355"
-							class="w-100"
-							alt="Banner Desc"
-						/>
-					</figure>
-
-					<div class="mega-content">
-						<div class="mega-price-box">
-							<span class="price-big">50</span>
-							<span class="price-desc">
-								<em>%</em>OFF
-							</span>
-						</div>
-
-						<div class="mega-desc">
-							<h3 class="mega-title mb-0">MEGA SALE</h3>
-							<span class="mega-subtitle">MANY ITEM</span>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="widget widget-featured">
-				<h3 class="widget-title">Featured</h3>
-
-				<div class="widget-body">
-					<pv-carousel
-						class="widget-featured-products"
-						:options="baseSlider1"
-					>
-						<div class="featured-col swiper-slide">
-							<pv-small-product
-								:is-lazy="false"
-								:product="product"
-								v-for="(product,index) in featuredProducts"
-								:key="'featured' + index"
-							></pv-small-product>
-						</div>
-					</pv-carousel>
-				</div>
+		<div
+			class="toolbox-item toolbox-sort price-sort select-custom"
+			:class="{opened: isPriceOpened}"
+		>
+			<a
+				class="sort-menu-trigger"
+				href="javascript:;"
+				@click.prevent="isPriceOpened = !isPriceOpened, isSizeOpened = false, isColorOpened = false"
+			>Price</a>
+			<div class="sort-list">
+				<form class="filter-price-form d-flex align-items-center m-0">
+					<input
+						class="input-price mr-2"
+						name="min_price"
+						placeholder="0"
+						v-model="prices[0]"
+					/> -
+					<input
+						class="input-price mx-2"
+						name="max_price"
+						placeholder="1000"
+						v-model="prices[1]"
+					/>
+					<nuxt-link
+						type="submit"
+						class="btn btn-primary ml-3"
+						:to="priceFilterRoute"
+					>Filter</nuxt-link>
+				</form>
 			</div>
 		</div>
 	</aside>
 </template>
 
 <script>
-import Api, { baseUrl, currentDemo } from '~/api';
-import Sticky from 'vue-sticky-directive';
-import { VueSlideToggle } from 'vue-slide-toggle';
-import { VueTreeList, Tree } from 'vue-tree-list';
-import PvCarousel from '~/components/features/PvCarousel';
-import PvSmallProduct from '~/components/features/product/PvSmallProduct';
-import { baseSlider1 } from '~/utils/data/carousel';
+import { shopColors, shopSizes } from '~/utils/data/shop';
 
 export default {
-	components: {
-		VueSlideToggle,
-		VueTreeList,
-		PvSmallProduct,
-		PvCarousel
-	},
-	directives: {
-		Sticky
-	},
-	props: {
-		featuredProducts: Array
-	},
+	components: {},
 	data: function () {
 		return {
-			categoryList: [],
-			catOpened: true,
-			isSticky: false,
-			baseSlider1: baseSlider1
+			shopColors: shopColors,
+			shopSizes: shopSizes,
+			isSizeOpened: false,
+			isColorOpened: false,
+			isPriceOpened: false,
+			prices: [ 0, 1000 ]
 		};
 	},
-	computed: {
-		categoryTree: function () {
-			return new Tree( this.categoryList );
-		}
-	},
+	watch: {},
+	created: function () { },
 	mounted: function () {
-		this.getCategoryLists();
-		this.resizeHandler();
-		window.addEventListener( 'resize', this.resizeHandler, {
-			passive: true
-		} );
+		window.addEventListener( 'click', this.removeOpenHandler );
 	},
 	destroyed: function () {
-		window.removeEventListener( 'resize', this.resizeHandler );
+		window.removeEventListener( 'click', this.removeOpenHandler );
+	},
+	computed: {
+		priceFilterRoute: function () {
+			return {
+				path: this.$route.path,
+				query: {
+					...this.$route.query,
+					page: 1,
+					max_price: this.prices[ 1 ],
+					min_price: this.prices[ 0 ]
+				}
+			};
+		}
 	},
 	methods: {
-		getCategoryLists: function () {
-			Api.get( `${ baseUrl }/products/sidebar-list`, {
-				params: { demo: currentDemo }
-			} )
-				.then( response => {
-					this.categoryList = response.data.sidebarList;
-				} )
-				.catch( error => ( { error: JSON.stringify( error ) } ) );
+		colorFilterRoute: function ( item ) {
+			let selectedColors = this.$route.query.color
+				? this.$route.query.color.split( ',' )
+				: [];
+			let index = selectedColors.indexOf( item.name );
+			if ( index > -1 ) {
+				selectedColors.splice( index, 1 );
+			} else {
+				selectedColors.push( item.name );
+			}
+
+			return {
+				path: this.$route.path,
+				query: {
+					...this.$route.query,
+					page: 1,
+					color: selectedColors.toString()
+				}
+			};
 		},
-		resizeHandler: function () {
-			this.isSticky = window.innerWidth > 991 ? true : false;
+		sizeFilterRoute: function ( item ) {
+			let selectedSizes = this.$route.query.size
+				? this.$route.query.size.split( ',' )
+				: [];
+			let index = selectedSizes.indexOf( item.size );
+			if ( index > -1 ) {
+				selectedSizes.splice( index, 1 );
+			} else {
+				selectedSizes.push( item.size );
+			}
+
+			return {
+				path: this.$route.path,
+				query: {
+					...this.$route.query,
+					page: 1,
+					size: selectedSizes.toString()
+				}
+			};
+		},
+		isActivedColor: function ( item ) {
+			return (
+				this.$route.query.color &&
+				this.$route.query.color.split( ',' ).includes( item.name )
+			);
+		},
+		isActivedSize: function ( item ) {
+			return (
+				this.$route.query.size &&
+				this.$route.query.size.split( ',' ).includes( item.size )
+			);
+		},
+		removeOpenHandler: function ( e ) {
+			if (
+				!e.target.closest( '.select-custom' ) ||
+				e.target.classList.contains( 'form-control' )
+			) {
+				let item = document.querySelector( '.select-custom.opened' );
+				if ( item ) {
+					item.classList.remove( 'opened' );
+				}
+			}
 		}
 	}
 };

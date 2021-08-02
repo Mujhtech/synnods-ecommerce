@@ -8,8 +8,8 @@ $input-font-size: 1.2rem !default;
 $button-font-size: 1.4rem !default;
 
 // Skin / Color
-$primary-color: #c90;
-$primary-color-dark: #282828;
+$primary-color: #08C !default;
+$primary-color-dark: #222529 !default;
 $secondary-color: #ff7272 !default;
 $secondary-color-dark: #2f3946 !default;
 $secondary-color-light: #515151 !default;
@@ -17,7 +17,7 @@ $link-color: $primary-color !default;
 
 $body-text: #777 !default;
 $light-text: #666 !default;
-$headings-text: #282828;
+$headings-text: #222529 !default;
 
 // Skin / Border Radius
 $border-radius: 0 !default;

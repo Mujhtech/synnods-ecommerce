@@ -87,7 +87,7 @@
 
 					<li :class="{open: prodOpened}">
 						<router-link
-							to="/product/default/a-white-chair"
+							to="/product/default/highway-detection-system"
 							class="sub-menu-link menu-with-ul"
 						>
 							Products

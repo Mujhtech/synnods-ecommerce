@@ -14,6 +14,10 @@ export const baseSlider2 = {
     navigation: {
         nextEl: ".swiper-nav .swiper-next",
         prevEl: ".swiper-nav .swiper-prev"
+    },
+    navIcon: {
+        next: "fas fa-chevron-right",
+        prev: "fas fa-chevron-left"
     }
 }
 
@@ -28,7 +32,11 @@ export const baseSlider3 = {
         992: {
             slidesPerView: 3
         }
-    }
+    },
+    pagination: {
+        el: '.swiper-dots',
+        clickable: true
+    },
 }
 
 export const baseSlider4 = {
@@ -91,25 +99,9 @@ export const baseSlider8 = {
     isCustomNav: true
 }
 
-// home
-export const topBarSlider = {
-    slidesPerView: 3,
+export const baseSlider9 = {
     spaceBetween: 0,
-    breakpoints: {
-        768: {
-            slidesPerView: 1
-        },
-        992: {
-            slidesPerView: 2
-        }
-    }
-}
-
-export const featuredSlider = {
-    spaceBetween: 20,
-    autoplay: false,
-    slidesPerView: 4,
-    isCustomNav: true,
+    slidesPerView: 5,
     breakpoints: {
         576: {
             slidesPerView: 2
@@ -117,53 +109,106 @@ export const featuredSlider = {
         992: {
             slidesPerView: 3
         }
-    },
-    navigation: {
-        nextEl: '.outer-nav .swiper-next',
-        prevEl: '.outer-nav .swiper-prev'
     }
 }
 
-export const instaSlider = {
-    spaceBetween: 20,
-    slidesPerView: 9,
+// home
+export const introSlider = {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+        nextEl: ".swiper-nav .swiper-next",
+        prevEl: ".swiper-nav .swiper-prev"
+    },
+    navIcon: {
+        next: "icon-right-open-big",
+        prev: "icon-left-open-big"
+    }
+}
+
+export const dealSlider = {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+        el: '.swiper-dots',
+        clickable: true
+    }
+}
+
+export const productSlider = {
+    slidesPerView: 5,
+    spaceBetween: 0,
     breakpoints: {
-        480: {
+        576: {
             slidesPerView: 2
         },
         768: {
             slidesPerView: 3
         },
         992: {
-            slidesPerView: 6
+            slidesPerView: 4,
+        }
+    },
+    navigation: {
+        nextEl: ".swiper-nav .swiper-next",
+        prevEl: ".swiper-nav .swiper-prev"
+    },
+    navIcon: {
+        next: "icon-right-open-big",
+        prev: "icon-left-open-big"
+    }
+}
+
+export const categorySlider = {
+    spaceBetween: 0,
+    slidesPerView: 7,
+    breakpoints: {
+        480: {
+            slidesPerView: 2
+        },
+        576: {
+            slidesPerView: 3
+        },
+        768: {
+            slidesPerView: 4
+        },
+        992: {
+            slidesPerView: 5
         },
         1200: {
-            slidesPerView: 7
+            slidesPerView: 6
+        }
+    }
+}
+
+export const blogSlider = {
+    spaceBetween: 20,
+    slidesPerView: 4,
+    breakpoints: {
+        480: {
+            slidesPerView: 1
         },
-        1600: {
-            slidesPerView: 8
+        576: {
+            slidesPerView: 2
+        },
+        768: {
+            slidesPerView: 3
         }
     }
 }
 
 export const brandSlider = {
-    spaceBetween: 0,
-    slidesPerView: 6,
+    slidesPerView: 5,
+    spaceBetween: 30,
     breakpoints: {
-        0: {
-            slidesPerView: 1
-        },
-        480: {
+        576: {
             slidesPerView: 2
         },
-        768: {
+        991: {
             slidesPerView: 3
         },
-        991: {
-            slidesPerView: 4
-        },
         1200: {
-            slidesPerView: 5
+            slidesPerView: 4
         }
     }
 }

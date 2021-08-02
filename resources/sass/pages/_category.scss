@@ -62,10 +62,17 @@
 		}
 	}
 
+	// .sidebar-wrapper {
+	// 	border-bottom: 1px solid #e7e7e7;
+	// }
+
 	.widget {
 		@include css( padding, category, sidebar, padding );
 		@include css( border, category, sidebar, border );
+		border-bottom-width: 0;
 		@include clearfix;
+		margin-bottom: 3rem;
+		border-bottom: 1px solid #eee;
 
 		&:not(:last-child) {
 			@include css ( margin-bottom, category, sidebar, space );
@@ -193,7 +200,8 @@
 			color: $body-text;
 			font-weight: 500;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				color: $primary-color;
 			}
 		}

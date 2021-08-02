@@ -25,7 +25,7 @@
 				<div
 					class="product-label label-sale"
 					v-if="product.is_sale && product.price"
-				>{{ discount }}%</div>
+				>-{{ discount }}%</div>
 			</div>
 		</figure>
 
@@ -60,7 +60,6 @@
 			>
 				<p class="mb-0">{{ product.short_description }}</p>
 			</div>
-
 			<div
 				class="price-box"
 				v-if="product.price"

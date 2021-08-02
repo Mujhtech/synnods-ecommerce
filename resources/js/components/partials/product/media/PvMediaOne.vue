@@ -70,10 +70,10 @@
 </template>
 
 <script>
-import PvCarousel from "~/components/features/PvCarousel";
+import PvCarousel from "../../../features/PvCarousel";
 import LightBox from "vue-image-lightbox";
-import { baseUrl } from "~/api";
-import { baseSlider1, baseSlider2 } from "~/utils/data/carousel";
+import { baseUrl } from "../../../../api";
+import { baseSlider1, baseSlider2 } from "../../../../utils/data/carousel";
 import "vue-image-lightbox/dist/vue-image-lightbox.min.css";
 
 export default {

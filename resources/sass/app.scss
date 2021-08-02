@@ -21,7 +21,11 @@
 @import 'plugins/swiper-carousel/theme.default';
 @import 'plugins/swiper-carousel/core';
 @import 'plugins/category-tree';
+// @import 'plugins/swiper-carousel/swiper.theme.default';
+// @import 'plugins/magnific-popup/main';
+// @import 'plugins/jquery.bootstrap-touchspin';
 @import 'plugins/nouislider';
+// @import 'plugins/swiper';
 
 // Components
 @import 'components/alerts';
@@ -31,10 +35,14 @@
 @import 'components/buttons';
 @import 'components/cards';
 @import 'components/counters';
+@import 'components/countdown';
 @import 'components/feature-boxes';
 @import 'components/flags';
+// @import 'components/font-icons';
 @import 'components/forms';
 @import 'components/info-boxes';
+// @import 'components/instagram';
+// @import 'components/member';
 @import 'components/modals';
 @import 'components/page-header';
 @import 'components/pagination';
@@ -44,6 +52,7 @@
 @import 'components/testimonials';
 @import 'components/skeleton';
 @import 'components/social-icons';
+@import 'components/store';
 @import 'components/tabs';
 @import 'components/tooltips';
 @import 'components/vue-components';
@@ -57,7 +66,11 @@
 @import 'base/header';
 @import 'base/header/dropdowns';
 @import 'base/header/search';
+// @import 'base/header/popup-menu';
+// @import 'base/header/top-menu';
 @import 'base/header/menu';
+// @import 'base/header/menu-vertical';
+// @import 'base/header/side-menu';
 @import 'base/header/mobile-menu';
 @import 'base/footer';
 @import 'demo/demo-base';
@@ -78,13 +91,13 @@
 @import 'pages/checkout';
 @import 'pages/blog';
 @import 'pages/contact';
-@import 'pages/contact-two';
 @import 'pages/dashboard';
 @import 'pages/account';
 @import 'pages/address';
 @import 'pages/order';
 @import 'pages/wishlist';
 @import 'pages/login';
+@import 'pages/store-page';
 
-@import 'demo/demo-custom';
 @import 'demo/demo-home';
+@import 'demo/demo-custom';

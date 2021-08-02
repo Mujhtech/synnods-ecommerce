@@ -50,6 +50,26 @@
 	border-radius: $border-radius;
 	background-color: #ccc;
 
+	.prod-full-screen {
+		display: flex;
+		width: 30px;
+		height: 30px;
+		align-items: center;
+		justify-content: center;
+		background-color: $primary-color;
+		border-radius: 50%;
+
+		i {
+			color: #fff;
+		}
+	}
+	
+	&:hover {
+		.prod-full-screen {
+			opacity: 1;
+		}
+	}
+
 	// 2.1) Post date in post media
 	.post-date {
 		position: absolute;
@@ -179,6 +199,11 @@
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 4;
 		overflow: hidden;
+	}
+
+	.read-more i {
+		position: relative;
+		top: 1px;
 	}
 }
 
@@ -796,6 +821,16 @@
 @include mq(lg, max) {
 	.sidebar.mobile-sidebar {
 		position: fixed;
+	}
+
+	@supports (-ms-ime-align: auto) {
+		.sidebar-blog .vue-sticky-el {
+			left: auto !important;
+			top: auto !important;
+			width: auto !important;
+			bottom: auto !important;
+			position: static !important;
+		}
 	}
 
 	@supports (-ms-ime-align: auto) {

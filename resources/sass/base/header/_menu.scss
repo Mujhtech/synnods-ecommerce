@@ -17,7 +17,7 @@
 		menu: (
 			color: #777,
 			background: false,
-			active-color: $primary-color,
+			active-color: false,
 			active-background: #f4f4f4,
 
 			mega: (
@@ -70,7 +70,7 @@
 
 					color: false,
 					background: false,
-					active-color: $primary-color,
+					active-color: false,
 					active-background: false,
 
 					font-size: 12px,
@@ -350,7 +350,7 @@
 		&:hover>a,
 		&.show>a,
 		&.active>a {
-			// @include css(color, menu, main, top, active-color);
+			@include css(color, menu, main, top, active-color);
 			@include css(background, menu, main, top, active-background);
 		}
 

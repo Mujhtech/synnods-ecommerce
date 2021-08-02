@@ -1,72 +1,69 @@
 <template>
-	<div
-		class="brands-section appear-animate"
-		data-animation-name="fadeIn"
-		data-animation-duration="500"
-		data-animation-delay="700"
-		v-animate
-	>
+	<section class="brands-section">
 		<div class="container">
+			<h2
+				class="section-title line-height-1 ls-10 pb-4 mb-5 appear-animate"
+				data-animation-name="fadeInUpShorter"
+				data-animation-delay="200"
+				data-animation-duration="400"
+				v-animate
+			>
+				Top Brands</h2>
+
 			<pv-carousel
-				class="brands-slider images-center"
+				class="brands-slider swiper-carousel swiper-theme images-center appear-animate"
+				data-animation-name="fadeIn"
+				data-animation-delay="400"
+				v-animate
 				:options="brandSlider"
 			>
 				<div class="swiper-slide">
 					<img
-						v-lazy="'./images/brands/small/brand1.png'"
-						width="130"
-						height="56"
+						:src="'/assets/images/home/brands/brand1.png'"
+						width="200"
+						height="50"
 						alt="brand"
-					/>
+					>
 				</div>
 
 				<div class="swiper-slide">
 					<img
-						v-lazy="'./images/brands/small/brand2.png'"
-						width="130"
-						height="56"
+						:src="'/assets/images/home/brands/brand2.png'"
+						width="200"
+						height="50"
 						alt="brand"
-					/>
+					>
 				</div>
 
 				<div class="swiper-slide">
 					<img
-						v-lazy="'./images/brands/small/brand3.png'"
-						width="130"
-						height="56"
+						:src="'/assets/images/home/brands/brand3.png'"
+						width="200"
+						height="50"
 						alt="brand"
-					/>
+					>
 				</div>
 
 				<div class="swiper-slide">
 					<img
-						v-lazy="'./images/brands/small/brand4.png'"
-						width="130"
-						height="56"
+						:src="'/assets/images/home/brands/brand4.png'"
+						width="200"
+						height="50"
 						alt="brand"
-					/>
+					>
 				</div>
 
 				<div class="swiper-slide">
 					<img
-						v-lazy="'./images/brands/small/brand5.png'"
-						width="130"
-						height="56"
+						:src="'/assets/images/home/brands/brand5.png'"
+						width="200"
+						height="50"
 						alt="brand"
-					/>
-				</div>
-
-				<div class="swiper-slide">
-					<img
-						v-lazy="'./images/brands/small/brand6.png'"
-						width="130"
-						height="56"
-						alt="brand"
-					/>
+					>
 				</div>
 			</pv-carousel>
 		</div>
-	</div>
+	</section>
 </template>
 
 <script>

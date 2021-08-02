@@ -25,14 +25,14 @@
 					<vue-tree-list
 						:model="categoryTree"
 						:default-expanded="false"
-						class="cat-list"
 					>
 						<template v-slot:leafNameDisplay="slotProps">
 							<nuxt-link
 								:to="{path: $route.path, query: {category: slotProps.model.slug, page: 1}}"
 								:class="{active: slotProps.model.slug === currentCategory}"
 							>
-								{{ slotProps.model.name }}<span class="products-count">({{ slotProps.model.counts }})</span>
+								{{ slotProps.model.name }}
+								<span class="products-count">({{ slotProps.model.counts }})</span>
 							</nuxt-link>
 						</template>
 						<template v-slot:treeNodeIcon>
@@ -42,15 +42,6 @@
 				</div>
 			</vue-slide-toggle>
 		</div>
-
-		<!-- <vue-slide-toggle :open="!isEmptyQuery">
-			<div class="widget">
-				<nuxt-link
-					:to="{path: $router.path}"
-					class="btn btn-primary reset-filter-btn router-link-active"
-				>Reset All Filters</nuxt-link>
-			</div>
-		</vue-slide-toggle> -->
 
 		<div class="widget">
 			<h3 class="widget-title">
@@ -87,6 +78,34 @@
 			</vue-slide-toggle>
 		</div>
 
+		<div class="widget widget-color">
+			<h3 class="widget-title">
+				<a
+					data-toggle="collapse"
+					href="javascript:;"
+					@click="colorOpened = !colorOpened"
+					:class="{'collapsed': !colorOpened}"
+				>Color</a>
+			</h3>
+
+			<vue-slide-toggle :open="colorOpened">
+				<div class="widget-body">
+					<ul class="config-swatch-list flex-column">
+						<li
+							v-for="(item,index) in shopColors"
+							:key="'color-filter' + index"
+							:class="{active: isActivedColor(item)}"
+						>
+							<nuxt-link
+								:to="colorFilterRoute(item)"
+								:style="{backgroundColor: item.color}"
+							><span>{{ item.name | capitalize }}</span></nuxt-link>
+						</li>
+					</ul>
+				</div>
+			</vue-slide-toggle>
+		</div>
+
 		<div class="widget widget-size">
 			<h3 class="widget-title">
 				<a
@@ -97,7 +116,10 @@
 			</h3>
 
 			<vue-slide-toggle :open="sizeOpened">
-				<div class="widget-body pb-0">
+				<div
+					class="widget-body"
+					style="padding-top: 2rem"
+				>
 					<ul class="cat-list">
 						<li
 							v-for="(item,index) in shopSizes"
@@ -111,56 +133,31 @@
 			</vue-slide-toggle>
 		</div>
 
-		<div class="widget widget-brand">
-			<h3 class="widget-title">
-				<a
-					href="javascript:;"
-					@click="brandOpened = !brandOpened"
-					:class="{'collapsed': !brandOpened}"
-				>Brands</a>
-			</h3>
+		<vue-slide-toggle :open="!isEmptyQuery">
+			<div class="widget">
+				<nuxt-link
+					:to="{path: $router.path}"
+					class="btn btn-primary reset-filter-btn router-link-active"
+				>Reset All Filters</nuxt-link>
+			</div>
+		</vue-slide-toggle>
 
-			<vue-slide-toggle :open="brandOpened">
-				<div class="widget-body pb-0">
-					<ul class="cat-list">
-						<li
-							v-for="(item,index) in shopBrands"
-							:key="'brand-filter' + index"
-							:class="{active: isActivedBrand(item)}"
-						>
-							<nuxt-link :to="brandFilterRoute(item)">{{ item.name }}</nuxt-link>
-						</li>
-					</ul>
+		<div
+			class="widget widget-featured border-bottom-0"
+			v-if="isFeatured"
+		>
+			<h3 class="widget-title">Featured</h3>
+
+			<div class="widget-body">
+				<div class="featured-col">
+					<pv-small-product
+						:product="product"
+						v-for="(product,index) in featuredProducts.slice(0,2)"
+						:key="'featured' + index"
+						:is-lazy="false"
+					></pv-small-product>
 				</div>
-			</vue-slide-toggle>
-		</div>
-
-		<div class="widget widget-color">
-			<h3 class="widget-title">
-				<a
-					data-toggle="collapse"
-					href="javascript:;"
-					@click="colorOpened = !colorOpened"
-					:class="{'collapsed': !colorOpened}"
-				>Color</a>
-			</h3>
-
-			<vue-slide-toggle :open="colorOpened">
-				<div class="widget-body pb-0">
-					<ul class="config-swatch-list">
-						<li
-							v-for="(item,index) in shopColors"
-							:key="'color-filter' + index"
-							:class="{active: isActivedColor(item)}"
-						>
-							<nuxt-link
-								:to="colorFilterRoute(item)"
-								:style="{backgroundColor: item.color}"
-							>{{ item.name | capitalize }}</nuxt-link>
-						</li>
-					</ul>
-				</div>
-			</vue-slide-toggle>
+			</div>
 		</div>
 	</div>
 </template>
@@ -168,17 +165,14 @@
 <script>
 import { VueSlideToggle } from 'vue-slide-toggle';
 import { VueTreeList, Tree } from 'vue-tree-list';
-import PvCarousel from '~/components/features/PvCarousel';
 import PvSmallProduct from '~/components/features/product/PvSmallProduct';
-import { shopColors, shopSizes, shopBrands } from '~/utils/data/shop';
-import { baseSlider1 } from '~/utils/data/carousel';
+import { shopColors, shopSizes } from '~/utils/data/shop';
 
 export default {
 	components: {
 		VueSlideToggle,
 		VueTreeList,
-		PvSmallProduct,
-		PvCarousel
+		PvSmallProduct
 	},
 	props: {
 		categoryList: Array,
@@ -190,7 +184,6 @@ export default {
 			priceOpenened: true,
 			sizeOpened: true,
 			colorOpened: true,
-			brandOpened: true,
 			prices: [ 0, 1000 ],
 			priceSettings: {
 				connect: true,
@@ -207,8 +200,6 @@ export default {
 			},
 			shopColors: shopColors,
 			shopSizes: shopSizes,
-			shopBrands: shopBrands,
-			baseSlider1: baseSlider1,
 			emptyObject: {},
 			isFeatured: true,
 			priceReset: true,
@@ -315,26 +306,6 @@ export default {
 				}
 			};
 		},
-		brandFilterRoute: function ( item ) {
-			let selectedBrands = this.$route.query.brand
-				? this.$route.query.brand.split( ',' )
-				: [];
-			let index = selectedBrands.indexOf( item.brand );
-			if ( index > -1 ) {
-				selectedBrands.splice( index, 1 );
-			} else {
-				selectedBrands.push( item.brand );
-			}
-
-			return {
-				path: this.$route.path,
-				query: {
-					...this.$route.query,
-					brand: selectedBrands.toString(),
-					page: 1
-				}
-			};
-		},
 		isActivedColor: function ( item ) {
 			return (
 				this.$route.query.color &&
@@ -345,12 +316,6 @@ export default {
 			return (
 				this.$route.query.size &&
 				this.$route.query.size.split( ',' ).includes( item.size )
-			);
-		},
-		isActivedBrand: function ( item ) {
-			return (
-				this.$route.query.brand &&
-				this.$route.query.brand.split( ',' ).includes( item.brand )
 			);
 		},
 		getFlag: function () {

@@ -40,21 +40,40 @@ export const shopSizes = [
     }
 ]
 
-export const shopBrands = [
+export const headerCats = [
     {
-        brand: "adidas",
-        name: "Adidas"
+        name: 'Fashion',
+        icon: 'icon-category-fashion',
+        slug: 'fashion'
     },
     {
-        brand: "calvin-klein",
-        name: "Calvin Klein"
+        name: 'Electronics',
+        icon: 'icon-category-electronics',
+        slug: 'electronics'
     },
     {
-        brand: "diesel",
-        name: "Diesel"
+        name: 'Gifts',
+        icon: 'icon-category-gifts',
+        slug: 'gifts'
     },
     {
-        brand: "lacoste",
-        name: "Lacoste"
+        name: 'Garden',
+        icon: 'icon-category-garden',
+        slug: 'garden'
+    },
+    {
+        name: 'Music',
+        icon: 'icon-category-music',
+        slug: 'music'
+    },
+    {
+        name: 'Motors',
+        icon: 'icon-category-motors',
+        slug: 'motors'
+    },
+    {
+        name: 'Furniture',
+        icon: 'icon-category-furniture',
+        slug: 'furniture'
     }
 ]

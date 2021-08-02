@@ -1,10 +1,13 @@
 <template>
-	<div class="header-icon header-search header-search-inline header-search-category w-lg-max text-right mt-0">
+	<div
+		class="header-icon header-search header-search-inline header-search-category w-lg-max text-right mt-0"
+		@click.stop="toggleSearchForm($event)"
+	>
 		<a
 			href="javascript:;"
 			class="search-toggle"
 			role="button"
-			@click.stop="showSearchForm"
+			@click.stop="toggleSearchForm($event)"
 		>
 			<i class="icon-search-3"></i>
 		</a>
@@ -12,7 +15,7 @@
 		<form
 			action="#"
 			method="get"
-			@click.stop="showSearchForm"
+			@click.stop="toggleSearchForm($event)"
 			@submit.prevent="submitSearchForm"
 		>
 			<div class="header-search-wrapper">
@@ -25,13 +28,52 @@
 					class="form-control"
 					name="search_term"
 					id="search_term"
-					placeholder="Search ..."
+					placeholder="I'm searching for..."
 					required
 					v-model="search_term"
 					@input="searchProducts"
+					@click.stop="showSearchForm($event)"
 				/>
+				<div
+					class="select-custom"
+					@click.stop="showSearchForm($event)"
+				>
+					<select
+						id="cat"
+						name="searchCategory"
+						v-model="searchCategory"
+						@change="searchProducts"
+					>
+						<option value>All Categories</option>
+						<option value="fashion">Fashion</option>
+						<option value="women">- Women</option>
+						<option value="men">- Men</option>
+						<option value="jewellery">- Jewellery</option>
+						<option value="kids">- Kids Fashion</option>
+						<option value="electronics">Electronics</option>
+						<option value="smart-tvs">- Smart TVs</option>
+						<option value="cameras">- Cameras</option>
+						<option value="games">- Games</option>
+						<option value="home-garden">Home &amp; Garden</option>
+						<option value="motors">Motors</option>
+						<option value="cars-and-trucks">- Cars and Trucks</option>
+						<option value="motorcycles-powersports">
+							- Motorcycles &amp;
+							Powersports
+						</option>
+						<option value="accessories">
+							- Parts &amp;
+							Accessories
+						</option>
+						<option value="boats">- Boats</option>
+						<option value="supplies">
+							- Auto Tools &amp;
+							Supplies
+						</option>
+					</select>
+				</div>
 				<button
-					class="btn icon-magnifier p-0"
+					class="btn icon-magnifier"
 					title="search"
 					type="submit"
 				></button>
@@ -39,9 +81,10 @@
 				<div class="live-search-list">
 					<div
 						class="search-suggests"
+						v-if="suggestions.length > 0"
 						@click.prevent="goShopPage"
 					>
-						<nuxt-link
+						<router-link
 							:to="'/product/default/' + product.slug"
 							class="search-suggest"
 							data-index="0"
@@ -83,7 +126,7 @@
 									>${{product.minPrice | priceFormat}} - ${{product.maxPrice | priceFormat}}</div>
 								</template>
 							</div>
-						</nuxt-link>
+						</router-link>
 					</div>
 				</div>
 			</div>
@@ -187,10 +230,11 @@ export default {
 			document.querySelector( '.header-search' ).classList.toggle( 'show' );
 			e.stopPropagation();
 		},
-		showSearchForm: function () {
-			document
-				.querySelector( '.header .header-search' )
-				.classList.toggle( 'show' );
+		toggleSearchForm: function ( e ) {
+			e.currentTarget.closest( '.header-search' ).classList.toggle( 'show' );
+		},
+		showSearchForm: function ( e ) {
+			e.currentTarget.closest( '.header-search' ).classList.add( 'show' );
 		},
 		closeSearchForm: function ( e ) {
 			document

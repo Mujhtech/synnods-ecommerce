@@ -25,7 +25,7 @@
 				<div
 					class="product-label label-sale"
 					v-if="product.is_sale && product.price"
-				>{{ discount }}%</div>
+				>-{{ discount }}%</div>
 			</div>
 
 			<a
@@ -59,21 +59,50 @@
 		</figure>
 
 		<div class="product-details">
-			<div class="category-list">
-				<span
-					v-for="(cat,index) in product.product_categories"
-					:key="`product-category-${index}`"
+			<div class="category-wrap">
+				<div
+					class="category-list"
+					v-if="type === 1"
 				>
-					<nuxt-link :to="{ path: '/shop', query: { category: cat.slug }}">{{ cat.name }}</nuxt-link>
-					<template v-if="index < product.product_categories.length - 1">,</template>
-				</span>
+					<span
+						v-for="(cat,index) in product.product_categories"
+						:key="`product-category-${index}`"
+					>
+						<nuxt-link :to="{ path: '/shop', query: { category: cat.slug }}">{{ cat.name }}</nuxt-link>
+						<template v-if="index < product.product_categories.length - 1">,</template>
+					</span>
+				</div>
+
+				<nuxt-link
+					to="/pages/wishlist"
+					class="btn-icon-wish added-wishlist"
+					title="Go to Wishlist"
+					v-if="isWishlisted"
+				>
+					<i class="icon-heart"></i>
+				</nuxt-link>
+
+				<a
+					href="javascript:;"
+					class="btn-icon-wish"
+					title="Add to Wishlist"
+					@click="addWishlist($event)"
+					v-if="!isWishlisted"
+				>
+					<i class="icon-heart"></i>
+				</a>
 			</div>
 
-			<h3 class="product-title">
-				<nuxt-link :to="'/product/default/' + product.slug">{{ product.name }}</nuxt-link>
-			</h3>
+			<div class="title-wrap">
+				<h3 class="product-title">
+					<nuxt-link :to="'/product/default/' + product.slug">{{ product.name }}</nuxt-link>
+				</h3>
+			</div>
 
-			<div class="ratings-container">
+			<div
+				class="ratings-container"
+				v-if="type === 1"
+			>
 				<div class="product-ratings">
 					<span
 						class="ratings"
@@ -125,6 +154,10 @@ export default {
 		isActions: {
 			type: Boolean,
 			default: true
+		},
+		type: {
+			type: Number,
+			default: 1
 		}
 	},
 	data: function () {
@@ -147,7 +180,7 @@ export default {
 			return false;
 		}
 	},
-	mounted: function () {
+	created: function () {
 		if ( this.product.is_sale && this.product.price ) {
 			this.discount =
 				( ( this.product.price - this.product.sale_price ) /
@@ -170,7 +203,7 @@ export default {
 		...mapActions( 'cart', [ 'addToCart' ] ),
 		openQuickview: function () {
 			this.$modal.show(
-				() => import( '~/components/features/product/PvQuickview' ),
+				() => import( '../../features/product/PvQuickview' ),
 				{ slug: this.product.slug },
 				{ width: '931', height: 'auto', adaptive: true, class: 'quickview-modal' }
 			);

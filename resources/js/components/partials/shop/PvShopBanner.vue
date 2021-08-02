@@ -1,29 +1,33 @@
 <template>
-	<div class="category-banner-container">
-		<div class="container">
-			<div class="banner banner1">
+	<div class="category-banner banner bg-gray py-3">
+		<div class="row m-0 no-gutters align-items-center">
+			<div class="col-sm-4">
+				<h2 class="font1 ls-10 text-left text-sm-right text-uppercase mb-0">Smart</h2>
+				<h3 class="font1 ls-10 text-left text-sm-right text-uppercase m-0">Phone Deals</h3>
+			</div>
+			<div class="col-sm-4">
 				<figure>
 					<img
-						:src="'./images/home/banners/shop-banner.jpg'"
+						src="~/static/images/home/banners/category-banner.jpg"
 						alt="banner"
-						width="1180"
-						height="300"
-						style="background-color: #efefef"
+						width="372"
+						height="247"
 					>
 				</figure>
-
-				<div class="banner-layer banner-layer-middle banner-layer-left">
-					<h3 class="text-body m-b-1 ml-0">Save Big Sale</h3>
-					<h4 class="d-flex align-items-center text-uppercase m-b-2">50%<small class="d-inline-block">Off</small></h4>
-					<h5 class="mb-1">
-						<span class="d-inline-block align-top ls-n-20 text-uppercase">Starting At</span>
-						<b class="coupon-sale-text d-inline-block ls-n-20 text-primary mb-0"><sup>$</sup>199<sup>99</sup></b>
+			</div>
+			<div class="col-sm-4">
+				<div class="coupon-sale-text d-flex flex-column align-items-start mb-4">
+					<h4 class="m-b-2 font1 ls-10 text-white bg-dark skew-box">Exclusive
+						COUPON</h4>
+					<h5 class="mb-0 font1 d-inline-block bg-dark skew-box"><i class="text-dark ls-0">UP
+							TO</i><b class="text-white">$100</b><sub class="text-dark">OFF</sub>
 					</h5>
-					<nuxt-link
-						to="/shop"
-						class="btn btn-sm text-uppercase ls-10"
-					>Shop Now</nuxt-link>
 				</div>
+
+				<a
+					href="javascript:;"
+					class="btn btn-light btn-lg font1 ml-0"
+				>View All Now</a>
 			</div>
 		</div>
 	</div>

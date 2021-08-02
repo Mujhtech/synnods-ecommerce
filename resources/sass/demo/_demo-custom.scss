@@ -1,82 +1,90 @@
-// Shop Page
-// .breadcrumb-nav {
-//     border-bottom: 0;
-// }
+// Shop page
+.category-banner {
+    font-size: 1.4rem;
 
-// Banner
-.category-banner-container {
-    .banner1 {
-        padding: 0;
+    h2 {
+        margin-top: 2px;
+        font-size: 3em;
+        line-height: 1.2;
+    }
 
-        img {
-            min-height: 300px;
+    h3 {
+        font-size: 2.375em;
+    }
+
+    figure {
+        padding-left: 1.6rem;
+    }
+
+    .coupon-sale-text {
+        i {
+            font-size: .44em;
+            
         }
-
-        h3 {
-            font-size: 2.375em;
+        sub {
+            bottom: .4em;
         }
+    }
 
-        h4 {
-            font-size: 5.75em;
-        }
+    .col-sm-4:first-child {
+        padding: 2rem 2.4rem;
+    }
 
-        h5 {
-            span {
-                font-size: 1em
-            }
+    .col-sm-4:last-child {
+        padding: 2rem 0 2rem 2rem;
+    }
 
-            b {
-                font-size: 2.1em;
-            }
-        }
-
-        .btn {
-            position: relative;
-            top: 1px;
-            border-color: #777;
-            border-width: 1px;
-            font-size: .8em !important;
-        }
-
-        .banner-layer-left {
-            left: 25%;
-        }
+    .btn-lg {
+        font-size: 1em;
+        padding: 1.6rem 3.6rem;
+        line-height: 1.3333;
     }
 }
 
-.shop-off-canvas {
-    .widget {
-        padding: 2rem 2rem 0;
-        
-        &:not(:last-child) {
-            margin-bottom: 0;
-            border-bottom: 0;
-        }
+.main-content {
+    padding-top: 3px;
+
+    .product-default:not(.product-widget):hover {
+        z-index: 2;
+        box-shadow: 0 25px 35px -5px rgba(0,0,0,0.1);
     }
 }
 
-.sidebar-shop .vtl-node-main {
-    margin-bottom: 1rem;
+.toolbox-pagination {
+    border-top: 0;
 }
 
 // Sidebar
 .sidebar-shop {
-    .widget-body {
-        padding-top: 1.4rem;
+    .widget:not(:last-child) {
+        border-bottom: 1px solid #e7e7e7;
     }
-    
+
+    .widget-title {
+        letter-spacing: .01em;
+        text-transform: none;
+
+        a:before, a:after {
+            right: 3px;
+        }
+    }
+
+    .widget-body {
+        padding: 10px 0 0;
+    }
+
     .config-swatch-list {
         display: block;
-        margin-left: 1rem;
 
         li {
             a {
-                margin-bottom: 11px;
-                width: 18px;
-                height: 18px;
-                text-indent: 35px;
+                margin-bottom: 7px;
+                width: 28px;
+                height: 28px;
                 color: $body-text;
-                line-height: 19px;
+                font-size: 1.3rem;
+                line-height: 26px;
+                text-indent: 37px;
 
                 &:before {
                     text-indent: 0;
@@ -86,299 +94,171 @@
                     color: $primary-color;
                 }
             }
+        }
+    }
+}
 
-            &:last-child a {
-                margin-bottom: 0;
+.cat-list {
+    li {
+        margin-bottom: 0;
+
+        a {
+            display: inline-block;
+            padding: 4px 0;
+            font-weight: 600;
+            line-height: 1.8;
+
+            .widget-size & {
+                padding-right: 25px;
+                font-size: 13px;
+                font-weight: 500;
             }
         }
     }
 }
 
-span.toggle {
-    top: -2px;
-    font-size: 1.5rem;
-}
-
-.cat-list {
-    padding-left: 1rem;
-
-    .vtl-node-content {
-        margin-bottom: 0.2rem;
-        font-size: 1.2rem;
-    }
-    
-    li.active a {
-        color: $primary-color;
-    }
-}
-
-.sidebar-shop .vtl-node-main {
-    padding: 0;
-    line-height: 1.4;
-}
-
 .cat-sublist {
-    margin-top: 1.2rem;
-    margin-left: 1rem;
+    margin-top: 0;
 }
 
-// ToolBox
-.toolbox-pagination {
-    border-top-width: 2px;
+span.toggle {
+    top: 3px;
+}
+
+.featured-col {
+    .product-widget:last-child {
+        margin-bottom: 0;
+    }
 }
 
 // Responsive
+@include mq(lg) {
+    .category-banner .col-sm-4:last-child {
+        padding-left: 4.8rem;
+    }
+
+    .sidebar-shop .sidebar-wrapper {
+        border-right: 1px solid #e7e7e7;
+        padding-right: 20px;
+    }
+}
+
+@include mq(1460px) {
+    .main-content {
+        > .col-lg-9 {
+            flex: 0 0 80%;
+            max-width: 80%;
+        }
+
+        > .col-lg-3 {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+    }
+}
+
 @include mq(lg, max) {
     .sidebar-shop .widget {
-        padding-bottom: 0;
-
-        &:not(:last-child) {
-            border-bottom: 0;
-        }
+        padding-top: 0;
     }
 }
 
 // Product Page
-
-// Product Gallery
-// .product-single-gallery .product-item {
-//     border: 1px solid #f4f4f4;
-// }
-
-// Product Single Details
-.product-single-details .product-desc {
-    line-height: 1.6872;
+.product-single-container {
+    margin-top: 3px;
 }
 
-.product-single-filter {
-    label {
-        margin-right: 7.6rem;
-    }
-
-    .config-size-list li a {
-        min-width: auto;
-        width: 32px;
-        height: 32px;
-        background-size: contain;
-        background-position: center center;
-
-        &.filter-color {
-            width: 2.8rem;
-        }
-    }
-}
-
-// Related Products
-.products-section {
-    h2 {
-        margin-bottom: 2.4rem;
-        font-family: $font-family;
-        font-size: 1.6rem;
-    }
-
-    .swiper-carousel.dots-top .swiper-dots span {
-        border-color: rgba(102,77,0,.4);
-    }
-}
-
-// Product Widgets
-.product-widgets-container {
-    .section-sub-title {
-        margin-bottom: 1.5rem;
-        font-family: $font-family;
-        font-size: 1.4rem;
-        line-height: 1.4;
-    }
-
-    .product-details {
-        margin-bottom: 0;
-    }
-
+// Single Details
+.product-single-details {
     .product-title {
-        letter-spacing: 0;
+        margin-bottom: 1.2rem;
     }
 
     .ratings-container {
-        text-indent: 0;
+        margin-bottom: 2.2rem;
+    }
+
+    .price-box {
+        font-family: $font-family;
+    }
+
+    .product-desc {
+        line-height: 1.6872;
+        margin-bottom: 19px;
+    }
+
+    .single-info-list {
+        margin-bottom: 1.8rem;
     }
 }
 
-// Responsive
-@include mq(md) {
-    .products-section {
-        padding-bottom: 1.3rem;
+.single-info-list li strong {
+    letter-spacing: inherit;
+}
+
+.product-single-filter label {
+    margin-right: 2.3rem;
+}
+
+.product-single-share {
+    margin-top: .6rem;
+}
+
+// Gallery
+.product-single-gallery {
+    margin-bottom: 3.2rem;
+}
+
+.product-single-carousel {
+    border: 1px solid #f4f4f4;
+}
+
+.prod-thumbnail img {
+    border: 2px solid #f4f4f4;
+}
+
+// Single Tabs
+.product-single-tabs .nav.nav-tabs .nav-item .nav-link {
+    line-height: 2;
+    padding: .7rem 0;
+}
+
+.product-desc-content {
+    ul, li {
+        letter-spacing: inherit;
+    }
+
+    ul, ol {
+        padding-left: 7.2rem;
+    }
+
+    li:before {
+        margin-top: 0;
+        font-size: 1.5rem;
     }
 }
 
-// About Us Page
-
-.about {
-    .section-title {
-        margin-bottom: 1.7rem;
-        color: #252525;
-        font-size: 19px;
-        line-height: normal;
-    }
-}
-
-.about-section {
-    padding-top: 3rem !important;
-    padding-bottom: 4.5rem !important;
-
-    p {
-        line-height: 2;
-    }
-}
-
-.feature-boxes-container {
-    border: 1px solid #dedede;
-
-    .feature-box {
-        padding: 1.3rem 2rem;
-
-        i {
-            margin-bottom: 0;
-            color: #252525;
-            font-size: 4rem;
-        }
-
-        h3 {
-            margin: 3px 0;
-            color: #252525;
-            font-weight: 600;
-            font-size: 1.4rem;
-            line-height: 1.4em;
-        }
-
-        p {
-            font-size: 1.3rem;
-            line-height: normal;
-        }
-
-        &:not(:last-child) {
-            border-bottom: 1px solid #dedede;
-        }
-    }
-}
-
-.team-section {
-    padding: 50px 0 60px;
-    background: #efefef;
-
-    .view-more-container .btn {
-        padding: .8em 2em;
-        border-radius: 3px;
-        font-weight: 400;
+.products-section {
+    h2 {
+        color: $primary-color-dark;
+        font-size: 1.6rem;
         text-transform: none;
     }
-}
 
-.team-info .prod-full-screen {
-    background-color: $primary-color;
-}
-
-.team-name {
-    font-family: $third-font-family;
-    font-size: 1.6rem;
-    padding-bottom: 2rem;
-
-    a {
-        color: inherit;
+    .product-default.inner-quickview {
+        
     }
 }
 
-.history-section {
-    padding-top: 6rem;
-}
-
-.history {
-    display: flex;
-    margin-bottom: 3rem;
-
-    figure {
-        position: relative;
-        margin-bottom: 0;
-
-        h3 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: $third-font-family;
-            font-weight: 300;
-            font-size: 5rem;
-            line-height: 1;
-            color: #fff;
-        }
-    }
-
-    img {
-        width: 100%;
-        max-height: 248px;
-        object-fit: cover;
-    }
-}
-
-.history-content {
-    height: 100%;
-    border: 1px solid #dedede;
-    padding: 20px 30px;
-
-    p {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 6;
-        overflow: hidden;
-        margin-bottom: 0;
-        color: #676a6d;
-        font-size: 1.4rem;
-        line-height: 2;
-    }
-}
-
-// Contact Us Page
-.contact-two {
-    #map {
-        margin-bottom: 3.5rem;
-    }
-
-    h2 {
-        font-size: 2.5rem;
-        line-height: 1.4;
-    }
-
-    label {
-        margin-bottom: .8rem;
-        line-height: 24px;
-    }
-
-    .form-group {
-        margin-bottom: 1.6rem;
-    }
-
-    .contact-title {
-        margin-top: 1.5rem;
-        margin-bottom: 1.4rem;
-        font-size: 1.6rem;
-        line-height: 1.5em;
-    }
-
-    p {
-        line-height: 24px;
-    }
-
-    .contact-info {
-        padding-top: .7rem;
-
-        i {
-            background: #08c;
-        }
-    }
+.product-single-container ~ .product-widgets-container .section-sub-title {
+    border-bottom: 0;
+    color: $primary-color-dark;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .cat-list li {
-    font-size: 1.2rem;
-
     &.active a {
         position: relative;
         padding-left: 16px;

@@ -838,7 +838,7 @@ figure {
 		}
 	}
 
-	&:not(.up-effect) .product-default {
+	&:not(.up-effect) .product-default:not(.product-list) {
 		.btn-quickview {
 			width: calc(100% - 30px);
 			margin: 0 15px;
@@ -877,7 +877,7 @@ figure {
 		margin-bottom: 0;
 	}
 
-	.product-default:hover {
+	.product-default:not(.product-list):hover {
 		box-shadow: 0 25px 35px -5px rgba(0, 0, 0, 0.1);
 
 		figure {
@@ -957,6 +957,36 @@ figure {
 			visibility: visible;
 			opacity: .85;
 		}
+	}
+}
+
+.product-nav-filter {
+	&.product-nav-thumbs,
+	&.product-nav-dots {
+		a {
+			position: relative;
+		}
+	}
+
+	&.product-nav-thumbs a.active {
+		border-color: $primary-color;
+	}
+
+	&.product-nav-dots a.active:before {
+		content: '\f00c';
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		text-indent: 0;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 100%;
+		color: #fff;
+		font-size: 8px;
+		height: 12px;
+		line-height: 12px;
+		margin-top: -6px;
+		text-align: center;
 	}
 }
 

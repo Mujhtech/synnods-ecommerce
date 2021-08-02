@@ -1,6 +1,5 @@
 <template>
 	<div>
-
 		<nav
 			class="toolbox sticky-header horizontal-filter mb-1 mobile-sticky"
 			v-if="(!products) || ( products && products.length > 0 )"

@@ -1,210 +1,144 @@
 <template>
-	<section class="category-section mb-3">
-		<div
-			class="container"
-			v-images-loaded.on="updateIsotope"
-		>
-			<h2 class="section-title ls-n-10 text-center text-uppercase">Featured Categories</h2>
+	<section class="top-categories">
+		<div class="container">
+			<div class="row m-b-3">
+				<div class="col-lg-6">
+					<div
+						class="banner banner1 mb-2 appear-animate"
+						data-animation-name="fadeInLeftShorter"
+						data-animation-delay="200"
+						style="background-color: #f4f4f4;"
+						v-animate
+					>
+						<figure>
+							<img
+								v-lazy="'./images/home/banners/banner-1.jpg'"
+								alt="banner"
+								width="700"
+								height="236"
+							>
+						</figure>
+						<div class="banner-layer banner-layer-middle banner-layer-left">
+							<h3 class="font1 ls-10 text-uppercase mb-0">Action<br>Cameras</h3>
+						</div>
+						<div class="banner-layer banner-layer-middle banner-layer-right">
+							<div class="coupon-sale-text">
+								<h4 class="font1 line-height-1 ls-10 text-white bg-primary skew-box m-b-2">
+									Starting from</h4>
+								<h5 class="d-inline-block font1 text-white bg-primary skew-box mb-0">$399<sub class="text-dark">$499</sub>
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div
+						class="banner banner2 mb-2 appear-animate"
+						data-animation-name="fadeInRightShorter"
+						data-animation-delay="200"
+						style="background-color: #f4f4f4;"
+						v-animate
+					>
+						<figure>
+							<img
+								v-lazy="'./images/home/banners/banner-2.jpg'"
+								alt="banner"
+								width="700"
+								height="236"
+							>
+						</figure>
+						<div class="banner-layer banner-layer-middle banner-layer-left">
+							<h3 class="font1 text-uppercase ls-10 mb-0">For all<br>styles</h3>
+						</div>
+						<div class="banner-layer banner-layer-middle banner-layer-right">
+							<div class="coupon-sale-text">
+								<h4 class="font1 line-height-1 ls-10 text-white bg-secondary skew-box m-b-2">
+									Starting from</h4>
+								<h5 class="d-inline-block font1 text-white bg-secondary skew-box mb-0">$199<sub class="text-dark">$299</sub>
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-			<isotope
-				class="grid row"
-				ref="catIso"
-				:options="isotopeOptions"
-				:list="[]"
+			<h2 class="section-title line-height-1 ls-10 pb-4 mb-4">Top Categories</h2>
+
+			<div
+				class="row mb-2 appear-animate"
+				data-animation-name="fadeIn"
+				data-animation-delay="200"
+				v-animate
 			>
-				<div
-					class="grid-item col-sm-4 col-md-3"
-					key="category-1"
+				<pv-carousel
+					class="categories-slider w-100"
+					:options="categorySlider"
 				>
-					<div
-						class="product-category appear-animate"
-						data-animation-name="fadeIn"
-						data-animation-delay="200"
-						v-animate
-					>
+					<div class="swiper-slide">
 						<router-link :to="{path: '/shop', query: {category: 'fashion'}}">
-							<figure>
-								<img
-									src="../../../static/images/home/products/categories/cat-1.jpg"
-									style="background: #eee"
-									alt="category"
-									width="280"
-									height="240"
-								/>
-							</figure>
-							<div class="category-content">
-								<h3>Fashion</h3>
-							</div>
+							<i class="icon-category-fashion"></i>
+							<span>Fashion</span>
 						</router-link>
 					</div>
-				</div>
-				<div
-					class="grid-item col-sm-8 col-md-6"
-					key="category-2"
-				>
-					<div
-						class="product-category appear-animate"
-						data-animation-name="fadeIn"
-						data-animation-delay="200"
-						v-animate
-					>
+
+					<div class="swiper-slide">
+						<router-link :to="{path: '/shop', query: {category: 'electronics'}}">
+							<i class="icon-category-electronics"></i>
+							<span>Electronics</span>
+						</router-link>
+					</div>
+
+					<div class="swiper-slide">
+						<router-link :to="{path: '/shop', query: {category: 'gifts'}}">
+							<i class="icon-category-gifts"></i>
+							<span>Gifts</span>
+						</router-link>
+					</div>
+
+					<div class="swiper-slide">
+						<router-link :to="{path: '/shop', query: {category: 'garden'}}">
+							<i class="icon-category-garden"></i>
+							<span>Garden</span>
+						</router-link>
+					</div>
+
+					<div class="swiper-slide">
+						<router-link :to="{path: '/shop', query: {category: 'music'}}">
+							<i class="icon-category-music"></i>
+							<span>Music</span>
+						</router-link>
+					</div>
+
+					<div class="swiper-slide">
+						<router-link :to="{path: '/shop', query: {category: 'motors'}}">
+							<i class="icon-category-motors"></i>
+							<span>Motors</span>
+						</router-link>
+					</div>
+
+					<div class="swiper-slide">
 						<router-link :to="{path: '/shop', query: {category: 'furniture'}}">
-							<figure>
-								<img
-									src="../../../static/images/home/products/categories/cat-2.jpg"
-									style="background: #eee"
-									alt="category"
-									width="580"
-									height="240"
-								/>
-							</figure>
-							<div class="category-content">
-								<h3>Furniture</h3>
-							</div>
+							<i class="icon-category-furniture"></i>
+							<span>Furniture</span>
 						</router-link>
 					</div>
-				</div>
-				<div
-					class="grid-item col-sm-5 col-md-3"
-					key="category-3"
-				>
-					<div
-						class="product-category appear-animate"
-						data-animation-name="fadeIn"
-						data-animation-delay="200"
-						v-animate
-					>
-						<router-link :to="{path: '/shop', query: {category: 'decore'}}">
-							<figure>
-								<img
-									src="../../../static/images/home/products/categories/cat-3.jpg"
-									style="background: #eee"
-									alt="category"
-									width="280"
-									height="240"
-								/>
-							</figure>
-							<div class="category-content">
-								<h3>Decore</h3>
-							</div>
-						</router-link>
-					</div>
-				</div>
-				<div
-					class="grid-item col-sm-7 col-md-4"
-					key="category-4"
-				>
-					<div
-						class="product-category appear-animate"
-						data-animation-name="fadeIn"
-						data-animation-delay="200"
-						v-animate
-					>
-						<router-link :to="{path: '/shop', query: {category: 'accessories'}}">
-							<figure>
-								<img
-									src="../../../static/images/home/products/categories/cat-4.jpg"
-									style="background: #eee"
-									alt="category"
-									width="380"
-									height="240"
-								/>
-							</figure>
-							<div class="category-content">
-								<h3>Accessories</h3>
-							</div>
-						</router-link>
-					</div>
-				</div>
-				<div
-					class="grid-item col-sm-4 col-md-3"
-					key="category-5"
-				>
-					<div
-						class="product-category appear-animate"
-						data-animation-name="fadeIn"
-						data-animation-delay="200"
-						v-animate
-					>
-						<router-link :to="{path: '/shop', query: {category: 'mobile'}}">
-							<figure>
-								<img
-									src="../../../static/images/home/products/categories/cat-5.jpg"
-									style="background: #eee"
-									alt="category"
-									width="280"
-									height="240"
-								/>
-							</figure>
-							<div class="category-content">
-								<h3>Mobile</h3>
-							</div>
-						</router-link>
-					</div>
-				</div>
-				<div
-					class="grid-item col-sm-8 col-md-5"
-					key="category-6"
-				>
-					<div
-						class="product-category appear-animate"
-						data-animation-name="fadeIn"
-						data-animation-delay="200"
-						v-animate
-					>
-						<router-link :to="{path: '/shop', query: {category: 'footwear'}}">
-							<figure>
-								<img
-									src="../../../static/images/home/products/categories/cat-6.jpg"
-									style="background: #eee"
-									alt="category"
-									width="480"
-									height="240"
-								/>
-							</figure>
-							<div class="category-content">
-								<h3>Footwear</h3>
-							</div>
-						</router-link>
-					</div>
-				</div>
-				<div
-					class="grid-col-sizer col-1"
-					key="category-size"
-				></div>
-			</isotope>
+				</pv-carousel>
+			</div>
 		</div>
 	</section>
 </template>
 
 <script>
-import isotope from 'vueisotope';
-import imagesLoaded from 'vue-images-loaded';
+import PvCarousel from '../../features/PvCarousel';
+import { categorySlider } from '../../../utils/data/carousel';
 
 export default {
 	components: {
-		isotope
-	},
-	directives: {
-		imagesLoaded
+		PvCarousel
 	},
 	data: function () {
 		return {
-			isotopeOptions: {
-				itemSelector: 'grid-item',
-				layoutMode: 'masonry',
-				percentPosition: false,
-				masonry: {
-					columnWidth: '.grid-col-sizer'
-				}
-			}
-		}
-	},
-	methods: {
-		updateIsotope: function () {
-			if ( this.$refs.catIso ) {
-				this.$refs.catIso.layout( 'masonry' );
-			}
+			categorySlider: categorySlider
 		}
 	}
 }

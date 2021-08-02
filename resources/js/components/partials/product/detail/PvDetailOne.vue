@@ -237,7 +237,6 @@
 					@changeCurrentQty="changeQty"
 				></pv-quantity-input>
 			</div>
-
 			<a
 				href="javascript:;"
 				class="btn btn-dark add-cart mr-2"
@@ -320,9 +319,9 @@
 <script>
 import { mapActions, mapGetters } from 'vuex';
 import { VueSlideToggle } from 'vue-slide-toggle';
-import PvProductNav from '~/components/partials/product/PvProductNav';
-import PvQuantityInput from '~/components/features/PvQuantityInput';
-import { baseUrl } from '~/api';
+import PvProductNav from '../../../partials/product/PvProductNav';
+import PvQuantityInput from '../../../features/PvQuantityInput';
+import { baseUrl } from '../../../../api';
 
 export default {
 	components: {

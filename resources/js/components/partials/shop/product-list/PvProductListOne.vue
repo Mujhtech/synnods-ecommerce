@@ -145,10 +145,10 @@
 						<select
 							name="count"
 							class="form-control"
-							@change="getProducts"
+							@change="changePerPage"
 							v-model="itemsPerPage"
 						>
-							<option :value="9">9</option>
+							<option :value="8">8</option>
 							<option :value="12">12</option>
 							<option :value="24">24</option>
 							<option :value="36">36</option>
@@ -178,8 +178,8 @@
 		</nav>
 
 		<div
-			class="row"
-			:class="{'row-sm sm-padding': itemsPerRow > 6}"
+			class="row divide-line no-gutters m-0"
+			:class="{'row-sm sm-padding divide-line no-gutters m-0': itemsPerRow > 6}"
 		>
 			<template v-if="products && products.length > 0">
 				<div
@@ -248,7 +248,7 @@
 						@change="changePerPage"
 						v-model="itemsPerPage"
 					>
-						<option :value="9">9</option>
+						<option :value="8">8</option>
 						<option :value="12">12</option>
 						<option :value="24">24</option>
 						<option :value="36">36</option>
@@ -289,7 +289,7 @@ export default {
 	props: {
 		itemsPerRow: {
 			type: Number,
-			default: 3
+			default: 4
 		}
 	},
 	data: function () {
@@ -297,7 +297,7 @@ export default {
 			products: null,
 			repeatCount: new Array( 100 ),
 			orderBy: 'default',
-			itemsPerPage: 9,
+			itemsPerPage: 8,
 			totalCount: 0,
 			type: {
 				type: String,
@@ -320,7 +320,7 @@ export default {
 	},
 	watch: {
 		$route: function () {
-			this.itemsPerPage = this.$route.query[ 'per_page' ] ? parseInt( this.$route.query[ 'per_page' ] ) : 9;
+			this.itemsPerPage = this.$route.query[ 'per_page' ] ? parseInt( this.$route.query[ 'per_page' ] ) : 8;
 			this.getProducts();
 			this.isOffCanvas = this.$route.path.includes( 'off-canvas' )
 				? true
@@ -329,7 +329,7 @@ export default {
 		}
 	},
 	created: function () {
-		this.itemsPerPage = this.$route.query[ 'per_page' ] ? parseInt( this.$route.query[ 'per_page' ] ) : 9;
+		this.itemsPerPage = this.$route.query[ 'per_page' ] ? parseInt( this.$route.query[ 'per_page' ] ) : 8;
 		this.getProducts( false );
 		this.isOffCanvas = this.$route.path.includes( 'off-canvas' )
 			? true

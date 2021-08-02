@@ -42,7 +42,6 @@ body {
 	color: #fff;
 }
 
-
 ::selection {
 	background-color: $primary-color;
 	color: #fff;
@@ -103,10 +102,6 @@ input {
 	-moz-appearance: textfield;
 }
 
-
-input {
-	-moz-appearance: textfield;
-}
 
 button:focus {
 	outline: none;
@@ -300,7 +295,10 @@ body.modal-open {
 
 
 /** Product Overlay */
-/**
+
+
+
+/** Product Overlay */
 .product-loading-overlay {
 	&:before,
 	&:after {
@@ -309,35 +307,29 @@ body.modal-open {
 	}
 
 	&:before {
-		padding-top: 175%;
+		padding-top: 142%;
 		background-repeat: no-repeat;
-		background-image: linear-gradient(#f4f4f4 100%, transparent 0), linear-gradient(#f4f4f4 12px, transparent 0), linear-gradient(#f4f4f4 16px, transparent 0), linear-gradient(#f4f4f4 12px, transparent 0), linear-gradient(#f4f4f4 16px, transparent 0);
-		background-size: 100% 57%, 50% 12px, 70% 16px, 50% 12px, 40% 16px;
-		background-position: left 0, left calc(58% + 20px), left calc(58% + 44px), left calc(58% + 66px), left calc(58% + 92px);
+		background-image: linear-gradient(#f4f4f4 105%, transparent 0), linear-gradient(#f4f4f4 12px, transparent 0), linear-gradient(#f4f4f4 16px, transparent 0), linear-gradient(#f4f4f4 12px, transparent 0), linear-gradient(#f4f4f4 16px, transparent 0);
+		background-size: 100% 70%, 50% 12px, 70% 16px, 50% 12px, 40% 16px;
+		background-position: left 0, left calc(70% + 20px), left calc(70% + 44px), left calc(70% + 66px), left calc(70% + 92px);
 	}
 
 	&:after {
 		content: "";
 		display: block;
 		position: absolute;
-		width: 26%;
-		height: 15%;
-		top: 50%;
-		right: auto;
-		left: 50%;
-		margin-top: -50%;
-		margin-left: -13%;
+		width: 40px;
+		height: 40px;
+		top: calc(35% - 20px);
+		left: calc(50% - 20px);
 		-webkit-animation: spin 650ms infinite linear;
 		animation: spin 650ms infinite linear;
 		border-radius: 75%;
-		border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
-		border-right: 11px solid rgba(0, 0, 0, 0.1) !important;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-		border-left: 11px solid rgba(0, 0, 0, 0.1) !important;
+		border:2px solid $primary-color !important;
+		border-bottom-color: transparent !important;
 		z-index: 3;
 	}
 }
-*/
 
 .col-6.fade.in {
 	opacity: 1;

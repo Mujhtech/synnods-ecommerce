@@ -1,12 +1,9 @@
 <template>
-	<nav
-		aria-label="breadcrumb"
-		class="breadcrumb-nav"
-	>
+	<nav aria-label="breadcrumb" class="breadcrumb-nav">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item">
 				<nuxt-link to="/">
-					Home
+					<i class="icon-home"></i>
 				</nuxt-link>
 			</li>
 			<li class="breadcrumb-item">

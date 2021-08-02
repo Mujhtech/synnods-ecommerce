@@ -267,7 +267,7 @@
 
 @include mq(sm, max) {
 	.header-search-wrapper {
-		left: 15px;
-		right: 15px;
+		left: -200px;
+		right: -90px;
 	}
 }

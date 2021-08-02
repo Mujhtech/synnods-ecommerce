@@ -5,6 +5,7 @@ import VueNouislider from 'vue-nouislider/dist/vue-nouislider.common';
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueLazyLoad from 'vue-lazyload';
 import 'vue-nouislider/dist/vue-nouislider.css';
+import 'swiper/swiper.scss';
 
 Vue.use( VModal );
 Vue.use( Notifications );

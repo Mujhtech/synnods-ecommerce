@@ -79,7 +79,7 @@
 				<span>Filter</span>
 			</a>
 
-			<pv-sidebar-filter-four></pv-sidebar-filter-four>
+			<pv-sidebar-filter-two></pv-sidebar-filter-two>
 
 			<div class="toolbox-item toolbox-sort select-custom">
 				<label class="d-none">Sort By:</label>
@@ -198,7 +198,7 @@
 <script>
 import PvProductOne from '~/components/features/product/PvProductOne';
 import PvPagination from '~/components/features/PvPagination';
-import PvSidebarFilterFour from '~/components/partials/shop/sidebar-filter/PvSidebarFilterFour';
+import PvSidebarFilterTwo from '~/components/partials/shop/sidebar-filter/PvSidebarFilterTwo';
 import { scrollTopHandler } from '~/utils';
 import Api, { baseUrl, currentDemo } from '~/api';
 
@@ -206,7 +206,7 @@ export default {
 	components: {
 		PvProductOne,
 		PvPagination,
-		PvSidebarFilterFour
+		PvSidebarFilterTwo
 	},
 	data: function () {
 		return {

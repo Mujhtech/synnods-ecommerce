@@ -3,11 +3,11 @@
 		<a
 			href="javascript:;"
 			title="Cart"
-			class="dropdown-toggle dropdown-arrow cart-toggle"
+			class="dropdown-toggle cart-toggle"
 			role="button"
 			@click="showCartMenu"
 		>
-			<i class="icon-cart-thick"></i>
+			<i class="minicart-icon"></i>
 			<span class="cart-count badge-circle">{{ totalCount }}</span>
 		</a>
 
@@ -36,7 +36,7 @@
 						>
 							<div class="product-details">
 								<h4 class="product-title">
-									<nuxt-link :to="'/product/default/' + product.slug">{{ product.name }}</nuxt-link>
+									<router-link :to="'/product/default/' + product.slug">{{ product.name }}</router-link>
 								</h4>
 
 								<span class="cart-product-info">
@@ -46,14 +46,14 @@
 							</div>
 
 							<figure class="product-image-container">
-								<nuxt-link :to="'/product/default/' + product.slug">
+								<router-link :to="'/product/default/' + product.slug">
 									<img
 										v-lazy="`${baseUrl}${product.small_pictures[0].url}`"
 										alt="product"
 										:width="product.small_pictures[0].width"
 										:height="product.small_pictures[0].height"
 									/>
-								</nuxt-link>
+								</router-link>
 
 								<a
 									href="javascript:;"
@@ -74,14 +74,14 @@
 					</div>
 
 					<div class="dropdown-cart-action">
-						<nuxt-link
+						<router-link
 							to="/pages/cart"
 							class="btn btn-gray btn-block view-cart"
-						>View Cart</nuxt-link>
-						<nuxt-link
+						>View Cart</router-link>
+						<router-link
 							to="/pages/checkout"
 							class="btn btn-dark btn-block"
-						>Checkout</nuxt-link>
+						>Checkout</router-link>
 					</div>
 				</template>
 
