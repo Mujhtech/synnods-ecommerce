@@ -18,14 +18,15 @@ class CreateUsersTable extends Migration
             $table->foreignId('role_id')->constrained();
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('avatar');
-            $table->string('user_name')->unique();
+            $table->string('avatar')->nullable();
+            $table->string('user_name')->nullable()->unique();
             $table->string('country')->nullable();
             $table->string('state')->nullable();
             $table->string('city')->nullable();
             $table->string('address')->nullable();
             $table->integer('phone');
             $table->boolean('active')->default(false);
+            $table->boolean('verified')->default(false);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

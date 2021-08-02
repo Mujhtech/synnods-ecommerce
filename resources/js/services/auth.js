@@ -1,9 +1,20 @@
-import { http, httpFile } from "../api";
-import store from "../store";
+import { http } from "../api";
 var CryptoJS = require("crypto-js");
 
 export function register(user) {
     return http().post('/auth/register', user);
+}
+
+export function recover(data) {
+    return http().post('/auth/recover', data);
+}
+
+export function reset(data) {
+    return http().post('/auth/reset', data);
+}
+
+export function verify(data) {
+    return http().post('/auth/verify', data);
 }
 
 export function login(user) {
@@ -19,23 +30,22 @@ export function login(user) {
 function setToken(user){
     var ciphertext = CryptoJS.AES.encrypt(JSON.stringify({user: user}), 'laravellaravelvuevuespaspa');
     console.log(ciphertext.toString());
-    localStorage.setItem('laravelVueSpa', ciphertext);
-    store.dispatch('authenticate', user.user);
+    localStorage.setItem('SYNECT', ciphertext);
 }
 
 export function isLoggedIn() {
-    const token = localStorage.getItem('laravelVueSpa');
+    const token = localStorage.getItem('SYNECT');
 
     return token != null;
 }
 
 export function logout() {
     http().get('/auth/logout');
-    localStorage.removeItem('laravelVueSpa');
+    localStorage.removeItem('SYNECT');
 }
 
 export function getAccessToken() {
-    const token = localStorage.getItem('laravelVueSpa');
+    const token = localStorage.getItem('SYNECT');
     if (!token){
         return null;
     }

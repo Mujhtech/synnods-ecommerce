@@ -37,6 +37,12 @@ Route::group(['prefix' => 'v1'], function () {
         Route::post('register', [AuthController::class, 'register'])->name('register');
 
         Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+        Route::post('recover', [AuthController::class, 'recover'])->name('recover');
+
+        Route::post('reset', [AuthController::class, 'reset'])->name('reset');
+
+        Route::post('verify', [AuthController::class, 'verify'])->name('verify');
         
     });
 
