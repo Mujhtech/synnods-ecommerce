@@ -6,25 +6,11 @@
           <div class="feature-box-content">
             <form class="mb-0" action="#" v-on:submit.prevent="reset">
               <div class="form-group mb-0">
-                <label for="reset-email" class="font-weight-normal"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="reset-email"
-                  name="reset-email"
-                  v-model="user.email"
-                  :disabled="loading"
-                  required
-                />
-              </div>
-              <div class="form-group mb-0">
                 <label for="reset-password" class="font-weight-normal"
                   >New Password</label
                 >
                 <input
-                  type="email"
+                  type="password"
                   class="form-control"
                   id="reset-password"
                   name="reset-password"
@@ -38,11 +24,11 @@
                   >Confirm Password</label
                 >
                 <input
-                  type="email"
+                  type="password"
                   class="form-control"
                   id="reset-cpassword"
                   name="reset-cpassword"
-                  v-model="user.cpassword"
+                  v-model="user.confirmed"
                   :disabled="loading"
                   required
                 />
@@ -82,12 +68,15 @@ export default {
     title: "Reset Account",
     titleTemplate: "%s - Synoods Ecommerce",
   },
+  mounted() {
+    this.user.token = this.$route.params.token;
+  },
   data() {
     return {
       user: {
-        email: "",
+        token: "",
         password: "",
-        cpassword: "",
+        confirmed: "",
       },
       errors: {},
       loading: false,
@@ -102,16 +91,23 @@ export default {
         console.log(this.user);
         const response = await auth.reset(this.user);
         this.loading = false;
+        this.user.password = "",
+        this.user.confirmed = "", 
         submit.innerText = "Reset Password";
+        this.$notify({
+          group: "notify",
+          text: 'Password reset successfully',
+          color: "green",
+        });
         console.log(response);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Reset Password";
         console.log(error.response);
         this.$notify({
-          group: 'notify',
-          text: error.response.data.data.message,
-          color: 'red'
+          group: "notify",
+          text: error.response.data.data.message ?? 'Something went wrong',
+          color: "red",
         });
       }
     },

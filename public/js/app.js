@@ -6867,7 +6867,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   methods: {
     recover: function () {
       var _recover = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var submit, response;
+        var submit, _response$data$data$m, response, _error$response$data$;
+
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -6875,7 +6876,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 submit = document.getElementById("submit");
                 _context.prev = 1;
                 this.loading = true;
-                submit.innerText = 'Loading...';
+                submit.innerText = "Loading...";
                 console.log(this.user);
                 _context.next = 7;
                 return _services_auth__WEBPACK_IMPORTED_MODULE_1__.recover(this.user);
@@ -6883,24 +6884,34 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 7:
                 response = _context.sent;
                 this.loading = false;
-                submit.innerText = 'Reset Password';
+                this.user.email = "", this.$notify({
+                  group: "notify",
+                  text: (_response$data$data$m = response.data.data.message) !== null && _response$data$data$m !== void 0 ? _response$data$data$m : "An email has been sent with a link to reset the password",
+                  color: "red"
+                });
+                submit.innerText = "Reset Password";
                 console.log(response);
-                _context.next = 18;
+                _context.next = 20;
                 break;
 
-              case 13:
-                _context.prev = 13;
+              case 14:
+                _context.prev = 14;
                 _context.t0 = _context["catch"](1);
                 this.loading = false;
-                submit.innerText = 'Reset Password';
+                submit.innerText = "Reset Password";
+                this.$notify({
+                  group: "notify",
+                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : "Something went wrong",
+                  color: "red"
+                });
                 console.log(_context.t0.response);
 
-              case 18:
+              case 20:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[1, 13]]);
+        }, _callee, this, [[1, 14]]);
       }));
 
       function recover() {
@@ -7344,20 +7355,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Reset",
@@ -7365,12 +7362,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     title: "Reset Account",
     titleTemplate: "%s - Synoods Ecommerce"
   },
+  mounted: function mounted() {
+    this.user.token = this.$route.params.token;
+  },
   data: function data() {
     return {
       user: {
-        email: "",
+        token: "",
         password: "",
-        cpassword: ""
+        confirmed: ""
       },
       errors: {},
       loading: false
@@ -7379,7 +7379,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   methods: {
     reset: function () {
       var _reset = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var submit, response;
+        var submit, response, _error$response$data$;
+
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -7395,29 +7396,34 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 7:
                 response = _context.sent;
                 this.loading = false;
-                submit.innerText = "Reset Password";
+                this.user.password = "", this.user.confirmed = "", submit.innerText = "Reset Password";
+                this.$notify({
+                  group: "notify",
+                  text: 'Password reset successfully',
+                  color: "green"
+                });
                 console.log(response);
-                _context.next = 19;
+                _context.next = 20;
                 break;
 
-              case 13:
-                _context.prev = 13;
+              case 14:
+                _context.prev = 14;
                 _context.t0 = _context["catch"](1);
                 this.loading = false;
                 submit.innerText = "Reset Password";
                 console.log(_context.t0.response);
                 this.$notify({
-                  group: 'notify',
-                  text: _context.t0.response.data.data.message,
-                  color: 'red'
+                  group: "notify",
+                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : 'Something went wrong',
+                  color: "red"
                 });
 
-              case 19:
+              case 20:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[1, 13]]);
+        }, _callee, this, [[1, 14]]);
       }));
 
       function reset() {
@@ -7498,9 +7504,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     title: "Verify Account",
     titleTemplate: "%s - Synoods Ecommerce"
   },
+  mounted: function mounted() {
+    this.user.token = this.$route.params.token;
+  },
   data: function data() {
     return {
       user: {
+        token: "",
         password: ""
       },
       errors: {},
@@ -7510,7 +7520,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   methods: {
     verify: function () {
       var _verify = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var submit, response;
+        var submit, _response$data$data$m, response;
+
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -7525,13 +7536,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 6:
                 response = _context.sent;
                 this.loading = false;
-                submit.innerText = "Verify";
+                this.user.password = "", submit.innerText = "Verify";
+                this.$notify({
+                  group: 'notify',
+                  text: (_response$data$data$m = response.data.data.message) !== null && _response$data$data$m !== void 0 ? _response$data$data$m : 'Account verified successfully',
+                  color: 'red'
+                });
                 console.log(response);
-                _context.next = 18;
+                _context.next = 19;
                 break;
 
-              case 12:
-                _context.prev = 12;
+              case 13:
+                _context.prev = 13;
                 _context.t0 = _context["catch"](1);
                 this.loading = false;
                 submit.innerText = "Verify";
@@ -7542,12 +7558,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   color: 'red'
                 });
 
-              case 18:
+              case 19:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[1, 12]]);
+        }, _callee, this, [[1, 13]]);
       }));
 
       function verify() {
@@ -63551,7 +63567,7 @@ var render = function() {
               [
                 _c("p", [
                   _vm._v(
-                    "\n              Lost your password? Please enter your email address.\n              You will receive a link to create a new password via email.\n            "
+                    "\n              Lost your password? Please enter your email address. You will\n              receive a link to create a new password via email.\n            "
                   )
                 ]),
                 _vm._v(" "),
@@ -64172,45 +64188,6 @@ var render = function() {
                     "label",
                     {
                       staticClass: "font-weight-normal",
-                      attrs: { for: "reset-email" }
-                    },
-                    [_vm._v("Email address")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.user.email,
-                        expression: "user.email"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "email",
-                      id: "reset-email",
-                      name: "reset-email",
-                      disabled: _vm.loading,
-                      required: ""
-                    },
-                    domProps: { value: _vm.user.email },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.user, "email", $event.target.value)
-                      }
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group mb-0" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "font-weight-normal",
                       attrs: { for: "reset-password" }
                     },
                     [_vm._v("New Password")]
@@ -64227,7 +64204,7 @@ var render = function() {
                     ],
                     staticClass: "form-control",
                     attrs: {
-                      type: "email",
+                      type: "password",
                       id: "reset-password",
                       name: "reset-password",
                       disabled: _vm.loading,
@@ -64260,25 +64237,25 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.user.cpassword,
-                        expression: "user.cpassword"
+                        value: _vm.user.confirmed,
+                        expression: "user.confirmed"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
-                      type: "email",
+                      type: "password",
                       id: "reset-cpassword",
                       name: "reset-cpassword",
                       disabled: _vm.loading,
                       required: ""
                     },
-                    domProps: { value: _vm.user.cpassword },
+                    domProps: { value: _vm.user.confirmed },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.$set(_vm.user, "cpassword", $event.target.value)
+                        _vm.$set(_vm.user, "confirmed", $event.target.value)
                       }
                     }
                   })

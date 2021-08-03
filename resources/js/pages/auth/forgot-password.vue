@@ -6,8 +6,8 @@
           <div class="feature-box-content">
             <form class="mb-0" action="#" v-on:submit.prevent="recover">
               <p>
-                Lost your password? Please enter your email address.
-                You will receive a link to create a new password via email.
+                Lost your password? Please enter your email address. You will
+                receive a link to create a new password via email.
               </p>
               <div class="form-group mb-0">
                 <label for="reset-email" class="font-weight-normal"
@@ -61,10 +61,10 @@ export default {
   data() {
     return {
       user: {
-        email: ""
+        email: "",
       },
       errors: {},
-      loading: false
+      loading: false,
     };
   },
   methods: {
@@ -72,15 +72,28 @@ export default {
       let submit = document.getElementById("submit");
       try {
         this.loading = true;
-        submit.innerText = 'Loading...'
+        submit.innerText = "Loading...";
         console.log(this.user);
         const response = await auth.recover(this.user);
         this.loading = false;
-        submit.innerText = 'Reset Password'
+        this.user.email = "",
+        this.$notify({
+          group: "notify",
+          text:
+            response.data.data.message ??
+            "An email has been sent with a link to reset the password",
+          color: "red",
+        });
+        submit.innerText = "Reset Password";
         console.log(response);
       } catch (error) {
         this.loading = false;
-        submit.innerText = 'Reset Password'
+        submit.innerText = "Reset Password";
+        this.$notify({
+          group: "notify",
+          text: error.response.data.data.message ?? "Something went wrong",
+          color: "red",
+        });
         console.log(error.response);
       }
     },

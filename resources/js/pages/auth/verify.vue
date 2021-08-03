@@ -47,9 +47,13 @@ export default {
     title: "Verify Account",
     titleTemplate: "%s - Synoods Ecommerce",
   },
+  mounted() {
+    this.user.token = this.$route.params.token;
+  },
   data() {
     return {
       user: {
+        token: "",
         password: "",
       },
       errors: {},
@@ -64,7 +68,13 @@ export default {
         submit.innerText = "Loading...";
         const response = await auth.verify(this.user);
         this.loading = false;
+        this.user.password = "",
         submit.innerText = "Verify";
+        this.$notify({
+          group: 'notify',
+          text: response.data.data.message ?? 'Account verified successfully',
+          color: 'red'
+        });
         console.log(response);
       } catch (error) {
         this.loading = false;

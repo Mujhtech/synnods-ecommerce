@@ -156,7 +156,7 @@ class AuthController extends ApiController
 
     }
 
-    public function reset(ResetReqest $request){
+    public function reset(ResetRequest $request){
 
         $request->validated();
         // Get token
@@ -198,7 +198,7 @@ class AuthController extends ApiController
 
         $request->validated();
 
-        $tokenData = DB::table('email_verifiers')->where('token', $request->get('token'))->first();
+        $tokenData = DB::table('email_verifiers')->where('token', $request->token)->first();
         if ($tokenData) {
 
             if (Carbon::now() > Carbon::create($tokenData->expires_at)) {

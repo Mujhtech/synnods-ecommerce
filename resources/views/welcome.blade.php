@@ -15,6 +15,12 @@
     <body>
         <div id="app"></div>
         <noscript>You need to enable JavaScript to run this app.</noscript>
+        <script>
+            window.config = {
+                API_URL: '{{ url('/') }}/api',
+                BASE_URL: '{{ url('/') }}'
+            }
+        </script>
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

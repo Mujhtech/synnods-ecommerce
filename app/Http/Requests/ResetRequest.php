@@ -25,7 +25,7 @@ class ResetRequest extends FormRequest
     {
         return [
             'token' => 'required|min:60|max:60',
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:6',
         ];
     }
 
@@ -42,7 +42,7 @@ class ResetRequest extends FormRequest
             'token.max' => 'Invalid token',
             'password.required' => 'The password field is required',
             'password.min' => 'The password must be at least :min characters', ['min' => 6],
-            'password.confirmed' => 'The password confirmation does not match',
+            //'password.confirmed' => 'The password confirmation does not match',
         ];
     }
 }
