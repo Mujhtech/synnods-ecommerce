@@ -17,19 +17,12 @@ export function verify(data) {
     return http().post('/auth/verify', data);
 }
 
-export function login(user) {
-    return http().post('/auth/login', user)
-    .then(response => {
-        if(response.status === 200){
-            setToken(response.data);
-        }
-        return response.data;
-    });
+export function login(data) {
+    return http().post('/auth/login', data);
 }
 
-function setToken(user){
-    var ciphertext = CryptoJS.AES.encrypt(JSON.stringify({user: user}), 'laravellaravelvuevuespaspa');
-    console.log(ciphertext.toString());
+export function setToken(token){
+    let ciphertext = CryptoJS.AES.encrypt(JSON.stringify({token: token}), 'laravellaravelvuevuespaspa');
     localStorage.setItem('SYNECT', ciphertext);
 }
 
@@ -50,10 +43,10 @@ export function getAccessToken() {
         return null;
     }
 
-    var bytes  = CryptoJS.AES.decrypt(user.toString(), 'laravellaravelvuevuespaspa');
+    var bytes  = CryptoJS.AES.decrypt(token.toString(), 'laravellaravelvuevuespaspa');
     var plaintext = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
 
-    return plaintext.user.access_token;
+    return plaintext.token;
 }
 
 export function getProfile() {

@@ -63,6 +63,11 @@
               >
                 Login
               </button>
+               <p v-if="errors.length">
+                  <ul>
+                    <li style="text-align:center;color:red" v-for="(error, index) in errors" :key="index">{{ error }}</li>
+                  </ul>
+                </p>
             </form>
           </div>
         </div>
@@ -72,8 +77,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import * as auth from "../../services/auth";
-
 export default {
   name: "Login",
   metaInfo: {
@@ -87,12 +92,29 @@ export default {
         password: "",
         remember_me: false,
       },
-      errors: {},
+      errors: [],
       loading: false,
     };
   },
   methods: {
+    ...mapActions( 'user', [ 'userLogin' ] ),
     login: async function () {
+      if (!this.user.email) {
+        this.errors.push("Email address is required");
+        return;
+      }
+      if (
+        !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+          this.user.email
+        )
+      ) {
+        this.errors.push("Invalid email address");
+        return;
+      }
+      if (!this.user.password) {
+        this.errors.push("Password is required");
+        return;
+      }
       let submit = document.getElementById("submit");
       try {
         this.loading = true;
@@ -100,8 +122,22 @@ export default {
         const response = await auth.login(this.user);
         this.loading = false;
         submit.innerText = "Login";
-        console.log(response);
+
+        if(response.status === 200){
+          this.user.email = "";
+          this.user.password = "";
+          this.user.remember_me = false;
+          auth.setToken( response.data.data.access_token );
+          this.userLogin( response.data.data.user );
+          this.$notify({
+            group: "notify",
+            text: 'Successfully logged in',
+            color: "red",
+          });
+          this.$router.push('/account');
+        }
       } catch (error) {
+        if(!error.response) return;
         this.loading = false;
         submit.innerText = "Login";
         this.$notify({
@@ -109,7 +145,6 @@ export default {
           text: error.response.data.data.message,
           color: "red",
         });
-        console.log(error.response);
       }
     },
   },

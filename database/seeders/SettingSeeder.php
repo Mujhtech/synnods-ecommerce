@@ -28,6 +28,14 @@ class SettingSeeder extends Seeder
                 "type" => "site_description",
                 "value" => "synnods@gmail.com"
             ],
+            [
+                "type" => "site_title",
+                "value" => "Synoods Ecommcer"
+            ],
+            [
+                "type" => "site_url",
+                "value" => url('/')
+            ],
         ];
 
     	foreach ($settings as $setting) {

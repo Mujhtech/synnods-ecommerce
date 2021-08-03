@@ -32,7 +32,7 @@
 
 				<div class="header-right ml-0 ml-lg-auto">
 					<router-link
-						to="/auth/login"
+						to="/account"
 						class="header-icon d-md-block d-none mr-0"
 					>
 						<div class="header-user">
@@ -96,6 +96,7 @@
 import PvMainMenu from './partials/PvMainMenu';
 import PvCartMenu from './partials/PvCartMenu';
 import PvHeaderSearch from './partials/PvHeaderSearch';
+import * as auth from "../../services/auth";
 
 document.querySelector( 'body' ).classList.add( 'loaded' );
 
@@ -106,6 +107,7 @@ export default {
 		PvHeaderSearch
 	},
 	methods: {
+		...auth.isLoggedIn(),
 		openLoginModal: function () {
 			this.$modal.show(
 				() => import( '../features/modal/PvLoginModal' ),

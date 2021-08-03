@@ -565,6 +565,22 @@ class EmailTemplateSeeder extends Seeder
                 ',
                 "status" => true
             ],
+            [
+                "title" => "Verify Account",
+                "type" => "verify_account",
+                "content" => "%header%
+                <strong>Hello!</strong> <br /><br />
+                You are receiving this email because you registered on our website. <br /><br />
+                <a href='%verify_link%'>Verify Account</a> <br /><br />
+                Regards, <br />
+                <strong>%site_title%</strong>
+                <hr />
+                If you’re having trouble clicking the 'Verify Account' button, copy and paste the URL below into your web browser: %verify_link%
+                
+                %footer%
+                ",
+                "status" => true
+            ],
         ];
 
     	foreach ($templates as $template) {

@@ -113,7 +113,7 @@ class AuthController extends ApiController
     public function user(Request $request){
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-            'user' => UserResources::make($request->user())
+            'user' => UserResource::make($request->user())
         ]);
 
     }
@@ -121,7 +121,9 @@ class AuthController extends ApiController
     public function logout(Request $request){
 
         // Revoke users token
-        $request->user()->tokens()->revoke();
+        if($request->user()){
+            $request->user()->tokens()->revoke();
+        }
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'message' => 'Logout successfully'

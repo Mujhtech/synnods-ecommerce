@@ -31,7 +31,8 @@ const routes = [
     {
         path: "/account",
         component: Account,
-        name: "Account"
+        name: "Account",
+        meta: { middleware: "auth" }
     },
     {
         path: "/carts",
@@ -41,7 +42,8 @@ const routes = [
     {
         path: "/wishlist",
         component: Wishlist,
-        name: "Wishlist"
+        name: "Wishlist",
+        meta: { middleware: "auth" }
     },
     {
         path: "/checkout",
@@ -84,7 +86,7 @@ const routes = [
             }
         ]
     },
-    {path: '/*', component: Error},
+    { path: "/*", component: Error }
 ];
 
 // Set the routes in vue-router
@@ -92,6 +94,26 @@ const router = new VueRouter({
     routes,
     linkActiveClass: "active",
     mode: "history"
+});
+
+router.beforeResolve((to, from, next) => {
+    if (to.meta.middleware) {
+        if (
+            !localStorage.getItem("SYNECT") &&
+            to.meta.middleware.includes("auth")
+        ) {
+            next("/auth/login");
+        } else if (
+            localStorage.getItem("SYNECT") &&
+            to.meta.middleware.includes("guest")
+        ) {
+            next("/account");
+        } else {
+            next();
+        }
+    } else {
+        next();
+    }
 });
 
 export default router;

@@ -54,6 +54,8 @@ Route::group(['prefix' => 'v1'], function () {
         Route::post('reset', [AuthController::class, 'reset'])->name('reset');
 
         Route::post('verify', [AuthController::class, 'verify'])->name('verify');
+
+        Route::get('profile', [AuthController::class, 'user'])->middleware('auth:api')->name('profile');
         
     });
 

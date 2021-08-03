@@ -17,8 +17,9 @@
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <script>
             window.config = {
-                API_URL: '{{ url('/') }}/api',
-                BASE_URL: '{{ url('/') }}'
+                API_URL: '{{ url('/') }}/api/v1',
+                BASE_URL: '{{ url('/') }}',
+                APP: 'development'
             }
         </script>
         <script src="{{ asset('js/app.js') }}"></script>

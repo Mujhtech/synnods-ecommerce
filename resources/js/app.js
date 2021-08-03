@@ -1,6 +1,6 @@
 require('./plugins/index');
 require('./plugins/filters');
-require('./plugins/localstorage');
+//require('./plugins/localstorage');
 require('./plugins/directives/animate');
 require('./plugins/directives/lazyLoad');
 require('./plugins/directives/parallax');

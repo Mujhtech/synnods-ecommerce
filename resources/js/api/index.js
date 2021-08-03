@@ -14,7 +14,7 @@ export const currentDemo = 20;
 
 export function http() {
     return axios.create({
-        baseURL: apiURL,
+        baseURL: window.config.APP == 'production' ? window.config.API_URL : apiURL,
         headers: {
             Authorization: "Bearer " + auth.getAccessToken(),
             "Content-Type": "application/json",

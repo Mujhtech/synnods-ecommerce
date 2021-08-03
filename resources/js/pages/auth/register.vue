@@ -19,7 +19,7 @@
                 id="register-firstname"
                 v-model="user.first_name"
                 :disabled="loading"
-                required
+                
               />
               <label for="register-lastname">
                 Last Name
@@ -31,7 +31,7 @@
                 id="register-lastname"
                 v-model="user.last_name"
                 :disabled="loading"
-                required
+                
               />
               <label for="register-phone">
                 Phone Number
@@ -43,7 +43,7 @@
                 id="register-phone"
                 v-model="user.phone"
                 :disabled="loading"
-                required
+                
               />
               <label for="register-email">
                 Email address
@@ -55,7 +55,7 @@
                 id="register-email"
                 v-model="user.email"
                 :disabled="loading"
-                required
+                
               />
 
               <label for="register-password">
@@ -68,7 +68,7 @@
                 id="register-password"
                 v-model="user.password"
                 :disabled="loading"
-                required
+                
               />
 
               <div class="form-footer mb-2">
@@ -79,7 +79,13 @@
                 >
                   Register
                 </button>
+
               </div>
+                <p v-if="errors.length">
+                  <ul>
+                    <li style="text-align:center;color:red" v-for="(error, index) in errors" :key="index">{{ error }}</li>
+                  </ul>
+                </p>
             </form>
           </div>
         </div>
@@ -104,14 +110,46 @@ export default {
         first_name: "",
         last_name: "",
         phone: "",
-        password: ""
+        password: "",
       },
-      errors: {},
+      errors: [],
       loading: false,
     };
   },
   methods: {
     register: async function () {
+      if (!this.user.first_name) {
+        this.errors.push("First name is required");
+        return;
+      }
+      if (!this.user.last_name) {
+        this.errors.push("Last name is required");
+        return;
+      }
+      if (!this.user.phone) {
+        this.errors.push("Phone number is required");
+        return;
+      }
+      if (!this.user.email) {
+        this.errors.push("Email address is required");
+        return;
+      }
+      if (
+        !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+          this.user.email
+        )
+      ) {
+        this.errors.push("Invalid email address");
+        return;
+      }
+      if (!this.user.password) {
+        this.errors.push("Password is required");
+        return;
+      }
+      if (this.user.password.lenght < 8) {
+        this.errors.push("Password length must be atleast 8 characters");
+        return;
+      }
       let submit = document.getElementById("submit");
       try {
         this.loading = true;
@@ -120,14 +158,19 @@ export default {
         this.loading = false;
         submit.innerText = "Register";
         console.log(response);
+        this.$notify({
+          group: "notify",
+          text: 'Account created successfully',
+          color: "red",
+        });
       } catch (error) {
         this.loading = false;
         submit.innerText = "Register";
         console.log(error.response);
         this.$notify({
-          group: 'notify',
+          group: "notify",
           text: error.response.data.data.message,
-          color: 'red'
+          color: "red",
         });
       }
     },
