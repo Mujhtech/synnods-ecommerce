@@ -77,7 +77,11 @@
 import * as auth from "../../services/auth";
 
 export default {
-  name: "Recover",
+  name: "Reset",
+  metaInfo: {
+    title: "Reset Account",
+    titleTemplate: "%s - Synoods Ecommerce",
+  },
   data() {
     return {
       user: {

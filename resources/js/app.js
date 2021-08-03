@@ -10,6 +10,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './route/index';
 import store from './store/index';
+import VueMeta from 'vue-meta'
+ 
+Vue.use(VueMeta);
 
 
 new Vue({

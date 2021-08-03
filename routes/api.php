@@ -26,6 +26,17 @@ Route::get('/', function (Request $request) {
     ], 200, $request->header());
 });
 
+Route::get('/send', function(){
+
+    \Mail::send([], [
+        'name' => 'Mujeeb'],
+        function ($message) {
+                $message->from('mujeeb.muhideen@gmail.com');
+                $message->to('mujhtech@gmail.com', 'Your Name')
+                ->subject('Your Website Contact Form');
+});
+});
+
 Route::group(['prefix' => 'v1'], function () {
 
     // Authentication routes

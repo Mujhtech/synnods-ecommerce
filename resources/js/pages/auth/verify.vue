@@ -43,6 +43,10 @@ import * as auth from "../../services/auth";
 
 export default {
   name: "Verify",
+  metaInfo: {
+    title: "Verify Account",
+    titleTemplate: "%s - Synoods Ecommerce",
+  },
   data() {
     return {
       user: {

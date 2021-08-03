@@ -54,6 +54,10 @@ import * as auth from "../../services/auth";
 
 export default {
   name: "Recover",
+  metaInfo: {
+    title: "Forgot Password",
+    titleTemplate: "%s - Synoods Ecommerce",
+  },
   data() {
     return {
       user: {

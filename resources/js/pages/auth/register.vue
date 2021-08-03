@@ -93,6 +93,10 @@ import * as auth from "../../services/auth";
 
 export default {
   name: "Recover",
+  metaInfo: {
+    title: "Register",
+    titleTemplate: "%s - Synoods Ecommerce",
+  },
   data() {
     return {
       user: {

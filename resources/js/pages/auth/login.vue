@@ -76,6 +76,10 @@ import * as auth from "../../services/auth";
 
 export default {
   name: "Login",
+  metaInfo: {
+    title: "Login",
+    titleTemplate: "%s - Synoods Ecommerce",
+  },
   data() {
     return {
       user: {
@@ -84,7 +88,7 @@ export default {
         remember_me: false,
       },
       errors: {},
-      loading: false
+      loading: false,
     };
   },
   methods: {
@@ -92,18 +96,18 @@ export default {
       let submit = document.getElementById("submit");
       try {
         this.loading = true;
-        submit.innerText = 'Loading...'
+        submit.innerText = "Loading...";
         const response = await auth.login(this.user);
         this.loading = false;
-        submit.innerText = 'Login'
+        submit.innerText = "Login";
         console.log(response);
       } catch (error) {
         this.loading = false;
-        submit.innerText = 'Login'
+        submit.innerText = "Login";
         this.$notify({
-          group: 'notify',
+          group: "notify",
           text: error.response.data.data.message,
-          color: 'red'
+          color: "red",
         });
         console.log(error.response);
       }

@@ -13,6 +13,8 @@ return [
     |
     */
 
+    'driver' => env('MAIL_DRIVER', 'sendgrid'),
+
     'default' => env('MAIL_MAILER', 'smtp'),
 
     /*
@@ -45,6 +47,10 @@ return [
             'auth_mode' => null,
         ],
 
+        'sendgrid' => [
+            'transport' => 'sendgrid',
+        ],
+
         'ses' => [
             'transport' => 'ses',
         ],
@@ -70,6 +76,7 @@ return [
         'array' => [
             'transport' => 'array',
         ],
+        
     ],
 
     /*

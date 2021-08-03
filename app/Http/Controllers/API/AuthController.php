@@ -15,10 +15,18 @@ use App\Http\Requests\VerifyRequest;
 use App\Http\Requests\ResetRequest;
 use App\Http\Requests\RecoverRequest;
 use Str;
+use App\Services\SendMailService;
 
 class AuthController extends ApiController
 {
     //
+    private $email;
+
+    public function __construct(SendMailService $email){
+
+        $this->email = $email;
+
+    }
 
     public function login(LoginRequest $request){
 
@@ -86,6 +94,8 @@ class AuthController extends ApiController
                 'expires_at' => Carbon::now()->addMinutes(60)
             ]);
 
+            //$this->email->email_type('verify_account')->verify_account($token)->send($request->email);
+
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'message' => 'User created successfully'
             ]);
@@ -137,8 +147,11 @@ class AuthController extends ApiController
         DB::table('password_resets')->where('email', $request->email)->delete();
         DB::table('password_resets')->insert(['email' => $request->email, 'token' => $token, 'created_at' => Carbon::now()]);
 
+        //$this->email->email_type('reset_password')->reset_account($token)->send($request->email);
+
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-            'message' => 'An email has been sent with a link to reset the password'
+            'message' => 'An email has been sent with a link to reset the password',
+            //'token' => $token
         ]);
 
     }
@@ -218,6 +231,8 @@ class AuthController extends ApiController
             $user->save();
 
             DB::table('email_verifiers')->where('email', $user->email)->delete();
+
+            //$this->email->email_type('welcome_user')->welcome_user($user->fullname)->send($user->email);
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'message' => 'Account verified successfully'
