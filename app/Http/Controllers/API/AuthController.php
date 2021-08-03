@@ -56,7 +56,7 @@ class AuthController extends ApiController
                 'user' => UserResource::make($user),
                 'access_token' => $tokenData->accessToken,
                 'token_type' => 'Bearer',
-                'token_scope' => $tokenData->token->scope[0],
+                //'token_scope' => $tokenData->token->scope[0],
                 'expires_at' => Carbon::parse($tokenData->token->expired_at)->toDayDateTimeString()
             ]);
 
@@ -112,9 +112,15 @@ class AuthController extends ApiController
 
     public function user(Request $request){
 
-        return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+        if($request->user()){
+            return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'user' => UserResource::make($request->user())
-        ]);
+            ]);
+        } else {
+            return $this->setStatusCode(403)->setStatusMessage('error')->respond([
+            'message' => 'Not authorized'
+            ]);
+        }
 
     }
 

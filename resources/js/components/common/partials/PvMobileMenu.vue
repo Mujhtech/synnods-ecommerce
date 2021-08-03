@@ -188,47 +188,29 @@
 					</li>
 
 					<li>
-						<router-link to="/pages/blog">Blog</router-link>
-					</li>
-					<li>
 						<router-link to="/pages/about-us">About Us</router-link>
 					</li>
 					</ul>
 
-					<ul class="mobile-menu mt-2 mb-2">
-						<li class="border-0">
-							<a href="javascript:;">Special Offer!</a>
-						</li>
-						<li class="border-0">
-							<a
-								href="javascript:;"
-								target="_blank"
-							>
-								Buy Porto!
-								<span class="tip tip-hot">Hot</span>
-							</a>
-						</li>
-					</ul>
-
 					<ul class="mobile-menu">
 						<li>
-							<router-link to="/pages/account">My Account</router-link>
+							<router-link to="/account">My Account</router-link>
 						</li>
 						<li>
-							<router-link to="/pages/contact-us">Contact Us</router-link>
+							<router-link to="/contact-us">Contact Us</router-link>
 						</li>
 						<li>
-							<router-link to="/pages/blog">Blog</router-link>
+							<router-link to="/blog">Blog</router-link>
 						</li>
 						<li>
-							<router-link to="/pages/wishlist">My Wishlist</router-link>
+							<router-link to="/wishlist">My Wishlist</router-link>
 						</li>
 						<li>
-							<router-link to="/pages/cart">Cart</router-link>
+							<router-link to="/cart">Cart</router-link>
 						</li>
 						<li>
 							<router-link
-								to="/pages/login"
+								to="/auth/login"
 								class="login-link"
 							>Log In</router-link>
 						</li>

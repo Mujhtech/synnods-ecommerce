@@ -119,18 +119,27 @@ export default {
   methods: {
     register: async function () {
       if (!this.user.first_name) {
+        this.errors = [];
         this.errors.push("First name is required");
         return;
       }
       if (!this.user.last_name) {
+        this.errors = [];
         this.errors.push("Last name is required");
         return;
       }
       if (!this.user.phone) {
+        this.errors = [];
         this.errors.push("Phone number is required");
         return;
       }
+      if (!this.user.phone.match(/[0-9]/g)) {
+        this.errors = [];
+        this.errors.push("Phone number must be a number");
+        return;
+      }
       if (!this.user.email) {
+        this.errors = [];
         this.errors.push("Email address is required");
         return;
       }
@@ -139,17 +148,26 @@ export default {
           this.user.email
         )
       ) {
+        this.errors = [];
         this.errors.push("Invalid email address");
         return;
       }
       if (!this.user.password) {
+        this.errors = [];
         this.errors.push("Password is required");
         return;
       }
       if (this.user.password.lenght < 8) {
+        this.errors = [];
         this.errors.push("Password length must be atleast 8 characters");
         return;
       }
+      if (!this.user.password.match(/[0-9]/g)) {
+        this.errors = [];
+        this.errors.push("Password must contain number");
+        return;
+      }
+      this.errors = [];
       let submit = document.getElementById("submit");
       try {
         this.loading = true;
@@ -158,6 +176,11 @@ export default {
         this.loading = false;
         submit.innerText = "Register";
         console.log(response);
+        this.user.email = "";
+        this.user.password = "";
+        this.user.first_name = "";
+        this.user.last_name = "";
+        this.user.phone = "";
         this.$notify({
           group: "notify",
           text: 'Account created successfully',

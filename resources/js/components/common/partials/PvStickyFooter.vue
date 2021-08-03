@@ -16,7 +16,7 @@
             </router-link>
         </div>
         <div class="sticky-info">
-            <router-link to="/login">
+            <router-link to="/account">
                 <i class="icon-user-2"></i>Account
             </router-link>
         </div>

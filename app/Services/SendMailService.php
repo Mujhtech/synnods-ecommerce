@@ -12,6 +12,10 @@ class SendMailService {
 
     private $site_url;
 
+    private $site_email;
+    
+    private $site_name;
+
     private $subject;
 
     private $content;
@@ -22,6 +26,8 @@ class SendMailService {
 
     public function __construct(){
 
+        $this->site_name = Setting::where('type', 'site_name')->first()->value;
+        $this->site_email = Setting::where('type', 'site_email')->first()->value;
         $this->site_title = Setting::where('type', 'site_title')->first()->value;
         $this->site_url = Setting::where('type', 'site_url')->first()->value;
         $this->header = EmailTemplate::where('type', 'header')->first()->content;
@@ -74,10 +80,25 @@ class SendMailService {
 
     public function send(string $email){
 
-        $content = str_replace("%header%", $this->header, $this->content);
+        $header = str_replace("%header%", $this->site_url, $this->header);
+        $header = str_replace("%site_logo%", 'https://ui-avatars.com/api/?name='.urlencode($this->site_name).'&color=7F9CF5&background=EBF4FF', $header);
+        $header = str_replace("%site_title%", $this->site_name, $header);
+        $header = str_replace("%date_time%", date('d F, Y, H:i:s'), $header);
+        $content = str_replace("%header%", $header, $this->content);
         $content = str_replace("%footer%", $this->footer, $content);
 
-        Mail::to($email)->send(new SendMail($content, $this->subject));
+        $headers = "From: $this->site_name <support@varspay.com> \r\n";
+		$headers .= "Reply-To: $this->site_name <support@varspay.com> \r\n";
+		$headers .= "MIME-Version: 1.0\r\n";
+		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+		if (mail($email, $this->subject, $content, $headers)) {
+		    return true;
+		} else {
+		    return false;
+		}
+
+        //Mail::to($email)->send(new SendMail($content, $this->subject));
 
     }
 }
