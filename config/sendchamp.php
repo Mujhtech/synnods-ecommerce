@@ -12,7 +12,7 @@ return [
      * live or test
      *
      */
-    'mode' => 'test',
+    'mode' => 'live',
 
 
     /**
@@ -31,7 +31,7 @@ return [
      * Public Key
      *
      */
-    'publicKey' => 'sendchamp_test_$2y$10$.moQA3/sJ8PKfiFbZy4zPu..2wKGmL7fudVhPb6tx2dhNlkNIif7C',
+    'publicKey' => 'sendchamp_live_$2y$10$XzTPRF2IIPBvWzecBSWbZ.K09XFc6djK00mOgm9/HWwl1mMNzBBzy',
 
     /**
      * Webhook

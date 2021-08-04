@@ -9,31 +9,40 @@
             </div>
 
             <form action="#" v-on:submit.prevent="verify">
-              <label for="login-password">
+              <label for="email-code">
                 Email Verification Code
                 <span class="required">*</span>
               </label>
               <input
-                type="password"
+                type="text"
                 class="form-input form-wide"
-                id="login-password"
+                id="email-code"
                 v-model="user.email_code"
                 :disabled="loading"
                 required
               />
 
-              <label for="login-password">
+              <label for="sms-code">
                 SMS Verification Code
                 <span class="required">*</span>
               </label>
               <input
-                type="password"
+                type="text"
                 class="form-input form-wide"
-                id="login-password"
+                id="sms-code"
                 v-model="user.sms_code"
                 :disabled="loading"
                 required
               />
+              <div class="form-footer">
+                <a
+                  href="javascript:void(0)"
+                  class="forget-password text-dark form-footer-right"
+                  v-on:click="resend"
+                >
+                  Resend codes
+                </a>
+              </div>
 
               <button
                 type="submit"
@@ -75,6 +84,26 @@ export default {
     };
   },
   methods: {
+    resend: async function(){
+      try {
+        this.loading = true;
+        const response = await auth.resend({token: this.user.token});
+        this.loading = false;
+        this.$notify({
+          group: 'notify',
+          text: response.data.data.message,
+          color: 'red'
+        });
+      } catch(error) {
+        this.loading = false;
+        console.log(error.response);
+        this.$notify({
+          group: 'notify',
+          text: error.response.data.data.message,
+          color: 'red'
+        });
+      }
+    },
     verify: async function () {
       let submit = document.getElementById("submit");
       try {
@@ -82,7 +111,8 @@ export default {
         submit.innerText = "Loading...";
         const response = await auth.verify(this.user);
         this.loading = false;
-        this.user.password = "",
+        this.user.sms_code = "",
+        this.user.email_code = "",
         submit.innerText = "Verify";
         this.$notify({
           group: 'notify',
@@ -90,13 +120,14 @@ export default {
           color: 'red'
         });
         console.log(response);
+        this.$router.push('/auth/login');
       } catch (error) {
         this.loading = false;
         submit.innerText = "Verify";
         console.log(error.response);
         this.$notify({
           group: 'notify',
-          text: error.response.data.data.message,
+          text: error.response.data.data.message ?? error.response.data.message,
           color: 'red'
         });
       }

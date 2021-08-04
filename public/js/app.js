@@ -6918,7 +6918,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 submit.innerText = "Reset Password";
                 this.$notify({
                   group: "notify",
-                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : "Something went wrong",
+                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : _context.t0.response.data.message,
                   color: "red"
                 });
                 console.log(_context.t0.response);
@@ -7069,7 +7069,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapActions)('user', ['userLogin'])), {}, {
     login: function () {
       var _login = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var submit, response;
+        var submit, response, _error$response$data$;
+
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -7146,7 +7147,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 submit.innerText = "Login";
                 this.$notify({
                   group: "notify",
-                  text: _context.t0.response.data.data.message,
+                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : _context.t0.response.data.message,
                   color: "red"
                 });
 
@@ -7308,7 +7309,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   methods: {
     register: function () {
       var _register = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var submit, response;
+        var submit, response, _error$response$data$;
+
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -7353,7 +7355,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return _context.abrupt("return");
 
               case 16:
-                if (isNaN(this.user.phone)) {
+                if (/^-?\d+$/.test(this.user.phone)) {
                   _context.next = 20;
                   break;
                 }
@@ -7433,30 +7435,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 this.user.phone = "";
                 this.$notify({
                   group: "notify",
-                  text: 'Account created successfully',
+                  text: response.data.data.message,
                   color: "red"
                 });
-                _context.next = 65;
+                this.$router.push("/auth/verify/".concat(response.data.data.token));
+                _context.next = 66;
                 break;
 
-              case 59:
-                _context.prev = 59;
+              case 60:
+                _context.prev = 60;
                 _context.t0 = _context["catch"](42);
                 this.loading = false;
                 submit.innerText = "Register";
                 console.log(_context.t0.response);
                 this.$notify({
                   group: "notify",
-                  text: _context.t0.response.data.data.message,
+                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : _context.t0.response.data.message,
                   color: "red"
                 });
 
-              case 65:
+              case 66:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[42, 59]]);
+        }, _callee, this, [[42, 60]]);
       }));
 
       function register() {
@@ -7610,7 +7613,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 console.log(_context.t0.response);
                 this.$notify({
                   group: "notify",
-                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : 'Something went wrong',
+                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : _context.t0.response.data.message,
                   color: "red"
                 });
 
@@ -7706,6 +7709,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Verify",
@@ -7728,39 +7740,35 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     };
   },
   methods: {
-    verify: function () {
-      var _verify = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var submit, _response$data$data$m, response;
-
+    resend: function () {
+      var _resend = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                submit = document.getElementById("submit");
-                _context.prev = 1;
+                _context.prev = 0;
                 this.loading = true;
-                submit.innerText = "Loading...";
-                _context.next = 6;
-                return _services_auth__WEBPACK_IMPORTED_MODULE_1__.verify(this.user);
+                _context.next = 4;
+                return _services_auth__WEBPACK_IMPORTED_MODULE_1__.resend({
+                  token: this.user.token
+                });
 
-              case 6:
+              case 4:
                 response = _context.sent;
                 this.loading = false;
-                this.user.password = "", submit.innerText = "Verify";
                 this.$notify({
                   group: 'notify',
-                  text: (_response$data$data$m = response.data.data.message) !== null && _response$data$data$m !== void 0 ? _response$data$data$m : 'Account verified successfully',
+                  text: response.data.data.message,
                   color: 'red'
                 });
-                console.log(response);
-                _context.next = 19;
+                _context.next = 14;
                 break;
 
-              case 13:
-                _context.prev = 13;
-                _context.t0 = _context["catch"](1);
+              case 9:
+                _context.prev = 9;
+                _context.t0 = _context["catch"](0);
                 this.loading = false;
-                submit.innerText = "Verify";
                 console.log(_context.t0.response);
                 this.$notify({
                   group: 'notify',
@@ -7768,12 +7776,67 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   color: 'red'
                 });
 
-              case 19:
+              case 14:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[1, 13]]);
+        }, _callee, this, [[0, 9]]);
+      }));
+
+      function resend() {
+        return _resend.apply(this, arguments);
+      }
+
+      return resend;
+    }(),
+    verify: function () {
+      var _verify = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        var submit, _response$data$data$m, response, _error$response$data$;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                submit = document.getElementById("submit");
+                _context2.prev = 1;
+                this.loading = true;
+                submit.innerText = "Loading...";
+                _context2.next = 6;
+                return _services_auth__WEBPACK_IMPORTED_MODULE_1__.verify(this.user);
+
+              case 6:
+                response = _context2.sent;
+                this.loading = false;
+                this.user.sms_code = "", this.user.email_code = "", submit.innerText = "Verify";
+                this.$notify({
+                  group: 'notify',
+                  text: (_response$data$data$m = response.data.data.message) !== null && _response$data$data$m !== void 0 ? _response$data$data$m : 'Account verified successfully',
+                  color: 'red'
+                });
+                console.log(response);
+                this.$router.push('/auth/login');
+                _context2.next = 20;
+                break;
+
+              case 14:
+                _context2.prev = 14;
+                _context2.t0 = _context2["catch"](1);
+                this.loading = false;
+                submit.innerText = "Verify";
+                console.log(_context2.t0.response);
+                this.$notify({
+                  group: 'notify',
+                  text: (_error$response$data$ = _context2.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : _context2.t0.response.data.message,
+                  color: 'red'
+                });
+
+              case 20:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, this, [[1, 14]]);
       }));
 
       function verify() {
@@ -65293,8 +65356,8 @@ var render = function() {
                   ],
                   staticClass: "form-input form-wide",
                   attrs: {
-                    type: "password",
-                    id: "login-password",
+                    type: "text",
+                    id: "email-code",
                     disabled: _vm.loading,
                     required: ""
                   },
@@ -65322,8 +65385,8 @@ var render = function() {
                   ],
                   staticClass: "form-input form-wide",
                   attrs: {
-                    type: "password",
-                    id: "login-password",
+                    type: "text",
+                    id: "sms-code",
                     disabled: _vm.loading,
                     required: ""
                   },
@@ -65337,6 +65400,19 @@ var render = function() {
                     }
                   }
                 }),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-footer" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "forget-password text-dark form-footer-right",
+                      attrs: { href: "javascript:void(0)" },
+                      on: { click: _vm.resend }
+                    },
+                    [_vm._v("\n                Resend codes\n              ")]
+                  )
+                ]),
                 _vm._v(" "),
                 _c(
                   "button",
@@ -65371,7 +65447,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "login-password" } }, [
+    return _c("label", { attrs: { for: "email-code" } }, [
       _vm._v("\n              Email Verification Code\n              "),
       _c("span", { staticClass: "required" }, [_vm._v("*")])
     ])
@@ -65380,7 +65456,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "login-password" } }, [
+    return _c("label", { attrs: { for: "sms-code" } }, [
       _vm._v("\n              SMS Verification Code\n              "),
       _c("span", { staticClass: "required" }, [_vm._v("*")])
     ])

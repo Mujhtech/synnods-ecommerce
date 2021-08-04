@@ -106,7 +106,7 @@ export default {
         console.log(error.response);
         this.$notify({
           group: "notify",
-          text: error.response.data.data.message ?? 'Something went wrong',
+          text: error.response.data.data.message ?? error.response.data.message,
           color: "red",
         });
       }

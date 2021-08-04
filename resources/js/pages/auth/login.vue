@@ -142,7 +142,7 @@ export default {
         submit.innerText = "Login";
         this.$notify({
           group: "notify",
-          text: error.response.data.data.message,
+          text: error.response.data.data.message ?? error.response.data.message,
           color: "red",
         });
       }

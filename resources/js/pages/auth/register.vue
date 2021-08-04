@@ -138,7 +138,7 @@ export default {
         this.errors.push("Phone number must be more than 11 digits");
         return;
       }
-      if (!isNaN(this.user.phone)) {
+      if (!/^-?\d+$/.test(this.user.phone)) {
         this.errors = [];
         this.errors.push("Phone number must be a number");
         return;
@@ -188,16 +188,17 @@ export default {
         this.user.phone = "";
         this.$notify({
           group: "notify",
-          text: 'Account created successfully',
+          text: response.data.data.message,
           color: "red",
         });
+        this.$router.push(`/auth/verify/${response.data.data.token}`);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Register";
         console.log(error.response);
         this.$notify({
           group: "notify",
-          text: error.response.data.data.message,
+          text: error.response.data.data.message ?? error.response.data.message,
           color: "red",
         });
       }

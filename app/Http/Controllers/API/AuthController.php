@@ -101,12 +101,13 @@ class AuthController extends ApiController
                 'expires_at' => Carbon::now()->addMinutes(60)
             ]);          
 
-            SendChamp::sendSms('You phone verification is '.$sms_code.' from Synoods Ecommerce', 'SC-MSG', [$user->phone]);
+            SendChamp::sendSms('You phone verification code is '.$sms_code.' from Synoods Ecommerce', 'Sendchamp', [$user->phone]);
 
-            $this->email->email_type('verify_account')->verify_account($token, $email_code)->send($request->email);
+            //$this->email->email_type('verify_account')->verify_account($token, $email_code)->send($request->email);
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-                'message' => 'User created successfully'
+                'message' => 'A verification code has been sent to your email address and phone number',
+                'token' => $token
             ]);
 
         } else {
@@ -122,13 +123,17 @@ class AuthController extends ApiController
     public function user(Request $request){
 
         if($request->user()){
+
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-            'user' => UserResource::make($request->user())
+                'user' => UserResource::make($request->user())
             ]);
+
         } else {
+
             return $this->setStatusCode(403)->setStatusMessage('error')->respond([
-            'message' => 'Not authorized'
+                'message' => 'Not authorized'
             ]);
+
         }
 
     }
@@ -259,7 +264,7 @@ class AuthController extends ApiController
 
             DB::table('email_verifiers')->where('email', $user->email)->delete();
 
-            $this->email->email_type('welcome_user')->welcome_user($user->fullname)->send($user->email);
+            //$this->email->email_type('welcome_user')->welcome_user($user->fullname)->send($user->email);
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'message' => 'Account verified successfully'
@@ -300,9 +305,9 @@ class AuthController extends ApiController
             $code->expires_at = Carbon::now()->addMinutes(60)   ;
             $code->save() ;  
 
-            SendChamp::sendSms('You phone verification is '.$sms_code.' from Synoods Ecommerce', 'SC-MSG', [$user->phone]);
+            SendChamp::sendSms('You phone verification code is '.$sms_code.' from Synoods Ecommerce', 'Sendchamp', [$user->phone]);
 
-            $this->email->email_type('verify_account')->verify_account($token, $email_code)->send($user->email);
+            //$this->email->email_type('verify_account')->verify_account($token, $email_code)->send($user->email);
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'message' => 'A verification code has been sent to your email address and phone number'

@@ -91,7 +91,7 @@ export default {
         submit.innerText = "Reset Password";
         this.$notify({
           group: "notify",
-          text: error.response.data.data.message ?? "Something went wrong",
+          text: error.response.data.data.message ?? error.response.data.message,
           color: "red",
         });
         console.log(error.response);

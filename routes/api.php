@@ -46,7 +46,7 @@ Route::group(['prefix' => 'v1'], function () {
 
         Route::post('reset', [AuthController::class, 'reset'])->name('reset');
 
-        Route::post('resent', [AuthController::class, 'resend'])->name('resent');
+        Route::post('resend', [AuthController::class, 'resend'])->name('resend');
 
         Route::post('verify', [AuthController::class, 'verify'])->name('verify');
 
