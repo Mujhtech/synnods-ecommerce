@@ -10,14 +10,27 @@
 
             <form action="#" v-on:submit.prevent="verify">
               <label for="login-password">
-                Password
+                Email Verification Code
                 <span class="required">*</span>
               </label>
               <input
                 type="password"
                 class="form-input form-wide"
                 id="login-password"
-                v-model="user.password"
+                v-model="user.email_code"
+                :disabled="loading"
+                required
+              />
+
+              <label for="login-password">
+                SMS Verification Code
+                <span class="required">*</span>
+              </label>
+              <input
+                type="password"
+                class="form-input form-wide"
+                id="login-password"
+                v-model="user.sms_code"
                 :disabled="loading"
                 required
               />
@@ -54,7 +67,8 @@ export default {
     return {
       user: {
         token: "",
-        password: "",
+        email_code: "",
+        sms_code: ""
       },
       errors: {},
       loading: false,

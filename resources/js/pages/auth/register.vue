@@ -133,7 +133,12 @@ export default {
         this.errors.push("Phone number is required");
         return;
       }
-      if (!this.user.phone.match(/[0-9]/g)) {
+      if (this.user.phone.length > 11) {
+        this.errors = [];
+        this.errors.push("Phone number must be more than 11 digits");
+        return;
+      }
+      if (!isNaN(this.user.phone)) {
         this.errors = [];
         this.errors.push("Phone number must be a number");
         return;
@@ -157,7 +162,7 @@ export default {
         this.errors.push("Password is required");
         return;
       }
-      if (this.user.password.lenght < 8) {
+      if (this.user.password.length < 8) {
         this.errors = [];
         this.errors.push("Password length must be atleast 8 characters");
         return;

@@ -25,7 +25,8 @@ class VerifyRequest extends FormRequest
     {
         return [
             'token' => 'required|min:60|max:60',
-            'password' => 'required'
+            'email_code' => 'required',
+            'sms_code' => 'required'
         ];
     }
 
@@ -40,7 +41,8 @@ class VerifyRequest extends FormRequest
             'token.required' => 'Invalid token',
             'token.min' => 'Invalid token',
             'token.max' => 'Invalid token',
-            'password.required' => 'The password field is required',
+            'email_code.required' => 'The email verification code field is required',
+            'sms_code.required' => 'The sms verification code field is required',
         ];
     }
 }

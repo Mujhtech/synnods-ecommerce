@@ -17,6 +17,10 @@ export function verify(data) {
     return http().post('/auth/verify', data);
 }
 
+export function resend(data) {
+    return http().post('/auth/resend', data);
+}
+
 export function login(data) {
     return http().post('/auth/login', data);
 }

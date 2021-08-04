@@ -14,6 +14,9 @@ import Checkout from "../pages/pages/checkout";
 import Wishlist from "../pages/pages/wishlist";
 import Shop from "../pages/shop/index";
 import Error from "../layouts/error";
+import Vendor from "../pages/vendor/index";
+import VendorList from "../pages/vendor/list";
+import VendorStore from "../pages/vendor/store";
 
 Vue.use(VueRouter);
 
@@ -54,6 +57,22 @@ const routes = [
         path: "/order-tracking",
         component: TrackOrder,
         name: "Track Order"
+    },
+    {
+        path: "/vendor",
+        component: Vendor,
+        redirect: "/vendor",
+        children: [
+            {
+                path: "/",
+                component: VendorList
+            },
+            {
+                path: "store",
+                component: VendorStore
+            },
+
+        ]
     },
     {
         path: "/auth",

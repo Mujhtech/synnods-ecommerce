@@ -570,6 +570,7 @@ class EmailTemplateSeeder extends Seeder
                 "type" => "verify_account",
                 "content" => "%header%
                 <strong>Hello!</strong> <br /><br />
+                <h1>%email_code%</h1>
                 You are receiving this email because you registered on our website. <br /><br />
                 <a href='%verify_link%'>Verify Account</a> <br /><br />
                 Regards, <br />

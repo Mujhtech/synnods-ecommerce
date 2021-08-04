@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6deb153c4346fd52238a0892458b42eb",
+    "content-hash": "f179ab462126a4fc984930edb1e630d5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1919,6 +1919,76 @@
                 }
             ],
             "time": "2021-07-23T07:42:52+00:00"
+        },
+        {
+            "name": "mujhtech/sendchamp",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mujhtech/laravel-sendchamp.git",
+                "reference": "6dfa71b77d295cc57ab594b8a4a6bee564a1d6f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mujhtech/laravel-sendchamp/zipball/6dfa71b77d295cc57ab594b8a4a6bee564a1d6f4",
+                "reference": "6dfa71b77d295cc57ab594b8a4a6bee564a1d6f4",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.3",
+                "illuminate/support": "~6|~7|~8",
+                "php": "^7.2|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mujhtech\\SendChamp\\SendChampServiceProvider"
+                    ],
+                    "aliases": {
+                        "SendChamp": "Mujhtech\\SendChamp\\Facades\\SendChamp"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Helpers.php"
+                ],
+                "psr-4": {
+                    "Mujhtech\\SendChamp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mujhtech",
+                    "email": "mujeeb.muhideen@gmail.com"
+                }
+            ],
+            "description": "Laravel package  for sendchamp api",
+            "keywords": [
+                "email",
+                "github",
+                "laravel",
+                "laravel 6",
+                "laravel 7",
+                "laravel 8",
+                "mujhtech",
+                "open source",
+                "otp",
+                "php",
+                "sendchamp",
+                "sms",
+                "whatsapp"
+            ],
+            "support": {
+                "issues": "https://github.com/Mujhtech/laravel-sendchamp/issues",
+                "source": "https://github.com/Mujhtech/laravel-sendchamp/tree/1.0"
+            },
+            "time": "2021-08-04T13:02:30+00:00"
         },
         {
             "name": "nesbot/carbon",

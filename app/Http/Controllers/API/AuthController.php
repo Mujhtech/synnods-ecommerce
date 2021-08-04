@@ -16,6 +16,8 @@ use App\Http\Requests\ResetRequest;
 use App\Http\Requests\RecoverRequest;
 use Str;
 use App\Services\SendMailService;
+use SendChamp;
+use App\Models\EmailVerifier;
 
 class AuthController extends ApiController
 {
@@ -79,7 +81,7 @@ class AuthController extends ApiController
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->user_name = $request->user_name;
-        $user->phone = $request->phone;
+        $user->phone = '234'.substr($request->phone, 1);
         $user->role_id = 4;
         $user->password = $request->password;
 
@@ -87,14 +89,21 @@ class AuthController extends ApiController
 
             $token = Str::random(60);
 
+            $email_code = rand(100000,999999);
+            $sms_code = rand(100000,999999);
+
             DB::table('email_verifiers')->where('email', $user->email)->delete();
             DB::table('email_verifiers')->insert([
                 'email' => $user->email,
                 'token' => $token,
+                'sms_code' => $sms_code,
+                'email_code' => $email_code,
                 'expires_at' => Carbon::now()->addMinutes(60)
-            ]);
+            ]);          
 
-            //$this->email->email_type('verify_account')->verify_account($token)->send($request->email);
+            SendChamp::sendSms('You phone verification is '.$sms_code.' from Synoods Ecommerce', 'SC-MSG', [$user->phone]);
+
+            $this->email->email_type('verify_account')->verify_account($token, $email_code)->send($request->email);
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'message' => 'User created successfully'
@@ -226,10 +235,20 @@ class AuthController extends ApiController
                 
             }
 
-            if (!password_verify($request->get('password'), $user->password)) {
+            $code = EmailVerifier::where('token', $request->token)->first();
+
+            if ($request->email_code != $code->email_code) {
 
                 return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                    'message' => 'The entered password is incorrect'
+                    'message' => 'The entered email verification code is incorrect'
+                ]);
+
+            }
+
+            if ($request->sms_code != $code->sms_code) {
+
+                return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                    'message' => 'The entered sms verification code is incorrect'
                 ]);
 
             }
@@ -240,7 +259,7 @@ class AuthController extends ApiController
 
             DB::table('email_verifiers')->where('email', $user->email)->delete();
 
-            //$this->email->email_type('welcome_user')->welcome_user($user->fullname)->send($user->email);
+            $this->email->email_type('welcome_user')->welcome_user($user->fullname)->send($user->email);
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'message' => 'Account verified successfully'
@@ -252,6 +271,50 @@ class AuthController extends ApiController
                 'message' => 'The verification token is incorrect or has already been used'
             ]);
         }
+
+    }
+
+
+    public function resend(Request $request){
+
+        $tokenData = DB::table('email_verifiers')->where('token', $request->token)->first();
+        if ($tokenData) {
+
+            $user = User::where('email', $tokenData->email)->first();
+
+            if (!$user) {
+
+                return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                    'message' => 'Email not found'
+                ]);
+                
+            }
+
+            $code = EmailVerifier::where('token', $request->token)->first();
+            
+            $email_code = rand(100000,999999);
+            $sms_code = rand(100000,999999);
+
+            $code->sms_code = $sms_code;
+            $code->email_code = $email_code;
+            $code->expires_at = Carbon::now()->addMinutes(60)   ;
+            $code->save() ;  
+
+            SendChamp::sendSms('You phone verification is '.$sms_code.' from Synoods Ecommerce', 'SC-MSG', [$user->phone]);
+
+            $this->email->email_type('verify_account')->verify_account($token, $email_code)->send($user->email);
+
+            return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+                'message' => 'A verification code has been sent to your email address and phone number'
+            ]);
+
+        } else {
+
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'The verification token is incorrect or has already been used'
+            ]);
+        }
+
 
     }
 }

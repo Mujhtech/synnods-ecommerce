@@ -30,17 +30,8 @@
 			<li>
 				<router-link
 					to="/vendor"
-					class="sub-menu-link"
 					:class="{active: $route.path.indexOf('/vendor') > -1}"
-				>Vendor</router-link>
-				<ul>
-					<li>
-						<router-link to="/vendor/list">Store List</router-link>
-					</li>
-					<li>
-						<router-link to="/vendor/store">Vendor Store</router-link>
-					</li>
-				</ul>
+				>Vendors</router-link>
 			</li>
 
 			<li>
@@ -204,54 +195,13 @@
 					:class="{active: $route.path.indexOf('/pages/blog') > -1}"
 				>Blog</router-link>
 			</li>
-
-			<li class="d-none d-xl-block">
-				<a
-					href="javascript:;"
-					class="sub-menu-link"
-					:class="{active: isPageItemActived}"
-				>Pages</a>
-
-				<ul>
-					<li
-						v-for="item in mainMenu.other"
-						:key="item.title"
-					>
-						<router-link
-							:to="item.url"
-							:class="{'sub-menu-link': item.subPages}"
-						>{{ item.title }}</router-link>
-
-						<ul v-if="item.subPages">
-							<li
-								v-for="subItem in item.subPages"
-								:key="subItem.title"
-							>
-								<router-link :to="subItem.url">{{ subItem.title }}</router-link>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<!-- <li>
-				<router-link to="/pages/about-us">About Us</router-link>
+			<li>
+				<router-link to="/about-us">About Us</router-link>
 			</li>
 			<li>
-				<router-link to="/pages/contact-us">Contact Us</router-link>
-			</li> -->
-			<!-- <li class="float-right">
-				<a
-					href="https://1.envato.market/DdLk5"
-					class="nolink"
-					target="_blank"
-				>Buy Porto!</a>
+				<router-link to="/contact-us">Contact Us</router-link>
 			</li>
-			<li class="float-right">
-				<a
-					href="javascript:;"
-					class="pl-5"
-				>Special Offer!</a>
-			</li> -->
+
 		</ul>
 	</nav>
 </template>

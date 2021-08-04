@@ -50,6 +50,7 @@ class SendMailService {
         $this->subject = str_replace("%site_title%",$this->site_title,$this->subject);
         $this->content = str_replace("%customer_name%", $name, $this->content);
         $this->content = str_replace("%site_url%", $this->site_url, $this->content);
+        $this->content = str_replace("%site_title%", $this->site_title, $this->content);
 
         return $this;
 
@@ -67,12 +68,13 @@ class SendMailService {
 
     }
 
-    public function verify_account(string $token){
+    public function verify_account(string $token, string $code){
 
         $url = url('/').'/auth/verify/'.$token;
 
         $this->content = str_replace("%verify_link%", $url, $this->content);
         $this->content = str_replace("%site_title%", $this->site_url, $this->content);
+        $this->content = str_replace("%email_code%", $code, $this->content);
 
         return $this;
 

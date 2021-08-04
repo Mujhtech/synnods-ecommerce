@@ -17,6 +17,8 @@ class CreateEmailVerifiersTable extends Migration
             $table->id();
             $table->string('email')->index();
             $table->string('token');
+            $table->string('sms_code');
+            $table->string('email_code');
             $table->dateTime('expires_at')->nullable();
             $table->timestamps();
         });

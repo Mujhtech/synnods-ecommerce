@@ -1,1 +1,0 @@
-/*! For license information please see vue-image-lightbox.min.js.LICENSE.txt */

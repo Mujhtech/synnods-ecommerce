@@ -19,22 +19,15 @@ use App\Http\Controllers\API\SubCategoryController;
 |
  */
 
+Route::get('/sendchamp', function(){
+    print_r(SendChamp::getWalletReport());
+});
+
 Route::get('/', function (Request $request) {
     return response()->json([
         'status' => 'success',
         'message' => 'Api is up and running'
     ], 200, $request->header());
-});
-
-Route::get('/send', function(){
-
-    \Mail::send([], [
-        'name' => 'Mujeeb'],
-        function ($message) {
-                $message->from('mujeeb.muhideen@gmail.com');
-                $message->to('mujhtech@gmail.com', 'Your Name')
-                ->subject('Your Website Contact Form');
-});
 });
 
 Route::group(['prefix' => 'v1'], function () {
@@ -52,6 +45,8 @@ Route::group(['prefix' => 'v1'], function () {
         Route::post('recover', [AuthController::class, 'recover'])->name('recover');
 
         Route::post('reset', [AuthController::class, 'reset'])->name('reset');
+
+        Route::post('resent', [AuthController::class, 'resend'])->name('resent');
 
         Route::post('verify', [AuthController::class, 'verify'])->name('verify');
 
