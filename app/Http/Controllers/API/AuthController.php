@@ -76,6 +76,16 @@ class AuthController extends ApiController
 
         $request->validated();
 
+        if(User::where('email', $request->email)->exists()){
+
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Email already exist'
+            ]);
+
+        }
+
+
+
         $user = new User();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
@@ -103,7 +113,7 @@ class AuthController extends ApiController
 
             SendChamp::sendSms('You phone verification code is '.$sms_code.' from Synoods Ecommerce', 'Sendchamp', [$user->phone]);
 
-            //$this->email->email_type('verify_account')->verify_account($token, $email_code)->send($request->email);
+            $this->email->email_type('verify_account')->verify_account($token, $email_code)->send($request->email);
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'message' => 'A verification code has been sent to your email address and phone number',
@@ -169,7 +179,7 @@ class AuthController extends ApiController
         DB::table('password_resets')->where('email', $request->email)->delete();
         DB::table('password_resets')->insert(['email' => $request->email, 'token' => $token, 'created_at' => Carbon::now()]);
 
-        //$this->email->email_type('reset_password')->reset_account($token)->send($request->email);
+        $this->email->email_type('reset_password')->reset_account($token)->send($request->email);
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'message' => 'An email has been sent with a link to reset the password',
@@ -264,7 +274,7 @@ class AuthController extends ApiController
 
             DB::table('email_verifiers')->where('email', $user->email)->delete();
 
-            //$this->email->email_type('welcome_user')->welcome_user($user->fullname)->send($user->email);
+            $this->email->email_type('welcome_user')->welcome_user($user->fullname)->send($user->email);
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'message' => 'Account verified successfully'
@@ -307,7 +317,7 @@ class AuthController extends ApiController
 
             SendChamp::sendSms('You phone verification code is '.$sms_code.' from Synoods Ecommerce', 'Sendchamp', [$user->phone]);
 
-            //$this->email->email_type('verify_account')->verify_account($token, $email_code)->send($user->email);
+            $this->email->email_type('verify_account')->verify_account($token, $email_code)->send($user->email);
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'message' => 'A verification code has been sent to your email address and phone number'

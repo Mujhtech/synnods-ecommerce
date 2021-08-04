@@ -6865,6 +6865,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Recover",
@@ -6877,7 +6882,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       user: {
         email: ""
       },
-      errors: {},
+      errors: [],
       loading: false
     };
   },
@@ -6890,15 +6895,36 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                if (this.user.email) {
+                  _context.next = 4;
+                  break;
+                }
+
+                this.errors = [];
+                this.errors.push("Email address is required");
+                return _context.abrupt("return");
+
+              case 4:
+                if (/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(this.user.email)) {
+                  _context.next = 8;
+                  break;
+                }
+
+                this.errors = [];
+                this.errors.push("Invalid email address");
+                return _context.abrupt("return");
+
+              case 8:
                 submit = document.getElementById("submit");
-                _context.prev = 1;
+                _context.prev = 9;
+                this.errors = [];
                 this.loading = true;
                 submit.innerText = "Loading...";
                 console.log(this.user);
-                _context.next = 7;
+                _context.next = 16;
                 return _services_auth__WEBPACK_IMPORTED_MODULE_1__.recover(this.user);
 
-              case 7:
+              case 16:
                 response = _context.sent;
                 this.loading = false;
                 this.user.email = "", this.$notify({
@@ -6908,12 +6934,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 });
                 submit.innerText = "Reset Password";
                 console.log(response);
-                _context.next = 20;
+                _context.next = 29;
                 break;
 
-              case 14:
-                _context.prev = 14;
-                _context.t0 = _context["catch"](1);
+              case 23:
+                _context.prev = 23;
+                _context.t0 = _context["catch"](9);
                 this.loading = false;
                 submit.innerText = "Reset Password";
                 this.$notify({
@@ -6923,12 +6949,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 });
                 console.log(_context.t0.response);
 
-              case 20:
+              case 29:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[1, 14]]);
+        }, _callee, this, [[9, 23]]);
       }));
 
       function recover() {
@@ -7076,40 +7102,44 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             switch (_context.prev = _context.next) {
               case 0:
                 if (this.user.email) {
-                  _context.next = 3;
+                  _context.next = 4;
                   break;
                 }
 
+                this.errors = [];
                 this.errors.push("Email address is required");
                 return _context.abrupt("return");
 
-              case 3:
+              case 4:
                 if (/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(this.user.email)) {
-                  _context.next = 6;
+                  _context.next = 8;
                   break;
                 }
 
+                this.errors = [];
                 this.errors.push("Invalid email address");
                 return _context.abrupt("return");
 
-              case 6:
+              case 8:
                 if (this.user.password) {
-                  _context.next = 9;
+                  _context.next = 12;
                   break;
                 }
 
+                this.errors = [];
                 this.errors.push("Password is required");
                 return _context.abrupt("return");
 
-              case 9:
+              case 12:
                 submit = document.getElementById("submit");
-                _context.prev = 10;
+                _context.prev = 13;
+                this.errors = [];
                 this.loading = true;
                 submit.innerText = "Loading...";
-                _context.next = 15;
+                _context.next = 19;
                 return _services_auth__WEBPACK_IMPORTED_MODULE_1__.login(this.user);
 
-              case 15:
+              case 19:
                 response = _context.sent;
                 this.loading = false;
                 submit.innerText = "Login";
@@ -7128,21 +7158,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   this.$router.push('/account');
                 }
 
-                _context.next = 28;
+                _context.next = 32;
                 break;
 
-              case 21:
-                _context.prev = 21;
-                _context.t0 = _context["catch"](10);
+              case 25:
+                _context.prev = 25;
+                _context.t0 = _context["catch"](13);
 
                 if (_context.t0.response) {
-                  _context.next = 25;
+                  _context.next = 29;
                   break;
                 }
 
                 return _context.abrupt("return");
 
-              case 25:
+              case 29:
                 this.loading = false;
                 submit.innerText = "Login";
                 this.$notify({
@@ -7151,12 +7181,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   color: "red"
                 });
 
-              case 28:
+              case 32:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[10, 21]]);
+        }, _callee, this, [[13, 25]]);
       }));
 
       function login() {
@@ -7554,6 +7584,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Reset",
@@ -7571,7 +7606,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         password: "",
         confirmed: ""
       },
-      errors: {},
+      errors: [],
       loading: false
     };
   },
@@ -7584,15 +7619,46 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                if (this.user.password) {
+                  _context.next = 4;
+                  break;
+                }
+
+                this.errors = [];
+                this.errors.push("Password is required");
+                return _context.abrupt("return");
+
+              case 4:
+                if (this.user.confirmed) {
+                  _context.next = 8;
+                  break;
+                }
+
+                this.errors = [];
+                this.errors.push("Confirm Password is required");
+                return _context.abrupt("return");
+
+              case 8:
+                if (!(this.user.password != this.user.confirmed)) {
+                  _context.next = 12;
+                  break;
+                }
+
+                this.errors = [];
+                this.errors.push("Password not match");
+                return _context.abrupt("return");
+
+              case 12:
                 submit = document.getElementById("submit");
-                _context.prev = 1;
+                _context.prev = 13;
+                this.errors = [];
                 this.loading = true;
                 submit.innerText = "Loading...";
                 console.log(this.user);
-                _context.next = 7;
+                _context.next = 20;
                 return _services_auth__WEBPACK_IMPORTED_MODULE_1__.reset(this.user);
 
-              case 7:
+              case 20:
                 response = _context.sent;
                 this.loading = false;
                 this.user.password = "", this.user.confirmed = "", submit.innerText = "Reset Password";
@@ -7602,12 +7668,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   color: "green"
                 });
                 console.log(response);
-                _context.next = 20;
+                _context.next = 33;
                 break;
 
-              case 14:
-                _context.prev = 14;
-                _context.t0 = _context["catch"](1);
+              case 27:
+                _context.prev = 27;
+                _context.t0 = _context["catch"](13);
                 this.loading = false;
                 submit.innerText = "Reset Password";
                 console.log(_context.t0.response);
@@ -7617,12 +7683,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   color: "red"
                 });
 
-              case 20:
+              case 33:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[1, 14]]);
+        }, _callee, this, [[13, 27]]);
       }));
 
       function reset() {
@@ -7718,6 +7784,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Verify",
@@ -7735,7 +7806,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         email_code: "",
         sms_code: ""
       },
-      errors: {},
+      errors: [],
       loading: false
     };
   },
@@ -7798,14 +7869,55 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
+                if (this.user.email_code) {
+                  _context2.next = 4;
+                  break;
+                }
+
+                this.errors = [];
+                this.errors.push("Email confirmation code is required");
+                return _context2.abrupt("return");
+
+              case 4:
+                if (this.user.sms_code) {
+                  _context2.next = 8;
+                  break;
+                }
+
+                this.errors = [];
+                this.errors.push("SMS confirmation code is required");
+                return _context2.abrupt("return");
+
+              case 8:
+                if (!(this.user.email_code.length != 6)) {
+                  _context2.next = 12;
+                  break;
+                }
+
+                this.errors = [];
+                this.errors.push("Email confirmation code is invalid");
+                return _context2.abrupt("return");
+
+              case 12:
+                if (!(this.user.sms_code.length != 6)) {
+                  _context2.next = 16;
+                  break;
+                }
+
+                this.errors = [];
+                this.errors.push("SMS confirmation code is invalid");
+                return _context2.abrupt("return");
+
+              case 16:
                 submit = document.getElementById("submit");
-                _context2.prev = 1;
+                _context2.prev = 17;
+                this.errors = [];
                 this.loading = true;
                 submit.innerText = "Loading...";
-                _context2.next = 6;
+                _context2.next = 23;
                 return _services_auth__WEBPACK_IMPORTED_MODULE_1__.verify(this.user);
 
-              case 6:
+              case 23:
                 response = _context2.sent;
                 this.loading = false;
                 this.user.sms_code = "", this.user.email_code = "", submit.innerText = "Verify";
@@ -7816,12 +7928,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 });
                 console.log(response);
                 this.$router.push('/auth/login');
-                _context2.next = 20;
+                _context2.next = 37;
                 break;
 
-              case 14:
-                _context2.prev = 14;
-                _context2.t0 = _context2["catch"](1);
+              case 31:
+                _context2.prev = 31;
+                _context2.t0 = _context2["catch"](17);
                 this.loading = false;
                 submit.innerText = "Verify";
                 console.log(_context2.t0.response);
@@ -7831,12 +7943,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   color: 'red'
                 });
 
-              case 20:
+              case 37:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[1, 14]]);
+        }, _callee2, this, [[17, 31]]);
       }));
 
       function verify() {
@@ -64602,7 +64714,29 @@ var render = function() {
                     )
                   ],
                   1
-                )
+                ),
+                _vm._v(" "),
+                _vm.errors.length
+                  ? _c("p", [
+                      _c(
+                        "ul",
+                        _vm._l(_vm.errors, function(error, index) {
+                          return _c(
+                            "li",
+                            {
+                              key: index,
+                              staticStyle: {
+                                "text-align": "center",
+                                color: "red"
+                              }
+                            },
+                            [_vm._v(_vm._s(error))]
+                          )
+                        }),
+                        0
+                      )
+                    ])
+                  : _vm._e()
               ]
             )
           ])
@@ -65294,7 +65428,26 @@ var render = function() {
                   1
                 )
               ]
-            )
+            ),
+            _vm._v(" "),
+            _vm.errors.length
+              ? _c("p", [
+                  _c(
+                    "ul",
+                    _vm._l(_vm.errors, function(error, index) {
+                      return _c(
+                        "li",
+                        {
+                          key: index,
+                          staticStyle: { "text-align": "center", color: "red" }
+                        },
+                        [_vm._v(_vm._s(error))]
+                      )
+                    }),
+                    0
+                  )
+                ])
+              : _vm._e()
           ])
         ])
       ])
@@ -65425,7 +65578,29 @@ var render = function() {
                     }
                   },
                   [_vm._v("\n              Verify\n            ")]
-                )
+                ),
+                _vm._v(" "),
+                _vm.errors.length
+                  ? _c("p", [
+                      _c(
+                        "ul",
+                        _vm._l(_vm.errors, function(error, index) {
+                          return _c(
+                            "li",
+                            {
+                              key: index,
+                              staticStyle: {
+                                "text-align": "center",
+                                color: "red"
+                              }
+                            },
+                            [_vm._v(_vm._s(error))]
+                          )
+                        }),
+                        0
+                      )
+                    ])
+                  : _vm._e()
               ]
             )
           ])

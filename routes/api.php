@@ -7,6 +7,8 @@ use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\SubCategoryController;
+use App\Http\Controllers\API\VendorController;
+use App\Http\Controllers\API\NewsletterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +21,6 @@ use App\Http\Controllers\API\SubCategoryController;
 |
  */
 
-Route::get('/sendchamp', function(){
-    print_r(SendChamp::getWalletReport());
-});
-
 Route::get('/', function (Request $request) {
     return response()->json([
         'status' => 'success',
@@ -32,7 +30,13 @@ Route::get('/', function (Request $request) {
 
 Route::group(['prefix' => 'v1'], function () {
 
+    // Newsletter route
+
+    Route::post('subcribe', [NewsletterController::class, 'subscribe'])->name('subscribe');
+    Route::post('unsubcribe', [NewsletterController::class, 'unsubscribe'])->name('unsubscribe');
+
     // Authentication routes
+
 
     Route::prefix('auth')->name('auth.')->group(function () {
 
@@ -62,18 +66,62 @@ Route::group(['prefix' => 'v1'], function () {
         
     });
 
+    // Vendors route 
+
+    Route::prefix('vendor')->name('vendor.')->group(function () {
+
+        Route::get('/', [VendorController::class, 'index'])->name('index');
+
+        Route::get('/{slug}', [VendorController::class, 'single'])->name('single');
+
+        Route::get('delete/{slug}', [VendorController::class, 'destroy'])->name('delete');
+
+        Route::post('create', [VendorController::class, 'store'])->name('create');
+
+        Route::put('update', [VendorController::class, 'store'])->name('update');
+        
+    });
+
     // Category routes 
 
     Route::prefix('category')->name('category.')->group(function () {
 
         Route::get('/', [CategoryController::class, 'index'])->name('index');
+
+        Route::get('/{slug}', [CategoryController::class, 'single'])->name('single');
+
+        Route::get('delete/{slug}', [CategoryController::class, 'destroy'])->name('delete');
+
+        Route::post('create', [CategoryController::class, 'store'])->name('create');
+
+        Route::put('update', [CategoryController::class, 'store'])->name('update');
+        
+    });
+
+
+
+    // Subcategory routes 
+
+    Route::prefix('sub_category')->name('sub_category.')->group(function () {
+
+        Route::get('/', [SubCategoryController::class, 'index'])->name('index');
+
+        Route::get('/{slug}', [SubCategoryController::class, 'single'])->name('single');
+
+        Route::get('delete/{slug}', [SubCategoryController::class, 'destroy'])->name('delete');
+
+        Route::post('create', [SubCategoryController::class, 'store'])->name('create');
+
+        Route::put('update', [SubCategoryController::class, 'store'])->name('update');
         
     });
 
 
     // User routes
 
-    Route::prefix('user')->name('user.')->group(function () {
+    Route::prefix('user')->name('user.')->middleware('auth:api')->group(function () {
+
+        Route::put('update', [UserController::class, 'store'])->name('update');
         
     });
 

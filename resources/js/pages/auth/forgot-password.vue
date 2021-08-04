@@ -41,6 +41,11 @@
                   Reset Password
                 </button>
               </div>
+              <p v-if="errors.length">
+                  <ul>
+                    <li style="text-align:center;color:red" v-for="(error, index) in errors" :key="index">{{ error }}</li>
+                  </ul>
+                </p>
             </form>
           </div>
         </div>
@@ -63,14 +68,29 @@ export default {
       user: {
         email: "",
       },
-      errors: {},
+      errors: [],
       loading: false,
     };
   },
   methods: {
     recover: async function () {
+      if (!this.user.email) {
+        this.errors = [];
+        this.errors.push("Email address is required");
+        return;
+      }
+      if (
+        !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+          this.user.email
+        )
+      ) {
+        this.errors = [];
+        this.errors.push("Invalid email address");
+        return;
+      }
       let submit = document.getElementById("submit");
       try {
+        this.errors = [];
         this.loading = true;
         submit.innerText = "Loading...";
         console.log(this.user);

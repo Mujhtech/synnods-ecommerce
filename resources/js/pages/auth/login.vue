@@ -100,6 +100,7 @@ export default {
     ...mapActions( 'user', [ 'userLogin' ] ),
     login: async function () {
       if (!this.user.email) {
+        this.errors = [];
         this.errors.push("Email address is required");
         return;
       }
@@ -108,15 +109,18 @@ export default {
           this.user.email
         )
       ) {
+        this.errors = [];
         this.errors.push("Invalid email address");
         return;
       }
       if (!this.user.password) {
+        this.errors = [];
         this.errors.push("Password is required");
         return;
       }
       let submit = document.getElementById("submit");
       try {
+        this.errors = [];
         this.loading = true;
         submit.innerText = "Loading...";
         const response = await auth.login(this.user);

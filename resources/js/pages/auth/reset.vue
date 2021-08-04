@@ -52,6 +52,11 @@
                 </button>
               </div>
             </form>
+            <p v-if="errors.length">
+                  <ul>
+                    <li style="text-align:center;color:red" v-for="(error, index) in errors" :key="index">{{ error }}</li>
+                  </ul>
+                </p>
           </div>
         </div>
       </div>
@@ -78,14 +83,31 @@ export default {
         password: "",
         confirmed: "",
       },
-      errors: {},
+      errors: [],
       loading: false,
     };
   },
   methods: {
+    
     reset: async function () {
+      if (!this.user.password) {
+        this.errors = [];
+        this.errors.push("Password is required");
+        return;
+      }
+      if (!this.user.confirmed) {
+        this.errors = [];
+        this.errors.push("Confirm Password is required");
+        return;
+      }
+      if (this.user.password != this.user.confirmed) {
+        this.errors = [];
+        this.errors.push("Password not match");
+        return;
+      }
       let submit = document.getElementById("submit");
       try {
+        this.errors = [];
         this.loading = true;
         submit.innerText = "Loading...";
         console.log(this.user);

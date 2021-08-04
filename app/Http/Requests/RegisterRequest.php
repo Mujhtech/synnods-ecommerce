@@ -26,10 +26,9 @@ class RegisterRequest extends FormRequest
         return [
             //
             'password' => 'required|string',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email',
             'first_name' => 'required|string',
             'last_name' => 'required|string',
-            'user_name' => 'string|min:8|unique:users',
             'phone' => 'required|max:11'
         ];
     }
@@ -40,16 +39,12 @@ class RegisterRequest extends FormRequest
             'password.string' => 'Password must be a character',
             'email.required' => 'Email address is required',
             'email.email' => 'Incorrect email address',
-            'email.unique' => 'Email already exist',
             'last_name.required' => 'Last name is required',
             'last_name.string' => 'Last name must be a character',
             'first_name.required' => 'Last name is required',
             'first_name.string' => 'Last name must be a character',
             'phone.required' => 'Phone number is required',
             'phone.max' => 'Phone number must be 11 in digit',
-            'user_name.string' => 'User name must be a character',
-            'user_name.min' => 'User name must be 8 character',
-            'user_name.unique' => 'Username already exist',
         ];
     }
 }

@@ -52,6 +52,11 @@
               >
                 Verify
               </button>
+              <p v-if="errors.length">
+                  <ul>
+                    <li style="text-align:center;color:red" v-for="(error, index) in errors" :key="index">{{ error }}</li>
+                  </ul>
+                </p>
             </form>
           </div>
         </div>
@@ -79,7 +84,7 @@ export default {
         email_code: "",
         sms_code: ""
       },
-      errors: {},
+      errors: [],
       loading: false,
     };
   },
@@ -105,8 +110,29 @@ export default {
       }
     },
     verify: async function () {
+      if (!this.user.email_code) {
+        this.errors = [];
+        this.errors.push("Email confirmation code is required");
+        return;
+      }
+      if (!this.user.sms_code) {
+        this.errors = [];
+        this.errors.push("SMS confirmation code is required");
+        return;
+      }
+      if (this.user.email_code.length != 6) {
+        this.errors = [];
+        this.errors.push("Email confirmation code is invalid");
+        return;
+      }
+      if (this.user.sms_code.length != 6) {
+        this.errors = [];
+        this.errors.push("SMS confirmation code is invalid");
+        return;
+      }
       let submit = document.getElementById("submit");
       try {
+        this.errors = [];
         this.loading = true;
         submit.innerText = "Loading...";
         const response = await auth.verify(this.user);

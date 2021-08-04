@@ -87,7 +87,7 @@ class Handler extends ExceptionHandler
     
         $response['responseCode'] = $statusCode;
     
-        return response()->json(['status' => $response['responseCode'], 'message' => $response['responseMessage']], $statusCode);
+        return response()->json(['data' => ['status' => $response['responseCode'], 'message' => $response['responseMessage']]], $statusCode);
     }
 
     private function logError($code, $exception){
