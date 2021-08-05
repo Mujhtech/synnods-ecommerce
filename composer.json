@@ -13,7 +13,7 @@
         "laravel/passport": "^10.1",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
-        "mujhtech/sendchamp": "^1.0",
+        "mujhtech/sendchamp": "^1.0.2",
         "s-ichikawa/laravel-sendgrid-driver": "^3.0"
     },
     "require-dev": {

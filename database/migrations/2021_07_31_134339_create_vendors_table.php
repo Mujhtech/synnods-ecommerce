@@ -17,6 +17,7 @@ class CreateVendorsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('store_name');
+            $table->string('store_slug');
             $table->string('store_description');
             $table->string('store_email');
             $table->integer('store_phone');

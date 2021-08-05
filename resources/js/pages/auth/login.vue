@@ -98,6 +98,7 @@ export default {
   },
   methods: {
     ...mapActions( 'user', [ 'userLogin' ] ),
+    ...mapActions( 'notification', [ 'addNotification' ] ),
     login: async function () {
       if (!this.user.email) {
         this.errors = [];
@@ -133,22 +134,14 @@ export default {
           this.user.remember_me = false;
           auth.setToken( response.data.data.access_token );
           this.userLogin( response.data.data.user );
-          this.$notify({
-            group: "notify",
-            text: 'Successfully logged in',
-            color: "red",
-          });
+          this.addNotification('Successfully logged in');
           this.$router.push('/account');
         }
       } catch (error) {
         if(!error.response) return;
         this.loading = false;
         submit.innerText = "Login";
-        this.$notify({
-          group: "notify",
-          text: error.response.data.data.message ?? error.response.data.message,
-          color: "red",
-        });
+        this.addNotification(error.response.data.data.message);
       }
     },
   },

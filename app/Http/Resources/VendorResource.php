@@ -24,7 +24,8 @@ class VendorResource extends JsonResource
             'address' => $this->store_address,
             'state' => $this->store_state,
             'city' => $this->store_city,
-            'country' => $this->store_country
+            'country' => $this->store_country,
+            'slug' => $this->store_slug
         ];
     }
 }

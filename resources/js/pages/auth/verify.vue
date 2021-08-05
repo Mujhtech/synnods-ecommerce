@@ -67,6 +67,7 @@
 
 <script>
 import * as auth from "../../services/auth";
+import { mapActions } from 'vuex';
 
 export default {
   name: "Verify",
@@ -89,24 +90,17 @@ export default {
     };
   },
   methods: {
+    ...mapActions( 'notification', [ 'addNotification' ] ),
     resend: async function(){
       try {
         this.loading = true;
         const response = await auth.resend({token: this.user.token});
         this.loading = false;
-        this.$notify({
-          group: 'notify',
-          text: response.data.data.message,
-          color: 'red'
-        });
+        this.addNotification(response.data.data.message);
       } catch(error) {
         this.loading = false;
         console.log(error.response);
-        this.$notify({
-          group: 'notify',
-          text: error.response.data.data.message,
-          color: 'red'
-        });
+        this.addNotification(error.response.data.data.message);
       }
     },
     verify: async function () {
@@ -140,22 +134,14 @@ export default {
         this.user.sms_code = "",
         this.user.email_code = "",
         submit.innerText = "Verify";
-        this.$notify({
-          group: 'notify',
-          text: response.data.data.message ?? 'Account verified successfully',
-          color: 'red'
-        });
+        this.addNotification(response.data.data.message);
         console.log(response);
         this.$router.push('/auth/login');
       } catch (error) {
         this.loading = false;
         submit.innerText = "Verify";
         console.log(error.response);
-        this.$notify({
-          group: 'notify',
-          text: error.response.data.data.message ?? error.response.data.message,
-          color: 'red'
-        });
+        this.addNotification(error.response.data.data.message);
       }
     },
   },

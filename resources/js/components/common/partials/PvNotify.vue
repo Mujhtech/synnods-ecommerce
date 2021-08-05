@@ -5,14 +5,14 @@
 		:width="300"
 		:max="4"
 		animation-name="fade-left"
-		position="bottom right"
+		position="top right"
 	>
 		<template slot="body" slot-scope="props">
 			<div class="minipopup-box">
 				<div class="product">
 
 					<div class="product-detail">
-						<p v-bind:style="{ color: props.item.color }">{{ props.item.text }}</p>
+						<p v-bind:style="{ fontSize: '14px', color: props.item.color }">{{ props.item.text }}</p>
 					</div>
 				</div>
 

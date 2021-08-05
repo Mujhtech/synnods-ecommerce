@@ -66,6 +66,7 @@
 
 <script>
 import * as auth from "../../services/auth";
+import { mapActions } from 'vuex';
 
 export default {
   name: "Reset",
@@ -88,7 +89,7 @@ export default {
     };
   },
   methods: {
-    
+    ...mapActions( 'notification', [ 'addNotification' ] ),
     reset: async function () {
       if (!this.user.password) {
         this.errors = [];
@@ -116,21 +117,13 @@ export default {
         this.user.password = "",
         this.user.confirmed = "", 
         submit.innerText = "Reset Password";
-        this.$notify({
-          group: "notify",
-          text: 'Password reset successfully',
-          color: "green",
-        });
+        this.addNotification('Password reset successfully');
         console.log(response);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Reset Password";
         console.log(error.response);
-        this.$notify({
-          group: "notify",
-          text: error.response.data.data.message ?? error.response.data.message,
-          color: "red",
-        });
+        this.addNotification(error.response.data.data.message);
       }
     },
   },

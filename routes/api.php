@@ -21,6 +21,10 @@ use App\Http\Controllers\API\NewsletterController;
 |
  */
 
+Route::get('/sendchamp', function() {
+    print_r(sendchamp()->getWalletReport());
+});
+
 Route::get('/', function (Request $request) {
     return response()->json([
         'status' => 'success',

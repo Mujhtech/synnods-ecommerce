@@ -2098,10 +2098,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _partials_PvMainMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./partials/PvMainMenu */ "./resources/js/components/common/partials/PvMainMenu.vue");
-/* harmony import */ var _partials_PvCartMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./partials/PvCartMenu */ "./resources/js/components/common/partials/PvCartMenu.vue");
-/* harmony import */ var _partials_PvHeaderSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./partials/PvHeaderSearch */ "./resources/js/components/common/partials/PvHeaderSearch.vue");
-/* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _partials_PvMainMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./partials/PvMainMenu */ "./resources/js/components/common/partials/PvMainMenu.vue");
+/* harmony import */ var _partials_PvCartMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./partials/PvCartMenu */ "./resources/js/components/common/partials/PvCartMenu.vue");
+/* harmony import */ var _partials_PvHeaderSearch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./partials/PvHeaderSearch */ "./resources/js/components/common/partials/PvHeaderSearch.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _services_category__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/category */ "./resources/js/services/category.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2206,14 +2215,66 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 document.querySelector('body').classList.add('loaded');
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    PvMainMenu: _partials_PvMainMenu__WEBPACK_IMPORTED_MODULE_0__.default,
-    PvCartMenu: _partials_PvCartMenu__WEBPACK_IMPORTED_MODULE_1__.default,
-    PvHeaderSearch: _partials_PvHeaderSearch__WEBPACK_IMPORTED_MODULE_2__.default
+    PvMainMenu: _partials_PvMainMenu__WEBPACK_IMPORTED_MODULE_1__.default,
+    PvCartMenu: _partials_PvCartMenu__WEBPACK_IMPORTED_MODULE_2__.default,
+    PvHeaderSearch: _partials_PvHeaderSearch__WEBPACK_IMPORTED_MODULE_3__.default
   },
-  methods: _objectSpread(_objectSpread({}, _services_auth__WEBPACK_IMPORTED_MODULE_3__.isLoggedIn()), {}, {
+  data: function data() {
+    return {
+      categories: []
+    };
+  },
+  mounted: function mounted() {
+    this.fetchCategory();
+  },
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_5__.mapGetters)("setting", ["getCurrency"])),
+  methods: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_5__.mapActions)('setting', ['updateCurrency'])), (0,vuex__WEBPACK_IMPORTED_MODULE_5__.mapActions)('notification', ['addNotification'])), {}, {
+    fetchCategory: function () {
+      var _fetchCategory = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.prev = 0;
+                _context.next = 3;
+                return _services_category__WEBPACK_IMPORTED_MODULE_4__.category();
+
+              case 3:
+                response = _context.sent;
+                this.categories = response.data.data.data;
+                console.log(response);
+                _context.next = 11;
+                break;
+
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](0);
+                console.log(_context.t0.response);
+
+              case 11:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this, [[0, 8]]);
+      }));
+
+      function fetchCategory() {
+        return _fetchCategory.apply(this, arguments);
+      }
+
+      return fetchCategory;
+    }(),
+    changeCurrency: function changeCurrency(cur) {
+      console.log(localStorage.getItem('mod'));
+      this.updateCurrency(cur);
+      this.addNotification("Currency changed to ".concat(cur));
+    },
     openLoginModal: function openLoginModal() {
       this.$modal.show(function () {
         return __webpack_require__.e(/*! import() */ "resources_js_components_features_modal_PvLoginModal_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../features/modal/PvLoginModal */ "./resources/js/components/features/modal/PvLoginModal.vue"));
@@ -2588,27 +2649,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2621,6 +2661,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       currentDemo: _api__WEBPACK_IMPORTED_MODULE_0__.currentDemo,
       searchCategory: ''
     };
+  },
+  props: {
+    categories: Array
   },
   mounted: function mounted() {
     document.querySelector('body').addEventListener('click', this.closeSearchForm);
@@ -2920,20 +2963,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2943,13 +2972,16 @@ __webpack_require__.r(__webpack_exports__);
       headerCats: _utils_data_shop__WEBPACK_IMPORTED_MODULE_1__.headerCats
     };
   },
+  props: {
+    categories: Array
+  },
   computed: {
     isPageItemActived: function isPageItemActived() {
       var _this = this;
 
-      var exItems = ['blog', 'about-us', 'contact-us'];
+      var exItems = ["blog", "about-us", "contact-us"];
 
-      if (this.$route.path.includes('/pages') && exItems.findIndex(function (item) {
+      if (this.$route.path.includes("/pages") && exItems.findIndex(function (item) {
         return _this.$route.path.includes(item);
       }) === -1) {
         return true;
@@ -2958,12 +2990,12 @@ __webpack_require__.r(__webpack_exports__);
       return false;
     },
     isHome: function isHome() {
-      if (this.$route.path === '/') return true;
+      if (this.$route.path === "/") return true;
       return false;
     },
     currentCategory: function currentCategory() {
       if (this.$route.query && this.$route.query.category) return this.$route.query.category;
-      return '';
+      return "";
     }
   }
 });
@@ -2983,108 +3015,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue_slide_toggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-slide-toggle */ "./node_modules/vue-slide-toggle/dist/vue-slide-toggle.es.js");
 /* harmony import */ var _utils_data_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../utils/data/menu */ "./resources/js/utils/data/menu.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -6808,12 +6738,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -6870,6 +6807,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Recover",
@@ -6886,11 +6824,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       loading: false
     };
   },
-  methods: {
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapActions)('notification', ['addNotification'])), {}, {
     recover: function () {
       var _recover = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var submit, _response$data$data$m, response, _error$response$data$;
-
+        var submit, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -6927,11 +6864,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 16:
                 response = _context.sent;
                 this.loading = false;
-                this.user.email = "", this.$notify({
-                  group: "notify",
-                  text: (_response$data$data$m = response.data.data.message) !== null && _response$data$data$m !== void 0 ? _response$data$data$m : "An email has been sent with a link to reset the password",
-                  color: "red"
-                });
+                this.user.email = "", this.addNotification(response.data.data.message);
                 submit.innerText = "Reset Password";
                 console.log(response);
                 _context.next = 29;
@@ -6942,11 +6875,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context.t0 = _context["catch"](9);
                 this.loading = false;
                 submit.innerText = "Reset Password";
-                this.$notify({
-                  group: "notify",
-                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : _context.t0.response.data.message,
-                  color: "red"
-                });
+                this.addNotification(_context.t0.response.data.data.message);
                 console.log(_context.t0.response);
 
               case 29:
@@ -6963,7 +6892,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       return recover;
     }()
-  }
+  })
 });
 
 /***/ }),
@@ -7092,11 +7021,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       loading: false
     };
   },
-  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapActions)('user', ['userLogin'])), {}, {
+  methods: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapActions)('user', ['userLogin'])), (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapActions)('notification', ['addNotification'])), {}, {
     login: function () {
       var _login = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var submit, response, _error$response$data$;
-
+        var submit, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -7150,11 +7078,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   this.user.remember_me = false;
                   _services_auth__WEBPACK_IMPORTED_MODULE_1__.setToken(response.data.data.access_token);
                   this.userLogin(response.data.data.user);
-                  this.$notify({
-                    group: "notify",
-                    text: 'Successfully logged in',
-                    color: "red"
-                  });
+                  this.addNotification('Successfully logged in');
                   this.$router.push('/account');
                 }
 
@@ -7175,11 +7099,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               case 29:
                 this.loading = false;
                 submit.innerText = "Login";
-                this.$notify({
-                  group: "notify",
-                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : _context.t0.response.data.message,
-                  color: "red"
-                });
+                this.addNotification(_context.t0.response.data.data.message);
 
               case 32:
               case "end":
@@ -7214,12 +7134,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -7316,6 +7243,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Recover",
@@ -7336,11 +7264,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       loading: false
     };
   },
-  methods: {
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapActions)('notification', ['addNotification'])), {}, {
     register: function () {
       var _register = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var submit, response, _error$response$data$;
-
+        var submit, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -7463,11 +7390,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 this.user.first_name = "";
                 this.user.last_name = "";
                 this.user.phone = "";
-                this.$notify({
-                  group: "notify",
-                  text: response.data.data.message,
-                  color: "red"
-                });
+                this.addNotification(response.data.data.message);
                 this.$router.push("/auth/verify/".concat(response.data.data.token));
                 _context.next = 66;
                 break;
@@ -7478,11 +7401,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 this.loading = false;
                 submit.innerText = "Register";
                 console.log(_context.t0.response);
-                this.$notify({
-                  group: "notify",
-                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : _context.t0.response.data.message,
-                  color: "red"
-                });
+                this.addNotification(_context.t0.response.data.data.message);
 
               case 66:
               case "end":
@@ -7498,7 +7417,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       return register;
     }()
-  }
+  })
 });
 
 /***/ }),
@@ -7517,12 +7436,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -7589,6 +7515,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Reset",
@@ -7610,11 +7537,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       loading: false
     };
   },
-  methods: {
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapActions)('notification', ['addNotification'])), {}, {
     reset: function () {
       var _reset = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var submit, response, _error$response$data$;
-
+        var submit, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -7662,11 +7588,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 response = _context.sent;
                 this.loading = false;
                 this.user.password = "", this.user.confirmed = "", submit.innerText = "Reset Password";
-                this.$notify({
-                  group: "notify",
-                  text: 'Password reset successfully',
-                  color: "green"
-                });
+                this.addNotification('Password reset successfully');
                 console.log(response);
                 _context.next = 33;
                 break;
@@ -7677,11 +7599,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 this.loading = false;
                 submit.innerText = "Reset Password";
                 console.log(_context.t0.response);
-                this.$notify({
-                  group: "notify",
-                  text: (_error$response$data$ = _context.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : _context.t0.response.data.message,
-                  color: "red"
-                });
+                this.addNotification(_context.t0.response.data.data.message);
 
               case 33:
               case "end":
@@ -7697,7 +7615,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       return reset;
     }()
-  }
+  })
 });
 
 /***/ }),
@@ -7716,12 +7634,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -7789,6 +7714,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Verify",
@@ -7810,7 +7736,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       loading: false
     };
   },
-  methods: {
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapActions)('notification', ['addNotification'])), {}, {
     resend: function () {
       var _resend = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         var response;
@@ -7828,11 +7754,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 4:
                 response = _context.sent;
                 this.loading = false;
-                this.$notify({
-                  group: 'notify',
-                  text: response.data.data.message,
-                  color: 'red'
-                });
+                this.addNotification(response.data.data.message);
                 _context.next = 14;
                 break;
 
@@ -7841,11 +7763,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context.t0 = _context["catch"](0);
                 this.loading = false;
                 console.log(_context.t0.response);
-                this.$notify({
-                  group: 'notify',
-                  text: _context.t0.response.data.data.message,
-                  color: 'red'
-                });
+                this.addNotification(_context.t0.response.data.data.message);
 
               case 14:
               case "end":
@@ -7863,8 +7781,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }(),
     verify: function () {
       var _verify = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-        var submit, _response$data$data$m, response, _error$response$data$;
-
+        var submit, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -7921,11 +7838,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 response = _context2.sent;
                 this.loading = false;
                 this.user.sms_code = "", this.user.email_code = "", submit.innerText = "Verify";
-                this.$notify({
-                  group: 'notify',
-                  text: (_response$data$data$m = response.data.data.message) !== null && _response$data$data$m !== void 0 ? _response$data$data$m : 'Account verified successfully',
-                  color: 'red'
-                });
+                this.addNotification(response.data.data.message);
                 console.log(response);
                 this.$router.push('/auth/login');
                 _context2.next = 37;
@@ -7937,11 +7850,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 this.loading = false;
                 submit.innerText = "Verify";
                 console.log(_context2.t0.response);
-                this.$notify({
-                  group: 'notify',
-                  text: (_error$response$data$ = _context2.t0.response.data.data.message) !== null && _error$response$data$ !== void 0 ? _error$response$data$ : _context2.t0.response.data.message,
-                  color: 'red'
-                });
+                this.addNotification(_context2.t0.response.data.data.message);
 
               case 37:
               case "end":
@@ -7957,7 +7866,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       return verify;
     }()
-  }
+  })
 });
 
 /***/ }),
@@ -12000,6 +11909,33 @@ function getProfile() {
 
 /***/ }),
 
+/***/ "./resources/js/services/category.js":
+/*!*******************************************!*\
+  !*** ./resources/js/services/category.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "category": () => (/* binding */ category),
+/* harmony export */   "createCategory": () => (/* binding */ createCategory),
+/* harmony export */   "updateCategory": () => (/* binding */ updateCategory)
+/* harmony export */ });
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../api */ "./resources/js/api/index.js");
+
+function category() {
+  return (0,_api__WEBPACK_IMPORTED_MODULE_0__.http)().get('/category');
+}
+function createCategory(data) {
+  return (0,_api__WEBPACK_IMPORTED_MODULE_0__.httpFile)().post('/category/create', data);
+}
+function updateCategory(data) {
+  return (0,_api__WEBPACK_IMPORTED_MODULE_0__.httpFile)().put('/category/update', data);
+}
+
+/***/ }),
+
 /***/ "./resources/js/store/cart.js":
 /*!************************************!*\
   !*** ./resources/js/store/cart.js ***!
@@ -12114,18 +12050,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cart */ "./resources/js/store/cart.js");
 /* harmony import */ var _wishlist__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wishlist */ "./resources/js/store/wishlist.js");
 /* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user */ "./resources/js/store/user.js");
+/* harmony import */ var _setting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./setting */ "./resources/js/store/setting.js");
+/* harmony import */ var _notification__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./notification */ "./resources/js/store/notification.js");
 
 
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_3__.default.use(vuex__WEBPACK_IMPORTED_MODULE_4__.default);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_4__.default.Store({
+
+
+vue__WEBPACK_IMPORTED_MODULE_5__.default.use(vuex__WEBPACK_IMPORTED_MODULE_6__.default);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_6__.default.Store({
   modules: {
     user: {
       namespaced: true,
@@ -12147,9 +12087,128 @@ vue__WEBPACK_IMPORTED_MODULE_3__.default.use(vuex__WEBPACK_IMPORTED_MODULE_4__.d
       actions: _wishlist__WEBPACK_IMPORTED_MODULE_1__.actions,
       mutations: _wishlist__WEBPACK_IMPORTED_MODULE_1__.mutations,
       getters: _wishlist__WEBPACK_IMPORTED_MODULE_1__.getters
+    },
+    notification: {
+      namespaced: true,
+      state: _notification__WEBPACK_IMPORTED_MODULE_4__.state,
+      actions: _notification__WEBPACK_IMPORTED_MODULE_4__.actions,
+      mutations: _notification__WEBPACK_IMPORTED_MODULE_4__.mutations,
+      getters: _notification__WEBPACK_IMPORTED_MODULE_4__.getters
+    },
+    setting: {
+      namespaced: true,
+      state: _setting__WEBPACK_IMPORTED_MODULE_3__.state,
+      actions: _setting__WEBPACK_IMPORTED_MODULE_3__.actions,
+      mutations: _setting__WEBPACK_IMPORTED_MODULE_3__.mutations,
+      getters: _setting__WEBPACK_IMPORTED_MODULE_3__.getters
     }
   }
 }));
+
+/***/ }),
+
+/***/ "./resources/js/store/notification.js":
+/*!********************************************!*\
+  !*** ./resources/js/store/notification.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ADD_NOTIFICATION": () => (/* binding */ ADD_NOTIFICATION),
+/* harmony export */   "state": () => (/* binding */ state),
+/* harmony export */   "getters": () => (/* binding */ getters),
+/* harmony export */   "actions": () => (/* binding */ actions),
+/* harmony export */   "mutations": () => (/* binding */ mutations)
+/* harmony export */ });
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// Cart
+var ADD_NOTIFICATION = 'ADD_NOTIFICATION';
+function state() {
+  return {
+    message: ""
+  };
+}
+;
+var getters = {
+  getMessage: function getMessage(state) {
+    return state.message;
+  }
+};
+var actions = {
+  addNotification: function addNotification(_ref, payload) {
+    var commit = _ref.commit;
+    commit(ADD_NOTIFICATION, payload);
+
+    this._vm.$notify({
+      group: 'notify',
+      text: payload,
+      color: 'red'
+    });
+  }
+};
+var mutations = _defineProperty({}, ADD_NOTIFICATION, function (state, payload) {
+  state.message = payload;
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/setting.js":
+/*!***************************************!*\
+  !*** ./resources/js/store/setting.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "UPDATE_SETTING": () => (/* binding */ UPDATE_SETTING),
+/* harmony export */   "UPDATE_CURRENCY": () => (/* binding */ UPDATE_CURRENCY),
+/* harmony export */   "state": () => (/* binding */ state),
+/* harmony export */   "getters": () => (/* binding */ getters),
+/* harmony export */   "actions": () => (/* binding */ actions),
+/* harmony export */   "mutations": () => (/* binding */ mutations)
+/* harmony export */ });
+var _mutations;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// Cart
+var UPDATE_SETTING = 'UPDATE_SETTING';
+var UPDATE_CURRENCY = 'UPDATE_CURRENCY';
+function state() {
+  return {
+    currency: localStorage.getItem('SYNECCUR') != null ? localStorage.getItem('SYNECCUR') : 'NGN',
+    data: []
+  };
+}
+;
+var getters = {
+  getSetting: function getSetting(state) {
+    return state.data;
+  },
+  getCurrency: function getCurrency(state) {
+    return state.currency;
+  }
+};
+var actions = {
+  updateSetting: function updateSetting(_ref, payload) {
+    var commit = _ref.commit;
+    commit(UPDATE_SETTING, payload);
+  },
+  updateCurrency: function updateCurrency(_ref2, payload) {
+    var commit = _ref2.commit;
+    localStorage.setItem('SYNECCUR', payload);
+    commit(UPDATE_CURRENCY, payload);
+  }
+};
+var mutations = (_mutations = {}, _defineProperty(_mutations, UPDATE_SETTING, function (state, payload) {
+  state.data = payload;
+}), _defineProperty(_mutations, UPDATE_CURRENCY, function (state, payload) {
+  state.currency = payload;
+}), _mutations);
 
 /***/ }),
 
@@ -57406,7 +57465,7 @@ var render = function() {
                 [
                   _c("img", {
                     attrs: {
-                      src: "./images/home/banners/header-item.png",
+                      src: "./images/header-item.png",
                       alt: "Top Ads",
                       width: "237",
                       height: "49"
@@ -57987,7 +58046,9 @@ var render = function() {
               "div",
               { staticClass: "header-col" },
               [
-                _c("pv-header-search"),
+                _c("pv-header-search", {
+                  attrs: { categories: _vm.categories }
+                }),
                 _vm._v(" "),
                 _c(
                   "div",
@@ -58131,9 +58192,58 @@ var render = function() {
               [_c("i", { staticClass: "fas fa-bars" })]
             ),
             _vm._v(" "),
-            _c("pv-main-menu"),
+            _c("pv-main-menu", { attrs: { categories: _vm.categories } }),
             _vm._v(" "),
-            _vm._m(0)
+            _c("div", { staticClass: "header-dropdowns ml-auto" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "link-seller font-weight-bold d-none d-sm-block",
+                  attrs: { href: "javascript:;" }
+                },
+                [_vm._v("Become a Seller")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "header-dropdown" }, [
+                _c("a", { attrs: { href: "javascript:;" } }, [
+                  _vm._v(_vm._s(_vm.getCurrency))
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "header-menu" }, [
+                  _c("ul", [
+                    _c("li", [
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "javascript:;" },
+                          on: {
+                            click: function($event) {
+                              return _vm.changeCurrency("NGN")
+                            }
+                          }
+                        },
+                        [_vm._v("NGN")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "javascript:;" },
+                          on: {
+                            click: function($event) {
+                              return _vm.changeCurrency("USD")
+                            }
+                          }
+                        },
+                        [_vm._v("USD")]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ])
           ],
           1
         )
@@ -58141,39 +58251,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "header-dropdowns ml-auto" }, [
-      _c(
-        "a",
-        {
-          staticClass: "link-seller font-weight-bold d-none d-sm-block",
-          attrs: { href: "javascript:;" }
-        },
-        [_vm._v("Become a Seller")]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "header-dropdown" }, [
-        _c("a", { attrs: { href: "javascript:;" } }, [_vm._v("NGN")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "header-menu" }, [
-          _c("ul", [
-            _c("li", [
-              _c("a", { attrs: { href: "javascript:;" } }, [_vm._v("NGN")])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "javascript:;" } }, [_vm._v("USD")])
-            ])
-          ])
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -58661,80 +58739,31 @@ var render = function() {
                       _vm._v("All Categories")
                     ]),
                     _vm._v(" "),
-                    _c("option", { attrs: { value: "fashion" } }, [
-                      _vm._v("Fashion")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "women" } }, [
-                      _vm._v("- Women")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "men" } }, [
-                      _vm._v("- Men")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "jewellery" } }, [
-                      _vm._v("- Jewellery")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "kids" } }, [
-                      _vm._v("- Kids Fashion")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "electronics" } }, [
-                      _vm._v("Electronics")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "smart-tvs" } }, [
-                      _vm._v("- Smart TVs")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "cameras" } }, [
-                      _vm._v("- Cameras")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "games" } }, [
-                      _vm._v("- Games")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "home-garden" } }, [
-                      _vm._v("Home & Garden")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "motors" } }, [
-                      _vm._v("Motors")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "cars-and-trucks" } }, [
-                      _vm._v("- Cars and Trucks")
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "option",
-                      { attrs: { value: "motorcycles-powersports" } },
-                      [
-                        _vm._v(
-                          "\n\t\t\t\t\t\t- Motorcycles &\n\t\t\t\t\t\tPowersports\n\t\t\t\t\t"
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "accessories" } }, [
-                      _vm._v(
-                        "\n\t\t\t\t\t\t- Parts &\n\t\t\t\t\t\tAccessories\n\t\t\t\t\t"
+                    _vm._l(_vm.categories, function(category, index) {
+                      return _c(
+                        "optgroup",
+                        {
+                          key: "cat-" + index,
+                          attrs: { label: category.name }
+                        },
+                        _vm._l(category.sub_categories, function(
+                          sub_cat,
+                          index
+                        ) {
+                          return _c(
+                            "option",
+                            {
+                              key: "sub_cat-" + index,
+                              domProps: { value: sub_cat.slug }
+                            },
+                            [_vm._v(_vm._s(sub_cat.name))]
+                          )
+                        }),
+                        0
                       )
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "boats" } }, [
-                      _vm._v("- Boats")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "supplies" } }, [
-                      _vm._v(
-                        "\n\t\t\t\t\t\t- Auto Tools &\n\t\t\t\t\t\tSupplies\n\t\t\t\t\t"
-                      )
-                    ])
-                  ]
+                    })
+                  ],
+                  2
                 )
               ]
             ),
@@ -58925,7 +58954,7 @@ var render = function() {
               _vm._v("Home")
             ]),
             _vm._v(" "),
-            _vm._l(_vm.headerCats, function(category, index) {
+            _vm._l(_vm.categories, function(category, index) {
               return _c(
                 "router-link",
                 {
@@ -58936,7 +58965,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("i", { class: category.icon }),
+                  _c("i", { staticClass: "icon-category-electronics" }),
                   _vm._v(_vm._s(category.name))
                 ]
               )
@@ -58989,36 +59018,59 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "megamenu megamenu-fixed-width megamenu-3cols" },
+            { staticClass: "megamenu megamenu-fixed-width megamenu-2cols" },
             [
               _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-lg-4" }, [
-                  _c(
-                    "a",
-                    { staticClass: "nolink", attrs: { href: "javascript:;" } },
-                    [_vm._v("VARIATION 1")]
-                  ),
-                  _vm._v(" "),
+                _c("div", { staticClass: "col-lg-6" }, [
                   _c(
                     "ul",
                     { staticClass: "submenu" },
-                    _vm._l(_vm.mainMenu.shop.variation1, function(item) {
+                    _vm._l(_vm.categories, function(item, index) {
                       return _c(
                         "li",
-                        { key: item.id },
+                        { key: "cat-" + index },
                         [
-                          _c("router-link", { attrs: { to: item.url } }, [
+                          _c("router-link", { attrs: { to: item.slug } }, [
                             _vm._v(
-                              "\n\t\t\t\t\t\t\t\t\t" +
-                                _vm._s(item.title) +
-                                "\n\t\t\t\t\t\t\t\t\t"
+                              "\n                    " +
+                                _vm._s(item.name) +
+                                "\n                    "
                             ),
                             item.hot
                               ? _c("span", { staticClass: "tip tip-hot" }, [
                                   _vm._v("Hot")
                                 ])
                               : _vm._e()
-                          ])
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "ul",
+                            { staticClass: "submenu" },
+                            _vm._l(item.sub_categories, function(
+                              sub_item,
+                              index
+                            ) {
+                              return _c(
+                                "li",
+                                { key: "cat-" + index },
+                                [
+                                  _c(
+                                    "router-link",
+                                    { attrs: { to: sub_item.slug } },
+                                    [
+                                      _vm._v(
+                                        "\n                        " +
+                                          _vm._s(sub_item.name) +
+                                          "\n                      "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              )
+                            }),
+                            0
+                          )
                         ],
                         1
                       )
@@ -59027,33 +59079,7 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-lg-4" }, [
-                  _c(
-                    "a",
-                    { staticClass: "nolink", attrs: { href: "javascript:;" } },
-                    [_vm._v("VARIATION 2")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "ul",
-                    { staticClass: "submenu" },
-                    _vm._l(_vm.mainMenu.shop.variation2, function(item) {
-                      return _c(
-                        "li",
-                        { key: item.id },
-                        [
-                          _c("router-link", { attrs: { to: item.url } }, [
-                            _vm._v(_vm._s(item.title))
-                          ])
-                        ],
-                        1
-                      )
-                    }),
-                    0
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-4 p-0" }, [
+                _c("div", { staticClass: "col-lg-6 p-0" }, [
                   _c("div", { staticClass: "menu-banner" }, [
                     _c("figure", [
                       _c("img", {
@@ -59084,129 +59110,6 @@ var render = function() {
                       1
                     )
                   ])
-                ])
-              ])
-            ]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "li",
-        [
-          _c(
-            "router-link",
-            {
-              staticClass: "sub-menu-link menu-with-ul",
-              class: { active: _vm.$route.path.indexOf("/product") > -1 },
-              attrs: { to: "/product/default/highway-detection-system" }
-            },
-            [_vm._v("Products")]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "megamenu megamenu-fixed-width megamenu-3cols" },
-            [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-lg-4" }, [
-                  _c(
-                    "a",
-                    { staticClass: "nolink", attrs: { href: "javascript:;" } },
-                    [_vm._v("PRODUCT PAGES")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "ul",
-                    { staticClass: "submenu" },
-                    _vm._l(_vm.mainMenu.product.pages, function(item) {
-                      return _c(
-                        "li",
-                        { key: item.title },
-                        [
-                          _c("router-link", { attrs: { to: item.url } }, [
-                            _vm._v(
-                              "\n\t\t\t\t\t\t\t\t\t" +
-                                _vm._s(item.title) +
-                                "\n\t\t\t\t\t\t\t\t\t"
-                            ),
-                            item.hot
-                              ? _c("span", { staticClass: "tip tip-hot" }, [
-                                  _vm._v("Hot")
-                                ])
-                              : _vm._e()
-                          ])
-                        ],
-                        1
-                      )
-                    }),
-                    0
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-4" }, [
-                  _c(
-                    "a",
-                    { staticClass: "nolink", attrs: { href: "javascript:;" } },
-                    [_vm._v("PRODUCT LAYOUTS")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "ul",
-                    { staticClass: "submenu" },
-                    [
-                      _vm._l(_vm.mainMenu.product.layout, function(item) {
-                        return _c(
-                          "li",
-                          { key: item.title },
-                          [
-                            _c("router-link", { attrs: { to: item.url } }, [
-                              _vm._v(_vm._s(item.title))
-                            ])
-                          ],
-                          1
-                        )
-                      }),
-                      _vm._v(" "),
-                      _vm._m(2)
-                    ],
-                    2
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-4 p-0" }, [
-                  _c(
-                    "div",
-                    { staticClass: "menu-banner menu-banner-2" },
-                    [
-                      _c("figure", [
-                        _c("img", {
-                          staticClass: "product-promo",
-                          attrs: {
-                            src: "/assets/images/menu-banner-1.jpg",
-                            alt: "Menu banner",
-                            width: "380",
-                            height: "790"
-                          }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c("i", [_vm._v("OFF")]),
-                      _vm._v(" "),
-                      _vm._m(3),
-                      _vm._v(" "),
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "btn btn-sm btn-dark",
-                          attrs: { to: "/shop" }
-                        },
-                        [_vm._v("SHOP NOW")]
-                      )
-                    ],
-                    1
-                  )
                 ])
               ])
             ]
@@ -59274,28 +59177,6 @@ var staticRenderFns = [
       _c("b", {}, [_vm._v("50%")]),
       _vm._v(" "),
       _c("i", [_vm._v("OFF")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { attrs: { href: "javascript:;" } }, [_vm._v("Build your own")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "banner-content" }, [
-      _c("h4", [
-        _c("span", {}, [_vm._v("UP TO")]),
-        _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _c("b", {}, [_vm._v("50%")])
-      ])
     ])
   }
 ]
@@ -59458,201 +59339,6 @@ var render = function() {
                       1
                     )
                   ])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              { class: { open: _vm.prodOpened } },
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "sub-menu-link menu-with-ul",
-                    attrs: { to: "/product/default/highway-detection-system" }
-                  },
-                  [
-                    _vm._v("\n\t\t\t\t\t\tProducts\n\t\t\t\t\t\t"),
-                    _c("span", {
-                      staticClass: "mmenu-btn",
-                      on: {
-                        click: function($event) {
-                          $event.preventDefault()
-                          _vm.prodOpened = !_vm.prodOpened
-                        }
-                      }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c("vue-slide-toggle", { attrs: { open: _vm.prodOpened } }, [
-                  _c("ul", { class: { open: _vm.prod1Opened } }, [
-                    _c(
-                      "li",
-                      {
-                        staticClass: "sub-menu-link menu-with-ul",
-                        class: { open: _vm.prod1Opened },
-                        on: {
-                          click: function($event) {
-                            _vm.prod1Opened = !_vm.prod1Opened
-                          }
-                        }
-                      },
-                      [
-                        _c("a", { attrs: { href: "javascript:;" } }, [
-                          _vm._v(
-                            "\n\t\t\t\t\t\t\t\t\tProduct Pages\n\t\t\t\t\t\t\t\t\t"
-                          ),
-                          _c("span", { staticClass: "mmenu-btn" })
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "vue-slide-toggle",
-                          { attrs: { tag: "ul", open: _vm.prod1Opened } },
-                          _vm._l(_vm.mainMenu.product.pages, function(
-                            item,
-                            index
-                          ) {
-                            return _c(
-                              "li",
-                              { key: "product1" + index },
-                              [
-                                _c("router-link", { attrs: { to: item.url } }, [
-                                  _vm._v(_vm._s(item.title))
-                                ])
-                              ],
-                              1
-                            )
-                          }),
-                          0
-                        )
-                      ],
-                      1
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("ul", { class: { open: _vm.prod2Opened } }, [
-                    _c(
-                      "li",
-                      {
-                        staticClass: "sub-menu-link menu-with-ul",
-                        class: { open: _vm.prod2Opened },
-                        on: {
-                          click: function($event) {
-                            _vm.prod2Opened = !_vm.prod2Opened
-                          }
-                        }
-                      },
-                      [
-                        _c("a", { attrs: { href: "javascript:;" } }, [
-                          _vm._v(
-                            "\n\t\t\t\t\t\t\tProduct Layouts\n\t\t\t\t\t\t\t"
-                          ),
-                          _c("span", { staticClass: "mmenu-btn" })
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "vue-slide-toggle",
-                          { attrs: { tag: "ul", open: _vm.prod2Opened } },
-                          _vm._l(_vm.mainMenu.product.layout, function(
-                            item,
-                            index
-                          ) {
-                            return _c(
-                              "li",
-                              { key: "product2" + index },
-                              [
-                                _c("router-link", { attrs: { to: item.url } }, [
-                                  _vm._v(_vm._s(item.title))
-                                ])
-                              ],
-                              1
-                            )
-                          }),
-                          0
-                        )
-                      ],
-                      1
-                    )
-                  ])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              { class: { open: _vm.pageOpened } },
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "sub-menu-link",
-                    attrs: { to: "/pages/about-us" }
-                  },
-                  [
-                    _vm._v("\n\t\t\t\t\t\tPages\n\t\t\t\t\t\t"),
-                    _c("span", { staticClass: "tip tip-hot" }, [
-                      _vm._v("Hot!")
-                    ]),
-                    _vm._v(" "),
-                    _c("span", {
-                      staticClass: "mmenu-btn",
-                      on: {
-                        click: function($event) {
-                          $event.preventDefault()
-                          _vm.pageOpened = !_vm.pageOpened
-                        }
-                      }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c("vue-slide-toggle", { attrs: { open: _vm.pageOpened } }, [
-                  _c(
-                    "ul",
-                    _vm._l(_vm.mainMenu.other, function(item) {
-                      return _c(
-                        "li",
-                        { key: item.title },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              class: { "sub-menu-link": item.subPages },
-                              attrs: { to: item.url }
-                            },
-                            [_vm._v(_vm._s(item.title))]
-                          ),
-                          _vm._v(" "),
-                          item.subPages
-                            ? _c(
-                                "ul",
-                                _vm._l(item.subPages, function(subItem) {
-                                  return _c(
-                                    "li",
-                                    { key: subItem.title },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        { attrs: { to: subItem.url } },
-                                        [_vm._v(_vm._s(subItem.title))]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                }),
-                                0
-                              )
-                            : _vm._e()
-                        ],
-                        1
-                      )
-                    }),
-                    0
-                  )
                 ])
               ],
               1
@@ -59825,7 +59511,7 @@ var render = function() {
       width: 300,
       max: 4,
       "animation-name": "fade-left",
-      position: "bottom right"
+      position: "top right"
     },
     scopedSlots: _vm._u([
       {
@@ -59835,9 +59521,11 @@ var render = function() {
             _c("div", { staticClass: "minipopup-box" }, [
               _c("div", { staticClass: "product" }, [
                 _c("div", { staticClass: "product-detail" }, [
-                  _c("p", { style: { color: props.item.color } }, [
-                    _vm._v(_vm._s(props.item.text))
-                  ])
+                  _c(
+                    "p",
+                    { style: { fontSize: "14px", color: props.item.color } },
+                    [_vm._v(_vm._s(props.item.text))]
+                  )
                 ])
               ]),
               _vm._v(" "),

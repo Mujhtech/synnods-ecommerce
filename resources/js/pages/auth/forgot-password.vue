@@ -56,6 +56,7 @@
 
 <script>
 import * as auth from "../../services/auth";
+import { mapActions } from 'vuex';
 
 export default {
   name: "Recover",
@@ -73,6 +74,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions( 'notification', [ 'addNotification' ] ),
     recover: async function () {
       if (!this.user.email) {
         this.errors = [];
@@ -97,23 +99,13 @@ export default {
         const response = await auth.recover(this.user);
         this.loading = false;
         this.user.email = "",
-        this.$notify({
-          group: "notify",
-          text:
-            response.data.data.message ??
-            "An email has been sent with a link to reset the password",
-          color: "red",
-        });
+        this.addNotification(response.data.data.message);
         submit.innerText = "Reset Password";
         console.log(response);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Reset Password";
-        this.$notify({
-          group: "notify",
-          text: error.response.data.data.message ?? error.response.data.message,
-          color: "red",
-        });
+        this.addNotification(error.response.data.data.message);
         console.log(error.response);
       }
     },

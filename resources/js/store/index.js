@@ -18,6 +18,18 @@ import {
     mutations as userMutation,
     getters as userGetter
 } from "./user";
+import {
+    state as settingState,
+    actions as settingAction,
+    mutations as settingMutation,
+    getters as settingGetter
+} from "./setting";
+import {
+    state as notificationState,
+    actions as notificationAction,
+    mutations as notificationMutation,
+    getters as notificationGetter
+} from "./notification";
 
 Vue.use(Vuex);
 
@@ -43,6 +55,20 @@ export default new Vuex.Store({
             actions: wishlistAction,
             mutations: wishlistMutation,
             getters: wishlistGetter
+        },
+        notification: {
+            namespaced: true,
+            state: notificationState,
+            actions: notificationAction,
+            mutations: notificationMutation,
+            getters: notificationGetter
+        },
+        setting: {
+            namespaced: true,
+            state: settingState,
+            actions: settingAction,
+            mutations: settingMutation,
+            getters: settingGetter
         }
     }
 });

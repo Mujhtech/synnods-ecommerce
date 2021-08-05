@@ -16,7 +16,7 @@
 					</router-link>
 
 					<div class="header-col">
-						<pv-header-search></pv-header-search>
+						<pv-header-search :categories="categories"></pv-header-search>
 
 						<div class="tagcloud d-none d-lg-flex">
 							<router-link :to="{path: '/shop', query: {tag: 'clothes'}}">clothes</router-link>
@@ -68,7 +68,7 @@
 						<i class="fas fa-bars"></i>
 					</button>
 
-					<pv-main-menu></pv-main-menu>
+					<pv-main-menu :categories="categories"></pv-main-menu>
 
 					<div class="header-dropdowns ml-auto">
 						<a
@@ -77,11 +77,11 @@
 						>Become a Seller</a>
 
 						<div class="header-dropdown">
-							<a href="javascript:;">NGN</a>
+							<a href="javascript:;">{{ getCurrency }}</a>
 							<div class="header-menu">
 								<ul>
-									<li><a href="javascript:;">NGN</a></li>
-									<li><a href="javascript:;">USD</a></li>
+									<li><a href="javascript:;" v-on:click="changeCurrency('NGN')">NGN</a></li>
+									<li><a href="javascript:;" v-on:click="changeCurrency('USD')">USD</a></li>
 								</ul>
 							</div>
 						</div>
@@ -96,7 +96,8 @@
 import PvMainMenu from './partials/PvMainMenu';
 import PvCartMenu from './partials/PvCartMenu';
 import PvHeaderSearch from './partials/PvHeaderSearch';
-import * as auth from "../../services/auth";
+import { mapActions, mapGetters } from 'vuex';
+import * as service from "../../services/category";
 
 document.querySelector( 'body' ).classList.add( 'loaded' );
 
@@ -106,8 +107,34 @@ export default {
 		PvCartMenu,
 		PvHeaderSearch
 	},
+	data: function () {
+		return {
+			categories: [],
+		};
+	},
+	mounted: function() {
+		this.fetchCategory();
+	},
+	computed: {
+		...mapGetters("setting", ["getCurrency"]),
+	},
 	methods: {
-		...auth.isLoggedIn(),
+		...mapActions( 'setting', [ 'updateCurrency' ] ),
+		...mapActions( 'notification', [ 'addNotification' ] ),
+		fetchCategory: async function () {
+			try {
+				const response = await service.category();
+				this.categories = response.data.data.data;
+				console.log(response);
+			} catch (err) {
+				console.log(err.response);
+			}
+		},
+		changeCurrency: function(cur){
+			console.log(localStorage.getItem('mod'))
+			this.updateCurrency(cur);
+			this.addNotification(`Currency changed to ${cur}`);
+		},
 		openLoginModal: function () {
 			this.$modal.show(
 				() => import( '../features/modal/PvLoginModal' ),

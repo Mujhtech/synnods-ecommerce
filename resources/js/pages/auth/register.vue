@@ -96,6 +96,7 @@
 
 <script>
 import * as auth from "../../services/auth";
+import { mapActions } from 'vuex';
 
 export default {
   name: "Recover",
@@ -117,6 +118,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions( 'notification', [ 'addNotification' ] ),
     register: async function () {
       if (!this.user.first_name) {
         this.errors = [];
@@ -186,21 +188,13 @@ export default {
         this.user.first_name = "";
         this.user.last_name = "";
         this.user.phone = "";
-        this.$notify({
-          group: "notify",
-          text: response.data.data.message,
-          color: "red",
-        });
+        this.addNotification(response.data.data.message);
         this.$router.push(`/auth/verify/${response.data.data.token}`);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Register";
         console.log(error.response);
-        this.$notify({
-          group: "notify",
-          text: error.response.data.data.message ?? error.response.data.message,
-          color: "red",
-        });
+        this.addNotification(error.response.data.data.message);
       }
     },
   },

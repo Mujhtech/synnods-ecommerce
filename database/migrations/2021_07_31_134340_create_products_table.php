@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->foreignId('sub_category_id')->constrained();
             $table->string('name');
             $table->string('slug');
+            $table->integer('views')->default(0);
             $table->longText('description');
             $table->longText('contents');
             $table->string('featured_image');

@@ -13,7 +13,7 @@
           "
         >
           <img
-            :src="'./images/home/banners/header-item.png'"
+            :src="'./images/header-item.png'"
             alt="Top Ads"
             width="237"
             height="49"

@@ -44,32 +44,11 @@
 						v-model="searchCategory"
 						@change="searchProducts"
 					>
+					
 						<option value>All Categories</option>
-						<option value="fashion">Fashion</option>
-						<option value="women">- Women</option>
-						<option value="men">- Men</option>
-						<option value="jewellery">- Jewellery</option>
-						<option value="kids">- Kids Fashion</option>
-						<option value="electronics">Electronics</option>
-						<option value="smart-tvs">- Smart TVs</option>
-						<option value="cameras">- Cameras</option>
-						<option value="games">- Games</option>
-						<option value="home-garden">Home &amp; Garden</option>
-						<option value="motors">Motors</option>
-						<option value="cars-and-trucks">- Cars and Trucks</option>
-						<option value="motorcycles-powersports">
-							- Motorcycles &amp;
-							Powersports
-						</option>
-						<option value="accessories">
-							- Parts &amp;
-							Accessories
-						</option>
-						<option value="boats">- Boats</option>
-						<option value="supplies">
-							- Auto Tools &amp;
-							Supplies
-						</option>
+						<optgroup v-for="(category,index) in categories" :key="`cat-${index}`" :label="category.name">
+							<option v-for="(sub_cat,index) in category.sub_categories" :key="`sub_cat-${index}`" :value="sub_cat.slug">{{ sub_cat.name }}</option>
+						</optgroup>
 					</select>
 				</div>
 				<button
@@ -147,6 +126,9 @@ export default {
 			currentDemo: currentDemo,
 			searchCategory: ''
 		};
+	},
+	props: {
+		categories: Array
 	},
 	mounted: function () {
 		document
