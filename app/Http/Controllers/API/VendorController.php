@@ -37,7 +37,7 @@ class VendorController extends ApiController
         //$request->validated();
 
         $vendor = $request->isMethod('put') ? Vendor::findorFail($request->category_id) : new Vendor;
-        $vendor->store_logo = $request->file('image')->store('vendors');
+        $vendor->store_logo = $request->file('image')->store('public/vendors');
         $vendor->store_description = $request->description;
         $vendor->user_id = $request->user_id;
         $vendor->store_name = $request->name;

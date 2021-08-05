@@ -13,7 +13,7 @@ class SubCategoryController extends ApiController
     //
     public function index(){
 
-        $sub_categories = SubCategory::all();
+        $sub_categories = SubCategory::where('status', 1)->get();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'data' => SubCategoryResource::collection($sub_categories)
@@ -35,7 +35,7 @@ class SubCategoryController extends ApiController
         $request->validated();
 
         $sub_category = $request->isMethod('put') ? SubCategory::findorFail($request->category_id) : new SubCategory;
-        $sub_category->image = $request->file('image')->store('categories');
+        $sub_category->image = $request->file('image')->store('sub_categories');
         $sub_category->description = $request->description;
         $sub_category->category_id = $request->category_id;
         $sub_category->name = $request->name;
