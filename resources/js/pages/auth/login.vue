@@ -18,11 +18,15 @@
                 type="email"
                 class="form-input form-wide"
                 id="login-email"
-                v-model="user.email"
+                v-model="email"
                 :disabled="loading"
-                required
+                :class="errors.email ? 'error-input' : ''"
               />
-
+              <small
+                v-if="errors.email"
+                style="display: block; color: red; font-size: 12px"
+                >{{ errors.email }}</small
+              >
               <label for="login-password">
                 Password
                 <span class="required">*</span>
@@ -31,10 +35,15 @@
                 type="password"
                 class="form-input form-wide"
                 id="login-password"
-                v-model="user.password"
+                v-model="password"
+                :class="errors.password ? 'error-input' : ''"
                 :disabled="loading"
-                required
               />
+              <small
+                v-if="errors.password"
+                style="display: block; color: red; font-size: 12px"
+                >{{ errors.password }}</small
+              >
 
               <div class="form-footer">
                 <div class="custom-control custom-checkbox mb-0">
@@ -42,7 +51,7 @@
                     type="checkbox"
                     class="custom-control-input"
                     id="lost-password"
-                    v-model="user.remember_me"
+                    v-model="remember_me"
                   />
                   <label class="custom-control-label mb-0" for="lost-password">
                     Remember me
@@ -64,11 +73,6 @@
               >
                 Login
               </button>
-               <p v-if="errors.length">
-                  <ul>
-                    <li style="text-align:center;color:red" v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                  </ul>
-                </p>
             </form>
           </div>
         </div>
@@ -78,8 +82,8 @@
 </template>
 
 <script>
-import PreLoader from '../../components/common/PreLoader';
-import { mapActions } from 'vuex';
+import PreLoader from "../../components/common/PreLoader";
+import { mapActions } from "vuex";
 import * as auth from "../../services/auth";
 export default {
   name: "Login",
@@ -88,67 +92,104 @@ export default {
     titleTemplate: "%s - Synoods Ecommerce",
   },
   components: {
-    PreLoader
+    PreLoader,
+  },
+  watch: {
+    email(value) {
+      this.email = value;
+      this.validateEmail(value);
+    },
+    password(value) {
+      this.password = value;
+      this.validatePassword(value);
+    },
   },
   data() {
     return {
-      user: {
-        email: "",
-        password: "",
-        remember_me: false,
-      },
-      errors: [],
+      email: "",
+      password: "",
+      remember_me: false,
+      errors: {},
       loading: false,
     };
   },
   methods: {
-    ...mapActions( 'user', [ 'userLogin' ] ),
-    ...mapActions( 'notification', [ 'addNotification' ] ),
-    login: async function () {
-      if (!this.user.email) {
-        this.errors = [];
-        this.errors.push("Email address is required");
-        return;
-      }
-      if (
+    ...mapActions("user", ["userLogin"]),
+    ...mapActions("notification", ["addNotification"]),
+    validateEmail: function (value) {
+      if (!value || value === "") {
+        this.errors.email = "Email address is required";
+        return false;
+      } else if (
         !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-          this.user.email
+          value
         )
       ) {
-        this.errors = [];
-        this.errors.push("Invalid email address");
+        this.errors.email = "Invalid email address";
+        return false;
+      } else {
+        this.errors.email = "";
+        return true;
+      }
+    },
+    validatePassword: function (value) {
+      if (!value || value === "") {
+        this.errors.password = "Password is required";
+        return false;
+      } else {
+        this.errors.password = "";
+        return true;
+      }
+    },
+    login: async function () {
+      if (!this.validateEmail(this.email)) {
         return;
       }
-      if (!this.user.password) {
-        this.errors = [];
-        this.errors.push("Password is required");
+      if (!this.validatePassword(this.password)) {
         return;
       }
       let submit = document.getElementById("submit");
       try {
-        this.errors = [];
         this.loading = true;
         submit.innerText = "Loading...";
-        const response = await auth.login(this.user);
+        const response = await auth.login({
+          password: this.password,
+          email: this.email,
+          remember_me: this.remember_me,
+        });
         this.loading = false;
         submit.innerText = "Login";
 
-        if(response.status === 200){
-          this.user.email = "";
-          this.user.password = "";
-          this.user.remember_me = false;
-          auth.setToken( response.data.data.access_token );
-          this.userLogin( response.data.data.user );
-          this.addNotification({type: 'success', messsage: 'Successfully logged in'});
-          this.$router.push('/account');
+        if (response.status === 200) {
+          this.email = "";
+          this.password = "";
+          this.remember_me = false;
+          auth.setToken(response.data.data.access_token);
+          this.userLogin(response.data.data.user);
+          this.addNotification({
+            type: "success",
+            message: "Successfully logged in",
+          });
+          this.$router.push("/account");
         }
       } catch (error) {
-        if(!error.response) return;
+        if (!error.response) return;
         this.loading = false;
         submit.innerText = "Login";
-        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
+        this.addNotification({
+          type: "error",
+          message: error.response.data.data
+            ? error.response.data.data.message
+            : "Something went wrong",
+        });
       }
     },
   },
 };
 </script>
+
+<style scoped>
+.error-input {
+  border-color: red !important;
+}
+</style>

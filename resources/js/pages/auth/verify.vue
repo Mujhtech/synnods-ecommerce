@@ -18,10 +18,15 @@
                 type="text"
                 class="form-input form-wide"
                 id="email-code"
-                v-model="user.email_code"
+                v-model="email_code"
                 :disabled="loading"
-                required
+                :class="errors.email_code ? 'error-input' : ''"
               />
+              <small
+                v-if="errors.email_code"
+                style="display: block; color: red; font-size: 12px"
+                >{{ errors.email_code }}</small
+              >
 
               <label for="sms-code">
                 SMS Verification Code
@@ -31,10 +36,15 @@
                 type="text"
                 class="form-input form-wide"
                 id="sms-code"
-                v-model="user.sms_code"
+                v-model="sms_code"
                 :disabled="loading"
-                required
+                :class="errors.sms_code ? 'error-input' : ''"
               />
+              <small
+                v-if="errors.sms_code"
+                style="display: block; color: red; font-size: 12px"
+                >{{ errors.sms_code }}</small
+              >
               <div class="form-footer">
                 <a
                   href="javascript:void(0)"
@@ -53,11 +63,6 @@
               >
                 Verify
               </button>
-              <p v-if="errors.length">
-                  <ul>
-                    <li style="text-align:center;color:red" v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                  </ul>
-                </p>
             </form>
           </div>
         </div>
@@ -67,9 +72,9 @@
 </template>
 
 <script>
-import PreLoader from '../../components/common/PreLoader';
+import PreLoader from "../../components/common/PreLoader";
 import * as auth from "../../services/auth";
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
   name: "Verify",
@@ -78,80 +83,124 @@ export default {
     titleTemplate: "%s - Synoods Ecommerce",
   },
   components: {
-    PreLoader
+    PreLoader,
   },
   mounted() {
-    this.user.token = this.$route.params.token;
+    this.token = this.$route.params.token;
+  },
+  watch: {
+    sms_code(value) {
+      this.sms_code = value;
+      this.validateSms(value);
+    },
+    email_code(value) {
+      this.email_code = value;
+      this.validateEmail(value);
+    },
   },
   data() {
     return {
-      user: {
-        token: "",
-        email_code: "",
-        sms_code: ""
-      },
-      errors: [],
+      token: "",
+      email_code: "",
+      sms_code: "",
+      errors: {},
       loading: false,
     };
   },
   methods: {
-    ...mapActions( 'notification', [ 'addNotification' ] ),
-    ...mapActions( 'user', [ 'userLogin' ] ),
-    resend: async function(){
+    ...mapActions("notification", ["addNotification"]),
+    ...mapActions("user", ["userLogin"]),
+    resend: async function () {
       try {
         this.loading = true;
-        const response = await auth.resend({token: this.user.token});
+        const response = await auth.resend({ token: this.token });
         this.loading = false;
-        this.addNotification({type: 'success', message: response.data.data.message});
-      } catch(error) {
+        this.addNotification({
+          type: "success",
+          message: response.data.data.message,
+        });
+      } catch (error) {
         this.loading = false;
         console.log(error.response);
-        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
+        this.addNotification({
+          type: "error",
+          message: error.response.data.data
+            ? error.response.data.data.message
+            : "Something went wrong",
+        });
+      }
+    },
+    validateSms: function (value) {
+      if (!value || value === "") {
+        this.errors.sms_code = "SMS confirmation code is required";
+        return false;
+      } else if (value.length != 6) {
+        this.errors.sms_code = "SMS confirmation code is invalid";
+        return false;
+      } else {
+        this.errors.sms_code = "";
+        return true;
+      }
+    },
+    validateEmail: function (value) {
+      if (!value || value === "") {
+        this.errors.email_code = "Email confirmation code is required";
+        return false;
+      } else if (value.length != 6) {
+        this.errors.email_code = "Email confirmation code is invalid";
+        return false;
+      } else {
+        this.errors.email_code = "";
+        return true;
       }
     },
     verify: async function () {
-      if (!this.user.email_code) {
-        this.errors = [];
-        this.errors.push("Email confirmation code is required");
+      if (!this.validateEmail(this.email_code)) {
         return;
       }
-      if (!this.user.sms_code) {
-        this.errors = [];
-        this.errors.push("SMS confirmation code is required");
+      if (!this.validateSms(this.sms_code)) {
         return;
       }
-      if (this.user.email_code.length != 6) {
-        this.errors = [];
-        this.errors.push("Email confirmation code is invalid");
-        return;
-      }
-      if (this.user.sms_code.length != 6) {
-        this.errors = [];
-        this.errors.push("SMS confirmation code is invalid");
-        return;
-      }
+      this.errors = {};
       let submit = document.getElementById("submit");
       try {
-        this.errors = [];
         this.loading = true;
         submit.innerText = "Loading...";
-        const response = await auth.verify(this.user);
+        const response = await auth.verify({
+          token: this.token,
+          sms_code: this.sms_code,
+          email_code: this.email_code,
+        });
         this.loading = false;
-        this.user.sms_code = "",
-        this.user.email_code = "",
-        submit.innerText = "Verify";
-        auth.setToken( response.data.data.access_token );
-        this.userLogin( response.data.data.user );
-        this.addNotification({type: 'success', message: response.data.data.message});
+        (this.sms_code = ""),
+          (this.email_code = ""),
+          (submit.innerText = "Verify");
+        auth.setToken(response.data.data.access_token);
+        this.userLogin(response.data.data.user);
+        this.addNotification({
+          type: "success",
+          message: response.data.data.message,
+        });
         console.log(response);
-        this.$router.push('/account');
+        this.$router.push("/account");
       } catch (error) {
         this.loading = false;
         submit.innerText = "Verify";
         console.log(error.response);
-        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
+        this.addNotification({
+          type: "error",
+          message: error.response.data.data
+            ? error.response.data.data.message
+            : "Something went wrong",
+        });
       }
     },
   },
 };
 </script>
+
+<style scoped>
+.error-input {
+  border-color: red !important;
+}
+</style>

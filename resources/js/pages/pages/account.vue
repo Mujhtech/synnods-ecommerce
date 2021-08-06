@@ -132,7 +132,11 @@
               <p>
                 Hello
                 <strong class="text-dark">{{ user.full_name }}</strong> (
-                <a href="javascript:void(0)" v-on:click="logout" class="btn btn-link">Log out</a
+                <a
+                  href="javascript:void(0)"
+                  v-on:click="logout"
+                  class="btn btn-link"
+                  >Log out</a
                 >)
               </p>
 
@@ -733,12 +737,15 @@ export default {
   },
   methods: {
     ...mapActions("user", ["userLogout"]),
-    ...mapActions( 'notification', [ 'addNotification' ] ),
+    ...mapActions("notification", ["addNotification"]),
     logout: async function () {
       try {
         const response = await auth.logout();
         this.userLogout({});
-        this.addNotification({type: 'success', messsage: 'Successfully logged out'});
+        this.addNotification({
+          type: "success",
+          message: "Successfully logged out",
+        });
         console.log(response);
         this.$router.push("/");
       } catch (err) {

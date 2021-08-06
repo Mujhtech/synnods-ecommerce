@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <pre-loader v-if="loading"></pre-loader>
     <div class="footer">
       <div class="footer-top">
         <div class="container">
@@ -32,12 +33,13 @@
               >
             </div>
             <div class="col-md-10 col-lg-5">
-              <form action="#" class="mb-0">
+              <form action="#" class="mb-0" v-on:submit.prevent="subscribe">
                 <div class="footer-submit-wrapper d-flex">
                   <input
                     type="email"
                     class="form-control mb-0"
                     placeholder="Enter your Email address..."
+                    v-model="email"
                     required
                   />
                   <button type="submit" class="btn btn-md btn-dark">
@@ -174,3 +176,38 @@
     </div>
   </footer>
 </template>
+
+<script>
+import PreLoader from './PreLoader';
+import { subscribe as service } from '../../services/setting';
+import { mapActions } from 'vuex';
+export default {
+  data: function() {
+    return {
+      email: "",
+      loading: false
+    }
+  },
+  components: {
+    PreLoader
+  },
+  methods: {
+    ...mapActions( 'notification', [ 'addNotification' ] ),
+    subscribe: async function(){
+      try{
+        this.loading = true;
+        const response = await service({email: this.email});
+        this.loading = false;
+        console.log(response);
+        this.email = "";
+        this.addNotification({type: 'success', messsage: response.data.data.message});
+      } catch(e){
+        this.loading = false;
+        this.email = "";
+        console.log(e.response);
+        this.addNotification({type: 'error', message: e.response.data.data ? e.response.data.data.message: 'Something went wrong'});
+      }
+    }
+  }
+}
+</script>

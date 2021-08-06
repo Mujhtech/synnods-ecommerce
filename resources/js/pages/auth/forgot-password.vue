@@ -16,13 +16,17 @@
                 >
                 <input
                   type="email"
-                  class="form-control"
+                  class="form-input"
                   id="reset-email"
-                  name="reset-email"
-                  v-model="user.email"
+                  v-model="email"
                   :disabled="loading"
-                  required
+                  :class="errors.email ? 'error-input' : ''"
                 />
+                <small
+                  v-if="errors.email"
+                  style="display: block; color: red; font-size: 12px"
+                  >{{ errors.email }}</small
+                >
               </div>
 
               <div class="form-footer mb-0">
@@ -42,11 +46,6 @@
                   Reset Password
                 </button>
               </div>
-              <p v-if="errors.length">
-                  <ul>
-                    <li style="text-align:center;color:red" v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                  </ul>
-                </p>
             </form>
           </div>
         </div>
@@ -56,9 +55,9 @@
 </template>
 
 <script>
-import PreLoader from '../../components/common/PreLoader';
+import PreLoader from "../../components/common/PreLoader";
 import * as auth from "../../services/auth";
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
   name: "Recover",
@@ -67,32 +66,41 @@ export default {
     titleTemplate: "%s - Synoods Ecommerce",
   },
   components: {
-    PreLoader
+    PreLoader,
+  },
+  watch: {
+    email(value) {
+      this.email = value;
+      this.validateEmail(value);
+    },
   },
   data() {
     return {
-      user: {
-        email: "",
-      },
-      errors: [],
+      email: "",
+      errors: {},
       loading: false,
     };
   },
   methods: {
-    ...mapActions( 'notification', [ 'addNotification' ] ),
-    recover: async function () {
-      if (!this.user.email) {
-        this.errors = [];
-        this.errors.push("Email address is required");
-        return;
-      }
-      if (
+    ...mapActions("notification", ["addNotification"]),
+    validateEmail: function (value) {
+      if (!value || value === "") {
+        this.errors.email = "Email address is required";
+        return false;
+      } else if (
         !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-          this.user.email
+          value
         )
       ) {
-        this.errors = [];
-        this.errors.push("Invalid email address");
+        this.errors.email = "Invalid email address";
+        return false;
+      } else {
+        this.errors.email = "";
+        return true;
+      }
+    },
+    recover: async function () {
+      if (!this.validateEmail(this.email)) {
         return;
       }
       let submit = document.getElementById("submit");
@@ -101,19 +109,33 @@ export default {
         this.loading = true;
         submit.innerText = "Loading...";
         console.log(this.user);
-        const response = await auth.recover(this.user);
+        const response = await auth.recover({ email: this.email });
         this.loading = false;
-        this.user.email = "",
-        this.addNotification({type: 'success', message: response.data.data.message});
+        (this.email = ""),
+          this.addNotification({
+            type: "success",
+            message: response.data.data.message,
+          });
         submit.innerText = "Reset Password";
         console.log(response);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Reset Password";
-        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
+        this.addNotification({
+          type: "error",
+          message: error.response.data.data
+            ? error.response.data.data.message
+            : "Something went wrong",
+        });
         console.log(error.response);
       }
     },
   },
 };
 </script>
+
+<style scoped>
+.error-input {
+  border-color: red !important;
+}
+</style>

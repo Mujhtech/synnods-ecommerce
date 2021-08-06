@@ -15,10 +15,15 @@
                   class="form-control"
                   id="reset-password"
                   name="reset-password"
-                  v-model="user.password"
+                  v-model="password"
                   :disabled="loading"
-                  required
+                  :class="errors.password ? 'error-input' : ''"
                 />
+                <small
+                  v-if="errors.password"
+                  style="display: block; color: red; font-size: 12px"
+                  >{{ errors.password }}</small
+                >
               </div>
               <div class="form-group mb-0">
                 <label for="reset-cpassword" class="font-weight-normal"
@@ -29,10 +34,15 @@
                   class="form-control"
                   id="reset-cpassword"
                   name="reset-cpassword"
-                  v-model="user.confirmed"
+                  v-model="confirmed"
                   :disabled="loading"
-                  required
+                  :class="errors.confirmed ? 'error-input' : ''"
                 />
+                <small
+                  v-if="errors.confirmed"
+                  style="display: block; color: red; font-size: 12px"
+                  >{{ errors.confirmed }}</small
+                >
               </div>
 
               <div class="form-footer mb-0">
@@ -53,11 +63,6 @@
                 </button>
               </div>
             </form>
-            <p v-if="errors.length">
-                  <ul>
-                    <li style="text-align:center;color:red" v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                  </ul>
-                </p>
           </div>
         </div>
       </div>
@@ -66,9 +71,9 @@
 </template>
 
 <script>
-import PreLoader from '../../components/common/PreLoader';
+import PreLoader from "../../components/common/PreLoader";
 import * as auth from "../../services/auth";
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
   name: "Reset",
@@ -77,60 +82,97 @@ export default {
     titleTemplate: "%s - Synoods Ecommerce",
   },
   components: {
-    PreLoader
+    PreLoader,
   },
   mounted() {
-    this.user.token = this.$route.params.token;
+    this.token = this.$route.params.token;
+  },
+  watch: {
+    confirmed(value) {
+      this.confirmed = value;
+      this.validateCPassword(value);
+    },
+    password(value) {
+      this.password = value;
+      this.validatePassword(value);
+    },
   },
   data() {
     return {
-      user: {
-        token: "",
-        password: "",
-        confirmed: "",
-      },
-      errors: [],
+      token: "",
+      password: "",
+      confirmed: "",
+      errors: {},
       loading: false,
     };
   },
   methods: {
-    ...mapActions( 'notification', [ 'addNotification' ] ),
+    ...mapActions("notification", ["addNotification"]),
+    validatePassword: function (value) {
+      if (!value || value === "") {
+        this.errors.password = "Password is required";
+        return false;
+      } else {
+        this.errors.password = "";
+        return true;
+      }
+    },
+    validateCPassword: function (value) {
+      if (!value || value === "") {
+        this.errors.confirmed = "Confirm Password is required";
+        return false;
+      } else if (this.password != value) {
+        this.errors.confirmed = "Password must be match";
+        return false;
+      } else {
+        this.errors.confirmed = "";
+        return true;
+      }
+    },
     reset: async function () {
-      if (!this.user.password) {
-        this.errors = [];
-        this.errors.push("Password is required");
+      if (!this.validatePassword(this.password)) {
         return;
       }
-      if (!this.user.confirmed) {
-        this.errors = [];
-        this.errors.push("Confirm Password is required");
+      if (!this.validateCPassword(this.confirmed)) {
         return;
       }
-      if (this.user.password != this.user.confirmed) {
-        this.errors = [];
-        this.errors.push("Password not match");
-        return;
-      }
+      this.errors = {};
       let submit = document.getElementById("submit");
       try {
-        this.errors = [];
         this.loading = true;
         submit.innerText = "Loading...";
-        console.log(this.user);
-        const response = await auth.reset(this.user);
+        const response = await auth.reset({
+          confirmed: this.confirmed,
+          password: this.password,
+          token: this.token,
+        });
         this.loading = false;
-        this.user.password = "",
-        this.user.confirmed = "", 
-        submit.innerText = "Reset Password";
-        this.addNotification({type: 'success', message: 'Password reset successfully'});
+        (this.password = ""),
+          (this.confirmed = ""),
+          (submit.innerText = "Reset Password");
+        this.addNotification({
+          type: "success",
+          message: "Password reset successfully",
+        });
         console.log(response);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Reset Password";
         console.log(error.response);
-        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
+        this.addNotification({
+          type: "error",
+          message: error.response.data.data
+            ? error.response.data.data.message
+            : "Something went wrong",
+        });
       }
     },
   },
 };
 </script>
+
+<style scoped>
+.error-input {
+  border-color: red !important;
+}
+</style>

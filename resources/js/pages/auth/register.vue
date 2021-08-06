@@ -18,10 +18,15 @@
                 type="text"
                 class="form-input form-wide"
                 id="register-firstname"
-                v-model="user.first_name"
+                v-model="first_name"
                 :disabled="loading"
-                
+                :class="errors.first_name ? 'error-input' : ''"
               />
+              <small
+                v-if="errors.first_name"
+                style="display: block; color: red; font-size: 12px"
+                >{{ errors.first_name }}</small
+              >
               <label for="register-lastname">
                 Last Name
                 <span class="required">*</span>
@@ -30,10 +35,15 @@
                 type="text"
                 class="form-input form-wide"
                 id="register-lastname"
-                v-model="user.last_name"
+                v-model="last_name"
                 :disabled="loading"
-                
+                :class="errors.last_name ? 'error-input' : ''"
               />
+              <small
+                v-if="errors.last_name"
+                style="display: block; color: red; font-size: 12px"
+                >{{ errors.last_name }}</small
+              >
               <label for="register-phone">
                 Phone Number
                 <span class="required">*</span>
@@ -42,10 +52,13 @@
                 type="text"
                 class="form-input form-wide"
                 id="register-phone"
-                v-model="user.phone"
+                v-model="phone"
                 :disabled="loading"
-                
+                :class="errors.phone ? 'error-input' : ''"
               />
+              <small v-if="errors.phone" style="display: block; color: red; font-size: 12px">{{
+                errors.phone
+              }}</small>
               <label for="register-email">
                 Email address
                 <span class="required">*</span>
@@ -54,11 +67,13 @@
                 type="email"
                 class="form-input form-wide"
                 id="register-email"
-                v-model="user.email"
+                v-model="email"
                 :disabled="loading"
-                
+                :class="errors.email ? 'error-input' : ''"
               />
-
+              <small v-if="errors.email" style="display: block; color: red; font-size: 12px">{{
+                errors.email
+              }}</small>
               <label for="register-password">
                 Password
                 <span class="required">*</span>
@@ -67,11 +82,15 @@
                 type="password"
                 class="form-input form-wide"
                 id="register-password"
-                v-model="user.password"
+                v-model="password"
                 :disabled="loading"
-                
+                :class="errors.password ? 'error-input' : ''"
               />
-
+              <small
+                v-if="errors.password"
+                style="display: block; color: red; font-size: 12px"
+                >{{ errors.password }}</small
+              >
               <div class="form-footer mb-2">
                 <button
                   type="submit"
@@ -80,13 +99,7 @@
                 >
                   Register
                 </button>
-
               </div>
-                <p v-if="errors.length">
-                  <ul>
-                    <li style="text-align:center;color:red" v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                  </ul>
-                </p>
             </form>
           </div>
         </div>
@@ -96,112 +109,176 @@
 </template>
 
 <script>
-import PreLoader from '../../components/common/PreLoader';
+import PreLoader from "../../components/common/PreLoader";
 import * as auth from "../../services/auth";
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
-  name: "Recover",
+  name: "Register",
   metaInfo: {
     title: "Register",
     titleTemplate: "%s - Synoods Ecommerce",
   },
   components: {
-    PreLoader
+    PreLoader,
   },
   data() {
     return {
-      user: {
-        email: "",
-        first_name: "",
-        last_name: "",
-        phone: "",
-        password: "",
-      },
-      errors: [],
+      email: "",
+      first_name: "",
+      last_name: "",
+      phone: "",
+      password: "",
+      errors: {},
       loading: false,
     };
   },
+  watch: {
+    email(value) {
+      this.email = value;
+      this.validateEmail(value);
+    },
+    first_name(value) {
+      this.first_name = value;
+      this.validateFirstName(value);
+    },
+    last_name(value) {
+      this.last_name = value;
+      this.validateLastName(value);
+    },
+    phone(value) {
+      this.phone = value;
+      this.validatePhone(value);
+    },
+    password(value) {
+      this.password = value;
+      this.validatePassword(value);
+    },
+  },
   methods: {
-    ...mapActions( 'notification', [ 'addNotification' ] ),
-    register: async function () {
-      if (!this.user.first_name) {
-        this.errors = [];
-        this.errors.push("First name is required");
-        return;
+    ...mapActions("notification", ["addNotification"]),
+    validateFirstName: function (value) {
+      if (!value || value == "") {
+        this.errors.first_name = "First name is required";
+        return false;
+      } else {
+        this.errors.first_name = '';
+        return true;
       }
-      if (!this.user.last_name) {
-        this.errors = [];
-        this.errors.push("Last name is required");
-        return;
+    },
+    validateLastName: function (value) {
+      if (!value || value === "") {
+        this.errors.last_name = "Last name is required";
+        return false;
+      } else {
+        this.errors.last_name = '';
+        return true;
       }
-      if (!this.user.phone) {
-        this.errors = [];
-        this.errors.push("Phone number is required");
-        return;
-      }
-      if (this.user.phone.length > 11) {
-        this.errors = [];
-        this.errors.push("Phone number must be more than 11 digits");
-        return;
-      }
-      if (!/^-?\d+$/.test(this.user.phone)) {
-        this.errors = [];
-        this.errors.push("Phone number must be a number");
-        return;
-      }
-      if (!this.user.email) {
-        this.errors = [];
-        this.errors.push("Email address is required");
-        return;
-      }
-      if (
+    },
+    validateEmail: function (value) {
+      if (!value || value === "") {
+        this.errors.email = "Email address is required";
+        return false;
+      } else if (
         !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-          this.user.email
+          value
         )
       ) {
-        this.errors = [];
-        this.errors.push("Invalid email address");
+        this.errors.email = "Invalid email address";
+        return false;
+      } else {
+        this.errors.email = '';
+        return true;
+      }
+    },
+    validatePhone: function (value) {
+      if (!value || value === "") {
+        this.errors.phone = "Phone number is required";
+        return false;
+      } else if (value.length > 11) {
+        this.errors.phone = "Phone number must be more than 11 digits";
+        return false;
+      } else if (!/^-?\d+$/.test(value)) {
+        this.errors.phone = "Phone number must be a number";
+        return false;
+      } else {
+        this.errors.phone = '';
+        return true;
+      }
+    },
+    validatePassword: function (value) {
+      if (!value || value === "") {
+        this.errors.password = "Password is required";
+        return false;
+      } else if (value.length < 8) {
+        this.errors.password = "Password length must be atleast 8 characters";
+        return false;
+      } else if (!value.match(/[0-9]/g)) {
+        this.errors.password = "Password must contain number";
+        return false
+      } else {
+        this.errors.password = '';
+        return true;
+      }
+    },
+    register: async function () {
+      if(!this.validateFirstName(this.first_name)){
         return;
       }
-      if (!this.user.password) {
-        this.errors = [];
-        this.errors.push("Password is required");
+      if(!this.validateLastName(this.last_name)){
         return;
       }
-      if (this.user.password.length < 8) {
-        this.errors = [];
-        this.errors.push("Password length must be atleast 8 characters");
+      if(!this.validatePhone(this.phone)){
         return;
       }
-      if (!this.user.password.match(/[0-9]/g)) {
-        this.errors = [];
-        this.errors.push("Password must contain number");
+      if(!this.validateEmail(this.email)){
         return;
       }
-      this.errors = [];
+      if(!this.validatePassword(this.password)){
+        return;
+      }
       let submit = document.getElementById("submit");
       try {
         this.loading = true;
         submit.innerText = "Loading...";
-        const response = await auth.register(this.user);
+        const response = await auth.register({
+          email: this.email,
+          password: this.password,
+          first_name: this.first_name,
+          last_name: this.last_name,
+          phone: this.phone,
+        });
         this.loading = false;
         submit.innerText = "Register";
         console.log(response);
-        this.user.email = "";
-        this.user.password = "";
-        this.user.first_name = "";
-        this.user.last_name = "";
-        this.user.phone = "";
-        this.addNotification({type: 'success', message: response.data.data.message});
+        this.email = "";
+        this.password = "";
+        this.first_name = "";
+        this.last_name = "";
+        this.phone = "";
+        this.addNotification({
+          type: "success",
+          message: response.data.data.message,
+        });
         this.$router.push(`/auth/verify/${response.data.data.token}`);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Register";
         console.log(error.response);
-        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
+        this.addNotification({
+          type: "error",
+          message: error.response.data.data
+            ? error.response.data.data.message
+            : "Something went wrong",
+        });
       }
     },
   },
 };
 </script>
+
+<style scoped>
+.error-input {
+  border-color: red !important;
+}
+</style>
