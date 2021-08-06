@@ -54,16 +54,6 @@
                     {{ item.name }}
                     <span class="tip tip-hot" v-if="item.hot">Hot</span>
                   </router-link>
-                  <ul class="submenu">
-                    <li
-                      v-for="(sub_item, index) in item.sub_categories"
-                      :key="'cat-' + index"
-                    >
-                      <router-link :to="sub_item.slug">
-                        {{ sub_item.name }}
-                      </router-link>
-                    </li>
-                  </ul>
                 </li>
               </ul>
             </div>
@@ -94,90 +84,9 @@
           </div>
         </div>
       </li>
-
-      <!--<li>
-				<router-link
-					to="/product/default/highway-detection-system"
-					class="sub-menu-link menu-with-ul"
-					:class="{active: $route.path.indexOf('/product') > -1}"
-				>Products</router-link>
-
-				<div class="megamenu megamenu-fixed-width megamenu-3cols">
-					<div class="row">
-						<div class="col-lg-4">
-							<a
-								href="javascript:;"
-								class="nolink"
-							>PRODUCT PAGES</a>
-
-							<ul class="submenu">
-								<li
-									v-for="item in mainMenu.product.pages"
-									:key="item.title"
-								>
-									<router-link :to="item.url">
-										{{ item.title }}
-										<span
-											class="tip tip-hot"
-											v-if="item.hot"
-										>Hot</span>
-									</router-link>
-								</li>
-							</ul>
-						</div>
-
-						<div class="col-lg-4">
-							<a
-								href="javascript:;"
-								class="nolink"
-							>PRODUCT LAYOUTS</a>
-
-							<ul class="submenu">
-								<li
-									v-for="item in mainMenu.product.layout"
-									:key="item.title"
-								>
-									<router-link :to="item.url">{{ item.title }}</router-link>
-								</li>
-
-								<li>
-									<a href="javascript:;">Build your own</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="col-lg-4 p-0">
-							<div class="menu-banner menu-banner-2">
-								<figure>
-									<img
-										:src="'/assets/images/menu-banner-1.jpg'"
-										alt="Menu banner"
-										class="product-promo"
-										width="380"
-										height="790"
-									/>
-								</figure>
-								<i>OFF</i>
-								<div class="banner-content">
-									<h4>
-										<span class>UP TO</span>
-										<br />
-										<b class>50%</b>
-									</h4>
-								</div>
-								<router-link
-									to="/shop"
-									class="btn btn-sm btn-dark"
-								>SHOP NOW</router-link>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>-->
-
       <li>
         <router-link
-          to="/pages/blog"
+          to="/blog"
           :class="{ active: $route.path.indexOf('/pages/blog') > -1 }"
           >Blog</router-link
         >

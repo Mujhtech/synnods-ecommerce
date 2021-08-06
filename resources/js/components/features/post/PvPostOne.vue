@@ -103,9 +103,9 @@
 	</article>
 </template>
 <script>
-import { baseUrl } from '~/api';
-import { baseSlider1 } from '~/utils/data/carousel';
-import PvCarousel from '~/components/features/PvCarousel';
+import { baseUrl } from '../../../api';
+import { baseSlider1 } from '../../../utils/data/carousel';
+import PvCarousel from '../../features/PvCarousel';
 
 export default {
 	components: {
@@ -140,7 +140,7 @@ export default {
 	methods: {
 		openVideoModal: function () {
 			this.$modal.show(
-				() => import( '~/components/features/modal/PvVideoModal' ),
+				() => import( '../../features/modal/PvVideoModal' ),
 				{},
 				{
 					width: '880',

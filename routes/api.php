@@ -48,7 +48,7 @@ Route::group(['prefix' => 'v1'], function () {
 
         Route::post('register', [AuthController::class, 'register'])->name('register');
 
-        Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+        Route::get('logout', [AuthController::class, 'logout'])->middleware('auth:api')->name('logout');
 
         Route::post('recover', [AuthController::class, 'recover'])->name('recover');
 

@@ -10,8 +10,14 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './route/index';
 import store from './store/index';
-import VueMeta from 'vue-meta'
- 
+import VueMeta from 'vue-meta';
+import loader from "vue-ui-preloader";
+import VueSweetalert2 from 'vue-sweetalert2';
+
+import 'sweetalert2/dist/sweetalert2.min.css';
+
+Vue.use(VueSweetalert2);
+Vue.use(loader);
 Vue.use(VueMeta);
 
 

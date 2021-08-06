@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import { baseUrl } from '~/api';
+import { baseUrl } from '../../../api';
 import Sticky from 'vue-sticky-directive';
 
 export default {

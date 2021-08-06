@@ -17,6 +17,9 @@ import Error from "../layouts/error";
 import Vendor from "../pages/vendor/index";
 import VendorList from "../pages/vendor/list";
 import VendorStore from "../pages/vendor/store";
+import Blog from "../pages/pages/blog";
+import AboutUs from "../pages/pages/about-us";
+import ContactUs from "../pages/pages/contact-us";
 
 Vue.use(VueRouter);
 
@@ -25,6 +28,21 @@ const routes = [
         path: "/",
         component: Index,
         name: "Index"
+    },
+    {
+        path: "/blog",
+        component: Blog,
+        name: "Blog"
+    },
+    {
+        path: "/contact-us",
+        component: ContactUs,
+        name: "Contact Us"
+    },
+    {
+        path: "/about-us",
+        component: AboutUs,
+        name: "About Us"
     },
     {
         path: "/shop",

@@ -16,16 +16,17 @@ export const getters = {
 export const actions = {
     addNotification: function ( { commit }, payload ) {
         commit( ADD_NOTIFICATION, payload );
-        this._vm.$notify( {
-            group: 'notify',
-            text: payload,
-            color: 'red'
-        } );
+        this._vm.$swal({
+            icon: payload.type,
+            title: payload.message,
+            showConfirmButton: false,
+            timer: 2000,
+        });
     },
 }
 
 export const mutations = {
     [ ADD_NOTIFICATION ]( state, payload ) {
-        state.message = payload;
+        state.message = payload.message;
     }
 }

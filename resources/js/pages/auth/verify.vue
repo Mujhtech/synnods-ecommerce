@@ -1,5 +1,6 @@
 <template>
   <div class="container login-container">
+    <pre-loader v-if="loading"></pre-loader>
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <div class="row">
@@ -66,6 +67,7 @@
 </template>
 
 <script>
+import PreLoader from '../../components/common/PreLoader';
 import * as auth from "../../services/auth";
 import { mapActions } from 'vuex';
 
@@ -74,6 +76,9 @@ export default {
   metaInfo: {
     title: "Verify Account",
     titleTemplate: "%s - Synoods Ecommerce",
+  },
+  components: {
+    PreLoader
   },
   mounted() {
     this.user.token = this.$route.params.token;
@@ -91,16 +96,17 @@ export default {
   },
   methods: {
     ...mapActions( 'notification', [ 'addNotification' ] ),
+    ...mapActions( 'user', [ 'userLogin' ] ),
     resend: async function(){
       try {
         this.loading = true;
         const response = await auth.resend({token: this.user.token});
         this.loading = false;
-        this.addNotification(response.data.data.message);
+        this.addNotification({type: 'success', message: response.data.data.message});
       } catch(error) {
         this.loading = false;
         console.log(error.response);
-        this.addNotification(error.response.data.data.message);
+        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
       }
     },
     verify: async function () {
@@ -134,14 +140,16 @@ export default {
         this.user.sms_code = "",
         this.user.email_code = "",
         submit.innerText = "Verify";
-        this.addNotification(response.data.data.message);
+        auth.setToken( response.data.data.access_token );
+        this.userLogin( response.data.data.user );
+        this.addNotification({type: 'success', message: response.data.data.message});
         console.log(response);
-        this.$router.push('/auth/login');
+        this.$router.push('/account');
       } catch (error) {
         this.loading = false;
         submit.innerText = "Verify";
         console.log(error.response);
-        this.addNotification(error.response.data.data.message);
+        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
       }
     },
   },

@@ -1,5 +1,6 @@
 <template>
   <div class="container login-container">
+    <pre-loader v-if="loading"></pre-loader>
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <div class="row">
@@ -77,6 +78,7 @@
 </template>
 
 <script>
+import PreLoader from '../../components/common/PreLoader';
 import { mapActions } from 'vuex';
 import * as auth from "../../services/auth";
 export default {
@@ -84,6 +86,9 @@ export default {
   metaInfo: {
     title: "Login",
     titleTemplate: "%s - Synoods Ecommerce",
+  },
+  components: {
+    PreLoader
   },
   data() {
     return {
@@ -134,14 +139,14 @@ export default {
           this.user.remember_me = false;
           auth.setToken( response.data.data.access_token );
           this.userLogin( response.data.data.user );
-          this.addNotification('Successfully logged in');
+          this.addNotification({type: 'success', messsage: 'Successfully logged in'});
           this.$router.push('/account');
         }
       } catch (error) {
         if(!error.response) return;
         this.loading = false;
         submit.innerText = "Login";
-        this.addNotification(error.response.data.data.message);
+        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
       }
     },
   },

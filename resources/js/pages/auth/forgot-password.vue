@@ -1,5 +1,6 @@
 <template>
   <div class="container reset-password-container">
+    <pre-loader v-if="loading"></pre-loader>
     <div class="row">
       <div class="col-lg-6 offset-lg-3">
         <div class="feature-box border-top-primary">
@@ -55,6 +56,7 @@
 </template>
 
 <script>
+import PreLoader from '../../components/common/PreLoader';
 import * as auth from "../../services/auth";
 import { mapActions } from 'vuex';
 
@@ -63,6 +65,9 @@ export default {
   metaInfo: {
     title: "Forgot Password",
     titleTemplate: "%s - Synoods Ecommerce",
+  },
+  components: {
+    PreLoader
   },
   data() {
     return {
@@ -99,13 +104,13 @@ export default {
         const response = await auth.recover(this.user);
         this.loading = false;
         this.user.email = "",
-        this.addNotification(response.data.data.message);
+        this.addNotification({type: 'success', message: response.data.data.message});
         submit.innerText = "Reset Password";
         console.log(response);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Reset Password";
-        this.addNotification(error.response.data.data.message);
+        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
         console.log(error.response);
       }
     },

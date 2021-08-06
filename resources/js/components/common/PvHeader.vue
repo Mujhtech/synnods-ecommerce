@@ -77,7 +77,7 @@
 						>Become a Seller</a>
 
 						<div class="header-dropdown">
-							<a href="javascript:;">{{ getCurrency }}</a>
+							<a href="javascript:void(0)">{{ getCurrency }}</a>
 							<div class="header-menu">
 								<ul>
 									<li><a href="javascript:;" v-on:click="changeCurrency('NGN')">NGN</a></li>
@@ -97,7 +97,6 @@ import PvMainMenu from './partials/PvMainMenu';
 import PvCartMenu from './partials/PvCartMenu';
 import PvHeaderSearch from './partials/PvHeaderSearch';
 import { mapActions, mapGetters } from 'vuex';
-import * as service from "../../services/category";
 
 document.querySelector( 'body' ).classList.add( 'loaded' );
 
@@ -107,13 +106,15 @@ export default {
 		PvCartMenu,
 		PvHeaderSearch
 	},
+	props: {
+		categories: Array,
+	},
 	data: function () {
 		return {
-			categories: [],
+			
 		};
 	},
 	mounted: function() {
-		this.fetchCategory();
 	},
 	computed: {
 		...mapGetters("setting", ["getCurrency"]),
@@ -121,15 +122,6 @@ export default {
 	methods: {
 		...mapActions( 'setting', [ 'updateCurrency' ] ),
 		...mapActions( 'notification', [ 'addNotification' ] ),
-		fetchCategory: async function () {
-			try {
-				const response = await service.category();
-				this.categories = response.data.data.data;
-				console.log(response);
-			} catch (err) {
-				console.log(err.response);
-			}
-		},
 		changeCurrency: function(cur){
 			console.log(localStorage.getItem('mod'))
 			this.updateCurrency(cur);

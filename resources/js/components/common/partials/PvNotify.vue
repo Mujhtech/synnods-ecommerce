@@ -5,7 +5,7 @@
 		:width="300"
 		:max="4"
 		animation-name="fade-left"
-		position="top right"
+		position="top center"
 	>
 		<template slot="body" slot-scope="props">
 			<div class="minipopup-box">

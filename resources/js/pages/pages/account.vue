@@ -351,6 +351,7 @@
                         placeholder="Editor"
                         id="acc-name"
                         name="acc-name"
+                        :value="user.first_name"
                         required
                       />
                     </div>
@@ -367,6 +368,7 @@
                         class="form-control"
                         id="acc-lastname"
                         name="acc-lastname"
+                        :value="user.last_name"
                         required
                       />
                     </div>
@@ -375,7 +377,7 @@
 
                 <div class="form-group mb-2">
                   <label for="acc-text">
-                    Display name
+                    Phone Number
                     <span class="required">*</span>
                   </label>
                   <input
@@ -383,13 +385,10 @@
                     class="form-control"
                     id="acc-text"
                     name="acc-text"
-                    placeholder="Editor"
+                    placeholder="Phone Number"
+                    :value="user.phone_number"
                     required
                   />
-                  <p>
-                    This will be how your name will be displayed in the account
-                    section and in reviews
-                  </p>
                 </div>
 
                 <div class="form-group mb-4">
@@ -403,6 +402,7 @@
                     id="acc-email"
                     name="acc-email"
                     placeholder="editor@gmail.com"
+                    :value="user.email"
                     required
                   />
                 </div>
@@ -733,16 +733,14 @@ export default {
   },
   methods: {
     ...mapActions("user", ["userLogout"]),
+    ...mapActions( 'notification', [ 'addNotification' ] ),
     logout: async function () {
       try {
         const response = await auth.logout();
         this.userLogout({});
-        this.$notify({
-          group: "notify",
-          text: "Successfully logged out",
-          color: "red",
-        });
-        //this.$router.push("/");
+        this.addNotification({type: 'success', messsage: 'Successfully logged out'});
+        console.log(response);
+        this.$router.push("/");
       } catch (err) {
         console.log(err.response);
       }

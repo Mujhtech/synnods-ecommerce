@@ -1,5 +1,6 @@
 <template>
   <div class="container login-container">
+    <pre-loader v-if="loading"></pre-loader>
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <div class="row">
@@ -95,6 +96,7 @@
 </template>
 
 <script>
+import PreLoader from '../../components/common/PreLoader';
 import * as auth from "../../services/auth";
 import { mapActions } from 'vuex';
 
@@ -103,6 +105,9 @@ export default {
   metaInfo: {
     title: "Register",
     titleTemplate: "%s - Synoods Ecommerce",
+  },
+  components: {
+    PreLoader
   },
   data() {
     return {
@@ -188,13 +193,13 @@ export default {
         this.user.first_name = "";
         this.user.last_name = "";
         this.user.phone = "";
-        this.addNotification(response.data.data.message);
+        this.addNotification({type: 'success', message: response.data.data.message});
         this.$router.push(`/auth/verify/${response.data.data.token}`);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Register";
         console.log(error.response);
-        this.addNotification(error.response.data.data.message);
+        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
       }
     },
   },

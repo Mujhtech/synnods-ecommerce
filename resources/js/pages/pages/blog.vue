@@ -7,9 +7,9 @@
 			<div class="container">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
-						<nuxt-link to="/">
+						<router-link to="/">
 							Home
-						</nuxt-link>
+						</router-link>
 					</li>
 					<li
 						class="breadcrumb-item active"
@@ -101,11 +101,11 @@
 </template>
 
 <script>
-import Api, { baseUrl, currentDemo } from '~/api';
-import PvBlogSidebar from '~/components/partials/page/PvBlogSidebar';
-import PvPostOne from '~/components/features/post/PvPostOne';
-import PvPagination from '~/components/features/PvPagination';
-import { scrollTopHandler } from '~/utils';
+import Api, { baseUrl, currentDemo } from '../../api';
+import PvBlogSidebar from '../../components/partials/page/PvBlogSidebar';
+import PvPostOne from '../../components/features/post/PvPostOne';
+import PvPagination from '../../components/features/PvPagination';
+import { scrollTopHandler } from '../../utils';
 
 export default {
 	components: {

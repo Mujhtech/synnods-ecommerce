@@ -35,7 +35,7 @@
       </div>
 
       <div class="wishlist-title">
-        <h2 class="p-2">My wishlist on Porto Shop {{ currentDemo }}</h2>
+        <h2 class="p-2">My wishlist</h2>
       </div>
 
       <div

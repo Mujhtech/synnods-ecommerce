@@ -7,7 +7,7 @@
 			>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
-						<nuxt-link to="/">Home</nuxt-link>
+						<router-link to="/">Home</router-link>
 					</li>
 					<li
 						class="breadcrumb-item active"
@@ -305,9 +305,9 @@
 
 <script>
 import LightBox from "vue-image-lightbox";
-import PvCarousel from '~/components/features/PvCarousel';
-import PvCountTo from '~/components/features/PvCountTo';
-import { baseSlider4 } from '~/utils/data/carousel';
+import PvCarousel from '../../components/features/PvCarousel';
+import PvCountTo from '../../components/features/PvCountTo';
+import { baseSlider4 } from '../../utils/data/carousel';
 import "vue-image-lightbox/dist/vue-image-lightbox.min.css";
 
 export default {

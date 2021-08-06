@@ -24,9 +24,9 @@
 </template>
 
 <script>
-import PvPostThree from '~/components/features/post/PvPostThree';
-import PvCarousel from '~/components/features/PvCarousel';
-import { baseSlider5 } from '~/utils/data/carousel';
+import PvPostThree from '../../features/post/PvPostThree';
+import PvCarousel from '../..//features/PvCarousel';
+import { baseSlider5 } from '../../../utils/data/carousel';
 
 export default {
 	components: {

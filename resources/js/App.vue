@@ -56,7 +56,7 @@
         </button>
       </div>
 
-      <pv-header></pv-header>
+      <pv-header :categories="categories"></pv-header>
       <router-view></router-view>
       <pv-footer></pv-footer>
 
@@ -66,7 +66,6 @@
     </div>
 
     <pv-cart-popup class="minipopup-area"></pv-cart-popup>
-    <pv-notify class="minipopup-area"></pv-notify>
 
     <a
       id="scroll-top"
@@ -78,7 +77,7 @@
       <i class="icon-angle-up"></i>
     </a>
 
-    <pv-mobile-menu></pv-mobile-menu>
+    <pv-mobile-menu :categories="categories"></pv-mobile-menu>
 
     <pv-sticky-footer></pv-sticky-footer>
   </div>
@@ -88,11 +87,11 @@
 import PvHeader from "./components/common/PvHeader";
 import PvFooter from "./components/common/PvFooter";
 import PvCartPopup from "./components/common/partials/PvCartPopup";
-import PvNotify from "./components/common/partials/PvNotify";
 import PvMobileMenu from "./components/common/partials/PvMobileMenu";
 import PvStickyFooter from "./components/common/partials/PvStickyFooter";
 import { mapActions } from "vuex";
 import * as auth from "./services/auth";
+import * as catService from "./services/category";
 import {
   scrollTopHandler,
   stickyHeaderHandler,
@@ -111,11 +110,11 @@ export default {
     PvCartPopup,
     PvMobileMenu,
     PvStickyFooter,
-    PvNotify,
   },
   data: function () {
     return {
       isHide: false,
+      categories: []
     };
   },
   watch: {
@@ -129,6 +128,7 @@ export default {
     this.isHide = getCookie("topNotice");
   },
   mounted: function () {
+    this.fetchCategory();
     this.fetchUser();
     window.addEventListener("scroll", stickyHeaderHandler, {
       passive: true,
@@ -151,15 +151,26 @@ export default {
   },
   methods: {
     ...mapActions("user", ["userLogin", "userLogout"]),
+    fetchCategory: async function () {
+			try {
+				const response = await catService.category();
+				this.categories = response.data.data.data;
+				console.log(response);
+			} catch (err) {
+				console.log(err.response);
+			}
+		},
     fetchUser: async function () {
       try {
         const response = await auth.getProfile();
-        this.userLogin( response.data.data.user );
+        console.log(response.date);
+        this.userLogin(response.data.data.user);
       } catch (err) {
-		  if(!err.response) return;
-		  localStorage.removeItem('SYNECT');
-		  this.userLogout( {} );
-	  }
+        //if(!err.response) return;
+        console.log(err.response);
+        localStorage.removeItem("SYNECT");
+        this.userLogout({});
+      }
     },
     scrollToTop: function () {
       scrollTop(false, 70);

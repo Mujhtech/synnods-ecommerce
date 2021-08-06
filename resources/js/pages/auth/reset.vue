@@ -1,5 +1,6 @@
 <template>
   <div class="container reset-password-container">
+    <pre-loader v-if="loading"></pre-loader>
     <div class="row">
       <div class="col-lg-6 offset-lg-3">
         <div class="feature-box border-top-primary">
@@ -65,6 +66,7 @@
 </template>
 
 <script>
+import PreLoader from '../../components/common/PreLoader';
 import * as auth from "../../services/auth";
 import { mapActions } from 'vuex';
 
@@ -73,6 +75,9 @@ export default {
   metaInfo: {
     title: "Reset Account",
     titleTemplate: "%s - Synoods Ecommerce",
+  },
+  components: {
+    PreLoader
   },
   mounted() {
     this.user.token = this.$route.params.token;
@@ -117,13 +122,13 @@ export default {
         this.user.password = "",
         this.user.confirmed = "", 
         submit.innerText = "Reset Password";
-        this.addNotification('Password reset successfully');
+        this.addNotification({type: 'success', message: 'Password reset successfully'});
         console.log(response);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Reset Password";
         console.log(error.response);
-        this.addNotification(error.response.data.data.message);
+        this.addNotification({type: 'error', message: error.response.data.data ? error.response.data.data.message: 'Something went wrong'});
       }
     },
   },
