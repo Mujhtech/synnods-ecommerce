@@ -15,7 +15,7 @@ class CategoryController extends ApiController
 
     public function index(){
 
-        $categories = Category::where('status', 1)->with('sub_categories')->get();
+        $categories = Category::where('status', 0)->with('sub_categories')->get();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'data' => CategoryResource::collection($categories)

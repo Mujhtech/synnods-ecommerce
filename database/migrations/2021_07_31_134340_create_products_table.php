@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->foreignId('vendor_id')->constrained();
             $table->foreignId('category_id')->constrained();
             $table->foreignId('sub_category_id')->constrained();
+            $table->integer('product_brand_id')->nullable()->unsigned();
             $table->string('name');
             $table->string('slug');
             $table->integer('views')->default(0);

@@ -19,7 +19,13 @@ class DatabaseSeeder extends Seeder
 	        ProductLabelSeeder::class,
             PaymentMethodSeeder::class,
             SettingSeeder::class,
-            EmailTemplateSeeder::class
+            EmailTemplateSeeder::class,
+            CategorySeeder::class,
+            SubCategorySeeder::class,
+            UserSeeder::class,
+            VendorSeeder::class,
+            ProductBrandSeeder::class,
+            ProductSeeder::class
 	    ]);
     }
 }
