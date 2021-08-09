@@ -1,5 +1,5 @@
 ## Synnods ECommerce
-- A monoliths e-commerce web app built with laravel and veujs
+- A monolithic e-commerce web app built with laravel and veujs
 
 ## How to setup locally
 
@@ -22,7 +22,7 @@ DB_PASSWORD=
 
 ```
 
-### Run `php artisan migrate`, to update your database, and to fill your database with dummy data run `php artisan db:seed` then to run `php artisan passport:install`. 
+### Run `php artisan migrate`, to update your database, and to fill your database with dummy data run `php artisan db:seed` then run `php artisan passport:install`. 
 
 ### Running the Applcation
 Run `php artisan serve` to start the app server.  
