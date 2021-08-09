@@ -19,7 +19,7 @@
         <h1>My Account</h1>
       </div>
     </div>
-
+    <pre-loader v-if="loading"></pre-loader>
     <div class="container account-container custom-account-container">
       <div class="row">
         <div
@@ -306,7 +306,7 @@
                     class="btn btn-default address-action link-to-tab"
                     data-toggle="billing"
                     @click.prevent="tabClicked($event), handler($event)"
-                    >Add Address</a
+                    >Update Address</a
                   >
                 </div>
 
@@ -341,7 +341,7 @@
               <i class="icon-user-2 align-middle mr-3 pr-1"></i>Account Details
             </h3>
             <div class="account-content">
-              <form action="#">
+              <form action="#" v-on:submit.prevent="updateProfile">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -355,7 +355,7 @@
                         placeholder="Editor"
                         id="acc-name"
                         name="acc-name"
-                        :value="user.first_name"
+                        v-model="first_name"
                         required
                       />
                     </div>
@@ -372,7 +372,7 @@
                         class="form-control"
                         id="acc-lastname"
                         name="acc-lastname"
-                        :value="user.last_name"
+                        v-model="last_name"
                         required
                       />
                     </div>
@@ -389,8 +389,8 @@
                     class="form-control"
                     id="acc-text"
                     name="acc-text"
+                    v-model="phone"
                     placeholder="Phone Number"
-                    :value="user.phone_number"
                     required
                   />
                 </div>
@@ -405,8 +405,9 @@
                     class="form-control"
                     id="acc-email"
                     name="acc-email"
+                    v-model="email"
                     placeholder="editor@gmail.com"
-                    :value="user.email"
+                    readonly
                     required
                   />
                 </div>
@@ -423,6 +424,7 @@
                       class="form-control"
                       id="acc-password"
                       name="acc-password"
+                      v-model="old_password"
                     />
                   </div>
 
@@ -435,6 +437,7 @@
                       class="form-control"
                       id="acc-new-password"
                       name="acc-new-password"
+                      v-model="password"
                     />
                   </div>
 
@@ -445,12 +448,17 @@
                       class="form-control"
                       id="acc-confirm-password"
                       name="acc-confirm-password"
+                      v-model="confirm_password"
                     />
                   </div>
                 </div>
 
                 <div class="form-footer mt-3 mb-0">
-                  <button type="submit" class="btn btn-dark mr-0">
+                  <button
+                    type="submit"
+                    id="update-acc"
+                    class="btn btn-dark mr-0"
+                  >
                     Save changes
                   </button>
                 </div>
@@ -467,48 +475,22 @@
             <div class="address account-content mt-0 pt-2">
               <h4 class="title">Billing address</h4>
 
-              <form class="mb-2" action="#">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>
-                        First name
-                        <span class="required">*</span>
-                      </label>
-                      <input type="text" class="form-control" required />
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>
-                        Last name
-                        <span class="required">*</span>
-                      </label>
-                      <input type="text" class="form-control" required />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label>Company</label>
-                  <input type="text" class="form-control" />
-                </div>
-
+              <form
+                class="mb-2"
+                action="#"
+                v-on:submit.prevent="updateBillingAddress"
+              >
                 <div class="select-custom">
                   <label>
                     Country / Region
                     <span class="required">*</span>
                   </label>
-                  <select name="orderby" class="form-control">
-                    <option value selected="selected">
-                      British Indian Ocean Territory
-                    </option>
-                    <option value="1">Brunei</option>
-                    <option value="2">Bulgaria</option>
-                    <option value="3">Burkina Faso</option>
-                    <option value="4">Burundi</option>
-                    <option value="5">Cameroon</option>
+                  <select
+                    name="orderby"
+                    class="form-control"
+                    v-model="billing_country"
+                  >
+                    <option value="Nigeria">Nigeria</option>
                   </select>
                 </div>
 
@@ -521,12 +503,7 @@
                     type="text"
                     class="form-control"
                     placeholder="House number and street name"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Apartment, suite, unit, etc. (optional)"
+                    v-model="billing_address"
                     required
                   />
                 </div>
@@ -536,49 +513,34 @@
                     Town / City
                     <span class="required">*</span>
                   </label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    v-model="billing_city"
+                    required
+                  />
                 </div>
 
                 <div class="form-group">
                   <label>
-                    State / Country
-                    <span class="required">*</span>
-                  </label>
-                  <input type="text" class="form-control" required />
-                </div>
-
-                <div class="form-group">
-                  <label>
-                    Postcode / ZIP
-                    <span class="required">*</span>
-                  </label>
-                  <input type="text" class="form-control" required />
-                </div>
-
-                <div class="form-group mb-3">
-                  <label>
-                    Phone
-                    <span class="required">*</span>
-                  </label>
-                  <input type="number" class="form-control" required />
-                </div>
-
-                <div class="form-group mb-3">
-                  <label>
-                    Email address
+                    State
                     <span class="required">*</span>
                   </label>
                   <input
-                    type="email"
+                    type="text"
                     class="form-control"
-                    placeholder="editor@gmail.com"
+                    v-model="billing_state"
                     required
                   />
                 </div>
 
                 <div class="form-footer mb-0">
                   <div class="form-footer-right">
-                    <button type="submit" class="btn btn-dark py-4">
+                    <button
+                      type="submit"
+                      id="billing_submit"
+                      class="btn btn-dark py-4"
+                    >
                       Save Address
                     </button>
                   </div>
@@ -596,48 +558,22 @@
             <div class="address account-content mt-0 pt-2">
               <h4 class="title mb-3">Shipping Address</h4>
 
-              <form class="mb-2" action="#">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>
-                        First name
-                        <span class="required">*</span>
-                      </label>
-                      <input type="text" class="form-control" required />
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>
-                        Last name
-                        <span class="required">*</span>
-                      </label>
-                      <input type="text" class="form-control" required />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label>Company</label>
-                  <input type="text" class="form-control" />
-                </div>
-
+              <form
+                class="mb-2"
+                action="#"
+                v-on:submit.prevent="createShippingAddress"
+              >
                 <div class="select-custom">
                   <label>
                     Country / Region
                     <span class="required">*</span>
                   </label>
-                  <select name="orderby" class="form-control">
-                    <option value selected="selected">
-                      British Indian Ocean Territory
-                    </option>
-                    <option value="1">Brunei</option>
-                    <option value="2">Bulgaria</option>
-                    <option value="3">Burkina Faso</option>
-                    <option value="4">Burundi</option>
-                    <option value="5">Cameroon</option>
+                  <select
+                    name="orderby"
+                    class="form-control"
+                    v-model="shipping_country"
+                  >
+                    <option value="Nigeri">Nigeria</option>
                   </select>
                 </div>
 
@@ -649,13 +585,8 @@
                   <input
                     type="text"
                     class="form-control"
+                    v-model="shipping_address"
                     placeholder="House number and street name"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Apartment, suite, unit, etc. (optional)"
                     required
                   />
                 </div>
@@ -665,15 +596,25 @@
                     Town / City
                     <span class="required">*</span>
                   </label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    v-model="shipping_city"
+                    required
+                  />
                 </div>
 
                 <div class="form-group">
                   <label>
-                    State / Country
+                    State
                     <span class="required">*</span>
                   </label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    v-model="shipping_state"
+                    required
+                  />
                 </div>
 
                 <div class="form-group">
@@ -681,12 +622,21 @@
                     Postcode / ZIP
                     <span class="required">*</span>
                   </label>
-                  <input type="text" class="form-control" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    v-model="shipping_postcode"
+                    required
+                  />
                 </div>
 
                 <div class="form-footer mb-0">
                   <div class="form-footer-right">
-                    <button type="submit" class="btn btn-dark py-4">
+                    <button
+                      type="submit"
+                      id="shipping_submit"
+                      class="btn btn-dark py-4"
+                    >
                       Save Address
                     </button>
                   </div>
@@ -702,9 +652,11 @@
 
 <script>
 import PvTabs from "../../components/features/PvTabs";
+import PreLoader from "../../components/common/PreLoader";
 import Sticky from "vue-sticky-directive";
 import { mapGetters, mapActions } from "vuex";
 import * as auth from "../../services/auth";
+import * as userService from "../../services/user";
 
 export default {
   name: "Account",
@@ -717,13 +669,38 @@ export default {
   },
   components: {
     PvTabs,
+    PreLoader
   },
   computed: {
     ...mapGetters("user", ["user"]),
   },
+  created: function () {
+    this.first_name = this.user.first_name;
+    this.last_name = this.user.last_name;
+    this.email = this.user.email;
+    this.phone = this.user.phone_number;
+  },
   data: function () {
     return {
       isSticky: false,
+      loading: false,
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      old_password: "",
+      password: "",
+      confirm_password: "",
+      shipping_address: "",
+      shipping_state: "",
+      shipping_country: "",
+      shipping_city: "",
+      shipping_postcode: "",
+      shipping_phone: "",
+      billing_address: "",
+      billing_state: "",
+      billing_city: "",
+      billing_country: "",
     };
   },
   mounted: function () {
@@ -738,6 +715,50 @@ export default {
   methods: {
     ...mapActions("user", ["userLogout"]),
     ...mapActions("notification", ["addNotification"]),
+    updateProfile: async function () {
+      try {
+        const response = await userService.update({
+          first_name: this.first_name,
+          last_name: this.last_name,
+          phone: this.phone,
+          email: this.email,
+          password: this.password,
+          old_password: this.old_password,
+          password: this.password,
+        });
+        console.log(response);
+      } catch (err) {
+        console.log(err.response);
+      }
+    },
+    updateBillingAddress: async function () {
+      try {
+        const response = await userService.updateBilling({
+          address: billing_address,
+          state: this.billing_state,
+          country: this.billing_country,
+          city: this.billing_city,
+        });
+        console.log(response);
+      } catch (err) {
+        console.log(err.response);
+      }
+    },
+    createBillingAddress: async function () {
+      try {
+        const response = await userService.createShipping({
+          address: shipping_address,
+          state: shipping_state,
+          country: shipping_country,
+          city: shipping_city,
+          postal_code: shipping_postcode,
+          phone: shipping_phone,
+        });
+        console.log(response);
+      } catch (err) {
+        console.log(err.response);
+      }
+    },
     logout: async function () {
       try {
         const response = await auth.logout();
@@ -771,3 +792,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.error-input {
+  border-color: red !important;
+}
+</style>

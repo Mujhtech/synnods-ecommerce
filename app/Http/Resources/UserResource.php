@@ -29,7 +29,9 @@ class UserResource extends JsonResource
             'role' => $this->role_id,
             'active' => ($this->active) ? true : false,
             'verified' => ($this->active) ? true : false,
-            'user_name' => $this->user_name
+            'user_name' => $this->user_name,
+            'orders' => OrderResource::collection($this->orders),
+            'shipping_addresses' => ShippingAddressResource::collection($this->shipping_addresses),
         ];
     }
 }

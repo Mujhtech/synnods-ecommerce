@@ -50,12 +50,12 @@ class User extends Authenticatable
 
     public function orders()
     {
-        return $this->hasMany(Order::class);
+        return $this->hasMany(Order::class, 'user_id', 'id');
     }
 
     public function shipping_addresses()
     {
-        return $this->belongsTo(DeliveryAddress::class);
+        return $this->hasMany(DeliveryAddress::class);
     }
 
     public function getProfilePhotoUrlAttribute()

@@ -126,6 +126,10 @@ Route::group(['prefix' => 'v1'], function () {
     Route::prefix('user')->name('user.')->middleware('auth:api')->group(function () {
 
         Route::put('update', [UserController::class, 'store'])->name('update');
+
+        Route::put('billing/update', [UserController::class, 'updateBilling'])->name('billing.update');
+
+        Route::post('shipping/create', [UserController::class, 'createShipping'])->name('shipping.create');
         
     });
 
