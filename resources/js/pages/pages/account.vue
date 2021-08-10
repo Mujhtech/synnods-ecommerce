@@ -298,7 +298,13 @@
                   </div>
 
                   <div class="address-box">
-                    You have not set up this type of address yet.
+                    <p v-if="user.address === null">
+                      You have not set up this type of address yet.
+                    </p>
+                    <p v-else>
+                      {{ user.address }},<br />
+                      {{ user.city }}, {{ user.state }} {{ user.country }}.
+                    </p>
                   </div>
 
                   <a
@@ -312,11 +318,21 @@
 
                 <div class="address col-md-6 mt-5 mt-md-0">
                   <div class="heading d-flex">
-                    <h4 class="text-dark mb-0">Shipping address</h4>
+                    <h4 class="text-dark mb-0">Shipping addresses</h4>
                   </div>
 
                   <div class="address-box">
-                    You have not set up this type of address yet.
+                    <ul v-if="getShippingAddesses.length > 0">
+                      <li
+                        v-for="(address, index) in getShippingAddesses"
+                        :key="index"
+                      >
+                        {{ address.address }},<br />{{ address.postal_code }}
+                        {{ address.city }}, {{ address.state }}
+                        {{ address.country }}.<br />{{ address.phone }}
+                      </li>
+                    </ul>
+                    <p v-else>You have not set up this type of address yet.</p>
                   </div>
 
                   <a
@@ -355,9 +371,19 @@
                         placeholder="Editor"
                         id="acc-name"
                         name="acc-name"
-                        v-model="first_name"
-                        required
+                        v-model="userprofile.first_name"
+                        :class="
+                          !$v.userprofile.first_name.required
+                            ? 'error-input'
+                            : ''
+                        "
+                        :disabled="loading"
                       />
+                      <small
+                        v-if="!$v.userprofile.first_name.required"
+                        style="display: block; color: red; font-size: 12px"
+                        >Firstname is required</small
+                      >
                     </div>
                   </div>
 
@@ -372,9 +398,20 @@
                         class="form-control"
                         id="acc-lastname"
                         name="acc-lastname"
-                        v-model="last_name"
+                        v-model="userprofile.last_name"
+                        :class="
+                          !$v.userprofile.last_name.required
+                            ? 'error-input'
+                            : ''
+                        "
+                        :disabled="loading"
                         required
                       />
+                      <small
+                        v-if="!$v.userprofile.last_name.required"
+                        style="display: block; color: red; font-size: 12px"
+                        >Lastname is required</small
+                      >
                     </div>
                   </div>
                 </div>
@@ -389,10 +426,16 @@
                     class="form-control"
                     id="acc-text"
                     name="acc-text"
-                    v-model="phone"
+                    v-model="userprofile.phone"
+                    :class="!$v.userprofile.phone.required ? 'error-input' : ''"
+                    :disabled="loading"
                     placeholder="Phone Number"
-                    required
                   />
+                  <small
+                    v-if="!$v.userprofile.phone.required"
+                    style="display: block; color: red; font-size: 12px"
+                    >Phone number is required</small
+                  >
                 </div>
 
                 <div class="form-group mb-4">
@@ -405,11 +448,17 @@
                     class="form-control"
                     id="acc-email"
                     name="acc-email"
-                    v-model="email"
+                    v-model="userprofile.email"
+                    :class="!$v.userprofile.email.required ? 'error-input' : ''"
+                    :disabled="loading"
                     placeholder="editor@gmail.com"
                     readonly
-                    required
                   />
+                  <small
+                    v-if="!$v.userprofile.email.required"
+                    style="display: block; color: red; font-size: 12px"
+                    >Email address is required</small
+                  >
                 </div>
 
                 <div class="change-password">
@@ -424,8 +473,15 @@
                       class="form-control"
                       id="acc-password"
                       name="acc-password"
-                      v-model="old_password"
+                      :class="errors.old_password ? 'error-input' : ''"
+                      :disabled="loading"
+                      v-model="userprofile.old_password"
                     />
+                    <small
+                      v-if="errors.old_password"
+                      style="display: block; color: red; font-size: 12px"
+                      >{{ errors.old_password }}</small
+                    >
                   </div>
 
                   <div class="form-group">
@@ -437,8 +493,17 @@
                       class="form-control"
                       id="acc-new-password"
                       name="acc-new-password"
-                      v-model="password"
+                      :class="
+                        !$v.userprofile.password.minLength ? 'error-input' : ''
+                      "
+                      :disabled="loading"
+                      v-model="userprofile.password"
                     />
+                    <small
+                      v-if="!$v.userprofile.password.minLength"
+                      style="display: block; color: red; font-size: 12px"
+                      >Password must not less than 8 character</small
+                    >
                   </div>
 
                   <div class="form-group">
@@ -448,8 +513,15 @@
                       class="form-control"
                       id="acc-confirm-password"
                       name="acc-confirm-password"
-                      v-model="confirm_password"
+                      :class="errors.confirm_password ? 'error-input' : ''"
+                      :disabled="loading"
+                      v-model="userprofile.confirm_password"
                     />
+                    <small
+                      v-if="!$v.userprofile.confirm_password.sameAsPassword"
+                      style="display: block; color: red; font-size: 12px"
+                      >Password not match</small
+                    >
                   </div>
                 </div>
 
@@ -488,10 +560,17 @@
                   <select
                     name="orderby"
                     class="form-control"
-                    v-model="billing_country"
+                    v-model="billing.country"
+                    :class="!$v.billing.country.required ? 'error-input' : ''"
+                    :disabled="loading"
                   >
-                    <option value="Nigeria">Nigeria</option>
+                    <option value="Nigeria" selected="selected">Nigeria</option>
                   </select>
+                  <small
+                    v-if="!$v.billing.country.required"
+                    style="display: block; color: red; font-size: 12px"
+                    >Billing country is required</small
+                  >
                 </div>
 
                 <div class="form-group">
@@ -503,9 +582,15 @@
                     type="text"
                     class="form-control"
                     placeholder="House number and street name"
-                    v-model="billing_address"
-                    required
+                    v-model="billing.address"
+                    :class="!$v.billing.address.required ? 'error-input' : ''"
+                    :disabled="loading"
                   />
+                  <small
+                    v-if="!$v.billing.address.required"
+                    style="display: block; color: red; font-size: 12px"
+                    >Billing address is required</small
+                  >
                 </div>
 
                 <div class="form-group">
@@ -516,9 +601,15 @@
                   <input
                     type="text"
                     class="form-control"
-                    v-model="billing_city"
-                    required
+                    :class="!$v.billing.city.required ? 'error-input' : ''"
+                    :disabled="loading"
+                    v-model="billing.city"
                   />
+                  <small
+                    v-if="!$v.billing.city.required"
+                    style="display: block; color: red; font-size: 12px"
+                    >Billing city is required</small
+                  >
                 </div>
 
                 <div class="form-group">
@@ -529,9 +620,15 @@
                   <input
                     type="text"
                     class="form-control"
-                    v-model="billing_state"
-                    required
+                    v-model="billing.state"
+                    :class="!$v.billing.state.required ? 'error-input' : ''"
+                    :disabled="loading"
                   />
+                  <small
+                    v-if="!$v.billing.state.required"
+                    style="display: block; color: red; font-size: 12px"
+                    >Billing state is required</small
+                  >
                 </div>
 
                 <div class="form-footer mb-0">
@@ -571,10 +668,17 @@
                   <select
                     name="orderby"
                     class="form-control"
-                    v-model="shipping_country"
+                    :class="!$v.shipping.country.required ? 'error-input' : ''"
+                    :disabled="loading"
+                    v-model="shipping.country"
                   >
-                    <option value="Nigeri">Nigeria</option>
+                    <option value="Nigeria" selected="selected">Nigeria</option>
                   </select>
+                  <small
+                    v-if="!$v.shipping.country.required"
+                    style="display: block; color: red; font-size: 12px"
+                    >Shipping country is required</small
+                  >
                 </div>
 
                 <div class="form-group">
@@ -585,10 +689,16 @@
                   <input
                     type="text"
                     class="form-control"
-                    v-model="shipping_address"
+                    v-model="shipping.address"
+                    :class="!$v.shipping.address.required ? 'error-input' : ''"
+                    :disabled="loading"
                     placeholder="House number and street name"
-                    required
                   />
+                  <small
+                    v-if="!$v.shipping.address.required"
+                    style="display: block; color: red; font-size: 12px"
+                    >Shipping address is required</small
+                  >
                 </div>
 
                 <div class="form-group">
@@ -599,9 +709,15 @@
                   <input
                     type="text"
                     class="form-control"
-                    v-model="shipping_city"
-                    required
+                    :class="!$v.shipping.city.required ? 'error-input' : ''"
+                    :disabled="loading"
+                    v-model="shipping.city"
                   />
+                  <small
+                    v-if="!$v.shipping.city.required"
+                    style="display: block; color: red; font-size: 12px"
+                    >Shipping city is required</small
+                  >
                 </div>
 
                 <div class="form-group">
@@ -612,9 +728,17 @@
                   <input
                     type="text"
                     class="form-control"
-                    v-model="shipping_state"
-                    required
+                    :class="!$v.shipping.state.required ? 'error-input' : ''"
+                    :disabled="loading"
+                    v-model="shipping.state"
                   />
+                  <small
+                    v-if="
+                      !$v.shipping.state.required && $v.shipping.state.invalid
+                    "
+                    style="display: block; color: red; font-size: 12px"
+                    >Shipping state is required</small
+                  >
                 </div>
 
                 <div class="form-group">
@@ -625,9 +749,35 @@
                   <input
                     type="text"
                     class="form-control"
-                    v-model="shipping_postcode"
-                    required
+                    :class="
+                      !$v.shipping.postal_code.required ? 'error-input' : ''
+                    "
+                    :disabled="loading"
+                    v-model="shipping.postal_code"
                   />
+                  <small
+                    v-if="!$v.shipping.postal_code.required"
+                    style="display: block; color: red; font-size: 12px"
+                    >Shipping postal code is required</small
+                  >
+                </div>
+                <div class="form-group mb-3">
+                  <label>
+                    Phone
+                    <span class="required">*</span>
+                  </label>
+                  <input
+                    type="number"
+                    v-model="shipping.phone"
+                    :class="!$v.shipping.phone.required ? 'error-input' : ''"
+                    :disabled="loading"
+                    class="form-control"
+                  />
+                  <small
+                    v-if="!$v.shipping.phone.required"
+                    style="display: block; color: red; font-size: 12px"
+                    >Shipping phone number is required</small
+                  >
                 </div>
 
                 <div class="form-footer mb-0">
@@ -657,6 +807,7 @@ import Sticky from "vue-sticky-directive";
 import { mapGetters, mapActions } from "vuex";
 import * as auth from "../../services/auth";
 import * as userService from "../../services/user";
+import { required, sameAs, minLength } from "vuelidate/lib/validators";
 
 export default {
   name: "Account",
@@ -669,38 +820,77 @@ export default {
   },
   components: {
     PvTabs,
-    PreLoader
+    PreLoader,
   },
   computed: {
-    ...mapGetters("user", ["user"]),
+    ...mapGetters("user", ["user", "getShippingAddesses"]),
+  },
+  validations: {
+    userprofile: {
+      first_name: { required },
+      last_name: { required },
+      email: { required },
+      phone: { required },
+      password: {
+        minLength: minLength(8),
+      },
+      confirm_password: {
+        sameAsPassword: sameAs("password"),
+      },
+    },
+    billing: {
+      country: { required },
+      state: { required },
+      city: { required },
+      address: { required },
+    },
+    shipping: {
+      country: { required },
+      state: { required },
+      city: { required },
+      address: { required },
+      phone: { required },
+      postal_code: { required },
+    },
   },
   created: function () {
-    this.first_name = this.user.first_name;
-    this.last_name = this.user.last_name;
-    this.email = this.user.email;
-    this.phone = this.user.phone_number;
+    this.userprofile.first_name = this.user.first_name;
+    this.userprofile.last_name = this.user.last_name;
+    this.userprofile.email = this.user.email;
+    this.userprofile.phone = this.user.phone_number;
+    this.billing.city = this.user.city;
+    this.billing.address = this.user.address;
+    this.billing.state = this.user.state;
+    //this.billing.country = this.user.country;
   },
   data: function () {
     return {
       isSticky: false,
       loading: false,
-      first_name: "",
-      last_name: "",
-      email: "",
-      phone: "",
-      old_password: "",
-      password: "",
-      confirm_password: "",
-      shipping_address: "",
-      shipping_state: "",
-      shipping_country: "",
-      shipping_city: "",
-      shipping_postcode: "",
-      shipping_phone: "",
-      billing_address: "",
-      billing_state: "",
-      billing_city: "",
-      billing_country: "",
+      userprofile: {
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone: "",
+        old_password: "",
+        password: "",
+        confirm_password: "",
+      },
+      shipping: {
+        address: "",
+        state: "",
+        country: "Nigeria",
+        postal_code: "",
+        phone: "",
+        city: "",
+      },
+      billing: {
+        address: "",
+        state: "",
+        city: "",
+        country: "Nigeria",
+      },
+      errors: {},
     };
   },
   mounted: function () {
@@ -713,50 +903,98 @@ export default {
     window.removeEventListener("resize", this.resizeHandler);
   },
   methods: {
-    ...mapActions("user", ["userLogout"]),
+    ...mapActions("user", ["userLogin", "userLogout"]),
     ...mapActions("notification", ["addNotification"]),
     updateProfile: async function () {
+      let submit = document.getElementById("billing_submit");
+      this.$v.userprofile.$touch();
+      if (this.$v.userprofile.$invalid) {
+        return;
+      }
       try {
-        const response = await userService.update({
-          first_name: this.first_name,
-          last_name: this.last_name,
-          phone: this.phone,
-          email: this.email,
-          password: this.password,
-          old_password: this.old_password,
-          password: this.password,
-        });
+        const response = await userService.update(this.userprofile);
         console.log(response);
+        this.userLogin(response.data.data.user);
+        this.addNotification({
+          type: "success",
+          message: response.data.data.message,
+        });
+        submit.innerText = "Save Address";
+        this.loading = false;
+        this.$router.push("/");
       } catch (err) {
+        this.loading = false;
+        submit.innerText = "Save Address";
         console.log(err.response);
+        this.addNotification({
+          type: "success",
+          message: err.response.data.data.message,
+        });
       }
     },
     updateBillingAddress: async function () {
+      let submit = document.getElementById("billing_submit");
+      this.$v.billing.$touch();
+      if (this.$v.billing.$invalid) {
+        return;
+      }
       try {
-        const response = await userService.updateBilling({
-          address: billing_address,
-          state: this.billing_state,
-          country: this.billing_country,
-          city: this.billing_city,
-        });
+        this.loading = true;
+        submit.innerText = "Loading";
+        const response = await userService.updateBilling(this.billing);
         console.log(response);
+        this.userLogin(response.data.data.user);
+        this.addNotification({
+          type: "success",
+          message: response.data.data.message,
+        });
+        this.billing.address = "";
+        this.billing.city = "";
+        this.billing.state = "";
+        submit.innerText = "Save Address";
+        this.loading = false;
+        this.$router.push("/account");
       } catch (err) {
+        this.loading = false;
+        submit.innerText = "Save Address";
         console.log(err.response);
+        this.addNotification({
+          type: "success",
+          message: err.response.data.data.message,
+        });
       }
     },
-    createBillingAddress: async function () {
+    createShippingAddress: async function () {
+      let submit = document.getElementById("shipping_submit");
+      this.$v.shipping.$touch();
+      if (this.$v.shipping.$invalid) {
+        return;
+      }
       try {
-        const response = await userService.createShipping({
-          address: shipping_address,
-          state: shipping_state,
-          country: shipping_country,
-          city: shipping_city,
-          postal_code: shipping_postcode,
-          phone: shipping_phone,
-        });
+        this.loading = true;
+        submit.innerText = "Loading";
+        const response = await userService.createShipping(this.shipping);
         console.log(response);
+        this.userLogin(response.data.data.user);
+        this.addNotification({
+          type: "success",
+          message: response.data.data.message,
+        });
+        this.shipping.postal_code = "";
+        this.shipping.city = "";
+        this.shipping.state = "";
+        this.shipping.phone = "";
+        submit.innerText = "Save Address";
+        this.loading = false;
+        this.$router.push("/account");
       } catch (err) {
+        this.loading = false;
+        submit.innerText = "Save Address";
         console.log(err.response);
+        this.addNotification({
+          type: "success",
+          message: err.response.data.data.message,
+        });
       }
     },
     logout: async function () {
