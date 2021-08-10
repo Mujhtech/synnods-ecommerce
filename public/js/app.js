@@ -10123,12 +10123,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 });
                 submit.innerText = "Save Address";
                 this.loading = false;
-                this.$router.push("/");
-                _context.next = 22;
+                this.password = "";
+                this.old_password = "";
+                this.confirm_password = "";
+                this.$router.push("/account");
+                _context.next = 25;
                 break;
 
-              case 16:
-                _context.prev = 16;
+              case 19:
+                _context.prev = 19;
                 _context.t0 = _context["catch"](4);
                 this.loading = false;
                 submit.innerText = "Save Address";
@@ -10138,12 +10141,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   message: _context.t0.response.data.data.message
                 });
 
-              case 22:
+              case 25:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[4, 16]]);
+        }, _callee, this, [[4, 19]]);
       }));
 
       function updateProfile() {

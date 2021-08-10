@@ -921,7 +921,10 @@ export default {
         });
         submit.innerText = "Save Address";
         this.loading = false;
-        this.$router.push("/");
+        this.password = "";
+        this.old_password = "";
+        this.confirm_password = "";
+        this.$router.push("/account");
       } catch (err) {
         this.loading = false;
         submit.innerText = "Save Address";
