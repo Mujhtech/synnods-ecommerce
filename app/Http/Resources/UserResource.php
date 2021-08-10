@@ -24,7 +24,7 @@ class UserResource extends JsonResource
             'address' => $this->address,
             'city' => $this->city,
             'state' => $this->state,
-            'country' => $this->acct_no,
+            'country' => $this->country,
             'avatar' => $this->profile_photo_url,
             'role' => $this->role_id,
             'active' => ($this->active) ? true : false,

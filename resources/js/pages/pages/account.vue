@@ -260,7 +260,16 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <div v-if="getOrders.length > 0">
+                      <tr v-for="(order, index) in getOrders" :key="index">
+                        <td>#{{ order.order_number }}</td>
+                        <td>{{ order.order_date }}</td>
+                        <td>{{ order.order_status }}</td>
+                        <td>NGN{{ order.total_amount }}</td>
+                        <td>Cancel</td>
+                      </tr>
+                    </div>
+                    <tr v-else>
                       <td class="text-center p-0" colspan="5">
                         <p class="mb-5 mt-5">No Order has been made yet.</p>
                       </td>
@@ -427,6 +436,11 @@
                     v-if="!checkRequired($v.userprofile.phone)"
                     style="display: block; color: red; font-size: 12px"
                     >Phone number is required</small
+                  >
+                  <small
+                    v-if="!checkLength($v.userprofile.phone)"
+                    style="display: block; color: red; font-size: 12px"
+                    >Phone number must not be more than 11 digits</small
                   >
                 </div>
 
@@ -793,7 +807,12 @@ import Sticky from "vue-sticky-directive";
 import { mapGetters, mapActions } from "vuex";
 import * as auth from "../../services/auth";
 import * as userService from "../../services/user";
-import { required, sameAs, minLength } from "vuelidate/lib/validators";
+import {
+  required,
+  sameAs,
+  minLength,
+  maxLength,
+} from "vuelidate/lib/validators";
 
 export default {
   name: "Account",
@@ -809,7 +828,7 @@ export default {
     PreLoader,
   },
   computed: {
-    ...mapGetters("user", ["user", "getShippingAddesses"]),
+    ...mapGetters("user", ["user", "getShippingAddesses", "getOrders"]),
   },
   validations: {
     userprofile: {
@@ -838,7 +857,7 @@ export default {
       state: { required },
       city: { required },
       address: { required },
-      phone: { required },
+      phone: { required, maxLength: maxLength(11) },
       postal_code: { required },
     },
   },
@@ -850,7 +869,7 @@ export default {
     this.billing.city = auth.getUser().city;
     this.billing.address = auth.getUser().address;
     this.billing.state = auth.getUser().state;
-    this.billing.country = auth.getUser().country;
+    //this.billing.country = auth.getUser().country;
   },
   data: function () {
     return {
@@ -894,33 +913,45 @@ export default {
   methods: {
     ...mapActions("user", ["userLogin", "userLogout"]),
     ...mapActions("notification", ["addNotification"]),
-    status(validation){
+    status(validation) {
       return {
-      	error: validation.$error
-      }
+        error: validation.$error,
+      };
     },
-    checkRequired(validation){
-      if(!validation.$dirty && validation.$model == ""){
+    checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
         return true;
-      } else if(validation.$dirty && validation.$error && validation.$model == ""){
+      } else if (
+        validation.$dirty &&
+        validation.$error &&
+        validation.$model == ""
+      ) {
         return false;
       } else {
         return true;
       }
     },
-    checkLength(validation){
-      if(!validation.$dirty && validation.$model == ""){
+    checkLength(validation) {
+      if (!validation.$dirty && validation.$model == "") {
         return true;
-      } else if(validation.$dirty && validation.$error && !validation.minLength){
+      } else if (
+        validation.$dirty &&
+        validation.$error &&
+        (!validation.minLength || !validation.maxLength)
+      ) {
         return false;
       } else {
         return true;
       }
     },
-    checkSame(validation){
-      if(!validation.$dirty && validation.$model == ""){
+    checkSame(validation) {
+      if (!validation.$dirty && validation.$model == "") {
         return true;
-      } else if(validation.$dirty && validation.$error && !validation.sameAsPassword){
+      } else if (
+        validation.$dirty &&
+        validation.$error &&
+        !validation.sameAsPassword
+      ) {
         return false;
       } else {
         return true;
@@ -933,6 +964,7 @@ export default {
         return;
       }
       try {
+        this.loading = true;
         const response = await userService.update(this.userprofile);
         console.log(response);
         this.userLogin(response.data.data.user);
@@ -946,13 +978,13 @@ export default {
         this.password = "";
         this.old_password = "";
         this.confirm_password = "";
-        this.$router.push("/account");
+        this.$router.go();
       } catch (err) {
         this.loading = false;
         submit.innerText = "Save Address";
         console.log(err.response);
         this.addNotification({
-          type: "success",
+          type: "error",
           message: err.response.data.data.message,
         });
       }
@@ -979,13 +1011,13 @@ export default {
         this.billing.state = "";
         submit.innerText = "Save Address";
         this.loading = false;
-        this.$router.push("/account");
+        this.$router.go();
       } catch (err) {
         this.loading = false;
         submit.innerText = "Save Address";
         console.log(err.response);
         this.addNotification({
-          type: "success",
+          type: "error",
           message: err.response.data.data.message,
         });
       }
@@ -1013,13 +1045,13 @@ export default {
         this.shipping.phone = "";
         submit.innerText = "Save Address";
         this.loading = false;
-        this.$router.push("/account");
+        this.$router.go();
       } catch (err) {
         this.loading = false;
         submit.innerText = "Save Address";
         console.log(err.response);
         this.addNotification({
-          type: "success",
+          type: "error",
           message: err.response.data.data.message,
         });
       }
