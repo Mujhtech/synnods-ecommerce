@@ -8,7 +8,7 @@
 						class="logo"
 					>
 						<img
-							:src="'/assets/images/logo-white.png'"
+							:src="'/images/logo.png'"
 							width="101"
 							height="40"
 							alt="Porto Logo"
@@ -125,7 +125,7 @@ export default {
 		changeCurrency: function(cur){
 			console.log(localStorage.getItem('mod'))
 			this.updateCurrency(cur);
-			this.addNotification(`Currency changed to ${cur}`);
+			//this.addNotification(`Currency changed to ${cur}`);
 		},
 		openLoginModal: function () {
 			this.$modal.show(

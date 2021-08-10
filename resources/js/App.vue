@@ -169,6 +169,7 @@ export default {
         //if(!err.response) return;
         console.log(err.response);
         localStorage.removeItem("SYNECT");
+        localStorage.removeItem('SYNECUS');
         this.userLogout({});
       }
     },

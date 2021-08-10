@@ -18,14 +18,19 @@
                 type="email"
                 class="form-input form-wide"
                 id="login-email"
-                v-model="email"
+                v-model.trim="$v.user.email.$model"
                 :disabled="loading"
-                :class="errors.email ? 'error-input' : ''"
+                :class="status($v.user.email)"
               />
               <small
-                v-if="errors.email"
+                v-if="!checkRequired($v.user.email)"
                 style="display: block; color: red; font-size: 12px"
-                >{{ errors.email }}</small
+                >Email address is required</small
+              >
+              <small
+                v-if="!checkEmail($v.user.email)"
+                style="display: block; color: red; font-size: 12px"
+                >Email address is invalid</small
               >
               <label for="login-password">
                 Password
@@ -35,14 +40,14 @@
                 type="password"
                 class="form-input form-wide"
                 id="login-password"
-                v-model="password"
-                :class="errors.password ? 'error-input' : ''"
+                v-model.trim="$v.user.password.$model"
+                :class="status($v.user.password)"
                 :disabled="loading"
               />
               <small
-                v-if="errors.password"
+                v-if="!checkRequired($v.user.password)"
                 style="display: block; color: red; font-size: 12px"
-                >{{ errors.password }}</small
+                >Password is required</small
               >
 
               <div class="form-footer">
@@ -85,6 +90,7 @@
 import PreLoader from "../../components/common/PreLoader";
 import { mapActions } from "vuex";
 import * as auth from "../../services/auth";
+import { required, email } from "vuelidate/lib/validators";
 export default {
   name: "Login",
   metaInfo: {
@@ -94,21 +100,19 @@ export default {
   components: {
     PreLoader,
   },
-  watch: {
-    email(value) {
-      this.email = value;
-      this.validateEmail(value);
-    },
-    password(value) {
-      this.password = value;
-      this.validatePassword(value);
+  validations: {
+    user: {
+      email: { required, email },
+      password: { required },
     },
   },
   data() {
     return {
-      email: "",
-      password: "",
-      remember_me: false,
+      user: {
+        email: "",
+        password: "",
+        remember_me: false,
+      },
       errors: {},
       loading: false,
     };
@@ -116,55 +120,52 @@ export default {
   methods: {
     ...mapActions("user", ["userLogin"]),
     ...mapActions("notification", ["addNotification"]),
-    validateEmail: function (value) {
-      if (!value || value === "") {
-        this.errors.email = "Email address is required";
-        return false;
+    status(validation) {
+      return {
+        error: validation.$error,
+      };
+    },
+    checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
       } else if (
-        !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-          value
-        )
+        validation.$dirty &&
+        validation.$error &&
+        validation.$model == ""
       ) {
-        this.errors.email = "Invalid email address";
         return false;
       } else {
-        this.errors.email = "";
         return true;
       }
     },
-    validatePassword: function (value) {
-      if (!value || value === "") {
-        this.errors.password = "Password is required";
+    checkEmail(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && !validation.email) {
         return false;
       } else {
-        this.errors.password = "";
         return true;
       }
     },
     login: async function () {
-      if (!this.validateEmail(this.email)) {
+      this.$v.user.$touch();
+      if (this.$v.user.$invalid) {
         return;
       }
-      if (!this.validatePassword(this.password)) {
-        return;
-      }
+
       let submit = document.getElementById("submit");
       try {
         this.loading = true;
         submit.innerText = "Loading...";
-        const response = await auth.login({
-          password: this.password,
-          email: this.email,
-          remember_me: this.remember_me,
-        });
+        const response = await auth.login(this.user);
         this.loading = false;
         submit.innerText = "Login";
-
         if (response.status === 200) {
-          this.email = "";
-          this.password = "";
-          this.remember_me = false;
+          this.user.email = "";
+          this.user.password = "";
+          this.user.remember_me = false;
           auth.setToken(response.data.data.access_token);
+          auth.setUser(response.data.data.user);
           this.userLogin(response.data.data.user);
           this.addNotification({
             type: "success",
@@ -189,7 +190,7 @@ export default {
 </script>
 
 <style scoped>
-.error-input {
+.error {
   border-color: red !important;
 }
 </style>

@@ -18,14 +18,19 @@
                 type="text"
                 class="form-input form-wide"
                 id="email-code"
-                v-model="email_code"
+                v-model.trim="$v.user.email_code.$model"
                 :disabled="loading"
-                :class="errors.email_code ? 'error-input' : ''"
+                :class="status($v.user.email_code)"
               />
               <small
-                v-if="errors.email_code"
+                v-if="!checkRequired($v.user.email_code)"
                 style="display: block; color: red; font-size: 12px"
-                >{{ errors.email_code }}</small
+                >Email Verification Code is required</small
+              >
+              <small
+                v-if="!checkLength($v.user.email_code)"
+                style="display: block; color: red; font-size: 12px"
+                >Email Verification Code is invalid</small
               >
 
               <label for="sms-code">
@@ -36,14 +41,19 @@
                 type="text"
                 class="form-input form-wide"
                 id="sms-code"
-                v-model="sms_code"
+                v-model.trim="$v.user.sms_code.$model"
                 :disabled="loading"
-                :class="errors.sms_code ? 'error-input' : ''"
+                :class="status($v.user.sms_code)"
               />
               <small
-                v-if="errors.sms_code"
+                v-if="!checkRequired($v.user.sms_code)"
                 style="display: block; color: red; font-size: 12px"
-                >{{ errors.sms_code }}</small
+                >SMS Verification Code is required</small
+              >
+              <small
+                v-if="!checkLength($v.user.sms_code)"
+                style="display: block; color: red; font-size: 12px"
+                >SMS Verification Code is invalid</small
               >
               <div class="form-footer">
                 <a
@@ -75,6 +85,7 @@
 import PreLoader from "../../components/common/PreLoader";
 import * as auth from "../../services/auth";
 import { mapActions } from "vuex";
+import { required, minLength } from "vuelidate/lib/validators";
 
 export default {
   name: "Verify",
@@ -88,21 +99,19 @@ export default {
   mounted() {
     this.token = this.$route.params.token;
   },
-  watch: {
-    sms_code(value) {
-      this.sms_code = value;
-      this.validateSms(value);
-    },
-    email_code(value) {
-      this.email_code = value;
-      this.validateEmail(value);
+  validations: {
+    user: {
+      email_code: { required, minLength: minLength(6) },
+      sms_code: { required, minLength: minLength(6) },
     },
   },
   data() {
     return {
-      token: "",
-      email_code: "",
-      sms_code: "",
+      user: {
+        token: "",
+        email_code: "",
+        sms_code: "",
+      },
       errors: {},
       loading: false,
     };
@@ -110,10 +119,41 @@ export default {
   methods: {
     ...mapActions("notification", ["addNotification"]),
     ...mapActions("user", ["userLogin"]),
+    status(validation) {
+      return {
+        error: validation.$error,
+      };
+    },
+    checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (
+        validation.$dirty &&
+        validation.$error &&
+        validation.$model == ""
+      ) {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    checkLength(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (
+        validation.$dirty &&
+        validation.$error &&
+        !validation.minLength
+      ) {
+        return false;
+      } else {
+        return true;
+      }
+    },
     resend: async function () {
       try {
         this.loading = true;
-        const response = await auth.resend({ token: this.token });
+        const response = await auth.resend({ token: this.user.token });
         this.loading = false;
         this.addNotification({
           type: "success",
@@ -130,35 +170,9 @@ export default {
         });
       }
     },
-    validateSms: function (value) {
-      if (!value || value === "") {
-        this.errors.sms_code = "SMS confirmation code is required";
-        return false;
-      } else if (value.length != 6) {
-        this.errors.sms_code = "SMS confirmation code is invalid";
-        return false;
-      } else {
-        this.errors.sms_code = "";
-        return true;
-      }
-    },
-    validateEmail: function (value) {
-      if (!value || value === "") {
-        this.errors.email_code = "Email confirmation code is required";
-        return false;
-      } else if (value.length != 6) {
-        this.errors.email_code = "Email confirmation code is invalid";
-        return false;
-      } else {
-        this.errors.email_code = "";
-        return true;
-      }
-    },
     verify: async function () {
-      if (!this.validateEmail(this.email_code)) {
-        return;
-      }
-      if (!this.validateSms(this.sms_code)) {
+      this.$v.user.$touch();
+      if (this.$v.user.$invalid) {
         return;
       }
       this.errors = {};
@@ -166,16 +180,13 @@ export default {
       try {
         this.loading = true;
         submit.innerText = "Loading...";
-        const response = await auth.verify({
-          token: this.token,
-          sms_code: this.sms_code,
-          email_code: this.email_code,
-        });
+        const response = await auth.verify(this.user);
         this.loading = false;
-        (this.sms_code = ""),
-          (this.email_code = ""),
+        (this.user.sms_code = ""),
+          (this.user.email_code = ""),
           (submit.innerText = "Verify");
         auth.setToken(response.data.data.access_token);
+        auth.setUser(response.data.data.user);
         this.userLogin(response.data.data.user);
         this.addNotification({
           type: "success",
@@ -200,7 +211,7 @@ export default {
 </script>
 
 <style scoped>
-.error-input {
+.error {
   border-color: red !important;
 }
 </style>

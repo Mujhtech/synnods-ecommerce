@@ -33,9 +33,9 @@
       v-if="products.length > 0"
     ></pv-new-collection>
 
-    <pv-electronics-collection></pv-electronics-collection>
+    <!--<pv-electronics-collection></pv-electronics-collection>
 
-    <pv-mobile-collection></pv-mobile-collection>
+    <pv-mobile-collection></pv-mobile-collection>-->
 
     <pv-top-collection
       :products="products"

@@ -88,6 +88,15 @@ class UserController extends ApiController
     public function createShipping(Request $request){
 
         $user = $request->user();
+
+        if(DeliveryAddress::where('user_id', $user->id)->where('address', $request->address)->exists()) {
+
+            return $this->setStatusCode(500)->setStatusMessage('success')->respond([
+                'message' => 'Data already exist'
+            ]);
+            
+        }
+
         $shipping = new DeliveryAddress;
         $shipping->address = $request->address;
         $shipping->state = $request->state;

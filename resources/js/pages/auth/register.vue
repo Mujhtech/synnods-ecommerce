@@ -18,14 +18,14 @@
                 type="text"
                 class="form-input form-wide"
                 id="register-firstname"
-                v-model="first_name"
+                v-model.trim="$v.user.first_name.$model"
                 :disabled="loading"
-                :class="errors.first_name ? 'error-input' : ''"
+                :class="status($v.user.first_name)"
               />
               <small
-                v-if="errors.first_name"
+                v-if="!checkRequired($v.user.first_name)"
                 style="display: block; color: red; font-size: 12px"
-                >{{ errors.first_name }}</small
+                >First name is required</small
               >
               <label for="register-lastname">
                 Last Name
@@ -35,14 +35,14 @@
                 type="text"
                 class="form-input form-wide"
                 id="register-lastname"
-                v-model="last_name"
+                v-model="$v.user.last_name.$model"
                 :disabled="loading"
-                :class="errors.last_name ? 'error-input' : ''"
+                :class="status($v.user.last_name)"
               />
               <small
-                v-if="errors.last_name"
+                v-if="!checkRequired($v.user.last_name)"
                 style="display: block; color: red; font-size: 12px"
-                >{{ errors.last_name }}</small
+                >Last name is required</small
               >
               <label for="register-phone">
                 Phone Number
@@ -52,13 +52,25 @@
                 type="text"
                 class="form-input form-wide"
                 id="register-phone"
-                v-model="phone"
+                v-model="$v.user.phone.$model"
                 :disabled="loading"
-                :class="errors.phone ? 'error-input' : ''"
+                :class="status($v.user.phone)"
               />
-              <small v-if="errors.phone" style="display: block; color: red; font-size: 12px">{{
-                errors.phone
-              }}</small>
+              <small
+                v-if="!checkRequired($v.user.phone)"
+                style="display: block; color: red; font-size: 12px"
+                >Phone number is required</small
+              >
+              <small
+                v-if="!checkNumb($v.user.phone)"
+                style="display: block; color: red; font-size: 12px"
+                >Phone number must be numbers</small
+              >
+              <small
+                v-if="!checkLength($v.user.phone)"
+                style="display: block; color: red; font-size: 12px"
+                >Phone number must not be more than 11 digits</small
+              >
               <label for="register-email">
                 Email address
                 <span class="required">*</span>
@@ -67,13 +79,20 @@
                 type="email"
                 class="form-input form-wide"
                 id="register-email"
-                v-model="email"
+                v-model.trim="$v.user.email.$model"
                 :disabled="loading"
-                :class="errors.email ? 'error-input' : ''"
+                :class="status($v.user.email)"
               />
-              <small v-if="errors.email" style="display: block; color: red; font-size: 12px">{{
-                errors.email
-              }}</small>
+              <small
+                v-if="!checkRequired($v.user.email)"
+                style="display: block; color: red; font-size: 12px"
+                >Email address is required</small
+              >
+              <small
+                v-if="!checkEmail($v.user.email)"
+                style="display: block; color: red; font-size: 12px"
+                >Email address is invalid</small
+              >
               <label for="register-password">
                 Password
                 <span class="required">*</span>
@@ -82,14 +101,19 @@
                 type="password"
                 class="form-input form-wide"
                 id="register-password"
-                v-model="password"
+                v-model.trim="$v.user.password.$model"
                 :disabled="loading"
-                :class="errors.password ? 'error-input' : ''"
+                :class="status($v.user.password)"
               />
               <small
-                v-if="errors.password"
+                v-if="!checkRequired($v.user.password)"
                 style="display: block; color: red; font-size: 12px"
-                >{{ errors.password }}</small
+                >Password is required</small
+              >
+              <small
+                v-if="!checkLength($v.user.password)"
+                style="display: block; color: red; font-size: 12px"
+                >Password must be greate than 8 character</small
               >
               <div class="form-footer mb-2">
                 <button
@@ -112,6 +136,13 @@
 import PreLoader from "../../components/common/PreLoader";
 import * as auth from "../../services/auth";
 import { mapActions } from "vuex";
+import {
+  required,
+  minLength,
+  maxLength,
+  numeric,
+  email,
+} from "vuelidate/lib/validators";
 
 export default {
   name: "Register",
@@ -122,140 +153,101 @@ export default {
   components: {
     PreLoader,
   },
+  validations: {
+    user: {
+      first_name: { required },
+      last_name: { required },
+      phone: { required, numeric, maxLength: maxLength(11) },
+      password: { required, minLength: minLength(8) },
+      email: { required, email },
+    },
+  },
   data() {
     return {
-      email: "",
-      first_name: "",
-      last_name: "",
-      phone: "",
-      password: "",
+      user: {
+        email: "",
+        first_name: "",
+        last_name: "",
+        phone: "",
+        password: "",
+      },
       errors: {},
       loading: false,
     };
   },
-  watch: {
-    email(value) {
-      this.email = value;
-      this.validateEmail(value);
-    },
-    first_name(value) {
-      this.first_name = value;
-      this.validateFirstName(value);
-    },
-    last_name(value) {
-      this.last_name = value;
-      this.validateLastName(value);
-    },
-    phone(value) {
-      this.phone = value;
-      this.validatePhone(value);
-    },
-    password(value) {
-      this.password = value;
-      this.validatePassword(value);
-    },
-  },
   methods: {
     ...mapActions("notification", ["addNotification"]),
-    validateFirstName: function (value) {
-      if (!value || value == "") {
-        this.errors.first_name = "First name is required";
-        return false;
-      } else {
-        this.errors.first_name = '';
-        return true;
-      }
+    status(validation) {
+      return {
+        error: validation.$error,
+      };
     },
-    validateLastName: function (value) {
-      if (!value || value === "") {
-        this.errors.last_name = "Last name is required";
-        return false;
-      } else {
-        this.errors.last_name = '';
+    checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
         return true;
-      }
-    },
-    validateEmail: function (value) {
-      if (!value || value === "") {
-        this.errors.email = "Email address is required";
-        return false;
       } else if (
-        !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-          value
-        )
+        validation.$dirty &&
+        validation.$error &&
+        validation.$model == ""
       ) {
-        this.errors.email = "Invalid email address";
         return false;
       } else {
-        this.errors.email = '';
         return true;
       }
     },
-    validatePhone: function (value) {
-      if (!value || value === "") {
-        this.errors.phone = "Phone number is required";
-        return false;
-      } else if (value.length > 11) {
-        this.errors.phone = "Phone number must be more than 11 digits";
-        return false;
-      } else if (!/^-?\d+$/.test(value)) {
-        this.errors.phone = "Phone number must be a number";
+    checkLength(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (
+        validation.$dirty &&
+        validation.$error &&
+        (!validation.minLength || !validation.maxLength)
+      ) {
         return false;
       } else {
-        this.errors.phone = '';
         return true;
       }
     },
-    validatePassword: function (value) {
-      if (!value || value === "") {
-        this.errors.password = "Password is required";
+    checkNumb(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (
+        validation.$dirty &&
+        validation.$error &&
+        !validation.numeric
+      ) {
         return false;
-      } else if (value.length < 8) {
-        this.errors.password = "Password length must be atleast 8 characters";
-        return false;
-      } else if (!value.match(/[0-9]/g)) {
-        this.errors.password = "Password must contain number";
-        return false
       } else {
-        this.errors.password = '';
+        return true;
+      }
+    },
+    checkEmail(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && !validation.email) {
+        return false;
+      } else {
         return true;
       }
     },
     register: async function () {
-      if(!this.validateFirstName(this.first_name)){
-        return;
-      }
-      if(!this.validateLastName(this.last_name)){
-        return;
-      }
-      if(!this.validatePhone(this.phone)){
-        return;
-      }
-      if(!this.validateEmail(this.email)){
-        return;
-      }
-      if(!this.validatePassword(this.password)){
+      this.$v.user.$touch();
+      if (this.$v.user.$invalid) {
         return;
       }
       let submit = document.getElementById("submit");
       try {
         this.loading = true;
         submit.innerText = "Loading...";
-        const response = await auth.register({
-          email: this.email,
-          password: this.password,
-          first_name: this.first_name,
-          last_name: this.last_name,
-          phone: this.phone,
-        });
+        const response = await auth.register(this.user);
         this.loading = false;
         submit.innerText = "Register";
         console.log(response);
-        this.email = "";
-        this.password = "";
-        this.first_name = "";
-        this.last_name = "";
-        this.phone = "";
+        this.user.email = "";
+        this.user.password = "";
+        this.user.first_name = "";
+        this.user.last_name = "";
+        this.user.phone = "";
         this.addNotification({
           type: "success",
           message: response.data.data.message,
@@ -278,7 +270,7 @@ export default {
 </script>
 
 <style scoped>
-.error-input {
+.error {
   border-color: red !important;
 }
 </style>
