@@ -7231,7 +7231,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_common_PreLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/common/PreLoader */ "./resources/js/components/common/PreLoader.vue");
 /* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -7300,6 +7301,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+
 
 
 
@@ -7312,29 +7319,44 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   components: {
     PreLoader: _components_common_PreLoader__WEBPACK_IMPORTED_MODULE_1__.default
   },
-  watch: {
-    email: function email(value) {
-      this.email = value;
-      this.validateEmail(value);
+  validations: {
+    user: {
+      email: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.required,
+        email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.email
+      }
     }
   },
   data: function data() {
     return {
-      email: "",
+      user: {
+        email: ""
+      },
       errors: {},
       loading: false
     };
   },
-  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_3__.mapActions)("notification", ["addNotification"])), {}, {
-    validateEmail: function validateEmail(value) {
-      if (!value || value === "") {
-        this.errors.email = "Email address is required";
-        return false;
-      } else if (!/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(value)) {
-        this.errors.email = "Invalid email address";
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapActions)("notification", ["addNotification"])), {}, {
+    status: function status(validation) {
+      return {
+        error: validation.$error
+      };
+    },
+    checkRequired: function checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && validation.$model == "") {
         return false;
       } else {
-        this.errors.email = "";
+        return true;
+      }
+    },
+    checkEmail: function checkEmail(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && !validation.email) {
+        return false;
+      } else {
         return true;
       }
     },
@@ -7345,40 +7367,40 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                if (this.validateEmail(this.email)) {
-                  _context.next = 2;
+                this.$v.user.$touch();
+
+                if (!this.$v.user.$invalid) {
+                  _context.next = 3;
                   break;
                 }
 
                 return _context.abrupt("return");
 
-              case 2:
+              case 3:
                 submit = document.getElementById("submit");
-                _context.prev = 3;
+                _context.prev = 4;
                 this.errors = [];
                 this.loading = true;
                 submit.innerText = "Loading...";
                 console.log(this.user);
-                _context.next = 10;
-                return _services_auth__WEBPACK_IMPORTED_MODULE_2__.recover({
-                  email: this.email
-                });
+                _context.next = 11;
+                return _services_auth__WEBPACK_IMPORTED_MODULE_2__.recover(this.user);
 
-              case 10:
+              case 11:
                 response = _context.sent;
                 this.loading = false;
-                this.email = "", this.addNotification({
+                this.user.email = "", this.addNotification({
                   type: "success",
                   message: response.data.data.message
                 });
                 submit.innerText = "Reset Password";
                 console.log(response);
-                _context.next = 23;
+                _context.next = 24;
                 break;
 
-              case 17:
-                _context.prev = 17;
-                _context.t0 = _context["catch"](3);
+              case 18:
+                _context.prev = 18;
+                _context.t0 = _context["catch"](4);
                 this.loading = false;
                 submit.innerText = "Reset Password";
                 this.addNotification({
@@ -7387,12 +7409,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 });
                 console.log(_context.t0.response);
 
-              case 23:
+              case 24:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[3, 17]]);
+        }, _callee, this, [[4, 18]]);
       }));
 
       function recover() {
@@ -7420,8 +7442,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_common_PreLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/common/PreLoader */ "./resources/js/components/common/PreLoader.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -7517,6 +7540,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+
 
 
 
@@ -7529,44 +7558,49 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   components: {
     PreLoader: _components_common_PreLoader__WEBPACK_IMPORTED_MODULE_1__.default
   },
-  watch: {
-    email: function email(value) {
-      this.email = value;
-      this.validateEmail(value);
-    },
-    password: function password(value) {
-      this.password = value;
-      this.validatePassword(value);
+  validations: {
+    user: {
+      email: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.required,
+        email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.email
+      },
+      password: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.required
+      }
     }
   },
   data: function data() {
     return {
-      email: "",
-      password: "",
-      remember_me: false,
+      user: {
+        email: "",
+        password: "",
+        remember_me: false
+      },
       errors: {},
       loading: false
     };
   },
-  methods: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_3__.mapActions)("user", ["userLogin"])), (0,vuex__WEBPACK_IMPORTED_MODULE_3__.mapActions)("notification", ["addNotification"])), {}, {
-    validateEmail: function validateEmail(value) {
-      if (!value || value === "") {
-        this.errors.email = "Email address is required";
-        return false;
-      } else if (!/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(value)) {
-        this.errors.email = "Invalid email address";
+  methods: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapActions)("user", ["userLogin"])), (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapActions)("notification", ["addNotification"])), {}, {
+    status: function status(validation) {
+      return {
+        error: validation.$error
+      };
+    },
+    checkRequired: function checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && validation.$model == "") {
         return false;
       } else {
-        this.errors.email = "";
         return true;
       }
     },
-    validatePassword: function validatePassword(value) {
-      if (!value || value === "") {
-        this.errors.password = "Password is required";
+    checkEmail: function checkEmail(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && !validation.email) {
         return false;
       } else {
-        this.errors.password = "";
         return true;
       }
     },
@@ -7577,43 +7611,34 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                if (this.validateEmail(this.email)) {
-                  _context.next = 2;
+                this.$v.user.$touch();
+
+                if (!this.$v.user.$invalid) {
+                  _context.next = 3;
                   break;
                 }
 
                 return _context.abrupt("return");
 
-              case 2:
-                if (this.validatePassword(this.password)) {
-                  _context.next = 4;
-                  break;
-                }
-
-                return _context.abrupt("return");
-
-              case 4:
+              case 3:
                 submit = document.getElementById("submit");
-                _context.prev = 5;
+                _context.prev = 4;
                 this.loading = true;
                 submit.innerText = "Loading...";
-                _context.next = 10;
-                return _services_auth__WEBPACK_IMPORTED_MODULE_2__.login({
-                  password: this.password,
-                  email: this.email,
-                  remember_me: this.remember_me
-                });
+                _context.next = 9;
+                return _services_auth__WEBPACK_IMPORTED_MODULE_2__.login(this.user);
 
-              case 10:
+              case 9:
                 response = _context.sent;
                 this.loading = false;
                 submit.innerText = "Login";
 
                 if (response.status === 200) {
-                  this.email = "";
-                  this.password = "";
-                  this.remember_me = false;
+                  this.user.email = "";
+                  this.user.password = "";
+                  this.user.remember_me = false;
                   _services_auth__WEBPACK_IMPORTED_MODULE_2__.setToken(response.data.data.access_token);
+                  _services_auth__WEBPACK_IMPORTED_MODULE_2__.setUser(response.data.data.user);
                   this.userLogin(response.data.data.user);
                   this.addNotification({
                     type: "success",
@@ -7622,21 +7647,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   this.$router.push("/account");
                 }
 
-                _context.next = 23;
+                _context.next = 22;
                 break;
 
-              case 16:
-                _context.prev = 16;
-                _context.t0 = _context["catch"](5);
+              case 15:
+                _context.prev = 15;
+                _context.t0 = _context["catch"](4);
 
                 if (_context.t0.response) {
-                  _context.next = 20;
+                  _context.next = 19;
                   break;
                 }
 
                 return _context.abrupt("return");
 
-              case 20:
+              case 19:
                 this.loading = false;
                 submit.innerText = "Login";
                 this.addNotification({
@@ -7644,12 +7669,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   message: _context.t0.response.data.data ? _context.t0.response.data.data.message : "Something went wrong"
                 });
 
-              case 23:
+              case 22:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[5, 16]]);
+        }, _callee, this, [[4, 15]]);
       }));
 
       function login() {
@@ -7678,7 +7703,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_common_PreLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/common/PreLoader */ "./resources/js/components/common/PreLoader.vue");
 /* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -7801,6 +7827,31 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -7813,97 +7864,81 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   components: {
     PreLoader: _components_common_PreLoader__WEBPACK_IMPORTED_MODULE_1__.default
   },
+  validations: {
+    user: {
+      first_name: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.required
+      },
+      last_name: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.required
+      },
+      phone: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.required,
+        numeric: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.numeric,
+        maxLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.maxLength)(11)
+      },
+      password: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.required,
+        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.minLength)(8)
+      },
+      email: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.required,
+        email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.email
+      }
+    }
+  },
   data: function data() {
     return {
-      email: "",
-      first_name: "",
-      last_name: "",
-      phone: "",
-      password: "",
+      user: {
+        email: "",
+        first_name: "",
+        last_name: "",
+        phone: "",
+        password: ""
+      },
       errors: {},
       loading: false
     };
   },
-  watch: {
-    email: function email(value) {
-      this.email = value;
-      this.validateEmail(value);
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapActions)("notification", ["addNotification"])), {}, {
+    status: function status(validation) {
+      return {
+        error: validation.$error
+      };
     },
-    first_name: function first_name(value) {
-      this.first_name = value;
-      this.validateFirstName(value);
-    },
-    last_name: function last_name(value) {
-      this.last_name = value;
-      this.validateLastName(value);
-    },
-    phone: function phone(value) {
-      this.phone = value;
-      this.validatePhone(value);
-    },
-    password: function password(value) {
-      this.password = value;
-      this.validatePassword(value);
-    }
-  },
-  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_3__.mapActions)("notification", ["addNotification"])), {}, {
-    validateFirstName: function validateFirstName(value) {
-      if (!value || value == "") {
-        this.errors.first_name = "First name is required";
+    checkRequired: function checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && validation.$model == "") {
         return false;
       } else {
-        this.errors.first_name = '';
         return true;
       }
     },
-    validateLastName: function validateLastName(value) {
-      if (!value || value === "") {
-        this.errors.last_name = "Last name is required";
+    checkLength: function checkLength(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && (!validation.minLength || !validation.maxLength)) {
         return false;
       } else {
-        this.errors.last_name = '';
         return true;
       }
     },
-    validateEmail: function validateEmail(value) {
-      if (!value || value === "") {
-        this.errors.email = "Email address is required";
-        return false;
-      } else if (!/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(value)) {
-        this.errors.email = "Invalid email address";
+    checkNumb: function checkNumb(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && !validation.numeric) {
         return false;
       } else {
-        this.errors.email = '';
         return true;
       }
     },
-    validatePhone: function validatePhone(value) {
-      if (!value || value === "") {
-        this.errors.phone = "Phone number is required";
-        return false;
-      } else if (value.length > 11) {
-        this.errors.phone = "Phone number must be more than 11 digits";
-        return false;
-      } else if (!/^-?\d+$/.test(value)) {
-        this.errors.phone = "Phone number must be a number";
-        return false;
-      } else {
-        this.errors.phone = '';
+    checkEmail: function checkEmail(validation) {
+      if (!validation.$dirty && validation.$model == "") {
         return true;
-      }
-    },
-    validatePassword: function validatePassword(value) {
-      if (!value || value === "") {
-        this.errors.password = "Password is required";
-        return false;
-      } else if (value.length < 8) {
-        this.errors.password = "Password length must be atleast 8 characters";
-        return false;
-      } else if (!value.match(/[0-9]/g)) {
-        this.errors.password = "Password must contain number";
+      } else if (validation.$dirty && validation.$error && !validation.email) {
         return false;
       } else {
-        this.errors.password = '';
         return true;
       }
     },
@@ -7914,80 +7949,44 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                if (this.validateFirstName(this.first_name)) {
-                  _context.next = 2;
+                this.$v.user.$touch();
+
+                if (!this.$v.user.$invalid) {
+                  _context.next = 3;
                   break;
                 }
 
                 return _context.abrupt("return");
 
-              case 2:
-                if (this.validateLastName(this.last_name)) {
-                  _context.next = 4;
-                  break;
-                }
-
-                return _context.abrupt("return");
-
-              case 4:
-                if (this.validatePhone(this.phone)) {
-                  _context.next = 6;
-                  break;
-                }
-
-                return _context.abrupt("return");
-
-              case 6:
-                if (this.validateEmail(this.email)) {
-                  _context.next = 8;
-                  break;
-                }
-
-                return _context.abrupt("return");
-
-              case 8:
-                if (this.validatePassword(this.password)) {
-                  _context.next = 10;
-                  break;
-                }
-
-                return _context.abrupt("return");
-
-              case 10:
+              case 3:
                 submit = document.getElementById("submit");
-                _context.prev = 11;
+                _context.prev = 4;
                 this.loading = true;
                 submit.innerText = "Loading...";
-                _context.next = 16;
-                return _services_auth__WEBPACK_IMPORTED_MODULE_2__.register({
-                  email: this.email,
-                  password: this.password,
-                  first_name: this.first_name,
-                  last_name: this.last_name,
-                  phone: this.phone
-                });
+                _context.next = 9;
+                return _services_auth__WEBPACK_IMPORTED_MODULE_2__.register(this.user);
 
-              case 16:
+              case 9:
                 response = _context.sent;
                 this.loading = false;
                 submit.innerText = "Register";
                 console.log(response);
-                this.email = "";
-                this.password = "";
-                this.first_name = "";
-                this.last_name = "";
-                this.phone = "";
+                this.user.email = "";
+                this.user.password = "";
+                this.user.first_name = "";
+                this.user.last_name = "";
+                this.user.phone = "";
                 this.addNotification({
                   type: "success",
                   message: response.data.data.message
                 });
                 this.$router.push("/auth/verify/".concat(response.data.data.token));
-                _context.next = 35;
+                _context.next = 28;
                 break;
 
-              case 29:
-                _context.prev = 29;
-                _context.t0 = _context["catch"](11);
+              case 22:
+                _context.prev = 22;
+                _context.t0 = _context["catch"](4);
                 this.loading = false;
                 submit.innerText = "Register";
                 console.log(_context.t0.response);
@@ -7996,12 +7995,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   message: _context.t0.response.data.data ? _context.t0.response.data.data.message : "Something went wrong"
                 });
 
-              case 35:
+              case 28:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[11, 29]]);
+        }, _callee, this, [[4, 22]]);
       }));
 
       function register() {
@@ -8030,7 +8029,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_common_PreLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/common/PreLoader */ "./resources/js/components/common/PreLoader.vue");
 /* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -8115,6 +8115,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+
 
 
 
@@ -8127,47 +8133,60 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   components: {
     PreLoader: _components_common_PreLoader__WEBPACK_IMPORTED_MODULE_1__.default
   },
+  validations: {
+    user: {
+      password: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.required
+      },
+      confirmed: {
+        sameAsPassword: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.sameAs)("password")
+      }
+    }
+  },
   mounted: function mounted() {
     this.token = this.$route.params.token;
   },
-  watch: {
-    confirmed: function confirmed(value) {
-      this.confirmed = value;
-      this.validateCPassword(value);
-    },
-    password: function password(value) {
-      this.password = value;
-      this.validatePassword(value);
-    }
-  },
   data: function data() {
     return {
-      token: "",
-      password: "",
-      confirmed: "",
+      user: {
+        token: "",
+        password: "",
+        confirmed: ""
+      },
       errors: {},
       loading: false
     };
   },
-  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_3__.mapActions)("notification", ["addNotification"])), {}, {
-    validatePassword: function validatePassword(value) {
-      if (!value || value === "") {
-        this.errors.password = "Password is required";
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapActions)("notification", ["addNotification"])), {}, {
+    status: function status(validation) {
+      return {
+        error: validation.$error
+      };
+    },
+    checkRequired: function checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && validation.$model == "") {
         return false;
       } else {
-        this.errors.password = "";
         return true;
       }
     },
-    validateCPassword: function validateCPassword(value) {
-      if (!value || value === "") {
-        this.errors.confirmed = "Confirm Password is required";
-        return false;
-      } else if (this.password != value) {
-        this.errors.confirmed = "Password must be match";
+    checkLength: function checkLength(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && !validation.minLength) {
         return false;
       } else {
-        this.errors.confirmed = "";
+        return true;
+      }
+    },
+    checkSame: function checkSame(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && !validation.sameAsPassword) {
+        return false;
+      } else {
         return true;
       }
     },
@@ -8178,49 +8197,39 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                if (this.validatePassword(this.password)) {
-                  _context.next = 2;
+                this.$v.user.$touch();
+
+                if (!this.$v.user.$invalid) {
+                  _context.next = 3;
                   break;
                 }
 
                 return _context.abrupt("return");
 
-              case 2:
-                if (this.validateCPassword(this.confirmed)) {
-                  _context.next = 4;
-                  break;
-                }
-
-                return _context.abrupt("return");
-
-              case 4:
+              case 3:
                 this.errors = {};
                 submit = document.getElementById("submit");
-                _context.prev = 6;
+                _context.prev = 5;
                 this.loading = true;
                 submit.innerText = "Loading...";
-                _context.next = 11;
-                return _services_auth__WEBPACK_IMPORTED_MODULE_2__.reset({
-                  confirmed: this.confirmed,
-                  password: this.password,
-                  token: this.token
-                });
+                _context.next = 10;
+                return _services_auth__WEBPACK_IMPORTED_MODULE_2__.reset(this.user);
 
-              case 11:
+              case 10:
                 response = _context.sent;
                 this.loading = false;
-                this.password = "", this.confirmed = "", submit.innerText = "Reset Password";
+                this.user.password = "", this.user.confirmed = "", submit.innerText = "Reset Password";
                 this.addNotification({
                   type: "success",
                   message: "Password reset successfully"
                 });
                 console.log(response);
-                _context.next = 24;
+                _context.next = 23;
                 break;
 
-              case 18:
-                _context.prev = 18;
-                _context.t0 = _context["catch"](6);
+              case 17:
+                _context.prev = 17;
+                _context.t0 = _context["catch"](5);
                 this.loading = false;
                 submit.innerText = "Reset Password";
                 console.log(_context.t0.response);
@@ -8229,12 +8238,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   message: _context.t0.response.data.data ? _context.t0.response.data.data.message : "Something went wrong"
                 });
 
-              case 24:
+              case 23:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[6, 18]]);
+        }, _callee, this, [[5, 17]]);
       }));
 
       function reset() {
@@ -8263,7 +8272,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_common_PreLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/common/PreLoader */ "./resources/js/components/common/PreLoader.vue");
 /* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -8349,6 +8359,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -8364,26 +8385,53 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   mounted: function mounted() {
     this.token = this.$route.params.token;
   },
-  watch: {
-    sms_code: function sms_code(value) {
-      this.sms_code = value;
-      this.validateSms(value);
-    },
-    email_code: function email_code(value) {
-      this.email_code = value;
-      this.validateEmail(value);
+  validations: {
+    user: {
+      email_code: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.required,
+        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.minLength)(6)
+      },
+      sms_code: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.required,
+        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__.minLength)(6)
+      }
     }
   },
   data: function data() {
     return {
-      token: "",
-      email_code: "",
-      sms_code: "",
+      user: {
+        token: "",
+        email_code: "",
+        sms_code: ""
+      },
       errors: {},
       loading: false
     };
   },
-  methods: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_3__.mapActions)("notification", ["addNotification"])), (0,vuex__WEBPACK_IMPORTED_MODULE_3__.mapActions)("user", ["userLogin"])), {}, {
+  methods: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapActions)("notification", ["addNotification"])), (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapActions)("user", ["userLogin"])), {}, {
+    status: function status(validation) {
+      return {
+        error: validation.$error
+      };
+    },
+    checkRequired: function checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && validation.$model == "") {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    checkLength: function checkLength(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && !validation.minLength) {
+        return false;
+      } else {
+        return true;
+      }
+    },
     resend: function () {
       var _resend = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         var response;
@@ -8395,7 +8443,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 this.loading = true;
                 _context.next = 4;
                 return _services_auth__WEBPACK_IMPORTED_MODULE_2__.resend({
-                  token: this.token
+                  token: this.user.token
                 });
 
               case 4:
@@ -8432,30 +8480,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       return resend;
     }(),
-    validateSms: function validateSms(value) {
-      if (!value || value === "") {
-        this.errors.sms_code = "SMS confirmation code is required";
-        return false;
-      } else if (value.length != 6) {
-        this.errors.sms_code = "SMS confirmation code is invalid";
-        return false;
-      } else {
-        this.errors.sms_code = "";
-        return true;
-      }
-    },
-    validateEmail: function validateEmail(value) {
-      if (!value || value === "") {
-        this.errors.email_code = "Email confirmation code is required";
-        return false;
-      } else if (value.length != 6) {
-        this.errors.email_code = "Email confirmation code is invalid";
-        return false;
-      } else {
-        this.errors.email_code = "";
-        return true;
-      }
-    },
     verify: function () {
       var _verify = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
         var submit, response;
@@ -8463,39 +8487,30 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                if (this.validateEmail(this.email_code)) {
-                  _context2.next = 2;
+                this.$v.user.$touch();
+
+                if (!this.$v.user.$invalid) {
+                  _context2.next = 3;
                   break;
                 }
 
                 return _context2.abrupt("return");
 
-              case 2:
-                if (this.validateSms(this.sms_code)) {
-                  _context2.next = 4;
-                  break;
-                }
-
-                return _context2.abrupt("return");
-
-              case 4:
+              case 3:
                 this.errors = {};
                 submit = document.getElementById("submit");
-                _context2.prev = 6;
+                _context2.prev = 5;
                 this.loading = true;
                 submit.innerText = "Loading...";
-                _context2.next = 11;
-                return _services_auth__WEBPACK_IMPORTED_MODULE_2__.verify({
-                  token: this.token,
-                  sms_code: this.sms_code,
-                  email_code: this.email_code
-                });
+                _context2.next = 10;
+                return _services_auth__WEBPACK_IMPORTED_MODULE_2__.verify(this.user);
 
-              case 11:
+              case 10:
                 response = _context2.sent;
                 this.loading = false;
-                this.sms_code = "", this.email_code = "", submit.innerText = "Verify";
+                this.user.sms_code = "", this.user.email_code = "", submit.innerText = "Verify";
                 _services_auth__WEBPACK_IMPORTED_MODULE_2__.setToken(response.data.data.access_token);
+                _services_auth__WEBPACK_IMPORTED_MODULE_2__.setUser(response.data.data.user);
                 this.userLogin(response.data.data.user);
                 this.addNotification({
                   type: "success",
@@ -8508,7 +8523,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
               case 21:
                 _context2.prev = 21;
-                _context2.t0 = _context2["catch"](6);
+                _context2.t0 = _context2["catch"](5);
                 this.loading = false;
                 submit.innerText = "Verify";
                 console.log(_context2.t0.response);
@@ -8522,7 +8537,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[6, 21]]);
+        }, _callee2, this, [[5, 21]]);
       }));
 
       function verify() {
@@ -9951,20 +9966,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -9999,6 +10000,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       },
       phone: {
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
+      },
+      old_password: {
+        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.minLength)(8)
       },
       password: {
         minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.minLength)(8)
@@ -10043,13 +10047,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   },
   created: function created() {
-    this.userprofile.first_name = this.user.first_name;
-    this.userprofile.last_name = this.user.last_name;
-    this.userprofile.email = this.user.email;
-    this.userprofile.phone = this.user.phone_number;
-    this.billing.city = this.user.city;
-    this.billing.address = this.user.address;
-    this.billing.state = this.user.state; //this.billing.country = this.user.country;
+    this.userprofile.first_name = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().first_name;
+    this.userprofile.last_name = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().last_name;
+    this.userprofile.email = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().email;
+    this.userprofile.phone = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().phone_number;
+    this.billing.city = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().city;
+    this.billing.address = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().address;
+    this.billing.state = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().state;
+    this.billing.country = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().country;
   },
   data: function data() {
     return {
@@ -10091,6 +10096,38 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     window.removeEventListener("resize", this.resizeHandler);
   },
   methods: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapActions)("user", ["userLogin", "userLogout"])), (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapActions)("notification", ["addNotification"])), {}, {
+    status: function status(validation) {
+      return {
+        error: validation.$error
+      };
+    },
+    checkRequired: function checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && validation.$model == "") {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    checkLength: function checkLength(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && !validation.minLength) {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    checkSame: function checkSame(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && !validation.sameAsPassword) {
+        return false;
+      } else {
+        return true;
+      }
+    },
     updateProfile: function () {
       var _updateProfile = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         var submit, response;
@@ -10098,7 +10135,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                submit = document.getElementById("billing_submit");
+                submit = document.getElementById("update_submit");
                 this.$v.userprofile.$touch();
 
                 if (!this.$v.userprofile.$invalid) {
@@ -10117,6 +10154,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 response = _context.sent;
                 console.log(response);
                 this.userLogin(response.data.data.user);
+                _services_auth__WEBPACK_IMPORTED_MODULE_4__.setUser(response.data.data.user);
                 this.addNotification({
                   type: "success",
                   message: response.data.data.message
@@ -10127,11 +10165,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 this.old_password = "";
                 this.confirm_password = "";
                 this.$router.push("/account");
-                _context.next = 25;
+                _context.next = 26;
                 break;
 
-              case 19:
-                _context.prev = 19;
+              case 20:
+                _context.prev = 20;
                 _context.t0 = _context["catch"](4);
                 this.loading = false;
                 submit.innerText = "Save Address";
@@ -10141,12 +10179,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   message: _context.t0.response.data.data.message
                 });
 
-              case 25:
+              case 26:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[4, 19]]);
+        }, _callee, this, [[4, 20]]);
       }));
 
       function updateProfile() {
@@ -10183,6 +10221,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 response = _context2.sent;
                 console.log(response);
                 this.userLogin(response.data.data.user);
+                _services_auth__WEBPACK_IMPORTED_MODULE_4__.setUser(response.data.data.user);
                 this.addNotification({
                   type: "success",
                   message: response.data.data.message
@@ -10193,11 +10232,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 submit.innerText = "Save Address";
                 this.loading = false;
                 this.$router.push("/account");
-                _context2.next = 27;
+                _context2.next = 28;
                 break;
 
-              case 21:
-                _context2.prev = 21;
+              case 22:
+                _context2.prev = 22;
                 _context2.t0 = _context2["catch"](4);
                 this.loading = false;
                 submit.innerText = "Save Address";
@@ -10207,12 +10246,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   message: _context2.t0.response.data.data.message
                 });
 
-              case 27:
+              case 28:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[4, 21]]);
+        }, _callee2, this, [[4, 22]]);
       }));
 
       function updateBillingAddress() {
@@ -10249,6 +10288,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 response = _context3.sent;
                 console.log(response);
                 this.userLogin(response.data.data.user);
+                _services_auth__WEBPACK_IMPORTED_MODULE_4__.setUser(response.data.data.user);
                 this.addNotification({
                   type: "success",
                   message: response.data.data.message
@@ -10260,11 +10300,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 submit.innerText = "Save Address";
                 this.loading = false;
                 this.$router.push("/account");
-                _context3.next = 28;
+                _context3.next = 29;
                 break;
 
-              case 22:
-                _context3.prev = 22;
+              case 23:
+                _context3.prev = 23;
                 _context3.t0 = _context3["catch"](4);
                 this.loading = false;
                 submit.innerText = "Save Address";
@@ -10274,12 +10314,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   message: _context3.t0.response.data.data.message
                 });
 
-              case 28:
+              case 29:
               case "end":
                 return _context3.stop();
             }
           }
-        }, _callee3, this, [[4, 22]]);
+        }, _callee3, this, [[4, 23]]);
       }));
 
       function createShippingAddress() {
@@ -13744,9 +13784,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "resend": () => (/* binding */ resend),
 /* harmony export */   "login": () => (/* binding */ login),
 /* harmony export */   "setToken": () => (/* binding */ setToken),
+/* harmony export */   "setUser": () => (/* binding */ setUser),
 /* harmony export */   "isLoggedIn": () => (/* binding */ isLoggedIn),
 /* harmony export */   "logout": () => (/* binding */ logout),
 /* harmony export */   "getAccessToken": () => (/* binding */ getAccessToken),
+/* harmony export */   "getUser": () => (/* binding */ getUser),
 /* harmony export */   "getProfile": () => (/* binding */ getProfile)
 /* harmony export */ });
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../api */ "./resources/js/api/index.js");
@@ -13778,6 +13820,12 @@ function setToken(token) {
   }), 'laravellaravelvuevuespaspa');
   localStorage.setItem('SYNECT', ciphertext);
 }
+function setUser(user) {
+  var ciphertext = CryptoJS.AES.encrypt(JSON.stringify({
+    user: user
+  }), 'laravellaravelvuevuespaspa');
+  localStorage.setItem('SYNECUS', ciphertext);
+}
 function isLoggedIn() {
   var token = localStorage.getItem('SYNECT');
   return token != null;
@@ -13785,6 +13833,7 @@ function isLoggedIn() {
 function logout() {
   (0,_api__WEBPACK_IMPORTED_MODULE_0__.http)().get('/auth/logout');
   localStorage.removeItem('SYNECT');
+  localStorage.removeItem('SYNECUS');
 }
 function getAccessToken() {
   var token = localStorage.getItem('SYNECT');
@@ -13796,6 +13845,17 @@ function getAccessToken() {
   var bytes = CryptoJS.AES.decrypt(token.toString(), 'laravellaravelvuevuespaspa');
   var plaintext = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
   return plaintext.token;
+}
+function getUser() {
+  var user = localStorage.getItem('SYNECUS');
+
+  if (!user) {
+    return null;
+  }
+
+  var bytes = CryptoJS.AES.decrypt(user.toString(), 'laravellaravelvuevuespaspa');
+  var plaintext = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+  return plaintext.user;
 }
 function getProfile() {
   return (0,_api__WEBPACK_IMPORTED_MODULE_0__.http)().get('/auth/profile');
@@ -22070,7 +22130,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.error-input[data-v-53fa0187] {\r\n  border-color: red !important;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.error[data-v-53fa0187] {\r\n  border-color: red !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22094,7 +22154,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.error-input[data-v-672bc96b] {\r\n  border-color: red !important;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.error[data-v-672bc96b] {\r\n  border-color: red !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22118,7 +22178,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.error-input[data-v-425558de] {\r\n  border-color: red !important;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.error[data-v-425558de] {\r\n  border-color: red !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22142,7 +22202,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.error-input[data-v-46469451] {\r\n  border-color: red !important;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.error[data-v-46469451] {\r\n  border-color: red !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22166,7 +22226,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.error-input[data-v-a8f46032] {\r\n  border-color: red !important;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.error[data-v-a8f46032] {\r\n  border-color: red !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22190,7 +22250,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.error-input[data-v-217bdb49] {\r\n  border-color: red !important;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.error[data-v-217bdb49] {\r\n  border-color: red !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -69763,30 +69823,38 @@ var render = function() {
                       directives: [
                         {
                           name: "model",
-                          rawName: "v-model",
-                          value: _vm.email,
-                          expression: "email"
+                          rawName: "v-model.trim",
+                          value: _vm.$v.user.email.$model,
+                          expression: "$v.user.email.$model",
+                          modifiers: { trim: true }
                         }
                       ],
                       staticClass: "form-input",
-                      class: _vm.errors.email ? "error-input" : "",
+                      class: _vm.status(_vm.$v.user.email),
                       attrs: {
                         type: "email",
                         id: "reset-email",
                         disabled: _vm.loading
                       },
-                      domProps: { value: _vm.email },
+                      domProps: { value: _vm.$v.user.email.$model },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.email = $event.target.value
+                          _vm.$set(
+                            _vm.$v.user.email,
+                            "$model",
+                            $event.target.value.trim()
+                          )
+                        },
+                        blur: function($event) {
+                          return _vm.$forceUpdate()
                         }
                       }
                     }),
                     _vm._v(" "),
-                    _vm.errors.email
+                    !_vm.checkRequired(_vm.$v.user.email)
                       ? _c(
                           "small",
                           {
@@ -69796,7 +69864,21 @@ var render = function() {
                               "font-size": "12px"
                             }
                           },
-                          [_vm._v(_vm._s(_vm.errors.email))]
+                          [_vm._v("Email address is required")]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    !_vm.checkEmail(_vm.$v.user.email)
+                      ? _c(
+                          "small",
+                          {
+                            staticStyle: {
+                              display: "block",
+                              color: "red",
+                              "font-size": "12px"
+                            }
+                          },
+                          [_vm._v("Email address is invalid")]
                         )
                       : _vm._e()
                   ]),
@@ -69888,30 +69970,38 @@ var render = function() {
                     directives: [
                       {
                         name: "model",
-                        rawName: "v-model",
-                        value: _vm.email,
-                        expression: "email"
+                        rawName: "v-model.trim",
+                        value: _vm.$v.user.email.$model,
+                        expression: "$v.user.email.$model",
+                        modifiers: { trim: true }
                       }
                     ],
                     staticClass: "form-input form-wide",
-                    class: _vm.errors.email ? "error-input" : "",
+                    class: _vm.status(_vm.$v.user.email),
                     attrs: {
                       type: "email",
                       id: "login-email",
                       disabled: _vm.loading
                     },
-                    domProps: { value: _vm.email },
+                    domProps: { value: _vm.$v.user.email.$model },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.email = $event.target.value
+                        _vm.$set(
+                          _vm.$v.user.email,
+                          "$model",
+                          $event.target.value.trim()
+                        )
+                      },
+                      blur: function($event) {
+                        return _vm.$forceUpdate()
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.email
+                  !_vm.checkRequired(_vm.$v.user.email)
                     ? _c(
                         "small",
                         {
@@ -69921,7 +70011,21 @@ var render = function() {
                             "font-size": "12px"
                           }
                         },
-                        [_vm._v(_vm._s(_vm.errors.email))]
+                        [_vm._v("Email address is required")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !_vm.checkEmail(_vm.$v.user.email)
+                    ? _c(
+                        "small",
+                        {
+                          staticStyle: {
+                            display: "block",
+                            color: "red",
+                            "font-size": "12px"
+                          }
+                        },
+                        [_vm._v("Email address is invalid")]
                       )
                     : _vm._e(),
                   _vm._v(" "),
@@ -69931,30 +70035,38 @@ var render = function() {
                     directives: [
                       {
                         name: "model",
-                        rawName: "v-model",
-                        value: _vm.password,
-                        expression: "password"
+                        rawName: "v-model.trim",
+                        value: _vm.$v.user.password.$model,
+                        expression: "$v.user.password.$model",
+                        modifiers: { trim: true }
                       }
                     ],
                     staticClass: "form-input form-wide",
-                    class: _vm.errors.password ? "error-input" : "",
+                    class: _vm.status(_vm.$v.user.password),
                     attrs: {
                       type: "password",
                       id: "login-password",
                       disabled: _vm.loading
                     },
-                    domProps: { value: _vm.password },
+                    domProps: { value: _vm.$v.user.password.$model },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.password = $event.target.value
+                        _vm.$set(
+                          _vm.$v.user.password,
+                          "$model",
+                          $event.target.value.trim()
+                        )
+                      },
+                      blur: function($event) {
+                        return _vm.$forceUpdate()
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.password
+                  !_vm.checkRequired(_vm.$v.user.password)
                     ? _c(
                         "small",
                         {
@@ -69964,7 +70076,7 @@ var render = function() {
                             "font-size": "12px"
                           }
                         },
-                        [_vm._v(_vm._s(_vm.errors.password))]
+                        [_vm._v("Password is required")]
                       )
                     : _vm._e(),
                   _vm._v(" "),
@@ -70150,30 +70262,38 @@ var render = function() {
                     directives: [
                       {
                         name: "model",
-                        rawName: "v-model",
-                        value: _vm.first_name,
-                        expression: "first_name"
+                        rawName: "v-model.trim",
+                        value: _vm.$v.user.first_name.$model,
+                        expression: "$v.user.first_name.$model",
+                        modifiers: { trim: true }
                       }
                     ],
                     staticClass: "form-input form-wide",
-                    class: _vm.errors.first_name ? "error-input" : "",
+                    class: _vm.status(_vm.$v.user.first_name),
                     attrs: {
                       type: "text",
                       id: "register-firstname",
                       disabled: _vm.loading
                     },
-                    domProps: { value: _vm.first_name },
+                    domProps: { value: _vm.$v.user.first_name.$model },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.first_name = $event.target.value
+                        _vm.$set(
+                          _vm.$v.user.first_name,
+                          "$model",
+                          $event.target.value.trim()
+                        )
+                      },
+                      blur: function($event) {
+                        return _vm.$forceUpdate()
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.first_name
+                  !_vm.checkRequired(_vm.$v.user.first_name)
                     ? _c(
                         "small",
                         {
@@ -70183,7 +70303,7 @@ var render = function() {
                             "font-size": "12px"
                           }
                         },
-                        [_vm._v(_vm._s(_vm.errors.first_name))]
+                        [_vm._v("First name is required")]
                       )
                     : _vm._e(),
                   _vm._v(" "),
@@ -70194,29 +70314,33 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.last_name,
-                        expression: "last_name"
+                        value: _vm.$v.user.last_name.$model,
+                        expression: "$v.user.last_name.$model"
                       }
                     ],
                     staticClass: "form-input form-wide",
-                    class: _vm.errors.last_name ? "error-input" : "",
+                    class: _vm.status(_vm.$v.user.last_name),
                     attrs: {
                       type: "text",
                       id: "register-lastname",
                       disabled: _vm.loading
                     },
-                    domProps: { value: _vm.last_name },
+                    domProps: { value: _vm.$v.user.last_name.$model },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.last_name = $event.target.value
+                        _vm.$set(
+                          _vm.$v.user.last_name,
+                          "$model",
+                          $event.target.value
+                        )
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.last_name
+                  !_vm.checkRequired(_vm.$v.user.last_name)
                     ? _c(
                         "small",
                         {
@@ -70226,7 +70350,7 @@ var render = function() {
                             "font-size": "12px"
                           }
                         },
-                        [_vm._v(_vm._s(_vm.errors.last_name))]
+                        [_vm._v("Last name is required")]
                       )
                     : _vm._e(),
                   _vm._v(" "),
@@ -70237,29 +70361,33 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.phone,
-                        expression: "phone"
+                        value: _vm.$v.user.phone.$model,
+                        expression: "$v.user.phone.$model"
                       }
                     ],
                     staticClass: "form-input form-wide",
-                    class: _vm.errors.phone ? "error-input" : "",
+                    class: _vm.status(_vm.$v.user.phone),
                     attrs: {
                       type: "text",
                       id: "register-phone",
                       disabled: _vm.loading
                     },
-                    domProps: { value: _vm.phone },
+                    domProps: { value: _vm.$v.user.phone.$model },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.phone = $event.target.value
+                        _vm.$set(
+                          _vm.$v.user.phone,
+                          "$model",
+                          $event.target.value
+                        )
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.phone
+                  !_vm.checkRequired(_vm.$v.user.phone)
                     ? _c(
                         "small",
                         {
@@ -70269,7 +70397,35 @@ var render = function() {
                             "font-size": "12px"
                           }
                         },
-                        [_vm._v(_vm._s(_vm.errors.phone))]
+                        [_vm._v("Phone number is required")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !_vm.checkNumb(_vm.$v.user.phone)
+                    ? _c(
+                        "small",
+                        {
+                          staticStyle: {
+                            display: "block",
+                            color: "red",
+                            "font-size": "12px"
+                          }
+                        },
+                        [_vm._v("Phone number must be numbers")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !_vm.checkLength(_vm.$v.user.phone)
+                    ? _c(
+                        "small",
+                        {
+                          staticStyle: {
+                            display: "block",
+                            color: "red",
+                            "font-size": "12px"
+                          }
+                        },
+                        [_vm._v("Phone number must not be more than 11 digits")]
                       )
                     : _vm._e(),
                   _vm._v(" "),
@@ -70279,30 +70435,38 @@ var render = function() {
                     directives: [
                       {
                         name: "model",
-                        rawName: "v-model",
-                        value: _vm.email,
-                        expression: "email"
+                        rawName: "v-model.trim",
+                        value: _vm.$v.user.email.$model,
+                        expression: "$v.user.email.$model",
+                        modifiers: { trim: true }
                       }
                     ],
                     staticClass: "form-input form-wide",
-                    class: _vm.errors.email ? "error-input" : "",
+                    class: _vm.status(_vm.$v.user.email),
                     attrs: {
                       type: "email",
                       id: "register-email",
                       disabled: _vm.loading
                     },
-                    domProps: { value: _vm.email },
+                    domProps: { value: _vm.$v.user.email.$model },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.email = $event.target.value
+                        _vm.$set(
+                          _vm.$v.user.email,
+                          "$model",
+                          $event.target.value.trim()
+                        )
+                      },
+                      blur: function($event) {
+                        return _vm.$forceUpdate()
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.email
+                  !_vm.checkRequired(_vm.$v.user.email)
                     ? _c(
                         "small",
                         {
@@ -70312,7 +70476,21 @@ var render = function() {
                             "font-size": "12px"
                           }
                         },
-                        [_vm._v(_vm._s(_vm.errors.email))]
+                        [_vm._v("Email address is required")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !_vm.checkEmail(_vm.$v.user.email)
+                    ? _c(
+                        "small",
+                        {
+                          staticStyle: {
+                            display: "block",
+                            color: "red",
+                            "font-size": "12px"
+                          }
+                        },
+                        [_vm._v("Email address is invalid")]
                       )
                     : _vm._e(),
                   _vm._v(" "),
@@ -70322,30 +70500,38 @@ var render = function() {
                     directives: [
                       {
                         name: "model",
-                        rawName: "v-model",
-                        value: _vm.password,
-                        expression: "password"
+                        rawName: "v-model.trim",
+                        value: _vm.$v.user.password.$model,
+                        expression: "$v.user.password.$model",
+                        modifiers: { trim: true }
                       }
                     ],
                     staticClass: "form-input form-wide",
-                    class: _vm.errors.password ? "error-input" : "",
+                    class: _vm.status(_vm.$v.user.password),
                     attrs: {
                       type: "password",
                       id: "register-password",
                       disabled: _vm.loading
                     },
-                    domProps: { value: _vm.password },
+                    domProps: { value: _vm.$v.user.password.$model },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.password = $event.target.value
+                        _vm.$set(
+                          _vm.$v.user.password,
+                          "$model",
+                          $event.target.value.trim()
+                        )
+                      },
+                      blur: function($event) {
+                        return _vm.$forceUpdate()
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.password
+                  !_vm.checkRequired(_vm.$v.user.password)
                     ? _c(
                         "small",
                         {
@@ -70355,7 +70541,21 @@ var render = function() {
                             "font-size": "12px"
                           }
                         },
-                        [_vm._v(_vm._s(_vm.errors.password))]
+                        [_vm._v("Password is required")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !_vm.checkLength(_vm.$v.user.password)
+                    ? _c(
+                        "small",
+                        {
+                          staticStyle: {
+                            display: "block",
+                            color: "red",
+                            "font-size": "12px"
+                          }
+                        },
+                        [_vm._v("Password must be greate than 8 character")]
                       )
                     : _vm._e(),
                   _vm._v(" "),
@@ -70499,31 +70699,39 @@ var render = function() {
                       directives: [
                         {
                           name: "model",
-                          rawName: "v-model",
-                          value: _vm.password,
-                          expression: "password"
+                          rawName: "v-model.trim",
+                          value: _vm.$v.user.password.$model,
+                          expression: "$v.user.password.$model",
+                          modifiers: { trim: true }
                         }
                       ],
                       staticClass: "form-control",
-                      class: _vm.errors.password ? "error-input" : "",
+                      class: _vm.status(_vm.$v.user.password),
                       attrs: {
                         type: "password",
                         id: "reset-password",
                         name: "reset-password",
                         disabled: _vm.loading
                       },
-                      domProps: { value: _vm.password },
+                      domProps: { value: _vm.$v.user.password.$model },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.password = $event.target.value
+                          _vm.$set(
+                            _vm.$v.user.password,
+                            "$model",
+                            $event.target.value.trim()
+                          )
+                        },
+                        blur: function($event) {
+                          return _vm.$forceUpdate()
                         }
                       }
                     }),
                     _vm._v(" "),
-                    _vm.errors.password
+                    !_vm.checkRequired(_vm.$v.user.password)
                       ? _c(
                           "small",
                           {
@@ -70533,7 +70741,21 @@ var render = function() {
                               "font-size": "12px"
                             }
                           },
-                          [_vm._v(_vm._s(_vm.errors.password))]
+                          [_vm._v("Password is required")]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    !_vm.checkLength(_vm.$v.user.password)
+                      ? _c(
+                          "small",
+                          {
+                            staticStyle: {
+                              display: "block",
+                              color: "red",
+                              "font-size": "12px"
+                            }
+                          },
+                          [_vm._v("Password must be greate than 8 character")]
                         )
                       : _vm._e()
                   ]),
@@ -70552,31 +70774,39 @@ var render = function() {
                       directives: [
                         {
                           name: "model",
-                          rawName: "v-model",
-                          value: _vm.confirmed,
-                          expression: "confirmed"
+                          rawName: "v-model.trim",
+                          value: _vm.$v.user.confirmed.$model,
+                          expression: "$v.user.confirmed.$model",
+                          modifiers: { trim: true }
                         }
                       ],
                       staticClass: "form-control",
-                      class: _vm.errors.confirmed ? "error-input" : "",
+                      class: _vm.status(_vm.$v.user.confirmed),
                       attrs: {
                         type: "password",
                         id: "reset-cpassword",
                         name: "reset-cpassword",
                         disabled: _vm.loading
                       },
-                      domProps: { value: _vm.confirmed },
+                      domProps: { value: _vm.$v.user.confirmed.$model },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.confirmed = $event.target.value
+                          _vm.$set(
+                            _vm.$v.user.confirmed,
+                            "$model",
+                            $event.target.value.trim()
+                          )
+                        },
+                        blur: function($event) {
+                          return _vm.$forceUpdate()
                         }
                       }
                     }),
                     _vm._v(" "),
-                    _vm.errors.confirmed
+                    !_vm.checkSame(_vm.$v.user.confirmed)
                       ? _c(
                           "small",
                           {
@@ -70586,7 +70816,7 @@ var render = function() {
                               "font-size": "12px"
                             }
                           },
-                          [_vm._v(_vm._s(_vm.errors.confirmed))]
+                          [_vm._v("Password not match")]
                         )
                       : _vm._e()
                   ]),
@@ -70678,30 +70908,38 @@ var render = function() {
                     directives: [
                       {
                         name: "model",
-                        rawName: "v-model",
-                        value: _vm.email_code,
-                        expression: "email_code"
+                        rawName: "v-model.trim",
+                        value: _vm.$v.user.email_code.$model,
+                        expression: "$v.user.email_code.$model",
+                        modifiers: { trim: true }
                       }
                     ],
                     staticClass: "form-input form-wide",
-                    class: _vm.errors.email_code ? "error-input" : "",
+                    class: _vm.status(_vm.$v.user.email_code),
                     attrs: {
                       type: "text",
                       id: "email-code",
                       disabled: _vm.loading
                     },
-                    domProps: { value: _vm.email_code },
+                    domProps: { value: _vm.$v.user.email_code.$model },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.email_code = $event.target.value
+                        _vm.$set(
+                          _vm.$v.user.email_code,
+                          "$model",
+                          $event.target.value.trim()
+                        )
+                      },
+                      blur: function($event) {
+                        return _vm.$forceUpdate()
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.email_code
+                  !_vm.checkRequired(_vm.$v.user.email_code)
                     ? _c(
                         "small",
                         {
@@ -70711,7 +70949,21 @@ var render = function() {
                             "font-size": "12px"
                           }
                         },
-                        [_vm._v(_vm._s(_vm.errors.email_code))]
+                        [_vm._v("Email Verification Code is required")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !_vm.checkLength(_vm.$v.user.email_code)
+                    ? _c(
+                        "small",
+                        {
+                          staticStyle: {
+                            display: "block",
+                            color: "red",
+                            "font-size": "12px"
+                          }
+                        },
+                        [_vm._v("Email Verification Code is invalid")]
                       )
                     : _vm._e(),
                   _vm._v(" "),
@@ -70721,30 +70973,38 @@ var render = function() {
                     directives: [
                       {
                         name: "model",
-                        rawName: "v-model",
-                        value: _vm.sms_code,
-                        expression: "sms_code"
+                        rawName: "v-model.trim",
+                        value: _vm.$v.user.sms_code.$model,
+                        expression: "$v.user.sms_code.$model",
+                        modifiers: { trim: true }
                       }
                     ],
                     staticClass: "form-input form-wide",
-                    class: _vm.errors.sms_code ? "error-input" : "",
+                    class: _vm.status(_vm.$v.user.sms_code),
                     attrs: {
                       type: "text",
                       id: "sms-code",
                       disabled: _vm.loading
                     },
-                    domProps: { value: _vm.sms_code },
+                    domProps: { value: _vm.$v.user.sms_code.$model },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.sms_code = $event.target.value
+                        _vm.$set(
+                          _vm.$v.user.sms_code,
+                          "$model",
+                          $event.target.value.trim()
+                        )
+                      },
+                      blur: function($event) {
+                        return _vm.$forceUpdate()
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.sms_code
+                  !_vm.checkRequired(_vm.$v.user.sms_code)
                     ? _c(
                         "small",
                         {
@@ -70754,7 +71014,21 @@ var render = function() {
                             "font-size": "12px"
                           }
                         },
-                        [_vm._v(_vm._s(_vm.errors.sms_code))]
+                        [_vm._v("SMS Verification Code is required")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !_vm.checkLength(_vm.$v.user.sms_code)
+                    ? _c(
+                        "small",
+                        {
+                          staticStyle: {
+                            display: "block",
+                            color: "red",
+                            "font-size": "12px"
+                          }
+                        },
+                        [_vm._v("SMS Verification Code is invalid")]
                       )
                     : _vm._e(),
                   _vm._v(" "),
@@ -72228,15 +72502,18 @@ var render = function() {
                                   directives: [
                                     {
                                       name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.userprofile.first_name,
-                                      expression: "userprofile.first_name"
+                                      rawName: "v-model.trim",
+                                      value:
+                                        _vm.$v.userprofile.first_name.$model,
+                                      expression:
+                                        "$v.userprofile.first_name.$model",
+                                      modifiers: { trim: true }
                                     }
                                   ],
                                   staticClass: "form-control",
-                                  class: !_vm.$v.userprofile.first_name.required
-                                    ? "error-input"
-                                    : "",
+                                  class: _vm.status(
+                                    _vm.$v.userprofile.first_name
+                                  ),
                                   attrs: {
                                     type: "text",
                                     placeholder: "Editor",
@@ -72245,7 +72522,7 @@ var render = function() {
                                     disabled: _vm.loading
                                   },
                                   domProps: {
-                                    value: _vm.userprofile.first_name
+                                    value: _vm.$v.userprofile.first_name.$model
                                   },
                                   on: {
                                     input: function($event) {
@@ -72253,15 +72530,20 @@ var render = function() {
                                         return
                                       }
                                       _vm.$set(
-                                        _vm.userprofile,
-                                        "first_name",
-                                        $event.target.value
+                                        _vm.$v.userprofile.first_name,
+                                        "$model",
+                                        $event.target.value.trim()
                                       )
+                                    },
+                                    blur: function($event) {
+                                      return _vm.$forceUpdate()
                                     }
                                   }
                                 }),
                                 _vm._v(" "),
-                                !_vm.$v.userprofile.first_name.required
+                                !_vm.checkRequired(
+                                  _vm.$v.userprofile.first_name
+                                )
                                   ? _c(
                                       "small",
                                       {
@@ -72285,15 +72567,18 @@ var render = function() {
                                   directives: [
                                     {
                                       name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.userprofile.last_name,
-                                      expression: "userprofile.last_name"
+                                      rawName: "v-model.trim",
+                                      value:
+                                        _vm.$v.userprofile.last_name.$model,
+                                      expression:
+                                        "$v.userprofile.last_name.$model",
+                                      modifiers: { trim: true }
                                     }
                                   ],
                                   staticClass: "form-control",
-                                  class: !_vm.$v.userprofile.last_name.required
-                                    ? "error-input"
-                                    : "",
+                                  class: _vm.status(
+                                    _vm.$v.userprofile.last_name
+                                  ),
                                   attrs: {
                                     type: "text",
                                     id: "acc-lastname",
@@ -72302,7 +72587,7 @@ var render = function() {
                                     required: ""
                                   },
                                   domProps: {
-                                    value: _vm.userprofile.last_name
+                                    value: _vm.$v.userprofile.last_name.$model
                                   },
                                   on: {
                                     input: function($event) {
@@ -72310,15 +72595,18 @@ var render = function() {
                                         return
                                       }
                                       _vm.$set(
-                                        _vm.userprofile,
-                                        "last_name",
-                                        $event.target.value
+                                        _vm.$v.userprofile.last_name,
+                                        "$model",
+                                        $event.target.value.trim()
                                       )
+                                    },
+                                    blur: function($event) {
+                                      return _vm.$forceUpdate()
                                     }
                                   }
                                 }),
                                 _vm._v(" "),
-                                !_vm.$v.userprofile.last_name.required
+                                !_vm.checkRequired(_vm.$v.userprofile.last_name)
                                   ? _c(
                                       "small",
                                       {
@@ -72342,15 +72630,14 @@ var render = function() {
                               directives: [
                                 {
                                   name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.userprofile.phone,
-                                  expression: "userprofile.phone"
+                                  rawName: "v-model.trim",
+                                  value: _vm.$v.userprofile.phone.$model,
+                                  expression: "$v.userprofile.phone.$model",
+                                  modifiers: { trim: true }
                                 }
                               ],
                               staticClass: "form-control",
-                              class: !_vm.$v.userprofile.phone.required
-                                ? "error-input"
-                                : "",
+                              class: _vm.status(_vm.$v.userprofile.phone),
                               attrs: {
                                 type: "text",
                                 id: "acc-text",
@@ -72358,22 +72645,27 @@ var render = function() {
                                 disabled: _vm.loading,
                                 placeholder: "Phone Number"
                               },
-                              domProps: { value: _vm.userprofile.phone },
+                              domProps: {
+                                value: _vm.$v.userprofile.phone.$model
+                              },
                               on: {
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
                                   }
                                   _vm.$set(
-                                    _vm.userprofile,
-                                    "phone",
-                                    $event.target.value
+                                    _vm.$v.userprofile.phone,
+                                    "$model",
+                                    $event.target.value.trim()
                                   )
+                                },
+                                blur: function($event) {
+                                  return _vm.$forceUpdate()
                                 }
                               }
                             }),
                             _vm._v(" "),
-                            !_vm.$v.userprofile.phone.required
+                            !_vm.checkRequired(_vm.$v.userprofile.phone)
                               ? _c(
                                   "small",
                                   {
@@ -72395,15 +72687,14 @@ var render = function() {
                               directives: [
                                 {
                                   name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.userprofile.email,
-                                  expression: "userprofile.email"
+                                  rawName: "v-model.trim",
+                                  value: _vm.$v.userprofile.email.$model,
+                                  expression: "$v.userprofile.email.$model",
+                                  modifiers: { trim: true }
                                 }
                               ],
                               staticClass: "form-control",
-                              class: !_vm.$v.userprofile.email.required
-                                ? "error-input"
-                                : "",
+                              class: _vm.status(_vm.$v.userprofile.email),
                               attrs: {
                                 type: "email",
                                 id: "acc-email",
@@ -72412,22 +72703,27 @@ var render = function() {
                                 placeholder: "editor@gmail.com",
                                 readonly: ""
                               },
-                              domProps: { value: _vm.userprofile.email },
+                              domProps: {
+                                value: _vm.$v.userprofile.email.$model
+                              },
                               on: {
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
                                   }
                                   _vm.$set(
-                                    _vm.userprofile,
-                                    "email",
-                                    $event.target.value
+                                    _vm.$v.userprofile.email,
+                                    "$model",
+                                    $event.target.value.trim()
                                   )
+                                },
+                                blur: function($event) {
+                                  return _vm.$forceUpdate()
                                 }
                               }
                             }),
                             _vm._v(" "),
-                            !_vm.$v.userprofile.email.required
+                            !_vm.checkRequired(_vm.$v.userprofile.email)
                               ? _c(
                                   "small",
                                   {
@@ -72458,15 +72754,18 @@ var render = function() {
                                 directives: [
                                   {
                                     name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.userprofile.old_password,
-                                    expression: "userprofile.old_password"
+                                    rawName: "v-model.trim",
+                                    value:
+                                      _vm.$v.userprofile.old_password.$model,
+                                    expression:
+                                      "$v.userprofile.old_password.$model",
+                                    modifiers: { trim: true }
                                   }
                                 ],
                                 staticClass: "form-control",
-                                class: _vm.errors.old_password
-                                  ? "error-input"
-                                  : "",
+                                class: _vm.status(
+                                  _vm.$v.userprofile.old_password
+                                ),
                                 attrs: {
                                   type: "password",
                                   id: "acc-password",
@@ -72474,7 +72773,7 @@ var render = function() {
                                   disabled: _vm.loading
                                 },
                                 domProps: {
-                                  value: _vm.userprofile.old_password
+                                  value: _vm.$v.userprofile.old_password.$model
                                 },
                                 on: {
                                   input: function($event) {
@@ -72482,15 +72781,18 @@ var render = function() {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.userprofile,
-                                      "old_password",
-                                      $event.target.value
+                                      _vm.$v.userprofile.old_password,
+                                      "$model",
+                                      $event.target.value.trim()
                                     )
+                                  },
+                                  blur: function($event) {
+                                    return _vm.$forceUpdate()
                                   }
                                 }
                               }),
                               _vm._v(" "),
-                              _vm.errors.old_password
+                              !_vm.checkLength(_vm.$v.userprofile.old_password)
                                 ? _c(
                                     "small",
                                     {
@@ -72500,7 +72802,7 @@ var render = function() {
                                         "font-size": "12px"
                                       }
                                     },
-                                    [_vm._v(_vm._s(_vm.errors.old_password))]
+                                    [_vm._v("Old password is invalid")]
                                   )
                                 : _vm._e()
                             ]),
@@ -72516,37 +72818,42 @@ var render = function() {
                                 directives: [
                                   {
                                     name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.userprofile.password,
-                                    expression: "userprofile.password"
+                                    rawName: "v-model.trim",
+                                    value: _vm.$v.userprofile.password.$model,
+                                    expression:
+                                      "$v.userprofile.password.$model",
+                                    modifiers: { trim: true }
                                   }
                                 ],
                                 staticClass: "form-control",
-                                class: !_vm.$v.userprofile.password.minLength
-                                  ? "error-input"
-                                  : "",
+                                class: _vm.status(_vm.$v.userprofile.password),
                                 attrs: {
                                   type: "password",
                                   id: "acc-new-password",
                                   name: "acc-new-password",
                                   disabled: _vm.loading
                                 },
-                                domProps: { value: _vm.userprofile.password },
+                                domProps: {
+                                  value: _vm.$v.userprofile.password.$model
+                                },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.userprofile,
-                                      "password",
-                                      $event.target.value
+                                      _vm.$v.userprofile.password,
+                                      "$model",
+                                      $event.target.value.trim()
                                     )
+                                  },
+                                  blur: function($event) {
+                                    return _vm.$forceUpdate()
                                   }
                                 }
                               }),
                               _vm._v(" "),
-                              !_vm.$v.userprofile.password.minLength
+                              !_vm.checkLength(_vm.$v.userprofile.password)
                                 ? _c(
                                     "small",
                                     {
@@ -72574,15 +72881,19 @@ var render = function() {
                                 directives: [
                                   {
                                     name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.userprofile.confirm_password,
-                                    expression: "userprofile.confirm_password"
+                                    rawName: "v-model.trim",
+                                    value:
+                                      _vm.$v.userprofile.confirm_password
+                                        .$model,
+                                    expression:
+                                      "$v.userprofile.confirm_password.$model",
+                                    modifiers: { trim: true }
                                   }
                                 ],
                                 staticClass: "form-control",
-                                class: _vm.errors.confirm_password
-                                  ? "error-input"
-                                  : "",
+                                class: _vm.status(
+                                  _vm.$v.userprofile.confirm_password
+                                ),
                                 attrs: {
                                   type: "password",
                                   id: "acc-confirm-password",
@@ -72590,7 +72901,8 @@ var render = function() {
                                   disabled: _vm.loading
                                 },
                                 domProps: {
-                                  value: _vm.userprofile.confirm_password
+                                  value:
+                                    _vm.$v.userprofile.confirm_password.$model
                                 },
                                 on: {
                                   input: function($event) {
@@ -72598,16 +72910,20 @@ var render = function() {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.userprofile,
-                                      "confirm_password",
-                                      $event.target.value
+                                      _vm.$v.userprofile.confirm_password,
+                                      "$model",
+                                      $event.target.value.trim()
                                     )
+                                  },
+                                  blur: function($event) {
+                                    return _vm.$forceUpdate()
                                   }
                                 }
                               }),
                               _vm._v(" "),
-                              !_vm.$v.userprofile.confirm_password
-                                .sameAsPassword
+                              !_vm.checkSame(
+                                _vm.$v.userprofile.confirm_password
+                              )
                                 ? _c(
                                     "small",
                                     {
@@ -72675,14 +72991,12 @@ var render = function() {
                                     {
                                       name: "model",
                                       rawName: "v-model",
-                                      value: _vm.billing.country,
-                                      expression: "billing.country"
+                                      value: _vm.$v.billing.country.$model,
+                                      expression: "$v.billing.country.$model"
                                     }
                                   ],
                                   staticClass: "form-control",
-                                  class: !_vm.$v.billing.country.required
-                                    ? "error-input"
-                                    : "",
+                                  class: _vm.status(_vm.$v.billing.country),
                                   attrs: {
                                     name: "orderby",
                                     disabled: _vm.loading
@@ -72701,8 +73015,8 @@ var render = function() {
                                           return val
                                         })
                                       _vm.$set(
-                                        _vm.billing,
-                                        "country",
+                                        _vm.$v.billing.country,
+                                        "$model",
                                         $event.target.multiple
                                           ? $$selectedVal
                                           : $$selectedVal[0]
@@ -72724,7 +73038,7 @@ var render = function() {
                                 ]
                               ),
                               _vm._v(" "),
-                              !_vm.$v.billing.country.required
+                              !_vm.checkRequired(_vm.$v.billing.country)
                                 ? _c(
                                     "small",
                                     {
@@ -72746,36 +73060,40 @@ var render = function() {
                                 directives: [
                                   {
                                     name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.billing.address,
-                                    expression: "billing.address"
+                                    rawName: "v-model.trim",
+                                    value: _vm.$v.billing.address.$model,
+                                    expression: "$v.billing.address.$model",
+                                    modifiers: { trim: true }
                                   }
                                 ],
                                 staticClass: "form-control",
-                                class: !_vm.$v.billing.address.required
-                                  ? "error-input"
-                                  : "",
+                                class: _vm.status(_vm.$v.billing.address),
                                 attrs: {
                                   type: "text",
                                   placeholder: "House number and street name",
                                   disabled: _vm.loading
                                 },
-                                domProps: { value: _vm.billing.address },
+                                domProps: {
+                                  value: _vm.$v.billing.address.$model
+                                },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.billing,
-                                      "address",
-                                      $event.target.value
+                                      _vm.$v.billing.address,
+                                      "$model",
+                                      $event.target.value.trim()
                                     )
+                                  },
+                                  blur: function($event) {
+                                    return _vm.$forceUpdate()
                                   }
                                 }
                               }),
                               _vm._v(" "),
-                              !_vm.$v.billing.address.required
+                              !_vm.checkRequired(_vm.$v.billing.address)
                                 ? _c(
                                     "small",
                                     {
@@ -72797,32 +73115,34 @@ var render = function() {
                                 directives: [
                                   {
                                     name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.billing.city,
-                                    expression: "billing.city"
+                                    rawName: "v-model.trim",
+                                    value: _vm.$v.billing.city.$model,
+                                    expression: "$v.billing.city.$model",
+                                    modifiers: { trim: true }
                                   }
                                 ],
                                 staticClass: "form-control",
-                                class: !_vm.$v.billing.city.required
-                                  ? "error-input"
-                                  : "",
+                                class: _vm.status(_vm.$v.billing.city),
                                 attrs: { type: "text", disabled: _vm.loading },
-                                domProps: { value: _vm.billing.city },
+                                domProps: { value: _vm.$v.billing.city.$model },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.billing,
-                                      "city",
-                                      $event.target.value
+                                      _vm.$v.billing.city,
+                                      "$model",
+                                      $event.target.value.trim()
                                     )
+                                  },
+                                  blur: function($event) {
+                                    return _vm.$forceUpdate()
                                   }
                                 }
                               }),
                               _vm._v(" "),
-                              !_vm.$v.billing.city.required
+                              !_vm.checkRequired(_vm.$v.billing.city)
                                 ? _c(
                                     "small",
                                     {
@@ -72844,32 +73164,36 @@ var render = function() {
                                 directives: [
                                   {
                                     name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.billing.state,
-                                    expression: "billing.state"
+                                    rawName: "v-model.trim",
+                                    value: _vm.$v.billing.state.$model,
+                                    expression: "$v.billing.state.$model",
+                                    modifiers: { trim: true }
                                   }
                                 ],
                                 staticClass: "form-control",
-                                class: !_vm.$v.billing.state.required
-                                  ? "error-input"
-                                  : "",
+                                class: _vm.status(_vm.$v.billing.state),
                                 attrs: { type: "text", disabled: _vm.loading },
-                                domProps: { value: _vm.billing.state },
+                                domProps: {
+                                  value: _vm.$v.billing.state.$model
+                                },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.billing,
-                                      "state",
-                                      $event.target.value
+                                      _vm.$v.billing.state,
+                                      "$model",
+                                      $event.target.value.trim()
                                     )
+                                  },
+                                  blur: function($event) {
+                                    return _vm.$forceUpdate()
                                   }
                                 }
                               }),
                               _vm._v(" "),
-                              !_vm.$v.billing.state.required
+                              !_vm.checkRequired(_vm.$v.billing.state)
                                 ? _c(
                                     "small",
                                     {
@@ -72937,14 +73261,12 @@ var render = function() {
                                     {
                                       name: "model",
                                       rawName: "v-model",
-                                      value: _vm.shipping.country,
-                                      expression: "shipping.country"
+                                      value: _vm.$v.shipping.country.$model,
+                                      expression: "$v.shipping.country.$model"
                                     }
                                   ],
                                   staticClass: "form-control",
-                                  class: !_vm.$v.shipping.country.required
-                                    ? "error-input"
-                                    : "",
+                                  class: _vm.status(_vm.$v.shipping.country),
                                   attrs: {
                                     name: "orderby",
                                     disabled: _vm.loading
@@ -72963,8 +73285,8 @@ var render = function() {
                                           return val
                                         })
                                       _vm.$set(
-                                        _vm.shipping,
-                                        "country",
+                                        _vm.$v.shipping.country,
+                                        "$model",
                                         $event.target.multiple
                                           ? $$selectedVal
                                           : $$selectedVal[0]
@@ -72986,7 +73308,7 @@ var render = function() {
                                 ]
                               ),
                               _vm._v(" "),
-                              !_vm.$v.shipping.country.required
+                              !_vm.checkRequired(_vm.$v.shipping.country)
                                 ? _c(
                                     "small",
                                     {
@@ -73008,36 +73330,40 @@ var render = function() {
                                 directives: [
                                   {
                                     name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.shipping.address,
-                                    expression: "shipping.address"
+                                    rawName: "v-model.trim",
+                                    value: _vm.$v.shipping.address.$model,
+                                    expression: "$v.shipping.address.$model",
+                                    modifiers: { trim: true }
                                   }
                                 ],
                                 staticClass: "form-control",
-                                class: !_vm.$v.shipping.address.required
-                                  ? "error-input"
-                                  : "",
+                                class: _vm.status(_vm.$v.shipping.address),
                                 attrs: {
                                   type: "text",
                                   disabled: _vm.loading,
                                   placeholder: "House number and street name"
                                 },
-                                domProps: { value: _vm.shipping.address },
+                                domProps: {
+                                  value: _vm.$v.shipping.address.$model
+                                },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.shipping,
-                                      "address",
-                                      $event.target.value
+                                      _vm.$v.shipping.address,
+                                      "$model",
+                                      $event.target.value.trim()
                                     )
+                                  },
+                                  blur: function($event) {
+                                    return _vm.$forceUpdate()
                                   }
                                 }
                               }),
                               _vm._v(" "),
-                              !_vm.$v.shipping.address.required
+                              !_vm.checkRequired(_vm.$v.shipping.address)
                                 ? _c(
                                     "small",
                                     {
@@ -73059,32 +73385,36 @@ var render = function() {
                                 directives: [
                                   {
                                     name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.shipping.city,
-                                    expression: "shipping.city"
+                                    rawName: "v-model.trim",
+                                    value: _vm.$v.shipping.city.$model,
+                                    expression: "$v.shipping.city.$model",
+                                    modifiers: { trim: true }
                                   }
                                 ],
                                 staticClass: "form-control",
-                                class: !_vm.$v.shipping.city.required
-                                  ? "error-input"
-                                  : "",
+                                class: _vm.status(_vm.$v.shipping.city),
                                 attrs: { type: "text", disabled: _vm.loading },
-                                domProps: { value: _vm.shipping.city },
+                                domProps: {
+                                  value: _vm.$v.shipping.city.$model
+                                },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.shipping,
-                                      "city",
-                                      $event.target.value
+                                      _vm.$v.shipping.city,
+                                      "$model",
+                                      $event.target.value.trim()
                                     )
+                                  },
+                                  blur: function($event) {
+                                    return _vm.$forceUpdate()
                                   }
                                 }
                               }),
                               _vm._v(" "),
-                              !_vm.$v.shipping.city.required
+                              !_vm.checkRequired(_vm.$v.shipping.city)
                                 ? _c(
                                     "small",
                                     {
@@ -73106,33 +73436,36 @@ var render = function() {
                                 directives: [
                                   {
                                     name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.shipping.state,
-                                    expression: "shipping.state"
+                                    rawName: "v-model.trim",
+                                    value: _vm.$v.shipping.state.$model,
+                                    expression: "$v.shipping.state.$model",
+                                    modifiers: { trim: true }
                                   }
                                 ],
                                 staticClass: "form-control",
-                                class: !_vm.$v.shipping.state.required
-                                  ? "error-input"
-                                  : "",
+                                class: _vm.status(_vm.$v.shipping.state),
                                 attrs: { type: "text", disabled: _vm.loading },
-                                domProps: { value: _vm.shipping.state },
+                                domProps: {
+                                  value: _vm.$v.shipping.state.$model
+                                },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.shipping,
-                                      "state",
-                                      $event.target.value
+                                      _vm.$v.shipping.state,
+                                      "$model",
+                                      $event.target.value.trim()
                                     )
+                                  },
+                                  blur: function($event) {
+                                    return _vm.$forceUpdate()
                                   }
                                 }
                               }),
                               _vm._v(" "),
-                              !_vm.$v.shipping.state.required &&
-                              _vm.$v.shipping.state.invalid
+                              !_vm.checkRequired(_vm.$v.shipping.state)
                                 ? _c(
                                     "small",
                                     {
@@ -73154,32 +73487,37 @@ var render = function() {
                                 directives: [
                                   {
                                     name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.shipping.postal_code,
-                                    expression: "shipping.postal_code"
+                                    rawName: "v-model.trim",
+                                    value: _vm.$v.shipping.postal_code.$model,
+                                    expression:
+                                      "$v.shipping.postal_code.$model",
+                                    modifiers: { trim: true }
                                   }
                                 ],
                                 staticClass: "form-control",
-                                class: !_vm.$v.shipping.postal_code.required
-                                  ? "error-input"
-                                  : "",
+                                class: _vm.status(_vm.$v.shipping.postal_code),
                                 attrs: { type: "text", disabled: _vm.loading },
-                                domProps: { value: _vm.shipping.postal_code },
+                                domProps: {
+                                  value: _vm.$v.shipping.postal_code.$model
+                                },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.shipping,
-                                      "postal_code",
-                                      $event.target.value
+                                      _vm.$v.shipping.postal_code,
+                                      "$model",
+                                      $event.target.value.trim()
                                     )
+                                  },
+                                  blur: function($event) {
+                                    return _vm.$forceUpdate()
                                   }
                                 }
                               }),
                               _vm._v(" "),
-                              !_vm.$v.shipping.postal_code.required
+                              !_vm.checkRequired(_vm.$v.shipping.postal_code)
                                 ? _c(
                                     "small",
                                     {
@@ -73202,34 +73540,34 @@ var render = function() {
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.shipping.phone,
-                                    expression: "shipping.phone"
+                                    value: _vm.$v.shipping.phone.$model,
+                                    expression: "$v.shipping.phone.$model"
                                   }
                                 ],
                                 staticClass: "form-control",
-                                class: !_vm.$v.shipping.phone.required
-                                  ? "error-input"
-                                  : "",
+                                class: _vm.status(_vm.$v.shipping.phone),
                                 attrs: {
                                   type: "number",
                                   disabled: _vm.loading
                                 },
-                                domProps: { value: _vm.shipping.phone },
+                                domProps: {
+                                  value: _vm.$v.shipping.phone.$model
+                                },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.shipping,
-                                      "phone",
+                                      _vm.$v.shipping.phone,
+                                      "$model",
                                       $event.target.value
                                     )
                                   }
                                 }
                               }),
                               _vm._v(" "),
-                              !_vm.$v.shipping.phone.required
+                              !_vm.checkRequired(_vm.$v.shipping.phone)
                                 ? _c(
                                     "small",
                                     {
@@ -73463,7 +73801,7 @@ var staticRenderFns = [
         "button",
         {
           staticClass: "btn btn-dark mr-0",
-          attrs: { type: "submit", id: "update-acc" }
+          attrs: { type: "submit", id: "update_submit" }
         },
         [_vm._v("\n                  Save changes\n                ")]
       )

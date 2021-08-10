@@ -30,6 +30,11 @@ export function setToken(token){
     localStorage.setItem('SYNECT', ciphertext);
 }
 
+export function setUser(user){
+    let ciphertext = CryptoJS.AES.encrypt(JSON.stringify({user: user}), 'laravellaravelvuevuespaspa');
+    localStorage.setItem('SYNECUS', ciphertext);
+}
+
 export function isLoggedIn() {
     const token = localStorage.getItem('SYNECT');
 
@@ -39,6 +44,7 @@ export function isLoggedIn() {
 export function logout() {
     http().get('/auth/logout');
     localStorage.removeItem('SYNECT');
+    localStorage.removeItem('SYNECUS');
 }
 
 export function getAccessToken() {
@@ -51,6 +57,19 @@ export function getAccessToken() {
     var plaintext = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
 
     return plaintext.token;
+}
+
+
+export function getUser() {
+    const user = localStorage.getItem('SYNECUS');
+    if (!user){
+        return null;
+    }
+
+    var bytes  = CryptoJS.AES.decrypt(user.toString(), 'laravellaravelvuevuespaspa');
+    var plaintext = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+
+    return plaintext.user;
 }
 
 export function getProfile() {

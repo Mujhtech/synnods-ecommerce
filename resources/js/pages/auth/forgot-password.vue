@@ -18,14 +18,19 @@
                   type="email"
                   class="form-input"
                   id="reset-email"
-                  v-model="email"
+                  v-model.trim="$v.user.email.$model"
                   :disabled="loading"
-                  :class="errors.email ? 'error-input' : ''"
+                  :class="status($v.user.email)"
                 />
                 <small
-                  v-if="errors.email"
+                  v-if="!checkRequired($v.user.email)"
                   style="display: block; color: red; font-size: 12px"
-                  >{{ errors.email }}</small
+                  >Email address is required</small
+                >
+                <small
+                  v-if="!checkEmail($v.user.email)"
+                  style="display: block; color: red; font-size: 12px"
+                  >Email address is invalid</small
                 >
               </div>
 
@@ -58,6 +63,7 @@
 import PreLoader from "../../components/common/PreLoader";
 import * as auth from "../../services/auth";
 import { mapActions } from "vuex";
+import { required, email } from "vuelidate/lib/validators";
 
 export default {
   name: "Recover",
@@ -68,39 +74,52 @@ export default {
   components: {
     PreLoader,
   },
-  watch: {
-    email(value) {
-      this.email = value;
-      this.validateEmail(value);
+  validations: {
+    user: {
+      email: { required, email },
     },
   },
   data() {
     return {
-      email: "",
+      user: {
+        email: "",
+      },
       errors: {},
       loading: false,
     };
   },
   methods: {
     ...mapActions("notification", ["addNotification"]),
-    validateEmail: function (value) {
-      if (!value || value === "") {
-        this.errors.email = "Email address is required";
-        return false;
+    status(validation) {
+      return {
+        error: validation.$error,
+      };
+    },
+    checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
       } else if (
-        !/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-          value
-        )
+        validation.$dirty &&
+        validation.$error &&
+        validation.$model == ""
       ) {
-        this.errors.email = "Invalid email address";
         return false;
       } else {
-        this.errors.email = "";
+        return true;
+      }
+    },
+    checkEmail(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (validation.$dirty && validation.$error && !validation.email) {
+        return false;
+      } else {
         return true;
       }
     },
     recover: async function () {
-      if (!this.validateEmail(this.email)) {
+      this.$v.user.$touch();
+      if (this.$v.user.$invalid) {
         return;
       }
       let submit = document.getElementById("submit");
@@ -109,9 +128,9 @@ export default {
         this.loading = true;
         submit.innerText = "Loading...";
         console.log(this.user);
-        const response = await auth.recover({ email: this.email });
+        const response = await auth.recover(this.user);
         this.loading = false;
-        (this.email = ""),
+        (this.user.email = ""),
           this.addNotification({
             type: "success",
             message: response.data.data.message,
@@ -135,7 +154,7 @@ export default {
 </script>
 
 <style scoped>
-.error-input {
+.error {
   border-color: red !important;
 }
 </style>

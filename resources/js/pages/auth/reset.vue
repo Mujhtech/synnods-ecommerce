@@ -15,14 +15,19 @@
                   class="form-control"
                   id="reset-password"
                   name="reset-password"
-                  v-model="password"
+                  v-model.trim="$v.user.password.$model"
                   :disabled="loading"
-                  :class="errors.password ? 'error-input' : ''"
+                  :class="status($v.user.password)"
                 />
                 <small
-                  v-if="errors.password"
+                  v-if="!checkRequired($v.user.password)"
                   style="display: block; color: red; font-size: 12px"
-                  >{{ errors.password }}</small
+                  >Password is required</small
+                >
+                <small
+                  v-if="!checkLength($v.user.password)"
+                  style="display: block; color: red; font-size: 12px"
+                  >Password must be greate than 8 character</small
                 >
               </div>
               <div class="form-group mb-0">
@@ -34,14 +39,14 @@
                   class="form-control"
                   id="reset-cpassword"
                   name="reset-cpassword"
-                  v-model="confirmed"
+                  v-model.trim="$v.user.confirmed.$model"
                   :disabled="loading"
-                  :class="errors.confirmed ? 'error-input' : ''"
+                  :class="status($v.user.confirmed)"
                 />
                 <small
-                  v-if="errors.confirmed"
+                  v-if="!checkSame($v.user.confirmed)"
                   style="display: block; color: red; font-size: 12px"
-                  >{{ errors.confirmed }}</small
+                  >Password not match</small
                 >
               </div>
 
@@ -74,6 +79,7 @@
 import PreLoader from "../../components/common/PreLoader";
 import * as auth from "../../services/auth";
 import { mapActions } from "vuex";
+import { required, sameAs, minLength } from "vuelidate/lib/validators";
 
 export default {
   name: "Reset",
@@ -84,56 +90,75 @@ export default {
   components: {
     PreLoader,
   },
+  validations: {
+    user: {
+      password: { required },
+      confirmed: { sameAsPassword: sameAs("password") },
+    },
+  },
   mounted() {
     this.token = this.$route.params.token;
   },
-  watch: {
-    confirmed(value) {
-      this.confirmed = value;
-      this.validateCPassword(value);
-    },
-    password(value) {
-      this.password = value;
-      this.validatePassword(value);
-    },
-  },
   data() {
     return {
-      token: "",
-      password: "",
-      confirmed: "",
+      user: {
+        token: "",
+        password: "",
+        confirmed: "",
+      },
       errors: {},
       loading: false,
     };
   },
   methods: {
     ...mapActions("notification", ["addNotification"]),
-    validatePassword: function (value) {
-      if (!value || value === "") {
-        this.errors.password = "Password is required";
+    status(validation) {
+      return {
+        error: validation.$error,
+      };
+    },
+    checkRequired(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (
+        validation.$dirty &&
+        validation.$error &&
+        validation.$model == ""
+      ) {
         return false;
       } else {
-        this.errors.password = "";
         return true;
       }
     },
-    validateCPassword: function (value) {
-      if (!value || value === "") {
-        this.errors.confirmed = "Confirm Password is required";
-        return false;
-      } else if (this.password != value) {
-        this.errors.confirmed = "Password must be match";
+    checkLength(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (
+        validation.$dirty &&
+        validation.$error &&
+        !validation.minLength
+      ) {
         return false;
       } else {
-        this.errors.confirmed = "";
+        return true;
+      }
+    },
+    checkSame(validation) {
+      if (!validation.$dirty && validation.$model == "") {
+        return true;
+      } else if (
+        validation.$dirty &&
+        validation.$error &&
+        !validation.sameAsPassword
+      ) {
+        return false;
+      } else {
         return true;
       }
     },
     reset: async function () {
-      if (!this.validatePassword(this.password)) {
-        return;
-      }
-      if (!this.validateCPassword(this.confirmed)) {
+      this.$v.user.$touch();
+      if (this.$v.user.$invalid) {
         return;
       }
       this.errors = {};
@@ -141,14 +166,10 @@ export default {
       try {
         this.loading = true;
         submit.innerText = "Loading...";
-        const response = await auth.reset({
-          confirmed: this.confirmed,
-          password: this.password,
-          token: this.token,
-        });
+        const response = await auth.reset(this.user);
         this.loading = false;
-        (this.password = ""),
-          (this.confirmed = ""),
+        (this.user.password = ""),
+          (this.user.confirmed = ""),
           (submit.innerText = "Reset Password");
         this.addNotification({
           type: "success",
@@ -172,7 +193,7 @@ export default {
 </script>
 
 <style scoped>
-.error-input {
+.error {
   border-color: red !important;
 }
 </style>

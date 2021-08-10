@@ -371,16 +371,12 @@
                         placeholder="Editor"
                         id="acc-name"
                         name="acc-name"
-                        v-model="userprofile.first_name"
-                        :class="
-                          !$v.userprofile.first_name.required
-                            ? 'error-input'
-                            : ''
-                        "
+                        v-model.trim="$v.userprofile.first_name.$model"
+                        :class="status($v.userprofile.first_name)"
                         :disabled="loading"
                       />
                       <small
-                        v-if="!$v.userprofile.first_name.required"
+                        v-if="!checkRequired($v.userprofile.first_name)"
                         style="display: block; color: red; font-size: 12px"
                         >Firstname is required</small
                       >
@@ -398,17 +394,13 @@
                         class="form-control"
                         id="acc-lastname"
                         name="acc-lastname"
-                        v-model="userprofile.last_name"
-                        :class="
-                          !$v.userprofile.last_name.required
-                            ? 'error-input'
-                            : ''
-                        "
+                        v-model.trim="$v.userprofile.last_name.$model"
+                        :class="status($v.userprofile.last_name)"
                         :disabled="loading"
                         required
                       />
                       <small
-                        v-if="!$v.userprofile.last_name.required"
+                        v-if="!checkRequired($v.userprofile.last_name)"
                         style="display: block; color: red; font-size: 12px"
                         >Lastname is required</small
                       >
@@ -426,13 +418,13 @@
                     class="form-control"
                     id="acc-text"
                     name="acc-text"
-                    v-model="userprofile.phone"
-                    :class="!$v.userprofile.phone.required ? 'error-input' : ''"
+                    v-model.trim="$v.userprofile.phone.$model"
+                    :class="status($v.userprofile.phone)"
                     :disabled="loading"
                     placeholder="Phone Number"
                   />
                   <small
-                    v-if="!$v.userprofile.phone.required"
+                    v-if="!checkRequired($v.userprofile.phone)"
                     style="display: block; color: red; font-size: 12px"
                     >Phone number is required</small
                   >
@@ -448,14 +440,14 @@
                     class="form-control"
                     id="acc-email"
                     name="acc-email"
-                    v-model="userprofile.email"
-                    :class="!$v.userprofile.email.required ? 'error-input' : ''"
+                    v-model.trim="$v.userprofile.email.$model"
+                    :class="status($v.userprofile.email)"
                     :disabled="loading"
                     placeholder="editor@gmail.com"
                     readonly
                   />
                   <small
-                    v-if="!$v.userprofile.email.required"
+                    v-if="!checkRequired($v.userprofile.email)"
                     style="display: block; color: red; font-size: 12px"
                     >Email address is required</small
                   >
@@ -473,14 +465,14 @@
                       class="form-control"
                       id="acc-password"
                       name="acc-password"
-                      :class="errors.old_password ? 'error-input' : ''"
+                      :class="status($v.userprofile.old_password)"
                       :disabled="loading"
-                      v-model="userprofile.old_password"
+                      v-model.trim="$v.userprofile.old_password.$model"
                     />
                     <small
-                      v-if="errors.old_password"
+                      v-if="!checkLength($v.userprofile.old_password)"
                       style="display: block; color: red; font-size: 12px"
-                      >{{ errors.old_password }}</small
+                      >Old password is invalid</small
                     >
                   </div>
 
@@ -493,14 +485,12 @@
                       class="form-control"
                       id="acc-new-password"
                       name="acc-new-password"
-                      :class="
-                        !$v.userprofile.password.minLength ? 'error-input' : ''
-                      "
+                      :class="status($v.userprofile.password)"
                       :disabled="loading"
-                      v-model="userprofile.password"
+                      v-model.trim="$v.userprofile.password.$model"
                     />
                     <small
-                      v-if="!$v.userprofile.password.minLength"
+                      v-if="!checkLength($v.userprofile.password)"
                       style="display: block; color: red; font-size: 12px"
                       >Password must not less than 8 character</small
                     >
@@ -513,12 +503,12 @@
                       class="form-control"
                       id="acc-confirm-password"
                       name="acc-confirm-password"
-                      :class="errors.confirm_password ? 'error-input' : ''"
+                      :class="status($v.userprofile.confirm_password)"
                       :disabled="loading"
-                      v-model="userprofile.confirm_password"
+                      v-model.trim="$v.userprofile.confirm_password.$model"
                     />
                     <small
-                      v-if="!$v.userprofile.confirm_password.sameAsPassword"
+                      v-if="!checkSame($v.userprofile.confirm_password)"
                       style="display: block; color: red; font-size: 12px"
                       >Password not match</small
                     >
@@ -528,7 +518,7 @@
                 <div class="form-footer mt-3 mb-0">
                   <button
                     type="submit"
-                    id="update-acc"
+                    id="update_submit"
                     class="btn btn-dark mr-0"
                   >
                     Save changes
@@ -560,14 +550,14 @@
                   <select
                     name="orderby"
                     class="form-control"
-                    v-model="billing.country"
-                    :class="!$v.billing.country.required ? 'error-input' : ''"
+                    v-model="$v.billing.country.$model"
+                    :class="status($v.billing.country)"
                     :disabled="loading"
                   >
                     <option value="Nigeria" selected="selected">Nigeria</option>
                   </select>
                   <small
-                    v-if="!$v.billing.country.required"
+                    v-if="!checkRequired($v.billing.country)"
                     style="display: block; color: red; font-size: 12px"
                     >Billing country is required</small
                   >
@@ -582,12 +572,12 @@
                     type="text"
                     class="form-control"
                     placeholder="House number and street name"
-                    v-model="billing.address"
-                    :class="!$v.billing.address.required ? 'error-input' : ''"
+                    v-model.trim="$v.billing.address.$model"
+                    :class="status($v.billing.address)"
                     :disabled="loading"
                   />
                   <small
-                    v-if="!$v.billing.address.required"
+                    v-if="!checkRequired($v.billing.address)"
                     style="display: block; color: red; font-size: 12px"
                     >Billing address is required</small
                   >
@@ -601,12 +591,12 @@
                   <input
                     type="text"
                     class="form-control"
-                    :class="!$v.billing.city.required ? 'error-input' : ''"
+                    :class="status($v.billing.city)"
                     :disabled="loading"
-                    v-model="billing.city"
+                    v-model.trim="$v.billing.city.$model"
                   />
                   <small
-                    v-if="!$v.billing.city.required"
+                    v-if="!checkRequired($v.billing.city)"
                     style="display: block; color: red; font-size: 12px"
                     >Billing city is required</small
                   >
@@ -620,12 +610,12 @@
                   <input
                     type="text"
                     class="form-control"
-                    v-model="billing.state"
-                    :class="!$v.billing.state.required ? 'error-input' : ''"
+                    v-model.trim="$v.billing.state.$model"
+                    :class="status($v.billing.state)"
                     :disabled="loading"
                   />
                   <small
-                    v-if="!$v.billing.state.required"
+                    v-if="!checkRequired($v.billing.state)"
                     style="display: block; color: red; font-size: 12px"
                     >Billing state is required</small
                   >
@@ -668,14 +658,14 @@
                   <select
                     name="orderby"
                     class="form-control"
-                    :class="!$v.shipping.country.required ? 'error-input' : ''"
+                    :class="status($v.shipping.country)"
                     :disabled="loading"
-                    v-model="shipping.country"
+                    v-model="$v.shipping.country.$model"
                   >
                     <option value="Nigeria" selected="selected">Nigeria</option>
                   </select>
                   <small
-                    v-if="!$v.shipping.country.required"
+                    v-if="!checkRequired($v.shipping.country)"
                     style="display: block; color: red; font-size: 12px"
                     >Shipping country is required</small
                   >
@@ -689,13 +679,13 @@
                   <input
                     type="text"
                     class="form-control"
-                    v-model="shipping.address"
-                    :class="!$v.shipping.address.required ? 'error-input' : ''"
+                    v-model.trim="$v.shipping.address.$model"
+                    :class="status($v.shipping.address)"
                     :disabled="loading"
                     placeholder="House number and street name"
                   />
                   <small
-                    v-if="!$v.shipping.address.required"
+                    v-if="!checkRequired($v.shipping.address)"
                     style="display: block; color: red; font-size: 12px"
                     >Shipping address is required</small
                   >
@@ -709,12 +699,12 @@
                   <input
                     type="text"
                     class="form-control"
-                    :class="!$v.shipping.city.required ? 'error-input' : ''"
+                    :class="status($v.shipping.city)"
                     :disabled="loading"
-                    v-model="shipping.city"
+                    v-model.trim="$v.shipping.city.$model"
                   />
                   <small
-                    v-if="!$v.shipping.city.required"
+                    v-if="!checkRequired($v.shipping.city)"
                     style="display: block; color: red; font-size: 12px"
                     >Shipping city is required</small
                   >
@@ -728,14 +718,12 @@
                   <input
                     type="text"
                     class="form-control"
-                    :class="!$v.shipping.state.required ? 'error-input' : ''"
+                    :class="status($v.shipping.state)"
                     :disabled="loading"
-                    v-model="shipping.state"
+                    v-model.trim="$v.shipping.state.$model"
                   />
                   <small
-                    v-if="
-                      !$v.shipping.state.required && $v.shipping.state.invalid
-                    "
+                    v-if="!checkRequired($v.shipping.state)"
                     style="display: block; color: red; font-size: 12px"
                     >Shipping state is required</small
                   >
@@ -749,14 +737,12 @@
                   <input
                     type="text"
                     class="form-control"
-                    :class="
-                      !$v.shipping.postal_code.required ? 'error-input' : ''
-                    "
+                    :class="status($v.shipping.postal_code)"
                     :disabled="loading"
-                    v-model="shipping.postal_code"
+                    v-model.trim="$v.shipping.postal_code.$model"
                   />
                   <small
-                    v-if="!$v.shipping.postal_code.required"
+                    v-if="!checkRequired($v.shipping.postal_code)"
                     style="display: block; color: red; font-size: 12px"
                     >Shipping postal code is required</small
                   >
@@ -768,13 +754,13 @@
                   </label>
                   <input
                     type="number"
-                    v-model="shipping.phone"
-                    :class="!$v.shipping.phone.required ? 'error-input' : ''"
+                    v-model="$v.shipping.phone.$model"
+                    :class="status($v.shipping.phone)"
                     :disabled="loading"
                     class="form-control"
                   />
                   <small
-                    v-if="!$v.shipping.phone.required"
+                    v-if="!checkRequired($v.shipping.phone)"
                     style="display: block; color: red; font-size: 12px"
                     >Shipping phone number is required</small
                   >
@@ -831,6 +817,9 @@ export default {
       last_name: { required },
       email: { required },
       phone: { required },
+      old_password: {
+        minLength: minLength(8),
+      },
       password: {
         minLength: minLength(8),
       },
@@ -854,14 +843,14 @@ export default {
     },
   },
   created: function () {
-    this.userprofile.first_name = this.user.first_name;
-    this.userprofile.last_name = this.user.last_name;
-    this.userprofile.email = this.user.email;
-    this.userprofile.phone = this.user.phone_number;
-    this.billing.city = this.user.city;
-    this.billing.address = this.user.address;
-    this.billing.state = this.user.state;
-    //this.billing.country = this.user.country;
+    this.userprofile.first_name = auth.getUser().first_name;
+    this.userprofile.last_name = auth.getUser().last_name;
+    this.userprofile.email = auth.getUser().email;
+    this.userprofile.phone = auth.getUser().phone_number;
+    this.billing.city = auth.getUser().city;
+    this.billing.address = auth.getUser().address;
+    this.billing.state = auth.getUser().state;
+    this.billing.country = auth.getUser().country;
   },
   data: function () {
     return {
@@ -905,8 +894,40 @@ export default {
   methods: {
     ...mapActions("user", ["userLogin", "userLogout"]),
     ...mapActions("notification", ["addNotification"]),
+    status(validation){
+      return {
+      	error: validation.$error
+      }
+    },
+    checkRequired(validation){
+      if(!validation.$dirty && validation.$model == ""){
+        return true;
+      } else if(validation.$dirty && validation.$error && validation.$model == ""){
+        return false;
+      } else {
+        return true;
+      }
+    },
+    checkLength(validation){
+      if(!validation.$dirty && validation.$model == ""){
+        return true;
+      } else if(validation.$dirty && validation.$error && !validation.minLength){
+        return false;
+      } else {
+        return true;
+      }
+    },
+    checkSame(validation){
+      if(!validation.$dirty && validation.$model == ""){
+        return true;
+      } else if(validation.$dirty && validation.$error && !validation.sameAsPassword){
+        return false;
+      } else {
+        return true;
+      }
+    },
     updateProfile: async function () {
-      let submit = document.getElementById("billing_submit");
+      let submit = document.getElementById("update_submit");
       this.$v.userprofile.$touch();
       if (this.$v.userprofile.$invalid) {
         return;
@@ -915,6 +936,7 @@ export default {
         const response = await userService.update(this.userprofile);
         console.log(response);
         this.userLogin(response.data.data.user);
+        auth.setUser(response.data.data.user);
         this.addNotification({
           type: "success",
           message: response.data.data.message,
@@ -947,6 +969,7 @@ export default {
         const response = await userService.updateBilling(this.billing);
         console.log(response);
         this.userLogin(response.data.data.user);
+        auth.setUser(response.data.data.user);
         this.addNotification({
           type: "success",
           message: response.data.data.message,
@@ -979,6 +1002,7 @@ export default {
         const response = await userService.createShipping(this.shipping);
         console.log(response);
         this.userLogin(response.data.data.user);
+        auth.setUser(response.data.data.user);
         this.addNotification({
           type: "success",
           message: response.data.data.message,
@@ -1035,7 +1059,7 @@ export default {
 </script>
 
 <style scoped>
-.error-input {
+.error {
   border-color: red !important;
 }
 </style>
