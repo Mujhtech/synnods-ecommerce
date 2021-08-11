@@ -24,4 +24,19 @@ class Product extends Model
     {
         return $this->belongsTo(SubCategory::class);
     }
+
+    public function brand()
+    {
+        return $this->belongsTo(ProductBrand::class, 'product_brand_id', 'id');
+    }
+
+    public function label()
+    {
+        return $this->belongsTo(ProductLabel::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(ProductReview::class, 'product_id', 'id');
+    }
 }

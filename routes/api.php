@@ -67,6 +67,8 @@ Route::group(['prefix' => 'v1'], function () {
     Route::prefix('product')->name('product.')->group(function () {
 
         Route::get('/', [ProductController::class, 'index'])->name('index');
+
+        Route::post('create', [ProductController::class, 'store'])->name('create');
         
     });
 
@@ -130,6 +132,10 @@ Route::group(['prefix' => 'v1'], function () {
         Route::put('billing/update', [UserController::class, 'updateBilling'])->name('billing.update');
 
         Route::post('shipping/create', [UserController::class, 'createShipping'])->name('shipping.create');
+
+        Route::get('shipping/remove/{address}', [UserController::class, 'removeShippingAddress'])->name('shipping.remove');
+
+        Route::get('shipping/default/{address}', [UserController::class, 'makeDefaultAddress'])->name('shipping.default');
         
     });
 

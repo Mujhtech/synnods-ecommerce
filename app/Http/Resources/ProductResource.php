@@ -16,9 +16,11 @@ class ProductResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'vendor_id' => $this->vendor_id,
-            'category' => $this->category_id,
-            'sub_category' => $this->sub_category_id,
+            'vendor_id' => VendorResource::make($this->vendor),
+            'category' => CategoryResource::make($this->category),
+            'sub_category' => SubCategoryResource::make($this->sub_category),
+            'brand' => ProductBrandResource::make($this->brand),
+            'reviews' => ProductReviewResource::collection($this->reviews),
             'name' => $this->name,
             'description' => $this->description,
             'contents' => $this->contents,

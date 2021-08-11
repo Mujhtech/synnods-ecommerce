@@ -105,12 +105,54 @@ class UserController extends ApiController
         $shipping->city = $request->city;
         $shipping->user_id = $user->id;
         $shipping->phone = $request->phone;
+        $shipping->status = 1;
 
         if($shipping->save()) {
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'message' => 'Data updated successfully',
                 'user' => UserResource::make($user)
+            ]);
+            
+        } else {
+
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Something went wrong'
+            ]);
+
+        }
+
+    }
+
+    public function removeShippingAddress(Request $request, DeliveryAddress $address){
+
+        if($address->delete()) {
+
+            return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+                'message' => 'Data removed successfully',
+                'user' => UserResource::make($request->user())
+            ]);
+            
+        } else {
+
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Something went wrong'
+            ]);
+
+        }
+
+    }
+    
+
+    public function makeDefaultAddress(Request $request, DeliveryAddress $address){
+
+        $address->is_default = 1;
+
+        if($address->save()) {
+
+            return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+                'message' => 'Data saved successfully',
+                'user' => UserResource::make($request->user())
             ]);
             
         } else {
