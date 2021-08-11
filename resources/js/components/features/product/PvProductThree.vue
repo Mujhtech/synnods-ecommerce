@@ -2,7 +2,7 @@
 	<div class="product-default count-down">
 		<h3 class="product-name">Flash Deals</h3>
 		<figure>
-			<router-link :to="`/product/default/${product.slug}`">
+			<router-link :to="`/product/${product.slug}`">
 				<img
 					v-lazy="`${baseUrl}${product.featured_image}`"
 					alt="large-picture"
@@ -26,7 +26,7 @@
 
 		<div class="product-details">
 			<h3 class="product-title">
-				<router-link :to="'/product/default/' + product.slug">{{ product.name }}</router-link>
+				<router-link :to="'/product/' + product.slug">{{ product.name }}</router-link>
 			</h3>
 
 			<div class="ratings-container">

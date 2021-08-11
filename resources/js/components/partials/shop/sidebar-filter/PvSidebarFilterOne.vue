@@ -32,7 +32,7 @@
 								:class="{active: slotProps.model.slug === currentCategory}"
 							>
 								{{ slotProps.model.name }}
-								<span class="products-count">({{ slotProps.model.counts }})</span>
+								<span class="products-count">({{ slotProps.model.sub_categories.length }})</span>
 							</router-link>
 						</template>
 						<template v-slot:treeNodeIcon>
@@ -242,6 +242,7 @@ export default {
 	},
 	computed: {
 		categoryTree: function () {
+			console.log(this.categoryList);
 			return new Tree( this.categoryList );
 		},
 		priceFilterRoute: function () {

@@ -1,7 +1,7 @@
 <template>
 	<div class="product-default inner-quickview inner-icon">
 		<figure>
-			<router-link :to="`/product/default/${product.slug}`">
+			<router-link :to="`/product/${product.slug}`">
 				<img	
 					v-lazy="`${baseUrl}${product.featured_image}`"
 					alt="large-picture"
@@ -91,7 +91,7 @@
 
 			<div class="title-wrap">
 				<h3 class="product-title">
-					<router-link :to="'/product/default/' + product.slug">{{ product.name }}</router-link>
+					<router-link :to="'/product/' + product.slug">{{ product.name }}</router-link>
 				</h3>
 			</div>
 

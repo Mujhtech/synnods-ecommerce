@@ -50,6 +50,11 @@ const routes = [
         name: "Shop"
     },
     {
+        path: "/product/:slug",
+        component: Shop,
+        name: "Single Product"
+    },
+    {
         path: "/account",
         component: Account,
         name: "Account",

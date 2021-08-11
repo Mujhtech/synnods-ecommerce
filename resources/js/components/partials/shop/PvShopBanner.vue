@@ -8,7 +8,7 @@
 			<div class="col-sm-4">
 				<figure>
 					<img
-						:src="'/assets/images/home/banners/category-banner.jpg'"
+						:src="'/images/category-banner.jpg'"
 						alt="banner"
 						width="372"
 						height="247"

@@ -287,6 +287,7 @@ export default {
 		PvPagination
 	},
 	props: {
+		products: Array,
 		itemsPerRow: {
 			type: Number,
 			default: 4
@@ -330,7 +331,7 @@ export default {
 	},
 	created: function () {
 		this.itemsPerPage = this.$route.query[ 'per_page' ] ? parseInt( this.$route.query[ 'per_page' ] ) : 8;
-		this.getProducts( false );
+		//this.getProducts( false );
 		this.isOffCanvas = this.$route.path.includes( 'off-canvas' )
 			? true
 			: false;
@@ -340,7 +341,7 @@ export default {
 		getProducts: function ( isScrll = true ) {
 			this.products = null;
 
-			Api.get( `${ baseUrl }/shop`, {
+			/*Api.get( `${ baseUrl }/shop`, {
 				params: {
 					...this.$route.query,
 					demo: currentDemo,
@@ -354,6 +355,7 @@ export default {
 					if ( isScrll ) scrollTopHandler();
 				} )
 				.catch( error => ( { error: JSON.stringify( error ) } ) );
+				*/
 		},
 		showSidebarFilter: function () {
 			document.querySelector( 'body' ).classList.add( 'sidebar-opened' );

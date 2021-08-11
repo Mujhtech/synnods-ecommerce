@@ -1,36 +1,30 @@
 <template>
 	<div class="product-default left-details product-widget">
 		<figure>
-			<nuxt-link :to="'/product/default/' + product.slug">
+			<router-link :to="'/product/' + product.slug">
 				<template v-if="isLazy">
 					<img
-						v-lazy="`${baseUrl}${item.url}`"
-						v-for="(item,index) in product.small_pictures.slice(0,2)"
-						:key="'small-product' + index"
-						:width="item.width"
-						:height="item.height"
+						v-lazy="`${baseUrl}${product.featured_image}`"
+						:width="product.featured_image.width"
+						:height="product.featured_image.height"
 						alt="small-product-image"
-						:class="{'last-image': index === 1}"
 					/>
 				</template>
 
 				<template v-else>
 					<img
-						:src="`${baseUrl}${item.url}`"
-						v-for="(item,index) in product.small_pictures.slice(0,2)"
-						:key="'small-product' + index"
-						:width="item.width"
-						:height="item.height"
+						:src="`${baseUrl}${product.featured_image}`"
+						:width="product.featured_image.width"
+						:height="product.featured_image.height"
 						alt="small-product-image"
-						:class="{'last-image': index === 1}"
 					/>
 				</template>
-			</nuxt-link>
+			</router-link>
 		</figure>
 
 		<div class="product-details">
 			<h2 class="product-title font2">
-				<nuxt-link :to="'/product/default/' + product.slug">{{ product.name }}</nuxt-link>
+				<router-link :to="'/product/' + product.slug">{{ product.name }}</router-link>
 			</h2>
 
 			<div class="ratings-container">
@@ -49,12 +43,12 @@
 				key="singlePrice"
 			>
 				<template v-if="!product.is_sale">
-					<span class="product-price">${{ product.price | priceFormat }}</span>
+					<span class="product-price">₦{{ product.price | priceFormat }}</span>
 				</template>
 
 				<template v-else>
-					<span class="product-price">${{ product.sale_price | priceFormat }}</span>
-					<span class="old-price">${{ product.price | priceFormat }}</span>
+					<span class="product-price">₦{{ product.sale_price | priceFormat }}</span>
+					<span class="old-price">₦{{ product.price | priceFormat }}</span>
 				</template>
 			</div>
 
@@ -65,12 +59,12 @@
 				<span
 					class="product-price"
 					v-if="minPrice !== maxPrice"
-				>${{ minPrice | priceFormat }} &ndash; ${{ maxPrice | priceFormat }}</span>
+				>₦{{ minPrice | priceFormat }} &ndash; ₦{{ maxPrice | priceFormat }}</span>
 
 				<span
 					class="product-price"
 					v-else
-				>${{ minPrice | priceFormat }}</span>
+				>₦{{ minPrice | priceFormat }}</span>
 			</div>
 		</div>
 	</div>
@@ -103,14 +97,14 @@ export default {
 			this.discount = parseInt( this.discount );
 		}
 
-		if ( this.product.variants.length > 0 && !this.product.price ) {
+		/*if ( this.product.variants.length > 0 && !this.product.price ) {
 			this.minPrice = this.product.variants[ 0 ].price;
 			this.product.variants.forEach( item => {
 				let itemPrice = item.sale_price ? item.sale_price : item.price;
 				if ( this.minPrice > itemPrice ) this.minPrice = itemPrice;
 				if ( this.maxPrice < itemPrice ) this.maxPrice = itemPrice;
 			} );
-		}
+		}*/
 	}
 };
 </script>
