@@ -2,14 +2,14 @@
 	<div class="product-default count-down">
 		<h3 class="product-name">Flash Deals</h3>
 		<figure>
-			<nuxt-link :to="`/product/default/${product.slug}`">
+			<router-link :to="`/product/default/${product.slug}`">
 				<img
-					v-lazy="`${baseUrl}${product.small_pictures[0].url}`"
+					v-lazy="`${baseUrl}${product.featured_image}`"
 					alt="large-picture"
-					:width="product.small_pictures[0].width"
-					:height="product.small_pictures[0].height"
+					:width="product.featured_image.width"
+					:height="product.featured_image.height"
 				/>
-			</nuxt-link>
+			</router-link>
 
 			<div class="label-group">
 				<span class="product-label label-sale">-{{ discount }}%</span>
@@ -17,7 +17,7 @@
 			<div class="product-countdown-container">
 				<span class="product-countdown-title">offer ends in:</span>
 				<pv-count-down
-					:until="product.until"
+					:until="product.featured_end"
 					:compact="true"
 				>
 				</pv-count-down>
@@ -26,7 +26,7 @@
 
 		<div class="product-details">
 			<h3 class="product-title">
-				<nuxt-link :to="'/product/default/' + product.slug">{{ product.name }}</nuxt-link>
+				<router-link :to="'/product/default/' + product.slug">{{ product.name }}</router-link>
 			</h3>
 
 			<div class="ratings-container">
@@ -45,12 +45,12 @@
 				key="singlePrice"
 			>
 				<template v-if="!product.is_sale">
-					<span class="product-price">${{ product.price | priceFormat }}</span>
+					<span class="product-price">₦{{ product.price | priceFormat }}</span>
 				</template>
 
 				<template v-else>
-					<span class="product-price">${{ product.sale_price | priceFormat }}</span>
-					<span class="old-price">${{ product.price | priceFormat }}</span>
+					<span class="product-price">₦{{ product.sale_price | priceFormat }}</span>
+					<span class="old-price">₦{{ product.price | priceFormat }}</span>
 				</template>
 			</div>
 
@@ -59,11 +59,11 @@
 				v-else
 			>
 				<template v-if="minPrice !== maxPrice">
-					<span class="product-price">${{ minPrice | priceFormat }} &ndash; ${{ maxPrice | priceFormat }}</span>
+					<span class="product-price">₦{{ minPrice | priceFormat }} &ndash; ${{ maxPrice | priceFormat }}</span>
 				</template>
 
 				<template v-else>
-					<span class="product-price">${{ minPrice | priceFormat }}</span>
+					<span class="product-price">₦{{ minPrice | priceFormat }}</span>
 				</template>
 			</div>
 		</div>
@@ -98,14 +98,14 @@ export default {
 			this.discount = parseInt( this.discount );
 		}
 
-		if ( !this.product.price ) {
+		/* if ( !this.product.price ) {
 			this.minPrice = this.product.variants[ 0 ].price;
 			this.product.variants.forEach( item => {
 				let itemPrice = item.is_sale ? item.sale_price : item.price;
 				if ( this.minPrice > itemPrice ) this.minPrice = itemPrice;
 				if ( this.maxPrice < itemPrice ) this.maxPrice = itemPrice;
 			} );
-		}
+		} */
 	}
 };
 </script>   

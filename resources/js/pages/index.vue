@@ -9,8 +9,8 @@
 
           <div class="col-lg-3 mb-2">
             <pv-intro-collection
-              :products="products"
-              v-if="products.length > 0"
+              :products="featuredProducts"
+              v-if="featuredProducts.length > 0"
             ></pv-intro-collection>
           </div>
         </div>
@@ -19,14 +19,14 @@
 
     <pv-service-section></pv-service-section>
 
-    <pv-popular-collection :products="products"></pv-popular-collection>
+    <pv-popular-collection :products="mostViewProducts" v-if="mostViewProducts.length > 0"></pv-popular-collection>
 
     <pv-category-section></pv-category-section>
 
-    <pv-best-collection
+    <!--<pv-best-collection
       :products="products"
       v-if="products.length > 0"
-    ></pv-best-collection>
+    ></pv-best-collection>-->
 
     <pv-new-collection
       :products="products"
@@ -60,12 +60,11 @@ import PvTopCollection from "../components/partials/home/PvTopCollection";
 import PvBrandSection from "../components/partials/home/PvBrandSection";
 
 import {
-  getProductsByAttri,
-  getTopSellingProducts,
-  getTopRatedProducts,
+  getProductsByFeatured,
+  getProductsByViews
 } from "../utils/service";
 import { getCookie } from "../utils";
-import Api, { baseUrl } from "../api";
+import { fetchProduct } from "../services/product";
 
 export default {
   name: "Home",
@@ -94,21 +93,23 @@ export default {
       newProducts: [],
       bestProducts: [],
       topRatedProducts: [],
+      mostViewProducts: [],
       timerId: 0,
     };
   },
-  mounted: function () {
-    Api.get(`${baseUrl}/demo22`)
-      .then((response) => {
-        this.products = response.data.products;
-        this.posts = response.data.posts;
-        this.featuredProducts = getProductsByAttri(response.data.products);
-        this.newProducts = getProductsByAttri(response.data.products, "is_new");
-        this.bestProducts = getTopSellingProducts(response.data.products);
-        this.topRatedProducts = getTopRatedProducts(response.data.products);
-      })
-      .catch((error) => ({ error: JSON.stringify(error) }));
-
+  mounted: async function () {
+    try {
+      const response = await fetchProduct();
+      this.products = response.data.data.data;
+      this.featuredProducts = getProductsByFeatured(response.data.data.data);
+      this.mostViewProducts = getProductsByViews(response.data.data.data);
+      //this.newProducts = getProductsByAttri(response.data.data.data, "is_new");
+      //this.bestProducts = getTopSellingProducts(response.data.data.data);
+      //this.topRatedProducts = getTopRatedProducts(response.data.data.data);
+      console.log(response);
+    } catch (err) {
+      console.log(err.response);
+    }
     this.timerId = setTimeout(() => {
       if (this.$route.path === "/" && getCookie("newsletter") !== "false") {
         this.$modal.show(

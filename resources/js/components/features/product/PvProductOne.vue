@@ -1,17 +1,14 @@
 <template>
 	<div class="product-default inner-quickview inner-icon">
 		<figure>
-			<nuxt-link :to="`/product/default/${product.slug}`">
-				<img
-					v-for="(item,index) in product.large_pictures.slice(0,2)"
-					:key="`related-large-${index}`"
-					v-lazy="`${baseUrl}${item.url}`"
+			<router-link :to="`/product/default/${product.slug}`">
+				<img	
+					v-lazy="`${baseUrl}${product.featured_image}`"
 					alt="large-picture"
-					:width="item.width"
-					:height="item.height"
-					:class="{'last-image': index === 1}"
+					:width="product.featured_image.width"
+					:height="product.featured_image.height"
 				/>
-			</nuxt-link>
+			</router-link>
 
 			<div class="label-group">
 				<div
@@ -38,19 +35,18 @@
 			</a>
 
 			<div class="btn-icon-group">
-				<nuxt-link
+				<!--<router-link
 					:to="'/product/default/' + product.slug"
 					class="btn-icon btn-add-cart"
 					v-if="product.variants.length > 0"
 					key="variantProduct"
 				>
 					<i class="fa fa-arrow-right"></i>
-				</nuxt-link>
+				</router-link>-->
 
 				<a
 					href="javascript:;"
 					class="btn-icon btn-add-cart product-type-simple"
-					v-else
 					@click="addCart"
 				>
 					<i class="icon-shopping-cart"></i>
@@ -68,19 +64,19 @@
 						v-for="(cat,index) in product.product_categories"
 						:key="`product-category-${index}`"
 					>
-						<nuxt-link :to="{ path: '/shop', query: { category: cat.slug }}">{{ cat.name }}</nuxt-link>
+						<router-link :to="{ path: '/shop', query: { category: cat.slug }}">{{ cat.name }}</router-link>
 						<template v-if="index < product.product_categories.length - 1">,</template>
 					</span>
 				</div>
 
-				<nuxt-link
+				<router-link
 					to="/pages/wishlist"
 					class="btn-icon-wish added-wishlist"
 					title="Go to Wishlist"
 					v-if="isWishlisted"
 				>
 					<i class="icon-heart"></i>
-				</nuxt-link>
+				</router-link>
 
 				<a
 					href="javascript:;"
@@ -95,7 +91,7 @@
 
 			<div class="title-wrap">
 				<h3 class="product-title">
-					<nuxt-link :to="'/product/default/' + product.slug">{{ product.name }}</nuxt-link>
+					<router-link :to="'/product/default/' + product.slug">{{ product.name }}</router-link>
 				</h3>
 			</div>
 
@@ -118,12 +114,12 @@
 				key="singlePrice"
 			>
 				<template v-if="!product.is_sale">
-					<span class="product-price">${{ product.price | priceFormat }}</span>
+					<span class="product-price">₦{{ product.price | priceFormat }}</span>
 				</template>
 
 				<template v-else>
-					<span class="product-price">${{ product.sale_price | priceFormat }}</span>
-					<span class="old-price">${{ product.price | priceFormat }}</span>
+					<span class="product-price">₦{{ product.sale_price | priceFormat }}</span>
+					<span class="old-price">₦{{ product.price | priceFormat }}</span>
 				</template>
 			</div>
 
@@ -132,11 +128,11 @@
 				v-else
 			>
 				<template v-if="minPrice !== maxPrice">
-					<span class="product-price">${{ minPrice | priceFormat }} &ndash; ${{ maxPrice | priceFormat }}</span>
+					<span class="product-price">₦{{ minPrice | priceFormat }} &ndash; ₦{{ maxPrice | priceFormat }}</span>
 				</template>
 
 				<template v-else>
-					<span class="product-price">${{ minPrice | priceFormat }}</span>
+					<span class="product-price">₦{{ minPrice | priceFormat }}</span>
 				</template>
 			</div>
 		</div>

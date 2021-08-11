@@ -1,8 +1,20 @@
 /**
  * function to get product for certain attribute
  */
+export function getProductsByFeatured(products){
+    let temp = [ ...products ];
+    console.log(temp);
+    return temp.filter( item => item.is_featured === true );
+}
+
+export function getProductsByViews(products){
+    let temp = [ ...products ];
+    return temp.filter( item => item.views > 5 );
+}
+
 export function getProductsByAttri( products, attri = "is_hot" ) {
     let temp = [ ...products ];
+    console.log(temp);
     return temp.filter( item => item[ attri ] === true );
 }
 

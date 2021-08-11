@@ -120,16 +120,6 @@
                       <li><a href="javascript:;">Shipping Guide</a></li>
                       <li><a href="javascript:;">FAQs</a></li>
                       <li><a href="javascript:;">Product Support</a></li>
-                      <li><a href="javascript:;">Privacy</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-sm-6 link-part">
-                    <ul class="mb-0">
-                      <li>
-                        <a href="javascript:;">Orders History</a>
-                      </li>
-                      <li><a href="javascript:;">Advanced Search</a></li>
-                      <li><a href="javascript:;">Affiliate Program</a></li>
                     </ul>
                   </div>
                 </div>
@@ -140,15 +130,13 @@
                 <h4 class="widget-title">About</h4>
                 <ul class="links">
                   <li>
-                    <router-link to="/pages/about-us">About Porto</router-link>
+                    <router-link to="/about-us">About Porto</router-link>
                   </li>
                   <li><a href="javascript:;">Our Guarantees</a></li>
                   <li><a href="javascript:;">Terms And Conditions</a></li>
                   <li><a href="javascript:;">Privacy policy</a></li>
                   <li><a href="javascript:;">Return Policy</a></li>
-                  <li>
-                    <a href="javascript:;">Intellectual Property Claims</a>
-                  </li>
+                  <li><a href="javascript:;">Affiliate Program</a></li>
                   <li><a href="javascript:;">Site Map</a></li>
                 </ul>
               </div>
@@ -159,13 +147,13 @@
         <div class="footer-bottom d-sm-flex align-items-center">
           <div class="footer-left">
             <span class="footer-copyright"
-              >© Porto eCommerce. 2021. All Rights Reserved</span
+              >© Synnods eCommerce. 2021. All Rights Reserved</span
             >
           </div>
 
           <div class="footer-right ml-auto mt-1 mt-sm-0">
             <img
-              :src="'/assets/images/home/payment-icon.png'"
+              :src="'/images/payment-icon.png'"
               alt="payment"
               width="200"
               height="27"

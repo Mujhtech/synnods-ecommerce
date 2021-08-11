@@ -34,7 +34,7 @@
 					<div class="col-md-6 col-lg-3 align-self-baseline">
 						<figure>
 							<img
-								:src="'./images/home/banners/banner-3.jpg'"
+								:src="'./images/banner-3.jpg'"
 								alt="image"
 								width="380"
 								height="136"
@@ -60,10 +60,10 @@
 					</div>
 					<div class="col-md-6 col-lg-2 py-4 py-lg-5">
 						<div class="px-5 px-md-0">
-							<nuxt-link
+							<router-link
 								to="/shop"
 								class="btn btn-dark font1 ls-10"
-							>View All Now</nuxt-link>
+							>View All Now</router-link>
 						</div>
 					</div>
 				</div>
@@ -75,7 +75,6 @@
 <script>
 import PvCarousel from '../../features/PvCarousel';
 import PvProductOne from '../../features/product/PvProductOne';
-import { getProductsByAttri } from '../../../utils/service';
 import { productSlider } from '../../../utils/data/carousel';
 
 export default {
@@ -93,7 +92,7 @@ export default {
 		};
 	},
 	created: function () {
-		this.newProducts = getProductsByAttri( this.products, 'is_new' );
+		this.newProducts = this.products;
 	}
 };
 </script>

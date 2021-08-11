@@ -19,7 +19,7 @@
 			>
 				<div class="swiper-slide">
 					<img
-						:src="'/assets/images/home/brands/brand1.png'"
+						:src="'/images/brand4.png'"
 						width="200"
 						height="50"
 						alt="brand"
@@ -28,7 +28,7 @@
 
 				<div class="swiper-slide">
 					<img
-						:src="'/assets/images/home/brands/brand2.png'"
+						:src="'/images/brand4.png'"
 						width="200"
 						height="50"
 						alt="brand"
@@ -37,7 +37,7 @@
 
 				<div class="swiper-slide">
 					<img
-						:src="'/assets/images/home/brands/brand3.png'"
+						:src="'/images/brand4.png'"
 						width="200"
 						height="50"
 						alt="brand"
@@ -46,7 +46,7 @@
 
 				<div class="swiper-slide">
 					<img
-						:src="'/assets/images/home/brands/brand4.png'"
+						:src="'/images/brand4.png'"
 						width="200"
 						height="50"
 						alt="brand"
@@ -55,7 +55,7 @@
 
 				<div class="swiper-slide">
 					<img
-						:src="'/assets/images/home/brands/brand5.png'"
+						:src="'/images/brand4.png'"
 						width="200"
 						height="50"
 						alt="brand"

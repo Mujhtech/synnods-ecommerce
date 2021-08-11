@@ -31,11 +31,16 @@ class ProductResource extends JsonResource
             'slug' => $this->slug,
             'stock_status' => $this->stock_status,
             'quantity_in_stock' => $this->quantity_in_stock,
-            'featured' => $this->featured ? true : false,
+            'is_featured' => $this->is_featured ? true : false,
+            'is_hot' => $this->is_hot ? true : false,
+            'is_sale' => $this->is_sale ? true : false,
+            'featured_end' => $this->featured_end,
+            'sale_price' => $this->sale_price,
             'weight' => $this->weight,
             'tags' => $this->tags,
             'labels' => $this->labels,
-            'price' => $this->price
+            'price' => $this->price,
+            'views' => $this->views
 
         ];
     }
