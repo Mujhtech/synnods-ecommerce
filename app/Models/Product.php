@@ -4,10 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Storage;
 
 class Product extends Model
 {
     use HasFactory;
+
+    public function getFeaturedImageUrlAttribute()
+    {
+        return Storage::url($this->featured_image);
+    }
 
     public function vendor()
     {

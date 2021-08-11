@@ -7,7 +7,7 @@
 		<div class="home-slide home-slide-1 banner swiper-slide">
 			<img
 				class="swiper-lazy slide-bg"
-				:src="'./images/home/slider/home_slide1.jpg'"
+				:src="'./images/banners/home_slide1.jpg'"
 				alt="slider image"
 				width="772"
 				height="434"
@@ -43,7 +43,7 @@
 		<div class="home-slide home-slide-2 banner swiper-slide">
 			<img
 				class="swiper-lazy slide-bg"
-				:src="'./images/home/slider/home_slide2.jpg'"
+				:src="'./images/banners/home_slide2.jpg'"
 				alt="slider image"
 				width="772"
 				height="434"
