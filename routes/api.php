@@ -68,6 +68,12 @@ Route::group(['prefix' => 'v1'], function () {
 
         Route::get('/', [ProductController::class, 'index'])->name('index');
 
+        Route::get('/category/{slug}', [ProductController::class, 'byCategory'])->name('index');
+
+        Route::get('/sub_category/{slug}', [ProductController::class, 'bySubCategory'])->name('index');
+
+        Route::get('/vendor/{slug}', [ProductController::class, 'byVendor'])->name('index');
+
         Route::post('create', [ProductController::class, 'store'])->name('create');
         
     });

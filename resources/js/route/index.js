@@ -14,7 +14,6 @@ import Checkout from "../pages/pages/checkout";
 import Wishlist from "../pages/pages/wishlist";
 import Shop from "../pages/shop/index";
 import Error from "../layouts/error";
-import Vendor from "../pages/vendor/index";
 import VendorList from "../pages/vendor/list";
 import VendorStore from "../pages/vendor/store";
 import Blog from "../pages/pages/blog";
@@ -82,20 +81,14 @@ const routes = [
         name: "Track Order"
     },
     {
-        path: "/vendor",
-        component: Vendor,
-        redirect: "/vendor",
-        children: [
-            {
-                path: "/",
-                component: VendorList
-            },
-            {
-                path: "store",
-                component: VendorStore
-            },
-
-        ]
+        path: "/vendors",
+        component: VendorList,
+        name: "Vendors"
+    },
+    {
+        path: "/vendor/:user",
+        component: VendorStore,
+        name: "Vendor"
     },
     {
         path: "/auth",

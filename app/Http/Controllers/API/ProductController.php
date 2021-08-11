@@ -11,6 +11,9 @@ use App\Models\ProductBrand;
 use App\Models\ProductLabel;
 use App\Models\ProductReview;
 use App\Models\ProductTag;
+use App\Models\Category;
+use App\Models\Vendor;
+use App\Models\SubCategory;
 
 class ProductController extends ApiController
 {
@@ -18,6 +21,41 @@ class ProductController extends ApiController
     public function index(){
 
         $products = Product::with(['vendor', 'reviews', 'category', 'sub_category', 'brand'])->get();
+
+        return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+            'data' => ProductResource::collection($products)
+        ]);
+    }
+
+
+    public function byCategory($slug){
+
+        $category = Category::where('slug', $slug)->first();
+
+        $products = Product::where('category_id', $category->id)->with(['vendor', 'reviews', 'category', 'sub_category', 'brand'])->get();
+
+        return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+            'data' => ProductResource::collection($products)
+        ]);
+    }
+
+    public function bySubCategory($slug){
+
+        $sub_category = SubCategory::where('slug', $slug)->first();
+
+        $products = Product::where('category_id', $sub_category->id)->with(['vendor', 'reviews', 'category', 'sub_category', 'brand'])->get();
+
+        return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+            'data' => ProductResource::collection($products)
+        ]);
+    }
+
+
+    public function byVendor($slug){
+
+        $vendor = Vendor::where('store_slug', $slug)->first();
+
+        $products = Product::where('category_id', $vendor->user_id)->with(['vendor', 'reviews', 'category', 'sub_category', 'brand'])->get();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'data' => ProductResource::collection($products)

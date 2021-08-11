@@ -78,7 +78,7 @@
 			</vue-slide-toggle>
 		</div>
 
-		<div class="widget widget-color">
+		<!--<div class="widget widget-color">
 			<h3 class="widget-title">
 				<a
 					data-toggle="collapse"
@@ -131,7 +131,7 @@
 					</ul>
 				</div>
 			</vue-slide-toggle>
-		</div>
+		</div>-->
 
 		<vue-slide-toggle :open="!isEmptyQuery">
 			<div class="widget">

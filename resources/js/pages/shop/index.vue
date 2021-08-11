@@ -14,7 +14,9 @@
 
       <div class="row pt-3">
         <div class="col-lg-9">
-          <pv-product-list-one :products="featuredProducts"></pv-product-list-one>
+          <pv-product-list-one
+            :products="featuredProducts"
+          ></pv-product-list-one>
         </div>
 
         <div class="sidebar-overlay" @click.prevent="toggleSidebar"></div>
@@ -52,6 +54,10 @@ import * as catService from "../../services/category";
 import { fetchProduct } from "../../services/product";
 
 export default {
+  metaInfo: {
+    title: "Shop",
+    titleTemplate: "%s - Synoods Ecommerce",
+  },
   directives: {
     Sticky,
   },

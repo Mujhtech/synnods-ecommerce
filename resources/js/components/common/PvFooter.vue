@@ -58,8 +58,8 @@
             <div class="col-lg-4">
               <img
                 class="logo"
-                :src="'/assets/images/logo-black.png'"
-                alt="Porto Logo"
+                :src="'/images/logo.png'"
+                alt="Logo"
                 width="220"
                 height="80"
               />

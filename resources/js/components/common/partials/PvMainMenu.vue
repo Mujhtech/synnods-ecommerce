@@ -26,13 +26,15 @@
 
     <ul class="menu main-menu menu-arrow">
       <li>
-        <router-link to="/">Home</router-link>
+        <router-link :class="{ active: $route.path.indexOf('/') > -1 }" to="/"
+          >Home</router-link
+        >
       </li>
 
       <li>
         <router-link
-          to="/vendor"
-          :class="{ active: $route.path.indexOf('/vendor') > -1 }"
+          to="/vendors"
+          :class="{ active: $route.path.indexOf('/vendors') > -1 }"
           >Vendors</router-link
         >
       </li>
