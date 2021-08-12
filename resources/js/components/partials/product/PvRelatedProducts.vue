@@ -44,9 +44,9 @@
 </template>
 
 <script>
-import PvProductOne from '~/components/features/product/PvProductOne';
-import PvCarousel from '~/components/features/PvCarousel';
-import { baseSlider9 } from '~/utils/data/carousel';
+import PvProductOne from '../../features/product/PvProductOne';
+import PvCarousel from '../../features/PvCarousel';
+import { baseSlider9 } from '../../../utils/data/carousel';
 
 export default {
 	components: {

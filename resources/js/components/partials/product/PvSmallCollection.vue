@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import PvSmallProduct from '~/components/features/product/PvSmallProduct';
+import PvSmallProduct from '../../features/product/PvSmallProduct';
 
 export default {
 	components: {

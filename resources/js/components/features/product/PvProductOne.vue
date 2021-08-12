@@ -61,11 +61,9 @@
 					v-if="type === 1"
 				>
 					<span
-						v-for="(cat,index) in product.product_categories"
-						:key="`product-category-${index}`"
 					>
-						<router-link :to="{ path: '/shop', query: { category: cat.slug }}">{{ cat.name }}</router-link>
-						<template v-if="index < product.product_categories.length - 1">,</template>
+						<router-link :to="{ path: '/shop', query: { category: product.category.slug }}">{{ product.category.name }}</router-link>
+						, <router-link :to="{ path: '/shop', query: { sub_category: product.sub_category.slug }}">{{ product.sub_category.name }}</router-link>
 					</span>
 				</div>
 
