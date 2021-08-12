@@ -1,8 +1,8 @@
-// Cart
-export const USER_LOGIN = 'USER_LOGIN';
-export const USER_LOGOUT = 'USER_LOGOUT';
+// User store
+const USER_LOGIN = 'USER_LOGIN';
+const USER_LOGOUT = 'USER_LOGOUT';
 
-export function state() {
+function state() {
     return {
         isLoggedIn: false,
         user: {},
@@ -11,7 +11,7 @@ export function state() {
     }
 };
 
-export const getters = {
+const getters = {
     user: state => {
         return state.user;
     },
@@ -26,7 +26,7 @@ export const getters = {
     }
 }
 
-export const actions = {
+const actions = {
     userLogin: function ( { commit }, payload ) {
         commit( USER_LOGIN, payload );
     },
@@ -35,7 +35,7 @@ export const actions = {
     }
 }
 
-export const mutations = {
+const mutations = {
     [ USER_LOGIN ]( state, payload ) {
         state.isLoggedIn = true;
         state.user = payload;
@@ -47,3 +47,11 @@ export const mutations = {
         state.user = payload;
     }
 }
+
+export default {
+    namespaced: true,
+    state,
+    getters,
+    actions,
+    mutations
+};

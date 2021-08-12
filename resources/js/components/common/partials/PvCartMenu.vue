@@ -36,22 +36,22 @@
 						>
 							<div class="product-details">
 								<h4 class="product-title">
-									<router-link :to="'/product/default/' + product.slug">{{ product.name }}</router-link>
+									<router-link :to="'/product/' + product.slug">{{ product.name }}</router-link>
 								</h4>
 
 								<span class="cart-product-info">
 									<span class="cart-product-qty">{{ product.qty }}</span>
-									× ${{ product.price | priceFormat }}
+									× ₦{{ product.price | priceFormat }}
 								</span>
 							</div>
 
 							<figure class="product-image-container">
-								<router-link :to="'/product/default/' + product.slug">
+								<router-link :to="'/product/' + product.slug">
 									<img
-										v-lazy="`${baseUrl}${product.small_pictures[0].url}`"
+										v-lazy="`${baseUrl}${product.featured_image}`"
 										alt="product"
-										:width="product.small_pictures[0].width"
-										:height="product.small_pictures[0].height"
+										:width="product.featured_image.width"
+										:height="product.featured_image.height"
 									/>
 								</router-link>
 
@@ -70,16 +70,16 @@
 					<div class="dropdown-cart-total">
 						<span>SUBTOTAL:</span>
 
-						<span class="cart-total-price float-right">${{ totalPrice | priceFormat }}</span>
+						<span class="cart-total-price float-right">₦{{ totalPrice | priceFormat }}</span>
 					</div>
 
 					<div class="dropdown-cart-action">
 						<router-link
-							to="/pages/cart"
+							to="/cart"
 							class="btn btn-gray btn-block view-cart"
 						>View Cart</router-link>
 						<router-link
-							to="/pages/checkout"
+							to="/checkout"
 							class="btn btn-dark btn-block"
 						>Checkout</router-link>
 					</div>

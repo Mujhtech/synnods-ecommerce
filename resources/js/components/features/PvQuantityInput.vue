@@ -12,7 +12,7 @@
 				class="horizontal-quantity form-control bg-transparent"
 				type="number"
 				:min="1"
-				:max="product.stock"
+				:max="product.quantity_in_stock"
 				v-model.number="currentQty"
 			/>
 			<span class="input-group-btn input-group-append">
@@ -42,14 +42,14 @@ export default {
 			this.currentQty = this.qty;
 		},
 		currentQty: function () {
-			if ( this.currentQty > this.product.stock ) this.currentQty = this.product.stock;
+			if ( this.currentQty > this.product.quantity_in_stock ) this.currentQty = this.product.quantity_in_stock;
 			if ( this.currentQty < 1 ) this.currentQty = 1;
 			this.$emit( 'changeCurrentQty', this.currentQty );
 		}
 	},
 	methods: {
 		plusQty: function () {
-			if ( this.currentQty < this.product.stock ) this.currentQty++;
+			if ( this.currentQty < this.product.quantity_in_stock ) this.currentQty++;
 			this.$emit( 'changeQty', this.currentQty, this.product );
 		},
 		minusQty: function () {

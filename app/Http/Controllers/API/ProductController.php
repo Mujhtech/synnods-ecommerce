@@ -51,6 +51,16 @@ class ProductController extends ApiController
     }
 
 
+    public function single($slug){
+
+        $products = Product::where('slug', $slug)->with(['vendor', 'reviews', 'category', 'sub_category', 'brand'])->first();
+
+        return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+            'data' => ProductResource::make($products)
+        ]);
+    }
+
+
     public function byVendor($slug){
 
         $vendor = Vendor::where('store_slug', $slug)->first();

@@ -11,18 +11,18 @@
 			<div class="minipopup-box">
 				<div class="product">
 					<figure class="product-media">
-						<router-link :to="'/product/default' + props.item.data.slug">
+						<router-link :to="'/product/' + props.item.data.slug">
 							<img 
-								:src="`${baseUrl}${props.item.data.small_pictures[0].url}`" 
+								:src="`${baseUrl}${props.item.data.featured_image}`" 
 								alt="product" 
-								:width="props.item.data.small_pictures[0].width"
-								:height="props.item.data.small_pictures[0].height"
+								:width="props.item.data.featured_image.width"
+								:height="props.item.data.featured_image.height"
 							>
 						</router-link>
 					</figure>
 
 					<div class="product-detail">
-						<router-link :to="'/product/default/' + props.item.data.slug" class="product-name">
+						<router-link :to="'/product/' + props.item.data.slug" class="product-name">
 							{{ props.item.data.name }}
 						</router-link>
 
@@ -31,8 +31,8 @@
 				</div>
 
 				<div class="product-action">
-					<router-link to="/pages/cart" class="btn viewcart">View Cart</router-link>
-					<router-link to="/pages/checkout" class="btn btn-dark checkout">Checkout</router-link>
+					<router-link to="/cart" class="btn viewcart">View Cart</router-link>
+					<router-link to="/checkout" class="btn btn-dark checkout">Checkout</router-link>
 				</div>
 
 				<button class="mfp-close" @click="props.close"></button>

@@ -41,7 +41,7 @@
 <script>
 import PvMediaOne from '../../partials/product/media/PvMediaOne';
 import PvDetailOne from '../../partials/product/detail/PvDetailOne';
-import Respository, { baseUrl, currentDemo } from '../../../api';
+import { fetchSingle } from "../../../services/product";
 
 export default {
 	components: {
@@ -53,18 +53,21 @@ export default {
 	},
 	data: function () {
 		return {
-			product: null,
-			currentDemo: currentDemo
+			product: null
 		}
 	},
 	mounted: function () {
 		this.getProduct();
 	},
 	methods: {
-		getProduct: function () {
-			Respository.get( `${ baseUrl }/products/${ this.slug }`, { params: { demo: currentDemo, 'quick_view': true } } ).then( response => {
-				this.product = response.data.product;
-			} ).catch( error => ( { error: JSON.stringify( error ) } ) );
+		getProduct: async function () {
+			try {
+				const response = await fetchSingle(this.slug);
+				console.log(response);
+				this.product = response.data.data.data;
+			} catch(err){
+				console.log(err.response);
+			}
 		}
 	}
 }

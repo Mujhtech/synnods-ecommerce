@@ -17,7 +17,7 @@
 				class="product-single-carousel show-nav-hover"
 				:options="baseSlider1"
 			>
-				<div
+				<!--<div
 					class="swiper-slide"
 					v-for="item in product.large_pictures"
 					:key="item.name"
@@ -27,6 +27,17 @@
 						v-lazy="`${baseUrl}${item.url}`"
 						:width="item.width"
 						:height="item.height"
+						alt="lgPicture"
+					/>
+				</div>-->
+				<div
+					class="swiper-slide"
+				>
+					<img
+						class="product-single-image"
+						v-lazy="`${baseUrl}${product.featured_image}`"
+						:width="product.featured_image.width"
+						:height="product.featured_image.height"
 						alt="lgPicture"
 					/>
 				</div>
@@ -46,7 +57,7 @@
 			ref="thumbRef"
 			:options="baseSlider2"
 		>
-			<div
+			<!--<div
 				class="swiper-dot swiper-slide"
 				v-for="(item,index) in product.pictures"
 				:key="'media-one' + index"
@@ -57,6 +68,18 @@
 					v-lazy="`${baseUrl}${item.url}`"
 					:width="item.width"
 					:height="item.height"
+					alt="product-thumbnail"
+				/>
+			</div>-->
+			<div
+				class="swiper-dot swiper-slide"
+				@click="activeThumbItem(0, $event)"
+				:class="{ active : 0 === 0 }"
+			>
+				<img
+					v-lazy="`${baseUrl}${product.featured_image}`"
+					:width="product.featured_image.width"
+					:height="product.featured_image.height"
 					alt="product-thumbnail"
 				/>
 			</div>
@@ -96,7 +119,7 @@ export default {
 		};
 	},
 	computed: {
-		lightBoxMedia: function () {
+		/*lightBoxMedia: function () {
 			return this.product.large_pictures.reduce( ( acc, cur ) => {
 				return [
 					...acc,
@@ -106,17 +129,25 @@ export default {
 					}
 				];
 			}, [] );
+		} */
+		lightBoxMedia: function () {
+			return [
+					{
+						src: `${ baseUrl }${ this.product.featured_image }`,
+						thumb: `${ baseUrl }${ this.product.featured_image }`
+					}
+				];
 		}
 	},
 	mounted: function () {
 		if ( this.product !== null ) {
 			this.$nextTick( () => {
 				let self = this;
-				this.$refs.mediaRef.swiper.on( "transitionStart", function () {
-					let activeIndex = self.$refs.mediaRef.swiper.activeIndex;
-					self.$refs.thumbRef.swiper.slideTo( activeIndex );
-					self.$refs.thumbRef.swiper.$el.find( ".swiper-wrapper" ).find( ".swiper-dot.active" )[ 0 ].classList.remove( "active" );
-					self.$refs.thumbRef.swiper.$el.find( ".swiper-wrapper" ).find( ".swiper-dot" )[ activeIndex ].classList.add( "active" );
+				this.$refs.mediaRef.$swiper.on( "transitionStart", function () {
+					let activeIndex = self.$refs.mediaRef.$swiper.activeIndex;
+					self.$refs.thumbRef.$swiper.slideTo( activeIndex );
+					self.$refs.thumbRef.$swiper.$el.find( ".swiper-wrapper" ).find( ".swiper-dot.active" )[ 0 ].classList.remove( "active" );
+					self.$refs.thumbRef.$swiper.$el.find( ".swiper-wrapper" ).find( ".swiper-dot" )[ activeIndex ].classList.add( "active" );
 				} );
 			} );
 		}
@@ -135,7 +166,7 @@ export default {
 			this.$refs.mediaRef.swiper.slideTo( index );
 		},
 		openLightBox: function () {
-			this.$refs.lightBox.showImage( this.$refs.mediaRef.swiper.activeIndex );
+			this.$refs.lightBox.showImage( this.$refs.mediaRef.$swiper.activeIndex );
 		}
 	}
 };

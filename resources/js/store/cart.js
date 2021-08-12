@@ -1,15 +1,16 @@
-// Cart
-export const ADD_TO_CART = 'ADD_TO_CART';
-export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
-export const UPDATE_CART = 'UPDATE_CART';
+// Cart store
+const ADD_TO_CART = 'ADD_TO_CART';
+const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+const UPDATE_CART = 'UPDATE_CART';
+const cart = JSON.parse(window.localStorage.getItem('SYNECCART'));
 
-export function state() {
+function state() {
     return {
-        data: []
+        data: cart ? cart.data || [] : [],
     }
 };
 
-export const getters = {
+const getters = {
     cartList: state => {
         return state.data;
     },
@@ -25,7 +26,7 @@ export const getters = {
     }
 }
 
-export const actions = {
+const actions = {
     addToCart: function ( { commit }, payload ) {
         commit( ADD_TO_CART, payload );
 
@@ -43,7 +44,7 @@ export const actions = {
     }
 }
 
-export const mutations = {
+const mutations = {
     [ ADD_TO_CART ]( state, payload ) {
         let isAdded = state.data.findIndex( item => item.name === payload.product.name ) > -1;
         let qty = payload.product.qty ? payload.product.qty : 1;
@@ -64,13 +65,24 @@ export const mutations = {
             }, [] )
         } else {
             state.data.push( payload.product );
+            localStorage.setItem('SYNECCART', JSON.stringify({data: state.data}));
         }
     },
     [ REMOVE_FROM_CART ]( state, payload ) {
         let index = state.data.findIndex( item => item.name === payload.name );
         state.data.splice( index, 1 );
+        localStorage.setItem('SYNECCART', JSON.stringify({data: state.data}));
     },
     [ UPDATE_CART ]( state, payload ) {
         state.data = payload.cartItems;
+        localStorage.setItem('SYNECCART', JSON.stringify({data: state.data}));
     }
 }
+
+export default {
+    namespaced: true,
+    state,
+    getters,
+    actions,
+    mutations
+};

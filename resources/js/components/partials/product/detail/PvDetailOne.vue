@@ -1,80 +1,72 @@
 <template>
-	<div>
-		<h1 class="product-title">{{ product.name }}</h1>
+  <div>
+    <h1 class="product-title">{{ product.name }}</h1>
 
-		<pv-product-nav
-			v-if="isProductNav"
-			:prev-product="prevProduct"
-			:next-product="nextProduct"
-		></pv-product-nav>
+    <pv-product-nav
+      v-if="isProductNav"
+      :prev-product="prevProduct"
+      :next-product="nextProduct"
+    ></pv-product-nav>
 
-		<div class="ratings-container">
-			<div class="product-ratings">
-				<span
-					class="ratings"
-					:style="'width:' + product.ratings * 20 + '%'"
-				></span>
-				<span class="tooltiptext tooltip-top">{{ product.ratings | priceFormat }}</span>
-			</div>
-			<a
-				href="javascript:;"
-				class="rating-link"
-				v-if="product.reviews > 0"
-			>( {{ product.reviews }} Reviews )</a>
-			<a
-				href="javascript:;"
-				class="rating-link"
-				v-else
-			>( There is no review yet. )</a>
-		</div>
+    <div class="ratings-container">
+      <div class="product-ratings">
+        <span
+          class="ratings"
+          :style="'width:' + product.ratings * 20 + '%'"
+        ></span>
+        <span class="tooltiptext tooltip-top">{{
+          product.ratings | priceFormat
+        }}</span>
+      </div>
+      <a href="javascript:;" class="rating-link" v-if="product.reviews > 0"
+        >( {{ product.reviews }} Reviews )</a
+      >
+      <a href="javascript:;" class="rating-link" v-else
+        >( There is no review yet. )</a
+      >
+    </div>
 
-		<hr class="short-divider" />
+    <hr class="short-divider" />
 
-		<div
-			class="price-box"
-			v-if="product.price"
-			key="singlePrice"
-		>
-			<template v-if="!product.is_sale">
-				<span class="new-price">${{ product.price | priceFormat }}</span>
-			</template>
+    <div class="price-box" v-if="product.price" key="singlePrice">
+      <template v-if="!product.is_sale">
+        <span class="new-price">₦{{ product.price | priceFormat }}</span>
+      </template>
 
-			<template v-else>
-				<span class="new-price">${{ product.sale_price | priceFormat }}</span>
-				<span class="old-price">${{ product.price | priceFormat }}</span>
-			</template>
-		</div>
+      <template v-else>
+        <span class="new-price">₦{{ product.sale_price | priceFormat }}</span>
+        <span class="old-price">₦{{ product.price | priceFormat }}</span>
+      </template>
+    </div>
 
-		<div
-			class="price-box"
-			v-else
-		>
-			<template v-if="minPrice !== maxPrice">
-				<span class="new-price">${{ minPrice | priceFormat }} &ndash; ${{ maxPrice | priceFormat }}</span>
-			</template>
+    <div class="price-box" v-else>
+      <template v-if="minPrice !== maxPrice">
+        <span class="new-price"
+          >₦{{ minPrice | priceFormat }} &ndash; ₦{{
+            maxPrice | priceFormat
+          }}</span
+        >
+      </template>
 
-			<template v-else>
-				<span class="new-price">${{ minPrice | priceFormat }}</span>
-			</template>
-		</div>
+      <template v-else>
+        <span class="new-price">₦{{ minPrice | priceFormat }}</span>
+      </template>
+    </div>
 
-		<div
-			class="product-desc"
-			v-if="product.short_description"
-		>
-			<p>{{ product.short_description }}</p>
-		</div>
+    <div class="product-desc" v-if="product.description">
+      <p>{{ product.description }}</p>
+    </div>
 
-		<ul class="single-info-list">
-			<li v-if="product.sku">
-				SKU:
-				<strong>{{ product.sku }}</strong>
-			</li>
+    <ul class="single-info-list">
+      <li v-if="product.sku">
+        SKU:
+        <strong>{{ product.sku }}</strong>
+      </li>
 
-			<li>
-				CATEGORY:
-				<strong>
-					<nuxt-link
+      <li>
+        CATEGORY:
+        <strong>
+          <!--<router-link
 						:to="{path: '/shop', query: {category: item.slug}}"
 						class="product-category"
 						v-for="(item,index) in product.product_categories"
@@ -82,14 +74,25 @@
 					>
 						{{ item.name }}
 						<template v-if="index < product.product_categories.length - 1">,</template>
-					</nuxt-link>
-				</strong>
-			</li>
+					</router-link>-->
+          <router-link
+            :to="{ path: '/shop', query: { category: product.category.slug } }"
+            class="product-category"
+          >
+            {{ product.category.name }}
+          </router-link>, <router-link
+            :to="{ path: '/shop', query: { sub_category: product.sub_category.slug } }"
+            class="product-category"
+          >
+            {{ product.sub_category.name }}
+          </router-link>
+        </strong>
+      </li>
 
-			<li v-if="product.product_tags.length > 0">
+      <!--<li v-if="product.product_tags.length > 0">
 				TAGS:
 				<strong>
-					<nuxt-link
+					<router-link
 						:to="{path: '/shop', query: {tag: item.slug}}"
 						class="product-category"
 						v-for="(item,index) in product.product_tags"
@@ -97,12 +100,12 @@
 					>
 						{{ item.name }}
 						<template v-if="index < product.product_tags.length - 1">,</template>
-					</nuxt-link>
+					</router-link>
 				</strong>
-			</li>
-		</ul>
+			</li>-->
+    </ul>
 
-		<div
+    <!--<div
 			class="product-filters-container"
 			v-if="product.variants.length > 0"
 		>
@@ -198,10 +201,10 @@
 					>Clear</a>
 				</vue-slide-toggle>
 			</div>
-		</div>
+		</div>-->
 
-		<div class="product-action">
-			<vue-slide-toggle
+    <div class="product-action">
+      <!--<vue-slide-toggle
 				:open="isPriceShow"
 				v-if="product.variants.length > 0"
 			>
@@ -219,159 +222,151 @@
 				>
 					<template v-if="product.variants[curIndex].sale_price">
 						<del class="old-price">
-							<span>${{ product.variants[curIndex].price | priceFormat }}</span>
+							<span>{{ product.variants[curIndex].price | priceFormat }}</span>
 						</del>
-						<span class="product-price">${{ product.variants[curIndex].sale_price | priceFormat }}</span>
+						<span class="product-price">₦{{ product.variants[curIndex].sale_price | priceFormat }}</span>
 					</template>
 
 					<template v-else>
-						<span class="product-price">${{ product.variants[curIndex].price | priceFormat }}</span>
+						<span class="product-price">₦{{ product.variants[curIndex].price | priceFormat }}</span>
 					</template>
 				</div>
-			</vue-slide-toggle>
+			</vue-slide-toggle> -->
 
-			<div class="product-single-qty">
-				<pv-quantity-input
-					:product="product"
-					:qty="1"
-					@changeCurrentQty="changeQty"
-				></pv-quantity-input>
-			</div>
-			<a
-				href="javascript:;"
-				class="btn btn-dark add-cart mr-2"
-				title="Add to Cart"
-				@click="addCart"
-				:class="{ disabled: !isCartActive }"
-			>Add to Cart</a>
+      <div class="product-single-qty">
+        <pv-quantity-input
+          :product="product"
+          :qty="1"
+          @changeCurrentQty="changeQty"
+        ></pv-quantity-input>
+      </div>
+      <a
+        href="javascript:;"
+        class="btn btn-dark add-cart mr-2"
+        title="Add to Cart"
+        @click="addCart"
+        :class="{ disabled: !isCartActive }"
+        >Add to Cart</a
+      >
 
-			<nuxt-link
-				to="/pages/cart"
-				class="btn btn-gray view-cart d-none"
-			>View cart</nuxt-link>
-		</div>
+      <router-link to="/cart" class="btn btn-gray view-cart d-none"
+        >View cart</router-link
+      >
+    </div>
 
-		<hr class="divider mb-0 mt-0" />
+    <hr class="divider mb-0 mt-0" />
 
-		<div class="product-single-share mb-3">
-			<label class="sr-only">Share:</label>
+    <div class="product-single-share mb-3">
+      <label class="sr-only">Share:</label>
 
-			<div
-				class="social-icons mr-2"
-				v-if="isShare"
-			>
-				<a
-					href="javascript:;"
-					class="social-icon social-facebook icon-facebook"
-					
-					title="Facebook"
-				></a>
-				<a
-					href="javascript:;"
-					class="social-icon social-twitter icon-twitter"
-					
-					title="Twitter"
-				></a>
-				<a
-					href="javascript:;"
-					class="social-icon social-linkedin fab fa-linkedin-in"
-					
-					title="Linkedin"
-				></a>
-				<a
-					href="javascript:;"
-					class="social-icon social-gplus fab fa-google-plus-g"
-					
-					title="Google +"
-				></a>
-				<a
-					href="javascript:;"
-					class="social-icon social-mail icon-mail-alt"
-					
-					title="Mail"
-				></a>
-			</div>
+      <div class="social-icons mr-2" v-if="isShare">
+        <a
+          href="javascript:;"
+          class="social-icon social-facebook icon-facebook"
+          title="Facebook"
+        ></a>
+        <a
+          href="javascript:;"
+          class="social-icon social-twitter icon-twitter"
+          title="Twitter"
+        ></a>
+        <a
+          href="javascript:;"
+          class="social-icon social-linkedin fab fa-linkedin-in"
+          title="Linkedin"
+        ></a>
+        <a
+          href="javascript:;"
+          class="social-icon social-gplus fab fa-google-plus-g"
+          title="Google +"
+        ></a>
+        <a
+          href="javascript:;"
+          class="social-icon social-mail icon-mail-alt"
+          title="Mail"
+        ></a>
+      </div>
 
-			<nuxt-link
-				to="/pages/wishlist"
-				class="btn-icon-wish add-wishlist added-wishlist"
-				title="Go to Wishlist"
-				v-if="isWishlisted"
-			>
-				<i class="icon-wishlist-2"></i>
-				<span>Go to Wishlist</span>
-			</nuxt-link>
+      <router-link
+        to="/wishlist"
+        class="btn-icon-wish add-wishlist added-wishlist"
+        title="Go to Wishlist"
+        v-if="isWishlisted"
+      >
+        <i class="icon-wishlist-2"></i>
+        <span>Go to Wishlist</span>
+      </router-link>
 
-			<a
-				href="javascript:;"
-				class="btn-icon-wish add-wishlist"
-				title="Add to Wishlist"
-				@click="addWishlist($event)"
-				v-if="!isWishlisted"
-			>
-				<i class="icon-wishlist-2"></i>
-				<span>Add to Wishlist</span>
-			</a>
-		</div>
-	</div>
+      <a
+        href="javascript:;"
+        class="btn-icon-wish add-wishlist"
+        title="Add to Wishlist"
+        @click="addWishlist($event)"
+        v-if="!isWishlisted"
+      >
+        <i class="icon-wishlist-2"></i>
+        <span>Add to Wishlist</span>
+      </a>
+    </div>
+  </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
-import { VueSlideToggle } from 'vue-slide-toggle';
-import PvProductNav from '../../../partials/product/PvProductNav';
-import PvQuantityInput from '../../../features/PvQuantityInput';
-import { baseUrl } from '../../../../api';
+import { mapActions, mapGetters } from "vuex";
+import { VueSlideToggle } from "vue-slide-toggle";
+import PvProductNav from "../../../partials/product/PvProductNav";
+import PvQuantityInput from "../../../features/PvQuantityInput";
+import { baseUrl } from "../../../../api";
 
 export default {
-	components: {
-		VueSlideToggle,
-		PvProductNav,
-		PvQuantityInput
-	},
-	props: {
-		product: Object,
-		prevProduct: Object,
-		nextProduct: Object,
-		isProductNav: {
-			type: Boolean,
-			default: true
-		}
-	},
-	data: function () {
-		return {
-			minPrice: 0,
-			maxPrice: 0,
-			qty: 1,
-			currentIndex: 0,
-			baseUrl: baseUrl,
-			vSizes: [],
-			vColors: [],
-			curSize: {
-				name: null,
-				text: null,
-				image: null
-			},
-			curColor: {
-				name: null,
-				text: null,
-				image: null
-			},
-			tIndex: 0,
-			isShare: {
-				type: Boolean,
-				default: true
-			}
-		};
-	},
-	watch: {
-		$route: function () {
-			this.getFlag();
-		}
-	},
-	computed: {
-		...mapGetters( 'wishlist', [ 'wishList' ] ),
-		curIndex: function () {
+  components: {
+    VueSlideToggle,
+    PvProductNav,
+    PvQuantityInput,
+  },
+  props: {
+    product: Object,
+    prevProduct: Object,
+    nextProduct: Object,
+    isProductNav: {
+      type: Boolean,
+      default: true,
+    },
+  },
+  data: function () {
+    return {
+      minPrice: 0,
+      maxPrice: 0,
+      qty: 1,
+      currentIndex: 0,
+      baseUrl: baseUrl,
+      vSizes: [],
+      vColors: [],
+      curSize: {
+        name: null,
+        text: null,
+        image: null,
+      },
+      curColor: {
+        name: null,
+        text: null,
+        image: null,
+      },
+      tIndex: 0,
+      isShare: {
+        type: Boolean,
+        default: true,
+      },
+    };
+  },
+  watch: {
+    $route: function () {
+      this.getFlag();
+    },
+  },
+  computed: {
+    ...mapGetters("wishlist", ["wishList"]),
+    /* curIndex: function () {
 			if ( this.curColor.name !== null && this.vSizes.length === 0 ) {
 				let index = this.product.variants.findIndex(
 					item => item.colors[ 0 ].color_name === this.curColor.name
@@ -426,13 +421,24 @@ export default {
 			if ( this.curSize.name !== null && this.vColors.length === 0 )
 				return true;
 			return false;
-		}
-	},
-	created: function () {
-		this.getFlag();
-	},
-	mounted: function () {
-		if ( this.product.variants && !this.product.price ) {
+		}*/
+    isCartActive: function () {
+      if (parseInt(this.product.quantity_in_stock) < parseInt(this.qty)) return false;
+      return true;
+    },
+    isWishlisted: function () {
+      if (
+        this.wishList.findIndex((item) => item.name === this.product.name) > -1
+      )
+        return true;
+      return false;
+    },
+  },
+  created: function () {
+    this.getFlag();
+  },
+  mounted: function () {
+    /*if ( this.product.variants && !this.product.price ) {
 			this.minPrice = this.product.variants[ 0 ].price;
 
 			this.product.variants.forEach( item => {
@@ -470,12 +476,12 @@ export default {
 							image: item.colors[ 0 ].color_thumbnail
 						} );
 				} );
-		}
-	},
-	methods: {
-		...mapActions( 'cart', [ 'addToCart' ] ),
-		...mapActions( 'wishlist', [ 'addToWishlist' ] ),
-		addCart: function () {
+		}*/
+  },
+  methods: {
+    ...mapActions("cart", ["addToCart"]),
+    ...mapActions("wishlist", ["addToWishlist"]),
+    /*addCart: function () {
 			if ( this.isCartActive ) {
 				let saledProduct;
 				if ( this.product.variants.length > 0 ) {
@@ -522,78 +528,88 @@ export default {
 				
 				this.addToCart( { product: saledProduct } );
 			}
-		},
-		addWishlist: function ( e ) {
-			e.currentTarget.classList.add( 'load-more-overlay', 'loading' );
+		},*/
+    addCart: function () {
+      if (this.isCartActive) {
+        let saledProduct;
+        saledProduct = {
+          ...this.product,
+          qty: this.qty,
+          price: this.product.sale_price
+            ? this.product.sale_price
+            : this.product.price,
+        };
 
-			setTimeout( () => {
-				this.addToWishlist( { product: this.product } );
-				document
-					.querySelector( '.wishlist-popup' )
-					.classList.add( 'active' );
+        this.addToCart({ product: saledProduct });
+      }
+    },
+    addWishlist: function (e) {
+      e.currentTarget.classList.add("load-more-overlay", "loading");
 
-				setTimeout( () => {
-					document
-						.querySelector( '.wishlist-popup' )
-						.classList.remove( 'active' );
-				}, 1000 );
-			}, 1000 );
-		},
-		isDisabled: function ( color, size ) {
-			if ( !color.name || !size.name ) return false;
+      setTimeout(() => {
+        this.addToWishlist({ product: this.product });
+        document.querySelector(".wishlist-popup").classList.add("active");
 
-			if ( this.vSizes.length === 0 ) {
-				return (
-					this.product.variants.findIndex(
-						item => item.colors[ 0 ].color_name === color.name
-					) === -1
-				);
-			}
+        setTimeout(() => {
+          document.querySelector(".wishlist-popup").classList.remove("active");
+        }, 1000);
+      }, 1000);
+    },
+    isDisabled: function (color, size) {
+      if (!color.name || !size.name) return false;
 
-			if ( this.vColors.length === 0 ) {
-				return (
-					this.product.variants.findIndex(
-						item => item.size[ 0 ].size_name === size.name
-					) === -1
-				);
-			}
+      if (this.vSizes.length === 0) {
+        return (
+          this.product.variants.findIndex(
+            (item) => item.colors[0].color_name === color.name
+          ) === -1
+        );
+      }
 
-			return (
-				this.product.variants.findIndex(
-					item =>
-						item.colors[ 0 ].color_name === color.name &&
-						item.size[ 0 ].size_name === size.name
-				) === -1
-			);
-		},
-		toggleColorItem: function ( color ) {
-			if ( !this.isDisabled( color, this.curSize ) ) {
-				if ( this.curColor === color ) {
-					this.curColor = { name: null, text: null, image: null };
-				} else {
-					this.curColor = color;
-				}
-			}
-		},
-		toggleSizeItem: function ( size ) {
-			if ( !this.isDisabled( this.curColor, size ) ) {
-				if ( this.curSize === size ) {
-					this.curSize = { name: null, text: null, image: null };
-				} else {
-					this.curSize = size;
-				}
-			}
-		},
-		resetValue() {
-			this.curColor = { name: null, text: null, image: null };
-			this.curSize = { name: null, text: null, image: null };
-		},
-		getFlag: function () {
-			if ( this.$route.path.includes( 'sticky-info' ) ) this.isShare = false;
-		},
-		changeQty: function ( quantity ) {
-			this.qty = quantity;
-		}
-	}
+      if (this.vColors.length === 0) {
+        return (
+          this.product.variants.findIndex(
+            (item) => item.size[0].size_name === size.name
+          ) === -1
+        );
+      }
+
+      return (
+        this.product.variants.findIndex(
+          (item) =>
+            item.colors[0].color_name === color.name &&
+            item.size[0].size_name === size.name
+        ) === -1
+      );
+    },
+    toggleColorItem: function (color) {
+      if (!this.isDisabled(color, this.curSize)) {
+        if (this.curColor === color) {
+          this.curColor = { name: null, text: null, image: null };
+        } else {
+          this.curColor = color;
+        }
+      }
+    },
+    toggleSizeItem: function (size) {
+      if (!this.isDisabled(this.curColor, size)) {
+        if (this.curSize === size) {
+          this.curSize = { name: null, text: null, image: null };
+        } else {
+          this.curSize = size;
+        }
+      }
+    },
+    resetValue() {
+      this.curColor = { name: null, text: null, image: null };
+      this.curSize = { name: null, text: null, image: null };
+    },
+    getFlag: function () {
+      if (this.$route.path.includes("sticky-info")) this.isShare = false;
+    },
+    changeQty: function (quantity) {
+      this.qty = quantity;
+    },
+  },
 };
 </script>

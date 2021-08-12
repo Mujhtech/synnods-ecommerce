@@ -1,19 +1,19 @@
-// Cart
-export const ADD_NOTIFICATION = 'ADD_NOTIFICATION';
+// Notification store
+const ADD_NOTIFICATION = 'ADD_NOTIFICATION';
 
-export function state() {
+function state() {
     return {
         message: "",
     }
 };
 
-export const getters = {
+const getters = {
     getMessage: state => {
         return state.message;
     }
 }
 
-export const actions = {
+const actions = {
     addNotification: function ( { commit }, payload ) {
         commit( ADD_NOTIFICATION, payload );
         this._vm.$swal({
@@ -25,8 +25,16 @@ export const actions = {
     },
 }
 
-export const mutations = {
+const mutations = {
     [ ADD_NOTIFICATION ]( state, payload ) {
         state.message = payload.message;
     }
 }
+
+export default {
+    namespaced: true,
+    state,
+    getters,
+    actions,
+    mutations
+};

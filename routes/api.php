@@ -68,6 +68,8 @@ Route::group(['prefix' => 'v1'], function () {
 
         Route::get('/', [ProductController::class, 'index'])->name('index');
 
+        Route::get('/{slug}', [ProductController::class, 'single'])->name('single');
+
         Route::get('/category/{slug}', [ProductController::class, 'byCategory'])->name('index');
 
         Route::get('/sub_category/{slug}', [ProductController::class, 'bySubCategory'])->name('index');
