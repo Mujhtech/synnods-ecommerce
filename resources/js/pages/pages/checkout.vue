@@ -79,7 +79,7 @@
                     </div>
 
                     <router-link
-                      to="/pages/forgot-password"
+                      to="/auth/forgot-password"
                       class="forget-password"
                       >Lost your password?</router-link
                     >
@@ -159,23 +159,13 @@
                     </div>
                   </div>
 
-                  <div class="form-group">
-                    <label>Company name (optional)</label>
-                    <input type="text" class="form-control" />
-                  </div>
-
                   <div class="select-custom">
                     <label>
                       Country / Region
                       <abbr class="required" title="required">*</abbr>
                     </label>
                     <select name="orderby" class="form-control">
-                      <option value selected="selected">Vanuatu</option>
-                      <option value="1">Brunei</option>
-                      <option value="2">Bulgaria</option>
-                      <option value="3">Burkina Faso</option>
-                      <option value="4">Burundi</option>
-                      <option value="5">Cameroon</option>
+                      <option value selected="selected">Nigeria</option>
                     </select>
                   </div>
 
@@ -188,15 +178,6 @@
                       type="text"
                       class="form-control"
                       placeholder="House number and street name"
-                      required
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Apartment, suite, unite, etc. (optional)"
                       required
                     />
                   </div>
@@ -215,12 +196,7 @@
                       <abbr class="required" title="required">*</abbr>
                     </label>
                     <select name="orderby" class="form-control">
-                      <option value selected="selected">NY</option>
-                      <option value="1">Brunei</option>
-                      <option value="2">Bulgaria</option>
-                      <option value="3">Burkina Faso</option>
-                      <option value="4">Burundi</option>
-                      <option value="5">Cameroon</option>
+                      <option value selected="selected">Nigeria</option>
                     </select>
                   </div>
 
@@ -326,23 +302,13 @@
                         </div>
                       </div>
 
-                      <div class="form-group">
-                        <label>Company name (optional)</label>
-                        <input type="text" class="form-control" />
-                      </div>
-
                       <div class="select-custom">
                         <label>
                           Country / Region
                           <span class="required">*</span>
                         </label>
                         <select name="orderby" class="form-control">
-                          <option value selected="selected">Vanuatu</option>
-                          <option value="1">Brunei</option>
-                          <option value="2">Bulgaria</option>
-                          <option value="3">Burkina Faso</option>
-                          <option value="4">Burundi</option>
-                          <option value="5">Cameroon</option>
+                          <option value selected="selected">Nigeria</option>
                         </select>
                       </div>
 
@@ -360,15 +326,6 @@
                       </div>
 
                       <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Apartment, suite, unit, etc. (optional)"
-                          required
-                        />
-                      </div>
-
-                      <div class="form-group">
                         <label>
                           Town / City
                           <abbr class="required" title="required">*</abbr>
@@ -378,16 +335,11 @@
 
                       <div class="select-custom">
                         <label>
-                          State / County
+                          State
                           <abbr class="required" title="required">*</abbr>
                         </label>
                         <select name="orderby" class="form-control">
-                          <option value selected="selected">NY</option>
-                          <option value="1">Brunei</option>
-                          <option value="2">Bulgaria</option>
-                          <option value="3">Burkina Faso</option>
-                          <option value="4">Burundi</option>
-                          <option value="5">Cameroon</option>
+                          <option value selected="selected">Nigeria</option>
                         </select>
                       </div>
 
@@ -437,7 +389,7 @@
                     </td>
 
                     <td class="price-col">
-                      <span>${{ product.price | priceFormat }}</span>
+                      <span>₦{{ product.price | priceFormat }}</span>
                     </td>
                   </tr>
                 </tbody>
@@ -451,7 +403,7 @@
                     </td>
 
                     <td class="price-col">
-                      <span>${{ totalPrice | priceFormat }}</span>
+                      <span>₦{{ totalPrice | priceFormat }}</span>
                     </td>
                   </tr>
                   <tr class="order-shipping">
@@ -491,7 +443,7 @@
                     </td>
                     <td>
                       <b class="total-price">
-                        <span>${{ totalPrice | priceFormat }}</span>
+                        <span>₦{{ totalPrice | priceFormat }}</span>
                       </b>
                     </td>
                   </tr>

@@ -12566,36 +12566,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  metaInfo: {
+    title: "Cart",
+    titleTemplate: "%s - Synoods Ecommerce"
+  },
   components: {
     PvQuantityInput: _components_features_PvQuantityInput__WEBPACK_IMPORTED_MODULE_1__.default
   },
@@ -12605,7 +12583,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       cartItems: []
     };
   },
-  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)('cart', ['cartList', 'totalPrice'])),
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)("cart", ["cartList", "totalPrice"])),
   created: function created() {
     this.cartItems = _toConsumableArray(this.cartList);
   },
@@ -12614,7 +12592,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.cartItems = _toConsumableArray(this.cartList);
     }
   },
-  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapActions)('cart', ['updateCart', 'removeFromCart'])), {}, {
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapActions)("cart", ["updateCart", "removeFromCart"])), {}, {
     changeQty: function changeQty(value, product) {
       this.cartItems = this.cartItems.reduce(function (acc, cur) {
         if (cur.name === product.name) {
@@ -12662,54 +12640,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -13840,8 +13770,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_partials_product_description_PvDescOne__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/partials/product/description/PvDescOne */ "./resources/js/components/partials/product/description/PvDescOne.vue");
 /* harmony import */ var _components_partials_product_PvRelatedProducts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/partials/product/PvRelatedProducts */ "./resources/js/components/partials/product/PvRelatedProducts.vue");
 /* harmony import */ var _components_partials_product_PvSmallCollection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../components/partials/product/PvSmallCollection */ "./resources/js/components/partials/product/PvSmallCollection.vue");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../api */ "./resources/js/api/index.js");
-/* harmony import */ var _services_product__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../services/product */ "./resources/js/services/product.js");
+/* harmony import */ var _services_product__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../services/product */ "./resources/js/services/product.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -13925,8 +13854,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  metaInfo: {
+    title: "Single Product",
+    titleTemplate: "%s - Synoods Ecommerce"
+  },
   components: {
     PvMediaOne: _components_partials_product_media_PvMediaOne__WEBPACK_IMPORTED_MODULE_1__.default,
     PvDetailOne: _components_partials_product_detail_PvDetailOne__WEBPACK_IMPORTED_MODULE_2__.default,
@@ -13963,7 +13895,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context.prev = 1;
                 console.log(this.$route.params.slug);
                 _context.next = 5;
-                return (0,_services_product__WEBPACK_IMPORTED_MODULE_7__.fetchSingle)(this.$route.params.slug);
+                return (0,_services_product__WEBPACK_IMPORTED_MODULE_6__.fetchSingle)(this.$route.params.slug);
 
               case 5:
                 response = _context.sent;
@@ -15255,9 +15187,9 @@ var routes = [{
     middleware: "auth"
   }
 }, {
-  path: "/carts",
+  path: "/cart",
   component: _pages_pages_cart__WEBPACK_IMPORTED_MODULE_9__.default,
-  name: "Carts"
+  name: "Cart"
 }, {
   path: "/wishlist",
   component: _pages_pages_wishlist__WEBPACK_IMPORTED_MODULE_11__.default,
@@ -71701,11 +71633,11 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _vm.product.reviews > 0
+        _vm.product.reviews.length > 0
           ? _c(
               "a",
               { staticClass: "rating-link", attrs: { href: "javascript:;" } },
-              [_vm._v("( " + _vm._s(_vm.product.reviews) + " Reviews )")]
+              [_vm._v("( " + _vm._s(_vm.product.reviews.length) + " Reviews )")]
             )
           : _c(
               "a",
@@ -77729,9 +77661,7 @@ var render = function() {
                                 "router-link",
                                 {
                                   staticClass: "product-image",
-                                  attrs: {
-                                    to: "/product/default/" + product.slug
-                                  }
+                                  attrs: { to: "/product/" + product.slug }
                                 },
                                 [
                                   _c("img", {
@@ -77739,9 +77669,9 @@ var render = function() {
                                       src:
                                         "" +
                                         _vm.baseUrl +
-                                        product.small_pictures[0].url,
-                                      width: product.small_pictures[0].width,
-                                      height: product.small_pictures[0].height,
+                                        product.featured_image,
+                                      width: product.featured_image.width,
+                                      height: product.featured_image.height,
                                       alt: "product"
                                     }
                                   })
@@ -77772,11 +77702,7 @@ var render = function() {
                             [
                               _c(
                                 "router-link",
-                                {
-                                  attrs: {
-                                    to: "/product/default/" + product.slug
-                                  }
-                                },
+                                { attrs: { to: "/product/" + product.slug } },
                                 [_vm._v(_vm._s(product.name))]
                               )
                             ],
@@ -77786,7 +77712,7 @@ var render = function() {
                         _vm._v(" "),
                         _c("td", [
                           _vm._v(
-                            "$" + _vm._s(_vm._f("priceFormat")(product.price))
+                            "₦" + _vm._s(_vm._f("priceFormat")(product.price))
                           )
                         ]),
                         _vm._v(" "),
@@ -77804,7 +77730,7 @@ var render = function() {
                         _c("td", { staticClass: "text-right" }, [
                           _c("span", { staticClass: "subtotal-price" }, [
                             _vm._v(
-                              "$" +
+                              "₦" +
                                 _vm._s(
                                   _vm._f("priceFormat")(
                                     product.price * product.qty
@@ -77841,7 +77767,11 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("Update Cart")]
+                            [
+                              _vm._v(
+                                "\n                    Update Cart\n                  "
+                              )
+                            ]
                           )
                         ])
                       ]
@@ -77863,7 +77793,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("td", [
                       _vm._v(
-                        "$" + _vm._s(_vm._f("priceFormat")(_vm.totalPrice))
+                        "₦" + _vm._s(_vm._f("priceFormat")(_vm.totalPrice))
                       )
                     ])
                   ]),
@@ -77877,7 +77807,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("td", [
                       _vm._v(
-                        "$" + _vm._s(_vm._f("priceFormat")(_vm.totalPrice))
+                        "₦" + _vm._s(_vm._f("priceFormat")(_vm.totalPrice))
                       )
                     ])
                   ])
@@ -77892,10 +77822,10 @@ var render = function() {
                     "router-link",
                     {
                       staticClass: "btn btn-block btn-dark",
-                      attrs: { to: "/pages/checkout" }
+                      attrs: { to: "/checkout" }
                     },
                     [
-                      _vm._v("\n\t\t\t\t\t\tProceed to Checkout\n\t\t\t\t\t\t"),
+                      _vm._v("\n            Proceed to Checkout\n            "),
                       _c("i", { staticClass: "fa fa-arrow-right" })
                     ]
                   )
@@ -78008,7 +77938,7 @@ var staticRenderFns = [
                 { staticClass: "btn btn-sm", attrs: { type: "submit" } },
                 [
                   _vm._v(
-                    "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tApply\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tCoupon\n\t\t\t\t\t\t\t\t\t\t\t\t\t"
+                    "\n                            Apply Coupon\n                          "
                   )
                 ]
               )
@@ -78060,7 +77990,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "form-group form-group-sm" }, [
             _c("label", [
               _vm._v(
-                "\n\t\t\t\t\t\t\t\t\t\t\tShipping to\n\t\t\t\t\t\t\t\t\t\t\t"
+                "\n                      Shipping to\n                      "
               ),
               _c("strong", [_vm._v("NY.")])
             ]),
@@ -78118,7 +78048,7 @@ var staticRenderFns = [
               staticClass: "btn btn-shop btn-update-total",
               attrs: { type: "submit" }
             },
-            [_vm._v("Update Totals")]
+            [_vm._v("\n                    Update Totals\n                  ")]
           )
         ])
       ])
@@ -78173,11 +78103,7 @@ var staticRenderFns = [
           staticClass: "px-3 py-2 text-center cart-empty",
           attrs: { colspan: "6" }
         },
-        [
-          _vm._v(
-            "\n\t\t\t\t\t\tNo products added to the\n\t\t\t\t\t\tcart\n\t\t\t\t\t"
-          )
-        ]
+        [_vm._v("\n            No products added to the cart\n          ")]
       )
     ])
   }
@@ -78365,7 +78291,7 @@ var render = function() {
                                   "router-link",
                                   {
                                     staticClass: "forget-password",
-                                    attrs: { to: "/pages/forgot-password" }
+                                    attrs: { to: "/auth/forgot-password" }
                                   },
                                   [_vm._v("Lost your password?")]
                                 )
@@ -78478,10 +78404,6 @@ var render = function() {
                           _vm._m(7),
                           _vm._v(" "),
                           _vm._m(8),
-                          _vm._v(" "),
-                          _vm._m(9),
-                          _vm._v(" "),
-                          _vm._m(10),
                           _vm._v(" "),
                           _c("div", { staticClass: "form-group mb-1" }, [
                             _c(
@@ -78644,17 +78566,6 @@ var render = function() {
                                   ])
                                 ]),
                                 _vm._v(" "),
-                                _c("div", { staticClass: "form-group" }, [
-                                  _c("label", [
-                                    _vm._v("Company name (optional)")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("input", {
-                                    staticClass: "form-control",
-                                    attrs: { type: "text" }
-                                  })
-                                ]),
-                                _vm._v(" "),
                                 _c("div", { staticClass: "select-custom" }, [
                                   _c("label", [
                                     _vm._v(
@@ -78680,28 +78591,8 @@ var render = function() {
                                             selected: "selected"
                                           }
                                         },
-                                        [_vm._v("Vanuatu")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("option", { attrs: { value: "1" } }, [
-                                        _vm._v("Brunei")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("option", { attrs: { value: "2" } }, [
-                                        _vm._v("Bulgaria")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("option", { attrs: { value: "3" } }, [
-                                        _vm._v("Burkina Faso")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("option", { attrs: { value: "4" } }, [
-                                        _vm._v("Burundi")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("option", { attrs: { value: "5" } }, [
-                                        _vm._v("Cameroon")
-                                      ])
+                                        [_vm._v("Nigeria")]
+                                      )
                                     ]
                                   )
                                 ]),
@@ -78737,18 +78628,6 @@ var render = function() {
                                 ),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "form-group" }, [
-                                  _c("input", {
-                                    staticClass: "form-control",
-                                    attrs: {
-                                      type: "text",
-                                      placeholder:
-                                        "Apartment, suite, unit, etc. (optional)",
-                                      required: ""
-                                    }
-                                  })
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "form-group" }, [
                                   _c("label", [
                                     _vm._v(
                                       "\n                        Town / City\n                        "
@@ -78772,7 +78651,7 @@ var render = function() {
                                 _c("div", { staticClass: "select-custom" }, [
                                   _c("label", [
                                     _vm._v(
-                                      "\n                        State / County\n                        "
+                                      "\n                        State\n                        "
                                     ),
                                     _c(
                                       "abbr",
@@ -78799,28 +78678,8 @@ var render = function() {
                                             selected: "selected"
                                           }
                                         },
-                                        [_vm._v("NY")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("option", { attrs: { value: "1" } }, [
-                                        _vm._v("Brunei")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("option", { attrs: { value: "2" } }, [
-                                        _vm._v("Bulgaria")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("option", { attrs: { value: "3" } }, [
-                                        _vm._v("Burkina Faso")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("option", { attrs: { value: "4" } }, [
-                                        _vm._v("Burundi")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("option", { attrs: { value: "5" } }, [
-                                        _vm._v("Cameroon")
-                                      ])
+                                        [_vm._v("Nigeria")]
+                                      )
                                     ]
                                   )
                                 ]),
@@ -78849,7 +78708,7 @@ var render = function() {
                             ]
                           ),
                           _vm._v(" "),
-                          _vm._m(11)
+                          _vm._m(9)
                         ],
                         1
                       )
@@ -78862,7 +78721,7 @@ var render = function() {
                     _c("h3", [_vm._v("YOUR ORDER")]),
                     _vm._v(" "),
                     _c("table", { staticClass: "table table-mini-cart" }, [
-                      _vm._m(12),
+                      _vm._m(10),
                       _vm._v(" "),
                       _vm.cartList.length > 0
                         ? _c(
@@ -78890,7 +78749,7 @@ var render = function() {
                                   _c("td", { staticClass: "price-col" }, [
                                     _c("span", [
                                       _vm._v(
-                                        "$" +
+                                        "₦" +
                                           _vm._s(
                                             _vm._f("priceFormat")(product.price)
                                           )
@@ -78910,28 +78769,28 @@ var render = function() {
                       _vm._v(" "),
                       _c("tfoot", [
                         _c("tr", { staticClass: "cart-subtotal" }, [
-                          _vm._m(13),
+                          _vm._m(11),
                           _vm._v(" "),
                           _c("td", { staticClass: "price-col" }, [
                             _c("span", [
                               _vm._v(
-                                "$" +
+                                "₦" +
                                   _vm._s(_vm._f("priceFormat")(_vm.totalPrice))
                               )
                             ])
                           ])
                         ]),
                         _vm._v(" "),
-                        _vm._m(14),
+                        _vm._m(12),
                         _vm._v(" "),
                         _c("tr", { staticClass: "order-total" }, [
-                          _vm._m(15),
+                          _vm._m(13),
                           _vm._v(" "),
                           _c("td", [
                             _c("b", { staticClass: "total-price" }, [
                               _c("span", [
                                 _vm._v(
-                                  "$" +
+                                  "₦" +
                                     _vm._s(
                                       _vm._f("priceFormat")(_vm.totalPrice)
                                     )
@@ -78943,7 +78802,7 @@ var render = function() {
                       ])
                     ]),
                     _vm._v(" "),
-                    _vm._m(16),
+                    _vm._m(14),
                     _vm._v(" "),
                     _c(
                       "button",
@@ -78971,12 +78830,12 @@ var render = function() {
                   }
                 },
                 [
-                  _vm._m(17),
+                  _vm._m(15),
                   _vm._v(" "),
                   _c("tbody", { staticClass: "cart-items-wrapper" }, [
-                    _vm._m(18),
+                    _vm._m(16),
                     _vm._v(" "),
-                    _vm._m(19),
+                    _vm._m(17),
                     _vm._v(" "),
                     _c("tr", { staticClass: "border-0 py-0" }, [
                       _c(
@@ -79068,16 +78927,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Company name (optional)")]),
-      _vm._v(" "),
-      _c("input", { staticClass: "form-control", attrs: { type: "text" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "select-custom" }, [
       _c("label", [
         _vm._v("\n                    Country / Region\n                    "),
@@ -79091,18 +78940,8 @@ var staticRenderFns = [
         { staticClass: "form-control", attrs: { name: "orderby" } },
         [
           _c("option", { attrs: { value: "", selected: "selected" } }, [
-            _vm._v("Vanuatu")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [_vm._v("Brunei")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [_vm._v("Bulgaria")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "3" } }, [_vm._v("Burkina Faso")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "4" } }, [_vm._v("Burundi")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "5" } }, [_vm._v("Cameroon")])
+            _vm._v("Nigeria")
+          ])
         ]
       )
     ])
@@ -79124,21 +78963,6 @@ var staticRenderFns = [
         attrs: {
           type: "text",
           placeholder: "House number and street name",
-          required: ""
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("input", {
-        staticClass: "form-control",
-        attrs: {
-          type: "text",
-          placeholder: "Apartment, suite, unite, etc. (optional)",
           required: ""
         }
       })
@@ -79179,18 +79003,8 @@ var staticRenderFns = [
         { staticClass: "form-control", attrs: { name: "orderby" } },
         [
           _c("option", { attrs: { value: "", selected: "selected" } }, [
-            _vm._v("NY")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [_vm._v("Brunei")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [_vm._v("Bulgaria")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "3" } }, [_vm._v("Burkina Faso")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "4" } }, [_vm._v("Burundi")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "5" } }, [_vm._v("Cameroon")])
+            _vm._v("Nigeria")
+          ])
         ]
       )
     ])

@@ -18,8 +18,8 @@
           product.ratings | priceFormat
         }}</span>
       </div>
-      <a href="javascript:;" class="rating-link" v-if="product.reviews > 0"
-        >( {{ product.reviews }} Reviews )</a
+      <a href="javascript:;" class="rating-link" v-if="product.reviews.length > 0"
+        >( {{ product.reviews.length }} Reviews )</a
       >
       <a href="javascript:;" class="rating-link" v-else
         >( There is no review yet. )</a

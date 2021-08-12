@@ -75,10 +75,13 @@ import PvDetailOne from "../../../components/partials/product/detail/PvDetailOne
 import PvDescOne from "../../../components/partials/product/description/PvDescOne";
 import PvRelatedProducts from "../../../components/partials/product/PvRelatedProducts";
 import PvSmallCollection from "../../../components/partials/product/PvSmallCollection";
-import Api, { baseUrl, currentDemo } from "../../../api";
 import { fetchSingle } from "../../../services/product";
 
 export default {
+  metaInfo: {
+    title: "Single Product",
+    titleTemplate: "%s - Synoods Ecommerce",
+  },
   components: {
     PvMediaOne,
     PvDetailOne,

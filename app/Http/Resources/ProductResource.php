@@ -29,7 +29,7 @@ class ProductResource extends JsonResource
             'images' => $this->images,
             'sku' => $this->sku,
             'slug' => $this->slug,
-            'stock_status' => $this->stock_status,
+            'stock_status' => $this->stock_status ? true : false,
             'quantity_in_stock' => $this->quantity_in_stock,
             'is_featured' => $this->is_featured ? true : false,
             'is_hot' => $this->is_hot ? true : false,

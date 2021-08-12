@@ -61,9 +61,9 @@ const routes = [
         meta: { middleware: "auth" }
     },
     {
-        path: "/carts",
+        path: "/cart",
         component: Cart,
-        name: "Carts"
+        name: "Cart"
     },
     {
         path: "/wishlist",
