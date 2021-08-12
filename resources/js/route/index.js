@@ -87,7 +87,7 @@ const routes = [
         name: "Vendors"
     },
     {
-        path: "/vendor/:user",
+        path: "/vendor/:slug",
         component: VendorStore,
         name: "Vendor"
     },

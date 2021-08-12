@@ -18,7 +18,8 @@ class CreateSubCategoriesTable extends Migration
             $table->foreignId('category_id')->constrained();
             $table->string('name');
             $table->longText('description')->nullable();
-            $table->string('image');
+            $table->string('icon')->nullable();
+            $table->string('image')->nullable();
             $table->string('slug');
             $table->boolean('status')->default(false);
             $table->timestamps();

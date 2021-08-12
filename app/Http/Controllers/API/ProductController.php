@@ -14,6 +14,9 @@ use App\Models\ProductTag;
 use App\Models\Category;
 use App\Models\Vendor;
 use App\Models\SubCategory;
+use App\Http\Resources\VendorResource;
+use App\Http\Resources\SubCategoryResource;
+use App\Http\Resources\CategoryResource;
 
 class ProductController extends ApiController
 {
@@ -35,7 +38,8 @@ class ProductController extends ApiController
         $products = Product::where('category_id', $category->id)->with(['vendor', 'reviews', 'category', 'sub_category', 'brand'])->get();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-            'data' => ProductResource::collection($products)
+            'category' => CategoryResource::make($category),
+            'product' => ProductResource::collection($products)
         ]);
     }
 
@@ -46,7 +50,8 @@ class ProductController extends ApiController
         $products = Product::where('category_id', $sub_category->id)->with(['vendor', 'reviews', 'category', 'sub_category', 'brand'])->get();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-            'data' => ProductResource::collection($products)
+            'sub_category' => SubCategoryResource::make($sub_category),
+            'product' => ProductResource::collection($products)
         ]);
     }
 
@@ -68,7 +73,8 @@ class ProductController extends ApiController
         $products = Product::where('category_id', $vendor->user_id)->with(['vendor', 'reviews', 'category', 'sub_category', 'brand'])->get();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-            'data' => ProductResource::collection($products)
+            'vendor' => VendorResource::make($vendor),
+            'product' => ProductResource::collection($products)
         ]);
     }
 

@@ -21,6 +21,7 @@ class ProductResource extends JsonResource
             'sub_category' => SubCategoryResource::make($this->sub_category),
             'brand' => ProductBrandResource::make($this->brand),
             'reviews' => ProductReviewResource::collection($this->reviews),
+            'galleries' => ProductImageResource::collection($this->galleries),
             'name' => $this->name,
             'description' => $this->description,
             'contents' => $this->contents,

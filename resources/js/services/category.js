@@ -11,3 +11,11 @@ export function createCategory(data) {
 export function updateCategory(data) {
     return httpFile().put('/category/update', data);
 }
+
+export function categoryProduct(slug) {
+    return http().get(`/product/category/${slug}`);
+}
+
+export function subCategoryProduct(slug) {
+    return http().get(`/product/sub_category/${slug}`);
+}

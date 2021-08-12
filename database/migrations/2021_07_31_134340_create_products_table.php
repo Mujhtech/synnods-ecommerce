@@ -25,7 +25,6 @@ class CreateProductsTable extends Migration
             $table->longText('description');
             $table->longText('contents');
             $table->string('featured_image');
-            $table->string('images')->nullable();
             $table->string('sku')->unique();
             $table->longText('notes')->nullable();
             $table->string('sizes')->nullable();
