@@ -9,6 +9,8 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use App\Models\Product;
+use App\Http\Resources\ProductResource;
 
 class NewProductEvent implements ShouldBroadcast
 {
@@ -21,10 +23,17 @@ class NewProductEvent implements ShouldBroadcast
      */
     public $product;
 
-    public function __construct($product)
+
+    public function __construct(Product $product)
     {
         //
         $this->product = $product;
+    }
+
+    public function broadcastWith(){
+        return [
+            'product' => ProductResource::make($this->product)
+        ];
     }
 
     /**

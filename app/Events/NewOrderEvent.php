@@ -9,6 +9,9 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use App\Models\Order;
+use App\Models\User;
+use App\Http\Resources\UserResource;
 
 class NewOrderEvent
 {
@@ -19,9 +22,23 @@ class NewOrderEvent
      *
      * @return void
      */
-    public function __construct()
+    public $user;
+
+    public $order;
+
+    public function __construct(User $user, Order $order)
     {
         //
+        $this->user = $user;
+        $this->order = $order;
+    }
+
+    public function broadcastWith(){
+        return [
+            'order' => '',
+            'user' => ''
+            //'product' => ProductResource::make($this->product)
+        ];
     }
 
     /**
@@ -31,6 +48,11 @@ class NewOrderEvent
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('channel-name');
+        return new Channel('NewOrder');
+    }
+
+    public function broadcastAs()
+    {
+        return 'new.order';
     }
 }

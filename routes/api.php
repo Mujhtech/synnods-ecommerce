@@ -36,7 +36,7 @@ Route::get('/', function (Request $request) {
 Route::group(['prefix' => 'v1'], function () {
 
     Route::get('broadcast', function(){
-        broadcast(new NewProductEvent('Hello my people'));
+        broadcast(new NewProductEvent(\App\Models\Product::find(1)));
     });
 
     // Newsletter route

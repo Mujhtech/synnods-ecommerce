@@ -67,6 +67,7 @@
     </div>
 
     <pv-cart-popup class="minipopup-area"></pv-cart-popup>
+    <pv-new-product class="minipopup-area"></pv-new-product>
 
     <a
       id="scroll-top"
@@ -88,6 +89,8 @@
 import PvHeader from "./components/common/PvHeader";
 import PvFooter from "./components/common/PvFooter";
 import PvCartPopup from "./components/common/partials/PvCartPopup";
+import PvNewProduct from "./components/common/partials/PvNewProduct";
+import PvNewOrder from "./components/common/partials/PvNewOrder";
 import PvMobileMenu from "./components/common/partials/PvMobileMenu";
 import PvStickyFooter from "./components/common/partials/PvStickyFooter";
 import { mapActions } from "vuex";
@@ -109,6 +112,8 @@ export default {
     PvHeader,
     PvFooter,
     PvCartPopup,
+    PvNewProduct,
+    PvNewOrder,
     PvMobileMenu,
     PvStickyFooter,
   },
@@ -132,6 +137,11 @@ export default {
     this.fetchCategory();
     this.fetchUser();
     Echo.channel("NewProduct").listen(".new.product", (e) => {
+      this.$notify({
+        group: "newProduct",
+        text: `has been added!`,
+        data: e.product,
+      });
       console.log(e);
     });
     window.addEventListener("scroll", stickyHeaderHandler, {
