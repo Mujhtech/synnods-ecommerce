@@ -51,7 +51,6 @@ function removeSlideCss( slideEl ) {
 Vue.directive( 'animate', {
     inserted: function ( el, binding, vnode ) {
         if ( el.classList.contains( 'slide-animate' ) ) {
-            console.log(vnode.componentInstance);
             let activeIndex = vnode.componentInstance.$swiper.activeIndex;
 
             addSlideCss( el.querySelectorAll( '.swiper-slide' )[ activeIndex ] );

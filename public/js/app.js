@@ -1964,6 +1964,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -2000,6 +2001,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   mounted: function mounted() {
     this.fetchCategory();
     this.fetchUser();
+    Echo.channel("NewProduct").listen(".new.product", function (e) {
+      console.log(e);
+    });
     window.addEventListener("scroll", _utils__WEBPACK_IMPORTED_MODULE_8__.stickyHeaderHandler, {
       passive: true
     });
@@ -2020,6 +2024,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     window.removeEventListener("resize", _utils__WEBPACK_IMPORTED_MODULE_8__.resizeHandler);
   },
   methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_9__.mapActions)("user", ["userLogin", "userLogout"])), {}, {
+    doCopy: function doCopy(text) {
+      this.$copyText(text).then(function (e) {
+        alert("Copied");
+        console.log(e);
+      }, function (e) {
+        console.log(e);
+      });
+    },
     fetchCategory: function () {
       var _fetchCategory = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         var response;
@@ -2034,21 +2046,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               case 3:
                 response = _context.sent;
                 this.categories = response.data.data.data;
-                console.log(response);
-                _context.next = 11;
+                _context.next = 10;
                 break;
 
-              case 8:
-                _context.prev = 8;
+              case 7:
+                _context.prev = 7;
                 _context.t0 = _context["catch"](0);
                 console.log(_context.t0.response);
 
-              case 11:
+              case 10:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[0, 8]]);
+        }, _callee, this, [[0, 7]]);
       }));
 
       function fetchCategory() {
@@ -2070,26 +2081,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
               case 3:
                 response = _context2.sent;
-                console.log(response.date);
                 this.userLogin(response.data.data.user);
-                _context2.next = 14;
+                _context2.next = 13;
                 break;
 
-              case 8:
-                _context2.prev = 8;
+              case 7:
+                _context2.prev = 7;
                 _context2.t0 = _context2["catch"](0);
                 //if(!err.response) return;
                 console.log(_context2.t0.response);
                 localStorage.removeItem("SYNECT");
-                localStorage.removeItem('SYNECUS');
+                localStorage.removeItem("SYNECUS");
                 this.userLogout({});
 
-              case 14:
+              case 13:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[0, 8]]);
+        }, _callee2, this, [[0, 7]]);
       }));
 
       function fetchUser() {
@@ -8984,14 +8994,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
               case 11:
                 response = _context.sent;
-                this.loading = false;
-                this.user.email = "", this.addNotification({
+                this.loading = false; //this.user.email = "";
+
+                this.addNotification({
                   type: "success",
                   message: response.data.data.message
                 });
                 submit.innerText = "Reset Password";
-                console.log(response);
-                _context.next = 24;
+                this.$router.go(); //console.log(response);
+
+                _context.next = 23;
                 break;
 
               case 18:
@@ -9002,10 +9014,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 this.addNotification({
                   type: "error",
                   message: _context.t0.response.data.data ? _context.t0.response.data.data.message : "Something went wrong"
-                });
-                console.log(_context.t0.response);
+                }); //console.log(error.response);
 
-              case 24:
+              case 23:
               case "end":
                 return _context.stop();
             }
@@ -9574,8 +9585,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               case 9:
                 response = _context.sent;
                 this.loading = false;
-                submit.innerText = "Register";
-                console.log(response);
+                submit.innerText = "Register"; //console.log(response);
+
                 this.user.email = "";
                 this.user.password = "";
                 this.user.first_name = "";
@@ -9586,26 +9597,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   message: response.data.data.message
                 });
                 this.$router.push("/auth/verify/".concat(response.data.data.token));
-                _context.next = 28;
+                _context.next = 26;
                 break;
 
-              case 22:
-                _context.prev = 22;
+              case 21:
+                _context.prev = 21;
                 _context.t0 = _context["catch"](4);
                 this.loading = false;
-                submit.innerText = "Register";
-                console.log(_context.t0.response);
+                submit.innerText = "Register"; //console.log(error.response);
+
                 this.addNotification({
                   type: "error",
                   message: _context.t0.response.data.data ? _context.t0.response.data.data.message : "Something went wrong"
                 });
 
-              case 28:
+              case 26:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[4, 22]]);
+        }, _callee, this, [[4, 21]]);
       }));
 
       function register() {
@@ -9828,22 +9839,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   type: "success",
                   message: "Password reset successfully"
                 });
-                console.log(response);
-                _context.next = 23;
+                this.$router.push('/auth/login'); //console.log(response);
+
+                _context.next = 22;
                 break;
 
               case 17:
                 _context.prev = 17;
                 _context.t0 = _context["catch"](5);
                 this.loading = false;
-                submit.innerText = "Reset Password";
-                console.log(_context.t0.response);
+                submit.innerText = "Reset Password"; //console.log(error.response);
+
                 this.addNotification({
                   type: "error",
                   message: _context.t0.response.data.data ? _context.t0.response.data.data.message : "Something went wrong"
                 });
 
-              case 23:
+              case 22:
               case "end":
                 return _context.stop();
             }
@@ -10120,29 +10132,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 this.addNotification({
                   type: "success",
                   message: response.data.data.message
-                });
-                console.log(response);
+                }); //console.log(response);
+
                 this.$router.push("/account");
-                _context2.next = 27;
+                _context2.next = 25;
                 break;
 
-              case 21:
-                _context2.prev = 21;
+              case 20:
+                _context2.prev = 20;
                 _context2.t0 = _context2["catch"](5);
                 this.loading = false;
-                submit.innerText = "Verify";
-                console.log(_context2.t0.response);
+                submit.innerText = "Verify"; //console.log(error.response);
+
                 this.addNotification({
                   type: "error",
                   message: _context2.t0.response.data.data ? _context2.t0.response.data.data.message : "Something went wrong"
                 });
 
-              case 27:
+              case 25:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[5, 21]]);
+        }, _callee2, this, [[5, 20]]);
       }));
 
       function verify() {
@@ -10303,16 +10315,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               //this.bestProducts = getTopSellingProducts(response.data.data.data);
               //this.topRatedProducts = getTopRatedProducts(response.data.data.data);
 
-              console.log(response);
-              _context.next = 13;
+              _context.next = 12;
               break;
 
-            case 10:
-              _context.prev = 10;
+            case 9:
+              _context.prev = 9;
               _context.t0 = _context["catch"](0);
               console.log(_context.t0.response);
 
-            case 13:
+            case 12:
               this.timerId = setTimeout(function () {
                 if (_this.$route.path === "/" && (0,_utils__WEBPACK_IMPORTED_MODULE_13__.getCookie)("newsletter") !== "false") {
                   _this.$modal.show(function () {
@@ -10326,12 +10337,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
               }, 10000);
 
-            case 14:
+            case 13:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, this, [[0, 10]]);
+      }, _callee, this, [[0, 9]]);
     }));
 
     function mounted() {
@@ -14747,9 +14758,9 @@ vue__WEBPACK_IMPORTED_MODULE_10__.default.use((vue_clipboard2__WEBPACK_IMPORTED_
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_6__.default({
   broadcaster: 'pusher',
-  key: "",
-  cluster: "mt1",
-  encrypted: true
+  key: "520cfdf94ba7078727be",
+  cluster: "eu",
+  encrypted: false
 });
 new vue__WEBPACK_IMPORTED_MODULE_10__.default({
   el: '#app',
@@ -14822,7 +14833,6 @@ function removeSlideCss(slideEl) {
 vue__WEBPACK_IMPORTED_MODULE_0__.default.directive('animate', {
   inserted: function inserted(el, binding, vnode) {
     if (el.classList.contains('slide-animate')) {
-      console.log(vnode.componentInstance);
       var activeIndex = vnode.componentInstance.$swiper.activeIndex;
       addSlideCss(el.querySelectorAll('.swiper-slide')[activeIndex]);
       vnode.componentInstance.$swiper.on('transitionEnd', function () {
@@ -16705,7 +16715,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function getProductsByFeatured(products) {
   var temp = _toConsumableArray(products);
 
-  console.log(temp);
   return temp.filter(function (item) {
     return item.is_featured === true;
   });
@@ -16722,7 +16731,6 @@ function getProductsByAttri(products) {
 
   var temp = _toConsumableArray(products);
 
-  console.log(temp);
   return temp.filter(function (item) {
     return item[attri] === true;
   });
@@ -71437,7 +71445,7 @@ var render = function() {
                 [
                   _c("img", {
                     attrs: {
-                      src: "./images/header-item.png",
+                      src: "/images/header-item.png",
                       alt: "Top Ads",
                       width: "237",
                       height: "49"
@@ -71446,7 +71454,19 @@ var render = function() {
                   _vm._v(" "),
                   _vm._m(0),
                   _vm._v(" "),
-                  _vm._m(1)
+                  _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-dark font1 ls-n-10 round-box my-2",
+                      attrs: { href: "javascript:;" },
+                      on: {
+                        click: function($event) {
+                          return _vm.doCopy("portoplusx")
+                        }
+                      }
+                    },
+                    [_vm._v("code: "), _c("strong", [_vm._v("portoplusx")])]
+                  )
                 ]
               ),
               _vm._v(" "),
@@ -71468,7 +71488,7 @@ var render = function() {
           _vm._v(" "),
           _c("pv-footer"),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ],
         1
       ),
@@ -71523,19 +71543,6 @@ var staticRenderFns = [
         )
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "btn btn-dark font1 ls-n-10 round-box my-2",
-        attrs: { href: "javascript:;" }
-      },
-      [_vm._v("code: "), _c("strong", [_vm._v("portoplusx")])]
-    )
   },
   function() {
     var _vm = this

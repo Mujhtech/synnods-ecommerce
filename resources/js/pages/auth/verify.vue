@@ -192,12 +192,12 @@ export default {
           type: "success",
           message: response.data.data.message,
         });
-        console.log(response);
+        //console.log(response);
         this.$router.push("/account");
       } catch (error) {
         this.loading = false;
         submit.innerText = "Verify";
-        console.log(error.response);
+        //console.log(error.response);
         this.addNotification({
           type: "error",
           message: error.response.data.data

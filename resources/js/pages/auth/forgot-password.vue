@@ -130,13 +130,14 @@ export default {
         console.log(this.user);
         const response = await auth.recover(this.user);
         this.loading = false;
-        (this.user.email = ""),
-          this.addNotification({
-            type: "success",
-            message: response.data.data.message,
-          });
+        //this.user.email = "";
+        this.addNotification({
+          type: "success",
+          message: response.data.data.message,
+        });
         submit.innerText = "Reset Password";
-        console.log(response);
+        this.$router.go();
+        //console.log(response);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Reset Password";
@@ -146,7 +147,7 @@ export default {
             ? error.response.data.data.message
             : "Something went wrong",
         });
-        console.log(error.response);
+        //console.log(error.response);
       }
     },
   },

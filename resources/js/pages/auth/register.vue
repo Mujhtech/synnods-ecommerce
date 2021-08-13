@@ -246,7 +246,7 @@ export default {
         const response = await auth.register(this.user);
         this.loading = false;
         submit.innerText = "Register";
-        console.log(response);
+        //console.log(response);
         this.user.email = "";
         this.user.password = "";
         this.user.first_name = "";
@@ -260,7 +260,7 @@ export default {
       } catch (error) {
         this.loading = false;
         submit.innerText = "Register";
-        console.log(error.response);
+        //console.log(error.response);
         this.addNotification({
           type: "error",
           message: error.response.data.data

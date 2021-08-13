@@ -10,7 +10,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class NewProductEvent
+class NewProductEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -19,9 +19,12 @@ class NewProductEvent
      *
      * @return void
      */
-    public function __construct()
+    public $product;
+
+    public function __construct($product)
     {
         //
+        $this->product = $product;
     }
 
     /**
@@ -31,6 +34,11 @@ class NewProductEvent
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('channel-name');
+        return new Channel('NewProduct');
+    }
+
+    public function broadcastAs()
+    {
+        return 'new.product';
     }
 }

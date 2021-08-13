@@ -94,10 +94,10 @@ class SendMailService {
 		$headers .= "MIME-Version: 1.0\r\n";
 		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-		if (mail($email, $this->subject, $content, $headers)) {
-		    return true;
-		} else {
+		if (!@mail($email, $this->subject, $content, $headers)) {
 		    return false;
+		} else {
+		    return true;
 		}
 
         //Mail::to($email)->send(new SendMail($content, $this->subject));

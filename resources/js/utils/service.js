@@ -3,7 +3,6 @@
  */
 export function getProductsByFeatured(products){
     let temp = [ ...products ];
-    console.log(temp);
     return temp.filter( item => item.is_featured === true );
 }
 
@@ -14,7 +13,6 @@ export function getProductsByViews(products){
 
 export function getProductsByAttri( products, attri = "is_hot" ) {
     let temp = [ ...products ];
-    console.log(temp);
     return temp.filter( item => item[ attri ] === true );
 }
 

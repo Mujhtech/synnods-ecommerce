@@ -9,6 +9,7 @@ use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\SubCategoryController;
 use App\Http\Controllers\API\VendorController;
 use App\Http\Controllers\API\NewsletterController;
+use App\Events\NewProductEvent;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,10 @@ Route::get('/', function (Request $request) {
 });
 
 Route::group(['prefix' => 'v1'], function () {
+
+    Route::get('broadcast', function(){
+        broadcast(new NewProductEvent('Hello my people'));
+    });
 
     // Newsletter route
 

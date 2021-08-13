@@ -175,11 +175,12 @@ export default {
           type: "success",
           message: "Password reset successfully",
         });
-        console.log(response);
+        this.$router.push('/auth/login');
+        //console.log(response);
       } catch (error) {
         this.loading = false;
         submit.innerText = "Reset Password";
-        console.log(error.response);
+        //console.log(error.response);
         this.addNotification({
           type: "error",
           message: error.response.data.data

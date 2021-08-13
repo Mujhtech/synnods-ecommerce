@@ -106,7 +106,6 @@ export default {
       //this.newProducts = getProductsByAttri(response.data.data.data, "is_new");
       //this.bestProducts = getTopSellingProducts(response.data.data.data);
       //this.topRatedProducts = getTopRatedProducts(response.data.data.data);
-      console.log(response);
     } catch (err) {
       console.log(err.response);
     }

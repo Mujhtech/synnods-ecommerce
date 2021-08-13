@@ -13,7 +13,7 @@
           "
         >
           <img
-            :src="'./images/header-item.png'"
+            :src="'/images/header-item.png'"
             alt="Top Ads"
             width="237"
             height="49"
@@ -41,6 +41,7 @@
           </div>
           <a
             href="javascript:;"
+            v-on:click="doCopy('portoplusx')"
             class="btn btn-dark font1 ls-n-10 round-box my-2"
             >code: <strong>portoplusx</strong></a
           >
@@ -114,7 +115,7 @@ export default {
   data: function () {
     return {
       isHide: false,
-      categories: []
+      categories: [],
     };
   },
   watch: {
@@ -130,6 +131,9 @@ export default {
   mounted: function () {
     this.fetchCategory();
     this.fetchUser();
+    Echo.channel("NewProduct").listen(".new.product", (e) => {
+      console.log(e);
+    });
     window.addEventListener("scroll", stickyHeaderHandler, {
       passive: true,
     });
@@ -151,25 +155,34 @@ export default {
   },
   methods: {
     ...mapActions("user", ["userLogin", "userLogout"]),
+    doCopy: function (text) {
+      this.$copyText(text).then(
+        function (e) {
+          alert("Copied");
+          console.log(e);
+        },
+        function (e) {
+          console.log(e);
+        }
+      );
+    },
     fetchCategory: async function () {
-			try {
-				const response = await catService.category();
-				this.categories = response.data.data.data;
-				console.log(response);
-			} catch (err) {
-				console.log(err.response);
-			}
-		},
+      try {
+        const response = await catService.category();
+        this.categories = response.data.data.data;
+      } catch (err) {
+        console.log(err.response);
+      }
+    },
     fetchUser: async function () {
       try {
         const response = await auth.getProfile();
-        console.log(response.date);
         this.userLogin(response.data.data.user);
       } catch (err) {
         //if(!err.response) return;
         console.log(err.response);
         localStorage.removeItem("SYNECT");
-        localStorage.removeItem('SYNECUS');
+        localStorage.removeItem("SYNECUS");
         this.userLogout({});
       }
     },
