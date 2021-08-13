@@ -78,6 +78,11 @@
               >
                 Login
               </button>
+              <br /><br />
+              <p>
+                Create an account?
+                <router-link to="/auth/register">Register</router-link>
+              </p>
             </form>
           </div>
         </div>

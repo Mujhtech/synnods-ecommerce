@@ -16,6 +16,9 @@ import VueSweetalert2 from 'vue-sweetalert2';
 import Vuelidate from 'vuelidate';
 
 import 'sweetalert2/dist/sweetalert2.min.css';
+import 'nprogress/nprogress.css';
+
+Vue.config.productionTip = false;
 
 Vue.use(Vuelidate);
 Vue.use(VueSweetalert2);

@@ -20,6 +20,7 @@ import VendorStore from "../pages/vendor/store";
 import Blog from "../pages/pages/blog";
 import AboutUs from "../pages/pages/about-us";
 import ContactUs from "../pages/pages/contact-us";
+import NProgress from 'nprogress';
 
 Vue.use(VueRouter);
 
@@ -133,6 +134,8 @@ const router = new VueRouter({
 });
 
 router.beforeResolve((to, from, next) => {
+    NProgress.configure({ easing: 'ease', speed: 1000 });
+    NProgress.start();
     if (to.meta.middleware) {
         if (
             !localStorage.getItem("SYNECT") &&
@@ -150,6 +153,11 @@ router.beforeResolve((to, from, next) => {
     } else {
         next();
     }
+});
+
+
+router.afterEach((to, from) => {
+    NProgress.done();
 });
 
 export default router;

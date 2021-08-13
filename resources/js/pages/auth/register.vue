@@ -124,6 +124,10 @@
                   Register
                 </button>
               </div>
+              <p>
+                Already have an account?
+                <router-link to="/auth/login">Login</router-link>
+              </p>
             </form>
           </div>
         </div>

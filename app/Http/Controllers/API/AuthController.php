@@ -3,39 +3,41 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\ApiController;
-use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RecoverRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\ResetRequest;
+use App\Http\Requests\VerifyRequest;
 use App\Http\Resources\UserResource;
+use App\Models\EmailVerifier;
 use App\Models\User;
+use App\Services\SendMailService;
 use Auth;
 use Carbon\Carbon;
 use DB;
-use App\Http\Requests\VerifyRequest;
-use App\Http\Requests\ResetRequest;
-use App\Http\Requests\RecoverRequest;
-use Str;
-use App\Services\SendMailService;
+use Illuminate\Http\Request;
 use SendChamp;
-use App\Models\EmailVerifier;
+use Str;
 
 class AuthController extends ApiController
 {
     //
     private $email;
 
-    public function __construct(SendMailService $email){
+    public function __construct(SendMailService $email)
+    {
 
         $this->email = $email;
 
     }
 
-    public function login(LoginRequest $request){
+    public function login(LoginRequest $request)
+    {
 
         $request->validated();
 
         // Authenticate user if user validation is true
-        if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+        if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
             return $this->setStatusCode(500)->setStatusMessage('error')->respond(['message' => 'Invalid username/password']);
 
@@ -48,59 +50,58 @@ class AuthController extends ApiController
         $token = $tokenData->token;
 
         // if remember me is true add weeks to token expiration
-        if ($request->remember_me){
+        if ($request->remember_me) {
             $token->expires_at = Carbon::now()->addWeeks();
         }
 
-        if ($token->save()){
+        if ($token->save()) {
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'user' => UserResource::make($user),
                 'access_token' => $tokenData->accessToken,
                 'token_type' => 'Bearer',
                 //'token_scope' => $tokenData->token->scope[0],
-                'expires_at' => Carbon::parse($tokenData->token->expired_at)->toDayDateTimeString()
+                'expires_at' => Carbon::parse($tokenData->token->expired_at)->toDayDateTimeString(),
             ]);
 
         } else {
 
             return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                'message' => 'Some error occurred, try again'
+                'message' => 'Some error occurred, try again',
             ]);
 
         }
 
     }
 
-    public function register(RegisterRequest $request){
+    public function register(RegisterRequest $request)
+    {
 
         $request->validated();
 
-        if(User::where('email', $request->email)->exists()){
+        if (User::where('email', $request->email)->exists()) {
 
             return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                'message' => 'Email already exist'
+                'message' => 'Email already exist',
             ]);
 
         }
-
-
 
         $user = new User();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->user_name = $request->user_name;
-        $user->phone = '234'.substr($request->phone, 1);
+        $user->phone = '234' . substr($request->phone, 1);
         $user->role_id = 4;
         $user->password = $request->password;
 
-        if ($user->save()){
+        if ($user->save()) {
 
             $token = Str::random(60);
 
-            $email_code = rand(100000,999999);
-            $sms_code = rand(100000,999999);
+            $email_code = rand(100000, 999999);
+            $sms_code = rand(100000, 999999);
 
             DB::table('email_verifiers')->where('email', $user->email)->delete();
             DB::table('email_verifiers')->insert([
@@ -108,65 +109,74 @@ class AuthController extends ApiController
                 'token' => $token,
                 'sms_code' => $sms_code,
                 'email_code' => $email_code,
-                'expires_at' => Carbon::now()->addMinutes(60)
-            ]);          
+                'expires_at' => Carbon::now()->addMinutes(60),
+            ]);
 
-            SendChamp::sendSms('Synoods Ecommerce: Use '.$sms_code.' as O.T.P. This expires in 10 minutes', 'Sendchamp', [$user->phone]);
+            try {
 
-            //$this->email->email_type('verify_account')->verify_account($token, $email_code)->send($request->email);
+                SendChamp::sendSms('Synoods Ecommerce: Use ' . $sms_code . ' as O.T.P. This expires in 10 minutes', 'Sendchamp', [$user->phone]);
+
+                $this->email->email_type('verify_account')->verify_account($token, $email_code)->send($request->email);
+
+            } catch (Exception $e) {
+
+            }
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'message' => 'A verification code has been sent to your email address and phone number',
-                'token' => $token
+                'token' => $token,
             ]);
 
         } else {
-            
+
             return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                'message' => 'Some error occurred, try again'
+                'message' => 'Some error occurred, try again',
             ]);
 
         }
 
     }
 
-    public function user(Request $request){
+    public function user(Request $request)
+    {
 
-        if($request->user()){
+        if ($request->user()) {
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-                'user' => UserResource::make($request->user())
+                'user' => UserResource::make($request->user()),
             ]);
 
         } else {
 
             return $this->setStatusCode(403)->setStatusMessage('error')->respond([
-                'message' => 'Not authorized'
+                'message' => 'Not authorized',
             ]);
 
         }
 
     }
 
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
 
         // Revoke users token
-        if($request->user()){
+        if ($request->user()) {
 
             $request->user()->tokens()->revoke();
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-                'message' => 'Logout successfully'
+                'message' => 'Logout successfully',
             ]);
         } else {
             return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                'message' => $request->user()
+                'message' => $request->user(),
             ]);
         }
 
     }
 
-    public function recover(RecoverRequest $request){
+    public function recover(RecoverRequest $request)
+    {
 
         $request->validated();
 
@@ -174,17 +184,20 @@ class AuthController extends ApiController
         if (!$user) {
 
             return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                'message' => 'Email not found'
+                'message' => 'Email not found',
             ]);
-            
+
         }
 
         $token = Str::random(60);
 
         DB::table('password_resets')->where('email', $request->email)->delete();
         DB::table('password_resets')->insert(['email' => $request->email, 'token' => $token, 'created_at' => Carbon::now()]);
+        try {
+            $this->email->email_type('reset_password')->reset_account($token)->send($request->email);
+        } catch (Exception $e) {
 
-        $this->email->email_type('reset_password')->reset_account($token)->send($request->email);
+        }
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'message' => 'An email has been sent with a link to reset the password',
@@ -193,7 +206,8 @@ class AuthController extends ApiController
 
     }
 
-    public function reset(ResetRequest $request){
+    public function reset(ResetRequest $request)
+    {
 
         $request->validated();
         // Get token
@@ -205,7 +219,7 @@ class AuthController extends ApiController
             if (!$user) {
 
                 return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                    'message' => 'Email not found'
+                    'message' => 'Email not found',
                 ]);
             }
 
@@ -219,19 +233,20 @@ class AuthController extends ApiController
             DB::table('password_resets')->where('email', $user->email)->delete();
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-                'message' => 'Password recover successfully'
+                'message' => 'Password recover successfully',
             ]);
 
         } else {
 
             return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                'message' => 'The recovery token is incorrect or has already been used'
+                'message' => 'The recovery token is incorrect or has already been used',
             ]);
         }
 
     }
 
-    public function verify(VerifyRequest $request){
+    public function verify(VerifyRequest $request)
+    {
 
         $request->validated();
 
@@ -241,7 +256,7 @@ class AuthController extends ApiController
             if (Carbon::now() > Carbon::create($tokenData->expires_at)) {
 
                 return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                    'message' => 'Verification code has expired'
+                    'message' => 'Verification code has expired',
                 ]);
             }
 
@@ -250,9 +265,9 @@ class AuthController extends ApiController
             if (!$user) {
 
                 return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                    'message' => 'Email not found'
+                    'message' => 'Email not found',
                 ]);
-                
+
             }
 
             $code = EmailVerifier::where('token', $request->token)->first();
@@ -260,7 +275,7 @@ class AuthController extends ApiController
             if ($request->email_code != $code->email_code) {
 
                 return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                    'message' => 'The entered email verification code is incorrect'
+                    'message' => 'The entered email verification code is incorrect',
                 ]);
 
             }
@@ -268,7 +283,7 @@ class AuthController extends ApiController
             if ($request->sms_code != $code->sms_code) {
 
                 return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                    'message' => 'The entered sms verification code is incorrect'
+                    'message' => 'The entered sms verification code is incorrect',
                 ]);
 
             }
@@ -277,9 +292,14 @@ class AuthController extends ApiController
             $user->verified = 1;
             $user->save();
 
-            //DB::table('email_verifiers')->where('email', $user->email)->delete();
+            DB::table('email_verifiers')->where('email', $user->email)->delete();
 
-            //$this->email->email_type('welcome_user')->welcome_user($user->fullname)->send($user->email);
+            try {
+                $this->email->email_type('welcome_user')->welcome_user($user->fullname)->send($user->email);
+
+            } catch (Exception $e) {
+
+            }
 
             Auth::loginUsingId($user->id);
 
@@ -296,20 +316,20 @@ class AuthController extends ApiController
                 'user' => UserResource::make($user),
                 'access_token' => $tokenData->accessToken,
                 'token_type' => 'Bearer',
-                'expires_at' => Carbon::parse($tokenData->token->expired_at)->toDayDateTimeString()
+                'expires_at' => Carbon::parse($tokenData->token->expired_at)->toDayDateTimeString(),
             ]);
 
         } else {
 
             return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                'message' => 'The verification token is incorrect or has already been used'
+                'message' => 'The verification token is incorrect or has already been used',
             ]);
         }
 
     }
 
-
-    public function resend(Request $request){
+    public function resend(Request $request)
+    {
 
         $tokenData = DB::table('email_verifiers')->where('token', $request->token)->first();
         if ($tokenData) {
@@ -319,36 +339,41 @@ class AuthController extends ApiController
             if (!$user) {
 
                 return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                    'message' => 'Email not found'
+                    'message' => 'Email not found',
                 ]);
-                
+
             }
 
             $code = EmailVerifier::where('token', $request->token)->first();
-            
-            $email_code = rand(100000,999999);
-            $sms_code = rand(100000,999999);
+
+            $email_code = rand(100000, 999999);
+            $sms_code = rand(100000, 999999);
 
             $code->sms_code = $sms_code;
             $code->email_code = $email_code;
-            $code->expires_at = Carbon::now()->addMinutes(60)   ;
-            $code->save() ;  
+            $code->expires_at = Carbon::now()->addMinutes(60);
+            $code->save();
 
-            SendChamp::sendSms('Synoods Ecommerce: Use '.$sms_code.' as O.T.P. This expires in 10 minutes', 'Sendchamp', [$user->phone]);
+            try {
 
-            //$this->email->email_type('verify_account')->verify_account($token, $email_code)->send($user->email);
+                SendChamp::sendSms('Synoods Ecommerce: Use ' . $sms_code . ' as O.T.P. This expires in 10 minutes', 'Sendchamp', [$user->phone]);
+
+                $this->email->email_type('verify_account')->verify_account($token, $email_code)->send($user->email);
+
+            } catch (Exception $e) {
+
+            }
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-                'message' => 'A verification code has been sent to your email address and phone number'
+                'message' => 'A verification code has been sent to your email address and phone number',
             ]);
 
         } else {
 
             return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                'message' => 'The verification token is incorrect or has already been used'
+                'message' => 'The verification token is incorrect or has already been used',
             ]);
         }
-
 
     }
 }

@@ -6,7 +6,7 @@
       >
       <div class="submenu">
         <router-link :to="{ path: '/' }"
-          ><!--<i class="icon-category-home"></i>-->Home</router-link
+          ><i class="icon-category-home"></i>Home</router-link
         >
 
         <router-link
@@ -14,8 +14,8 @@
           v-for="(category, index) in categories"
           :key="'header-cat-' + index"
           :class="{ active: category.slug === currentCategory }"
-          ><!--<i class="icon-category-electronics"></i
-          >-->{{ category.name }}</router-link
+          ><i :class="`icon-category-${category.slug}`"></i
+          >{{ category.name }}</router-link
         >
 
         <router-link :to="{ path: '/shop' }"
