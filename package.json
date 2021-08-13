@@ -24,9 +24,12 @@
     },
     "dependencies": {
         "crypto-js": "^3.1.9-1",
+        "laravel-echo": "^1.11.1",
         "nprogress": "^0.2.0",
+        "pusher-js": "^7.0.3",
         "swiper": "^5.4.5",
         "vue-awesome-swiper": "^4.1.1",
+        "vue-clipboard2": "^0.3.1",
         "vue-image-lightbox": "^7.2.0",
         "vue-image-zoom": "^1.0.6",
         "vue-images-loaded": "^1.1.2",

@@ -18,6 +18,7 @@ use DB;
 use Illuminate\Http\Request;
 use SendChamp;
 use Str;
+use App\Events\EmailFailedEvent;
 
 class AuthController extends ApiController
 {
@@ -119,6 +120,8 @@ class AuthController extends ApiController
                 $this->email->email_type('verify_account')->verify_account($token, $email_code)->send($request->email);
 
             } catch (Exception $e) {
+
+                
 
             }
 

@@ -29,6 +29,7 @@ class CreateVendorsTable extends Migration
             $table->string('store_logo')->nullable();
             $table->boolean('verification')->default(false);
             $table->boolean('status')->default(false);
+            $table->integer('ratings')->default(0);
             $table->timestamps();
         });
     }

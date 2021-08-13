@@ -52,7 +52,7 @@
             <div class="col-lg-6">
               <ul class="submenu">
                 <li v-for="(item, index) in categories" :key="'cat-' + index">
-                  <router-link :to="item.slug">
+                  <router-link :to="{ path: '/shop', query: { category: item.slug } }">
                     {{ item.name }}
                     <span class="tip tip-hot" v-if="item.hot">Hot</span>
                   </router-link>
