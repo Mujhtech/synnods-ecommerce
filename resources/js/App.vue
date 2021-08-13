@@ -68,6 +68,8 @@
 
     <pv-cart-popup class="minipopup-area"></pv-cart-popup>
     <pv-new-product class="minipopup-area"></pv-new-product>
+    <pv-new-order class="minipopup-area"></pv-new-order>
+    <pv-new-user class="minipopup-area"></pv-new-user>
 
     <a
       id="scroll-top"
@@ -91,6 +93,7 @@ import PvFooter from "./components/common/PvFooter";
 import PvCartPopup from "./components/common/partials/PvCartPopup";
 import PvNewProduct from "./components/common/partials/PvNewProduct";
 import PvNewOrder from "./components/common/partials/PvNewOrder";
+import PvNewUser from "./components/common/partials/PvNewUser";
 import PvMobileMenu from "./components/common/partials/PvMobileMenu";
 import PvStickyFooter from "./components/common/partials/PvStickyFooter";
 import { mapActions } from "vuex";
@@ -113,6 +116,7 @@ export default {
     PvFooter,
     PvCartPopup,
     PvNewProduct,
+    PvNewUser,
     PvNewOrder,
     PvMobileMenu,
     PvStickyFooter,
@@ -142,7 +146,13 @@ export default {
         text: `has been added!`,
         data: e.product,
       });
-      console.log(e);
+    });
+    Echo.channel("NewUser").listen(".new.user", (e) => {
+      this.$notify({
+        group: "newUser",
+        text: `just joined!`,
+        data: e.user,
+      });
     });
     window.addEventListener("scroll", stickyHeaderHandler, {
       passive: true,

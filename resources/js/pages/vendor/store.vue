@@ -77,7 +77,15 @@
           <div class="store-details">
             <div class="seller-avatar">
               <img
-                :src="`${baseUrl}${vendor.logo}`"
+                v-if="vendor.logo"
+                :src="`${baseUrl}${vendor.logo_url}`"
+                alt="avatar"
+                width="100"
+                height="100"
+              />
+              <img
+                v-else
+                :src="`${vendor.logo_url}`"
                 alt="avatar"
                 width="100"
                 height="100"

@@ -18,7 +18,7 @@ use DB;
 use Illuminate\Http\Request;
 use SendChamp;
 use Str;
-use App\Events\EmailFailedEvent;
+use App\Events\NewUserEvent;
 
 class AuthController extends ApiController
 {
@@ -307,6 +307,9 @@ class AuthController extends ApiController
             Auth::loginUsingId($user->id);
 
             $user = auth()->user();
+
+            // Send broadcast of new user
+            broadcast(new NewUserEvent($user));
 
             $tokenData = $user->createToken('Personal Access Token', ['user']);
 

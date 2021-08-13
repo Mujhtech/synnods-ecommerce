@@ -56,7 +56,7 @@
                     type="checkbox"
                     class="custom-control-input"
                     id="lost-password"
-                    v-model="remember_me"
+                    v-model="user.remember_me"
                   />
                   <label class="custom-control-label mb-0" for="lost-password">
                     Remember me

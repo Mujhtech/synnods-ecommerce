@@ -36,9 +36,11 @@
 						class="header-icon d-md-block d-none mr-0"
 					>
 						<div class="header-user">
-							<i class="icon-user-2"></i>
+							<img v-if="loggedIn" style="border-radius: 50px;" :src="avatar" />
+							<i v-else class="icon-user-2"></i>
 							<div class="header-userinfo">
-								<span class="d-inline-block line-height-1 ls-10">Hello!</span>
+								<span class="d-inline-block line-height-1 ls-10" v-if="loggedIn">Hello {{fullname}}!</span>
+								<span class="d-inline-block line-height-1 ls-10" v-else>Hello!</span>
 								<h4 class="font1 mb-0">My Account</h4>
 							</div>
 						</div>
@@ -97,6 +99,7 @@ import PvMainMenu from './partials/PvMainMenu';
 import PvCartMenu from './partials/PvCartMenu';
 import PvHeaderSearch from './partials/PvHeaderSearch';
 import { mapActions, mapGetters } from 'vuex';
+import * as auth from "../../services/auth";
 
 document.querySelector( 'body' ).classList.add( 'loaded' );
 
@@ -111,7 +114,10 @@ export default {
 	},
 	data: function () {
 		return {
-			
+			fullname: auth.getUser().full_name,
+			image: auth.getUser().image,
+			avatar: auth.getUser().avatar,
+			loggedIn: auth.getAccessToken()
 		};
 	},
 	mounted: function() {

@@ -21,6 +21,8 @@ import Blog from "../pages/pages/blog";
 import AboutUs from "../pages/pages/about-us";
 import ContactUs from "../pages/pages/contact-us";
 import NProgress from 'nprogress';
+import Admin from "../admin/Index";
+import AdminDashboard from "../admin/pages/Dashboard";
 
 Vue.use(VueRouter);
 
@@ -121,6 +123,18 @@ const routes = [
                 path: "verify/:token",
                 component: Verify
             }
+        ]
+    },
+    {
+        path: "/admin",
+        component: Admin,
+        redirect: "/admin/dashboard",
+        children: [
+            {
+                path: "dashboard",
+                component: AdminDashboard,
+                meta: { middleware: "auth" }
+            },
         ]
     },
     { path: "/*", component: Error }

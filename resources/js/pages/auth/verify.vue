@@ -97,7 +97,7 @@ export default {
     PreLoader,
   },
   mounted() {
-    this.token = this.$route.params.token;
+    this.user.token = this.$route.params.token;
   },
   validations: {
     user: {

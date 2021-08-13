@@ -121,7 +121,15 @@
             <router-link :to="`/vendor/${vendor.slug}`">
               <figure>
                 <img
-                  :src="`${baseUrl}${vendor.logo}`"
+                  v-if="vendor.logo"
+                  :src="`${baseUrl}${vendor.logo_url}`"
+                  alt="vendor"
+                  width="625"
+                  height="299"
+                />
+                <img
+                  v-else
+                  :src="`${vendor.logo_url}`"
                   alt="vendor"
                   width="625"
                   height="299"
@@ -136,7 +144,8 @@
             </router-link>
 
             <p class="store-address">
-              {{ vendor.address }}
+              {{ vendor.address }}, {{ vendor.state }}
+              {{ vendor.country }}
             </p>
           </div>
 
@@ -151,7 +160,15 @@
           <div class="store-footer">
             <div class="seller-avatar">
               <img
-                :src="`${baseUrl}${vendor.logo}`"
+                v-if="vendor.logo"
+                :src="`${baseUrl}${vendor.logo_url}`"
+                alt="avatar"
+                width="100"
+                height="100"
+              />
+              <img
+                v-else
+                :src="`${vendor.logo_url}`"
                 alt="avatar"
                 width="100"
                 height="100"

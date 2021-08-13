@@ -9,7 +9,7 @@ use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\SubCategoryController;
 use App\Http\Controllers\API\VendorController;
 use App\Http\Controllers\API\NewsletterController;
-use App\Events\NewProductEvent;
+use App\Events\NewUserEvent;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +36,7 @@ Route::get('/', function (Request $request) {
 Route::group(['prefix' => 'v1'], function () {
 
     Route::get('broadcast', function(){
-        broadcast(new NewProductEvent(\App\Models\Product::find(1)));
+        broadcast(new NewUserEvent(\App\Models\User::find(1)));
     });
 
     // Newsletter route

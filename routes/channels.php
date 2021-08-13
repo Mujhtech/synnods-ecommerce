@@ -20,3 +20,7 @@ Broadcast::channel('NewProduct', function(){
 Broadcast::channel('NewOrder', function(){
     return true;
 });
+
+Broadcast::channel('NewUser', function(){
+    return true;
+});
