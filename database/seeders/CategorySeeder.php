@@ -20,49 +20,57 @@ class CategorySeeder extends Seeder
                 "name" => "Electronics",
                 "description" => "",
                 "slug" => "electronics",
-                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg"
+                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
+                "icon" => "icon-category-fashion"
             ],
             [
                 "name" => "Phone & Tablets",
                 "description" => "",
                 "slug" => "phone_&_tablets",
-                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg"
+                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
+                "icon" => "icon-category-gifts"
             ],
             [
                 "name" => "Grocery",
                 "description" => "",
                 "slug" => "grocery",
-                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg"
+                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
+                "icon" => "icon-category-gifts"
             ],
             [
                 "name" => "Computing",
                 "description" => "",
                 "slug" => "computing",
-                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg"
+                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
+                "icon" => "icon-category-electronics"
             ],
             [
                 "name" => "Home & Office",
                 "description" => "",
                 "slug" => "home_&_office",
-                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg"
+                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
+                "icon" => "icon-category-furniture"
             ],
             [
                 "name" => "Fashion",
                 "description" => "",
                 "slug" => "fashion",
-                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg"
+                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
+                "icon" => "icon-category-fashion"
             ],
             [
                 "name" => "Health & Beauty",
                 "description" => "",
                 "slug" => "health_&_beauty",
-                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg"
+                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
+                "icon" => "icon-category-music"
             ],
             [
                 "name" => "Baby Product",
                 "description" => "",
                 "slug" => "baby_product",
-                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg"
+                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
+                "icon" => "icon-category-garden"
             ],
         ];
 

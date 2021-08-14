@@ -14,7 +14,7 @@
           v-for="(category, index) in categories"
           :key="'header-cat-' + index"
           :class="{ active: category.slug === currentCategory }"
-          ><i :class="`icon-category-${category.slug}`"></i
+          ><i :class="category.icon"></i
           >{{ category.name }}</router-link
         >
 
