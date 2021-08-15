@@ -12,7 +12,7 @@
 					>
 						<figure>
 							<img
-								v-lazy="'./images/home/banners/banner-1.jpg'"
+								v-lazy="'/images/home/banner-1.jpg'"
 								alt="banner"
 								width="700"
 								height="236"
@@ -41,7 +41,7 @@
 					>
 						<figure>
 							<img
-								v-lazy="'./images/home/banners/banner-2.jpg'"
+								v-lazy="'/images/home/banner-2.jpg'"
 								alt="banner"
 								width="700"
 								height="236"

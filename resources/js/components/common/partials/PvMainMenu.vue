@@ -99,6 +99,12 @@
       <li>
         <router-link to="/contact-us">Contact Us</router-link>
       </li>
+      <li v-if="!loggedIn">
+        <router-link to="/auth/login">Log In</router-link>
+      </li>
+      <li v-if="!loggedIn">
+        <router-link to="/auth/register">Register</router-link>
+      </li>
     </ul>
   </nav>
 </template>
@@ -106,13 +112,18 @@
 <script>
 import { mainMenu } from "../../../utils/data/menu";
 import { headerCats } from "../../../utils/data/shop";
+import * as auth from "../../../services/auth";
 
 export default {
   data: function () {
     return {
       mainMenu: mainMenu,
       headerCats: headerCats,
+      loggedIn: null,
     };
+  },
+  created: function(){
+    this.loggedIn = auth.getAccessToken()
   },
   props: {
     categories: Array,

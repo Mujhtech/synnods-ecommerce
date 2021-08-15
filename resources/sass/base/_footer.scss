@@ -76,7 +76,8 @@ footer {
 	// Footer's color, font-size
 	font-size: $footer-font-size;
 	@include css( color, footer, color );
-	@include css( background, footer, background );
+	//@include css( background, footer, background );
+	background-color: #222529;
 	@include css( line-height, footer, line-height );
 	@include css( letter-spacing, footer, letter-spacing );
 

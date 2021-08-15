@@ -60,9 +60,14 @@
             <li>
               <router-link to="/cart">Cart</router-link>
             </li>
-            <li>
+            <li v-if="!loggedIn">
               <router-link to="/auth/login" class="login-link"
                 >Log In</router-link
+              >
+            </li>
+            <li v-if="!loggedIn">
+              <router-link to="/auth/register" class="login-link"
+                >Register</router-link
               >
             </li>
           </ul>
@@ -108,6 +113,7 @@
 <script>
 import { VueSlideToggle } from "vue-slide-toggle";
 import { mainMenu } from "../../../utils/data/menu";
+import * as auth from "../../../services/auth";
 
 export default {
   components: {
@@ -127,7 +133,11 @@ export default {
       prod2Opened: false,
       pageOpened: false,
       search_term: "",
+      loggedIn: null,
     };
+  },
+  created: function(){
+    this.loggedIn = auth.getAccessToken()
   },
   methods: {
     hideMobileMenu: function () {

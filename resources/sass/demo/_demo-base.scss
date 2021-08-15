@@ -87,7 +87,7 @@
         color: #fff;
         font-size: 1.3rem;
         font-weight: 400;
-        text-transform: lowercase;
+        text-transform: capitalize;
 
         &:not(:last-child) {
             padding-right: 1rem;
