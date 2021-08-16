@@ -60,7 +60,7 @@
 
 			social-icon: (
 				color: false,
-				background: transparent,
+				background: #ffffff,
 				font-size: 1.8rem,
 				size: 4rem,
 				space: false,
@@ -154,6 +154,7 @@ footer {
 // 2.1) Social Icon and Payment Icon
 	.social-icon {
 		border-radius: 50%;
+		background-color: #fff;
 		@include css( width, footer, social-icon, size);
 		@include css( height, footer, social-icon, size);
 		@include css( border, footer, social-icon, border );

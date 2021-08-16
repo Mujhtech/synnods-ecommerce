@@ -32,10 +32,10 @@
                   font-weight-bold
                   bg-secondary
                 "
-                >$199</span
+                >₦199</span
               >
               <span class="d-inline-block font1 old-price text-secondary mr-0"
-                >$299</span
+                >₦299</span
               >
             </div>
           </div>

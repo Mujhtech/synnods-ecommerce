@@ -53,7 +53,7 @@
 								<h4 class="m-b-2 font1 d-block text-dark bg-white skew-box">Exclusive
 									COUPON</h4>
 								<h5 class="mb-0 font1 d-inline-block bg-primary skew-box"><i class="text-white ls-0">UP
-										TO</i><b class="text-white">$200</b><sub class="text-white">OFF</sub>
+										TO</i><b class="text-white">₦200</b><sub class="text-white">OFF</sub>
 								</h5>
 							</div>
 						</div>

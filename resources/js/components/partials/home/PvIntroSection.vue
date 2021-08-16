@@ -25,7 +25,7 @@
 						<h4 class="m-b-2 font1 d-block text-white bg-dark skew-box">Exclusive
 							COUPON</h4>
 						<h5 class="mb-0 font1 d-inline-block bg-dark skew-box"><i class="text-dark ls-0">UP
-								TO</i><b class="text-white">$100</b><sub class="text-dark">OFF</sub>
+								TO</i><b class="text-white">₦100</b><sub class="text-dark">OFF</sub>
 						</h5>
 					</div>
 
@@ -60,7 +60,7 @@
 						<h4 class="m-b-2 font1 d-block text-uppercase text-white bg-dark skew-box">
 							Starting From
 						</h4>
-						<h5 class="mb-0 font1 d-inline-block bg-dark skew-box"><b class="text-white">$199</b>
+						<h5 class="mb-0 font1 d-inline-block bg-dark skew-box"><b class="text-white">₦199</b>
 						</h5>
 					</div>
 

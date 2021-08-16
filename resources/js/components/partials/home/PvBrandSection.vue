@@ -19,7 +19,25 @@
 			>
 				<div class="swiper-slide">
 					<img
-						:src="'/images/brand4.png'"
+						:src="'/images/brand1.png'"
+						width="200"
+						height="50"
+						alt="brand"
+					>
+				</div>
+
+				<div class="swiper-slide">
+					<img
+						:src="'/images/brand2.png'"
+						width="200"
+						height="50"
+						alt="brand"
+					>
+				</div>
+
+				<div class="swiper-slide">
+					<img
+						:src="'/images/brand3.png'"
 						width="200"
 						height="50"
 						alt="brand"
@@ -37,25 +55,7 @@
 
 				<div class="swiper-slide">
 					<img
-						:src="'/images/brand4.png'"
-						width="200"
-						height="50"
-						alt="brand"
-					>
-				</div>
-
-				<div class="swiper-slide">
-					<img
-						:src="'/images/brand4.png'"
-						width="200"
-						height="50"
-						alt="brand"
-					>
-				</div>
-
-				<div class="swiper-slide">
-					<img
-						:src="'/images/brand4.png'"
+						:src="'/images/brand5.png'"
 						width="200"
 						height="50"
 						alt="brand"

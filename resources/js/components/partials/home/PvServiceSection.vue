@@ -7,7 +7,7 @@
 
 					<div class="info-box-content">
 						<h4 class="font1 line-height-1 ls-10">FREE SHIPPING &amp; RETURN</h4>
-						<p class="font-weight-light">Free shipping on orders over $99.</p>
+						<p class="font-weight-light">Free shipping on orders over ₦99.</p>
 					</div>
 				</div>
 				<div class="info-box info-box-icon-left col-sm-6 col-lg-3">

@@ -25,7 +25,7 @@
 							<div class="coupon-sale-text">
 								<h4 class="font1 line-height-1 ls-10 text-white bg-primary skew-box m-b-2">
 									Starting from</h4>
-								<h5 class="d-inline-block font1 text-white bg-primary skew-box mb-0">$399<sub class="text-dark">$499</sub>
+								<h5 class="d-inline-block font1 text-white bg-primary skew-box mb-0">₦399<sub class="text-dark">₦499</sub>
 								</h5>
 							</div>
 						</div>
@@ -54,7 +54,7 @@
 							<div class="coupon-sale-text">
 								<h4 class="font1 line-height-1 ls-10 text-white bg-secondary skew-box m-b-2">
 									Starting from</h4>
-								<h5 class="d-inline-block font1 text-white bg-secondary skew-box mb-0">$199<sub class="text-dark">$299</sub>
+								<h5 class="d-inline-block font1 text-white bg-secondary skew-box mb-0">₦199<sub class="text-dark">₦299</sub>
 								</h5>
 							</div>
 						</div>

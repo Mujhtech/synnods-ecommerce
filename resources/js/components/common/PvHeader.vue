@@ -44,7 +44,11 @@
         <div class="header-right ml-0 ml-lg-auto">
           <router-link to="/account" class="header-icon d-md-block d-none mr-0">
             <div class="header-user">
-              <img v-if="loggedIn" style="border-radius: 50px" :src="avatar" />
+              <img
+                v-if="loggedIn"
+                style="border-radius: 50px; width: 40px; margin-right: 10px"
+                :src="avatar"
+              />
               <i v-else class="icon-user-2"></i>
               <div class="header-userinfo">
                 <span class="d-inline-block line-height-1 ls-10" v-if="loggedIn"

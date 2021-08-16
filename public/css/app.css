@@ -9970,6 +9970,7 @@ footer a:focus {
 
 footer .social-icon {
   border-radius: 50%;
+  background-color: #fff;
   width: 3rem;
   height: 3rem;
   color: #222529;
@@ -9977,7 +9978,7 @@ footer .social-icon {
   line-height: 3rem;
 }
 footer .social-icon:not(:hover):not(:active):not(:focus) {
-  background: transparent;
+  background: #ffffff;
 }
 footer .social-icon + .social-icon {
   margin-left: 5px;

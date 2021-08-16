@@ -51,7 +51,7 @@
 						<figure class="h-100">
 							<img
 								class="h-100"
-								v-lazy="'./images/home/banners/banner-5.jpg'"
+								v-lazy="'./images/home/banner-5.jpg'"
 								alt="baner"
 								width="360"
 								height="508"
@@ -64,7 +64,7 @@
 							<div class="coupon-sale-text d-flex flex-column align-items-start">
 								<h4 class="m-b-2 font1 d-block text-uppercase text-white bg-dark skew-box">
 									Starting From</h4>
-								<h5 class="mb-0 font1 d-inline-block bg-dark skew-box"><b class="text-white">$199</b>
+								<h5 class="mb-0 font1 d-inline-block bg-dark skew-box"><b class="text-white">₦199</b>
 								</h5>
 							</div>
 						</div>
