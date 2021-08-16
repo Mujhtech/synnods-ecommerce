@@ -1,17 +1,14 @@
 <template>
 	<div class="product-default inner-quickview inner-icon">
 		<figure>
-			<nuxt-link :to="`/product/default/${product.slug}`">
+			<router-link :to="`/product/${product.slug}`">
 				<img
-					v-for="(item,index) in product.large_pictures.slice(0,2)"
-					:key="`related-large-${index}`"
-					v-lazy="`${baseUrl}${item.url}`"
+					v-lazy="`${baseUrl}${product.featured_image}`"
 					alt="large-picture"
-					:width="item.width"
-					:height="item.height"
-					:class="{'last-image': index === 1}"
+					:width="product.featured_image.width"
+					:height="product.featured_image.height"
 				/>
-			</nuxt-link>
+			</router-link>
 
 			<div class="label-group">
 				<div
@@ -43,7 +40,7 @@
 
 		<div class="product-details">
 			<h3 class="product-title">
-				<nuxt-link :to="'/product/default/' + product.slug">{{ product.name }}</nuxt-link>
+				<router-link :to="'/product/' + product.slug">{{ product.name }}</router-link>
 			</h3>
 
 			<div
@@ -52,12 +49,12 @@
 				key="singlePrice"
 			>
 				<template v-if="!product.is_sale">
-					<span class="product-price">${{ product.price | priceFormat }}</span>
+					<span class="product-price">₦{{ product.price | priceFormat }}</span>
 				</template>
 
 				<template v-else>
-					<span class="product-price">${{ product.sale_price | priceFormat }}</span>
-					<span class="old-price">${{ product.price | priceFormat }}</span>
+					<span class="product-price">₦{{ product.sale_price | priceFormat }}</span>
+					<span class="old-price">₦{{ product.price | priceFormat }}</span>
 				</template>
 			</div>
 
@@ -66,11 +63,11 @@
 				v-else
 			>
 				<template v-if="minPrice !== maxPrice">
-					<span class="product-price">${{ minPrice | priceFormat }} &ndash; ${{ maxPrice | priceFormat }}</span>
+					<span class="product-price">₦{{ minPrice | priceFormat }} &ndash; ₦{{ maxPrice | priceFormat }}</span>
 				</template>
 
 				<template v-else>
-					<span class="product-price">${{ minPrice | priceFormat }}</span>
+					<span class="product-price">₦{{ minPrice | priceFormat }}</span>
 				</template>
 			</div>
 		</div>
@@ -105,14 +102,14 @@ export default {
 			this.discount = parseInt( this.discount );
 		}
 
-		if ( !this.product.price ) {
+		/*if ( !this.product.price ) {
 			this.minPrice = this.product.variants[ 0 ].price;
 			this.product.variants.forEach( item => {
 				let itemPrice = item.is_sale ? item.sale_price : item.price;
 				if ( this.minPrice > itemPrice ) this.minPrice = itemPrice;
 				if ( this.maxPrice < itemPrice ) this.maxPrice = itemPrice;
 			} );
-		}
+		} */
 	}
 };
 </script>   

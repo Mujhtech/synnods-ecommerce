@@ -39,6 +39,14 @@ class ProductController extends ApiController
 
         if(!empty($request->category)){
 
+            if(!Category::where('slug', $request->sub_category)->exists()){
+
+                return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                    'message' => 'Cannot find product'
+                ]);
+
+            }
+
             $category = Category::where('slug', $request->category)->first();
 
             $query['category_id'] = $category->id;
@@ -47,9 +55,33 @@ class ProductController extends ApiController
 
         if(!empty($request->sub_category)){
 
+            if(!SubCategory::where('slug', $request->sub_category)->exists()){
+
+                return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                    'message' => 'Cannot find product'
+                ]);
+
+            }
+
             $sub_category = SubCategory::where('slug', $request->sub_category)->first();
 
             $query['sub_category_id'] = $sub_category->id;
+
+        }
+
+        if(!empty($request->brand)){
+
+            if(!ProductBrand::where('name', $request->brand)->exists()){
+
+                return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                    'message' => 'Cannot find product brand'
+                ]);
+
+            }
+
+            $brand = ProductBrand::where('name', $request->brand)->first();
+
+            $query['product_brand_id'] = $brand->id;
 
         }
 
