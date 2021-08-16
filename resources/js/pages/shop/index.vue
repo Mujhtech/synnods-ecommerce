@@ -89,7 +89,7 @@ export default {
       try {
         const response = await catService.category();
         this.categoryList = response.data.data.data;
-        console.log(response);
+        //console.log(response);
       } catch (err) {
         console.log(err.response);
       }
@@ -98,7 +98,7 @@ export default {
       try {
         const response = await fetchProduct();
         this.featuredProducts = response.data.data.data;
-        console.log(response);
+        //console.log(response);
       } catch (err) {
         console.log(err.response);
       }

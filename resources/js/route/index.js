@@ -13,6 +13,7 @@ import Cart from "../pages/pages/cart";
 import Checkout from "../pages/pages/checkout";
 import Wishlist from "../pages/pages/wishlist";
 import Shop from "../pages/shop/index";
+import ShopList from "../pages/shop/list";
 import Product from "../pages/product/_type/_slug";
 import Error from "../layouts/error";
 import VendorList from "../pages/vendor/list";
@@ -51,6 +52,11 @@ const routes = [
         path: "/shop",
         component: Shop,
         name: "Shop"
+    },
+    {
+        path: "/shop/list",
+        component: ShopList,
+        name: "Shop List"
     },
     {
         path: "/product/:slug",

@@ -7,3 +7,7 @@ export function fetchProduct() {
 export function fetchSingle(slug) {
     return http().get(`/product/${slug}`);
 }
+
+export function fetchShop(data) {
+    return http().get('/product/shop', data);
+}

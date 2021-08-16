@@ -31,6 +31,81 @@ class ProductController extends ApiController
     }
 
 
+    public function shop(Request $request){
+
+        $query = [];
+
+        $products = Product::with(['vendor', 'reviews', 'category', 'sub_category', 'brand']);
+
+        if(!empty($request->category)){
+
+            $category = Category::where('slug', $request->category)->first();
+
+            $query['category_id'] = $category->id;
+
+        }
+
+        if(!empty($request->sub_category)){
+
+            $sub_category = SubCategory::where('slug', $request->sub_category)->first();
+
+            $query['sub_category_id'] = $sub_category->id;
+
+        }
+
+
+        if(!empty($request->tags)){
+
+            //$sub_category = SubCategory::where('slug', $request->sub_category)->first();
+
+            //$query['sub_category_id'] = $sub_category->id;
+
+        }
+
+        if(!empty($request->search)){
+            $products->where(function ($query) use ($filter) {
+                $query->where('name', 'LIKE', $request->search . '%');
+            });
+        }
+
+        if(!empty($request->max_price) || !empty($request->min_price)){
+
+            $max = $request->max_price;
+            $min = $request->min_price;
+
+            $products->where(function ($query) use ($max) {
+                $query->where('price', '<', $max);
+            });
+
+            $products->where(function ($query) use ($min) {
+                $query->where('price', '>', $min);
+            });
+        }
+
+        if(!empty($request->order_by)){
+            if($request->order_by == "featured"){
+                $products->orderBy('created_at', 'DESC');
+            } elseif($request->order_by == "new"){
+                $products->orderBy('created_at', 'DESC');
+            } elseif($request->order_by == "price-asc"){
+                $products->orderBy('price', 'ASC');
+            } elseif($request->order_by == "price-dec"){
+                $products->orderBy('price', 'DESC');
+            } elseif($request->order_by == "rating"){
+                $products->orderBy('ratings', 'DESC');
+            } else {
+                $products->orderBy('created_at', 'DESC');
+            }
+        }
+
+        $products = $products->where($query)->paginate($request->per_page);
+
+        return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+            'data' => ProductResource::collection($products)
+        ]);
+    }
+
+
     public function byCategory($slug){
 
         $category = Category::where('slug', $slug)->first();

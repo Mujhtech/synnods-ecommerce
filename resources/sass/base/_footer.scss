@@ -210,7 +210,8 @@ footer {
 	}
 
 	.widget-title {
-		@include css(color, footer, widget, title, color);
+		//@include css(color, footer, widget, title, color);
+		color: #ffffff;
 		@include css(font-size, footer, widget, title, size);
 		@include css(font-weight, footer, widget, title, weight);
 		@include css(font-family, footer, widget, title, family);

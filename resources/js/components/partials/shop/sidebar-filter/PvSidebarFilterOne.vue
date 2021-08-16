@@ -66,7 +66,7 @@
 						</div>
 
 						<div class="filter-price-action d-flex align-items-center justify-content-between flex-wrap">
-							<div class="filter-price-text">Price: ${{ prices[0] }} - ${{ prices[1] }}</div>
+							<div class="filter-price-text">Price: ₦{{ prices[0] }} - ₦{{ prices[1] }}</div>
 
 							<router-link
 								:to="priceFilterRoute"
