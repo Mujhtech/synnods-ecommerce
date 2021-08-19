@@ -29,7 +29,7 @@
                   ls-10
                   text-white
                 "
-                >Receive $10 coupon for first shopping.</span
+                >Receive ₦10 coupon for first shopping.</span
               >
             </div>
             <div class="col-md-10 col-lg-5">
@@ -58,10 +58,11 @@
             <div class="col-lg-4">
               <img
                 class="logo"
-                :src="'/images/logo.png'"
+                src="https://havybucket.fra1.cdn.digitaloceanspaces.com/faadaakaa/faadaakaa/faadaakaa_logo.png"
                 alt="Logo"
                 width="220"
                 height="80"
+                style="max-width:220px!important"
               />
 
               <div class="row">

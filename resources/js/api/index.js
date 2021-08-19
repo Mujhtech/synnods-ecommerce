@@ -1,7 +1,8 @@
 import axios from "axios";
 import * as auth from "../services/auth";
 
-const baseDonmain = "http://localhost:8000";
+const baseDonmain = window.config.APP == 'production' ? window.config.BASE_URL : "http://localhost:8000";
+
 const apiURL = "http://localhost:8000/api/v1";
 
 export const customHeader = {

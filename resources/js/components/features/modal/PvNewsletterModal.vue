@@ -2,14 +2,11 @@
   <div
     class="newsletter-popup mfp-hide bg-img"
     id="newsletter-popup-form"
-    style="
-      background: #f1f1f1 no-repeat center/cover
-        url(./images/newsletter_popup_bg.jpg);
-    "
+    style="background: #f1f1f1 no-repeat center/cover url(./images/newsletter_popup_bg.jpg)"
   >
     <div class="newsletter-popup-content">
       <img
-        :src="'/assets/images/logo.png'"
+        src="https://havybucket.fra1.cdn.digitaloceanspaces.com/faadaakaa/faadaakaa/faadaakaa_logo.png"
         alt="Logo"
         class="logo-newsletter"
         width="101"

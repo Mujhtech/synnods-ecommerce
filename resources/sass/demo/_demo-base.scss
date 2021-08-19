@@ -226,6 +226,16 @@
     }
 }
 
+.header-right a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.header-right a:active {
+    color: #fff;
+    text-decoration: underline;
+}
+
 // Sticky Header
 .header-middle.fixed {
     background: $primary-color;
@@ -588,6 +598,10 @@ footer {
 
     .widget-sm {
         line-height: 23px;
+    }
+    a:hover {
+        color: #fff;
+        text-decoration: underline;
     }
 }
 		

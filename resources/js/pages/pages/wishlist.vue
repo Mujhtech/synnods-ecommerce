@@ -62,14 +62,14 @@
               <td>
                 <figure class="product-image-container">
                   <router-link
-                    :to="'/product/default/' + product.slug"
+                    :to="'/product/' + product.slug"
                     class="product-image"
                   >
                     <img
-                      :src="`${baseUrl}${product.small_pictures[0].url}`"
+                      :src="`${baseUrl}${product.featured_image}`"
                       alt="product"
-                      :width="product.small_pictures[0].width"
-                      :height="product.small_pictures[0].height"
+                      :width="product.featured_image.width"
+                      :height="product.featured_image.height"
                     />
                   </router-link>
 
@@ -83,7 +83,7 @@
               </td>
               <td>
                 <h5 class="product-title">
-                  <router-link :to="'/product/default/' + product.slug">{{
+                  <router-link :to="'/product/' + product.slug">{{
                     product.name
                   }}</router-link>
                 </h5>
@@ -92,16 +92,16 @@
               <td class="price-box" v-if="product.price" key="singlePrice">
                 <template v-if="!product.is_sale">
                   <span class="new-price"
-                    >${{ product.price | priceFormat }}</span
+                    >₦{{ product.price | priceFormat }}</span
                   >
                 </template>
 
                 <template v-else>
                   <span class="new-price"
-                    >${{ product.sale_price | priceFormat }}</span
+                    >₦{{ product.sale_price | priceFormat }}</span
                   >
                   <span class="old-price"
-                    >${{ product.price | priceFormat }}</span
+                    >₦{{ product.price | priceFormat }}</span
                   >
                 </template>
               </td>
@@ -109,7 +109,7 @@
               <td class="price-box" v-else>
                 <template v-if="product.minPrice !== product.maxPrice">
                   <span class="new-price"
-                    >${{ product.minPrice | priceFormat }} &ndash; ${{
+                    >₦{{ product.minPrice | priceFormat }} &ndash; ${{
                       product.maxPrice | priceFormat
                     }}</span
                   >
@@ -117,13 +117,14 @@
 
                 <template v-else>
                   <span class="new-price"
-                    >${{ product.minPrice | priceFormat }}</span
+                    >₦{{ product.minPrice | priceFormat }}</span
                   >
                 </template>
               </td>
 
               <td>
-                <span class="stock-status">In stock</span>
+                <span class="stock-status" v-if="product.stock_status">In stock</span>
+                <span class="stock-status" v-else>Out stock</span>
               </td>
               <td class="action">
                 <a
@@ -138,17 +139,15 @@
                 <button
                   class="btn btn-dark btn-add-cart product-type-simple btn-shop"
                   @click="addCart(product)"
-                  v-if="product.variants.length === 0"
                 >
                   ADD TO CART
                 </button>
 
-                <router-link
+                <!--<router-link
                   :to="'/product/default/' + product.slug"
                   class="btn btn-dark btn-add-cart btn-shop"
-                  v-else
                   >SELECT OPTION</router-link
-                >
+                >-->
               </td>
             </tr>
           </tbody>
@@ -215,7 +214,7 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
-import { baseUrl, currentDemo } from "../../api";
+import { baseUrl } from "../../api";
 
 export default {
   name: "Wishlist",
@@ -226,7 +225,6 @@ export default {
   data: function () {
     return {
       baseUrl: baseUrl,
-      currentDemo: currentDemo,
       wishItems: [],
       currentProduct: null,
     };
@@ -251,14 +249,14 @@ export default {
         let minPrice = 0,
           maxPrice = 0;
 
-        if (!product.price) {
+        /*if (!product.price) {
           minPrice = product.variants[0].price;
           product.variants.forEach((item) => {
             let itemPrice = item.is_sale ? item.sale_price : item.price;
             if (minPrice > itemPrice) minPrice = itemPrice;
             if (maxPrice < itemPrice) maxPrice = itemPrice;
           });
-        }
+        }*/
 
         return [
           ...acc,

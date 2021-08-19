@@ -39,7 +39,7 @@ class ProductController extends ApiController
 
         if(!empty($request->category)){
 
-            if(!Category::where('slug', $request->sub_category)->exists()){
+            if(!Category::where('slug', $request->category)->exists()){
 
                 return $this->setStatusCode(500)->setStatusMessage('error')->respond([
                     'message' => 'Cannot find product'
@@ -94,9 +94,10 @@ class ProductController extends ApiController
 
         }
 
-        if(!empty($request->search)){
+        if(!empty($request->search_term)){
+            $filter = $request->search_term;
             $products->where(function ($query) use ($filter) {
-                $query->where('name', 'LIKE', $request->search . '%');
+                $query->where('name', 'LIKE', '%'.$filter. '%');
             });
         }
 

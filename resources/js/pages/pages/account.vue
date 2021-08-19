@@ -82,9 +82,17 @@
                     >Account details</a
                   >
                 </li>
-
-                <li>
-                  <router-link to="/wishlist">Wishlist</router-link>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="wishlist-tab"
+                    data-toggle="tab"
+                    href="#wishlist"
+                    role="tab"
+                    aria-controls="wishlist"
+                    aria-selected="false"
+                    >Wishlist</a
+                  >
                 </li>
 
                 <li>
@@ -168,7 +176,7 @@
               <div class="mb-4"></div>
 
               <div class="row row-lg">
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-6">
                   <div
                     class="feature-box text-center pb-4"
                     data-toggle="order"
@@ -183,7 +191,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-6">
                   <div
                     class="feature-box text-center pb-4"
                     data-toggle="address"
@@ -198,7 +206,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-6">
                   <div
                     class="feature-box text-center pb-4"
                     data-toggle="edit"
@@ -213,24 +221,13 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-6">
                   <div class="feature-box text-center pb-4">
-                    <router-link to="/wishlist">
+                    <a href="#wishlist" class="link-to-tab">
                       <i class="sicon-heart"></i>
-                    </router-link>
-                    <div class="feature-box-content">
-                      <h3>WISHLIST</h3>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-6 col-md-4">
-                  <div class="feature-box text-center pb-4">
-                    <a href="javascript:void(0)" v-on:click="logout">
-                      <i class="sicon-logout"></i>
                     </a>
                     <div class="feature-box-content">
-                      <h3>LOGOUT</h3>
+                      <h3>WISHLIST</h3>
                     </div>
                   </div>
                 </div>
@@ -794,6 +791,202 @@
               </form>
             </div>
           </div>
+
+          <div
+            class="tab-pane fade"
+            id="wishlist"
+            role="tabpanel"
+            aria-labelledby="wishlist-tab"
+          >
+            <div class="order-content">
+              <h3 class="account-sub-title d-none d-md-block">
+                <i class="icon-heart align-middle mr-3"></i>Wishlists
+              </h3>
+              <div
+                class="wishlist-table-container"
+                v-if="wishItems.length > 0"
+                key="noEmpty"
+              >
+                <table class="table table-wishlist mb-0">
+                  <thead>
+                    <tr>
+                      <th class="thumbnail-col"></th>
+                      <th class="product-col">Product</th>
+                      <th class="price-col">Price</th>
+                      <th class="status-col">Stock Status</th>
+                      <th class="action-col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      class="product-row"
+                      v-for="(product, index) in wishItems"
+                      :key="'wishlist-' + index"
+                    >
+                      <td>
+                        <figure class="product-image-container">
+                          <router-link
+                            :to="'/product/' + product.slug"
+                            class="product-image"
+                          >
+                            <img
+                              :src="`${baseUrl}${product.featured_image}`"
+                              alt="product"
+                              :width="product.featured_image.width"
+                              :height="product.featured_image.height"
+                            />
+                          </router-link>
+
+                          <a
+                            href="javascript:;"
+                            class="btn-remove icon-cancel"
+                            title="Remove Product"
+                            @click="removeWishlist(product)"
+                          ></a>
+                        </figure>
+                      </td>
+                      <td>
+                        <h5 class="product-title">
+                          <router-link :to="'/product/' + product.slug">{{
+                            product.name
+                          }}</router-link>
+                        </h5>
+                      </td>
+
+                      <td
+                        class="price-box"
+                        v-if="product.price"
+                        key="singlePrice"
+                      >
+                        <template v-if="!product.is_sale">
+                          <span class="new-price"
+                            >₦{{ product.price | priceFormat }}</span
+                          >
+                        </template>
+
+                        <template v-else>
+                          <span class="new-price"
+                            >₦{{ product.sale_price | priceFormat }}</span
+                          >
+                          <span class="old-price"
+                            >₦{{ product.price | priceFormat }}</span
+                          >
+                        </template>
+                      </td>
+
+                      <td class="price-box" v-else>
+                        <template v-if="product.minPrice !== product.maxPrice">
+                          <span class="new-price"
+                            >₦{{ product.minPrice | priceFormat }} &ndash; ${{
+                              product.maxPrice | priceFormat
+                            }}</span
+                          >
+                        </template>
+
+                        <template v-else>
+                          <span class="new-price"
+                            >₦{{ product.minPrice | priceFormat }}</span
+                          >
+                        </template>
+                      </td>
+
+                      <td>
+                        <span class="stock-status" v-if="product.stock_status"
+                          >In stock</span
+                        >
+                        <span class="stock-status" v-else>Out stock</span>
+                      </td>
+                      <td class="action">
+                        <a
+                          href="javascript:;"
+                          class="btn btn-quickview mt-1 mt-md-0"
+                          @click="openQuickview(product)"
+                          title="Quick View"
+                          key="singleCart"
+                          >Quick View</a
+                        >
+
+                        <button
+                          class="
+                            btn btn-dark btn-add-cart
+                            product-type-simple
+                            btn-shop
+                          "
+                          @click="addCart(product)"
+                        >
+                          ADD TO CART
+                        </button>
+
+                        <!--<router-link
+                  :to="'/product/default/' + product.slug"
+                  class="btn btn-dark btn-add-cart btn-shop"
+                  >SELECT OPTION</router-link
+                >-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="box-content" v-else>
+                <div class="wishlist-table-container">
+                  <table
+                    class="table-wishlist"
+                    data-pagination="no"
+                    data-per-page="5"
+                    data-page="1"
+                    data-id
+                    data-token
+                  >
+                    <thead class="d-none">
+                      <tr>
+                        <th class="product-thumbnail"></th>
+
+                        <th class="product-name">
+                          <span class="nobr">Product</span>
+                        </th>
+
+                        <th class="product-price">
+                          <span class="nobr">price</span>
+                        </th>
+
+                        <th class="product-stock-status">
+                          <span class="nobr">Stock status</span>
+                        </th>
+
+                        <th class="product-add-to-cart">
+                          <span class="nobr">Actions</span>
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="wishlist-items-wrapper">
+                      <tr class="border-0 py-0">
+                        <td colspan="6" class="px-3 pt-5 pt-md-0 text-center">
+                          <i class="far fa-heart wishlist-empty"></i>
+                        </td>
+                      </tr>
+                      <tr class="border-0 py-0">
+                        <td
+                          colspan="6"
+                          class="px-3 wishlist-empty wishlist-text"
+                        >
+                          No products added to the wishlist
+                        </td>
+                      </tr>
+                      <tr class="border-0">
+                        <td colspan="6" class="px-3 text-center pb-5 pb-md-0">
+                          <router-link to="/shop" class="btn btn-go-shop"
+                            >GO SHOP</router-link
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -805,6 +998,7 @@ import PvTabs from "../../components/features/PvTabs";
 import PreLoader from "../../components/common/PreLoader";
 import Sticky from "vue-sticky-directive";
 import { mapGetters, mapActions } from "vuex";
+import { baseUrl } from "../../api";
 import * as auth from "../../services/auth";
 import * as userService from "../../services/user";
 import {
@@ -827,8 +1021,14 @@ export default {
     PvTabs,
     PreLoader,
   },
+  watch: {
+    wishList: function () {
+      this.makeCartItems();
+    },
+  },
   computed: {
     ...mapGetters("user", ["user", "getShippingAddesses", "getOrders"]),
+    ...mapGetters("wishlist", ["wishList"]),
   },
   validations: {
     userprofile: {
@@ -875,6 +1075,9 @@ export default {
     return {
       isSticky: false,
       loading: false,
+      baseUrl: baseUrl,
+      wishItems: [],
+      currentProduct: null,
       userprofile: {
         first_name: "",
         last_name: "",
@@ -903,6 +1106,7 @@ export default {
   },
   mounted: function () {
     this.resizeHandler();
+    this.makeCartItems();
     window.addEventListener("resize", this.resizeHandler, {
       passive: true,
     });
@@ -913,6 +1117,58 @@ export default {
   methods: {
     ...mapActions("user", ["userLogin", "userLogout"]),
     ...mapActions("notification", ["addNotification"]),
+    ...mapActions("wishlist", ["removeFromWishlist"]),
+    ...mapActions("cart", ["addToCart"]),
+    makeCartItems: function () {
+      this.wishItems = this.wishList;
+      this.wishItems = this.wishList.reduce((acc, product) => {
+        let minPrice = 0,
+          maxPrice = 0;
+
+        /*if (!product.price) {
+          minPrice = product.variants[0].price;
+          product.variants.forEach((item) => {
+            let itemPrice = item.is_sale ? item.sale_price : item.price;
+            if (minPrice > itemPrice) minPrice = itemPrice;
+            if (maxPrice < itemPrice) maxPrice = itemPrice;
+          });
+        }*/
+
+        return [
+          ...acc,
+          {
+            ...product,
+            minPrice: minPrice,
+            maxPrice: maxPrice,
+          },
+        ];
+      }, []);
+    },
+    openQuickview: function (product) {
+      this.$modal.show(
+        () => import("../../components/features/product/PvQuickview"),
+        { slug: product.slug },
+        {
+          width: "931",
+          height: "auto",
+          adaptive: true,
+          class: "quickview-modal",
+        }
+      );
+    },
+    addCart: function (product) {
+      this.currentProduct = product;
+      document.querySelector(".cart-message.removed").style.display = "none";
+      document.querySelector(".cart-message.carted").style.display = "block";
+      this.addToCart({ product: product });
+      this.removeFromWishlist({ id: product.id });
+    },
+    removeWishlist: function (product) {
+      this.currentProduct = product;
+      document.querySelector(".cart-message.carted").style.display = "none";
+      document.querySelector(".cart-message.removed").style.display = "block";
+      this.removeFromWishlist({ id: product.id });
+    },
     status(validation) {
       return {
         error: validation.$error,

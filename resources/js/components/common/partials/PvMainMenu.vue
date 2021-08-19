@@ -14,8 +14,7 @@
           v-for="(category, index) in categories"
           :key="'header-cat-' + index"
           :class="{ active: category.slug === currentCategory }"
-          ><i :class="category.icon"></i
-          >{{ category.name }}</router-link
+          ><i :class="category.icon"></i>{{ category.name }}</router-link
         >
 
         <router-link :to="{ path: '/shop' }"
@@ -39,7 +38,7 @@
         >
       </li>
 
-      <li>
+      <!--<li>
         <router-link
           to="/shop"
           class="sub-menu-link menu-with-ul"
@@ -85,25 +84,13 @@
             </div>
           </div>
         </div>
-      </li>
+      </li>-->
       <li>
         <router-link
           to="/blog"
-          :class="{ active: $route.path.indexOf('/pages/blog') > -1 }"
+          :class="{ active: $route.path.indexOf('/blog') > -1 }"
           >Blog</router-link
         >
-      </li>
-      <li>
-        <router-link to="/about-us">About Us</router-link>
-      </li>
-      <li>
-        <router-link to="/contact-us">Contact Us</router-link>
-      </li>
-      <li v-if="!loggedIn">
-        <router-link to="/auth/login">Log In</router-link>
-      </li>
-      <li v-if="!loggedIn">
-        <router-link to="/auth/register">Register</router-link>
       </li>
     </ul>
   </nav>
@@ -112,7 +99,6 @@
 <script>
 import { mainMenu } from "../../../utils/data/menu";
 import { headerCats } from "../../../utils/data/shop";
-import * as auth from "../../../services/auth";
 
 export default {
   data: function () {
@@ -122,9 +108,7 @@ export default {
       loggedIn: null,
     };
   },
-  created: function(){
-    this.loggedIn = auth.getAccessToken()
-  },
+  created: function () {},
   props: {
     categories: Array,
   },
@@ -133,7 +117,7 @@ export default {
       let exItems = ["blog", "about-us", "contact-us"];
 
       if (
-        this.$route.path.includes("/pages") &&
+        this.$route.path.includes("/") &&
         exItems.findIndex((item) => this.$route.path.includes(item)) === -1
       ) {
         return true;

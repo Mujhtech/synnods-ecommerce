@@ -3,10 +3,10 @@
     <div class="header-middle sticky-header mobile-sticky">
       <div class="container">
         <div class="header-left">
-          <router-link to="/" class="logo">
+          <router-link to="/" class="logo" style="max-width: 200px !important">
             <img
-              :src="'/images/logo.png'"
-              width="101"
+              src="https://havybucket.fra1.cdn.digitaloceanspaces.com/faadaakaa/faadaakaa/faadaakaa_logo.png"
+              width="200px"
               height="40"
               alt="Porto Logo"
             />
@@ -31,8 +31,8 @@
               <router-link :to="{ path: '/shop', query: { tag: 'skirt' } }"
                 >skirt</router-link
               >
-              <router-link :to="{ path: '/shop', query: { tag: 'sports' } }"
-                >sports</router-link
+              <router-link :to="{ path: '/iphone', query: { tag: 'iphone' } }"
+                >iphone</router-link
               >
               <router-link :to="{ path: '/shop', query: { tag: 'sweater' } }"
                 >sweater</router-link
@@ -42,20 +42,29 @@
         </div>
 
         <div class="header-right ml-0 ml-lg-auto">
-          <router-link to="/account" class="header-icon d-md-block d-none mr-0">
+          <div v-if="!isLoggedIn" style="margin-left:10px;margin-right:10px;">
+            <router-link to="/auth/login">Login</router-link> |
+            <router-link to="/auth/register">Register</router-link>
+          </div>
+          <router-link
+            to="/account"
+            v-if="isLoggedIn"
+            class="header-icon d-md-block d-none mr-0"
+          >
             <div class="header-user">
               <img
-                v-if="loggedIn"
+                v-if="image"
                 style="border-radius: 50px; width: 40px; margin-right: 10px"
-                :src="avatar"
+                :src="`${baseUrl}${avatar}`"
               />
-              <i v-else class="icon-user-2"></i>
+              <img
+                v-else
+                style="border-radius: 50px; width: 40px; margin-right: 10px"
+                :src="`${avatar}`"
+              />
               <div class="header-userinfo">
-                <span class="d-inline-block line-height-1 ls-10" v-if="loggedIn"
+                <span class="d-inline-block line-height-1 ls-10"
                   >Hello {{ fullname }}!</span
-                >
-                <span class="d-inline-block line-height-1 ls-10" v-else
-                  >Hello!</span
                 >
                 <h4 class="font1 mb-0">My Account</h4>
               </div>
@@ -121,6 +130,7 @@ import PvCartMenu from "./partials/PvCartMenu";
 import PvHeaderSearch from "./partials/PvHeaderSearch";
 import { mapActions, mapGetters } from "vuex";
 import * as auth from "../../services/auth";
+import { baseUrl } from "../../api";
 
 document.querySelector("body").classList.add("loaded");
 
@@ -139,16 +149,19 @@ export default {
       image: null,
       avatar: null,
       loggedIn: null,
+      baseUrl: baseUrl,
     };
+  },
+  watch: {
   },
   created: function () {
     (this.fullname = auth.getUser() != null ? auth.getUser().full_name : null),
       (this.image = auth.getUser() != null ? auth.getUser().image : null),
-      (this.avatar = auth.getUser() != null ? auth.getUser().avatar : null),
-      (this.loggedIn = auth.getAccessToken());
+      (this.avatar = auth.getUser() != null ? auth.getUser().avatar : null);
   },
   computed: {
     ...mapGetters("setting", ["getCurrency"]),
+    ...mapGetters("user", ["isLoggedIn"]),
   },
   methods: {
     ...mapActions("setting", ["updateCurrency"]),
