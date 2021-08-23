@@ -110,12 +110,6 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('/', [CategoryController::class, 'index'])->name('index');
 
         Route::get('/{slug}', [CategoryController::class, 'single'])->name('single');
-
-        Route::get('delete/{slug}', [CategoryController::class, 'destroy'])->name('delete');
-
-        Route::post('create', [CategoryController::class, 'store'])->name('create');
-
-        Route::put('update', [CategoryController::class, 'store'])->name('update');
         
     });
 
@@ -157,6 +151,56 @@ Route::group(['prefix' => 'v1'], function () {
 });
 
 Route::prefix('v2')->group(function () {
+
+    Route::prefix('auth')->name('auth.')->group(function () {
+
+        Route::post('login', [AuthController::class, 'login'])->name('login');
+
+        Route::post('register', [AuthController::class, 'register'])->name('register');
+
+        Route::get('logout', [AuthController::class, 'logout'])->middleware('auth:api')->name('logout');
+
+        Route::post('recover', [AuthController::class, 'recover'])->name('recover');
+
+        Route::post('reset', [AuthController::class, 'reset'])->name('reset');
+
+        Route::post('resend', [AuthController::class, 'resend'])->name('resend');
+
+        Route::post('verify', [AuthController::class, 'verify'])->name('verify');
+
+        Route::get('profile', [AuthController::class, 'user'])->middleware('auth:api')->name('profile');
+        
+    });
+
+    Route::prefix('category')->name('category.')->middleware(["auth:api"])->group(function () {
+
+        Route::get('/', [CategoryController::class, 'index'])->name('index');
+
+        Route::get('/single/{slug}', [CategoryController::class, 'single'])->name('single');
+
+        Route::get('delete/{slug}', [CategoryController::class, 'destroy'])->name('delete');
+
+        Route::post('create', [CategoryController::class, 'store'])->name('create');
+
+        Route::post('update', [CategoryController::class, 'update'])->name('update');
+        
+    });
+
+
+    Route::prefix('sub_category')->name('sub_category.')->middleware(["auth:api"])->group(function () {
+
+        Route::get('/{slug}', [SubCategoryController::class, 'index'])->name('index');
+
+        Route::get('/single/{slug}', [SubCategoryController::class, 'single'])->name('single');
+
+        Route::get('delete/{slug}', [SubCategoryController::class, 'destroy'])->name('delete');
+
+        Route::post('create', [SubCategoryController::class, 'store'])->name('create');
+
+        Route::post('update', [SubCategoryController::class, 'update'])->name('update');
+        
+    });
+
 
 });
 

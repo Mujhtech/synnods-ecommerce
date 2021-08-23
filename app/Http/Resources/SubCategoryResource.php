@@ -18,8 +18,9 @@ class SubCategoryResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'description' => $this->description,
-            'image' => $this->logo_url,
+            'image' => $this->image ? $this->logo_url : null,
             'slug' => $this->slug,
+            'status' => $this->status
         ];
     }
 }

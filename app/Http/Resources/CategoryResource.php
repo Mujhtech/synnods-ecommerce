@@ -19,8 +19,9 @@ class CategoryResource extends JsonResource
             'name' => $this->name,
             'description' => $this->description,
             'icon' => $this->icon,
-            'image' => $this->logo_url,
+            'image' => $this->image ? $this->logo_url : null,
             'slug' => $this->slug,
+            'status' => $this->status,
             'sub_categories' => SubCategoryResource::collection($this->sub_categories)
         ];
     }

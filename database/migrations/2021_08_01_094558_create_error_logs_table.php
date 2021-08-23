@@ -19,6 +19,7 @@ class CreateErrorLogsTable extends Migration
             $table->string('file');
             $table->string('line');
             $table->longText('traces');
+            $table->boolean('fixed');
             $table->timestamps();
         });
     }

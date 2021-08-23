@@ -7,13 +7,16 @@ use Illuminate\Http\Request;
 use App\Http\Requests\SubCategoryRequest;
 use App\Http\Resources\SubCategoryResource;
 use App\Models\SubCategory;
+use App\Models\Category;
 
 class SubCategoryController extends ApiController
 {
     //
-    public function index(){
+    public function index($slug){
 
-        $sub_categories = SubCategory::where('status', 1)->get();
+        $category = Category::where('slug', $slug)->first();
+
+        $sub_categories = SubCategory::where('category_id', $category->id)->where('status', 1)->get();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'data' => SubCategoryResource::collection($sub_categories)
@@ -22,7 +25,7 @@ class SubCategoryController extends ApiController
 
     public function single($slug){
 
-        $sub_category = SubCategory::where('id', $slug)->first();
+        $sub_category = SubCategory::where('slug', $slug)->first();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'data' => SubCategoryResource::make($sub_category)
@@ -34,13 +37,61 @@ class SubCategoryController extends ApiController
 
         $request->validated();
 
-        $sub_category = $request->isMethod('put') ? SubCategory::findorFail($request->category_id) : new SubCategory;
-        $sub_category->image = $request->file('image')->store('sub_categories');
+        $sub_category = new SubCategory;
+
+        if($request->hasFile('image')){
+
+            $sub_category->image = $request->file('image')->store('sub_categories');
+        }
+
         $sub_category->description = $request->description;
         $sub_category->category_id = $request->category_id;
         $sub_category->name = $request->name;
         $sub_category->slug = strtolower(str_replace(' ', '-', $request->name));
-        $sub_category->status = 1;
+        $sub_category->status = $request->publish == "true" ? 1 : 0;
+
+        if($sub_category->save()){
+
+            return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+                'sub_category' => SubCategoryResource::make($sub_category),
+                'message' => 'Data save successfully'
+            ]);
+
+        } else {
+
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Something went wrong'
+            ]);
+
+        }
+
+
+    }
+
+
+    public function update(SubCategoryRequest $request){
+
+        $request->validated();
+
+        $sub_category = SubCategory::findorFail($request->sub_category_id);
+        
+        
+        if($request->hasFile('image')){
+
+            if(Storage::exists($sub_category->image)){
+
+                Storage::delete($sub_category->image);
+    
+            }
+
+            $sub_category->image = $request->file('image')->store('sub_categories');
+        }
+
+        $sub_category->description = $request->description;
+        //$sub_category->category_id = $request->category_id;
+        $sub_category->name = $request->name;
+        $sub_category->slug = strtolower(str_replace(' ', '-', $request->name));
+        $sub_category->status = $request->publish == "true" ? 1 : 0;
 
         if($sub_category->save()){
 

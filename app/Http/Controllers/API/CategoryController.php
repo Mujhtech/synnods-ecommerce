@@ -15,7 +15,7 @@ class CategoryController extends ApiController
 
     public function index(){
 
-        $categories = Category::where('status', 0)->with('sub_categories')->get();
+        $categories = Category::where('status', 1)->with('sub_categories')->get();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'data' => CategoryResource::collection($categories)
@@ -24,7 +24,7 @@ class CategoryController extends ApiController
 
     public function single($slug){
 
-        $category = Category::where('id', $slug)->first();
+        $category = Category::where('slug', $slug)->first();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'data' => CategoryResource::make($category)
@@ -36,12 +36,75 @@ class CategoryController extends ApiController
 
         $request->validated();
 
-        $category = $request->isMethod('put') ? Category::findorFail($request->category_id) : new Category;
-        $category->image = $request->file('image')->store('categories');
+        if(Category::where('name', $request->name)->exists()){
+            
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Data already exists'
+            ]);
+
+        }
+
+        $category = new Category;
+
+        if($request->hasFile('image')){
+            $category->image = $request->file('image')->store('categories');
+        }
+
         $category->description = $request->description;
         $category->name = $request->name;
+        $category->icon = $request->icon;
         $category->slug = strtolower(str_replace(' ', '-', $request->name));
-        $category->status = 1;
+        $category->status = $request->publish == "true" ? 1 : 0;
+
+        if($category->save()){
+
+            return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+                'category' => CategoryResource::make($category),
+                'message' => 'Data save successfully'
+            ]);
+
+        } else {
+
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Something went wrong'
+            ]);
+
+        }
+
+
+    }
+
+    public function update(CategoryRequest $request){
+
+        $request->validated();
+
+        $category = Category::findorFail($request->category_id);
+
+        if(Category::where('name', $request->name)->exists() && $category->name != $request->name){
+            
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Data already exists'
+            ]);
+
+        }
+
+
+        if($request->hasFile('image')){
+
+            if(Storage::exists($category->image)){
+
+                Storage::delete($category->image);
+    
+            }
+
+            $category->image = $request->file('image')->store('categories');
+        }
+
+        $category->description = $request->description;
+        $category->name = $request->name;
+        $category->icon = $request->icon;
+        $category->slug = strtolower(str_replace(' ', '-', $request->name));
+        $category->status = $request->publish == "true" ? 1 : 0;
 
         if($category->save()){
 
