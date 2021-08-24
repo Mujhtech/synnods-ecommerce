@@ -24,3 +24,8 @@ Broadcast::channel('NewOrder', function(){
 Broadcast::channel('NewUser', function(){
     return true;
 });
+
+
+Broadcast::channel('NewError', function(){
+    return true;
+});

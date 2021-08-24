@@ -9,11 +9,8 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use App\Models\Order;
-use App\Models\User;
-use App\Http\Resources\UserResource;
 
-class NewOrderEvent implements ShouldBroadcast
+class NewErrorEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -22,22 +19,18 @@ class NewOrderEvent implements ShouldBroadcast
      *
      * @return void
      */
-    public $user;
+    public $message;
 
-    public $order;
 
-    public function __construct(User $user, Order $order)
+    public function __construct($message)
     {
         //
-        $this->user = $user;
-        $this->order = $order;
+        $this->message = $message;
     }
 
     public function broadcastWith(){
         return [
-            'order' => '',
-            'user' => ''
-            //'product' => ProductResource::make($this->product)
+            'message' => $this->message
         ];
     }
 
@@ -48,11 +41,11 @@ class NewOrderEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('NewOrder');
+        return new Channel('NewError');
     }
 
     public function broadcastAs()
     {
-        return 'new.order';
+        return 'new.error';
     }
 }

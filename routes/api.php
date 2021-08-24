@@ -10,6 +10,7 @@ use App\Http\Controllers\API\SubCategoryController;
 use App\Http\Controllers\API\VendorController;
 use App\Http\Controllers\API\NewsletterController;
 use App\Events\NewUserEvent;
+use App\Http\Controllers\API\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -198,6 +199,17 @@ Route::prefix('v2')->group(function () {
         Route::post('create', [SubCategoryController::class, 'store'])->name('create');
 
         Route::post('update', [SubCategoryController::class, 'update'])->name('update');
+        
+    });
+
+
+    Route::prefix('administration')->name('administration.')->middleware(["auth:api"])->group(function () {
+
+        Route::get('/users', [AdminController::class, 'users'])->name('user');
+
+        Route::get('/errors', [AdminController::class, 'errors'])->name('error');
+
+        Route::get('/activities', [AdminController::class, 'activities'])->name('activity');
         
     });
 

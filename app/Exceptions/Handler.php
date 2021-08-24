@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 use App\Models\ErrorLog;
+use App\Events\NewErrorEvent;
 
 class Handler extends ExceptionHandler
 {
@@ -101,6 +102,8 @@ class Handler extends ExceptionHandler
             $log->code = $code;
             $log->save();
 
+            broadcast(new NewErrorEvent($exception->getMessage()));
+
             //return $exception->getTrace();
 
             return $exception->getMessage().', File: '.$exception->getFile().', Line: '.$exception->getLine();
@@ -113,6 +116,8 @@ class Handler extends ExceptionHandler
             $log->file = $exception->getFile();
             $log->code = $code;
             $log->save();
+
+            broadcast(new NewErrorEvent($exception->getMessage()));
 
             return $exception->getMessage().', File: '.$exception->getFile().', Line: '.$exception->getLine();
         }

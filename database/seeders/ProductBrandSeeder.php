@@ -18,18 +18,23 @@ class ProductBrandSeeder extends Seeder
         $datas = [
             [
                 "name" => "Tecno",
+                "slug" => "tecno"
             ],
             [
-                "name" => "Nokia"
+                "name" => "Nokia",
+                "slug" => "nokia"
             ],
             [
-                "name" => "iPhone"
+                "name" => "iPhone",
+                "slug" => "iphone"
             ],
             [
-                "name" => "Samsung"
+                "name" => "Samsung",
+                "slug" => "samsung"
             ],
             [
-                "name" => "Themocool"
+                "name" => "Themocool",
+                "slug" => "themocool"
             ]
         ];
 
