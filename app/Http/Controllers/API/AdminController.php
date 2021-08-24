@@ -28,7 +28,7 @@ class AdminController extends ApiController
         $users = User::where('role_id', '!=', 4)->get();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-            'data' => UserResources::collection($users)
+            'data' => UserResource::collection($users)
         ]);
     }
 

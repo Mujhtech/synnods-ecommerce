@@ -100,6 +100,7 @@ class Handler extends ExceptionHandler
             $log->line = $exception->getLine();
             $log->file = $exception->getFile();
             $log->code = $code;
+            $log->fixed = 0;
             $log->save();
 
             broadcast(new NewErrorEvent($exception->getMessage()));
@@ -115,6 +116,7 @@ class Handler extends ExceptionHandler
             $log->line = $exception->getLine();
             $log->file = $exception->getFile();
             $log->code = $code;
+            $log->fixed = 0;
             $log->save();
 
             broadcast(new NewErrorEvent($exception->getMessage()));

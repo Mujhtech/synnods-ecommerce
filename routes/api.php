@@ -203,7 +203,7 @@ Route::prefix('v2')->group(function () {
     });
 
 
-    Route::prefix('administration')->name('administration.')->middleware(["auth:api"])->group(function () {
+    Route::prefix('admin')->name('admin.')->middleware(["auth:api"])->group(function () {
 
         Route::get('/users', [AdminController::class, 'users'])->name('user');
 
