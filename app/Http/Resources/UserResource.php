@@ -27,10 +27,11 @@ class UserResource extends JsonResource
             'country' => $this->country,
             'image' => $this->avatar,
             'avatar' => $this->profile_photo_url,
-            'role' => $this->role_id,
+            'role' => $this->role->name,
             'active' => ($this->active) ? true : false,
             'verified' => ($this->active) ? true : false,
             'user_name' => $this->user_name,
+            'joined_on' => $this->created_at->diffForHumans(),
             'orders' => OrderResource::collection($this->orders),
             'shipping_addresses' => ShippingAddressResource::collection($this->shipping_addresses),
         ];

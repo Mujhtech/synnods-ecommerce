@@ -210,6 +210,8 @@ Route::prefix('v2')->group(function () {
         Route::get('/errors', [AdminController::class, 'errors'])->name('error');
 
         Route::get('/activities', [AdminController::class, 'activities'])->name('activity');
+
+        Route::get('/roles', [AdminController::class, 'roles'])->name('role');
         
     });
 
