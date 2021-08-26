@@ -5,10 +5,20 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use App\Models\Newsletter;
+use App\Http\Resources\NewsletterResource;
 
 class NewsletterController extends ApiController
 {
     //
+    public function index(){
+
+        $newsletter = Newsletter::get();
+
+        return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+            'data' => NewsletterResource::collection($newsletter)
+        ]);
+
+    }
 
     public function subscribe(Request $request){
 

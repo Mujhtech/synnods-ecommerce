@@ -37,6 +37,14 @@ class SubCategoryController extends ApiController
 
         $request->validated();
 
+        if(SubCategory::where('name', $request->name)->exists()){
+            
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Data already exists'
+            ]);
+
+        }
+
         $sub_category = new SubCategory;
 
         if($request->hasFile('image')){
@@ -74,6 +82,15 @@ class SubCategoryController extends ApiController
         $request->validated();
 
         $sub_category = SubCategory::findorFail($request->sub_category_id);
+
+
+        if(SubCategory::where('name', $request->name)->exists() && $sub_category->name != $request->name){
+            
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Data already exists'
+            ]);
+
+        }
         
         
         if($request->hasFile('image')){
@@ -115,7 +132,11 @@ class SubCategoryController extends ApiController
 
         $sub_category = SubCategory::where('slug', $slug)->first();
 
-        Storage::delete($sub_category->image);
+        if(Storage::exists($sub_category->image)){
+
+            Storage::delete($sub_category->image);
+
+        }
 
         if($sub_category->delete()){
 

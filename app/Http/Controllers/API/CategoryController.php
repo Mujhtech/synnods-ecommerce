@@ -47,6 +47,7 @@ class CategoryController extends ApiController
         $category = new Category;
 
         if($request->hasFile('image')){
+            
             $category->image = $request->file('image')->store('categories');
         }
 
@@ -128,7 +129,11 @@ class CategoryController extends ApiController
 
         $category = Category::where('slug', $slug)->first();
 
-        Storage::delete($category->image);
+        if(Storage::exists($category->image)){
+
+            Storage::delete($category->image);
+
+        }
 
         if($category->delete()){
 

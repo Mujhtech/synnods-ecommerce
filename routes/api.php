@@ -9,8 +9,9 @@ use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\SubCategoryController;
 use App\Http\Controllers\API\VendorController;
 use App\Http\Controllers\API\NewsletterController;
-use App\Events\NewUserEvent;
 use App\Http\Controllers\API\AdminController;
+use App\Http\Controllers\API\BrandController;
+use App\Http\Controllers\API\MediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,6 @@ use App\Http\Controllers\API\AdminController;
 |
  */
 
-Route::get('/sendchamp', function() {
-    print_r(sendchamp()->getWalletReport());
-});
-
 Route::get('/', function (Request $request) {
     return response()->json([
         'status' => 'success',
@@ -35,10 +32,6 @@ Route::get('/', function (Request $request) {
 });
 
 Route::group(['prefix' => 'v1'], function () {
-
-    Route::get('broadcast', function(){
-        broadcast(new NewUserEvent(\App\Models\User::find(1)));
-    });
 
     // Newsletter route
 
@@ -173,6 +166,12 @@ Route::prefix('v2')->group(function () {
         
     });
 
+    Route::prefix('newsletter')->name('newsletter.')->middleware(["auth:api"])->group(function () {
+
+        Route::get('/', [NewsletterController::class, 'index'])->name('index');
+    
+    });
+
     Route::prefix('category')->name('category.')->middleware(["auth:api"])->group(function () {
 
         Route::get('/', [CategoryController::class, 'index'])->name('index');
@@ -203,6 +202,21 @@ Route::prefix('v2')->group(function () {
     });
 
 
+    Route::prefix('brand')->name('brand.')->middleware(["auth:api"])->group(function () {
+
+        Route::get('/', [BrandController::class, 'index'])->name('index');
+
+        Route::get('/single/{slug}', [BrandController::class, 'single'])->name('single');
+
+        Route::get('delete/{slug}', [BrandController::class, 'destroy'])->name('delete');
+
+        Route::post('create', [BrandController::class, 'store'])->name('create');
+
+        Route::post('update', [BrandController::class, 'update'])->name('update');
+        
+    });
+
+
     Route::prefix('admin')->name('admin.')->middleware(["auth:api"])->group(function () {
 
         Route::get('/users', [AdminController::class, 'users'])->name('user');
@@ -212,6 +226,24 @@ Route::prefix('v2')->group(function () {
         Route::get('/activities', [AdminController::class, 'activities'])->name('activity');
 
         Route::get('/roles', [AdminController::class, 'roles'])->name('role');
+        
+    });
+
+
+    Route::prefix('media')->name('media.')->middleware(["auth:api"])->group(function () {
+
+        Route::get('/directories', [MediaController::class, 'index'])->name('index');
+
+        Route::post('/files/{folder}', [MediaController::class, 'single'])->name('single');
+
+        Route::post('/upload', [MediaController::class, 'upload'])->name('upload');
+
+        Route::post('/create-directory', [MediaController::class, 'createDirectory'])->name('md');
+
+        Route::post('/delete-directory', [MediaController::class, 'destroyDirectory'])->name('dd');
+
+        Route::post('/delete-file', [MediaController::class, 'destroyFile'])->name('df');
+
         
     });
 

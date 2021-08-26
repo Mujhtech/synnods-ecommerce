@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ProductBrandResource extends JsonResource
+class NewsletterResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,10 +16,9 @@ class ProductBrandResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
-            'slug' => strtolower(str_replace(' ', '-', $this->name)),
-            'status' => $this->status ? true : false,
-            'image' => $this->image ? $this->logo_url : null,
+            'email' => $this->email,
+            'subscribed' => $this->subscribed ? true : false,
+            'joined_at' => $this->created_at->diffForHumans(),
         ];
     }
 }
