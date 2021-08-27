@@ -16,9 +16,13 @@ class ProductReviewResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'name' => $this->user_id ? $this->user->full_name : $this->name,
+            'email' => $this->user_id ? $this->user->email : $this->email,
             'rating' => $this->rating,
             'contents' => $this->contents,
-            'image' => $this->image
+            'product_name' => $this->product->name,
+            'product_slug' => $this->product->slug,
+            'added_at' => $this->created_at->diffForHumans()
         ];
     }
 }

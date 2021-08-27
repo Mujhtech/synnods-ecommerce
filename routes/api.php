@@ -219,13 +219,23 @@ Route::prefix('v2')->group(function () {
 
     Route::prefix('admin')->name('admin.')->middleware(["auth:api"])->group(function () {
 
-        Route::get('/users', [AdminController::class, 'users'])->name('user');
+        Route::get('/users', [AdminController::class, 'users'])->name('users');
+
+        Route::get('/customers', [AdminController::class, 'customers'])->name('customers');
+
+        Route::get('/user/{user}', [AdminController::class, 'user'])->name('user');
+
+        Route::post('/user/update', [AdminController::class, 'updateUser'])->name('user.update');
 
         Route::get('/errors', [AdminController::class, 'errors'])->name('error');
 
         Route::get('/activities', [AdminController::class, 'activities'])->name('activity');
 
         Route::get('/roles', [AdminController::class, 'roles'])->name('role');
+
+        Route::get('/contacts', [AdminController::class, 'contacts'])->name('contact');
+
+        Route::get('/contact/{contact}', [AdminController::class, 'getContact'])->name('contact.single');
         
     });
 
@@ -244,6 +254,19 @@ Route::prefix('v2')->group(function () {
 
         Route::post('/delete-file', [MediaController::class, 'destroyFile'])->name('df');
 
+        
+    });
+
+
+    Route::prefix('product')->name('product.')->group(function () {
+
+        Route::get('/', [ProductController::class, 'index'])->name('index');
+
+        Route::get('/review', [ProductController::class, 'review'])->name('review');
+
+        Route::get('/{slug}', [ProductController::class, 'single'])->name('single');
+
+        Route::post('create', [ProductController::class, 'store'])->name('create');
         
     });
 

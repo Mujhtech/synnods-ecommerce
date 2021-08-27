@@ -6,6 +6,7 @@ use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
 use App\Http\Resources\ProductResource;
+use App\Http\Resources\ProductReviewResource;
 use App\Models\Product;
 use App\Models\ProductBrand;
 use App\Models\ProductLabel;
@@ -224,5 +225,15 @@ class ProductController extends ApiController
 
         }
 
+    }
+
+
+    public function review(){
+
+        $review = ProductReview::with(['user', 'product'])->get();
+
+        return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+            'data' => ProductReviewResource::collection($review)
+        ]);
     }
 }
