@@ -20,12 +20,12 @@ class MediaController extends ApiController
     }
 
 
-    public function single(Request $request){
+    public function single($folder){
 
-        $directories = Storage::allFiles($request->folder);
+        $datas = Storage::allFiles($folder);
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
-            'data' => $directories
+            'data' => $datas
         ]);
 
     }

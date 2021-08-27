@@ -234,7 +234,7 @@ Route::prefix('v2')->group(function () {
 
         Route::get('/directories', [MediaController::class, 'index'])->name('index');
 
-        Route::post('/files/{folder}', [MediaController::class, 'single'])->name('single');
+        Route::get('/files/{folder}', [MediaController::class, 'single'])->name('single');
 
         Route::post('/upload', [MediaController::class, 'upload'])->name('upload');
 
