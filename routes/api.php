@@ -262,6 +262,8 @@ Route::prefix('v2')->group(function () {
 
         Route::get('/', [ProductController::class, 'index'])->name('index');
 
+        Route::get('/load', [ProductController::class, 'load'])->name('load');
+
         Route::get('/review', [ProductController::class, 'review'])->name('review');
 
         Route::get('/{slug}', [ProductController::class, 'single'])->name('single');

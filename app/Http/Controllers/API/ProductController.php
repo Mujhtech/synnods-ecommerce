@@ -18,6 +18,7 @@ use App\Models\SubCategory;
 use App\Http\Resources\VendorResource;
 use App\Http\Resources\SubCategoryResource;
 use App\Http\Resources\CategoryResource;
+use App\Http\Resources\ProductBrandResource;
 
 class ProductController extends ApiController
 {
@@ -28,6 +29,20 @@ class ProductController extends ApiController
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'data' => ProductResource::collection($products)
+        ]);
+    }
+
+
+    public function load(){
+
+        $category = Category::where('status', 1)->get();
+        $sub_category = SubCategory::where('status', 1)->get();
+        $brand = ProductBrand::where('status', 1)->get();
+
+        return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+            'category' => CategoryResource::collection($category),
+            'sub_category' => SubCategoryResource::collection($sub_category),
+            'brand' => ProductBrandResource::collection($brand)
         ]);
     }
 

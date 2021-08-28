@@ -41,7 +41,8 @@ class ProductResource extends JsonResource
             'tags' => $this->tags,
             'labels' => $this->labels,
             'price' => $this->price,
-            'views' => $this->views
+            'views' => $this->views,
+            'status' => $this->status ? true : false,
 
         ];
     }
