@@ -243,6 +243,43 @@ class ProductController extends ApiController
     }
 
 
+    public function update(ProductRequest $request){
+
+        $request->validated();
+
+        $product = Product::findorFail($request->product_id);
+        $product->featured_image = $request->file('featured_image')->store('products');
+        $product->description = $request->description;
+        $product->name = $request->name;
+        $product->contents = $request->contents;
+        $product->category_id = $request->category_id;
+        $product->sub_category_id = $request->sub_category_id;
+        $product->vendor_id = $request->vendor_id;
+        $product->sku = $request->sku;
+        $product->product_brand_id = $brand->id;
+        $product->slug = strtolower(str_replace(' ', '-', $request->name));
+        $product->status = 1;
+        $product->price = $request->price;
+        $product->weight = $request->weight;
+
+        if($product->save()){
+
+            return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+                'product' => ProductResource::make($product),
+                'message' => 'Data save successfully'
+            ]);
+
+        } else {
+
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Something went wrong'
+            ]);
+
+        }
+
+    }
+
+
     public function review(){
 
         $review = ProductReview::with(['user', 'product'])->get();

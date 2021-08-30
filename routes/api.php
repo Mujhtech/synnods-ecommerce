@@ -269,6 +269,8 @@ Route::prefix('v2')->group(function () {
         Route::get('/{slug}', [ProductController::class, 'single'])->name('single');
 
         Route::post('create', [ProductController::class, 'store'])->name('create');
+
+        Route::post('update', [ProductController::class, 'update'])->name('update');
         
     });
 
