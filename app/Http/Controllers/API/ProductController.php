@@ -219,7 +219,7 @@ class ProductController extends ApiController
         $product->slug = strtolower(str_replace(' ', '-', $request->name));
         $product->status = $request->publish == "true" ? 1 : 0;
         $product->price = $request->price;
-        $product->weight = $request->weight;
+        //$product->weight = $request->weight;
         $product->tags = $request->tags;
         $product->is_featured = $request->featured == "true" ? 1 : 0;
         $product->featured_end = $request->featured == "true" ? $request->to : null;
@@ -253,25 +253,31 @@ class ProductController extends ApiController
         $request->validated();
 
         $product = Product::findorFail($request->product_id);
-        $product->featured_image = $request->file('image')->store('products');
+
+        if($request->hasFile('image')){
+            
+            $product->featured_image = $request->file('image')->store('products');
+
+        }
+
         $product->description = $request->description;
         $product->name = $request->name;
         $product->contents = $request->content;
         $product->category_id = $request->category;
         $product->sub_category_id = $request->sub_category;
         $product->vendor_id = 1;
-        $product->sku = $request->sku;
+        //$product->sku = $request->sku;
         $product->product_brand_id = $request->brand;
         $product->slug = strtolower(str_replace(' ', '-', $request->name));
         $product->status = $request->publish == "true" ? 1 : 0;
         $product->price = $request->price;
-        $product->weight = $request->weight;
+        //$product->weight = $request->weight;
         $product->tags = $request->tags;
         $product->is_featured = $request->featured == "true" ? 1 : 0;
         $product->featured_end = $request->featured == "true" ? $request->to : null;
         $product->is_hot = $request->hot == "true" ? 1 : 0;
         $product->stock_status = $request->stock == "true" ? 1 : 0;
-        $product->qunatity_in_stock = $request->stock == "true" ? $request->quantity : 0;
+        $product->quantity_in_stock = $request->stock == "true" ? $request->quantity : 0;
         $product->is_sale = $request->sale == "true" ? 1 : 0;
         $product->sale_price = $request->sale == "true" ? $request->sale_price : 0;
 
@@ -280,7 +286,7 @@ class ProductController extends ApiController
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'product' => ProductResource::make($product),
-                'message' => 'Data save successfully'
+                'message' => 'Data updated successfully'
             ]);
 
         } else {
