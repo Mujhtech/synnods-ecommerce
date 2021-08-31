@@ -219,6 +219,10 @@ Route::prefix('v2')->group(function () {
 
     Route::prefix('admin')->name('admin.')->middleware(["auth:api"])->group(function () {
 
+        Route::get('/mystore/{id}', [VendorController::class, 'mystore'])->name('mystore');
+
+        Route::post('/store/update', [VendorController::class, 'update'])->name('store.update');
+
         Route::get('/users', [AdminController::class, 'users'])->name('users');
 
         Route::get('/customers', [AdminController::class, 'customers'])->name('customers');
