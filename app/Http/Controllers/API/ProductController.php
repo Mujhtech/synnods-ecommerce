@@ -205,25 +205,30 @@ class ProductController extends ApiController
     public function store(ProductRequest $request){
 
         $request->validated();
+        
+        $product = new Product;
 
-        $brand = ProductBrand::where('name', $request->product_brand)->exists() ? ProductBrand::where('name', $request->product_brand)->first() : new ProductBrand;
-        $brand->name = $request->product_brand;
-        $brand->save();
-
-        $product = $request->isMethod('put') ? Product::findorFail($request->product_id) : new Product;
-        $product->featured_image = $request->file('featured_image')->store('products');
+        $product->featured_image = $request->file('image')->store('products');
         $product->description = $request->description;
         $product->name = $request->name;
-        $product->contents = $request->contents;
-        $product->category_id = $request->category_id;
-        $product->sub_category_id = $request->sub_category_id;
-        $product->vendor_id = $request->vendor_id;
-        $product->sku = $request->sku;
-        $product->product_brand_id = $brand->id;
+        $product->contents = $request->content;
+        $product->category_id = $request->category;
+        $product->sub_category_id = $request->sub_category;
+        $product->vendor_id = 1;
+        $product->product_brand_id = $request->brand;
         $product->slug = strtolower(str_replace(' ', '-', $request->name));
-        $product->status = 1;
+        $product->status = $request->publish == "true" ? 1 : 0;
         $product->price = $request->price;
         $product->weight = $request->weight;
+        $product->tags = $request->tags;
+        $product->is_featured = $request->featured == "true" ? 1 : 0;
+        $product->featured_end = $request->featured == "true" ? $request->to : null;
+        $product->is_hot = $request->hot == "true" ? 1 : 0;
+        $product->stock_status = $request->stock == "true" ? 1 : 0;
+        $product->quantity_in_stock = $request->stock == "true" ? $request->quantity : 0;
+        $product->is_sale = $request->sale == "true" ? 1 : 0;
+        $product->sale_price = $request->sale == "true" ? $request->sale_price : 0;
+        $product->sku = "PT0012";
 
         if($product->save()){
 
@@ -248,19 +253,28 @@ class ProductController extends ApiController
         $request->validated();
 
         $product = Product::findorFail($request->product_id);
-        $product->featured_image = $request->file('featured_image')->store('products');
+        $product->featured_image = $request->file('image')->store('products');
         $product->description = $request->description;
         $product->name = $request->name;
-        $product->contents = $request->contents;
-        $product->category_id = $request->category_id;
-        $product->sub_category_id = $request->sub_category_id;
-        $product->vendor_id = $request->vendor_id;
+        $product->contents = $request->content;
+        $product->category_id = $request->category;
+        $product->sub_category_id = $request->sub_category;
+        $product->vendor_id = 1;
         $product->sku = $request->sku;
-        $product->product_brand_id = $brand->id;
+        $product->product_brand_id = $request->brand;
         $product->slug = strtolower(str_replace(' ', '-', $request->name));
-        $product->status = 1;
+        $product->status = $request->publish == "true" ? 1 : 0;
         $product->price = $request->price;
         $product->weight = $request->weight;
+        $product->tags = $request->tags;
+        $product->is_featured = $request->featured == "true" ? 1 : 0;
+        $product->featured_end = $request->featured == "true" ? $request->to : null;
+        $product->is_hot = $request->hot == "true" ? 1 : 0;
+        $product->stock_status = $request->stock == "true" ? 1 : 0;
+        $product->qunatity_in_stock = $request->stock == "true" ? $request->quantity : 0;
+        $product->is_sale = $request->sale == "true" ? 1 : 0;
+        $product->sale_price = $request->sale == "true" ? $request->sale_price : 0;
+
 
         if($product->save()){
 
