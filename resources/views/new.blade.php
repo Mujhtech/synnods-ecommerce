@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
         <script src="{{ asset('assets/js/vendor/modernizr-3.11.7.min.js') }}"></script>
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CPoppins:300,400,500,600,700%7cOswald:300,400,500,600,700,800" rel="stylesheet">
     </head>
     <body>
