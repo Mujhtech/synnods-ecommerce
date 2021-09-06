@@ -1,6 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Index from "../new/pages/index";
+import Authentication from "../new/pages/auth/index";
+import Contact from "../new/pages/contact/index";
+import About from "../new/pages/about/index";
 import NProgress from 'nprogress';
 
 Vue.use(VueRouter);
@@ -10,6 +13,21 @@ const routes = [
         path: "/",
         component: Index,
         name: "Index"
+    },
+    {
+        path: "/about",
+        component: About,
+        name: "About"
+    },
+    {
+        path: "/contact",
+        component: Contact,
+        name: "Contact"
+    },
+    {
+        path: "/authentication",
+        component: Authentication,
+        name: "Authentication"
     },
 ];
 
@@ -28,7 +46,7 @@ router.beforeResolve((to, from, next) => {
             !localStorage.getItem("SYNECT") &&
             to.meta.middleware.includes("auth")
         ) {
-            next("/auth/login");
+            next("/authentication");
         } else if (
             localStorage.getItem("SYNECT") &&
             to.meta.middleware.includes("guest")

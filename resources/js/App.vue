@@ -3,6 +3,56 @@
     <sy-notification></sy-notification>
     <sy-header></sy-header>
     <router-view></router-view>
+    <div class="brand-logo-area">
+      <div class="container">
+        <div class="brand-logo-active owl-carousel border-top-2 ptb-60">
+          <div class="single-brand-logo">
+            <img alt="" src="assets/img/brand-logo/brand-logo-1.png" />
+          </div>
+          <div class="single-brand-logo">
+            <img alt="" src="assets/img/brand-logo/brand-logo-2.png" />
+          </div>
+          <div class="single-brand-logo">
+            <img alt="" src="assets/img/brand-logo/brand-logo-3.png" />
+          </div>
+          <div class="single-brand-logo">
+            <img alt="" src="assets/img/brand-logo/brand-logo-4.png" />
+          </div>
+          <div class="single-brand-logo">
+            <img alt="" src="assets/img/brand-logo/brand-logo-5.png" />
+          </div>
+          <div class="single-brand-logo">
+            <img alt="" src="assets/img/brand-logo/brand-logo-2.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shop-service-area black-bg pt-65">
+      <div class="container">
+        <div class="shop-service-wrapper black-bg-2">
+          <div class="row">
+            <div class="col-lg-4 col-md-4">
+              <div class="shop-service-content text-center">
+                <h4>Free Shipping</h4>
+                <p>Free shipping on all order</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <div class="shop-service-content text-center">
+                <h4>Money Return</h4>
+                <p>30 days for free return</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <div class="shop-service-content text-center border-none">
+                <h4>Online Support</h4>
+                <p>Support 24 hours a day</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <sy-footer></sy-footer>
     <sy-newsletter></sy-newsletter>
   </div>
@@ -22,7 +72,7 @@ export default {
     SyHeader,
     SyNotification,
     SyNewsletter,
-    SyFooter
+    SyFooter,
   },
   data: function () {
     return {

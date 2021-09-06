@@ -67,9 +67,9 @@
         <div class="row">
           <div class="col-lg-3 col-md-12">
             <div class="logo logo-mrg">
-              <a href="index.html">
-                <img src="assets/img/logo/logo.png" alt="" />
-              </a>
+              <router-link to="/">
+                <img src="https://havybucket.fra1.cdn.digitaloceanspaces.com/faadaakaa/faadaakaa/faadaakaa_logo.png" alt="" />
+              </router-link>
             </div>
           </div>
           <div class="col-lg-9 col-md-12 col-12">
@@ -629,28 +629,8 @@
                   </li>
                 </ul>
               </li>
-              <li>
-                <a href="#">pages <i class="ion-chevron-down"></i> </a>
-                <ul class="submenu">
-                  <li><a href="about-us.html">about us</a></li>
-                  <li><a href="login-register.html">login / register</a></li>
-                  <li><a href="contact.html">contact us</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="blog-leftsidebar.html"
-                  >blog <i class="ion-chevron-down"></i>
-                </a>
-                <ul class="submenu">
-                  <li><a href="blog.html">blog page</a></li>
-                  <li><a href="blog-leftsidebar.html">blog sidebar</a></li>
-                  <li><a href="blog-details.html">blog details</a></li>
-                </ul>
-              </li>
-              <li><a href="shop.html">Smartwatch </a></li>
-              <li><a href="shop.html"> phones </a></li>
-              <li><a href="contact.html">contacts </a></li>
-              <li><a href="#">Buy Theme </a></li>
+              <li><router-link to="/contact">Contact</router-link></li>
+              <li><router-link to="/authentication">Login</router-link></li>
             </ul>
           </nav>
         </div>

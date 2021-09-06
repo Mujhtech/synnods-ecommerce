@@ -13,8 +13,9 @@
                 quality Magento, Prestashop, Opencart [...].
               </p>
               <div class="footer-map">
-                <a href="contact.html"
-                  ><i class="ion-ios-location-outline"></i> View on map</a
+                <router-link to="/contact"
+                  ><i class="ion-ios-location-outline"></i> View on
+                  map</router-link
                 >
               </div>
             </div>
@@ -171,7 +172,10 @@
         <div class="row">
           <div class="col-12">
             <div class="copyright text-center">
-              <p>Copyright © <a href="#">Devita</a>. All Right Reserved.</p>
+              <p>
+                Copyright © <router-link to="/">Faadaakaa</router-link>. All
+                Right Reserved.
+              </p>
             </div>
           </div>
         </div>
