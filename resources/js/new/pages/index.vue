@@ -1,80 +1,7 @@
 <template>
   <div>
-    <div class="slider-area">
-      <div class="slider-active owl-dot-style owl-carousel">
-        <div
-          class="single-slider pt-90 pb-110 bg-img slider-height-1"
-          style="background-image: url(assets/img/slider/slider-1.jpg)"
-        >
-          <div class="container">
-            <div class="slider-content slider-animated-1">
-              <h5 class="animated">Exclusive Offer -20% Off This Week</h5>
-              <h2 class="animated">
-                Smarter Wifi Thermostat <br />With Room Sensors
-              </h2>
-              <h3 class="animated"><span>Starting at </span> $199.00</h3>
-              <div class="slider-btn mt-75">
-                <a class="animated" href="product-details.html">shopping Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="single-slider pt-90 pb-110 bg-img slider-height-1"
-          style="background-image: url(assets/img/slider/slider-2.jpg)"
-        >
-          <div class="container">
-            <div class="slider-content slider-animated-1">
-              <h5 class="animated">Exclusive Offer -30% Off This Week</h5>
-              <h2 class="animated">
-                New Trending 2018 <br />Speaker - Harman / Kardon
-              </h2>
-              <h3 class="animated"><span>Starting at </span> $155.00</h3>
-              <div class="slider-btn mt-75">
-                <a class="animated" href="product-details.html">shopping Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="single-slider pt-90 pb-110 bg-img slider-height-1"
-          style="background-image: url(assets/img/slider/slider-6.jpg)"
-        >
-          <div class="container">
-            <div class="slider-content slider-animated-1">
-              <h5 class="animated">Exclusive Offer -10% Off This Week</h5>
-              <h2 class="animated">
-                Apple Watch Edition ,<br />Everything you need to know!
-              </h2>
-              <h3 class="animated"><span>Starting at </span> $250.99</h3>
-              <div class="slider-btn mt-75">
-                <a class="animated" href="product-details.html">shopping Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="banner-area banner-negative-mrg-2">
-      <div class="container-fluid p-0">
-        <div class="row g-0">
-          <div class="col-lg-6 col-md-6">
-            <div class="banner-img banner-hover">
-              <a href="#"
-                ><img alt="" src="assets/img/banner/banner-1.jpg"
-              /></a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="banner-img banner-hover">
-              <a href="#"
-                ><img alt="" src="assets/img/banner/banner-2.jpg"
-              /></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <sy-home-slider></sy-home-slider>
+    <sy-home-banner></sy-home-banner>
     <div class="product-area pt-65 pb-30">
       <div class="container">
         <div class="product-tab-list mb-30 nav" role="tablist">
@@ -3049,3 +2976,16 @@
     </div>
   </div>
 </template>
+
+<script>
+import SyHomeSlider from '../components/home/SyHomeSlider';
+import SyHomeBanner from '../components/home/SyHomeBanner';
+export default {
+  name: "Home",
+  components: {
+    SyHomeBanner,
+    SyHomeSlider
+  }
+  
+}
+</script>

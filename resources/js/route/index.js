@@ -48,6 +48,11 @@ const routes = [
         component: Checkout,
         name: "Checkout"
     },
+    {
+        path: "/wishlist",
+        component: Wishlist,
+        name: "Wishlist"
+    },
 ];
 
 // Set the routes in vue-router

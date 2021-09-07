@@ -2057,6 +2057,3010 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/index.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/index.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _components_home_SyHomeSlider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/home/SyHomeSlider */ "./resources/js/new/components/home/SyHomeSlider.vue");
+/* harmony import */ var _components_home_SyHomeBanner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/home/SyHomeBanner */ "./resources/js/new/components/home/SyHomeBanner.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Home",
+  components: {
+    SyHomeBanner: _components_home_SyHomeBanner__WEBPACK_IMPORTED_MODULE_1__.default,
+    SyHomeSlider: _components_home_SyHomeSlider__WEBPACK_IMPORTED_MODULE_0__.default
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/wishlist.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/wishlist.vue?vue&type=script&lang=js& ***!
@@ -2776,6 +5780,10 @@ var routes = [{
   path: "/checkout",
   component: _new_pages_checkout__WEBPACK_IMPORTED_MODULE_7__.default,
   name: "Checkout"
+}, {
+  path: "/wishlist",
+  component: _new_pages_wishlist__WEBPACK_IMPORTED_MODULE_5__.default,
+  name: "Wishlist"
 }]; // Set the routes in vue-router
 
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_10__.default({
@@ -31523,6 +34531,80 @@ component.options.__file = "resources/js/new/components/commons/SyNotification.v
 
 /***/ }),
 
+/***/ "./resources/js/new/components/home/SyHomeBanner.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/new/components/home/SyHomeBanner.vue ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SyHomeBanner_vue_vue_type_template_id_7489f395___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SyHomeBanner.vue?vue&type=template&id=7489f395& */ "./resources/js/new/components/home/SyHomeBanner.vue?vue&type=template&id=7489f395&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _SyHomeBanner_vue_vue_type_template_id_7489f395___WEBPACK_IMPORTED_MODULE_0__.render,
+  _SyHomeBanner_vue_vue_type_template_id_7489f395___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/new/components/home/SyHomeBanner.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/new/components/home/SyHomeSlider.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/new/components/home/SyHomeSlider.vue ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SyHomeSlider_vue_vue_type_template_id_1811ea6c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SyHomeSlider.vue?vue&type=template&id=1811ea6c& */ "./resources/js/new/components/home/SyHomeSlider.vue?vue&type=template&id=1811ea6c&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _SyHomeSlider_vue_vue_type_template_id_1811ea6c___WEBPACK_IMPORTED_MODULE_0__.render,
+  _SyHomeSlider_vue_vue_type_template_id_1811ea6c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/new/components/home/SyHomeSlider.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/new/pages/about/index.vue":
 /*!************************************************!*\
   !*** ./resources/js/new/pages/about/index.vue ***!
@@ -31757,15 +34839,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _index_vue_vue_type_template_id_414480ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=414480ca& */ "./resources/js/new/pages/index.vue?vue&type=template&id=414480ca&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ "./resources/js/new/pages/index.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _index_vue_vue_type_template_id_414480ca___WEBPACK_IMPORTED_MODULE_0__.render,
   _index_vue_vue_type_template_id_414480ca___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -31850,6 +34934,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyBreadcrumb_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyBreadcrumb.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/commons/SyBreadcrumb.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyBreadcrumb_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/new/pages/index.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./resources/js/new/pages/index.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/index.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -32260,6 +35360,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyNotification_vue_vue_type_template_id_61c9a574___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyNotification_vue_vue_type_template_id_61c9a574___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyNotification.vue?vue&type=template&id=61c9a574& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/commons/SyNotification.vue?vue&type=template&id=61c9a574&");
+
+
+/***/ }),
+
+/***/ "./resources/js/new/components/home/SyHomeBanner.vue?vue&type=template&id=7489f395&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/new/components/home/SyHomeBanner.vue?vue&type=template&id=7489f395& ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyHomeBanner_vue_vue_type_template_id_7489f395___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyHomeBanner_vue_vue_type_template_id_7489f395___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyHomeBanner_vue_vue_type_template_id_7489f395___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyHomeBanner.vue?vue&type=template&id=7489f395& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/home/SyHomeBanner.vue?vue&type=template&id=7489f395&");
+
+
+/***/ }),
+
+/***/ "./resources/js/new/components/home/SyHomeSlider.vue?vue&type=template&id=1811ea6c&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/new/components/home/SyHomeSlider.vue?vue&type=template&id=1811ea6c& ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyHomeSlider_vue_vue_type_template_id_1811ea6c___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyHomeSlider_vue_vue_type_template_id_1811ea6c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyHomeSlider_vue_vue_type_template_id_1811ea6c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyHomeSlider.vue?vue&type=template&id=1811ea6c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/home/SyHomeSlider.vue?vue&type=template&id=1811ea6c&");
 
 
 /***/ }),
@@ -33409,31 +36543,36 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "main-menu main-none" }, [
           _c("nav", [
-            _c("ul", [
-              _vm._m(3),
-              _vm._v(" "),
-              _vm._m(4),
-              _vm._v(" "),
-              _c(
-                "li",
-                [
-                  _c("router-link", { attrs: { to: "/contact" } }, [
-                    _vm._v("Contact")
-                  ])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                [
-                  _c("router-link", { attrs: { to: "/authentication" } }, [
-                    _vm._v("Login")
-                  ])
-                ],
-                1
-              )
-            ])
+            _c(
+              "ul",
+              [
+                _vm._v("\n            li>"),
+                _c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")]),
+                _vm._v(" "),
+                _vm._m(3),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  [
+                    _c("router-link", { attrs: { to: "/contact" } }, [
+                      _vm._v("Contact")
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  [
+                    _c("router-link", { attrs: { to: "/authentication" } }, [
+                      _vm._v("Login")
+                    ])
+                  ],
+                  1
+                )
+              ],
+              1
+            )
           ])
         ])
       ])
@@ -34136,7 +37275,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "mega-menu-position" }, [
       _c("a", { attrs: { href: "index.html" } }, [
-        _vm._v("Home "),
+        _vm._v("Category "),
         _c("i", { staticClass: "ion-chevron-down" })
       ]),
       _vm._v(" "),
@@ -34176,372 +37315,6 @@ var staticRenderFns = [
                 _c("li", [
                   _c("a", { attrs: { href: "index-book.html" } }, [
                     _vm._v("Home - book ")
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("ul", [
-                _c("li", { staticClass: "mega-menu-title" }, [
-                  _vm._v("Demo Group 02")
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-book-2.html" } }, [
-                    _vm._v("Home - book 2")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-coffee.html" } }, [
-                    _vm._v("Home - coffee")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-cycle.html" } }, [
-                    _vm._v("Home - cycle")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-fashion.html" } }, [
-                    _vm._v("Home - fashion")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-game.html" } }, [
-                    _vm._v("Home - game")
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("ul", [
-                _c("li", { staticClass: "mega-menu-title" }, [
-                  _vm._v("Demo Group 03")
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-jewelry.html" } }, [
-                    _vm._v("Home - jewelry")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-medical.html" } }, [
-                    _vm._v("Home - medical")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-sports.html" } }, [
-                    _vm._v("Home - sports")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-sunglass.html" } }, [
-                    _vm._v("Home - sunglass")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-watch.html" } }, [
-                    _vm._v("Home - watch")
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("ul", [
-                _c("li", { staticClass: "mega-menu-title" }, [
-                  _vm._v("Demo Group 04")
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-construction.html" } }, [
-                    _vm._v("Home - construction")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-auto-parts.html" } }, [
-                    _vm._v("Home - Auto Parts"),
-                    _c("span", { staticClass: "blue" }, [_vm._v("New")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-furniture.html" } }, [
-                    _vm._v("Home - Furniture"),
-                    _c("span", { staticClass: "blue" }, [_vm._v("New")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-petmarket.html" } }, [
-                    _vm._v("Home - PetMarket"),
-                    _c("span", { staticClass: "blue" }, [_vm._v("New")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-organic.html" } }, [
-                    _vm._v("Home - Organic"),
-                    _c("span", { staticClass: "blue" }, [_vm._v("New")])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("ul", [
-                _c("li", { staticClass: "mega-menu-title" }, [
-                  _vm._v("Demo Group 05")
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-shoe.html" } }, [
-                    _vm._v("Home - Shoe"),
-                    _c("span", { staticClass: "blue" }, [_vm._v("New")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-toy.html" } }, [
-                    _vm._v("Home - Toy"),
-                    _c("span", { staticClass: "blue" }, [_vm._v("New")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-cosmetic.html" } }, [
-                    _vm._v("Home - Cosmetic"),
-                    _c("span", { staticClass: "blue" }, [_vm._v("New")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-housewares.html" } }, [
-                    _vm._v("Home - Housewares"),
-                    _c("span", { staticClass: "blue" }, [_vm._v("New")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "index-underwear.html" } }, [
-                    _vm._v("Home - Underwear"),
-                    _c("span", { staticClass: "blue" }, [_vm._v("New")])
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mega-menu-position" }, [
-      _c("a", { attrs: { href: "shop.html" } }, [
-        _vm._v(" Shop "),
-        _c("i", { staticClass: "ion-chevron-down" })
-      ]),
-      _vm._v(" "),
-      _c("ul", { staticClass: "mega-menu" }, [
-        _c("li", [
-          _c("ul", [
-            _c("li", [
-              _c("ul", [
-                _c("li", { staticClass: "mega-menu-title" }, [
-                  _vm._v("Shop Layout")
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "shop.html" } }, [
-                    _vm._v("default shop")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "shop-2col.html" } }, [
-                    _vm._v("2 column box")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "shop-3col.html" } }, [
-                    _vm._v("3 column box")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "shop.html" } }, [
-                    _vm._v("4 column box")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "shop-list.html" } }, [
-                    _vm._v("shop list")
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("ul", [
-                _c("li", { staticClass: "mega-menu-title" }, [
-                  _vm._v("Shop Layout")
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "shop-new.html" } }, [
-                    _vm._v("shop new")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "shop-onsale.html" } }, [
-                    _vm._v("shop onsale")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "shop-no-sidebar.html" } }, [
-                    _vm._v("shop no sidebar")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "shop-rightsidebar.html" } }, [
-                    _vm._v("shop right sidebar")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "shop-fullwide.html" } }, [
-                    _vm._v("shop fullwide")
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("ul", [
-                _c("li", { staticClass: "mega-menu-title" }, [
-                  _vm._v(
-                    "\n                          Product Details Layout\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "product-details.html" } }, [
-                    _vm._v("tab style 1")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "product-details-2.html" } }, [
-                    _vm._v("tab style 2")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "product-details-3.html" } }, [
-                    _vm._v("tab style 3")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "product-details-gallery.html" } }, [
-                    _vm._v("gallery left")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "product-details-gallery-2.html" } },
-                    [_vm._v("gallery right")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("ul", [
-                _c("li", { staticClass: "mega-menu-title" }, [
-                  _vm._v(
-                    "\n                          Product Details Layout\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "product-details-sticky.html" } }, [
-                    _vm._v("sticky left")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "product-details-sticky-right.html" } },
-                    [_vm._v("sticky right")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "product-details-slider.html" } }, [
-                    _vm._v("slider box")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "product-details-slider-fullwide.html" } },
-                    [_vm._v("slider full wide")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("ul", [
-                _c("li", { staticClass: "mega-menu-title" }, [
-                  _vm._v("Account Pages")
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "cart-page.html" } }, [
-                    _vm._v("cart page")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "checkout.html" } }, [
-                    _vm._v("checkout")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "wishlist.html" } }, [
-                    _vm._v("wishlist")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "my-account.html" } }, [
-                    _vm._v("my account")
                   ])
                 ])
               ])
@@ -34755,6 +37528,219 @@ var staticRenderFns = [
         ])
       ]
     )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/home/SyHomeBanner.vue?vue&type=template&id=7489f395&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/home/SyHomeBanner.vue?vue&type=template&id=7489f395& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "banner-area banner-negative-mrg-2" }, [
+      _c("div", { staticClass: "container-fluid p-0" }, [
+        _c("div", { staticClass: "row g-0" }, [
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "banner-img banner-hover" }, [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("img", {
+                  attrs: { alt: "", src: "assets/img/banner/banner-1.jpg" }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "banner-img banner-hover" }, [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("img", {
+                  attrs: { alt: "", src: "assets/img/banner/banner-2.jpg" }
+                })
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/home/SyHomeSlider.vue?vue&type=template&id=1811ea6c&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/home/SyHomeSlider.vue?vue&type=template&id=1811ea6c& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "slider-area" }, [
+      _c("div", { staticClass: "slider-active owl-dot-style-3 owl-carousel" }, [
+        _c(
+          "div",
+          {
+            staticClass: "single-slider pt-95 pb-160 bg-img slider-height-3",
+            staticStyle: {
+              "background-image": "url(assets/img/slider/slider-7.jpg)"
+            }
+          },
+          [
+            _c("div", { staticClass: "container" }, [
+              _c("div", { staticClass: "slider-content slider-animated-1" }, [
+                _c("h5", { staticClass: "animated" }, [
+                  _vm._v("Exclusive Offer -20% Off This Week")
+                ]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "animated" }, [
+                  _vm._v("\n            PlayStation® VR "),
+                  _c("br"),
+                  _vm._v("Over 100 Games & Counting\n          ")
+                ]),
+                _vm._v(" "),
+                _c("h3", { staticClass: "animated" }, [
+                  _c("span", [_vm._v("Starting at ")]),
+                  _vm._v(" $129.00")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "slider-btn slider-btn-3 mt-70" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "animated",
+                      attrs: { href: "product-details.html" }
+                    },
+                    [_vm._v("shopping Now")]
+                  )
+                ])
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "single-slider pt-95 pb-160 bg-img slider-height-3",
+            staticStyle: {
+              "background-image": "url(assets/img/slider/slider-8.jpg)"
+            }
+          },
+          [
+            _c("div", { staticClass: "container" }, [
+              _c("div", { staticClass: "slider-content slider-animated-1" }, [
+                _c("h5", { staticClass: "animated" }, [
+                  _vm._v("Exclusive Offer -30% Off This Week")
+                ]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "animated" }, [
+                  _vm._v("\n            New Trending 2018 "),
+                  _c("br"),
+                  _vm._v("Speaker - Harman / Kardon\n          ")
+                ]),
+                _vm._v(" "),
+                _c("h3", { staticClass: "animated" }, [
+                  _c("span", [_vm._v("Starting at ")]),
+                  _vm._v(" $155.00")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "slider-btn slider-btn-3 mt-70" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "animated",
+                      attrs: { href: "product-details.html" }
+                    },
+                    [_vm._v("shopping Now")]
+                  )
+                ])
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "single-slider pt-95 pb-160 bg-img slider-height-3",
+            staticStyle: {
+              "background-image": "url(assets/img/slider/slider-8.jpg)"
+            }
+          },
+          [
+            _c("div", { staticClass: "container" }, [
+              _c("div", { staticClass: "slider-content slider-animated-1" }, [
+                _c("h5", { staticClass: "animated" }, [
+                  _vm._v("Exclusive Offer -30% Off This Week")
+                ]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "animated" }, [
+                  _vm._v("\n            New Trending 2018 "),
+                  _c("br"),
+                  _vm._v("Speaker - Harman / Kardon\n          ")
+                ]),
+                _vm._v(" "),
+                _c("h3", { staticClass: "animated" }, [
+                  _c("span", [_vm._v("Starting at ")]),
+                  _vm._v(" $155.00")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "slider-btn slider-btn-3 mt-70" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "animated",
+                      attrs: { href: "product-details.html" }
+                    },
+                    [_vm._v("shopping Now")]
+                  )
+                ])
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -37960,243 +40946,4420 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    [
+      _c("sy-home-slider"),
+      _vm._v(" "),
+      _c("sy-home-banner"),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2),
+      _vm._v(" "),
+      _vm._m(3)
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "slider-area" }, [
-        _c("div", { staticClass: "slider-active owl-dot-style owl-carousel" }, [
-          _c(
-            "div",
-            {
-              staticClass: "single-slider pt-90 pb-110 bg-img slider-height-1",
-              staticStyle: {
-                "background-image": "url(assets/img/slider/slider-1.jpg)"
-              }
-            },
-            [
-              _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "slider-content slider-animated-1" }, [
-                  _c("h5", { staticClass: "animated" }, [
-                    _vm._v("Exclusive Offer -20% Off This Week")
-                  ]),
-                  _vm._v(" "),
-                  _c("h2", { staticClass: "animated" }, [
-                    _vm._v("\n              Smarter Wifi Thermostat "),
-                    _c("br"),
-                    _vm._v("With Room Sensors\n            ")
-                  ]),
-                  _vm._v(" "),
-                  _c("h3", { staticClass: "animated" }, [
-                    _c("span", [_vm._v("Starting at ")]),
-                    _vm._v(" $199.00")
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "slider-btn mt-75" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "animated",
-                        attrs: { href: "product-details.html" }
-                      },
-                      [_vm._v("shopping Now")]
-                    )
-                  ])
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "single-slider pt-90 pb-110 bg-img slider-height-1",
-              staticStyle: {
-                "background-image": "url(assets/img/slider/slider-2.jpg)"
-              }
-            },
-            [
-              _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "slider-content slider-animated-1" }, [
-                  _c("h5", { staticClass: "animated" }, [
-                    _vm._v("Exclusive Offer -30% Off This Week")
-                  ]),
-                  _vm._v(" "),
-                  _c("h2", { staticClass: "animated" }, [
-                    _vm._v("\n              New Trending 2018 "),
-                    _c("br"),
-                    _vm._v("Speaker - Harman / Kardon\n            ")
-                  ]),
-                  _vm._v(" "),
-                  _c("h3", { staticClass: "animated" }, [
-                    _c("span", [_vm._v("Starting at ")]),
-                    _vm._v(" $155.00")
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "slider-btn mt-75" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "animated",
-                        attrs: { href: "product-details.html" }
-                      },
-                      [_vm._v("shopping Now")]
-                    )
-                  ])
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "single-slider pt-90 pb-110 bg-img slider-height-1",
-              staticStyle: {
-                "background-image": "url(assets/img/slider/slider-6.jpg)"
-              }
-            },
-            [
-              _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "slider-content slider-animated-1" }, [
-                  _c("h5", { staticClass: "animated" }, [
-                    _vm._v("Exclusive Offer -10% Off This Week")
-                  ]),
-                  _vm._v(" "),
-                  _c("h2", { staticClass: "animated" }, [
-                    _vm._v("\n              Apple Watch Edition ,"),
-                    _c("br"),
-                    _vm._v("Everything you need to know!\n            ")
-                  ]),
-                  _vm._v(" "),
-                  _c("h3", { staticClass: "animated" }, [
-                    _c("span", [_vm._v("Starting at ")]),
-                    _vm._v(" $250.99")
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "slider-btn mt-75" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "animated",
-                        attrs: { href: "product-details.html" }
-                      },
-                      [_vm._v("shopping Now")]
-                    )
-                  ])
-                ])
-              ])
-            ]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "banner-area banner-negative-mrg-2" }, [
-        _c("div", { staticClass: "container-fluid p-0" }, [
-          _c("div", { staticClass: "row g-0" }, [
-            _c("div", { staticClass: "col-lg-6 col-md-6" }, [
-              _c("div", { staticClass: "banner-img banner-hover" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("img", {
-                    attrs: { alt: "", src: "assets/img/banner/banner-1.jpg" }
-                  })
-                ])
-              ])
+    return _c("div", { staticClass: "product-area pt-65 pb-30" }, [
+      _c("div", { staticClass: "container" }, [
+        _c(
+          "div",
+          {
+            staticClass: "product-tab-list mb-30 nav",
+            attrs: { role: "tablist" }
+          },
+          [
+            _c(
+              "a",
+              {
+                staticClass: "active",
+                attrs: { href: "#home1", "data-bs-toggle": "tab" }
+              },
+              [_c("h4", [_vm._v("New Arrivals")])]
+            ),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "#home2", "data-bs-toggle": "tab" } }, [
+              _c("h4", [_vm._v("Featured")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-lg-6 col-md-6" }, [
-              _c("div", { staticClass: "banner-img banner-hover" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("img", {
-                    attrs: { alt: "", src: "assets/img/banner/banner-2.jpg" }
-                  })
+            _c("a", { attrs: { href: "#home3", "data-bs-toggle": "tab" } }, [
+              _c("h4", [_vm._v("Top Rated")])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "tab-content jump" }, [
+          _c(
+            "div",
+            { staticClass: "tab-pane active", attrs: { id: "home1" } },
+            [
+              _c("div", { staticClass: "custom-row" }, [
+                _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("div", { staticClass: "product-img-slider" }, [
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-1.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-2.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-3.jpg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("-29%")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "list-col" }, [
+                      _c("div", { staticClass: "gridview" }, [
+                        _c(
+                          "div",
+                          { staticClass: "product-content text-center" },
+                          [
+                            _c("span", [_vm._v("Remote, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Phantom Remote Control Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$260.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$162.00 ")]
+                                )
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "product-action-wrapper-2 text-center"
+                          },
+                          [
+                            _c("div", { staticClass: "product-rating" }, [
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass: "ion-android-star-outline"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "product-action" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action",
+                                  attrs: { title: "Wishlist", href: "#" }
+                                },
+                                [_c("i", { staticClass: "fa fa-heart-o" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "action-cart",
+                                  attrs: { title: "Add To Cart", href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                          Add to Cart\n                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action compare-mrg",
+                                  attrs: {
+                                    "data-target": "#exampleCompare",
+                                    "data-toggle": "modal",
+                                    title: "Compare",
+                                    href: "#"
+                                  }
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass: "fa fa-sliders fa-rotate-90"
+                                  })
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("div", { staticClass: "product-img-slider" }, [
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-2.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-1.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-3.jpg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "list-col" }, [
+                      _c("div", { staticClass: "gridview" }, [
+                        _c(
+                          "div",
+                          { staticClass: "product-content text-center" },
+                          [
+                            _c("span", [_vm._v("Phone, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Awesome Smart Phone Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [_c("span", [_vm._v("$200.00")])]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "product-action-wrapper-2 text-center"
+                          },
+                          [
+                            _c("div", { staticClass: "product-rating" }, [
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass: "ion-android-star-outline"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "product-action" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action",
+                                  attrs: { title: "Wishlist", href: "#" }
+                                },
+                                [_c("i", { staticClass: "fa fa-heart-o" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "action-cart",
+                                  attrs: { title: "Add To Cart", href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                          Add to Cart\n                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action compare-mrg",
+                                  attrs: {
+                                    "data-target": "#exampleCompare",
+                                    "data-toggle": "modal",
+                                    title: "Compare",
+                                    href: "#"
+                                  }
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass: "fa fa-sliders fa-rotate-90"
+                                  })
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("div", { staticClass: "product-img-slider" }, [
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-3.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-2.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-5.jpg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("-29%")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "list-col" }, [
+                      _c("div", { staticClass: "gridview" }, [
+                        _c(
+                          "div",
+                          { staticClass: "product-content text-center" },
+                          [
+                            _c("span", [_vm._v("Speaker, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Full Bast Doule Speaker Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$120.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$172.00 ")]
+                                )
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "product-action-wrapper-2 text-center"
+                          },
+                          [
+                            _c("div", { staticClass: "product-rating" }, [
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass: "ion-android-star-outline"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "product-action" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action",
+                                  attrs: { title: "Wishlist", href: "#" }
+                                },
+                                [_c("i", { staticClass: "fa fa-heart-o" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "action-cart",
+                                  attrs: { title: "Add To Cart", href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                          Add to Cart\n                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action compare-mrg",
+                                  attrs: {
+                                    "data-target": "#exampleCompare",
+                                    "data-toggle": "modal",
+                                    title: "Compare",
+                                    href: "#"
+                                  }
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass: "fa fa-sliders fa-rotate-90"
+                                  })
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("div", { staticClass: "product-img-slider" }, [
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-4.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-2.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-3.jpg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "list-col" }, [
+                      _c("div", { staticClass: "gridview" }, [
+                        _c(
+                          "div",
+                          { staticClass: "product-content text-center" },
+                          [
+                            _c("span", [_vm._v("Speaker, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Full Bast Doule Speaker Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [_c("span", [_vm._v("$210.00")])]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "product-action-wrapper-2 text-center"
+                          },
+                          [
+                            _c("div", { staticClass: "product-rating" }, [
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass: "ion-android-star-outline"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "product-action" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action",
+                                  attrs: { title: "Wishlist", href: "#" }
+                                },
+                                [_c("i", { staticClass: "fa fa-heart-o" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "action-cart",
+                                  attrs: { title: "Add To Cart", href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                          Add to Cart\n                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action compare-mrg",
+                                  attrs: {
+                                    "data-target": "#exampleCompare",
+                                    "data-toggle": "modal",
+                                    title: "Compare",
+                                    href: "#"
+                                  }
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass: "fa fa-sliders fa-rotate-90"
+                                  })
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("div", { staticClass: "product-img-slider" }, [
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-5.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-2.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-3.jpg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("-29%")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "list-col" }, [
+                      _c("div", { staticClass: "gridview" }, [
+                        _c(
+                          "div",
+                          { staticClass: "product-content text-center" },
+                          [
+                            _c("span", [_vm._v("Phone, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Awesome Smart Phone Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$250.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$300.00 ")]
+                                )
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "product-action-wrapper-2 text-center"
+                          },
+                          [
+                            _c("div", { staticClass: "product-rating" }, [
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass: "ion-android-star-outline"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "product-action" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action",
+                                  attrs: { title: "Wishlist", href: "#" }
+                                },
+                                [_c("i", { staticClass: "fa fa-heart-o" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "action-cart",
+                                  attrs: { title: "Add To Cart", href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                          Add to Cart\n                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action compare-mrg",
+                                  attrs: {
+                                    "data-target": "#exampleCompare",
+                                    "data-toggle": "modal",
+                                    title: "Compare",
+                                    href: "#"
+                                  }
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass: "fa fa-sliders fa-rotate-90"
+                                  })
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("div", { staticClass: "product-img-slider" }, [
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-6.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-2.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-3.jpg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "list-col" }, [
+                      _c("div", { staticClass: "gridview" }, [
+                        _c(
+                          "div",
+                          { staticClass: "product-content text-center" },
+                          [
+                            _c("span", [_vm._v("Tab, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Featured Tab Windows Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [_c("span", [_vm._v("$160.00")])]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "product-action-wrapper-2 text-center"
+                          },
+                          [
+                            _c("div", { staticClass: "product-rating" }, [
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass: "ion-android-star-outline"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "product-action" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action",
+                                  attrs: { title: "Wishlist", href: "#" }
+                                },
+                                [_c("i", { staticClass: "fa fa-heart-o" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "action-cart",
+                                  attrs: { title: "Add To Cart", href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                          Add to Cart\n                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action compare-mrg",
+                                  attrs: {
+                                    "data-target": "#exampleCompare",
+                                    "data-toggle": "modal",
+                                    title: "Compare",
+                                    href: "#"
+                                  }
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass: "fa fa-sliders fa-rotate-90"
+                                  })
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("div", { staticClass: "product-img-slider" }, [
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-7.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-2.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-3.jpg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("-29%")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "list-col" }, [
+                      _c("div", { staticClass: "gridview" }, [
+                        _c(
+                          "div",
+                          { staticClass: "product-content text-center" },
+                          [
+                            _c("span", [_vm._v("Watch, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Demoniss Glorior Watch Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$100.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$150.00 ")]
+                                )
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "product-action-wrapper-2 text-center"
+                          },
+                          [
+                            _c("div", { staticClass: "product-rating" }, [
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass: "ion-android-star-outline"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "product-action" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action",
+                                  attrs: { title: "Wishlist", href: "#" }
+                                },
+                                [_c("i", { staticClass: "fa fa-heart-o" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "action-cart",
+                                  attrs: { title: "Add To Cart", href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                          Add to Cart\n                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action compare-mrg",
+                                  attrs: {
+                                    "data-target": "#exampleCompare",
+                                    "data-toggle": "modal",
+                                    title: "Compare",
+                                    href: "#"
+                                  }
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass: "fa fa-sliders fa-rotate-90"
+                                  })
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("div", { staticClass: "product-img-slider" }, [
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-8.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-2.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-3.jpg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "list-col" }, [
+                      _c("div", { staticClass: "gridview" }, [
+                        _c(
+                          "div",
+                          { staticClass: "product-content text-center" },
+                          [
+                            _c("span", [_vm._v("Headphone, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [
+                                  _vm._v(
+                                    "\n                          Nice White Headphone Ver 2018"
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [_c("span", [_vm._v("$500.00")])]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "product-action-wrapper-2 text-center"
+                          },
+                          [
+                            _c("div", { staticClass: "product-rating" }, [
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass: "ion-android-star-outline"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "product-action" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action",
+                                  attrs: { title: "Wishlist", href: "#" }
+                                },
+                                [_c("i", { staticClass: "fa fa-heart-o" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "action-cart",
+                                  attrs: { title: "Add To Cart", href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                          Add to Cart\n                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action compare-mrg",
+                                  attrs: {
+                                    "data-target": "#exampleCompare",
+                                    "data-toggle": "modal",
+                                    title: "Compare",
+                                    href: "#"
+                                  }
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass: "fa fa-sliders fa-rotate-90"
+                                  })
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("div", { staticClass: "product-img-slider" }, [
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-9.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-2.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-3.jpg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("-29%")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "list-col" }, [
+                      _c("div", { staticClass: "gridview" }, [
+                        _c(
+                          "div",
+                          { staticClass: "product-content text-center" },
+                          [
+                            _c("span", [_vm._v("Phone, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Awesome Smart Phone Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$180.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$200.00 ")]
+                                )
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "product-action-wrapper-2 text-center"
+                          },
+                          [
+                            _c("div", { staticClass: "product-rating" }, [
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass: "ion-android-star-outline"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "product-action" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action",
+                                  attrs: { title: "Wishlist", href: "#" }
+                                },
+                                [_c("i", { staticClass: "fa fa-heart-o" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "action-cart",
+                                  attrs: { title: "Add To Cart", href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                          Add to Cart\n                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action compare-mrg",
+                                  attrs: {
+                                    "data-target": "#exampleCompare",
+                                    "data-toggle": "modal",
+                                    title: "Compare",
+                                    href: "#"
+                                  }
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass: "fa fa-sliders fa-rotate-90"
+                                  })
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("div", { staticClass: "product-img-slider" }, [
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-10.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-2.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "product-details.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "assets/img/product/product-3.jpg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "list-col" }, [
+                      _c("div", { staticClass: "gridview" }, [
+                        _c(
+                          "div",
+                          { staticClass: "product-content text-center" },
+                          [
+                            _c("span", [_vm._v("Desktop, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Maxclon Desktop C27F5 Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [_c("span", [_vm._v("$260.00")])]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "product-action-wrapper-2 text-center"
+                          },
+                          [
+                            _c("div", { staticClass: "product-rating" }, [
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "ion-android-star-outline theme-star"
+                              }),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass: "ion-android-star-outline"
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "product-action" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action",
+                                  attrs: { title: "Wishlist", href: "#" }
+                                },
+                                [_c("i", { staticClass: "fa fa-heart-o" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "action-cart",
+                                  attrs: { title: "Add To Cart", href: "#" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                          Add to Cart\n                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "same-action compare-mrg",
+                                  attrs: {
+                                    "data-target": "#exampleCompare",
+                                    "data-toggle": "modal",
+                                    title: "Compare",
+                                    href: "#"
+                                  }
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass: "fa fa-sliders fa-rotate-90"
+                                  })
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "tab-pane", attrs: { id: "home2" } }, [
+            _c("div", { staticClass: "custom-row" }, [
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-10.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("-29%")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Desktop, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Maxclon Desktop C27F5 Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$260.00")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "product-price-old" }, [
+                              _vm._v("$162.00 ")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-9.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-1.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Phone, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Awesome Smart Phone Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$200.00")])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-8.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("-29%")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Headphone, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [
+                                _vm._v(
+                                  "\n                          Nice White Headphone Ver 2018"
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$120.00")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "product-price-old" }, [
+                              _vm._v("$172.00 ")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-7.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Watch, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Demoniss Glorior Watch Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$210.00")])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-6.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("-29%")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Tab, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Featured Tab Windows Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$250.00")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "product-price-old" }, [
+                              _vm._v("$300.00 ")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-5.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Phone, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Awesome Smart Phone Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$160.00")])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-4.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("-29%")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Speaker, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Full Bast Doule Speaker Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$100.00")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "product-price-old" }, [
+                              _vm._v("$150.00 ")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Speaker, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Full Bast Doule Speaker Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$500.00")])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("-29%")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Phone, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Awesome Smart Phone Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$180.00")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "product-price-old" }, [
+                              _vm._v("$200.00 ")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-1.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Remote, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Phantom Remote Control Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$260.00")])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "tab-pane", attrs: { id: "home3" } }, [
+            _c("div", { staticClass: "custom-row" }, [
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-5.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("-29%")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Phone, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Featured Tab Windows Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$260.00")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "product-price-old" }, [
+                              _vm._v("$162.00 ")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-4.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-1.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Speaker, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Demoniss Glorior Watch Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$200.00")])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("-29%")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Speaker, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [
+                                _vm._v(
+                                  "\n                          Nice White Headphone Ver 2018"
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$120.00")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "product-price-old" }, [
+                              _vm._v("$172.00 ")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Phone, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Awesome Smart Phone Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$210.00")])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-1.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("-29%")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Remote, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Phantom Remote Control Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$250.00")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "product-price-old" }, [
+                              _vm._v("$300.00 ")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-10.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Desktop, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Maxclon Desktop C27F5 Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$160.00")])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-9.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("-29%")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Phone, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Awesome Smart Phone Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$100.00")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "product-price-old" }, [
+                              _vm._v("$150.00 ")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-7.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Watch, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [
+                                _vm._v(
+                                  "\n                          Demoniss Glorior Watch Ver 2018"
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$500.00")])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-8.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("-29%")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Headphone, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [
+                                _vm._v(
+                                  "\n                          Nice White Headphone Ver 2018"
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$180.00")]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "product-price-old" }, [
+                              _vm._v("$200.00 ")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "custom-col-5 mb-30" }, [
+                _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("div", { staticClass: "product-img-slider" }, [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-6.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-2.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: "assets/img/product/product-3.jpg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "list-col" }, [
+                    _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "product-content text-center" },
+                        [
+                          _c("span", [_vm._v("Tab, Accessories")]),
+                          _vm._v(" "),
+                          _c("h4", [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [_vm._v("Featured Tab Windows Ver 2018")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-price-wrapper" }, [
+                            _c("span", [_vm._v("$260.00")])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "product-action-wrapper-2 text-center" },
+                        [
+                          _c("div", { staticClass: "product-rating" }, [
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass: "ion-android-star-outline theme-star"
+                            }),
+                            _vm._v(" "),
+                            _c("i", { staticClass: "ion-android-star-outline" })
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "product-action" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action",
+                                attrs: { title: "Wishlist", href: "#" }
+                              },
+                              [_c("i", { staticClass: "fa fa-heart-o" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "action-cart",
+                                attrs: { title: "Add To Cart", href: "#" }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                          Add to Cart\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "same-action compare-mrg",
+                                attrs: {
+                                  "data-target": "#exampleCompare",
+                                  "data-toggle": "modal",
+                                  title: "Compare",
+                                  href: "#"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-sliders fa-rotate-90"
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
                 ])
               ])
             ])
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "product-area pt-65 pb-30" }, [
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "connect-area bg-img pt-120 pb-125",
+        staticStyle: {
+          "background-image": "url(assets/img/banner/banner-3.jpg)"
+        }
+      },
+      [
         _c("div", { staticClass: "container" }, [
-          _c(
-            "div",
-            {
-              staticClass: "product-tab-list mb-30 nav",
-              attrs: { role: "tablist" }
-            },
-            [
-              _c(
-                "a",
-                {
-                  staticClass: "active",
-                  attrs: { href: "#home1", "data-bs-toggle": "tab" }
-                },
-                [_c("h4", [_vm._v("New Arrivals")])]
-              ),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "#home2", "data-bs-toggle": "tab" } }, [
-                _c("h4", [_vm._v("Featured")])
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "#home3", "data-bs-toggle": "tab" } }, [
-                _c("h4", [_vm._v("Top Rated")])
-              ])
-            ]
-          ),
+          _c("div", { staticClass: "connect-content" }, [
+            _c("h2", [
+              _vm._v("Stay Connected When You’re Away "),
+              _c("br"),
+              _vm._v("From Your Phone")
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n          Start the year off strong and explore how to track your activities,\n          health, and fitness with Apple Watch and iPhone.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("h4", [_vm._v("$128.99")]),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn-style-2", attrs: { href: "#" } }, [
+              _vm._v("Discover Now")
+            ])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "best-selling-area pt-60 pb-45 gray-bg best-selling-small"
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "top-bar section-border mb-20" }, [
+            _c(
+              "div",
+              { staticClass: "section-title-wrapper section-bg-gray" },
+              [
+                _c("h4", { staticClass: "section-title" }, [
+                  _vm._v("Best Selling Products")
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "product-tab-list-2 nav section-bg-gray" },
+              [
+                _c(
+                  "a",
+                  {
+                    staticClass: "active",
+                    attrs: { href: "#home4", "data-bs-toggle": "tab" }
+                  },
+                  [_c("h4", [_vm._v("Smart Phones & Tablets")])]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { attrs: { href: "#home5", "data-bs-toggle": "tab" } },
+                  [_c("h4", [_vm._v("Laptops & Computers")])]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { attrs: { href: "#home6", "data-bs-toggle": "tab" } },
+                  [_c("h4", [_vm._v("Video Cameras")])]
+                )
+              ]
+            )
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "tab-content jump" }, [
             _c(
               "div",
-              { staticClass: "tab-pane active", attrs: { id: "home1" } },
+              { staticClass: "tab-pane active", attrs: { id: "home4" } },
               [
-                _c("div", { staticClass: "custom-row" }, [
-                  _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                    _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                      _c("div", { staticClass: "product-img" }, [
-                        _c("div", { staticClass: "product-img-slider" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-1.jpg",
-                                alt: ""
-                              }
-                            })
+                _c(
+                  "div",
+                  { staticClass: "best-selling-active nav-style owl-carousel" },
+                  [
+                    _c("div", { staticClass: "best-selling-bundle" }, [
+                      _c(
+                        "div",
+                        { staticClass: "best-selling-pro-wrapper mb-20" },
+                        [
+                          _c("div", { staticClass: "product-img" }, [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [
+                                _c("img", {
+                                  attrs: {
+                                    alt: "",
+                                    src: "assets/img/product/best-selling-1.jpg"
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("-10%")])
                           ]),
                           _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-2.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-3.jpg",
-                                alt: ""
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("span", [_vm._v("-29%")])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "list-col" }, [
-                        _c("div", { staticClass: "gridview" }, [
                           _c(
                             "div",
-                            { staticClass: "product-content text-center" },
+                            { staticClass: "product-content best-pro-content" },
                             [
-                              _c("span", [_vm._v("Remote, Accessories")]),
+                              _c("span", [_vm._v("Joy Stick, Accessories")]),
                               _vm._v(" "),
                               _c("h4", [
                                 _c(
@@ -38218,135 +45381,64 @@ var staticRenderFns = [
                                     [_vm._v("$162.00 ")]
                                   )
                                 ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "product-action best-pro-action"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "same-action",
+                                      attrs: { title: "Wishlist", href: "#" }
+                                    },
+                                    [_c("i", { staticClass: "fa fa-heart-o" })]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "action-cart",
+                                      attrs: { title: "Add To Cart", href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                      Add to Cart\n                    "
+                                      )
+                                    ]
+                                  )
+                                ]
                               )
                             ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "product-action-wrapper-2 text-center"
-                            },
-                            [
-                              _c("div", { staticClass: "product-rating" }, [
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass: "ion-android-star-outline"
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("p", [
-                                _vm._v(
-                                  "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "product-action" }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                          Add to Cart\n                        "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action compare-mrg",
-                                    attrs: {
-                                      "data-target": "#exampleCompare",
-                                      "data-toggle": "modal",
-                                      title: "Compare",
-                                      href: "#"
-                                    }
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fa fa-sliders fa-rotate-90"
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]
                           )
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                    _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                      _c("div", { staticClass: "product-img" }, [
-                        _c("div", { staticClass: "product-img-slider" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-2.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-1.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-3.jpg",
-                                alt: ""
-                              }
-                            })
-                          ])
-                        ])
-                      ]),
+                        ]
+                      ),
                       _vm._v(" "),
-                      _c("div", { staticClass: "list-col" }, [
-                        _c("div", { staticClass: "gridview" }, [
+                      _c(
+                        "div",
+                        { staticClass: "best-selling-pro-wrapper mb-20" },
+                        [
+                          _c("div", { staticClass: "product-img" }, [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [
+                                _c("img", {
+                                  attrs: {
+                                    alt: "",
+                                    src: "assets/img/product/best-selling-4.jpg"
+                                  }
+                                })
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
                           _c(
                             "div",
-                            { staticClass: "product-content text-center" },
+                            { staticClass: "product-content best-pro-content" },
                             [
                               _c("span", [_vm._v("Phone, Accessories")]),
                               _vm._v(" "),
@@ -38361,734 +45453,67 @@ var staticRenderFns = [
                               _c(
                                 "div",
                                 { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("$200.00")])]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "product-action-wrapper-2 text-center"
-                            },
-                            [
-                              _c("div", { staticClass: "product-rating" }, [
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass: "ion-android-star-outline"
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("p", [
-                                _vm._v(
-                                  "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "product-action" }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                          Add to Cart\n                        "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action compare-mrg",
-                                    attrs: {
-                                      "data-target": "#exampleCompare",
-                                      "data-toggle": "modal",
-                                      title: "Compare",
-                                      href: "#"
-                                    }
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fa fa-sliders fa-rotate-90"
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]
-                          )
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                    _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                      _c("div", { staticClass: "product-img" }, [
-                        _c("div", { staticClass: "product-img-slider" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-3.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-2.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-5.jpg",
-                                alt: ""
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("span", [_vm._v("-29%")])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "list-col" }, [
-                        _c("div", { staticClass: "gridview" }, [
-                          _c(
-                            "div",
-                            { staticClass: "product-content text-center" },
-                            [
-                              _c("span", [_vm._v("Speaker, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Full Bast Doule Speaker Ver 2018")]
-                                )
-                              ]),
+                                [_c("span", [_vm._v("$260.00")])]
+                              ),
                               _vm._v(" "),
                               _c(
                                 "div",
-                                { staticClass: "product-price-wrapper" },
+                                {
+                                  staticClass: "product-action best-pro-action"
+                                },
                                 [
-                                  _c("span", [_vm._v("$120.00")]),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "same-action",
+                                      attrs: { title: "Wishlist", href: "#" }
+                                    },
+                                    [_c("i", { staticClass: "fa fa-heart-o" })]
+                                  ),
                                   _vm._v(" "),
                                   _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [_vm._v("$172.00 ")]
+                                    "a",
+                                    {
+                                      staticClass: "action-cart",
+                                      attrs: { title: "Add To Cart", href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                      Add to Cart\n                    "
+                                      )
+                                    ]
                                   )
                                 ]
                               )
                             ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "product-action-wrapper-2 text-center"
-                            },
-                            [
-                              _c("div", { staticClass: "product-rating" }, [
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass: "ion-android-star-outline"
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("p", [
-                                _vm._v(
-                                  "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "product-action" }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                          Add to Cart\n                        "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action compare-mrg",
-                                    attrs: {
-                                      "data-target": "#exampleCompare",
-                                      "data-toggle": "modal",
-                                      title: "Compare",
-                                      href: "#"
-                                    }
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fa fa-sliders fa-rotate-90"
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]
                           )
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                    _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                      _c("div", { staticClass: "product-img" }, [
-                        _c("div", { staticClass: "product-img-slider" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-4.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-2.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-3.jpg",
-                                alt: ""
-                              }
-                            })
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "list-col" }, [
-                        _c("div", { staticClass: "gridview" }, [
-                          _c(
-                            "div",
-                            { staticClass: "product-content text-center" },
-                            [
-                              _c("span", [_vm._v("Speaker, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Full Bast Doule Speaker Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("$210.00")])]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "product-action-wrapper-2 text-center"
-                            },
-                            [
-                              _c("div", { staticClass: "product-rating" }, [
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass: "ion-android-star-outline"
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "best-selling-bundle" }, [
+                      _c(
+                        "div",
+                        { staticClass: "best-selling-pro-wrapper mb-20" },
+                        [
+                          _c("div", { staticClass: "product-img" }, [
+                            _c(
+                              "a",
+                              { attrs: { href: "product-details.html" } },
+                              [
+                                _c("img", {
+                                  attrs: {
+                                    alt: "",
+                                    src: "assets/img/product/best-selling-2.jpg"
+                                  }
                                 })
-                              ]),
-                              _vm._v(" "),
-                              _c("p", [
-                                _vm._v(
-                                  "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "product-action" }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                          Add to Cart\n                        "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action compare-mrg",
-                                    attrs: {
-                                      "data-target": "#exampleCompare",
-                                      "data-toggle": "modal",
-                                      title: "Compare",
-                                      href: "#"
-                                    }
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fa fa-sliders fa-rotate-90"
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]
-                          )
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                    _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                      _c("div", { staticClass: "product-img" }, [
-                        _c("div", { staticClass: "product-img-slider" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-5.jpg",
-                                alt: ""
-                              }
-                            })
+                              ]
+                            )
                           ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-2.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-3.jpg",
-                                alt: ""
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("span", [_vm._v("-29%")])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "list-col" }, [
-                        _c("div", { staticClass: "gridview" }, [
-                          _c(
-                            "div",
-                            { staticClass: "product-content text-center" },
-                            [
-                              _c("span", [_vm._v("Phone, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Awesome Smart Phone Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("$250.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [_vm._v("$300.00 ")]
-                                  )
-                                ]
-                              )
-                            ]
-                          ),
                           _vm._v(" "),
                           _c(
                             "div",
-                            {
-                              staticClass:
-                                "product-action-wrapper-2 text-center"
-                            },
-                            [
-                              _c("div", { staticClass: "product-rating" }, [
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass: "ion-android-star-outline"
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("p", [
-                                _vm._v(
-                                  "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "product-action" }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                          Add to Cart\n                        "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action compare-mrg",
-                                    attrs: {
-                                      "data-target": "#exampleCompare",
-                                      "data-toggle": "modal",
-                                      title: "Compare",
-                                      href: "#"
-                                    }
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fa fa-sliders fa-rotate-90"
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]
-                          )
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                    _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                      _c("div", { staticClass: "product-img" }, [
-                        _c("div", { staticClass: "product-img-slider" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-6.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-2.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-3.jpg",
-                                alt: ""
-                              }
-                            })
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "list-col" }, [
-                        _c("div", { staticClass: "gridview" }, [
-                          _c(
-                            "div",
-                            { staticClass: "product-content text-center" },
-                            [
-                              _c("span", [_vm._v("Tab, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Featured Tab Windows Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("$160.00")])]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "product-action-wrapper-2 text-center"
-                            },
-                            [
-                              _c("div", { staticClass: "product-rating" }, [
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass: "ion-android-star-outline"
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("p", [
-                                _vm._v(
-                                  "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "product-action" }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                          Add to Cart\n                        "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action compare-mrg",
-                                    attrs: {
-                                      "data-target": "#exampleCompare",
-                                      "data-toggle": "modal",
-                                      title: "Compare",
-                                      href: "#"
-                                    }
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fa fa-sliders fa-rotate-90"
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]
-                          )
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                    _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                      _c("div", { staticClass: "product-img" }, [
-                        _c("div", { staticClass: "product-img-slider" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-7.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-2.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-3.jpg",
-                                alt: ""
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("span", [_vm._v("-29%")])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "list-col" }, [
-                        _c("div", { staticClass: "gridview" }, [
-                          _c(
-                            "div",
-                            { staticClass: "product-content text-center" },
+                            { staticClass: "product-content best-pro-content" },
                             [
                               _c("span", [_vm._v("Watch, Accessories")]),
                               _vm._v(" "),
@@ -39103,4371 +45528,43 @@ var staticRenderFns = [
                               _c(
                                 "div",
                                 { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("$100.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [_vm._v("$150.00 ")]
-                                  )
-                                ]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "product-action-wrapper-2 text-center"
-                            },
-                            [
-                              _c("div", { staticClass: "product-rating" }, [
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass: "ion-android-star-outline"
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("p", [
-                                _vm._v(
-                                  "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "product-action" }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                          Add to Cart\n                        "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action compare-mrg",
-                                    attrs: {
-                                      "data-target": "#exampleCompare",
-                                      "data-toggle": "modal",
-                                      title: "Compare",
-                                      href: "#"
-                                    }
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fa fa-sliders fa-rotate-90"
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]
-                          )
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                    _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                      _c("div", { staticClass: "product-img" }, [
-                        _c("div", { staticClass: "product-img-slider" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-8.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-2.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-3.jpg",
-                                alt: ""
-                              }
-                            })
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "list-col" }, [
-                        _c("div", { staticClass: "gridview" }, [
-                          _c(
-                            "div",
-                            { staticClass: "product-content text-center" },
-                            [
-                              _c("span", [_vm._v("Headphone, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _vm._v(
-                                      "\n                          Nice White Headphone Ver 2018"
-                                    )
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("$500.00")])]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "product-action-wrapper-2 text-center"
-                            },
-                            [
-                              _c("div", { staticClass: "product-rating" }, [
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass: "ion-android-star-outline"
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("p", [
-                                _vm._v(
-                                  "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "product-action" }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                          Add to Cart\n                        "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action compare-mrg",
-                                    attrs: {
-                                      "data-target": "#exampleCompare",
-                                      "data-toggle": "modal",
-                                      title: "Compare",
-                                      href: "#"
-                                    }
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fa fa-sliders fa-rotate-90"
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]
-                          )
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                    _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                      _c("div", { staticClass: "product-img" }, [
-                        _c("div", { staticClass: "product-img-slider" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-9.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-2.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-3.jpg",
-                                alt: ""
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("span", [_vm._v("-29%")])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "list-col" }, [
-                        _c("div", { staticClass: "gridview" }, [
-                          _c(
-                            "div",
-                            { staticClass: "product-content text-center" },
-                            [
-                              _c("span", [_vm._v("Phone, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Awesome Smart Phone Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("$180.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [_vm._v("$200.00 ")]
-                                  )
-                                ]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "product-action-wrapper-2 text-center"
-                            },
-                            [
-                              _c("div", { staticClass: "product-rating" }, [
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass: "ion-android-star-outline"
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("p", [
-                                _vm._v(
-                                  "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "product-action" }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                          Add to Cart\n                        "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action compare-mrg",
-                                    attrs: {
-                                      "data-target": "#exampleCompare",
-                                      "data-toggle": "modal",
-                                      title: "Compare",
-                                      href: "#"
-                                    }
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fa fa-sliders fa-rotate-90"
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]
-                          )
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                    _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                      _c("div", { staticClass: "product-img" }, [
-                        _c("div", { staticClass: "product-img-slider" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-10.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-2.jpg",
-                                alt: ""
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                src: "assets/img/product/product-3.jpg",
-                                alt: ""
-                              }
-                            })
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "list-col" }, [
-                        _c("div", { staticClass: "gridview" }, [
-                          _c(
-                            "div",
-                            { staticClass: "product-content text-center" },
-                            [
-                              _c("span", [_vm._v("Desktop, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Maxclon Desktop C27F5 Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
                                 [_c("span", [_vm._v("$260.00")])]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "product-action best-pro-action"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "same-action",
+                                      attrs: { title: "Wishlist", href: "#" }
+                                    },
+                                    [_c("i", { staticClass: "fa fa-heart-o" })]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "action-cart",
+                                      attrs: { title: "Add To Cart", href: "#" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                      Add to Cart\n                    "
+                                      )
+                                    ]
+                                  )
+                                ]
                               )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "product-action-wrapper-2 text-center"
-                            },
-                            [
-                              _c("div", { staticClass: "product-rating" }, [
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "ion-android-star-outline theme-star"
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass: "ion-android-star-outline"
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("p", [
-                                _vm._v(
-                                  "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "product-action" }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                          Add to Cart\n                        "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action compare-mrg",
-                                    attrs: {
-                                      "data-target": "#exampleCompare",
-                                      "data-toggle": "modal",
-                                      title: "Compare",
-                                      href: "#"
-                                    }
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fa fa-sliders fa-rotate-90"
-                                    })
-                                  ]
-                                )
-                              ])
                             ]
                           )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "tab-pane", attrs: { id: "home2" } }, [
-              _c("div", { staticClass: "custom-row" }, [
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-10.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
+                        ]
+                      ),
                       _vm._v(" "),
-                      _c("span", [_vm._v("-29%")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Desktop, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Maxclon Desktop C27F5 Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$260.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [_vm._v("$162.00 ")]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-9.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-1.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Phone, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Awesome Smart Phone Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$200.00")])]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-8.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("-29%")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Headphone, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "\n                          Nice White Headphone Ver 2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$120.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [_vm._v("$172.00 ")]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-7.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Demoniss Glorior Watch Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$210.00")])]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-6.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("-29%")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Tab, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Featured Tab Windows Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$250.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [_vm._v("$300.00 ")]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-5.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Phone, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Awesome Smart Phone Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$160.00")])]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-4.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("-29%")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Speaker, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Full Bast Doule Speaker Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$100.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [_vm._v("$150.00 ")]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Speaker, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Full Bast Doule Speaker Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$500.00")])]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("-29%")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Phone, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Awesome Smart Phone Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$180.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [_vm._v("$200.00 ")]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-1.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Remote, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Phantom Remote Control Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$260.00")])]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "tab-pane", attrs: { id: "home3" } }, [
-              _c("div", { staticClass: "custom-row" }, [
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-5.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("-29%")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Phone, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Featured Tab Windows Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$260.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [_vm._v("$162.00 ")]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-4.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-1.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Speaker, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Demoniss Glorior Watch Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$200.00")])]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("-29%")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Speaker, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "\n                          Nice White Headphone Ver 2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$120.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [_vm._v("$172.00 ")]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Phone, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Awesome Smart Phone Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$210.00")])]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-1.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("-29%")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Remote, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Phantom Remote Control Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$250.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [_vm._v("$300.00 ")]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-10.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Desktop, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Maxclon Desktop C27F5 Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$160.00")])]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-9.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("-29%")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Phone, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Awesome Smart Phone Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$100.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [_vm._v("$150.00 ")]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-7.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "\n                          Demoniss Glorior Watch Ver 2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$500.00")])]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-8.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("-29%")])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Headphone, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "\n                          Nice White Headphone Ver 2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$180.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [_vm._v("$200.00 ")]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "custom-col-5 mb-30" }, [
-                  _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
-                    _c("div", { staticClass: "product-img" }, [
-                      _c("div", { staticClass: "product-img-slider" }, [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-6.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-2.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _c("img", {
-                            attrs: {
-                              src: "assets/img/product/product-3.jpg",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "list-col" }, [
-                      _c("div", { staticClass: "gridview" }, [
-                        _c(
-                          "div",
-                          { staticClass: "product-content text-center" },
-                          [
-                            _c("span", [_vm._v("Tab, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Featured Tab Windows Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$260.00")])]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "product-action-wrapper-2 text-center"
-                          },
-                          [
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                      "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { title: "Wishlist", href: "#" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { title: "Add To Cart", href: "#" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                          Add to Cart\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    "data-target": "#exampleCompare",
-                                    "data-toggle": "modal",
-                                    title: "Compare",
-                                    href: "#"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "connect-area bg-img pt-120 pb-125",
-          staticStyle: {
-            "background-image": "url(assets/img/banner/banner-3.jpg)"
-          }
-        },
-        [
-          _c("div", { staticClass: "container" }, [
-            _c("div", { staticClass: "connect-content" }, [
-              _c("h2", [
-                _vm._v("Stay Connected When You’re Away "),
-                _c("br"),
-                _vm._v("From Your Phone")
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n          Start the year off strong and explore how to track your activities,\n          health, and fitness with Apple Watch and iPhone.\n        "
-                )
-              ]),
-              _vm._v(" "),
-              _c("h4", [_vm._v("$128.99")]),
-              _vm._v(" "),
-              _c("a", { staticClass: "btn-style-2", attrs: { href: "#" } }, [
-                _vm._v("Discover Now")
-              ])
-            ])
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "best-selling-area pt-60 pb-45 gray-bg best-selling-small"
-        },
-        [
-          _c("div", { staticClass: "container" }, [
-            _c("div", { staticClass: "top-bar section-border mb-20" }, [
-              _c(
-                "div",
-                { staticClass: "section-title-wrapper section-bg-gray" },
-                [
-                  _c("h4", { staticClass: "section-title" }, [
-                    _vm._v("Best Selling Products")
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "product-tab-list-2 nav section-bg-gray" },
-                [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "active",
-                      attrs: { href: "#home4", "data-bs-toggle": "tab" }
-                    },
-                    [_c("h4", [_vm._v("Smart Phones & Tablets")])]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    { attrs: { href: "#home5", "data-bs-toggle": "tab" } },
-                    [_c("h4", [_vm._v("Laptops & Computers")])]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    { attrs: { href: "#home6", "data-bs-toggle": "tab" } },
-                    [_c("h4", [_vm._v("Video Cameras")])]
-                  )
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "tab-content jump" }, [
-              _c(
-                "div",
-                { staticClass: "tab-pane active", attrs: { id: "home4" } },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "best-selling-active nav-style owl-carousel"
-                    },
-                    [
-                      _c("div", { staticClass: "best-selling-bundle" }, [
-                        _c(
-                          "div",
-                          { staticClass: "best-selling-pro-wrapper mb-20" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      alt: "",
-                                      src:
-                                        "assets/img/product/best-selling-1.jpg"
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-10%")])
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "product-content best-pro-content"
-                              },
-                              [
-                                _c("span", [_vm._v("Joy Stick, Accessories")]),
-                                _vm._v(" "),
-                                _c("h4", [
-                                  _c(
-                                    "a",
-                                    { attrs: { href: "product-details.html" } },
-                                    [_vm._v("Phantom Remote Control Ver 2018")]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "product-price-wrapper" },
-                                  [
-                                    _c("span", [_vm._v("$260.00")]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "product-price-old" },
-                                      [_vm._v("$162.00 ")]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action best-pro-action"
-                                  },
-                                  [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "same-action",
-                                        attrs: { title: "Wishlist", href: "#" }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "fa fa-heart-o"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "action-cart",
-                                        attrs: {
-                                          title: "Add To Cart",
-                                          href: "#"
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                      Add to Cart\n                    "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "best-selling-pro-wrapper mb-20" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      alt: "",
-                                      src:
-                                        "assets/img/product/best-selling-4.jpg"
-                                    }
-                                  })
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "product-content best-pro-content"
-                              },
-                              [
-                                _c("span", [_vm._v("Phone, Accessories")]),
-                                _vm._v(" "),
-                                _c("h4", [
-                                  _c(
-                                    "a",
-                                    { attrs: { href: "product-details.html" } },
-                                    [_vm._v("Awesome Smart Phone Ver 2018")]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "product-price-wrapper" },
-                                  [_c("span", [_vm._v("$260.00")])]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action best-pro-action"
-                                  },
-                                  [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "same-action",
-                                        attrs: { title: "Wishlist", href: "#" }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "fa fa-heart-o"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "action-cart",
-                                        attrs: {
-                                          title: "Add To Cart",
-                                          href: "#"
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                      Add to Cart\n                    "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "best-selling-bundle" }, [
-                        _c(
-                          "div",
-                          { staticClass: "best-selling-pro-wrapper mb-20" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      alt: "",
-                                      src:
-                                        "assets/img/product/best-selling-2.jpg"
-                                    }
-                                  })
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "product-content best-pro-content"
-                              },
-                              [
-                                _c("span", [_vm._v("Watch, Accessories")]),
-                                _vm._v(" "),
-                                _c("h4", [
-                                  _c(
-                                    "a",
-                                    { attrs: { href: "product-details.html" } },
-                                    [_vm._v("Demoniss Glorior Watch Ver 2018")]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "product-price-wrapper" },
-                                  [_c("span", [_vm._v("$260.00")])]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action best-pro-action"
-                                  },
-                                  [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "same-action",
-                                        attrs: { title: "Wishlist", href: "#" }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "fa fa-heart-o"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "action-cart",
-                                        attrs: {
-                                          title: "Add To Cart",
-                                          href: "#"
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                      Add to Cart\n                    "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "best-selling-pro-wrapper mb-20" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      alt: "",
-                                      src:
-                                        "assets/img/product/best-selling-5.jpg"
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-15%")])
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "product-content best-pro-content"
-                              },
-                              [
-                                _c("span", [_vm._v("Tab, Accessories")]),
-                                _vm._v(" "),
-                                _c("h4", [
-                                  _c(
-                                    "a",
-                                    { attrs: { href: "product-details.html" } },
-                                    [_vm._v("Featured Demoniss Tab Ver 2018")]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "product-price-wrapper" },
-                                  [
-                                    _c("span", [_vm._v("$150.00")]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "product-price-old" },
-                                      [_vm._v("$200.00 ")]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action best-pro-action"
-                                  },
-                                  [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "same-action",
-                                        attrs: { title: "Wishlist", href: "#" }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "fa fa-heart-o"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "action-cart",
-                                        attrs: {
-                                          title: "Add To Cart",
-                                          href: "#"
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                      Add to Cart\n                    "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "best-selling-bundle" }, [
-                        _c(
-                          "div",
-                          { staticClass: "best-selling-pro-wrapper mb-20" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      alt: "",
-                                      src:
-                                        "assets/img/product/best-selling-3.jpg"
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-20%")])
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "product-content best-pro-content"
-                              },
-                              [
-                                _c("span", [_vm._v("Watch, Accessories")]),
-                                _vm._v(" "),
-                                _c("h4", [
-                                  _c(
-                                    "a",
-                                    { attrs: { href: "product-details.html" } },
-                                    [_vm._v("Maxclone Glorior Watch Ver 2018")]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "product-price-wrapper" },
-                                  [
-                                    _c("span", [_vm._v("$120.00")]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "product-price-old" },
-                                      [_vm._v("$110.00 ")]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action best-pro-action"
-                                  },
-                                  [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "same-action",
-                                        attrs: { title: "Wishlist", href: "#" }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "fa fa-heart-o"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "action-cart",
-                                        attrs: {
-                                          title: "Add To Cart",
-                                          href: "#"
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                      Add to Cart\n                    "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "best-selling-pro-wrapper mb-20" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      alt: "",
-                                      src:
-                                        "assets/img/product/best-selling-6.jpg"
-                                    }
-                                  })
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "product-content best-pro-content"
-                              },
-                              [
-                                _c("span", [_vm._v("Phone, Accessories")]),
-                                _vm._v(" "),
-                                _c("h4", [
-                                  _c(
-                                    "a",
-                                    { attrs: { href: "product-details.html" } },
-                                    [_vm._v("Awesome Smart Phone Ver 2018")]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "product-price-wrapper" },
-                                  [_c("span", [_vm._v("$260.00")])]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action best-pro-action"
-                                  },
-                                  [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "same-action",
-                                        attrs: { title: "Wishlist", href: "#" }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "fa fa-heart-o"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "action-cart",
-                                        attrs: {
-                                          title: "Add To Cart",
-                                          href: "#"
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                      Add to Cart\n                    "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "best-selling-bundle" }, [
-                        _c(
-                          "div",
-                          { staticClass: "best-selling-pro-wrapper mb-20" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      alt: "",
-                                      src:
-                                        "assets/img/product/best-selling-2.jpg"
-                                    }
-                                  })
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "product-content best-pro-content"
-                              },
-                              [
-                                _c("span", [_vm._v("Watch, Accessories")]),
-                                _vm._v(" "),
-                                _c("h4", [
-                                  _c(
-                                    "a",
-                                    { attrs: { href: "product-details.html" } },
-                                    [_vm._v("Phantom Remote Control Ver 2018")]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "product-price-wrapper" },
-                                  [
-                                    _c("span", [_vm._v("$260.00")]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "product-price-old" },
-                                      [_vm._v("$162.00 ")]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action best-pro-action"
-                                  },
-                                  [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "same-action",
-                                        attrs: { title: "Wishlist", href: "#" }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "fa fa-heart-o"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "action-cart",
-                                        attrs: {
-                                          title: "Add To Cart",
-                                          href: "#"
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                      Add to Cart\n                    "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "best-selling-pro-wrapper mb-20" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      alt: "",
-                                      src:
-                                        "assets/img/product/best-selling-5.jpg"
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-10%")])
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "product-content best-pro-content"
-                              },
-                              [
-                                _c("span", [_vm._v("Tab, Accessories")]),
-                                _vm._v(" "),
-                                _c("h4", [
-                                  _c(
-                                    "a",
-                                    { attrs: { href: "product-details.html" } },
-                                    [_vm._v("Phantom Remote Control Ver 2018")]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "product-price-wrapper" },
-                                  [
-                                    _c("span", [_vm._v("$260.00")]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "product-price-old" },
-                                      [_vm._v("$162.00 ")]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action best-pro-action"
-                                  },
-                                  [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "same-action",
-                                        attrs: { title: "Wishlist", href: "#" }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "fa fa-heart-o"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "action-cart",
-                                        attrs: {
-                                          title: "Add To Cart",
-                                          href: "#"
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                      Add to Cart\n                    "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "tab-pane", attrs: { id: "home5" } }, [
-                _c(
-                  "div",
-                  { staticClass: "best-selling-active nav-style owl-carousel" },
-                  [
-                    _c("div", { staticClass: "best-selling-bundle" }, [
                       _c(
                         "div",
                         { staticClass: "best-selling-pro-wrapper mb-20" },
@@ -43486,7 +45583,7 @@ var staticRenderFns = [
                               ]
                             ),
                             _vm._v(" "),
-                            _c("span", [_vm._v("-10%")])
+                            _c("span", [_vm._v("-15%")])
                           ]),
                           _vm._v(" "),
                           _c(
@@ -43507,243 +45604,12 @@ var staticRenderFns = [
                                 "div",
                                 { staticClass: "product-price-wrapper" },
                                 [
-                                  _c("span", [_vm._v("$260.00")]),
+                                  _c("span", [_vm._v("$150.00")]),
                                   _vm._v(" "),
                                   _c(
                                     "span",
                                     { staticClass: "product-price-old" },
-                                    [_vm._v("$162.00 ")]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                      Add to Cart\n                    "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-6.jpg"
-                                  }
-                                })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Phone, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Awesome Smart Phone Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("$200.00")])]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                      Add to Cart\n                    "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "best-selling-bundle" }, [
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-1.jpg"
-                                  }
-                                })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Joy Stick, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Phantom Remote Control Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("$250.00")])]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                      Add to Cart\n                    "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-2.jpg"
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", [_vm._v("-15%")])
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Watch, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Demoniss Glorior Watch Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("$300.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [_vm._v("$350.00 ")]
+                                    [_vm._v("$200.00 ")]
                                   )
                                 ]
                               ),
@@ -43796,7 +45662,7 @@ var staticRenderFns = [
                                 _c("img", {
                                   attrs: {
                                     alt: "",
-                                    src: "assets/img/product/best-selling-2.jpg"
+                                    src: "assets/img/product/best-selling-3.jpg"
                                   }
                                 })
                               ]
@@ -43816,569 +45682,6 @@ var staticRenderFns = [
                                   "a",
                                   { attrs: { href: "product-details.html" } },
                                   [_vm._v("Maxclone Glorior Watch Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("$140.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [_vm._v("$100.00 ")]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                      Add to Cart\n                    "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-3.jpg"
-                                  }
-                                })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Watch, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Demoniss Glorior Watch Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("$260.00")])]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                      Add to Cart\n                    "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "best-selling-bundle" }, [
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-2.jpg"
-                                  }
-                                })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Watch, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Phantom Remote Control Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("$260.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [_vm._v("$162.00 ")]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                      Add to Cart\n                    "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-5.jpg"
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", [_vm._v("-10%")])
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Watch, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Phantom Remote Control Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("$260.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [_vm._v("$162.00 ")]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                      Add to Cart\n                    "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "tab-pane", attrs: { id: "home6" } }, [
-                _c(
-                  "div",
-                  { staticClass: "best-selling-active nav-style owl-carousel" },
-                  [
-                    _c("div", { staticClass: "best-selling-bundle" }, [
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-4.jpg"
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", [_vm._v("-10%")])
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Phone, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Awesome Smart Phone Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("$260.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [_vm._v("$162.00 ")]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                      Add to Cart\n                    "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-1.jpg"
-                                  }
-                                })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Joy Stick, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Phantom Remote Control Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("$260.00")])]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                      Add to Cart\n                    "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "best-selling-bundle" }, [
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-5.jpg"
-                                  }
-                                })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Tab, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Featured Demoniss Tab Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("$270.00")])]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                      Add to Cart\n                    "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-2.jpg"
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", [_vm._v("-15%")])
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Watch, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Demoniss Glorior Watch Ver 2018")]
                                 )
                               ]),
                               _vm._v(" "),
@@ -44428,10 +45731,8 @@ var staticRenderFns = [
                             ]
                           )
                         ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "best-selling-bundle" }, [
+                      ),
+                      _vm._v(" "),
                       _c(
                         "div",
                         { staticClass: "best-selling-pro-wrapper mb-20" },
@@ -44448,9 +45749,7 @@ var staticRenderFns = [
                                   }
                                 })
                               ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", [_vm._v("-20%")])
+                            )
                           ]),
                           _vm._v(" "),
                           _c(
@@ -44464,87 +45763,6 @@ var staticRenderFns = [
                                   "a",
                                   { attrs: { href: "product-details.html" } },
                                   [_vm._v("Awesome Smart Phone Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("$290.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [_vm._v("$300.00 ")]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                      Add to Cart\n                    "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-3.jpg"
-                                  }
-                                })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Watch, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Maxclone Glorior Watch Ver 2018")]
                                 )
                               ]),
                               _vm._v(" "),
@@ -44756,680 +45974,1884 @@ var staticRenderFns = [
                     ])
                   ]
                 )
-              ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "tab-pane", attrs: { id: "home5" } }, [
+              _c(
+                "div",
+                { staticClass: "best-selling-active nav-style owl-carousel" },
+                [
+                  _c("div", { staticClass: "best-selling-bundle" }, [
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-5.jpg"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v("-10%")])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Tab, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Featured Demoniss Tab Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$260.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$162.00 ")]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-6.jpg"
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Phone, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Awesome Smart Phone Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [_c("span", [_vm._v("$200.00")])]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "best-selling-bundle" }, [
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-1.jpg"
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Joy Stick, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Phantom Remote Control Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [_c("span", [_vm._v("$250.00")])]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-2.jpg"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v("-15%")])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Watch, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Demoniss Glorior Watch Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$300.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$350.00 ")]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "best-selling-bundle" }, [
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-2.jpg"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v("-20%")])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Watch, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Maxclone Glorior Watch Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$140.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$100.00 ")]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-3.jpg"
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Watch, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Demoniss Glorior Watch Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [_c("span", [_vm._v("$260.00")])]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "best-selling-bundle" }, [
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-2.jpg"
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Watch, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Phantom Remote Control Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$260.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$162.00 ")]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-5.jpg"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v("-10%")])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Watch, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Phantom Remote Control Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$260.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$162.00 ")]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "tab-pane", attrs: { id: "home6" } }, [
+              _c(
+                "div",
+                { staticClass: "best-selling-active nav-style owl-carousel" },
+                [
+                  _c("div", { staticClass: "best-selling-bundle" }, [
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-4.jpg"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v("-10%")])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Phone, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Awesome Smart Phone Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$260.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$162.00 ")]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-1.jpg"
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Joy Stick, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Phantom Remote Control Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [_c("span", [_vm._v("$260.00")])]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "best-selling-bundle" }, [
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-5.jpg"
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Tab, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Featured Demoniss Tab Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [_c("span", [_vm._v("$270.00")])]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-2.jpg"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v("-15%")])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Watch, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Demoniss Glorior Watch Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$120.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$110.00 ")]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "best-selling-bundle" }, [
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-6.jpg"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v("-20%")])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Phone, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Awesome Smart Phone Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$290.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$300.00 ")]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-3.jpg"
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Watch, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Maxclone Glorior Watch Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [_c("span", [_vm._v("$260.00")])]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "best-selling-bundle" }, [
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-2.jpg"
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Watch, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Phantom Remote Control Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$260.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$162.00 ")]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "best-selling-pro-wrapper mb-20" },
+                      [
+                        _c("div", { staticClass: "product-img" }, [
+                          _c("a", { attrs: { href: "product-details.html" } }, [
+                            _c("img", {
+                              attrs: {
+                                alt: "",
+                                src: "assets/img/product/best-selling-5.jpg"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v("-10%")])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "product-content best-pro-content" },
+                          [
+                            _c("span", [_vm._v("Tab, Accessories")]),
+                            _vm._v(" "),
+                            _c("h4", [
+                              _c(
+                                "a",
+                                { attrs: { href: "product-details.html" } },
+                                [_vm._v("Phantom Remote Control Ver 2018")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-price-wrapper" },
+                              [
+                                _c("span", [_vm._v("$260.00")]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "product-price-old" },
+                                  [_vm._v("$162.00 ")]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "product-action best-pro-action" },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "same-action",
+                                    attrs: { title: "Wishlist", href: "#" }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-heart-o" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "action-cart",
+                                    attrs: { title: "Add To Cart", href: "#" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                      Add to Cart\n                    "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
             ])
           ])
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "product-area pt-60 pb-45" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "section-border mb-10" }, [
-            _c("h4", { staticClass: "section-title section-bg-white" }, [
-              _vm._v("Top Headphones")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "product-slider-nav nav-style" }),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "headphone-slider-active owl-carousel product-slider"
-            },
-            [
-              _c("div", { staticClass: "devita-product-2" }, [
-                _c("div", { staticClass: "product-img" }, [
-                  _c("a", { attrs: { href: "product-details.html" } }, [
-                    _c("img", {
-                      attrs: {
-                        src: "assets/img/product/headphone-1.jpg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "list-col" }, [
-                  _c("div", { staticClass: "gridview" }, [
-                    _c("div", { staticClass: "product-content text-center" }, [
-                      _c("span", [_vm._v("Headphone, Accessories")]),
-                      _vm._v(" "),
-                      _c("h4", [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _vm._v(
-                            "Matrior white Headphone Ver 2018\n                  "
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-price-wrapper" }, [
-                        _c("span", [_vm._v("$260.00")])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "product-action-wrapper-2 text-center" },
-                      [
-                        _c("div", { staticClass: "product-rating" }, [
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "ion-android-star-outline" })
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "product-action" }, [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action",
-                              attrs: { title: "Wishlist", href: "#" }
-                            },
-                            [_c("i", { staticClass: "fa fa-heart-o" })]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "action-cart",
-                              attrs: { title: "Add To Cart", href: "#" }
-                            },
-                            [
-                              _vm._v(
-                                "\n                    Add to Cart\n                  "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action compare-mrg",
-                              attrs: {
-                                "data-target": "#exampleCompare",
-                                "data-toggle": "modal",
-                                title: "Compare",
-                                href: "#"
-                              }
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "fa fa-sliders fa-rotate-90"
-                              })
-                            ]
-                          )
-                        ])
-                      ]
-                    )
-                  ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "product-area pt-60 pb-45" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "section-border mb-10" }, [
+          _c("h4", { staticClass: "section-title section-bg-white" }, [
+            _vm._v("Top Headphones")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "product-slider-nav nav-style" }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "headphone-slider-active owl-carousel product-slider"
+          },
+          [
+            _c("div", { staticClass: "devita-product-2" }, [
+              _c("div", { staticClass: "product-img" }, [
+                _c("a", { attrs: { href: "product-details.html" } }, [
+                  _c("img", {
+                    attrs: {
+                      src: "assets/img/product/headphone-1.jpg",
+                      alt: ""
+                    }
+                  })
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "devita-product-2" }, [
-                _c("div", { staticClass: "product-img" }, [
-                  _c("a", { attrs: { href: "product-details.html" } }, [
-                    _c("img", {
-                      attrs: {
-                        src: "assets/img/product/headphone-2.jpg",
-                        alt: ""
-                      }
-                    })
+              _c("div", { staticClass: "list-col" }, [
+                _c("div", { staticClass: "gridview" }, [
+                  _c("div", { staticClass: "product-content text-center" }, [
+                    _c("span", [_vm._v("Headphone, Accessories")]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _vm._v(
+                          "Matrior white Headphone Ver 2018\n                  "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product-price-wrapper" }, [
+                      _c("span", [_vm._v("$260.00")])
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c("span", [_vm._v("-30%")])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "list-col" }, [
-                  _c("div", { staticClass: "gridview" }, [
-                    _c("div", { staticClass: "product-content text-center" }, [
-                      _c("span", [_vm._v("Headphone, Accessories")]),
-                      _vm._v(" "),
-                      _c("h4", [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _vm._v("Matrior black Headphone Ver 2018")
-                        ])
+                  _c(
+                    "div",
+                    { staticClass: "product-action-wrapper-2 text-center" },
+                    [
+                      _c("div", { staticClass: "product-rating" }, [
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "ion-android-star-outline" })
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "product-price-wrapper" }, [
-                        _c("span", [_vm._v("$260.00")]),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "product-price-old" }, [
-                          _vm._v("$162.00 ")
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "product-action-wrapper-2 text-center" },
-                      [
-                        _c("div", { staticClass: "product-rating" }, [
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "ion-android-star-outline" })
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "product-action" }, [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action",
-                              attrs: { title: "Wishlist", href: "#" }
-                            },
-                            [_c("i", { staticClass: "fa fa-heart-o" })]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "action-cart",
-                              attrs: { title: "Add To Cart", href: "#" }
-                            },
-                            [
-                              _vm._v(
-                                "\n                    Add to Cart\n                  "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action compare-mrg",
-                              attrs: {
-                                "data-target": "#exampleCompare",
-                                "data-toggle": "modal",
-                                title: "Compare",
-                                href: "#"
-                              }
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "fa fa-sliders fa-rotate-90"
-                              })
-                            ]
-                          )
-                        ])
-                      ]
-                    )
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "devita-product-2" }, [
-                _c("div", { staticClass: "product-img" }, [
-                  _c("a", { attrs: { href: "product-details.html" } }, [
-                    _c("img", {
-                      attrs: {
-                        src: "assets/img/product/headphone-3.jpg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "list-col" }, [
-                  _c("div", { staticClass: "gridview" }, [
-                    _c("div", { staticClass: "product-content text-center" }, [
-                      _c("span", [_vm._v("Headphone, Accessories")]),
-                      _vm._v(" "),
-                      _c("h4", [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _vm._v("Matrior blue Headphone Ver 2018")
-                        ])
+                      _c("p", [
+                        _vm._v(
+                          "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
+                        )
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "product-price-wrapper" }, [
-                        _c("span", [_vm._v("$300.00")])
+                      _c("div", { staticClass: "product-action" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action",
+                            attrs: { title: "Wishlist", href: "#" }
+                          },
+                          [_c("i", { staticClass: "fa fa-heart-o" })]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "action-cart",
+                            attrs: { title: "Add To Cart", href: "#" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                    Add to Cart\n                  "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action compare-mrg",
+                            attrs: {
+                              "data-target": "#exampleCompare",
+                              "data-toggle": "modal",
+                              title: "Compare",
+                              href: "#"
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-sliders fa-rotate-90"
+                            })
+                          ]
+                        )
                       ])
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "product-action-wrapper-2 text-center" },
-                      [
-                        _c("div", { staticClass: "product-rating" }, [
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "ion-android-star-outline" })
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "product-action" }, [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action",
-                              attrs: { title: "Wishlist", href: "#" }
-                            },
-                            [_c("i", { staticClass: "fa fa-heart-o" })]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "action-cart",
-                              attrs: { title: "Add To Cart", href: "#" }
-                            },
-                            [
-                              _vm._v(
-                                "\n                    Add to Cart\n                  "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action compare-mrg",
-                              attrs: {
-                                "data-target": "#exampleCompare",
-                                "data-toggle": "modal",
-                                title: "Compare",
-                                href: "#"
-                              }
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "fa fa-sliders fa-rotate-90"
-                              })
-                            ]
-                          )
-                        ])
-                      ]
-                    )
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "devita-product-2" }, [
-                _c("div", { staticClass: "product-img" }, [
-                  _c("a", { attrs: { href: "product-details.html" } }, [
-                    _c("img", {
-                      attrs: {
-                        src: "assets/img/product/headphone-4.jpg",
-                        alt: ""
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("-10%")])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "list-col" }, [
-                  _c("div", { staticClass: "gridview" }, [
-                    _c("div", { staticClass: "product-content text-center" }, [
-                      _c("span", [_vm._v("Headphone, Accessories")]),
-                      _vm._v(" "),
-                      _c("h4", [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _vm._v("Matrior black Headphone Ver 2018")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-price-wrapper" }, [
-                        _c("span", [_vm._v("$120.00")]),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "product-price-old" }, [
-                          _vm._v("$150.00 ")
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "product-action-wrapper-2 text-center" },
-                      [
-                        _c("div", { staticClass: "product-rating" }, [
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "ion-android-star-outline" })
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "product-action" }, [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action",
-                              attrs: { title: "Wishlist", href: "#" }
-                            },
-                            [_c("i", { staticClass: "fa fa-heart-o" })]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "action-cart",
-                              attrs: { title: "Add To Cart", href: "#" }
-                            },
-                            [
-                              _vm._v(
-                                "\n                    Add to Cart\n                  "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action compare-mrg",
-                              attrs: {
-                                "data-target": "#exampleCompare",
-                                "data-toggle": "modal",
-                                title: "Compare",
-                                href: "#"
-                              }
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "fa fa-sliders fa-rotate-90"
-                              })
-                            ]
-                          )
-                        ])
-                      ]
-                    )
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "devita-product-2" }, [
-                _c("div", { staticClass: "product-img" }, [
-                  _c("a", { attrs: { href: "product-details.html" } }, [
-                    _c("img", {
-                      attrs: {
-                        src: "assets/img/product/headphone-5.jpg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "list-col" }, [
-                  _c("div", { staticClass: "gridview" }, [
-                    _c("div", { staticClass: "product-content text-center" }, [
-                      _c("span", [_vm._v("Headphone, Accessories")]),
-                      _vm._v(" "),
-                      _c("h4", [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _vm._v("Matrior white Headphone Ver 2018")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-price-wrapper" }, [
-                        _c("span", [_vm._v("$190.00")])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "product-action-wrapper-2 text-center" },
-                      [
-                        _c("div", { staticClass: "product-rating" }, [
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "ion-android-star-outline" })
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "product-action" }, [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action",
-                              attrs: { title: "Wishlist", href: "#" }
-                            },
-                            [_c("i", { staticClass: "fa fa-heart-o" })]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "action-cart",
-                              attrs: { title: "Add To Cart", href: "#" }
-                            },
-                            [
-                              _vm._v(
-                                "\n                    Add to Cart\n                  "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action compare-mrg",
-                              attrs: {
-                                "data-target": "#exampleCompare",
-                                "data-toggle": "modal",
-                                title: "Compare",
-                                href: "#"
-                              }
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "fa fa-sliders fa-rotate-90"
-                              })
-                            ]
-                          )
-                        ])
-                      ]
-                    )
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "devita-product-2" }, [
-                _c("div", { staticClass: "product-img" }, [
-                  _c("a", { attrs: { href: "product-details.html" } }, [
-                    _c("img", {
-                      attrs: {
-                        src: "assets/img/product/headphone-2.jpg",
-                        alt: ""
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("-15%")])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "list-col" }, [
-                  _c("div", { staticClass: "gridview" }, [
-                    _c("div", { staticClass: "product-content text-center" }, [
-                      _c("span", [_vm._v("Headphone, Accessories")]),
-                      _vm._v(" "),
-                      _c("h4", [
-                        _c("a", { attrs: { href: "product-details.html" } }, [
-                          _vm._v("Matrior black Headphone Ver 2018")
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-price-wrapper" }, [
-                        _c("span", [_vm._v("$260.00")]),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "product-price-old" }, [
-                          _vm._v("$162.00 ")
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "product-action-wrapper-2 text-center" },
-                      [
-                        _c("div", { staticClass: "product-rating" }, [
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", {
-                            staticClass: "ion-android-star-outline theme-star"
-                          }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "ion-android-star-outline" })
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "product-action" }, [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action",
-                              attrs: { title: "Wishlist", href: "#" }
-                            },
-                            [_c("i", { staticClass: "fa fa-heart-o" })]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "action-cart",
-                              attrs: { title: "Add To Cart", href: "#" }
-                            },
-                            [
-                              _vm._v(
-                                "\n                    Add to Cart\n                  "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              staticClass: "same-action compare-mrg",
-                              attrs: {
-                                "data-target": "#exampleCompare",
-                                "data-toggle": "modal",
-                                title: "Compare",
-                                href: "#"
-                              }
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "fa fa-sliders fa-rotate-90"
-                              })
-                            ]
-                          )
-                        ])
-                      ]
-                    )
-                  ])
+                    ]
+                  )
                 ])
               ])
-            ]
-          )
-        ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "devita-product-2" }, [
+              _c("div", { staticClass: "product-img" }, [
+                _c("a", { attrs: { href: "product-details.html" } }, [
+                  _c("img", {
+                    attrs: {
+                      src: "assets/img/product/headphone-2.jpg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("span", [_vm._v("-30%")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "list-col" }, [
+                _c("div", { staticClass: "gridview" }, [
+                  _c("div", { staticClass: "product-content text-center" }, [
+                    _c("span", [_vm._v("Headphone, Accessories")]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _vm._v("Matrior black Headphone Ver 2018")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product-price-wrapper" }, [
+                      _c("span", [_vm._v("$260.00")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "product-price-old" }, [
+                        _vm._v("$162.00 ")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "product-action-wrapper-2 text-center" },
+                    [
+                      _c("div", { staticClass: "product-rating" }, [
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "ion-android-star-outline" })
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "product-action" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action",
+                            attrs: { title: "Wishlist", href: "#" }
+                          },
+                          [_c("i", { staticClass: "fa fa-heart-o" })]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "action-cart",
+                            attrs: { title: "Add To Cart", href: "#" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                    Add to Cart\n                  "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action compare-mrg",
+                            attrs: {
+                              "data-target": "#exampleCompare",
+                              "data-toggle": "modal",
+                              title: "Compare",
+                              href: "#"
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-sliders fa-rotate-90"
+                            })
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "devita-product-2" }, [
+              _c("div", { staticClass: "product-img" }, [
+                _c("a", { attrs: { href: "product-details.html" } }, [
+                  _c("img", {
+                    attrs: {
+                      src: "assets/img/product/headphone-3.jpg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "list-col" }, [
+                _c("div", { staticClass: "gridview" }, [
+                  _c("div", { staticClass: "product-content text-center" }, [
+                    _c("span", [_vm._v("Headphone, Accessories")]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _vm._v("Matrior blue Headphone Ver 2018")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product-price-wrapper" }, [
+                      _c("span", [_vm._v("$300.00")])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "product-action-wrapper-2 text-center" },
+                    [
+                      _c("div", { staticClass: "product-rating" }, [
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "ion-android-star-outline" })
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "product-action" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action",
+                            attrs: { title: "Wishlist", href: "#" }
+                          },
+                          [_c("i", { staticClass: "fa fa-heart-o" })]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "action-cart",
+                            attrs: { title: "Add To Cart", href: "#" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                    Add to Cart\n                  "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action compare-mrg",
+                            attrs: {
+                              "data-target": "#exampleCompare",
+                              "data-toggle": "modal",
+                              title: "Compare",
+                              href: "#"
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-sliders fa-rotate-90"
+                            })
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "devita-product-2" }, [
+              _c("div", { staticClass: "product-img" }, [
+                _c("a", { attrs: { href: "product-details.html" } }, [
+                  _c("img", {
+                    attrs: {
+                      src: "assets/img/product/headphone-4.jpg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("span", [_vm._v("-10%")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "list-col" }, [
+                _c("div", { staticClass: "gridview" }, [
+                  _c("div", { staticClass: "product-content text-center" }, [
+                    _c("span", [_vm._v("Headphone, Accessories")]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _vm._v("Matrior black Headphone Ver 2018")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product-price-wrapper" }, [
+                      _c("span", [_vm._v("$120.00")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "product-price-old" }, [
+                        _vm._v("$150.00 ")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "product-action-wrapper-2 text-center" },
+                    [
+                      _c("div", { staticClass: "product-rating" }, [
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "ion-android-star-outline" })
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "product-action" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action",
+                            attrs: { title: "Wishlist", href: "#" }
+                          },
+                          [_c("i", { staticClass: "fa fa-heart-o" })]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "action-cart",
+                            attrs: { title: "Add To Cart", href: "#" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                    Add to Cart\n                  "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action compare-mrg",
+                            attrs: {
+                              "data-target": "#exampleCompare",
+                              "data-toggle": "modal",
+                              title: "Compare",
+                              href: "#"
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-sliders fa-rotate-90"
+                            })
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "devita-product-2" }, [
+              _c("div", { staticClass: "product-img" }, [
+                _c("a", { attrs: { href: "product-details.html" } }, [
+                  _c("img", {
+                    attrs: {
+                      src: "assets/img/product/headphone-5.jpg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "list-col" }, [
+                _c("div", { staticClass: "gridview" }, [
+                  _c("div", { staticClass: "product-content text-center" }, [
+                    _c("span", [_vm._v("Headphone, Accessories")]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _vm._v("Matrior white Headphone Ver 2018")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product-price-wrapper" }, [
+                      _c("span", [_vm._v("$190.00")])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "product-action-wrapper-2 text-center" },
+                    [
+                      _c("div", { staticClass: "product-rating" }, [
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "ion-android-star-outline" })
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "product-action" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action",
+                            attrs: { title: "Wishlist", href: "#" }
+                          },
+                          [_c("i", { staticClass: "fa fa-heart-o" })]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "action-cart",
+                            attrs: { title: "Add To Cart", href: "#" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                    Add to Cart\n                  "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action compare-mrg",
+                            attrs: {
+                              "data-target": "#exampleCompare",
+                              "data-toggle": "modal",
+                              title: "Compare",
+                              href: "#"
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-sliders fa-rotate-90"
+                            })
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "devita-product-2" }, [
+              _c("div", { staticClass: "product-img" }, [
+                _c("a", { attrs: { href: "product-details.html" } }, [
+                  _c("img", {
+                    attrs: {
+                      src: "assets/img/product/headphone-2.jpg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("span", [_vm._v("-15%")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "list-col" }, [
+                _c("div", { staticClass: "gridview" }, [
+                  _c("div", { staticClass: "product-content text-center" }, [
+                    _c("span", [_vm._v("Headphone, Accessories")]),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _vm._v("Matrior black Headphone Ver 2018")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product-price-wrapper" }, [
+                      _c("span", [_vm._v("$260.00")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "product-price-old" }, [
+                        _vm._v("$162.00 ")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "product-action-wrapper-2 text-center" },
+                    [
+                      _c("div", { staticClass: "product-rating" }, [
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          staticClass: "ion-android-star-outline theme-star"
+                        }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "ion-android-star-outline" })
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "\n                  Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                  sodales sapien, non velit scelerisque...\n                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "product-action" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action",
+                            attrs: { title: "Wishlist", href: "#" }
+                          },
+                          [_c("i", { staticClass: "fa fa-heart-o" })]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "action-cart",
+                            attrs: { title: "Add To Cart", href: "#" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                    Add to Cart\n                  "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "same-action compare-mrg",
+                            attrs: {
+                              "data-target": "#exampleCompare",
+                              "data-toggle": "modal",
+                              title: "Compare",
+                              href: "#"
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-sliders fa-rotate-90"
+                            })
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ])
+          ]
+        )
       ])
     ])
   }
