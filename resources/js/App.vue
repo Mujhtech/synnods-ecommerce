@@ -1,7 +1,7 @@
 <template>
   <div>
     <sy-notification></sy-notification>
-    <sy-header></sy-header>
+    <sy-header :categories="categories"></sy-header>
     <router-view></router-view>
     <sy-brand></sy-brand>
     <sy-footer></sy-footer>
@@ -71,6 +71,7 @@ export default {
       try {
         const response = await catService.category();
         this.categories = response.data.data.data;
+        console.log(this.categories);
       } catch (err) {
         console.log(err.response);
       }

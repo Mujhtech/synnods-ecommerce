@@ -50,7 +50,9 @@
                   <router-link to="/wishlist">Wishlist</router-link>
                 </li>
                 <li>
-                  <router-link to="/authentication">Register / Login</router-link>
+                  <router-link to="/authentication"
+                    >Register / Login</router-link
+                  >
                 </li>
                 <li>
                   <router-link to="/checkout">Checkout</router-link>
@@ -67,7 +69,10 @@
           <div class="col-lg-3 col-md-12">
             <div class="logo logo-mrg">
               <router-link to="/">
-                <img src="https://havybucket.fra1.cdn.digitaloceanspaces.com/faadaakaa/faadaakaa/faadaakaa_logo.png" alt="" />
+                <img
+                  src="https://havybucket.fra1.cdn.digitaloceanspaces.com/faadaakaa/faadaakaa/faadaakaa_logo.png"
+                  alt=""
+                />
               </router-link>
             </div>
           </div>
@@ -82,9 +87,10 @@
                 </div>
               </div>
               <div class="header-search middle-same">
-                <form class="header-search-form" action="#">
+                <form class="header-search-form" action="/shop">
                   <input
                     type="text"
+                    name="search_item"
                     placeholder="Search entire store here ..."
                   />
                   <button>
@@ -414,30 +420,27 @@
             <ul>
               <li><router-link to="/">Home</router-link></li>
               <li class="mega-menu-position">
-                <a href="index.html">Category <i class="ion-chevron-down"></i> </a>
+                <a href="#">Category <i class="ion-chevron-down"></i> </a>
                 <ul class="mega-menu">
-                  <li>
+                  <li v-for="(category, index) in categories.slice(0, 5)" :key="index">
                     <ul>
                       <li>
                         <ul>
-                          <li class="mega-menu-title">Demo Group 01</li>
-                          <li><a href="index.html">Home - electronics</a></li>
-                          <li>
-                            <a href="index-electronics-2.html"
-                              >Home - electronics 2</a
+                          <li class="mega-menu-title">
+                            <router-link
+                              :to="`/shop?category=${category.slug}`"
+                              >{{ category.name }}</router-link
                             >
                           </li>
-                          <li>
-                            <a href="index-electronics-3.html"
-                              >Home - electronics 3</a
+                          <li
+                            v-for="(sub_cat, key) in category.sub_categories"
+                            :key="key"
+                          >
+                            <router-link
+                              :to="`/shop?sub_category=${sub_cat.slug}`"
+                              >{{ sub_cat.name }}</router-link
                             >
                           </li>
-                          <li>
-                            <a href="index-electronics-4.html"
-                              >Home - electronics 4</a
-                            >
-                          </li>
-                          <li><a href="index-book.html">Home - book </a></li>
                         </ul>
                       </li>
                     </ul>
@@ -453,3 +456,12 @@
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  name: "SyHeader",
+  props: {
+    categories: Array,
+  },
+};
+</script>
