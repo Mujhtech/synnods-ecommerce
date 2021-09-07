@@ -412,7 +412,7 @@
         <div class="main-menu main-none">
           <nav>
             <ul>
-              li><router-link to="/">Home</router-link></li>
+              <li><router-link to="/">Home</router-link></li>
               <li class="mega-menu-position">
                 <a href="index.html">Category <i class="ion-chevron-down"></i> </a>
                 <ul class="mega-menu">

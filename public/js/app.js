@@ -36543,36 +36543,35 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "main-menu main-none" }, [
           _c("nav", [
-            _c(
-              "ul",
-              [
-                _vm._v("\n            li>"),
-                _c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")]),
-                _vm._v(" "),
-                _vm._m(3),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/contact" } }, [
-                      _vm._v("Contact")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c("router-link", { attrs: { to: "/authentication" } }, [
-                      _vm._v("Login")
-                    ])
-                  ],
-                  1
-                )
-              ],
-              1
-            )
+            _c("ul", [
+              _c(
+                "li",
+                [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")])],
+                1
+              ),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: "/contact" } }, [
+                    _vm._v("Contact")
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: "/authentication" } }, [
+                    _vm._v("Login")
+                  ])
+                ],
+                1
+              )
+            ])
           ])
         ])
       ])
