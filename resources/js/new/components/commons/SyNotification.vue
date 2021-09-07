@@ -5,7 +5,7 @@
         <div class="notification-content ml-285">
           <p>
             Get free shipping and a worry - Free 30 day money back guarantee
-            when you ! <a href="#">Shop Online</a>
+            when you ! <router-link to="/shop">Shop Online</router-link>
           </p>
         </div>
         <div class="notification-close notification-icon">

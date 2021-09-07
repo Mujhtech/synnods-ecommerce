@@ -87,10 +87,11 @@
                 </div>
               </div>
               <div class="header-search middle-same">
-                <form class="header-search-form" action="/shop">
+                <form class="header-search-form" v-on:submit.prevent="submitSearchForm">
                   <input
                     type="text"
                     name="search_item"
+                    v-model="search_term"
                     placeholder="Search entire store here ..."
                   />
                   <button>
@@ -463,5 +464,20 @@ export default {
   props: {
     categories: Array,
   },
+  data: function(){
+    return {
+      search_term: "",
+    }
+  },
+  methods: {
+    submitSearchForm: function ( e ) {
+			this.$router.push( {
+				path: '/shop',
+				query: {
+					search_term: this.search_term
+				}
+			} );
+		},
+  }
 };
 </script>

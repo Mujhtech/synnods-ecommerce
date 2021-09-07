@@ -112,12 +112,11 @@
               </p>
               <div id="mc_embed_signup" class="subscribe-form-2">
                 <form
-                  action="https://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
                   method="post"
                   id="mc-embedded-subscribe-form"
                   name="mc-embedded-subscribe-form"
                   class="validate"
-                  target="_blank"
+                  v-on:submit.prevent="subscribe"
                   novalidate
                 >
                   <div id="mc_embed_signup_scroll" class="mc-form">
@@ -126,24 +125,16 @@
                       value=""
                       name="EMAIL"
                       class="email"
+                      v-model="email"
                       placeholder="Your Email Address..."
                       required
                     />
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div class="mc-news" aria-hidden="true">
-                      <input
-                        type="text"
-                        name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef"
-                        tabindex="-1"
-                        value=""
-                      />
-                    </div>
                     <div class="clear-2">
                       <input
                         type="submit"
                         value="Subscribe"
                         name="subscribe"
-                        id="mc-embedded-subscribe"
+                        id="subscribe"
                         class="button"
                       />
                     </div>
@@ -232,3 +223,39 @@
     </div>
   </footer>
 </template>
+
+
+<script>
+import PreLoader from './PreLoader';
+import { subscribe as service } from '../../../services/setting';
+import { mapActions } from 'vuex';
+export default {
+  data: function() {
+    return {
+      email: "",
+      loading: false
+    }
+  },
+  components: {
+    PreLoader
+  },
+  methods: {
+    ...mapActions( 'notification', [ 'addNotification' ] ),
+    subscribe: async function(){
+      try{
+        this.loading = true;
+        const response = await service({email: this.email});
+        this.loading = false;
+        console.log(response);
+        this.email = "";
+        this.addNotification({type: 'success', messsage: response.data.data.message});
+      } catch(e){
+        this.loading = false;
+        this.email = "";
+        console.log(e.response);
+        this.addNotification({type: 'error', message: e.response.data.data ? e.response.data.data.message: 'Something went wrong'});
+      }
+    }
+  }
+}
+</script>
