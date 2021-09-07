@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-lg-6 col-md-6 col-12">
             <div class="header-top-left">
-              <div class="language-currency">
+              <!--<div class="language-currency">
                 <span>Language:</span>
                 <div class="lang-curr-dropdown">
                   <ul>
@@ -21,19 +21,18 @@
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div>-->
               <div class="language-currency lang-curr-mrg">
                 <span>Currency: </span>
                 <div class="lang-curr-dropdown">
                   <ul>
                     <li>
                       <a class="language-click" href="#"
-                        >USD <i class="ion-chevron-down"></i
+                        >NGN <i class="ion-chevron-down"></i
                       ></a>
                       <ul class="language-dropdown">
                         <li><a href="#">USD </a></li>
-                        <li><a href="#">US </a></li>
-                        <li><a href="#">EURO </a></li>
+                        <li><a href="#">NGN </a></li>
                       </ul>
                     </li>
                   </ul>
@@ -45,16 +44,16 @@
             <div class="header-top-right">
               <ul>
                 <li>
-                  <a href="my-account.html">My Account</a>
+                  <router-link to="/account">My Account</router-link>
                 </li>
                 <li>
-                  <a href="wishlist.html">Wishlist </a>
+                  <router-link to="/wishlist">Wishlist</router-link>
                 </li>
                 <li>
-                  <a href="login-register.html">Register or Sign in </a>
+                  <router-link to="/authentication">Register / Login</router-link>
                 </li>
                 <li>
-                  <a href="checkout.html"> Checkout</a>
+                  <router-link to="/checkout">Checkout</router-link>
                 </li>
               </ul>
             </div>

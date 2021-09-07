@@ -12,11 +12,12 @@
                 We are a team of designers and developers that create high
                 quality Magento, Prestashop, Opencart [...].
               </p>
-              <div class="footer-map">
-                <router-link to="/contact"
-                  ><i class="ion-ios-location-outline"></i> View on
-                  map</router-link
-                >
+              <div class="footer-contact mt-20">
+                <ul>
+                  <li>Address: 123 Main Street, Anytown, CA 12345 - USA.</li>
+                  <li>Telephone Enquiry: (012) 800 456 789-987</li>
+                  <li>Email: <a href="#">Contact@example.com</a></li>
+                </ul>
               </div>
             </div>
             <div class="social-icon mr-40">
@@ -103,24 +104,51 @@
         <div class="col-lg-4 col-md-6">
           <div class="footer-widget mb-40">
             <div class="footer-title mb-30">
-              <h4>Contact Us</h4>
+              <h4>Join Our Newsletter Now</h4>
             </div>
-            <div class="footer-contact">
-              <ul>
-                <li>Address: 123 Main Street, Anytown, CA 12345 - USA.</li>
-                <li>Telephone Enquiry: (012) 800 456 789-987</li>
-                <li>Email: <a href="#">Contact@example.com</a></li>
-              </ul>
-            </div>
-            <div class="opening-time">
-              <h4>Opening Time</h4>
-              <div class="opening-content">
-                <ul>
-                  <li>
-                    Open: <span>8:00 AM</span> - Close: <span>18:00 PM</span>
-                  </li>
-                  <li>Saturday - Sunday: Close</li>
-                </ul>
+            <div class="footer-newsletter">
+              <p>
+                Get E-mail updates about our latest shop and special offers.
+              </p>
+              <div id="mc_embed_signup" class="subscribe-form-2">
+                <form
+                  action="https://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
+                  method="post"
+                  id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form"
+                  class="validate"
+                  target="_blank"
+                  novalidate
+                >
+                  <div id="mc_embed_signup_scroll" class="mc-form">
+                    <input
+                      type="email"
+                      value=""
+                      name="EMAIL"
+                      class="email"
+                      placeholder="Your Email Address..."
+                      required
+                    />
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div class="mc-news" aria-hidden="true">
+                      <input
+                        type="text"
+                        name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef"
+                        tabindex="-1"
+                        value=""
+                      />
+                    </div>
+                    <div class="clear-2">
+                      <input
+                        type="submit"
+                        value="Subscribe"
+                        name="subscribe"
+                        id="mc-embedded-subscribe"
+                        class="button"
+                      />
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -128,7 +156,31 @@
       </div>
     </div>
     <div class="container">
-      <div class="border-top-3 mt-25 pt-65 pb-65">
+      <div class="shop-service-wrapper black-bg-2 mt-15">
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="shop-service-content text-center">
+              <h4>Free Shipping</h4>
+              <p>Free shipping on all order</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="shop-service-content text-center">
+              <h4>Money Return</h4>
+              <p>30 days for free return</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="shop-service-content text-center border-none">
+              <h4>Online Support</h4>
+              <p>Support 24 hours a day</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="pt-60 pb-65">
         <div class="row">
           <div class="col-12">
             <div class="footer-middle text-center">
@@ -167,15 +219,12 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom black-bg-2 pb-30 pt-25">
+    <div class="footer-bottom black-bg-2 pb-25 pt-25">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="copyright text-center">
-              <p>
-                Copyright © <router-link to="/">Faadaakaa</router-link>. All
-                Right Reserved.
-              </p>
+              <p>Copyright © <a href="#">Faadaakaa</a>. All Right Reserved.</p>
             </div>
           </div>
         </div>
