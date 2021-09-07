@@ -4,6 +4,10 @@ import Index from "../new/pages/index";
 import Authentication from "../new/pages/auth/index";
 import Contact from "../new/pages/contact/index";
 import About from "../new/pages/about/index";
+import Account from "../new/pages/account";
+import Wishlist from "../new/pages/wishlist";
+import Cart from "../new/pages/cart";
+import Checkout from "../new/pages/checkout";
 import NProgress from 'nprogress';
 
 Vue.use(VueRouter);
@@ -28,6 +32,21 @@ const routes = [
         path: "/authentication",
         component: Authentication,
         name: "Authentication"
+    },
+    {
+        path: "/account",
+        component: Account,
+        name: "Account"
+    },
+    {
+        path: "/cart",
+        component: Cart,
+        name: "Cart"
+    },
+    {
+        path: "/checkout",
+        component: Checkout,
+        name: "Checkout"
     },
 ];
 

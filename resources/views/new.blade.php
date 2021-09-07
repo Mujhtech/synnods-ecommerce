@@ -25,11 +25,12 @@
             }
         </script>
         		<!-- all js here -->
+        
+        <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('assets/js/vendor/jquery-v1.12.4.min.js') }}"></script>
         <script src="{{ asset('assets/js/popper.js') }}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('assets/js/plugins.js') }}"></script>
         <script src="{{ asset('assets/js/main.js') }}"></script>
-        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
