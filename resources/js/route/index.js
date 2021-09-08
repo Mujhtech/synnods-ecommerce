@@ -2,13 +2,16 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Index from "../new/pages/index";
 import Authentication from "../new/pages/auth/index";
+import Verify from "../new/pages/auth/verify";
+import Forgot from "../new/pages/auth/forgot";
+import Reset from "../new/pages/auth/reset";
 import Contact from "../new/pages/contact/index";
 import About from "../new/pages/about/index";
 import Account from "../new/pages/account";
 import Wishlist from "../new/pages/wishlist";
 import Cart from "../new/pages/cart";
 import Checkout from "../new/pages/checkout";
-import NProgress from 'nprogress';
+import NProgress from "nprogress";
 
 Vue.use(VueRouter);
 
@@ -38,6 +41,24 @@ const routes = [
         meta: { middleware: "guest" }
     },
     {
+        path: "/auth/forgot",
+        component: Forgot,
+        name: "Forgot",
+        meta: { middleware: "guest" }
+    },
+    {
+        path: "/auth/reset/:token",
+        component: Reset,
+        name: "Reset",
+        meta: { middleware: "guest" }
+    },
+    {
+        path: "/auth/verify/:token",
+        name: "Verify",
+        component: Verify,
+        meta: { middleware: "guest" }
+    },
+    {
         path: "/account",
         component: Account,
         name: "Account",
@@ -60,7 +81,7 @@ const routes = [
         component: Wishlist,
         name: "Wishlist",
         meta: { middleware: "auth" }
-    },
+    }
 ];
 
 // Set the routes in vue-router
@@ -71,7 +92,7 @@ const router = new VueRouter({
 });
 
 router.beforeResolve((to, from, next) => {
-    NProgress.configure({ easing: 'ease', speed: 1000 });
+    NProgress.configure({ easing: "ease", speed: 1000 });
     NProgress.start();
     if (to.meta.middleware) {
         if (
@@ -91,7 +112,6 @@ router.beforeResolve((to, from, next) => {
         next();
     }
 });
-
 
 router.afterEach((to, from) => {
     NProgress.done();
