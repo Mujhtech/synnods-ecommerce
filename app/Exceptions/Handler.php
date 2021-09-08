@@ -6,6 +6,7 @@ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 use App\Models\ErrorLog;
 use App\Events\NewErrorEvent;
+use Illuminate\Auth\AuthenticationException;
 
 class Handler extends ExceptionHandler
 {
