@@ -4,12 +4,12 @@
       <div class="row g-0">
         <div class="col-lg-6 col-md-6">
           <div class="banner-img banner-hover">
-            <a href="#"><img alt="" src="assets/img/banner/banner-1.jpg" /></a>
+            <router-link to="/shop"><img alt="" src="assets/img/banner/banner-1.jpg" /></router-link>
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="banner-img banner-hover">
-            <a href="#"><img alt="" src="assets/img/banner/banner-2.jpg" /></a>
+            <router-link to="/shop"><img alt="" src="assets/img/banner/banner-2.jpg" /></router-link>
           </div>
         </div>
       </div>

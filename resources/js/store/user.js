@@ -1,11 +1,14 @@
 // User store
+import { getUser, getAccessToken } from '../services/auth';
+
 const USER_LOGIN = 'USER_LOGIN';
 const USER_LOGOUT = 'USER_LOGOUT';
 
 function state() {
     return {
         isLoggedIn: false,
-        user: {},
+        token: getAccessToken() || null,
+        user: getUser() || {},
         shipping_addresses: [],
         orders: []
     }
@@ -23,6 +26,9 @@ const getters = {
     },
     isLoggedIn: state => {
         return state.isLoggedIn;
+    },
+    getToken: state => {
+        return state.token;
     }
 }
 

@@ -44,8 +44,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$260.00</span>
-                          <span class="product-price-old">$162.00 </span>
+                          <span>₦260.00</span>
+                          <span class="product-price-old">₦162.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -107,7 +107,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$200.00</span>
+                          <span>₦200.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -170,8 +170,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$120.00</span>
-                          <span class="product-price-old">$172.00 </span>
+                          <span>₦120.00</span>
+                          <span class="product-price-old">₦172.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -233,7 +233,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$210.00</span>
+                          <span>₦210.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -296,8 +296,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$250.00</span>
-                          <span class="product-price-old">$300.00 </span>
+                          <span>₦250.00</span>
+                          <span class="product-price-old">₦300.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -359,7 +359,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$160.00</span>
+                          <span>₦160.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -422,8 +422,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$100.00</span>
-                          <span class="product-price-old">$150.00 </span>
+                          <span>₦100.00</span>
+                          <span class="product-price-old">₦150.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -485,7 +485,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$500.00</span>
+                          <span>₦500.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -548,8 +548,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$180.00</span>
-                          <span class="product-price-old">$200.00 </span>
+                          <span>₦180.00</span>
+                          <span class="product-price-old">₦200.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -611,7 +611,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$260.00</span>
+                          <span>₦260.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -678,8 +678,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$260.00</span>
-                          <span class="product-price-old">$162.00 </span>
+                          <span>₦260.00</span>
+                          <span class="product-price-old">₦162.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -741,7 +741,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$200.00</span>
+                          <span>₦200.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -804,8 +804,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$120.00</span>
-                          <span class="product-price-old">$172.00 </span>
+                          <span>₦120.00</span>
+                          <span class="product-price-old">₦172.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -867,7 +867,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$210.00</span>
+                          <span>₦210.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -930,8 +930,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$250.00</span>
-                          <span class="product-price-old">$300.00 </span>
+                          <span>₦250.00</span>
+                          <span class="product-price-old">₦300.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -993,7 +993,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$160.00</span>
+                          <span>₦160.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1056,8 +1056,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$100.00</span>
-                          <span class="product-price-old">$150.00 </span>
+                          <span>₦100.00</span>
+                          <span class="product-price-old">₦150.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1119,7 +1119,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$500.00</span>
+                          <span>₦500.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1182,8 +1182,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$180.00</span>
-                          <span class="product-price-old">$200.00 </span>
+                          <span>₦180.00</span>
+                          <span class="product-price-old">₦200.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1245,7 +1245,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$260.00</span>
+                          <span>₦260.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1312,8 +1312,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$260.00</span>
-                          <span class="product-price-old">$162.00 </span>
+                          <span>₦260.00</span>
+                          <span class="product-price-old">₦162.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1375,7 +1375,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$200.00</span>
+                          <span>₦200.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1438,8 +1438,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$120.00</span>
-                          <span class="product-price-old">$172.00 </span>
+                          <span>₦120.00</span>
+                          <span class="product-price-old">₦172.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1501,7 +1501,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$210.00</span>
+                          <span>₦210.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1564,8 +1564,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$250.00</span>
-                          <span class="product-price-old">$300.00 </span>
+                          <span>₦250.00</span>
+                          <span class="product-price-old">₦300.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1627,7 +1627,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$160.00</span>
+                          <span>₦160.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1690,8 +1690,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$100.00</span>
-                          <span class="product-price-old">$150.00 </span>
+                          <span>₦100.00</span>
+                          <span class="product-price-old">₦150.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1753,7 +1753,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$500.00</span>
+                          <span>₦500.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1816,8 +1816,8 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$180.00</span>
-                          <span class="product-price-old">$200.00 </span>
+                          <span>₦180.00</span>
+                          <span class="product-price-old">₦200.00 </span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1879,7 +1879,7 @@
                           >
                         </h4>
                         <div class="product-price-wrapper">
-                          <span>$260.00</span>
+                          <span>₦260.00</span>
                         </div>
                       </div>
                       <div class="product-action-wrapper-2 text-center">
@@ -1932,7 +1932,7 @@
             Start the year off strong and explore how to track your activities,
             health, and fitness with Apple Watch and iPhone.
           </p>
-          <h4>$128.99</h4>
+          <h4>₦128.99</h4>
           <a class="btn-style-2" href="#">Discover Now</a>
         </div>
       </div>
@@ -1974,8 +1974,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
-                      <span class="product-price-old">$162.00 </span>
+                      <span>₦260.00</span>
+                      <span class="product-price-old">₦162.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2001,7 +2001,7 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
+                      <span>₦260.00</span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2029,7 +2029,7 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
+                      <span>₦260.00</span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2056,8 +2056,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$150.00</span>
-                      <span class="product-price-old">$200.00 </span>
+                      <span>₦150.00</span>
+                      <span class="product-price-old">₦200.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2086,8 +2086,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$120.00</span>
-                      <span class="product-price-old">$110.00 </span>
+                      <span>₦120.00</span>
+                      <span class="product-price-old">₦110.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2113,7 +2113,7 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
+                      <span>₦260.00</span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2141,8 +2141,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
-                      <span class="product-price-old">$162.00 </span>
+                      <span>₦260.00</span>
+                      <span class="product-price-old">₦162.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2169,8 +2169,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
-                      <span class="product-price-old">$162.00 </span>
+                      <span>₦260.00</span>
+                      <span class="product-price-old">₦162.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2203,8 +2203,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
-                      <span class="product-price-old">$162.00 </span>
+                      <span>₦260.00</span>
+                      <span class="product-price-old">₦162.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2230,7 +2230,7 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$200.00</span>
+                      <span>₦200.00</span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2258,7 +2258,7 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$250.00</span>
+                      <span>₦250.00</span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2285,8 +2285,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$300.00</span>
-                      <span class="product-price-old">$350.00 </span>
+                      <span>₦300.00</span>
+                      <span class="product-price-old">₦350.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2315,8 +2315,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$140.00</span>
-                      <span class="product-price-old">$100.00 </span>
+                      <span>₦140.00</span>
+                      <span class="product-price-old">₦100.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2342,7 +2342,7 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
+                      <span>₦260.00</span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2370,8 +2370,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
-                      <span class="product-price-old">$162.00 </span>
+                      <span>₦260.00</span>
+                      <span class="product-price-old">₦162.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2398,8 +2398,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
-                      <span class="product-price-old">$162.00 </span>
+                      <span>₦260.00</span>
+                      <span class="product-price-old">₦162.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2432,8 +2432,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
-                      <span class="product-price-old">$162.00 </span>
+                      <span>₦260.00</span>
+                      <span class="product-price-old">₦162.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2459,7 +2459,7 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
+                      <span>₦260.00</span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2487,7 +2487,7 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$270.00</span>
+                      <span>₦270.00</span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2514,8 +2514,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$120.00</span>
-                      <span class="product-price-old">$110.00 </span>
+                      <span>₦120.00</span>
+                      <span class="product-price-old">₦110.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2544,8 +2544,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$290.00</span>
-                      <span class="product-price-old">$300.00 </span>
+                      <span>₦290.00</span>
+                      <span class="product-price-old">₦300.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2571,7 +2571,7 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
+                      <span>₦260.00</span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2599,8 +2599,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
-                      <span class="product-price-old">$162.00 </span>
+                      <span>₦260.00</span>
+                      <span class="product-price-old">₦162.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2627,8 +2627,8 @@
                       >
                     </h4>
                     <div class="product-price-wrapper">
-                      <span>$260.00</span>
-                      <span class="product-price-old">$162.00 </span>
+                      <span>₦260.00</span>
+                      <span class="product-price-old">₦162.00 </span>
                     </div>
                     <div class="product-action best-pro-action">
                       <a class="same-action" title="Wishlist" href="#">
@@ -2669,7 +2669,7 @@
                     </a>
                   </h4>
                   <div class="product-price-wrapper">
-                    <span>$260.00</span>
+                    <span>₦260.00</span>
                   </div>
                 </div>
                 <div class="product-action-wrapper-2 text-center">
@@ -2722,8 +2722,8 @@
                     >
                   </h4>
                   <div class="product-price-wrapper">
-                    <span>$260.00</span>
-                    <span class="product-price-old">$162.00 </span>
+                    <span>₦260.00</span>
+                    <span class="product-price-old">₦162.00 </span>
                   </div>
                 </div>
                 <div class="product-action-wrapper-2 text-center">
@@ -2775,7 +2775,7 @@
                     >
                   </h4>
                   <div class="product-price-wrapper">
-                    <span>$300.00</span>
+                    <span>₦300.00</span>
                   </div>
                 </div>
                 <div class="product-action-wrapper-2 text-center">
@@ -2828,8 +2828,8 @@
                     >
                   </h4>
                   <div class="product-price-wrapper">
-                    <span>$120.00</span>
-                    <span class="product-price-old">$150.00 </span>
+                    <span>₦120.00</span>
+                    <span class="product-price-old">₦150.00 </span>
                   </div>
                 </div>
                 <div class="product-action-wrapper-2 text-center">
@@ -2881,7 +2881,7 @@
                     >
                   </h4>
                   <div class="product-price-wrapper">
-                    <span>$190.00</span>
+                    <span>₦190.00</span>
                   </div>
                 </div>
                 <div class="product-action-wrapper-2 text-center">
@@ -2934,8 +2934,8 @@
                     >
                   </h4>
                   <div class="product-price-wrapper">
-                    <span>$260.00</span>
-                    <span class="product-price-old">$162.00 </span>
+                    <span>₦260.00</span>
+                    <span class="product-price-old">₦162.00 </span>
                   </div>
                 </div>
                 <div class="product-action-wrapper-2 text-center">
@@ -2980,12 +2980,51 @@
 <script>
 import SyHomeSlider from '../components/home/SyHomeSlider';
 import SyHomeBanner from '../components/home/SyHomeBanner';
+import {
+  getProductsByFeatured,
+  getProductsByViews
+} from "../../utils/service";
+import { fetchProduct } from "../../services/product";
 export default {
   name: "Home",
+  metaInfo: {
+    title: "Home",
+    titleTemplate: "%s - Faadaakaa Ecommerce",
+  },
   components: {
     SyHomeBanner,
     SyHomeSlider
-  }
+  },
+  data: function () {
+    return {
+      products: [],
+      featuredProducts: [],
+      newProducts: [],
+      bestProducts: [],
+      topRatedProducts: [],
+      mostViewProducts: [],
+      timerId: 0,
+    };
+  },
+  mounted: async function () {
+    try {
+      const response = await fetchProduct();
+      this.products = response.data.data.data;
+      this.featuredProducts = getProductsByFeatured(response.data.data.data);
+      this.mostViewProducts = getProductsByViews(response.data.data.data);
+      //this.newProducts = getProductsByAttri(response.data.data.data, "is_new");
+      //this.bestProducts = getTopSellingProducts(response.data.data.data);
+      //this.topRatedProducts = getTopRatedProducts(response.data.data.data);
+    } catch (err) {
+      console.log(err.response);
+    }
+    this.timerId = setTimeout(() => {
+
+    }, 10000);
+  },
+  destroyed: function () {
+    clearTimeout(this.timerId);
+  },
   
 }
 </script>

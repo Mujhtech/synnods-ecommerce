@@ -208,3 +208,13 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "Account",
+  metaInfo: {
+    title: "Account",
+    titleTemplate: "%s - Faadaakaa Ecommerce",
+  },
+}
+</script>

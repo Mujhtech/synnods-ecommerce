@@ -16,42 +16,50 @@ const routes = [
     {
         path: "/",
         component: Index,
-        name: "Index"
+        name: "Index",
+        meta: { middleware: "web" }
     },
     {
         path: "/about",
         component: About,
-        name: "About"
+        name: "About",
+        meta: { middleware: "web" }
     },
     {
         path: "/contact",
         component: Contact,
-        name: "Contact"
+        name: "Contact",
+        meta: { middleware: "web" }
     },
     {
         path: "/authentication",
         component: Authentication,
-        name: "Authentication"
+        name: "Authentication",
+        meta: { middleware: "guest" }
     },
     {
         path: "/account",
         component: Account,
-        name: "Account"
+        name: "Account",
+        meta: { middleware: "auth" }
     },
     {
         path: "/cart",
         component: Cart,
-        name: "Cart"
+        name: "Cart",
+        meta: { middleware: "web" }
     },
     {
         path: "/checkout",
         component: Checkout,
-        name: "Checkout"
+        name: "Checkout",
+        meta: { middleware: "auth" }
     },
     {
         path: "/wishlist",
         component: Wishlist,
-        name: "Wishlist"
+        name: "Wishlist",
+        meta: { middleware: "auth" }
     },
 ];
 

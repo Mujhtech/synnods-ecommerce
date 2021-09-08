@@ -1,5 +1,6 @@
 <template>
   <footer class="footer-area black-bg pt-65">
+    <pre-loader v-if="loading"></pre-loader>
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6">

@@ -94,6 +94,7 @@
 	</div>
 </template>
 
+
 <script>
 import { mapGetters, mapActions } from 'vuex';
 import { baseUrl } from '../../../api';

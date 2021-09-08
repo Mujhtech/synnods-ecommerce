@@ -11,9 +11,9 @@
             <h2 class="animated">
               PlayStation® VR <br />Over 100 Games & Counting
             </h2>
-            <h3 class="animated"><span>Starting at </span> $129.00</h3>
+            <h3 class="animated"><span>Starting at </span> ₦129.00</h3>
             <div class="slider-btn slider-btn-3 mt-70">
-              <a class="animated" href="product-details.html">shopping Now</a>
+              <router-link class="animated" to="/shop">shopping Now</router-link>
             </div>
           </div>
         </div>
@@ -28,9 +28,9 @@
             <h2 class="animated">
               New Trending 2018 <br />Speaker - Harman / Kardon
             </h2>
-            <h3 class="animated"><span>Starting at </span> $155.00</h3>
+            <h3 class="animated"><span>Starting at </span> ₦155.00</h3>
             <div class="slider-btn slider-btn-3 mt-70">
-              <a class="animated" href="product-details.html">shopping Now</a>
+              <router-link class="animated" to="/shop">shopping Now</router-link>
             </div>
           </div>
         </div>
@@ -45,9 +45,9 @@
             <h2 class="animated">
               New Trending 2018 <br />Speaker - Harman / Kardon
             </h2>
-            <h3 class="animated"><span>Starting at </span> $155.00</h3>
+            <h3 class="animated"><span>Starting at </span> ₦155.00</h3>
             <div class="slider-btn slider-btn-3 mt-70">
-              <a class="animated" href="product-details.html">shopping Now</a>
+              <router-link class="animated" to="/shop">shopping Now</router-link>
             </div>
           </div>
         </div>

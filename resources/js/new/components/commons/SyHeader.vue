@@ -28,11 +28,11 @@
                   <ul>
                     <li>
                       <a class="language-click" href="javascript:;"
-                        >NGN <i class="ion-chevron-down"></i
+                        >{{ getCurrency }}<i class="ion-chevron-down"></i
                       ></a>
                       <ul class="language-dropdown">
-                        <li><a href="javascript:;">USD </a></li>
-                        <li><a href="javascript:;">NGN </a></li>
+                        <li><a href="javascript:;" v-on:click="changeCurrency('USD')">USD </a></li>
+                        <li><a href="javascript:;" v-on:click="changeCurrency('NGN')">NGN </a></li>
                       </ul>
                     </li>
                   </ul>
@@ -43,13 +43,13 @@
           <div class="col-lg-6 col-md-6 col-12">
             <div class="header-top-right">
               <ul>
-                <li>
+                <li v-if="getToken">
                   <router-link to="/account">My Account</router-link>
                 </li>
                 <li>
                   <router-link to="/wishlist">Wishlist</router-link>
                 </li>
-                <li>
+                <li v-if="!getToken">
                   <router-link to="/authentication"
                     >Register / Login</router-link
                   >
@@ -102,64 +102,7 @@
                   </button>
                 </form>
               </div>
-              <div class="header-cart middle-same">
-                <button class="icon-cart">
-                  <i class="pe-7s-shopbag cart-bag"></i>
-                  <span class="count-amount">$609.00</span>
-                  <i class="ion-chevron-down cart-down"></i>
-                  <span class="count-style">02</span>
-                </button>
-                <div class="shopping-cart-content">
-                  <ul>
-                    <li class="single-shopping-cart">
-                      <div class="shopping-cart-img">
-                        <a href="javascript:;"
-                          ><img alt="" src="assets/img/cart/cart-1.jpg"
-                        /></a>
-                      </div>
-                      <div class="shopping-cart-title">
-                        <h4>
-                          <a href="javascript:;">Phantom Remote <br />Control 2018 </a>
-                        </h4>
-                        <h6>Qty: 02</h6>
-                        <span>$260.00</span>
-                      </div>
-                      <div class="shopping-cart-delete">
-                        <a href="javascript:;"><i class="ion-android-close"></i></a>
-                      </div>
-                    </li>
-                    <li class="single-shopping-cart">
-                      <div class="shopping-cart-img">
-                        <a href="javascript:;"
-                          ><img alt="" src="assets/img/cart/cart-2.jpg"
-                        /></a>
-                      </div>
-                      <div class="shopping-cart-title">
-                        <h4>
-                          <a href="javascript:;">Phantom Remote <br />Control 2018 </a>
-                        </h4>
-                        <h6>Qty: 02</h6>
-                        <span>$260.00</span>
-                      </div>
-                      <div class="shopping-cart-delete">
-                        <a href="javascript:;"><i class="ion-android-close"></i></a>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="shopping-cart-total">
-                    <h4>Shipping : <span>$20.00</span></h4>
-                    <h4>Total : <span class="shop-total">$260.00</span></h4>
-                  </div>
-                  <div class="shopping-cart-btn">
-                    <a class="btn-style btn-hover" href="cart-page.html"
-                      >view cart</a
-                    >
-                    <a class="btn-style btn-hover" href="checkout.html"
-                      >checkout</a
-                    >
-                  </div>
-                </div>
-              </div>
+              <sy-cart></sy-cart>
             </div>
           </div>
         </div>
@@ -262,8 +205,8 @@
                   </li>
                 </ul>
               </li>
+              <li><router-link to="/vendors">Vendors</router-link></li>
               <li><router-link to="/contact">Contact</router-link></li>
-              <li><router-link to="/authentication">Login</router-link></li>
             </ul>
           </nav>
         </div>
@@ -273,8 +216,13 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+import SyCart from './SyCart';
 export default {
   name: "SyHeader",
+  components: {
+    SyCart
+  },
   props: {
     categories: Array,
   },
@@ -283,7 +231,18 @@ export default {
       search_term: "",
     };
   },
+  computed: {
+    ...mapGetters("setting", ["getCurrency"]),
+    ...mapGetters("user", ["getToken"]),
+  },
   methods: {
+    ...mapActions("setting", ["updateCurrency"]),
+    ...mapActions("notification", ["addNotification"]),
+    changeCurrency: function (cur) {
+      console.log(localStorage.getItem("mod"));
+      this.updateCurrency(cur);
+      this.addNotification(`Currency changed to ${cur}`);
+    },
     submitSearchForm: function (e) {
       this.$router.push({
         path: "/shop",
@@ -292,6 +251,7 @@ export default {
         },
       });
     },
+
   },
 };
 </script>
