@@ -10,13 +10,13 @@
                 <div class="lang-curr-dropdown">
                   <ul>
                     <li>
-                      <a class="language-click" href="#"
+                      <a class="language-click" href="javascript:;"
                         >English <i class="ion-chevron-down"></i
                       ></a>
                       <ul class="language-dropdown">
-                        <li><a href="#">English </a></li>
-                        <li><a href="#">Bangla </a></li>
-                        <li><a href="#">Hindi </a></li>
+                        <li><a href="javascript:;">English </a></li>
+                        <li><a href="javascript:;">Bangla </a></li>
+                        <li><a href="javascript:;">Hindi </a></li>
                       </ul>
                     </li>
                   </ul>
@@ -27,12 +27,12 @@
                 <div class="lang-curr-dropdown">
                   <ul>
                     <li>
-                      <a class="language-click" href="#"
+                      <a class="language-click" href="javascript:;"
                         >NGN <i class="ion-chevron-down"></i
                       ></a>
                       <ul class="language-dropdown">
-                        <li><a href="#">USD </a></li>
-                        <li><a href="#">NGN </a></li>
+                        <li><a href="javascript:;">USD </a></li>
+                        <li><a href="javascript:;">NGN </a></li>
                       </ul>
                     </li>
                   </ul>
@@ -87,7 +87,10 @@
                 </div>
               </div>
               <div class="header-search middle-same">
-                <form class="header-search-form" v-on:submit.prevent="submitSearchForm">
+                <form
+                  class="header-search-form"
+                  v-on:submit.prevent="submitSearchForm"
+                >
                   <input
                     type="text"
                     name="search_item"
@@ -110,36 +113,36 @@
                   <ul>
                     <li class="single-shopping-cart">
                       <div class="shopping-cart-img">
-                        <a href="#"
+                        <a href="javascript:;"
                           ><img alt="" src="assets/img/cart/cart-1.jpg"
                         /></a>
                       </div>
                       <div class="shopping-cart-title">
                         <h4>
-                          <a href="#">Phantom Remote <br />Control 2018 </a>
+                          <a href="javascript:;">Phantom Remote <br />Control 2018 </a>
                         </h4>
                         <h6>Qty: 02</h6>
                         <span>$260.00</span>
                       </div>
                       <div class="shopping-cart-delete">
-                        <a href="#"><i class="ion-android-close"></i></a>
+                        <a href="javascript:;"><i class="ion-android-close"></i></a>
                       </div>
                     </li>
                     <li class="single-shopping-cart">
                       <div class="shopping-cart-img">
-                        <a href="#"
+                        <a href="javascript:;"
                           ><img alt="" src="assets/img/cart/cart-2.jpg"
                         /></a>
                       </div>
                       <div class="shopping-cart-title">
                         <h4>
-                          <a href="#">Phantom Remote <br />Control 2018 </a>
+                          <a href="javascript:;">Phantom Remote <br />Control 2018 </a>
                         </h4>
                         <h6>Qty: 02</h6>
                         <span>$260.00</span>
                       </div>
                       <div class="shopping-cart-delete">
-                        <a href="#"><i class="ion-android-close"></i></a>
+                        <a href="javascript:;"><i class="ion-android-close"></i></a>
                       </div>
                     </li>
                   </ul>
@@ -167,9 +170,12 @@
         <div class="row">
           <div class="col-12">
             <div class="logo mobile-logo">
-              <a href="index.html">
-                <img alt="" src="assets/img/logo/logo.png" />
-              </a>
+              <router-link to="/">
+                <img
+                  alt=""
+                  src="https://havybucket.fra1.cdn.digitaloceanspaces.com/faadaakaa/faadaakaa/faadaakaa_logo.png"
+                />
+              </router-link>
             </div>
           </div>
           <div class="col-12">
@@ -177,239 +183,44 @@
               <div class="mobile-menu">
                 <nav id="mobile-menu-active">
                   <ul class="menu-overflow">
-                    <li>
-                      <a href="index.html">HOME</a>
-                      <ul>
-                        <li>
-                          <a href="#">Demo Group 01</a>
-                          <ul>
-                            <li><a href="index.html">Home - electronics</a></li>
-                            <li>
-                              <a href="index-electronics-2.html"
-                                >Home - electronics 2</a
-                              >
-                            </li>
-                            <li>
-                              <a href="index-electronics-3.html"
-                                >Home - electronics 3</a
-                              >
-                            </li>
-                            <li>
-                              <a href="index-electronics-4.html"
-                                >Home - electronics 4</a
-                              >
-                            </li>
-                            <li><a href="index-book.html">Home - book </a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">Demo Group 02</a>
+                    <li><router-link to="/">Home</router-link></li>
+                    <li class="mega-menu-position">
+                      <a href="javascript:;">Category <i class="ion-chevron-down"></i> </a>
+                      <ul class="mega-menu">
+                        <li
+                          v-for="(category, index) in categories.slice(0, 5)"
+                          :key="index"
+                        >
                           <ul>
                             <li>
-                              <a href="index-book-2.html">Home - book 2</a>
-                            </li>
-                            <li>
-                              <a href="index-coffee.html">Home - coffee</a>
-                            </li>
-                            <li><a href="index-cycle.html">Home - cycle</a></li>
-                            <li>
-                              <a href="index-fashion.html">Home - fashion</a>
-                            </li>
-                            <li><a href="index-game.html">Home - game</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">Demo Group 03</a>
-                          <ul>
-                            <li>
-                              <a href="index-jewelry.html">Home - jewelry</a>
-                            </li>
-                            <li>
-                              <a href="index-medical.html">Home - medical</a>
-                            </li>
-                            <li>
-                              <a href="index-sports.html">Home - sports</a>
-                            </li>
-                            <li>
-                              <a href="index-sunglass.html">Home - sunglass</a>
-                            </li>
-                            <li><a href="index-watch.html">Home - watch</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">Demo Group 04</a>
-                          <ul>
-                            <li>
-                              <a href="index-construction.html"
-                                >Home - construction</a
-                              >
-                            </li>
-                            <li>
-                              <a href="index-auto-parts.html"
-                                >Home - Auto Parts<span>New</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="index-furniture.html"
-                                >Home - Furniture<span>New</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="index-petmarket.html"
-                                >Home - PetMarket<span>New</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="index-organic.html"
-                                >Home - Organic<span>New</span></a
-                              >
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">Demo Group 05</a>
-                          <ul>
-                            <li>
-                              <a href="index-shoe.html"
-                                >Home - Shoe<span>New</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="index-toy.html"
-                                >Home - Toy<span>New</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="index-cosmetic.html"
-                                >Home - Cosmetic<span>New</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="index-housewares.html"
-                                >Home - Housewares<span>New</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="index-underwear.html"
-                                >Home - Underwear<span>New</span></a
-                              >
+                              <ul>
+                                <li class="mega-menu-title">
+                                  <router-link
+                                    :to="`/shop?category=${category.slug}`"
+                                    >{{ category.name }}</router-link
+                                  >
+                                </li>
+                                <li
+                                  v-for="(
+                                    sub_cat, key
+                                  ) in category.sub_categories"
+                                  :key="key"
+                                >
+                                  <router-link
+                                    :to="`/shop?sub_category=${sub_cat.slug}`"
+                                    >{{ sub_cat.name }}</router-link
+                                  >
+                                </li>
+                              </ul>
                             </li>
                           </ul>
                         </li>
                       </ul>
                     </li>
+                    <li><router-link to="/contact">Contact</router-link></li>
                     <li>
-                      <a href="shop.html"> shop </a>
-                      <ul>
-                        <li>
-                          <a href="#">Shop Layout</a>
-                          <ul>
-                            <li><a href="shop.html">default shop</a></li>
-                            <li><a href="shop-2col.html">2 column box</a></li>
-                            <li><a href="shop-3col.html">3 column box</a></li>
-                            <li><a href="shop.html">4 column box</a></li>
-                            <li><a href="shop-list.html">shop list</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">Shop Layout</a>
-                          <ul>
-                            <li><a href="shop-new.html">shop new</a></li>
-                            <li><a href="shop-onsale.html">shop onsale</a></li>
-                            <li>
-                              <a href="shop-no-sidebar.html">shop no sidebar</a>
-                            </li>
-                            <li>
-                              <a href="shop-rightsidebar.html"
-                                >shop right sidebar</a
-                              >
-                            </li>
-                            <li>
-                              <a href="shop-fullwide.html">shop fullwide</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">Product Details Layout</a>
-                          <ul>
-                            <li>
-                              <a href="product-details.html">tab style 1</a>
-                            </li>
-                            <li>
-                              <a href="product-details-2.html">tab style 2</a>
-                            </li>
-                            <li>
-                              <a href="product-details-3.html">tab style 3</a>
-                            </li>
-                            <li>
-                              <a href="product-details-gallery.html"
-                                >gallery left</a
-                              >
-                            </li>
-                            <li>
-                              <a href="product-details-gallery-2.html"
-                                >gallery right</a
-                              >
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">Product Details Layout</a>
-                          <ul>
-                            <li>
-                              <a href="product-details-sticky.html"
-                                >sticky left</a
-                              >
-                            </li>
-                            <li>
-                              <a href="product-details-sticky-right.html"
-                                >sticky right</a
-                              >
-                            </li>
-                            <li>
-                              <a href="product-details-slider.html"
-                                >slider box</a
-                              >
-                            </li>
-                            <li>
-                              <a href="product-details-slider-fullwide.html"
-                                >slider full wide</a
-                              >
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">Account Pages</a>
-                          <ul>
-                            <li><a href="cart-page.html">cart page</a></li>
-                            <li><a href="checkout.html">checkout</a></li>
-                            <li><a href="wishlist.html">wishlist</a></li>
-                            <li><a href="my-account.html">my account</a></li>
-                          </ul>
-                        </li>
-                      </ul>
+                      <router-link to="/authentication">Login</router-link>
                     </li>
-                    <li>
-                      <a href="#">pages</a>
-                      <ul>
-                        <li><a href="about-us.html">about us</a></li>
-                        <li>
-                          <a href="login-register.html">login / register</a>
-                        </li>
-                        <li><a href="contact.html">contact us</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#">BLOG</a>
-                      <ul>
-                        <li><a href="blog.html">blog page</a></li>
-                        <li>
-                          <a href="blog-leftsidebar.html">blog sidebar</a>
-                        </li>
-                        <li><a href="blog-details.html">blog details</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="contact.html"> Contact us </a></li>
                   </ul>
                 </nav>
               </div>
@@ -421,9 +232,12 @@
             <ul>
               <li><router-link to="/">Home</router-link></li>
               <li class="mega-menu-position">
-                <a href="#">Category <i class="ion-chevron-down"></i> </a>
+                <a href="javascript:;">Category <i class="ion-chevron-down"></i> </a>
                 <ul class="mega-menu">
-                  <li v-for="(category, index) in categories.slice(0, 5)" :key="index">
+                  <li
+                    v-for="(category, index) in categories.slice(0, 5)"
+                    :key="index"
+                  >
                     <ul>
                       <li>
                         <ul>
@@ -464,20 +278,20 @@ export default {
   props: {
     categories: Array,
   },
-  data: function(){
+  data: function () {
     return {
       search_term: "",
-    }
+    };
   },
   methods: {
-    submitSearchForm: function ( e ) {
-			this.$router.push( {
-				path: '/shop',
-				query: {
-					search_term: this.search_term
-				}
-			} );
-		},
-  }
+    submitSearchForm: function (e) {
+      this.$router.push({
+        path: "/shop",
+        query: {
+          search_term: this.search_term,
+        },
+      });
+    },
+  },
 };
 </script>

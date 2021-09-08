@@ -71,7 +71,6 @@ export default {
       try {
         const response = await catService.category();
         this.categories = response.data.data.data;
-        console.log(this.categories);
       } catch (err) {
         console.log(err.response);
       }
@@ -81,8 +80,8 @@ export default {
         const response = await auth.getProfile();
         this.userLogin(response.data.data.user);
       } catch (err) {
-        //if(!err.response) return;
-        console.log(err.response);
+        if(!err.response) return;
+        //console.log(err.response);
         localStorage.removeItem("SYNECT");
         localStorage.removeItem("SYNECUS");
         this.userLogout({});
