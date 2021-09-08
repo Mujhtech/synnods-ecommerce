@@ -1,10 +1,17 @@
-require('./plugins/index');
-require('./plugins/filters');
+//require('./plugins/index');
+//require('./plugins/filters');
 //require('./plugins/localstorage');
-require('./plugins/directives/animate');
-require('./plugins/directives/lazyLoad');
-require('./plugins/directives/parallax');
-require('./plugins/directives/sticky');
+//require('./plugins/directives/animate');
+//require('./plugins/directives/lazyLoad');
+//require('./plugins/directives/parallax');
+//require('./plugins/directives/sticky');
+
+
+require('./plugin/modernizr');
+window.jQuery = require('jquery');
+require('@popperjs/core');
+require('bootstrap');
+require('./plugin/index');
 
 import Vue from 'vue';
 import App from './App.vue';

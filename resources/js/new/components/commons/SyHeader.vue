@@ -241,7 +241,7 @@ export default {
     changeCurrency: function (cur) {
       console.log(localStorage.getItem("mod"));
       this.updateCurrency(cur);
-      this.addNotification(`Currency changed to ${cur}`);
+      //this.addNotification(`Currency changed to ${cur}`);
     },
     submitSearchForm: function (e) {
       this.$router.push({
