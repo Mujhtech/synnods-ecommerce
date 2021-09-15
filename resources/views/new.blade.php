@@ -21,7 +21,7 @@
             window.config = {
                 API_URL: '{{ url('/') }}/api/v1',
                 BASE_URL: '{{ url('/') }}',
-                APP: 'production'
+                APP: 'development'
             }
         </script>
         <!-- all js here -->

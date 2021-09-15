@@ -5,8 +5,10 @@
                 <div class="product-img-slider">
                     <router-link :to="`/product/${product.slug}`"
                         ><img
-                            :src="`${product.featured_image}`"
-                            alt=""
+                            v-lazy="`${product.featured_image}`"
+                            :alt="product.name"
+                            :width="product.featured_image.width"
+                            :height="product.featured_image.height"
                     /></router-link>
                 </div>
                 <span v-if="product.is_sale && product.price"
@@ -62,14 +64,32 @@
                             <i class="ion-android-star-outline"></i>
                         </div>
                         <p>
-                            Quam elit phasellus nibh sed eget, sed nunc in
-                            ultricies sodales sapien, non velit scelerisque...
+                            {{ product.description }}
                         </p>
                         <div class="product-action">
-                            <a class="same-action" title="Wishlist" href="#">
+                            <router-link
+                                to="/wishlist"
+                                class="btn-icon-wish added-wishlist"
+                                title="Go to Wishlist"
+                                v-if="isWishlisted"
+                            >
+                                <i class="fa fa-heart-o"></i>
+                            </router-link>
+                            <a
+                                class="same-action"
+                                title="Wishlist"
+                                href="javascript:;"
+                                @click="addWishlist($event)"
+                                v-if="!isWishlisted"
+                            >
                                 <i class="fa fa-heart-o"></i>
                             </a>
-                            <a class="action-cart" title="Add To Cart" href="#">
+                            <a
+                                class="action-cart"
+                                title="Add To Cart"
+                                href="javascript:;"
+                                @click="addCart"
+                            >
                                 Add to Cart
                             </a>
                             <a
@@ -77,7 +97,7 @@
                                 data-target="#exampleCompare"
                                 data-toggle="modal"
                                 title="Compare"
-                                href="#"
+                                href="javascript:;"
                             >
                                 <i class="fa fa-sliders fa-rotate-90"></i>
                             </a>
@@ -91,7 +111,7 @@
 
 <script>
 import baseUrl from "../../../../api/index";
-
+import { mapActions, mapGetters } from "vuex";
 export default {
     name: "Product",
     props: {
@@ -103,6 +123,18 @@ export default {
             discount: 0
         };
     },
+    computed: {
+		...mapGetters( 'wishlist', [ 'wishList' ] ),
+		isWishlisted: function () {
+			if (
+				this.wishList.findIndex(
+					item => item.name === this.product.name
+				) > -1
+			)
+				return true;
+			return false;
+		}
+	},
     mounted: function() {
         if (this.product.is_sale && this.product.price) {
             this.discount =
@@ -110,6 +142,34 @@ export default {
                     this.product.price) *
                 100;
             this.discount = parseInt(this.discount);
+        }
+    },
+    methods: {
+        ...mapActions("wishlist", ["addToWishlist"]),
+        ...mapActions("cart", ["addToCart"]),
+        addWishlist: function() {
+            setTimeout(() => {
+                this.addToWishlist({ product: this.product });
+                /*document
+                    .querySelector(".wishlist-popup")
+                    .classList.add("active");
+
+                setTimeout(() => {
+                    document
+                        .querySelector(".wishlist-popup")
+                        .classList.remove("active");
+                }, 1000);*/
+            }, 1000);
+        },
+        addCart: function() {
+            if (this.product.quantity_in_stock > 0) {
+                let saledProduct = { ...this.product };
+                if (this.product.is_sale) {
+                    saledProduct.price = this.product.sale_price;
+                }
+
+                this.addToCart({ product: saledProduct });
+            }
         }
     }
 };

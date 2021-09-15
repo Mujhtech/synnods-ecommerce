@@ -11,6 +11,8 @@ import Account from "../new/pages/account";
 import Wishlist from "../new/pages/wishlist";
 import Cart from "../new/pages/cart";
 import Checkout from "../new/pages/checkout";
+import Shop from "../new/pages/shop/index";
+import Product from "../new/pages/shop/single";
 import NProgress from "nprogress";
 
 Vue.use(VueRouter);
@@ -20,6 +22,18 @@ const routes = [
         path: "/",
         component: Index,
         name: "Index",
+        meta: { middleware: "web" }
+    },
+    {
+        path: "/shop",
+        component: Shop,
+        name: "Shop",
+        meta: { middleware: "web" }
+    },
+    {
+        path: "/product/:slug",
+        component: Product,
+        name: "Product",
         meta: { middleware: "web" }
     },
     {

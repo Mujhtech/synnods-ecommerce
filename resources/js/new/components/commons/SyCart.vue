@@ -18,8 +18,8 @@
                             <img
                                 v-lazy="`${baseUrl}${product.featured_image}`"
                                 alt="product"
-                                :width="product.featured_image.width"
-                                :height="product.featured_image.height"
+                                height="70"
+                                width="70"
                             />
                         </router-link>
                     </div>

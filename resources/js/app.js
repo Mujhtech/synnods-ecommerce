@@ -1,4 +1,4 @@
-//require('./plugins/index');
+require('./plugins/index');
 //require('./plugins/filters');
 //require('./plugins/localstorage');
 //require('./plugins/directives/animate');

@@ -25,7 +25,7 @@ class ProductController extends ApiController
     //
     public function index(){
 
-        $products = Product::with(['vendor', 'reviews', 'category', 'sub_category', 'brand'])->get();
+        $products = Product::with(['vendor', 'reviews', 'category', 'sub_category', 'brand'])->where('status', 1)->get();
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'data' => ProductResource::collection($products)
