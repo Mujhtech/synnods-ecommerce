@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CPoppins:300,400,500,600,700%7cOswald:300,400,500,600,700,800" rel="stylesheet">
+        <script src="{{ asset('assets/js/vendor/modernizer-3.11.7.min.js') }}"></script>
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -25,6 +26,8 @@
         </script>
         <!-- all js here -->
         <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('assets/js/popper.js') }}"></script>
+        <script src="{{ asset('assets/js/plugins.js') }}"></script>
         <script src="{{ asset('assets/js/main.js') }}"></script>
     </body>
 </html>

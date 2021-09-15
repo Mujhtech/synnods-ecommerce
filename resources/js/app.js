@@ -7,11 +7,9 @@
 //require('./plugins/directives/sticky');
 
 
-require('./plugin/modernizr');
 window.jQuery = require('jquery');
 require('@popperjs/core');
 require('bootstrap');
-require('./plugin/index');
 
 import Vue from 'vue';
 import App from './App.vue';
