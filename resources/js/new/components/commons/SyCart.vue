@@ -49,10 +49,10 @@
                 </h4>
             </div>
             <div class="shopping-cart-btn">
-                <router-link class="btn-style btn-hover" to="cart"
+                <router-link class="btn-style btn-hover" to="/cart"
                     >view cart</router-link
                 >
-                <router-link class="btn-style btn-hover" to="checkout"
+                <router-link class="btn-style btn-hover" to="/checkout"
                     >checkout</router-link
                 >
             </div>

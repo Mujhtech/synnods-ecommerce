@@ -88,7 +88,7 @@
                 >Password must be greate than 8 character</small
             >
             <div class="button-box">
-                <button type="submit" id="submit"><span>Register</span></button>
+                <button type="submit" id="register-btn"><span>Register</span></button>
             </div>
         </form>
     </div>
@@ -197,7 +197,7 @@ export default {
             if (this.$v.user.$invalid) {
                 return;
             }
-            let submit = document.getElementById("submit");
+            let submit = document.getElementById("register-btn");
             try {
                 this.loading = true;
                 submit.innerText = "Loading...";

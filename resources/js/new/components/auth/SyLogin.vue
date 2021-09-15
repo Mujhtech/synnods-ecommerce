@@ -39,7 +39,7 @@
                     <label>Remember me</label>
                     <router-link to="/auth/forgot">Forgot Password?</router-link>
                 </div>
-                <button type="submit" id="submit"
+                <button type="submit" id="login-btn"
                 :disabled="loading"><span>Login</span></button>
             </div>
         </form>
@@ -109,7 +109,7 @@ export default {
         return;
       }
 
-      let submit = document.getElementById("submit");
+      let submit = document.getElementById("login-btn");
       try {
         this.loading = true;
         submit.innerText = "Loading...";
