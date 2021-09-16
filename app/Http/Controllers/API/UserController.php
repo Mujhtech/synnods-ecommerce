@@ -17,7 +17,7 @@ class UserController extends ApiController
 
         $user = $request->user();
 
-        if(!empty($request->password)){
+        if(!empty($request->password) && $request->type == "password"){
 
             $request->validate([
                 'password' => 'required|string|min:8',
@@ -33,6 +33,15 @@ class UserController extends ApiController
             }
 
             $user->password = $request->password;
+
+            if($user->save()) {
+
+                return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+                    'message' => 'Data updated successfully',
+                    'user' => UserResource::make($user)
+                ]);
+                
+            }
 
         }
         

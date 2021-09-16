@@ -2,6 +2,7 @@
 const ADD_TO_CART = "ADD_TO_CART";
 const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 const UPDATE_CART = "UPDATE_CART";
+const CLEAR_CART = "CLEAR_CART";
 const cart = JSON.parse(window.localStorage.getItem("SYNECCART"));
 
 function state() {
@@ -45,6 +46,9 @@ const actions = {
     removeFromCart: function({ commit }, payload) {
         commit(REMOVE_FROM_CART, payload);
     },
+    clearCart: function({ commit }, payload) {
+        commit(CLEAR_CART, payload);
+    },
     updateCart: function({ commit }, payload) {
         commit(UPDATE_CART, payload);
     }
@@ -87,6 +91,10 @@ const mutations = {
     [UPDATE_CART](state, payload) {
         state.data = payload.cartItems;
         localStorage.setItem("SYNECCART", JSON.stringify({ data: state.data }));
+    },
+    [CLEAR_CART](state, payload) {
+        state.data = [];
+        localStorage.setItem("SYNECCART", JSON.stringify({ data: [] }));
     }
 };
 

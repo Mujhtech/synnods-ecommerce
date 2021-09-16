@@ -37,8 +37,8 @@
                                                         :src="
                                                             `${product.featured_image}`
                                                         "
-                                                        width="200"
-                                                        height="200"
+                                                        width="150"
+                                                        height="150"
                                                         :alt="product.name"
                                                     />
                                                 </router-link>
@@ -79,7 +79,7 @@
                                                 }}
                                             </td>
                                             <td class="product-remove">
-                                                <a href="#"
+                                                <a href="javascript:;"
                                                     ><i class="fa fa-pencil"></i
                                                 ></a>
                                                 <a
@@ -98,13 +98,13 @@
                                 <div class="col-lg-12">
                                     <div class="cart-shiping-update-wrapper">
                                         <div class="cart-shiping-update">
-                                            <a href="#">Continue Shopping</a>
+                                            <router-link to="/shop">Continue Shopping</router-link>
                                         </div>
                                         <div class="cart-clear">
                                             <button>
                                                 Update Shopping Cart
                                             </button>
-                                            <a href="#">Clear Shopping Cart</a>
+                                            <a href="javascript:;" @click="clearMyCart">Clear Shopping Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -131,30 +131,14 @@
                                                 <select
                                                     class="email s-email s-wid"
                                                 >
-                                                    <option>Bangladesh</option>
-                                                    <option>Albania</option>
-                                                    <option
-                                                        >Åland Islands</option
-                                                    >
-                                                    <option>Afghanistan</option>
-                                                    <option>Belgium</option>
+                                                    <option>Nigeria</option>
                                                 </select>
                                             </div>
                                             <div class="tax-select">
                                                 <label>
-                                                    * Region / State
+                                                    * State
                                                 </label>
-                                                <select
-                                                    class="email s-email s-wid"
-                                                >
-                                                    <option>Bangladesh</option>
-                                                    <option>Albania</option>
-                                                    <option
-                                                        >Åland Islands</option
-                                                    >
-                                                    <option>Afghanistan</option>
-                                                    <option>Belgium</option>
-                                                </select>
+                                                <input type="text" />
                                             </div>
                                             <div class="tax-select">
                                                 <label>
@@ -211,24 +195,24 @@
                                             Cart Total
                                         </h4>
                                     </div>
-                                    <h5>Total products <span>$260.00</span></h5>
+                                    <h5>Total products <span>₦{{totalPrice}}</span></h5>
                                     <div class="total-shipping">
                                         <h5>Total shipping</h5>
                                         <ul>
                                             <li>
                                                 <input type="checkbox" />
-                                                Standard <span>$20.00</span>
+                                                Standard <span>₦20.00</span>
                                             </li>
                                             <li>
                                                 <input type="checkbox" />
-                                                Express <span>$30.00</span>
+                                                Express <span>₦30.00</span>
                                             </li>
                                         </ul>
                                     </div>
                                     <h4 class="grand-totall-title">
-                                        Grand Total <span>$260.00</span>
+                                        Grand Total <span>₦{{totalPrice}}</span>
                                     </h4>
-                                    <a href="#">Proceed to Checkout</a>
+                                    <router-link to="/checkout">Proceed to Checkout</router-link>
                                 </div>
                             </div>
                         </div>
@@ -264,7 +248,10 @@ export default {
         }
     },
     methods: {
-        ...mapActions("cart", ["updateCart", "removeFromCart"]),
+        ...mapActions("cart", ["updateCart", "removeFromCart", "clearCart"]),
+        clearMyCart: function(){
+            this.clearCart({});
+        },
         changeQty: function(value, product) {
             this.cartItems = this.cartItems.reduce((acc, cur) => {
                 if (cur.name === product.name) {

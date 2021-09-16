@@ -1,49 +1,50 @@
 <template>
-    <div class="login-register-form">
-        <pre-loader v-if="loading"></pre-loader>
-        <form action="#" v-on:submit.prevent="login">
-            <input
-                type="email"
-                id="login-email"
-                placeholder="Email Address"
-                v-model.trim="$v.user.email.$model"
-                :disabled="loading"
-                :class="status($v.user.email)"
-              />
-              <small
-                v-if="!checkRequired($v.user.email)"
-                style="display: block; color: red; font-size: 12px"
-                >Email address is required</small
-              >
-              <small
-                v-if="!checkEmail($v.user.email)"
-                style="display: block; color: red; font-size: 12px"
-                >Email address is invalid</small
-              >
-            <input
-                type="password"
-                id="login-password"
-                placeholder="Password"
-                v-model.trim="$v.user.password.$model"
-                :class="status($v.user.password)"
-                :disabled="loading"
-              />
-              <small
-                v-if="!checkRequired($v.user.password)"
-                style="display: block; color: red; font-size: 12px"
-                >Password is required</small
-              >
-            <div class="button-box">
-                <div class="login-toggle-btn">
-                    <input type="checkbox" v-model="user.remember_me" />
-                    <label>Remember me</label>
-                    <router-link to="/auth/forgot">Forgot Password?</router-link>
-                </div>
-                <button type="submit" id="login-btn"
-                :disabled="loading"><span>Login</span></button>
-            </div>
-        </form>
-    </div>
+  <div class="login-register-form">
+    <pre-loader v-if="loading"></pre-loader>
+    <form action="#" v-on:submit.prevent="login">
+      <input
+        type="email"
+        id="login-email"
+        placeholder="Email Address"
+        v-model.trim="$v.user.email.$model"
+        :disabled="loading"
+        :class="status($v.user.email)"
+      />
+      <small
+        v-if="!checkRequired($v.user.email)"
+        style="display: block; color: red; font-size: 12px"
+        >Email address is required</small
+      >
+      <small
+        v-if="!checkEmail($v.user.email)"
+        style="display: block; color: red; font-size: 12px"
+        >Email address is invalid</small
+      >
+      <input
+        type="password"
+        id="login-password"
+        placeholder="Password"
+        v-model.trim="$v.user.password.$model"
+        :class="status($v.user.password)"
+        :disabled="loading"
+      />
+      <small
+        v-if="!checkRequired($v.user.password)"
+        style="display: block; color: red; font-size: 12px"
+        >Password is required</small
+      >
+      <div class="button-box">
+        <div class="login-toggle-btn">
+          <input type="checkbox" v-model="user.remember_me" />
+          <label>Remember me</label>
+          <router-link to="/auth/forgot">Forgot Password?</router-link>
+        </div>
+        <button type="submit" id="login-btn" :disabled="loading">
+          <span>Login</span>
+        </button>
+      </div>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -127,7 +128,7 @@ export default {
             type: "success",
             message: "Successfully logged in",
           });
-          this.$router.push("/account");
+          this.$router.push(this.$route.query.redirect || "/");
         }
       } catch (error) {
         if (!error.response) return;

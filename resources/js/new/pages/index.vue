@@ -86,7 +86,6 @@ export default {
         try {
             const response = await fetchProduct();
             this.products = response.data.data.data;
-            console.log(this.products);
             this.featuredProducts = getProductsByFeatured(
                 response.data.data.data
             );

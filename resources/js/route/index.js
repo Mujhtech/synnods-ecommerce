@@ -113,7 +113,7 @@ router.beforeResolve((to, from, next) => {
             !localStorage.getItem("SYNECT") &&
             to.meta.middleware.includes("auth")
         ) {
-            next("/authentication");
+            next(`/authentication?redirect=${from.fullPath}`);
         } else if (
             localStorage.getItem("SYNECT") &&
             to.meta.middleware.includes("guest")

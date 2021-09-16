@@ -5475,6 +5475,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -5570,7 +5571,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     type: "success",
                     message: "Successfully logged in"
                   });
-                  this.$router.push("/account");
+                  this.$router.push(this.$route.query.redirect || "/");
                 }
 
                 _context.next = 22;
@@ -5894,6 +5895,212 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return register;
     }()
   })
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartBilling.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartBilling.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "SyCartBilling"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartItem.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartItem.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "SyCartItem",
+  props: {
+    items: Array,
+    totalPrice: Number
+  }
 });
 
 /***/ }),
@@ -6704,6 +6911,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _product_single_SyProductThree__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../product/single/SyProductThree */ "./resources/js/new/components/product/single/SyProductThree.vue");
 //
 //
 //
@@ -6756,1079 +6964,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "BestSellingProduct",
   props: {
     products: Array
+  },
+  components: {
+    SyProductThree: _product_single_SyProductThree__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -7845,6 +6988,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _product_single_SyProductTwo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../product/single/SyProductTwo */ "./resources/js/new/components/product/single/SyProductTwo.vue");
 //
 //
 //
@@ -7863,323 +7007,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "HeadPhone",
   props: {
     products: Array
+  },
+  components: {
+    SyProductTwo: _product_single_SyProductTwo__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -8530,6 +7365,291 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductThree.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductThree.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../api/index */ "./resources/js/api/index.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Product",
+  props: {
+    product: Object
+  },
+  data: function data() {
+    return {
+      baseUrl: _api_index__WEBPACK_IMPORTED_MODULE_0__["default"],
+      discount: 0
+    };
+  },
+  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("wishlist", ["wishList"])), {}, {
+    isWishlisted: function isWishlisted() {
+      var _this = this;
+
+      if (this.wishList.findIndex(function (item) {
+        return item.name === _this.product.name;
+      }) > -1) return true;
+      return false;
+    }
+  }),
+  mounted: function mounted() {
+    if (this.product.is_sale && this.product.price) {
+      this.discount = (this.product.price - this.product.sale_price) / this.product.price * 100;
+      this.discount = parseInt(this.discount);
+    }
+  },
+  methods: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapActions)("wishlist", ["addToWishlist"])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapActions)("cart", ["addToCart"])), {}, {
+    addWishlist: function addWishlist() {
+      var _this2 = this;
+
+      setTimeout(function () {
+        _this2.addToWishlist({
+          product: _this2.product
+        });
+        /*document
+            .querySelector(".wishlist-popup")
+            .classList.add("active");
+         setTimeout(() => {
+            document
+                .querySelector(".wishlist-popup")
+                .classList.remove("active");
+        }, 1000);*/
+
+      }, 1000);
+    },
+    addCart: function addCart() {
+      if (this.product.quantity_in_stock > 0) {
+        var saledProduct = _objectSpread({}, this.product);
+
+        if (this.product.is_sale) {
+          saledProduct.price = this.product.sale_price;
+        }
+
+        this.addToCart({
+          product: saledProduct
+        });
+      }
+    }
+  })
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../api/index */ "./resources/js/api/index.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Product",
+  props: {
+    product: Object
+  },
+  data: function data() {
+    return {
+      baseUrl: _api_index__WEBPACK_IMPORTED_MODULE_0__["default"],
+      discount: 0
+    };
+  },
+  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)('wishlist', ['wishList'])), {}, {
+    isWishlisted: function isWishlisted() {
+      var _this = this;
+
+      if (this.wishList.findIndex(function (item) {
+        return item.name === _this.product.name;
+      }) > -1) return true;
+      return false;
+    }
+  }),
+  mounted: function mounted() {
+    if (this.product.is_sale && this.product.price) {
+      this.discount = (this.product.price - this.product.sale_price) / this.product.price * 100;
+      this.discount = parseInt(this.discount);
+    }
+  },
+  methods: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapActions)("wishlist", ["addToWishlist"])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapActions)("cart", ["addToCart"])), {}, {
+    addWishlist: function addWishlist() {
+      var _this2 = this;
+
+      setTimeout(function () {
+        _this2.addToWishlist({
+          product: _this2.product
+        });
+        /*document
+            .querySelector(".wishlist-popup")
+            .classList.add("active");
+         setTimeout(() => {
+            document
+                .querySelector(".wishlist-popup")
+                .classList.remove("active");
+        }, 1000);*/
+
+      }, 1000);
+    },
+    addCart: function addCart() {
+      if (this.product.quantity_in_stock > 0) {
+        var saledProduct = _objectSpread({}, this.product);
+
+        if (this.product.is_sale) {
+          saledProduct.price = this.product.sale_price;
+        }
+
+        this.addToCart({
+          product: saledProduct
+        });
+      }
+    }
+  })
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/account.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/account.vue?vue&type=script&lang=js& ***!
@@ -8544,11 +7664,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_commons_PreLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/commons/PreLoader */ "./resources/js/new/components/commons/PreLoader.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../api */ "./resources/js/api/index.js");
-/* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
-/* harmony import */ var _services_user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/user */ "./resources/js/services/user.js");
-/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var _components_commons_SyBreadcrumb__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/commons/SyBreadcrumb */ "./resources/js/new/components/commons/SyBreadcrumb.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../api */ "./resources/js/api/index.js");
+/* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/auth */ "./resources/js/services/auth.js");
+/* harmony import */ var _services_user__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/user */ "./resources/js/services/user.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -8909,6 +8030,179 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -8922,88 +8216,94 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     titleTemplate: "%s - Faadaakaa Ecommerce"
   },
   components: {
-    PreLoader: _components_commons_PreLoader__WEBPACK_IMPORTED_MODULE_1__["default"]
+    PreLoader: _components_commons_PreLoader__WEBPACK_IMPORTED_MODULE_1__["default"],
+    SyBreadcrumb: _components_commons_SyBreadcrumb__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   watch: {
     wishList: function wishList() {
       this.makeCartItems();
     }
   },
-  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_5__.mapGetters)("user", ["user", "getShippingAddesses", "getOrders"])), (0,vuex__WEBPACK_IMPORTED_MODULE_5__.mapGetters)("wishlist", ["wishList"])),
+  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapGetters)("user", ["user", "getShippingAddesses", "getOrders"])), (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapGetters)("wishlist", ["wishList"])),
   validations: {
     userprofile: {
       first_name: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       },
       last_name: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       },
       email: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       },
       phone: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
-      },
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
+      }
+    },
+    password: {
       old_password: {
-        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.minLength)(8)
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required,
+        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.minLength)(8)
       },
       password: {
-        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.minLength)(8)
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required,
+        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.minLength)(8)
       },
       confirm_password: {
-        sameAsPassword: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.sameAs)("password")
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required,
+        sameAsPassword: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.sameAs)("password")
       }
     },
     billing: {
       country: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       },
       state: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       },
       city: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       },
       address: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       }
     },
     shipping: {
       country: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       },
       state: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       },
       city: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       },
       address: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       },
       phone: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required,
-        maxLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.maxLength)(11)
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required,
+        maxLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.maxLength)(11)
       },
       postal_code: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       }
     }
   },
   created: function created() {
-    this.userprofile.first_name = _services_auth__WEBPACK_IMPORTED_MODULE_3__.getUser().first_name;
-    this.userprofile.last_name = _services_auth__WEBPACK_IMPORTED_MODULE_3__.getUser().last_name;
-    this.userprofile.email = _services_auth__WEBPACK_IMPORTED_MODULE_3__.getUser().email;
-    this.userprofile.phone = _services_auth__WEBPACK_IMPORTED_MODULE_3__.getUser().phone_number;
-    this.billing.city = _services_auth__WEBPACK_IMPORTED_MODULE_3__.getUser().city;
-    this.billing.address = _services_auth__WEBPACK_IMPORTED_MODULE_3__.getUser().address;
-    this.billing.state = _services_auth__WEBPACK_IMPORTED_MODULE_3__.getUser().state; //this.billing.country = auth.getUser().country;
+    this.userprofile.first_name = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().first_name;
+    this.userprofile.last_name = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().last_name;
+    this.userprofile.email = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().email;
+    this.userprofile.phone = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().phone_number;
+    this.billing.city = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().city;
+    this.billing.address = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().address;
+    this.billing.state = _services_auth__WEBPACK_IMPORTED_MODULE_4__.getUser().state; //this.billing.country = auth.getUser().country;
   },
   data: function data() {
     return {
       isSticky: false,
       loading: false,
-      baseUrl: _api__WEBPACK_IMPORTED_MODULE_2__.baseUrl,
+      baseUrl: _api__WEBPACK_IMPORTED_MODULE_3__.baseUrl,
       wishItems: [],
       currentProduct: null,
       userprofile: {
@@ -9011,9 +8311,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         last_name: "",
         email: "",
         phone: "",
+        type: "account"
+      },
+      password: {
         old_password: "",
         password: "",
-        confirm_password: ""
+        confirm_password: "",
+        type: "password"
       },
       shipping: {
         address: "",
@@ -9033,34 +8337,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     };
   },
   mounted: function mounted() {
-    this.resizeHandler();
     this.makeCartItems();
-    window.addEventListener("resize", this.resizeHandler, {
-      passive: true
-    });
   },
-  destroyed: function destroyed() {
-    window.removeEventListener("resize", this.resizeHandler);
-  },
-  methods: _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_5__.mapActions)("user", ["userLogin", "userLogout"])), (0,vuex__WEBPACK_IMPORTED_MODULE_5__.mapActions)("notification", ["addNotification"])), (0,vuex__WEBPACK_IMPORTED_MODULE_5__.mapActions)("wishlist", ["removeFromWishlist"])), (0,vuex__WEBPACK_IMPORTED_MODULE_5__.mapActions)("cart", ["addToCart"])), {}, {
+  destroyed: function destroyed() {},
+  methods: _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapActions)("user", ["userLogin", "userLogout"])), (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapActions)("notification", ["addNotification"])), (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapActions)("wishlist", ["removeFromWishlist"])), (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapActions)("cart", ["addToCart"])), {}, {
     makeCartItems: function makeCartItems() {
       this.wishItems = this.wishList;
       this.wishItems = this.wishList.reduce(function (acc, product) {
-        var minPrice = 0,
-            maxPrice = 0;
-        /*if (!product.price) {
-        minPrice = product.variants[0].price;
-        product.variants.forEach((item) => {
-        let itemPrice = item.is_sale ? item.sale_price : item.price;
-        if (minPrice > itemPrice) minPrice = itemPrice;
-        if (maxPrice < itemPrice) maxPrice = itemPrice;
-        });
-        }*/
-
-        return [].concat(_toConsumableArray(acc), [_objectSpread(_objectSpread({}, product), {}, {
-          minPrice: minPrice,
-          maxPrice: maxPrice
-        })]);
+        return [].concat(_toConsumableArray(acc), [_objectSpread({}, product)]);
       }, []);
     },
     openQuickview: function openQuickview(product) {
@@ -9133,7 +8417,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                submit = document.getElementById("update_submit");
+                submit = document.getElementById("update_account");
                 this.$v.userprofile.$touch();
 
                 if (!this.$v.userprofile.$invalid) {
@@ -9147,28 +8431,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 _context.prev = 4;
                 this.loading = true;
                 _context.next = 8;
-                return _services_user__WEBPACK_IMPORTED_MODULE_4__.update(this.userprofile);
+                return _services_user__WEBPACK_IMPORTED_MODULE_5__.update(this.userprofile);
 
               case 8:
                 response = _context.sent;
                 console.log(response);
                 this.userLogin(response.data.data.user);
-                _services_auth__WEBPACK_IMPORTED_MODULE_3__.setUser(response.data.data.user);
+                _services_auth__WEBPACK_IMPORTED_MODULE_4__.setUser(response.data.data.user);
                 this.addNotification({
                   type: "success",
                   message: response.data.data.message
                 });
                 submit.innerText = "Save Address";
                 this.loading = false;
-                this.password = "";
-                this.old_password = "";
-                this.confirm_password = "";
                 this.$router.go();
-                _context.next = 27;
+                _context.next = 24;
                 break;
 
-              case 21:
-                _context.prev = 21;
+              case 18:
+                _context.prev = 18;
                 _context.t0 = _context["catch"](4);
                 this.loading = false;
                 submit.innerText = "Save Address";
@@ -9178,12 +8459,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   message: _context.t0.response.data.data.message
                 });
 
-              case 27:
+              case 24:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[4, 21]]);
+        }, _callee, this, [[4, 18]]);
       }));
 
       function updateProfile() {
@@ -9192,17 +8473,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       return updateProfile;
     }(),
-    updateBillingAddress: function () {
-      var _updateBillingAddress = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+    updatePassword: function () {
+      var _updatePassword = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
         var submit, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                submit = document.getElementById("billing_submit");
-                this.$v.billing.$touch();
+                submit = document.getElementById("update_password");
+                this.$v.password.$touch();
 
-                if (!this.$v.billing.$invalid) {
+                if (!this.$v.password.$invalid) {
                   _context2.next = 4;
                   break;
                 }
@@ -9212,30 +8493,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               case 4:
                 _context2.prev = 4;
                 this.loading = true;
-                submit.innerText = "Loading";
-                _context2.next = 9;
-                return _services_user__WEBPACK_IMPORTED_MODULE_4__.updateBilling(this.billing);
+                _context2.next = 8;
+                return _services_user__WEBPACK_IMPORTED_MODULE_5__.update(this.password);
 
-              case 9:
+              case 8:
                 response = _context2.sent;
                 console.log(response);
                 this.userLogin(response.data.data.user);
-                _services_auth__WEBPACK_IMPORTED_MODULE_3__.setUser(response.data.data.user);
+                _services_auth__WEBPACK_IMPORTED_MODULE_4__.setUser(response.data.data.user);
                 this.addNotification({
                   type: "success",
                   message: response.data.data.message
                 });
-                this.billing.address = "";
-                this.billing.city = "";
-                this.billing.state = "";
                 submit.innerText = "Save Address";
                 this.loading = false;
                 this.$router.go();
-                _context2.next = 28;
+                _context2.next = 24;
                 break;
 
-              case 22:
-                _context2.prev = 22;
+              case 18:
+                _context2.prev = 18;
                 _context2.t0 = _context2["catch"](4);
                 this.loading = false;
                 submit.innerText = "Save Address";
@@ -9245,31 +8522,31 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   message: _context2.t0.response.data.data.message
                 });
 
-              case 28:
+              case 24:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[4, 22]]);
+        }, _callee2, this, [[4, 18]]);
       }));
 
-      function updateBillingAddress() {
-        return _updateBillingAddress.apply(this, arguments);
+      function updatePassword() {
+        return _updatePassword.apply(this, arguments);
       }
 
-      return updateBillingAddress;
+      return updatePassword;
     }(),
-    createShippingAddress: function () {
-      var _createShippingAddress = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+    updateBillingAddress: function () {
+      var _updateBillingAddress = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
         var submit, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                submit = document.getElementById("shipping_submit");
-                this.$v.shipping.$touch();
+                submit = document.getElementById("billing_submit");
+                this.$v.billing.$touch();
 
-                if (!this.$v.shipping.$invalid) {
+                if (!this.$v.billing.$invalid) {
                   _context3.next = 4;
                   break;
                 }
@@ -9281,13 +8558,80 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 this.loading = true;
                 submit.innerText = "Loading";
                 _context3.next = 9;
-                return _services_user__WEBPACK_IMPORTED_MODULE_4__.createShipping(this.shipping);
+                return _services_user__WEBPACK_IMPORTED_MODULE_5__.updateBilling(this.billing);
 
               case 9:
                 response = _context3.sent;
                 console.log(response);
                 this.userLogin(response.data.data.user);
-                _services_auth__WEBPACK_IMPORTED_MODULE_3__.setUser(response.data.data.user);
+                _services_auth__WEBPACK_IMPORTED_MODULE_4__.setUser(response.data.data.user);
+                this.addNotification({
+                  type: "success",
+                  message: response.data.data.message
+                });
+                this.billing.address = "";
+                this.billing.city = "";
+                this.billing.state = "";
+                submit.innerText = "Save Address";
+                this.loading = false;
+                this.$router.go();
+                _context3.next = 28;
+                break;
+
+              case 22:
+                _context3.prev = 22;
+                _context3.t0 = _context3["catch"](4);
+                this.loading = false;
+                submit.innerText = "Save Address";
+                console.log(_context3.t0.response);
+                this.addNotification({
+                  type: "error",
+                  message: _context3.t0.response.data.data.message
+                });
+
+              case 28:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, this, [[4, 22]]);
+      }));
+
+      function updateBillingAddress() {
+        return _updateBillingAddress.apply(this, arguments);
+      }
+
+      return updateBillingAddress;
+    }(),
+    createShippingAddress: function () {
+      var _createShippingAddress = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4() {
+        var submit, response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                submit = document.getElementById("shipping_submit");
+                this.$v.shipping.$touch();
+
+                if (!this.$v.shipping.$invalid) {
+                  _context4.next = 4;
+                  break;
+                }
+
+                return _context4.abrupt("return");
+
+              case 4:
+                _context4.prev = 4;
+                this.loading = true;
+                submit.innerText = "Loading";
+                _context4.next = 9;
+                return _services_user__WEBPACK_IMPORTED_MODULE_5__.createShipping(this.shipping);
+
+              case 9:
+                response = _context4.sent;
+                console.log(response);
+                this.userLogin(response.data.data.user);
+                _services_auth__WEBPACK_IMPORTED_MODULE_4__.setUser(response.data.data.user);
                 this.addNotification({
                   type: "success",
                   message: response.data.data.message
@@ -9299,26 +8643,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 submit.innerText = "Save Address";
                 this.loading = false;
                 this.$router.go();
-                _context3.next = 29;
+                _context4.next = 29;
                 break;
 
               case 23:
-                _context3.prev = 23;
-                _context3.t0 = _context3["catch"](4);
+                _context4.prev = 23;
+                _context4.t0 = _context4["catch"](4);
                 this.loading = false;
                 submit.innerText = "Save Address";
-                console.log(_context3.t0.response);
+                console.log(_context4.t0.response);
                 this.addNotification({
                   type: "error",
-                  message: _context3.t0.response.data.data.message
+                  message: _context4.t0.response.data.data.message
                 });
 
               case 29:
               case "end":
-                return _context3.stop();
+                return _context4.stop();
             }
           }
-        }, _callee3, this, [[4, 23]]);
+        }, _callee4, this, [[4, 23]]);
       }));
 
       function createShippingAddress() {
@@ -9328,18 +8672,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return createShippingAddress;
     }(),
     logout: function () {
-      var _logout = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4() {
+      var _logout = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5() {
         var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
           while (1) {
-            switch (_context4.prev = _context4.next) {
+            switch (_context5.prev = _context5.next) {
               case 0:
-                _context4.prev = 0;
-                _context4.next = 3;
-                return _services_auth__WEBPACK_IMPORTED_MODULE_3__.logout();
+                _context5.prev = 0;
+                _context5.next = 3;
+                return _services_auth__WEBPACK_IMPORTED_MODULE_4__.logout();
 
               case 3:
-                response = _context4.sent;
+                response = _context5.sent;
                 this.userLogout({});
                 this.addNotification({
                   type: "success",
@@ -9347,20 +8691,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 });
                 console.log(response);
                 this.$router.push("/");
-                _context4.next = 13;
+                _context5.next = 13;
                 break;
 
               case 10:
-                _context4.prev = 10;
-                _context4.t0 = _context4["catch"](0);
-                console.log(_context4.t0.response);
+                _context5.prev = 10;
+                _context5.t0 = _context5["catch"](0);
+                console.log(_context5.t0.response);
 
               case 13:
               case "end":
-                return _context4.stop();
+                return _context5.stop();
             }
           }
-        }, _callee4, this, [[0, 10]]);
+        }, _callee5, this, [[0, 10]]);
       }));
 
       function logout() {
@@ -9368,22 +8712,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
 
       return logout;
-    }(),
-    tabClicked: function tabClicked(e) {
-      var linkId = e.target.getAttribute("data-toggle");
-      if (!linkId) linkId = e.target.parentNode.parentNode.getAttribute("data-toggle");
-      if (document.getElementById(linkId + "-tab")) document.getElementById(linkId + "-tab").click();
-    },
-    handler: function handler(e) {
-      var linkId = e.target.getAttribute("href");
-
-      if (document.querySelector(linkId + "-tab")) {
-        document.querySelector(linkId + "-tab").classList.add("active");
-      }
-    },
-    resizeHandler: function resizeHandler() {
-      this.isSticky = window.innerWidth > 991 ? true : false;
-    }
+    }()
   })
 });
 
@@ -10459,22 +9788,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Cart",
@@ -10496,7 +9809,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.cartItems = _toConsumableArray(this.cartList);
     }
   },
-  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapActions)("cart", ["updateCart", "removeFromCart"])), {}, {
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapActions)("cart", ["updateCart", "removeFromCart", "clearCart"])), {}, {
+    clearMyCart: function clearMyCart() {
+      this.clearCart({});
+    },
     changeQty: function changeQty(value, product) {
       this.cartItems = this.cartItems.reduce(function (acc, cur) {
         if (cur.name === product.name) {
@@ -10520,6 +9836,228 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       }, []);
     }
+  })
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/checkout.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/checkout.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _components_commons_SyBreadcrumb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/commons/SyBreadcrumb */ "./resources/js/new/components/commons/SyBreadcrumb.vue");
+/* harmony import */ var _components_cart_SyCartUser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/cart/SyCartUser */ "./resources/js/new/components/cart/SyCartUser.vue");
+/* harmony import */ var _components_cart_SyCartBilling__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/cart/SyCartBilling */ "./resources/js/new/components/cart/SyCartBilling.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _components_cart_SyCartItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/cart/SyCartItem */ "./resources/js/new/components/cart/SyCartItem.vue");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Checkout",
+  components: {
+    SyBreadcrumb: _components_commons_SyBreadcrumb__WEBPACK_IMPORTED_MODULE_0__["default"],
+    SyCartUser: _components_cart_SyCartUser__WEBPACK_IMPORTED_MODULE_1__["default"],
+    SyCartBilling: _components_cart_SyCartBilling__WEBPACK_IMPORTED_MODULE_2__["default"],
+    SyCartItem: _components_cart_SyCartItem__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  metaInfo: {
+    title: "Checkout",
+    titleTemplate: "%s - Faadaakaa Ecommerce"
+  },
+  data: function data() {
+    return {
+      cartItems: [],
+      payment_methods: []
+    };
+  },
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapGetters)("cart", ["cartList", "totalPrice"])),
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapActions)("cart", ["updateCart", "removeFromCart", "clearCart"])), {}, {
+    getPaymentMethod: function getPaymentMethod() {}
   })
 });
 
@@ -10650,29 +10188,28 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             case 3:
               response = _context.sent;
               this.products = response.data.data.data;
-              console.log(this.products);
               this.featuredProducts = (0,_utils_service__WEBPACK_IMPORTED_MODULE_8__.getProductsByFeatured)(response.data.data.data);
               this.mostViewProducts = (0,_utils_service__WEBPACK_IMPORTED_MODULE_8__.getProductsByViews)(response.data.data.data); //this.newProducts = getProductsByAttri(response.data.data.data, "is_new");
               //this.bestProducts = getTopSellingProducts(response.data.data.data);
               //this.topRatedProducts = getTopRatedProducts(response.data.data.data);
 
-              _context.next = 13;
+              _context.next = 12;
               break;
 
-            case 10:
-              _context.prev = 10;
+            case 9:
+              _context.prev = 9;
               _context.t0 = _context["catch"](0);
               console.log(_context.t0.response);
 
-            case 13:
+            case 12:
               this.timerId = setTimeout(function () {}, 10000);
 
-            case 14:
+            case 13:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, this, [[0, 10]]);
+      }, _callee, this, [[0, 9]]);
     }));
 
     function mounted() {
@@ -14292,25 +13829,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -14738,7 +14256,7 @@ router.beforeResolve(function (to, from, next) {
 
   if (to.meta.middleware) {
     if (!localStorage.getItem("SYNECT") && to.meta.middleware.includes("auth")) {
-      next("/authentication");
+      next("/authentication?redirect=".concat(from.fullPath));
     } else if (localStorage.getItem("SYNECT") && to.meta.middleware.includes("guest")) {
       next("/account");
     } else {
@@ -14981,6 +14499,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var ADD_TO_CART = "ADD_TO_CART";
 var REMOVE_FROM_CART = "REMOVE_FROM_CART";
 var UPDATE_CART = "UPDATE_CART";
+var CLEAR_CART = "CLEAR_CART";
 var cart = JSON.parse(window.localStorage.getItem("SYNECCART"));
 
 function state() {
@@ -15025,8 +14544,12 @@ var actions = {
     var commit = _ref2.commit;
     commit(REMOVE_FROM_CART, payload);
   },
-  updateCart: function updateCart(_ref3, payload) {
+  clearCart: function clearCart(_ref3, payload) {
     var commit = _ref3.commit;
+    commit(CLEAR_CART, payload);
+  },
+  updateCart: function updateCart(_ref4, payload) {
+    var commit = _ref4.commit;
     commit(UPDATE_CART, payload);
   }
 };
@@ -15067,6 +14590,11 @@ var mutations = (_mutations = {}, _defineProperty(_mutations, ADD_TO_CART, funct
   state.data = payload.cartItems;
   localStorage.setItem("SYNECCART", JSON.stringify({
     data: state.data
+  }));
+}), _defineProperty(_mutations, CLEAR_CART, function (state, payload) {
+  state.data = [];
+  localStorage.setItem("SYNECCART", JSON.stringify({
+    data: []
   }));
 }), _mutations);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -27517,7 +27045,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.error[data-v-24a8a4a5] {\r\n    border-color: red !important;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.error[data-v-24a8a4a5] {\r\n  border-color: red !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -59545,6 +59073,121 @@ component.options.__file = "resources/js/new/components/auth/SyRegister.vue"
 
 /***/ }),
 
+/***/ "./resources/js/new/components/cart/SyCartBilling.vue":
+/*!************************************************************!*\
+  !*** ./resources/js/new/components/cart/SyCartBilling.vue ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SyCartBilling_vue_vue_type_template_id_4d951dfc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SyCartBilling.vue?vue&type=template&id=4d951dfc& */ "./resources/js/new/components/cart/SyCartBilling.vue?vue&type=template&id=4d951dfc&");
+/* harmony import */ var _SyCartBilling_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SyCartBilling.vue?vue&type=script&lang=js& */ "./resources/js/new/components/cart/SyCartBilling.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SyCartBilling_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SyCartBilling_vue_vue_type_template_id_4d951dfc___WEBPACK_IMPORTED_MODULE_0__.render,
+  _SyCartBilling_vue_vue_type_template_id_4d951dfc___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/new/components/cart/SyCartBilling.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/new/components/cart/SyCartItem.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/new/components/cart/SyCartItem.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SyCartItem_vue_vue_type_template_id_4b1c291c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SyCartItem.vue?vue&type=template&id=4b1c291c& */ "./resources/js/new/components/cart/SyCartItem.vue?vue&type=template&id=4b1c291c&");
+/* harmony import */ var _SyCartItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SyCartItem.vue?vue&type=script&lang=js& */ "./resources/js/new/components/cart/SyCartItem.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SyCartItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SyCartItem_vue_vue_type_template_id_4b1c291c___WEBPACK_IMPORTED_MODULE_0__.render,
+  _SyCartItem_vue_vue_type_template_id_4b1c291c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/new/components/cart/SyCartItem.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/new/components/cart/SyCartUser.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/new/components/cart/SyCartUser.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SyCartUser_vue_vue_type_template_id_15eb0458___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SyCartUser.vue?vue&type=template&id=15eb0458& */ "./resources/js/new/components/cart/SyCartUser.vue?vue&type=template&id=15eb0458&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _SyCartUser_vue_vue_type_template_id_15eb0458___WEBPACK_IMPORTED_MODULE_0__.render,
+  _SyCartUser_vue_vue_type_template_id_15eb0458___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/new/components/cart/SyCartUser.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/new/components/commons/PreLoader.vue":
 /*!***********************************************************!*\
   !*** ./resources/js/new/components/commons/PreLoader.vue ***!
@@ -60198,6 +59841,84 @@ component.options.__file = "resources/js/new/components/product/single/SyProduct
 
 /***/ }),
 
+/***/ "./resources/js/new/components/product/single/SyProductThree.vue":
+/*!***********************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductThree.vue ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SyProductThree_vue_vue_type_template_id_6ec433f0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SyProductThree.vue?vue&type=template&id=6ec433f0& */ "./resources/js/new/components/product/single/SyProductThree.vue?vue&type=template&id=6ec433f0&");
+/* harmony import */ var _SyProductThree_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SyProductThree.vue?vue&type=script&lang=js& */ "./resources/js/new/components/product/single/SyProductThree.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SyProductThree_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SyProductThree_vue_vue_type_template_id_6ec433f0___WEBPACK_IMPORTED_MODULE_0__.render,
+  _SyProductThree_vue_vue_type_template_id_6ec433f0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/new/components/product/single/SyProductThree.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/new/components/product/single/SyProductTwo.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductTwo.vue ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SyProductTwo_vue_vue_type_template_id_38b89fc4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SyProductTwo.vue?vue&type=template&id=38b89fc4& */ "./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=template&id=38b89fc4&");
+/* harmony import */ var _SyProductTwo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SyProductTwo.vue?vue&type=script&lang=js& */ "./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SyProductTwo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SyProductTwo_vue_vue_type_template_id_38b89fc4___WEBPACK_IMPORTED_MODULE_0__.render,
+  _SyProductTwo_vue_vue_type_template_id_38b89fc4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/new/components/product/single/SyProductTwo.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/new/pages/about/index.vue":
 /*!************************************************!*\
   !*** ./resources/js/new/pages/about/index.vue ***!
@@ -60489,15 +60210,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _checkout_vue_vue_type_template_id_eda51b04___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkout.vue?vue&type=template&id=eda51b04& */ "./resources/js/new/pages/checkout.vue?vue&type=template&id=eda51b04&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _checkout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkout.vue?vue&type=script&lang=js& */ "./resources/js/new/pages/checkout.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _checkout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _checkout_vue_vue_type_template_id_eda51b04___WEBPACK_IMPORTED_MODULE_0__.render,
   _checkout_vue_vue_type_template_id_eda51b04___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -60755,6 +60478,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/new/components/cart/SyCartBilling.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/new/components/cart/SyCartBilling.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartBilling_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyCartBilling.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartBilling.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartBilling_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/new/components/cart/SyCartItem.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/new/components/cart/SyCartItem.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyCartItem.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartItem.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/new/components/commons/PreLoader.vue?vue&type=script&lang=js&":
 /*!************************************************************************************!*\
   !*** ./resources/js/new/components/commons/PreLoader.vue?vue&type=script&lang=js& ***!
@@ -60947,6 +60702,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/new/components/product/single/SyProductThree.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductThree.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductThree_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyProductThree.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductThree.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductThree_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductTwo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyProductTwo.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductTwo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/new/pages/account.vue?vue&type=script&lang=js&":
 /*!*********************************************************************!*\
   !*** ./resources/js/new/pages/account.vue?vue&type=script&lang=js& ***!
@@ -61040,6 +60827,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_cart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./cart.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/cart.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_cart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/new/pages/checkout.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/new/pages/checkout.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_checkout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./checkout.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/checkout.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_checkout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -61512,6 +61315,57 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/new/components/cart/SyCartBilling.vue?vue&type=template&id=4d951dfc&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/new/components/cart/SyCartBilling.vue?vue&type=template&id=4d951dfc& ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartBilling_vue_vue_type_template_id_4d951dfc___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartBilling_vue_vue_type_template_id_4d951dfc___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartBilling_vue_vue_type_template_id_4d951dfc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyCartBilling.vue?vue&type=template&id=4d951dfc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartBilling.vue?vue&type=template&id=4d951dfc&");
+
+
+/***/ }),
+
+/***/ "./resources/js/new/components/cart/SyCartItem.vue?vue&type=template&id=4b1c291c&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/new/components/cart/SyCartItem.vue?vue&type=template&id=4b1c291c& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartItem_vue_vue_type_template_id_4b1c291c___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartItem_vue_vue_type_template_id_4b1c291c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartItem_vue_vue_type_template_id_4b1c291c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyCartItem.vue?vue&type=template&id=4b1c291c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartItem.vue?vue&type=template&id=4b1c291c&");
+
+
+/***/ }),
+
+/***/ "./resources/js/new/components/cart/SyCartUser.vue?vue&type=template&id=15eb0458&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/new/components/cart/SyCartUser.vue?vue&type=template&id=15eb0458& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartUser_vue_vue_type_template_id_15eb0458___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartUser_vue_vue_type_template_id_15eb0458___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyCartUser_vue_vue_type_template_id_15eb0458___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyCartUser.vue?vue&type=template&id=15eb0458& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartUser.vue?vue&type=template&id=15eb0458&");
+
+
+/***/ }),
+
 /***/ "./resources/js/new/components/commons/PreLoader.vue?vue&type=template&id=8e1b6f3a&":
 /*!******************************************************************************************!*\
   !*** ./resources/js/new/components/commons/PreLoader.vue?vue&type=template&id=8e1b6f3a& ***!
@@ -61797,6 +61651,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductOne_vue_vue_type_template_id_69880190___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductOne_vue_vue_type_template_id_69880190___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyProductOne.vue?vue&type=template&id=69880190& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductOne.vue?vue&type=template&id=69880190&");
+
+
+/***/ }),
+
+/***/ "./resources/js/new/components/product/single/SyProductThree.vue?vue&type=template&id=6ec433f0&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductThree.vue?vue&type=template&id=6ec433f0& ***!
+  \******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductThree_vue_vue_type_template_id_6ec433f0___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductThree_vue_vue_type_template_id_6ec433f0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductThree_vue_vue_type_template_id_6ec433f0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyProductThree.vue?vue&type=template&id=6ec433f0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductThree.vue?vue&type=template&id=6ec433f0&");
+
+
+/***/ }),
+
+/***/ "./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=template&id=38b89fc4&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=template&id=38b89fc4& ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductTwo_vue_vue_type_template_id_38b89fc4___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductTwo_vue_vue_type_template_id_38b89fc4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductTwo_vue_vue_type_template_id_38b89fc4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyProductTwo.vue?vue&type=template&id=38b89fc4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=template&id=38b89fc4&");
 
 
 /***/ }),
@@ -62857,6 +62745,454 @@ var staticRenderFns = [
       _c("button", { attrs: { type: "submit", id: "register-btn" } }, [
         _c("span", [_vm._v("Register")])
       ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartBilling.vue?vue&type=template&id=4d951dfc&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartBilling.vue?vue&type=template&id=4d951dfc& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel-body" }, [
+      _c("div", { staticClass: "billing-information-wrapper" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "billing-info" }, [
+              _c("label", [_vm._v("First Name")]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "text" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "billing-info" }, [
+              _c("label", [_vm._v("Last Name")]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "text" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "billing-info" }, [
+              _c("label", [_vm._v("Company")]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "text" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "billing-info" }, [
+              _c("label", [_vm._v("Email Address")]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "email" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-12 col-md-12" }, [
+            _c("div", { staticClass: "billing-info" }, [
+              _c("label", [_vm._v("Address")]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "text" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "billing-info" }, [
+              _c("label", [_vm._v("city")]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "text" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "billing-info" }, [
+              _c("label", [_vm._v("State/Province")]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "text" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "billing-info" }, [
+              _c("label", [_vm._v("Zip/Postal Code")]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "text" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "billing-select" }, [
+              _c("label", [_vm._v("Country")]),
+              _vm._v(" "),
+              _c("select", [
+                _c("option", { attrs: { value: "1" } }, [
+                  _vm._v("United State")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [_vm._v("Azerbaijan")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "3" } }, [_vm._v("Bahamas")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "4" } }, [_vm._v("Bahrain")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "5" } }, [_vm._v("Bangladesh")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "6" } }, [_vm._v("Barbados")])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "billing-info" }, [
+              _c("label", [_vm._v("Telephone")]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "text" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-md-6" }, [
+            _c("div", { staticClass: "billing-info" }, [
+              _c("label", [_vm._v("Fax")]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "text" } })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "ship-wrapper" }, [
+          _c("div", { staticClass: "single-ship" }, [
+            _c("input", {
+              attrs: {
+                type: "radio",
+                name: "address",
+                value: "address",
+                checked: ""
+              }
+            }),
+            _vm._v(" "),
+            _c("label", [_vm._v("Ship to this address")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single-ship" }, [
+            _c("input", {
+              attrs: { type: "radio", name: "address", value: "dadress" }
+            }),
+            _vm._v(" "),
+            _c("label", [_vm._v("Ship to different address")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "billing-back-btn" }, [
+          _c("div", { staticClass: "billing-back" }, [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "ion-arrow-up-c" }),
+              _vm._v(" back")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "billing-btn" }, [
+            _c("button", { attrs: { type: "submit" } }, [_vm._v("Get a Quote")])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartItem.vue?vue&type=template&id=4b1c291c&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartItem.vue?vue&type=template&id=4b1c291c& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "panel-body" }, [
+    _c("div", { staticClass: "order-review-wrapper" }, [
+      _c("div", { staticClass: "order-review" }, [
+        _c("div", { staticClass: "table-responsive" }, [
+          _c("table", { staticClass: "table" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.items, function(item, index) {
+                return _c("tr", { key: index }, [
+                  _c("td", [
+                    _c("div", { staticClass: "o-pro-dec" }, [
+                      _c("p", [_vm._v(_vm._s(item.name))])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("div", { staticClass: "o-pro-price" }, [
+                      _c("p", [_vm._v("₦" + _vm._s(item.price))])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("div", { staticClass: "o-pro-qty" }, [
+                      _c("p", [_vm._v(_vm._s(item.qty))])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("div", { staticClass: "o-pro-subtotal" }, [
+                      _c("p", [_vm._v("₦" + _vm._s(item.price * item.qty))])
+                    ])
+                  ])
+                ])
+              }),
+              0
+            ),
+            _vm._v(" "),
+            _c("tfoot", [
+              _c("tr", [
+                _c("td", { attrs: { colspan: "3" } }, [_vm._v("Subtotal")]),
+                _vm._v(" "),
+                _c("td", { attrs: { colspan: "1" } }, [
+                  _vm._v("₦" + _vm._s(_vm.totalPrice))
+                ])
+              ]),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", { attrs: { colspan: "3" } }, [_vm._v("Grand Total")]),
+                _vm._v(" "),
+                _c("td", { attrs: { colspan: "1" } }, [
+                  _vm._v("₦" + _vm._s(_vm.totalPrice))
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "billing-back-btn" }, [
+          _c(
+            "span",
+            [
+              _vm._v("\n          Forgot an Item?\n          "),
+              _c("router-link", { attrs: { to: "/cart" } }, [
+                _vm._v(" Edit Your Cart.")
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _vm._m(2)
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { staticClass: "width-1" }, [_vm._v("Product Name")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "width-2" }, [_vm._v("Price")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "width-3" }, [_vm._v("Qty")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "width-4" }, [_vm._v("Subtotal")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", { staticClass: "tr-f" }, [
+      _c("td", { attrs: { colspan: "3" } }, [
+        _vm._v("Shipping & Handling (Flat Rate - Fixed")
+      ]),
+      _vm._v(" "),
+      _c("td", { attrs: { colspan: "1" } }, [_vm._v("₦45.00")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "billing-btn" }, [
+      _c("button", { attrs: { type: "submit" } }, [_vm._v("Continue")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartUser.vue?vue&type=template&id=15eb0458&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/cart/SyCartUser.vue?vue&type=template&id=15eb0458& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "panel-body" }, [
+    _c("div", { staticClass: "row" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-7" }, [
+        _c("div", { staticClass: "checkout-login" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c("p", [_vm._v("Already have an account?")]),
+          _vm._v(" "),
+          _c("span", [_vm._v("Please log in below:")]),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "login-forget" },
+            [
+              _c("router-link", { attrs: { to: "/auth/forgot" } }, [
+                _vm._v("Forgot your password?")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("* Required Fields")])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _vm._m(3)
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-5" }, [
+      _c("div", { staticClass: "checkout-register" }, [
+        _c("div", { staticClass: "title-wrap" }, [
+          _c("h4", { staticClass: "cart-bottom-title section-bg-white" }, [
+            _vm._v("\n            CHECKOUT AS A GUEST OR REGISTER\n          ")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "register-us" }, [
+          _c("ul", [
+            _c("li", [
+              _c("input", { attrs: { type: "checkbox" } }),
+              _vm._v(" Checkout as Guest")
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("input", { attrs: { type: "checkbox" } }),
+              _vm._v(" Register")
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("h6", [_vm._v("REGISTER AND SAVE TIME!")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "register-us-2" }, [
+          _c("p", [_vm._v("Register with us for future convenience.")]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [_vm._v("Fast and easy checkout")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("Easy access to your order history and status")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#" } }, [_vm._v("Apply Coupon")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "title-wrap" }, [
+      _c("h4", { staticClass: "cart-bottom-title section-bg-white" }, [
+        _vm._v("LOGIN")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("form", [
+      _c("div", { staticClass: "login-form" }, [
+        _c("label", [_vm._v("Email Address * ")]),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "email", name: "email" } })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "login-form" }, [
+        _c("label", [_vm._v("Password *")]),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "password", name: "email" } })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "checkout-login-btn" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Login")])
     ])
   }
 ]
@@ -64536,2051 +64872,95 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "best-selling-area pt-60 pb-45 gray-bg best-selling-small" },
+    [
+      _c("div", { staticClass: "container" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "tab-content jump" }, [
+          _c(
+            "div",
+            { staticClass: "tab-pane active", attrs: { id: "home4" } },
+            [
+              _c(
+                "div",
+                { staticClass: "best-selling-active nav-style owl-carousel" },
+                _vm._l(_vm.products, function(product, index) {
+                  return _c("sy-product-three", {
+                    key: index,
+                    attrs: { product: product }
+                  })
+                }),
+                1
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "tab-pane", attrs: { id: "home5" } }, [
+            _c(
+              "div",
+              { staticClass: "best-selling-active nav-style owl-carousel" },
+              _vm._l(_vm.products, function(product, index) {
+                return _c("sy-product-three", {
+                  key: index,
+                  attrs: { product: product }
+                })
+              }),
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "tab-pane", attrs: { id: "home6" } }, [
+            _c(
+              "div",
+              { staticClass: "best-selling-active nav-style owl-carousel" },
+              _vm._l(_vm.products, function(product, index) {
+                return _c("sy-product-three", {
+                  key: index,
+                  attrs: { product: product }
+                })
+              }),
+              1
+            )
+          ])
+        ])
+      ])
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "best-selling-area pt-60 pb-45 gray-bg best-selling-small"
-      },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "top-bar section-border mb-20" }, [
-            _c(
-              "div",
-              { staticClass: "section-title-wrapper section-bg-gray" },
-              [
-                _c("h4", { staticClass: "section-title" }, [
-                  _vm._v("Best Selling Products")
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "product-tab-list-2 nav section-bg-gray" },
-              [
-                _c(
-                  "a",
-                  {
-                    staticClass: "active",
-                    attrs: { href: "#home4", "data-bs-toggle": "tab" }
-                  },
-                  [_c("h4", [_vm._v("Smart Phones & Tablets")])]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { attrs: { href: "#home5", "data-bs-toggle": "tab" } },
-                  [_c("h4", [_vm._v("Laptops & Computers")])]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { attrs: { href: "#home6", "data-bs-toggle": "tab" } },
-                  [_c("h4", [_vm._v("Video Cameras")])]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "tab-content jump" }, [
-            _c(
-              "div",
-              { staticClass: "tab-pane active", attrs: { id: "home4" } },
-              [
-                _c(
-                  "div",
-                  { staticClass: "best-selling-active nav-style owl-carousel" },
-                  [
-                    _c("div", { staticClass: "best-selling-bundle" }, [
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-1.jpg"
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", [_vm._v("-10%")])
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Joy Stick, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _vm._v(
-                                      "Phantom Remote Control Ver\n                                            2018"
-                                    )
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("₦260.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [
-                                      _vm._v(
-                                        "₦162.00\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                            Add to Cart\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-4.jpg"
-                                  }
-                                })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Phone, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Awesome Smart Phone Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("₦260.00")])]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                            Add to Cart\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "best-selling-bundle" }, [
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-2.jpg"
-                                  }
-                                })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Watch, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _vm._v(
-                                      "Demoniss Glorior Watch Ver\n                                            2018"
-                                    )
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("₦260.00")])]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                            Add to Cart\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-5.jpg"
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", [_vm._v("-15%")])
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Tab, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _vm._v(
-                                      "Featured Demoniss Tab Ver\n                                            2018"
-                                    )
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("₦150.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [
-                                      _vm._v(
-                                        "₦200.00\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                            Add to Cart\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "best-selling-bundle" }, [
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-3.jpg"
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", [_vm._v("-20%")])
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Watch, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _vm._v(
-                                      "Maxclone Glorior Watch Ver\n                                            2018"
-                                    )
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("₦120.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [
-                                      _vm._v(
-                                        "₦110.00\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                            Add to Cart\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-6.jpg"
-                                  }
-                                })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Phone, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [_vm._v("Awesome Smart Phone Ver 2018")]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [_c("span", [_vm._v("₦260.00")])]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                            Add to Cart\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "best-selling-bundle" }, [
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-2.jpg"
-                                  }
-                                })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Watch, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _vm._v(
-                                      "Phantom Remote Control Ver\n                                            2018"
-                                    )
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("₦260.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [
-                                      _vm._v(
-                                        "₦162.00\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                            Add to Cart\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "best-selling-pro-wrapper mb-20" },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    alt: "",
-                                    src: "assets/img/product/best-selling-5.jpg"
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", [_vm._v("-10%")])
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "product-content best-pro-content" },
-                            [
-                              _c("span", [_vm._v("Tab, Accessories")]),
-                              _vm._v(" "),
-                              _c("h4", [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _vm._v(
-                                      "Phantom Remote Control Ver\n                                            2018"
-                                    )
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "product-price-wrapper" },
-                                [
-                                  _c("span", [_vm._v("₦260.00")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "product-price-old" },
-                                    [
-                                      _vm._v(
-                                        "₦162.00\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "product-action best-pro-action"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "same-action",
-                                      attrs: { title: "Wishlist", href: "#" }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-heart-o" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "action-cart",
-                                      attrs: { title: "Add To Cart", href: "#" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                            Add to Cart\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "tab-pane", attrs: { id: "home5" } }, [
-              _c(
-                "div",
-                { staticClass: "best-selling-active nav-style owl-carousel" },
-                [
-                  _c("div", { staticClass: "best-selling-bundle" }, [
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-5.jpg"
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("-10%")])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Tab, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Featured Demoniss Tab Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("₦260.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "₦162.00\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-6.jpg"
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Phone, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Awesome Smart Phone Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("₦200.00")])]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "best-selling-bundle" }, [
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-1.jpg"
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Joy Stick, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Phantom Remote Control Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("₦250.00")])]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-2.jpg"
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("-15%")])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Demoniss Glorior Watch Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("₦300.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "₦350.00\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "best-selling-bundle" }, [
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-2.jpg"
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("-20%")])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Maxclone Glorior Watch Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("₦140.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "₦100.00\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-3.jpg"
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Demoniss Glorior Watch Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("₦260.00")])]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "best-selling-bundle" }, [
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-2.jpg"
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Phantom Remote Control Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("₦260.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "₦162.00\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-5.jpg"
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("-10%")])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Phantom Remote Control Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("₦260.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "₦162.00\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "tab-pane", attrs: { id: "home6" } }, [
-              _c(
-                "div",
-                { staticClass: "best-selling-active nav-style owl-carousel" },
-                [
-                  _c("div", { staticClass: "best-selling-bundle" }, [
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-4.jpg"
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("-10%")])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Phone, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Awesome Smart Phone Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("₦260.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "₦162.00\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-1.jpg"
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Joy Stick, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Phantom Remote Control Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("₦260.00")])]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "best-selling-bundle" }, [
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-5.jpg"
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Tab, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Featured Demoniss Tab Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("₦270.00")])]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-2.jpg"
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("-15%")])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Demoniss Glorior Watch Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("₦120.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "₦110.00\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "best-selling-bundle" }, [
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-6.jpg"
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("-20%")])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Phone, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [_vm._v("Awesome Smart Phone Ver 2018")]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("₦290.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "₦300.00\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-3.jpg"
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Maxclone Glorior Watch Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("₦260.00")])]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "best-selling-bundle" }, [
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-2.jpg"
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Phantom Remote Control Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("₦260.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "₦162.00\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "best-selling-pro-wrapper mb-20" },
-                      [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("a", { attrs: { href: "product-details.html" } }, [
-                            _c("img", {
-                              attrs: {
-                                alt: "",
-                                src: "assets/img/product/best-selling-5.jpg"
-                              }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("span", [_vm._v("-10%")])
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "product-content best-pro-content" },
-                          [
-                            _c("span", [_vm._v("Tab, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _vm._v(
-                                    "Phantom Remote Control Ver\n                                            2018"
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("₦260.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "₦162.00\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-action best-pro-action" },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "same-action",
-                                    attrs: { title: "Wishlist", href: "#" }
-                                  },
-                                  [_c("i", { staticClass: "fa fa-heart-o" })]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "action-cart",
-                                    attrs: { title: "Add To Cart", href: "#" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                            Add to Cart\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ])
-                ]
-              )
-            ])
-          ])
+    return _c("div", { staticClass: "top-bar section-border mb-20" }, [
+      _c("div", { staticClass: "section-title-wrapper section-bg-gray" }, [
+        _c("h4", { staticClass: "section-title" }, [
+          _vm._v("Best Selling Products")
         ])
-      ]
-    )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "product-tab-list-2 nav section-bg-gray" }, [
+        _c(
+          "a",
+          {
+            staticClass: "active",
+            attrs: { href: "#home4", "data-bs-toggle": "tab" }
+          },
+          [_c("h4", [_vm._v("Smart Phones & Tablets")])]
+        ),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#home5", "data-bs-toggle": "tab" } }, [
+          _c("h4", [_vm._v("Laptops & Computers")])
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#home6", "data-bs-toggle": "tab" } }, [
+          _c("h4", [_vm._v("Video Cameras")])
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -66605,680 +64985,34 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "product-area pt-60 pb-45" }, [
+    _c("div", { staticClass: "container" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "product-slider-nav nav-style" }),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "headphone-slider-active owl-carousel product-slider" },
+        _vm._l(_vm.products, function(product, index) {
+          return _c("sy-product-two", {
+            key: index,
+            attrs: { product: product }
+          })
+        }),
+        1
+      )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "product-area pt-60 pb-45" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "section-border mb-10" }, [
-          _c("h4", { staticClass: "section-title section-bg-white" }, [
-            _vm._v("Top Headphones")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "product-slider-nav nav-style" }),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "headphone-slider-active owl-carousel product-slider"
-          },
-          [
-            _c("div", { staticClass: "devita-product-2" }, [
-              _c("div", { staticClass: "product-img" }, [
-                _c("a", { attrs: { href: "product-details.html" } }, [
-                  _c("img", {
-                    attrs: {
-                      src: "assets/img/product/headphone-1.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "list-col" }, [
-                _c("div", { staticClass: "gridview" }, [
-                  _c("div", { staticClass: "product-content text-center" }, [
-                    _c("span", [_vm._v("Headphone, Accessories")]),
-                    _vm._v(" "),
-                    _c("h4", [
-                      _c("a", { attrs: { href: "product-details.html" } }, [
-                        _vm._v(
-                          "Matrior white Headphone Ver 2018\n                "
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-price-wrapper" }, [
-                      _c("span", [_vm._v("₦260.00")])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "product-action-wrapper-2 text-center" },
-                    [
-                      _c("div", { staticClass: "product-rating" }, [
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", { staticClass: "ion-android-star-outline" })
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "\n                Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                sodales sapien, non velit scelerisque...\n              "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-action" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action",
-                            attrs: { title: "Wishlist", href: "#" }
-                          },
-                          [_c("i", { staticClass: "fa fa-heart-o" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "action-cart",
-                            attrs: { title: "Add To Cart", href: "#" }
-                          },
-                          [
-                            _vm._v(
-                              "\n                  Add to Cart\n                "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action compare-mrg",
-                            attrs: {
-                              "data-target": "#exampleCompare",
-                              "data-toggle": "modal",
-                              title: "Compare",
-                              href: "#"
-                            }
-                          },
-                          [
-                            _c("i", {
-                              staticClass: "fa fa-sliders fa-rotate-90"
-                            })
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "devita-product-2" }, [
-              _c("div", { staticClass: "product-img" }, [
-                _c("a", { attrs: { href: "product-details.html" } }, [
-                  _c("img", {
-                    attrs: {
-                      src: "assets/img/product/headphone-2.jpg",
-                      alt: ""
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("span", [_vm._v("-30%")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "list-col" }, [
-                _c("div", { staticClass: "gridview" }, [
-                  _c("div", { staticClass: "product-content text-center" }, [
-                    _c("span", [_vm._v("Headphone, Accessories")]),
-                    _vm._v(" "),
-                    _c("h4", [
-                      _c("a", { attrs: { href: "product-details.html" } }, [
-                        _vm._v("Matrior black Headphone Ver 2018")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-price-wrapper" }, [
-                      _c("span", [_vm._v("₦260.00")]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "product-price-old" }, [
-                        _vm._v("₦162.00 ")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "product-action-wrapper-2 text-center" },
-                    [
-                      _c("div", { staticClass: "product-rating" }, [
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", { staticClass: "ion-android-star-outline" })
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "\n                Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                sodales sapien, non velit scelerisque...\n              "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-action" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action",
-                            attrs: { title: "Wishlist", href: "#" }
-                          },
-                          [_c("i", { staticClass: "fa fa-heart-o" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "action-cart",
-                            attrs: { title: "Add To Cart", href: "#" }
-                          },
-                          [
-                            _vm._v(
-                              "\n                  Add to Cart\n                "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action compare-mrg",
-                            attrs: {
-                              "data-target": "#exampleCompare",
-                              "data-toggle": "modal",
-                              title: "Compare",
-                              href: "#"
-                            }
-                          },
-                          [
-                            _c("i", {
-                              staticClass: "fa fa-sliders fa-rotate-90"
-                            })
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "devita-product-2" }, [
-              _c("div", { staticClass: "product-img" }, [
-                _c("a", { attrs: { href: "product-details.html" } }, [
-                  _c("img", {
-                    attrs: {
-                      src: "assets/img/product/headphone-3.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "list-col" }, [
-                _c("div", { staticClass: "gridview" }, [
-                  _c("div", { staticClass: "product-content text-center" }, [
-                    _c("span", [_vm._v("Headphone, Accessories")]),
-                    _vm._v(" "),
-                    _c("h4", [
-                      _c("a", { attrs: { href: "product-details.html" } }, [
-                        _vm._v("Matrior blue Headphone Ver 2018")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-price-wrapper" }, [
-                      _c("span", [_vm._v("₦300.00")])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "product-action-wrapper-2 text-center" },
-                    [
-                      _c("div", { staticClass: "product-rating" }, [
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", { staticClass: "ion-android-star-outline" })
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "\n                Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                sodales sapien, non velit scelerisque...\n              "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-action" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action",
-                            attrs: { title: "Wishlist", href: "#" }
-                          },
-                          [_c("i", { staticClass: "fa fa-heart-o" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "action-cart",
-                            attrs: { title: "Add To Cart", href: "#" }
-                          },
-                          [
-                            _vm._v(
-                              "\n                  Add to Cart\n                "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action compare-mrg",
-                            attrs: {
-                              "data-target": "#exampleCompare",
-                              "data-toggle": "modal",
-                              title: "Compare",
-                              href: "#"
-                            }
-                          },
-                          [
-                            _c("i", {
-                              staticClass: "fa fa-sliders fa-rotate-90"
-                            })
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "devita-product-2" }, [
-              _c("div", { staticClass: "product-img" }, [
-                _c("a", { attrs: { href: "product-details.html" } }, [
-                  _c("img", {
-                    attrs: {
-                      src: "assets/img/product/headphone-4.jpg",
-                      alt: ""
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("span", [_vm._v("-10%")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "list-col" }, [
-                _c("div", { staticClass: "gridview" }, [
-                  _c("div", { staticClass: "product-content text-center" }, [
-                    _c("span", [_vm._v("Headphone, Accessories")]),
-                    _vm._v(" "),
-                    _c("h4", [
-                      _c("a", { attrs: { href: "product-details.html" } }, [
-                        _vm._v("Matrior black Headphone Ver 2018")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-price-wrapper" }, [
-                      _c("span", [_vm._v("₦120.00")]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "product-price-old" }, [
-                        _vm._v("₦150.00 ")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "product-action-wrapper-2 text-center" },
-                    [
-                      _c("div", { staticClass: "product-rating" }, [
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", { staticClass: "ion-android-star-outline" })
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "\n                Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                sodales sapien, non velit scelerisque...\n              "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-action" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action",
-                            attrs: { title: "Wishlist", href: "#" }
-                          },
-                          [_c("i", { staticClass: "fa fa-heart-o" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "action-cart",
-                            attrs: { title: "Add To Cart", href: "#" }
-                          },
-                          [
-                            _vm._v(
-                              "\n                  Add to Cart\n                "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action compare-mrg",
-                            attrs: {
-                              "data-target": "#exampleCompare",
-                              "data-toggle": "modal",
-                              title: "Compare",
-                              href: "#"
-                            }
-                          },
-                          [
-                            _c("i", {
-                              staticClass: "fa fa-sliders fa-rotate-90"
-                            })
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "devita-product-2" }, [
-              _c("div", { staticClass: "product-img" }, [
-                _c("a", { attrs: { href: "product-details.html" } }, [
-                  _c("img", {
-                    attrs: {
-                      src: "assets/img/product/headphone-5.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "list-col" }, [
-                _c("div", { staticClass: "gridview" }, [
-                  _c("div", { staticClass: "product-content text-center" }, [
-                    _c("span", [_vm._v("Headphone, Accessories")]),
-                    _vm._v(" "),
-                    _c("h4", [
-                      _c("a", { attrs: { href: "product-details.html" } }, [
-                        _vm._v("Matrior white Headphone Ver 2018")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-price-wrapper" }, [
-                      _c("span", [_vm._v("₦190.00")])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "product-action-wrapper-2 text-center" },
-                    [
-                      _c("div", { staticClass: "product-rating" }, [
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", { staticClass: "ion-android-star-outline" })
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "\n                Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                sodales sapien, non velit scelerisque...\n              "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-action" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action",
-                            attrs: { title: "Wishlist", href: "#" }
-                          },
-                          [_c("i", { staticClass: "fa fa-heart-o" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "action-cart",
-                            attrs: { title: "Add To Cart", href: "#" }
-                          },
-                          [
-                            _vm._v(
-                              "\n                  Add to Cart\n                "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action compare-mrg",
-                            attrs: {
-                              "data-target": "#exampleCompare",
-                              "data-toggle": "modal",
-                              title: "Compare",
-                              href: "#"
-                            }
-                          },
-                          [
-                            _c("i", {
-                              staticClass: "fa fa-sliders fa-rotate-90"
-                            })
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "devita-product-2" }, [
-              _c("div", { staticClass: "product-img" }, [
-                _c("a", { attrs: { href: "product-details.html" } }, [
-                  _c("img", {
-                    attrs: {
-                      src: "assets/img/product/headphone-2.jpg",
-                      alt: ""
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("span", [_vm._v("-15%")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "list-col" }, [
-                _c("div", { staticClass: "gridview" }, [
-                  _c("div", { staticClass: "product-content text-center" }, [
-                    _c("span", [_vm._v("Headphone, Accessories")]),
-                    _vm._v(" "),
-                    _c("h4", [
-                      _c("a", { attrs: { href: "product-details.html" } }, [
-                        _vm._v("Matrior black Headphone Ver 2018")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "product-price-wrapper" }, [
-                      _c("span", [_vm._v("₦260.00")]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "product-price-old" }, [
-                        _vm._v("₦162.00 ")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "product-action-wrapper-2 text-center" },
-                    [
-                      _c("div", { staticClass: "product-rating" }, [
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass: "ion-android-star-outline theme-star"
-                        }),
-                        _vm._v(" "),
-                        _c("i", { staticClass: "ion-android-star-outline" })
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "\n                Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                sodales sapien, non velit scelerisque...\n              "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "product-action" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action",
-                            attrs: { title: "Wishlist", href: "#" }
-                          },
-                          [_c("i", { staticClass: "fa fa-heart-o" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "action-cart",
-                            attrs: { title: "Add To Cart", href: "#" }
-                          },
-                          [
-                            _vm._v(
-                              "\n                  Add to Cart\n                "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "same-action compare-mrg",
-                            attrs: {
-                              "data-target": "#exampleCompare",
-                              "data-toggle": "modal",
-                              title: "Compare",
-                              href: "#"
-                            }
-                          },
-                          [
-                            _c("i", {
-                              staticClass: "fa fa-sliders fa-rotate-90"
-                            })
-                          ]
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ])
-          ]
-        )
+    return _c("div", { staticClass: "section-border mb-10" }, [
+      _c("h4", { staticClass: "section-title section-bg-white" }, [
+        _vm._v("Top Headphones")
       ])
     ])
   }
@@ -67943,6 +65677,248 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductThree.vue?vue&type=template&id=6ec433f0&":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductThree.vue?vue&type=template&id=6ec433f0& ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "best-selling-bundle" }, [
+      _c("div", { staticClass: "best-selling-pro-wrapper mb-20" }, [
+        _c("div", { staticClass: "product-img" }, [
+          _c("a", { attrs: { href: "product-details.html" } }, [
+            _c("img", {
+              attrs: { alt: "", src: "assets/img/product/best-selling-5.jpg" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("span", [_vm._v("-10%")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "product-content best-pro-content" }, [
+          _c("span", [_vm._v("Tab, Accessories")]),
+          _vm._v(" "),
+          _c("h4", [
+            _c("a", { attrs: { href: "product-details.html" } }, [
+              _vm._v("Featured Demoniss Tab Ver 2018")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "product-price-wrapper" }, [
+            _c("span", [_vm._v("₦260.00")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "product-price-old" }, [
+              _vm._v("₦162.00 ")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "product-action best-pro-action" }, [
+            _c(
+              "a",
+              {
+                staticClass: "same-action",
+                attrs: { title: "Wishlist", href: "#" }
+              },
+              [_c("i", { staticClass: "fa fa-heart-o" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "action-cart",
+                attrs: { title: "Add To Cart", href: "#" }
+              },
+              [_vm._v("\n                    Add to Cart\n                ")]
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "best-selling-pro-wrapper mb-20" }, [
+        _c("div", { staticClass: "product-img" }, [
+          _c("a", { attrs: { href: "product-details.html" } }, [
+            _c("img", {
+              attrs: { alt: "", src: "assets/img/product/best-selling-6.jpg" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "product-content best-pro-content" }, [
+          _c("span", [_vm._v("Phone, Accessories")]),
+          _vm._v(" "),
+          _c("h4", [
+            _c("a", { attrs: { href: "product-details.html" } }, [
+              _vm._v("Awesome Smart Phone Ver 2018")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "product-price-wrapper" }, [
+            _c("span", [_vm._v("₦200.00")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "product-action best-pro-action" }, [
+            _c(
+              "a",
+              {
+                staticClass: "same-action",
+                attrs: { title: "Wishlist", href: "#" }
+              },
+              [_c("i", { staticClass: "fa fa-heart-o" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "action-cart",
+                attrs: { title: "Add To Cart", href: "#" }
+              },
+              [_vm._v("\n                    Add to Cart\n                ")]
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=template&id=38b89fc4&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductTwo.vue?vue&type=template&id=38b89fc4& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "devita-product-2" }, [
+      _c("div", { staticClass: "product-img" }, [
+        _c("a", { attrs: { href: "product-details.html" } }, [
+          _c("img", {
+            attrs: { src: "assets/img/product/headphone-1.jpg", alt: "" }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "list-col" }, [
+        _c("div", { staticClass: "gridview" }, [
+          _c("div", { staticClass: "product-content text-center" }, [
+            _c("span", [_vm._v("Headphone, Accessories")]),
+            _vm._v(" "),
+            _c("h4", [
+              _c("a", { attrs: { href: "product-details.html" } }, [
+                _vm._v("Matrior white Headphone Ver 2018\n                    ")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "product-price-wrapper" }, [
+              _c("span", [_vm._v("₦260.00")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "product-action-wrapper-2 text-center" }, [
+            _c("div", { staticClass: "product-rating" }, [
+              _c("i", { staticClass: "ion-android-star-outline theme-star" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "ion-android-star-outline theme-star" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "ion-android-star-outline theme-star" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "ion-android-star-outline theme-star" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "ion-android-star-outline" })
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                    Quam elit phasellus nibh sed eget, sed nunc in ultricies\n                    sodales sapien, non velit scelerisque...\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "product-action" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "same-action",
+                  attrs: { title: "Wishlist", href: "#" }
+                },
+                [_c("i", { staticClass: "fa fa-heart-o" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "action-cart",
+                  attrs: { title: "Add To Cart", href: "#" }
+                },
+                [
+                  _vm._v(
+                    "\n                        Add to Cart\n                    "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "same-action compare-mrg",
+                  attrs: {
+                    "data-target": "#exampleCompare",
+                    "data-toggle": "modal",
+                    title: "Compare",
+                    href: "#"
+                  }
+                },
+                [_c("i", { staticClass: "fa fa-sliders fa-rotate-90" })]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/about/index.vue?vue&type=template&id=2f43d4c8&":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/pages/about/index.vue?vue&type=template&id=2f43d4c8& ***!
@@ -68517,62 +66493,1328 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "checkout-area pb-45 pt-65" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "ms-auto me-auto col-lg-9" }, [
-            _c("div", { staticClass: "checkout-wrapper" }, [
-              _c("div", { staticClass: "panel-group", attrs: { id: "faq" } }, [
-                _vm._m(1),
-                _vm._v(" "),
-                _vm._m(2),
-                _vm._v(" "),
-                _vm._m(3),
-                _vm._v(" "),
-                _c("div", { staticClass: "panel panel-default" }, [
-                  _c("div", { staticClass: "panel-heading" }, [
-                    _c(
-                      "h5",
-                      { staticClass: "panel-title" },
-                      [
-                        _c("span", [_vm._v("4")]),
-                        _vm._v(" "),
-                        _c("router-link", { attrs: { to: "/wishlist" } }, [
-                          _vm._v(
-                            "Modify your wish list\n                                        "
+  return _c(
+    "div",
+    [
+      _vm.loading ? _c("pre-loader") : _vm._e(),
+      _vm._v(" "),
+      _c("sy-breadcrumb", { attrs: { title: "My Account" } }),
+      _vm._v(" "),
+      _c("div", { staticClass: "checkout-area pb-45 pt-65" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "ms-auto me-auto col-lg-9" }, [
+              _c("div", { staticClass: "checkout-wrapper" }, [
+                _c(
+                  "div",
+                  { staticClass: "panel-group", attrs: { id: "faq" } },
+                  [
+                    _c("div", { staticClass: "panel panel-default" }, [
+                      _vm._m(0),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "panel-collapse collapse show",
+                          attrs: {
+                            id: "my-account-1",
+                            "data-bs-parent": "#faq"
+                          }
+                        },
+                        [
+                          _c(
+                            "form",
+                            {
+                              attrs: { action: "#" },
+                              on: {
+                                submit: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.updateProfile()
+                                }
+                              }
+                            },
+                            [
+                              _c("div", { staticClass: "panel-body" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "billing-information-wrapper"
+                                  },
+                                  [
+                                    _vm._m(1),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "row" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-lg-6 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "billing-info" },
+                                            [
+                                              _c("label", [
+                                                _vm._v("First Name")
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model.trim",
+                                                    value:
+                                                      _vm.$v.userprofile
+                                                        .first_name.$model,
+                                                    expression:
+                                                      "\n                                  $v.userprofile.first_name.$model\n                                ",
+                                                    modifiers: { trim: true }
+                                                  }
+                                                ],
+                                                class: _vm.status(
+                                                  _vm.$v.userprofile.first_name
+                                                ),
+                                                attrs: {
+                                                  type: "text",
+                                                  disabled: _vm.loading
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.$v.userprofile
+                                                      .first_name.$model
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.$v.userprofile
+                                                        .first_name,
+                                                      "$model",
+                                                      $event.target.value.trim()
+                                                    )
+                                                  },
+                                                  blur: function($event) {
+                                                    return _vm.$forceUpdate()
+                                                  }
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          !_vm.checkRequired(
+                                            _vm.$v.userprofile.first_name
+                                          )
+                                            ? _c(
+                                                "small",
+                                                {
+                                                  staticStyle: {
+                                                    display: "block",
+                                                    color: "red",
+                                                    "font-size": "12px"
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Firstname is required"
+                                                  )
+                                                ]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-lg-6 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "billing-info" },
+                                            [
+                                              _c("label", [
+                                                _vm._v("Last Name")
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model.trim",
+                                                    value:
+                                                      _vm.$v.userprofile
+                                                        .last_name.$model,
+                                                    expression:
+                                                      "$v.userprofile.last_name.$model",
+                                                    modifiers: { trim: true }
+                                                  }
+                                                ],
+                                                class: _vm.status(
+                                                  _vm.$v.userprofile.last_name
+                                                ),
+                                                attrs: {
+                                                  type: "text",
+                                                  disabled: _vm.loading
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.$v.userprofile.last_name
+                                                      .$model
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.$v.userprofile
+                                                        .last_name,
+                                                      "$model",
+                                                      $event.target.value.trim()
+                                                    )
+                                                  },
+                                                  blur: function($event) {
+                                                    return _vm.$forceUpdate()
+                                                  }
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          !_vm.checkRequired(
+                                            _vm.$v.userprofile.last_name
+                                          )
+                                            ? _c(
+                                                "small",
+                                                {
+                                                  staticStyle: {
+                                                    display: "block",
+                                                    color: "red",
+                                                    "font-size": "12px"
+                                                  }
+                                                },
+                                                [_vm._v("Lastname is required")]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-lg-12 col-md-12" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "billing-info" },
+                                            [
+                                              _c("label", [
+                                                _vm._v("Email Address")
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model.trim",
+                                                    value:
+                                                      _vm.$v.userprofile.email
+                                                        .$model,
+                                                    expression:
+                                                      "$v.userprofile.email.$model",
+                                                    modifiers: { trim: true }
+                                                  }
+                                                ],
+                                                class: _vm.status(
+                                                  _vm.$v.userprofile.email
+                                                ),
+                                                attrs: {
+                                                  type: "email",
+                                                  disabled: _vm.loading,
+                                                  readonly: ""
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.$v.userprofile.email
+                                                      .$model
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.$v.userprofile.email,
+                                                      "$model",
+                                                      $event.target.value.trim()
+                                                    )
+                                                  },
+                                                  blur: function($event) {
+                                                    return _vm.$forceUpdate()
+                                                  }
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          !_vm.checkRequired(
+                                            _vm.$v.userprofile.email
+                                          )
+                                            ? _c(
+                                                "small",
+                                                {
+                                                  staticStyle: {
+                                                    display: "block",
+                                                    color: "red",
+                                                    "font-size": "12px"
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Email address is required"
+                                                  )
+                                                ]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-lg-6 col-md-6" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "billing-info" },
+                                            [
+                                              _c("label", [
+                                                _vm._v("Telephone")
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model.trim",
+                                                    value:
+                                                      _vm.$v.userprofile.phone
+                                                        .$model,
+                                                    expression:
+                                                      "$v.userprofile.phone.$model",
+                                                    modifiers: { trim: true }
+                                                  }
+                                                ],
+                                                class: _vm.status(
+                                                  _vm.$v.userprofile.phone
+                                                ),
+                                                attrs: {
+                                                  type: "text",
+                                                  disabled: _vm.loading
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.$v.userprofile.phone
+                                                      .$model
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.$v.userprofile.phone,
+                                                      "$model",
+                                                      $event.target.value.trim()
+                                                    )
+                                                  },
+                                                  blur: function($event) {
+                                                    return _vm.$forceUpdate()
+                                                  }
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          !_vm.checkRequired(
+                                            _vm.$v.userprofile.phone
+                                          )
+                                            ? _c(
+                                                "small",
+                                                {
+                                                  staticStyle: {
+                                                    display: "block",
+                                                    color: "red",
+                                                    "font-size": "12px"
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Phone number is required"
+                                                  )
+                                                ]
+                                              )
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          !_vm.checkLength(
+                                            _vm.$v.userprofile.phone
+                                          )
+                                            ? _c(
+                                                "small",
+                                                {
+                                                  staticStyle: {
+                                                    display: "block",
+                                                    color: "red",
+                                                    "font-size": "12px"
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Phone number must not be more than 11\n                              digits"
+                                                  )
+                                                ]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm._m(2)
+                                  ]
+                                )
+                              ])
+                            ]
                           )
-                        ])
-                      ],
-                      1
-                    )
-                  ])
-                ])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "panel panel-default" }, [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "panel-collapse collapse",
+                          attrs: {
+                            id: "my-account-2",
+                            "data-bs-parent": "#faq"
+                          }
+                        },
+                        [
+                          _c(
+                            "form",
+                            {
+                              attrs: { action: "#" },
+                              on: {
+                                submit: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.updatePassword()
+                                }
+                              }
+                            },
+                            [
+                              _c("div", { staticClass: "panel-body" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "billing-information-wrapper"
+                                  },
+                                  [
+                                    _vm._m(4),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "row" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-lg-12 col-md-12" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "billing-info" },
+                                            [
+                                              _c("label", [
+                                                _vm._v("Old Password")
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model.trim",
+                                                    value:
+                                                      _vm.$v.password
+                                                        .old_password.$model,
+                                                    expression:
+                                                      "$v.password.old_password.$model",
+                                                    modifiers: { trim: true }
+                                                  }
+                                                ],
+                                                class: _vm.status(
+                                                  _vm.$v.password.old_password
+                                                ),
+                                                attrs: {
+                                                  type: "password",
+                                                  disabled: _vm.loading
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.$v.password.old_password
+                                                      .$model
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.$v.password
+                                                        .old_password,
+                                                      "$model",
+                                                      $event.target.value.trim()
+                                                    )
+                                                  },
+                                                  blur: function($event) {
+                                                    return _vm.$forceUpdate()
+                                                  }
+                                                }
+                                              }),
+                                              _vm._v(" "),
+                                              !_vm.checkRequired(
+                                                _vm.$v.password.old_password
+                                              )
+                                                ? _c(
+                                                    "small",
+                                                    {
+                                                      staticStyle: {
+                                                        display: "block",
+                                                        color: "red",
+                                                        "font-size": "12px"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Old Password is required"
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              !_vm.checkLength(
+                                                _vm.$v.password.old_password
+                                              )
+                                                ? _c(
+                                                    "small",
+                                                    {
+                                                      staticStyle: {
+                                                        display: "block",
+                                                        color: "red",
+                                                        "font-size": "12px"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Invalid old password"
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e()
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-lg-12 col-md-12" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "billing-info" },
+                                            [
+                                              _c("label", [_vm._v("Password")]),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model.trim",
+                                                    value:
+                                                      _vm.$v.password.password
+                                                        .$model,
+                                                    expression:
+                                                      "$v.password.password.$model",
+                                                    modifiers: { trim: true }
+                                                  }
+                                                ],
+                                                class: _vm.status(
+                                                  _vm.$v.password.password
+                                                ),
+                                                attrs: {
+                                                  type: "password",
+                                                  disabled: _vm.loading
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.$v.password.password
+                                                      .$model
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.$v.password.password,
+                                                      "$model",
+                                                      $event.target.value.trim()
+                                                    )
+                                                  },
+                                                  blur: function($event) {
+                                                    return _vm.$forceUpdate()
+                                                  }
+                                                }
+                                              }),
+                                              _vm._v(" "),
+                                              !_vm.checkRequired(
+                                                _vm.$v.password.password
+                                              )
+                                                ? _c(
+                                                    "small",
+                                                    {
+                                                      staticStyle: {
+                                                        display: "block",
+                                                        color: "red",
+                                                        "font-size": "12px"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Password is required"
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              !_vm.checkLength(
+                                                _vm.$v.password.password
+                                              )
+                                                ? _c(
+                                                    "small",
+                                                    {
+                                                      staticStyle: {
+                                                        display: "block",
+                                                        color: "red",
+                                                        "font-size": "12px"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Password must not less than 8\n                                character"
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e()
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-lg-12 col-md-12" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "billing-info" },
+                                            [
+                                              _c("label", [
+                                                _vm._v("Password Confirm")
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model.trim",
+                                                    value:
+                                                      _vm.$v.password
+                                                        .confirm_password
+                                                        .$model,
+                                                    expression:
+                                                      "\n                                  $v.password.confirm_password.$model\n                                ",
+                                                    modifiers: { trim: true }
+                                                  }
+                                                ],
+                                                class: _vm.status(
+                                                  _vm.$v.password
+                                                    .confirm_password
+                                                ),
+                                                attrs: {
+                                                  type: "password",
+                                                  disabled: _vm.loading
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.$v.password
+                                                      .confirm_password.$model
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.$v.password
+                                                        .confirm_password,
+                                                      "$model",
+                                                      $event.target.value.trim()
+                                                    )
+                                                  },
+                                                  blur: function($event) {
+                                                    return _vm.$forceUpdate()
+                                                  }
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          !_vm.checkRequired(
+                                            _vm.$v.password.confirm_password
+                                          )
+                                            ? _c(
+                                                "small",
+                                                {
+                                                  staticStyle: {
+                                                    display: "block",
+                                                    color: "red",
+                                                    "font-size": "12px"
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Confirm Password is required"
+                                                  )
+                                                ]
+                                              )
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          !_vm.checkSame(
+                                            _vm.$v.password.confirm_password
+                                          )
+                                            ? _c(
+                                                "small",
+                                                {
+                                                  staticStyle: {
+                                                    display: "block",
+                                                    color: "red",
+                                                    "font-size": "12px"
+                                                  }
+                                                },
+                                                [_vm._v("Password not match")]
+                                              )
+                                            : _vm._e()
+                                        ]
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm._m(5)
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "panel panel-default" }, [
+                      _vm._m(6),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "panel-collapse collapse",
+                          attrs: {
+                            id: "my-account-3",
+                            "data-bs-parent": "#faq"
+                          }
+                        },
+                        [
+                          _c(
+                            "form",
+                            {
+                              attrs: { action: "#" },
+                              on: {
+                                submit: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.updateBillingAddress()
+                                }
+                              }
+                            },
+                            [
+                              _c("div", { staticClass: "panel-body" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "billing-information-wrapper"
+                                  },
+                                  [
+                                    _vm._m(7),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "row" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-lg-12 col-md-12" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "billing-info" },
+                                            [
+                                              _c("label", [
+                                                _vm._v(" Country / Region ")
+                                              ]),
+                                              _vm._v(" "),
+                                              _c(
+                                                "select",
+                                                {
+                                                  directives: [
+                                                    {
+                                                      name: "model",
+                                                      rawName: "v-model",
+                                                      value:
+                                                        _vm.$v.billing.country
+                                                          .$model,
+                                                      expression:
+                                                        "$v.billing.country.$model"
+                                                    }
+                                                  ],
+                                                  staticClass: "form-control",
+                                                  class: _vm.status(
+                                                    _vm.$v.billing.country
+                                                  ),
+                                                  attrs: {
+                                                    name: "orderby",
+                                                    disabled: _vm.loading
+                                                  },
+                                                  on: {
+                                                    change: function($event) {
+                                                      var $$selectedVal = Array.prototype.filter
+                                                        .call(
+                                                          $event.target.options,
+                                                          function(o) {
+                                                            return o.selected
+                                                          }
+                                                        )
+                                                        .map(function(o) {
+                                                          var val =
+                                                            "_value" in o
+                                                              ? o._value
+                                                              : o.value
+                                                          return val
+                                                        })
+                                                      _vm.$set(
+                                                        _vm.$v.billing.country,
+                                                        "$model",
+                                                        $event.target.multiple
+                                                          ? $$selectedVal
+                                                          : $$selectedVal[0]
+                                                      )
+                                                    }
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "option",
+                                                    {
+                                                      attrs: {
+                                                        value: "Nigeria",
+                                                        selected: "selected"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                  Nigeria\n                                "
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              !_vm.checkRequired(
+                                                _vm.$v.billing.country
+                                              )
+                                                ? _c(
+                                                    "small",
+                                                    {
+                                                      staticStyle: {
+                                                        display: "block",
+                                                        color: "red",
+                                                        "font-size": "12px"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Billing country is required"
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e()
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-lg-12 col-md-12" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "billing-info" },
+                                            [
+                                              _c("label", [
+                                                _vm._v(" Street address ")
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model.trim",
+                                                    value:
+                                                      _vm.$v.billing.address
+                                                        .$model,
+                                                    expression:
+                                                      "$v.billing.address.$model",
+                                                    modifiers: { trim: true }
+                                                  }
+                                                ],
+                                                staticClass: "form-control",
+                                                class: _vm.status(
+                                                  _vm.$v.billing.address
+                                                ),
+                                                attrs: {
+                                                  type: "text",
+                                                  placeholder:
+                                                    "House number and street name",
+                                                  disabled: _vm.loading
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.$v.billing.address
+                                                      .$model
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.$v.billing.address,
+                                                      "$model",
+                                                      $event.target.value.trim()
+                                                    )
+                                                  },
+                                                  blur: function($event) {
+                                                    return _vm.$forceUpdate()
+                                                  }
+                                                }
+                                              }),
+                                              _vm._v(" "),
+                                              !_vm.checkRequired(
+                                                _vm.$v.billing.address
+                                              )
+                                                ? _c(
+                                                    "small",
+                                                    {
+                                                      staticStyle: {
+                                                        display: "block",
+                                                        color: "red",
+                                                        "font-size": "12px"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Billing address is required"
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e()
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-lg-12 col-md-12" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "billing-info" },
+                                            [
+                                              _c("label", [
+                                                _vm._v(" Town / City ")
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model.trim",
+                                                    value:
+                                                      _vm.$v.billing.city
+                                                        .$model,
+                                                    expression:
+                                                      "$v.billing.city.$model",
+                                                    modifiers: { trim: true }
+                                                  }
+                                                ],
+                                                staticClass: "form-control",
+                                                class: _vm.status(
+                                                  _vm.$v.billing.city
+                                                ),
+                                                attrs: {
+                                                  type: "text",
+                                                  disabled: _vm.loading
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.$v.billing.city.$model
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.$v.billing.city,
+                                                      "$model",
+                                                      $event.target.value.trim()
+                                                    )
+                                                  },
+                                                  blur: function($event) {
+                                                    return _vm.$forceUpdate()
+                                                  }
+                                                }
+                                              }),
+                                              _vm._v(" "),
+                                              !_vm.checkRequired(
+                                                _vm.$v.billing.city
+                                              )
+                                                ? _c(
+                                                    "small",
+                                                    {
+                                                      staticStyle: {
+                                                        display: "block",
+                                                        color: "red",
+                                                        "font-size": "12px"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Billing city is required"
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e()
+                                            ]
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "col-lg-12 col-md-12" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "billing-info" },
+                                            [
+                                              _c("label", [_vm._v(" State ")]),
+                                              _vm._v(" "),
+                                              _c("input", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model.trim",
+                                                    value:
+                                                      _vm.$v.billing.state
+                                                        .$model,
+                                                    expression:
+                                                      "$v.billing.state.$model",
+                                                    modifiers: { trim: true }
+                                                  }
+                                                ],
+                                                staticClass: "form-control",
+                                                class: _vm.status(
+                                                  _vm.$v.billing.state
+                                                ),
+                                                attrs: {
+                                                  type: "text",
+                                                  disabled: _vm.loading
+                                                },
+                                                domProps: {
+                                                  value:
+                                                    _vm.$v.billing.state.$model
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.$v.billing.state,
+                                                      "$model",
+                                                      $event.target.value.trim()
+                                                    )
+                                                  },
+                                                  blur: function($event) {
+                                                    return _vm.$forceUpdate()
+                                                  }
+                                                }
+                                              }),
+                                              _vm._v(" "),
+                                              !_vm.checkRequired(
+                                                _vm.$v.billing.state
+                                              )
+                                                ? _c(
+                                                    "small",
+                                                    {
+                                                      staticStyle: {
+                                                        display: "block",
+                                                        color: "red",
+                                                        "font-size": "12px"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Billing state is required"
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e()
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm._m(8)
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "panel panel-default" }, [
+                      _vm._m(9),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "panel-collapse collapse",
+                          attrs: {
+                            id: "my-account-4",
+                            "data-bs-parent": "#faq"
+                          }
+                        },
+                        [
+                          _c("div", { staticClass: "panel-body" }, [
+                            _c(
+                              "div",
+                              { staticClass: "billing-information-wrapper" },
+                              [
+                                _vm._m(10),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "entries-wrapper" },
+                                  [
+                                    _vm.getShippingAddesses.length > 0
+                                      ? _vm._l(
+                                          _vm.getShippingAddesses,
+                                          function(address, index) {
+                                            return _c(
+                                              "div",
+                                              {
+                                                key: index,
+                                                staticClass: "row"
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "\n                                col-lg-6 col-md-6\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                              "
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "entries-info text-center"
+                                                      },
+                                                      [
+                                                        _c("p", [
+                                                          _vm._v(
+                                                            _vm._s(
+                                                              address.address
+                                                            ) + ","
+                                                          )
+                                                        ]),
+                                                        _vm._v(" "),
+                                                        _c("p", [
+                                                          _vm._v(
+                                                            _vm._s(
+                                                              address.postal_code
+                                                            )
+                                                          )
+                                                        ]),
+                                                        _vm._v(" "),
+                                                        _c("p", [
+                                                          _vm._v(
+                                                            _vm._s(
+                                                              address.city
+                                                            ) +
+                                                              ", " +
+                                                              _vm._s(
+                                                                address.state
+                                                              )
+                                                          )
+                                                        ]),
+                                                        _vm._v(" "),
+                                                        _c("p", [
+                                                          _vm._v(
+                                                            _vm._s(
+                                                              address.country
+                                                            ) + "."
+                                                          )
+                                                        ]),
+                                                        _vm._v(" "),
+                                                        _c("p", [
+                                                          _vm._v(
+                                                            _vm._s(
+                                                              address.phone
+                                                            ) + "."
+                                                          )
+                                                        ])
+                                                      ]
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _vm._m(11, true)
+                                              ]
+                                            )
+                                          }
+                                        )
+                                      : [_vm._m(12)]
+                                  ],
+                                  2
+                                ),
+                                _vm._v(" "),
+                                _vm._m(13)
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "panel panel-default" }, [
+                      _c("div", { staticClass: "panel-heading" }, [
+                        _c(
+                          "h5",
+                          { staticClass: "panel-title" },
+                          [
+                            _c("span", [_vm._v("5")]),
+                            _vm._v(" "),
+                            _c("router-link", { attrs: { to: "/wishlist" } }, [
+                              _vm._v(
+                                "Modify your wish list\n                    "
+                              )
+                            ])
+                          ],
+                          1
+                        )
+                      ])
+                    ])
+                  ]
+                )
               ])
             ])
           ])
         ])
       ])
-    ])
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "breadcrumb-area gray-bg-7" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "breadcrumb-content" }, [
-          _c("ul", [
-            _c("li", [
-              _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")])
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "active" }, [_vm._v("My Account")])
-          ])
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h5", { staticClass: "panel-title" }, [
+        _c("span", [_vm._v("1")]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { attrs: { "data-bs-toggle": "collapse", href: "#my-account-1" } },
+          [_vm._v("Edit your account information\n                    ")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "account-info-wrapper" }, [
+      _c("h4", [_vm._v("My Account Information")]),
+      _vm._v(" "),
+      _c("h5", [_vm._v("Your Personal Details")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "billing-back-btn" }, [
+      _c("div", { staticClass: "billing-back" }, [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "ion-arrow-up-c" }),
+          _vm._v(" back")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "billing-btn" }, [
+        _c("button", { attrs: { type: "submit", id: "update_account" } }, [
+          _vm._v(
+            "\n                              Continue\n                            "
+          )
         ])
       ])
     ])
@@ -68581,328 +67823,166 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "panel panel-default" }, [
-      _c("div", { staticClass: "panel-heading" }, [
-        _c("h5", { staticClass: "panel-title" }, [
-          _c("span", [_vm._v("1")]),
-          _vm._v(" "),
-          _c(
-            "a",
-            { attrs: { "data-bs-toggle": "collapse", href: "#my-account-1" } },
-            [
-              _vm._v(
-                "Edit your account information\n                                        "
-              )
-            ]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "panel-collapse collapse show",
-          attrs: { id: "my-account-1", "data-bs-parent": "#faq" }
-        },
-        [
-          _c("div", { staticClass: "panel-body" }, [
-            _c("div", { staticClass: "billing-information-wrapper" }, [
-              _c("div", { staticClass: "account-info-wrapper" }, [
-                _c("h4", [
-                  _vm._v(
-                    "\n                                                    My Account Information\n                                                "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("h5", [
-                  _vm._v(
-                    "\n                                                    Your Personal Details\n                                                "
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-lg-6 col-md-6" }, [
-                  _c("div", { staticClass: "billing-info" }, [
-                    _c("label", [
-                      _vm._v(
-                        "First\n                                                            Name"
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("input", { attrs: { type: "text" } })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-md-6" }, [
-                  _c("div", { staticClass: "billing-info" }, [
-                    _c("label", [
-                      _vm._v(
-                        "Last\n                                                            Name"
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("input", { attrs: { type: "text" } })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-12 col-md-12" }, [
-                  _c("div", { staticClass: "billing-info" }, [
-                    _c("label", [
-                      _vm._v(
-                        "Email\n                                                            Address"
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("input", { attrs: { type: "email" } })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-md-6" }, [
-                  _c("div", { staticClass: "billing-info" }, [
-                    _c("label", [_vm._v("Telephone")]),
-                    _vm._v(" "),
-                    _c("input", { attrs: { type: "text" } })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-6 col-md-6" }, [
-                  _c("div", { staticClass: "billing-info" }, [
-                    _c("label", [_vm._v("Fax")]),
-                    _vm._v(" "),
-                    _c("input", { attrs: { type: "text" } })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "billing-back-btn" }, [
-                _c("div", { staticClass: "billing-back" }, [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "ion-arrow-up-c" }),
-                    _vm._v(
-                      "\n                                                        back"
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "billing-btn" }, [
-                  _c("button", { attrs: { type: "submit" } }, [
-                    _vm._v(
-                      "\n                                                        Continue\n                                                    "
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ]
-      )
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h5", { staticClass: "panel-title" }, [
+        _c("span", [_vm._v("2")]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { attrs: { "data-bs-toggle": "collapse", href: "#my-account-2" } },
+          [_vm._v("Change your password\n                    ")]
+        )
+      ])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "panel panel-default" }, [
-      _c("div", { staticClass: "panel-heading" }, [
-        _c("h5", { staticClass: "panel-title" }, [
-          _c("span", [_vm._v("2")]),
-          _vm._v(" "),
-          _c(
-            "a",
-            { attrs: { "data-bs-toggle": "collapse", href: "#my-account-2" } },
-            [
-              _vm._v(
-                "Change your password\n                                        "
-              )
-            ]
-          )
-        ])
-      ]),
+    return _c("div", { staticClass: "account-info-wrapper" }, [
+      _c("h4", [_vm._v("Change Password")]),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "panel-collapse collapse",
-          attrs: { id: "my-account-2", "data-bs-parent": "#faq" }
-        },
-        [
-          _c("div", { staticClass: "panel-body" }, [
-            _c("div", { staticClass: "billing-information-wrapper" }, [
-              _c("div", { staticClass: "account-info-wrapper" }, [
-                _c("h4", [_vm._v("Change Password")]),
-                _vm._v(" "),
-                _c("h5", [_vm._v("Your Password")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-lg-12 col-md-12" }, [
-                  _c("div", { staticClass: "billing-info" }, [
-                    _c("label", [_vm._v("Password")]),
-                    _vm._v(" "),
-                    _c("input", { attrs: { type: "password" } })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-12 col-md-12" }, [
-                  _c("div", { staticClass: "billing-info" }, [
-                    _c("label", [
-                      _vm._v(
-                        "Password\n                                                            Confirm"
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("input", { attrs: { type: "password" } })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "billing-back-btn" }, [
-                _c("div", { staticClass: "billing-back" }, [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "ion-arrow-up-c" }),
-                    _vm._v(
-                      "\n                                                        back"
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "billing-btn" }, [
-                  _c("button", { attrs: { type: "submit" } }, [
-                    _vm._v(
-                      "\n                                                        Continue\n                                                    "
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ]
-      )
+      _c("h5", [_vm._v("Your Password")])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "panel panel-default" }, [
-      _c("div", { staticClass: "panel-heading" }, [
-        _c("h5", { staticClass: "panel-title" }, [
-          _c("span", [_vm._v("3")]),
-          _vm._v(" "),
-          _c(
-            "a",
-            { attrs: { "data-bs-toggle": "collapse", href: "#my-account-3" } },
-            [
-              _vm._v(
-                "Modify your address book\n                                            entries\n                                        "
-              )
-            ]
-          )
+    return _c("div", { staticClass: "billing-back-btn" }, [
+      _c("div", { staticClass: "billing-back" }, [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "ion-arrow-up-c" }),
+          _vm._v(" back")
         ])
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "panel-collapse collapse",
-          attrs: { id: "my-account-3", "data-bs-parent": "#faq" }
-        },
-        [
-          _c("div", { staticClass: "panel-body" }, [
-            _c("div", { staticClass: "billing-information-wrapper" }, [
-              _c("div", { staticClass: "account-info-wrapper" }, [
-                _c("h4", [
-                  _vm._v(
-                    "\n                                                    Address Book Entries\n                                                "
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "entries-wrapper" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "\n                            col-lg-6 col-md-6\n                            d-flex\n                            align-items-center\n                            justify-content-center\n                          "
-                    },
-                    [
-                      _c("div", { staticClass: "entries-info text-center" }, [
-                        _c("p", [
-                          _vm._v(
-                            "\n                                                                Farhana\n                                                                hayder\n                                                                (shuvo)\n                                                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [_vm._v("hastech")]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "\n                                                                Road#1 ,\n                                                                Block#c\n                                                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [_vm._v("Rampura.")]),
-                        _vm._v(" "),
-                        _c("p", [_vm._v("Dhaka")]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "\n                                                                Bangladesh\n                                                            "
-                          )
-                        ])
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "\n                            col-lg-6 col-md-6\n                            d-flex\n                            align-items-center\n                            justify-content-center\n                          "
-                    },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "entries-edit-delete text-center" },
-                        [
-                          _c(
-                            "a",
-                            { staticClass: "edit", attrs: { href: "#" } },
-                            [_vm._v("Edit")]
-                          ),
-                          _vm._v(" "),
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Delete")])
-                        ]
-                      )
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "billing-back-btn" }, [
-                _c("div", { staticClass: "billing-back" }, [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "ion-arrow-up-c" }),
-                    _vm._v(
-                      "\n                                                        back"
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "billing-btn" }, [
-                  _c("button", { attrs: { type: "submit" } }, [
-                    _vm._v(
-                      "\n                                                        Continue\n                                                    "
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ]
-      )
+      _c("div", { staticClass: "billing-btn" }, [
+        _c("button", { attrs: { type: "submit", id: "update_password" } }, [
+          _vm._v(
+            "\n                              Continue\n                            "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h5", { staticClass: "panel-title" }, [
+        _c("span", [_vm._v("3")]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { attrs: { "data-bs-toggle": "collapse", href: "#my-account-3" } },
+          [_vm._v("Billing Address\n                    ")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "account-info-wrapper" }, [
+      _c("h4", [_vm._v("Update billing address")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "billing-back-btn" }, [
+      _c("div", { staticClass: "billing-back" }, [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "ion-arrow-up-c" }),
+          _vm._v(" back")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "billing-btn" }, [
+        _c("button", { attrs: { type: "submit", id: "billing_submit" } }, [
+          _vm._v(
+            "\n                              Continue\n                            "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h5", { staticClass: "panel-title" }, [
+        _c("span", [_vm._v("4")]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { attrs: { "data-bs-toggle": "collapse", href: "#my-account-4" } },
+          [_vm._v("Modify your address book entries\n                    ")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "account-info-wrapper" }, [
+      _c("h4", [_vm._v("Address Book Entries")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "\n                                col-lg-6 col-md-6\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                              "
+      },
+      [
+        _c("div", { staticClass: "entries-edit-delete text-center" }, [
+          _c("a", { staticClass: "edit", attrs: { href: "#" } }, [
+            _vm._v("Deactivate")
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "#" } }, [_vm._v("Delete")])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "entries-info text-center" }, [
+          _c("h4", [_vm._v("No entries found")])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "billing-back-btn" }, [
+      _c("div", { staticClass: "billing-back" }, [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "ion-arrow-up-c" }),
+          _vm._v(" back")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "billing-btn" }, [
+        _c("button", { attrs: { type: "submit" } }, [_vm._v("Continue")])
+      ])
     ])
   }
 ]
@@ -69632,8 +68712,8 @@ var render = function() {
                                 _c("img", {
                                   attrs: {
                                     src: "" + product.featured_image,
-                                    width: "200",
-                                    height: "200",
+                                    width: "150",
+                                    height: "150",
                                     alt: product.name
                                   }
                                 })
@@ -69708,10 +68788,75 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
-              _vm._m(2)
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-lg-12" }, [
+                  _c("div", { staticClass: "cart-shiping-update-wrapper" }, [
+                    _c(
+                      "div",
+                      { staticClass: "cart-shiping-update" },
+                      [
+                        _c("router-link", { attrs: { to: "/shop" } }, [
+                          _vm._v("Continue Shopping")
+                        ])
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "cart-clear" }, [
+                      _c("button", [
+                        _vm._v(
+                          "\n                                            Update Shopping Cart\n                                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "javascript:;" },
+                          on: { click: _vm.clearMyCart }
+                        },
+                        [_vm._v("Clear Shopping Cart")]
+                      )
+                    ])
+                  ])
+                ])
+              ])
             ]),
             _vm._v(" "),
-            _vm._m(3)
+            _c("div", { staticClass: "row" }, [
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-4 col-md-12" }, [
+                _c(
+                  "div",
+                  { staticClass: "grand-totall" },
+                  [
+                    _vm._m(4),
+                    _vm._v(" "),
+                    _c("h5", [
+                      _vm._v("Total products "),
+                      _c("span", [_vm._v("₦" + _vm._s(_vm.totalPrice))])
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(5),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "grand-totall-title" }, [
+                      _vm._v(
+                        "\n                                    Grand Total "
+                      ),
+                      _c("span", [_vm._v("₦" + _vm._s(_vm.totalPrice))])
+                    ]),
+                    _vm._v(" "),
+                    _c("router-link", { attrs: { to: "/checkout" } }, [
+                      _vm._v("Proceed to Checkout")
+                    ])
+                  ],
+                  1
+                )
+              ])
+            ])
           ])
         ])
       ])
@@ -69743,7 +68888,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("a", { attrs: { href: "#" } }, [
+    return _c("a", { attrs: { href: "javascript:;" } }, [
       _c("i", { staticClass: "fa fa-pencil" })
     ])
   },
@@ -69751,21 +68896,61 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-lg-12" }, [
-        _c("div", { staticClass: "cart-shiping-update-wrapper" }, [
-          _c("div", { staticClass: "cart-shiping-update" }, [
-            _c("a", { attrs: { href: "#" } }, [_vm._v("Continue Shopping")])
+    return _c("div", { staticClass: "col-lg-4 col-md-6" }, [
+      _c("div", { staticClass: "cart-tax" }, [
+        _c("div", { staticClass: "title-wrap" }, [
+          _c("h4", { staticClass: "cart-bottom-title section-bg-white" }, [
+            _vm._v(
+              "\n                                        Estimate Shipping And Tax\n                                    "
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "tax-wrapper" }, [
+          _c("p", [
+            _vm._v(
+              "\n                                        Enter your destination to get a\n                                        shipping estimate.\n                                    "
+            )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "cart-clear" }, [
-            _c("button", [
-              _vm._v(
-                "\n                                            Update Shopping Cart\n                                        "
-              )
+          _c("div", { staticClass: "tax-select-wrapper" }, [
+            _c("div", { staticClass: "tax-select" }, [
+              _c("label", [_vm._v(" * Country ")]),
+              _vm._v(" "),
+              _c("select", { staticClass: "email s-email s-wid" }, [
+                _c("option", [_vm._v("Nigeria")])
+              ])
             ]),
             _vm._v(" "),
-            _c("a", { attrs: { href: "#" } }, [_vm._v("Clear Shopping Cart")])
+            _c("div", { staticClass: "tax-select" }, [
+              _c("label", [
+                _vm._v(
+                  "\n                                                * State\n                                            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "text" } })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "tax-select" }, [
+              _c("label", [
+                _vm._v(
+                  "\n                                                * Zip/Postal Code\n                                            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", { attrs: { type: "text" } })
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "cart-btn-2", attrs: { type: "submit" } },
+              [
+                _vm._v(
+                  "\n                                            Get A Quote\n                                        "
+                )
+              ]
+            )
           ])
         ])
       ])
@@ -69775,168 +68960,72 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-lg-4 col-md-6" }, [
-        _c("div", { staticClass: "cart-tax" }, [
-          _c("div", { staticClass: "title-wrap" }, [
-            _c("h4", { staticClass: "cart-bottom-title section-bg-white" }, [
-              _vm._v(
-                "\n                                        Estimate Shipping And Tax\n                                    "
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "tax-wrapper" }, [
-            _c("p", [
-              _vm._v(
-                "\n                                        Enter your destination to get a\n                                        shipping estimate.\n                                    "
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "tax-select-wrapper" }, [
-              _c("div", { staticClass: "tax-select" }, [
-                _c("label", [_vm._v(" * Country ")]),
-                _vm._v(" "),
-                _c("select", { staticClass: "email s-email s-wid" }, [
-                  _c("option", [_vm._v("Bangladesh")]),
-                  _vm._v(" "),
-                  _c("option", [_vm._v("Albania")]),
-                  _vm._v(" "),
-                  _c("option", [_vm._v("Åland Islands")]),
-                  _vm._v(" "),
-                  _c("option", [_vm._v("Afghanistan")]),
-                  _vm._v(" "),
-                  _c("option", [_vm._v("Belgium")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "tax-select" }, [
-                _c("label", [
-                  _vm._v(
-                    "\n                                                * Region / State\n                                            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("select", { staticClass: "email s-email s-wid" }, [
-                  _c("option", [_vm._v("Bangladesh")]),
-                  _vm._v(" "),
-                  _c("option", [_vm._v("Albania")]),
-                  _vm._v(" "),
-                  _c("option", [_vm._v("Åland Islands")]),
-                  _vm._v(" "),
-                  _c("option", [_vm._v("Afghanistan")]),
-                  _vm._v(" "),
-                  _c("option", [_vm._v("Belgium")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "tax-select" }, [
-                _c("label", [
-                  _vm._v(
-                    "\n                                                * Zip/Postal Code\n                                            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("input", { attrs: { type: "text" } })
-              ]),
-              _vm._v(" "),
-              _c(
-                "button",
-                { staticClass: "cart-btn-2", attrs: { type: "submit" } },
-                [
-                  _vm._v(
-                    "\n                                            Get A Quote\n                                        "
-                  )
-                ]
-              )
-            ])
+    return _c("div", { staticClass: "col-lg-4 col-md-6" }, [
+      _c("div", { staticClass: "discount-code-wrapper" }, [
+        _c("div", { staticClass: "title-wrap" }, [
+          _c("h4", { staticClass: "cart-bottom-title section-bg-white" }, [
+            _vm._v(
+              "\n                                        Use Coupon Code\n                                    "
+            )
           ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-lg-4 col-md-6" }, [
-        _c("div", { staticClass: "discount-code-wrapper" }, [
-          _c("div", { staticClass: "title-wrap" }, [
-            _c("h4", { staticClass: "cart-bottom-title section-bg-white" }, [
-              _vm._v(
-                "\n                                        Use Coupon Code\n                                    "
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "discount-code" }, [
-            _c("p", [
-              _vm._v(
-                "\n                                        Enter your coupon code if you have\n                                        one.\n                                    "
-              )
-            ]),
-            _vm._v(" "),
-            _c("form", [
-              _c("input", {
-                attrs: { type: "text", required: "", name: "name" }
-              }),
-              _vm._v(" "),
-              _c(
-                "button",
-                { staticClass: "cart-btn-2", attrs: { type: "submit" } },
-                [
-                  _vm._v(
-                    "\n                                            Apply Coupon\n                                        "
-                  )
-                ]
-              )
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-lg-4 col-md-12" }, [
-        _c("div", { staticClass: "grand-totall" }, [
-          _c("div", { staticClass: "title-wrap" }, [
-            _c(
-              "h4",
-              { staticClass: "cart-bottom-title section-bg-gary-cart" },
-              [
-                _vm._v(
-                  "\n                                        Cart Total\n                                    "
-                )
-              ]
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "discount-code" }, [
+          _c("p", [
+            _vm._v(
+              "\n                                        Enter your coupon code if you have\n                                        one.\n                                    "
             )
           ]),
           _vm._v(" "),
-          _c("h5", [
-            _vm._v("Total products "),
-            _c("span", [_vm._v("$260.00")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "total-shipping" }, [
-            _c("h5", [_vm._v("Total shipping")]),
+          _c("form", [
+            _c("input", {
+              attrs: { type: "text", required: "", name: "name" }
+            }),
             _vm._v(" "),
-            _c("ul", [
-              _c("li", [
-                _c("input", { attrs: { type: "checkbox" } }),
+            _c(
+              "button",
+              { staticClass: "cart-btn-2", attrs: { type: "submit" } },
+              [
                 _vm._v(
-                  "\n                                            Standard "
-                ),
-                _c("span", [_vm._v("$20.00")])
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("input", { attrs: { type: "checkbox" } }),
-                _vm._v(
-                  "\n                                            Express "
-                ),
-                _c("span", [_vm._v("$30.00")])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("h4", { staticClass: "grand-totall-title" }, [
-            _vm._v("\n                                    Grand Total "),
-            _c("span", [_vm._v("$260.00")])
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Proceed to Checkout")])
+                  "\n                                            Apply Coupon\n                                        "
+                )
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "title-wrap" }, [
+      _c("h4", { staticClass: "cart-bottom-title section-bg-gary-cart" }, [
+        _vm._v(
+          "\n                                        Cart Total\n                                    "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "total-shipping" }, [
+      _c("h5", [_vm._v("Total shipping")]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _c("input", { attrs: { type: "checkbox" } }),
+          _vm._v("\n                                            Standard "),
+          _c("span", [_vm._v("₦20.00")])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("input", { attrs: { type: "checkbox" } }),
+          _vm._v("\n                                            Express "),
+          _c("span", [_vm._v("₦30.00")])
         ])
       ])
     ])
@@ -69964,27 +69053,10 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "breadcrumb-area gray-bg-7" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "breadcrumb-content" }, [
-            _c("ul", [
-              _c("li", [
-                _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "active" }, [_vm._v("Checkout")])
-            ])
-          ])
-        ])
-      ]),
+  return _c(
+    "div",
+    [
+      _c("sy-breadcrumb", { attrs: { title: "My Checkout" } }),
       _vm._v(" "),
       _c("div", { staticClass: "checkout-area pb-45 pt-65" }, [
         _c("div", { staticClass: "container" }, [
@@ -69996,22 +69068,7 @@ var staticRenderFns = [
                   { staticClass: "panel-group", attrs: { id: "faq" } },
                   [
                     _c("div", { staticClass: "panel panel-default" }, [
-                      _c("div", { staticClass: "panel-heading" }, [
-                        _c("h5", { staticClass: "panel-title" }, [
-                          _c("span", [_vm._v("1.")]),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                "data-bs-toggle": "collapse",
-                                href: "#payment-1"
-                              }
-                            },
-                            [_vm._v("Checkout method")]
-                          )
-                        ])
-                      ]),
+                      _vm._m(0),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -70019,168 +69076,13 @@ var staticRenderFns = [
                           staticClass: "panel-collapse collapse show",
                           attrs: { id: "payment-1", "data-bs-parent": "#faq" }
                         },
-                        [
-                          _c("div", { staticClass: "panel-body" }, [
-                            _c("div", { staticClass: "row" }, [
-                              _c("div", { staticClass: "col-lg-5" }, [
-                                _c(
-                                  "div",
-                                  { staticClass: "checkout-register" },
-                                  [
-                                    _c("div", { staticClass: "title-wrap" }, [
-                                      _c(
-                                        "h4",
-                                        {
-                                          staticClass:
-                                            "cart-bottom-title section-bg-white"
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                              CHECKOUT AS A GUEST OR REGISTER\n                            "
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "register-us" }, [
-                                      _c("ul", [
-                                        _c("li", [
-                                          _c("input", {
-                                            attrs: { type: "checkbox" }
-                                          }),
-                                          _vm._v(
-                                            " Checkout as Guest\n                              "
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("li", [
-                                          _c("input", {
-                                            attrs: { type: "checkbox" }
-                                          }),
-                                          _vm._v(" Register")
-                                        ])
-                                      ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h6", [
-                                      _vm._v("REGISTER AND SAVE TIME!")
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "register-us-2" },
-                                      [
-                                        _c("p", [
-                                          _vm._v(
-                                            "Register with us for future convenience."
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("ul", [
-                                          _c("li", [
-                                            _vm._v("Fast and easy checkout")
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("li", [
-                                            _vm._v(
-                                              "\n                                Easy access to your order history and status\n                              "
-                                            )
-                                          ])
-                                        ])
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("Apply Coupon")
-                                    ])
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "col-lg-7" }, [
-                                _c("div", { staticClass: "checkout-login" }, [
-                                  _c("div", { staticClass: "title-wrap" }, [
-                                    _c(
-                                      "h4",
-                                      {
-                                        staticClass:
-                                          "cart-bottom-title section-bg-white"
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                              LOGIN\n                            "
-                                        )
-                                      ]
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("p", [_vm._v("Already have an account?")]),
-                                  _vm._v(" "),
-                                  _c("span", [_vm._v("Please log in below:")]),
-                                  _vm._v(" "),
-                                  _c("form", [
-                                    _c("div", { staticClass: "login-form" }, [
-                                      _c("label", [_vm._v("Email Address * ")]),
-                                      _vm._v(" "),
-                                      _c("input", {
-                                        attrs: { type: "email", name: "email" }
-                                      })
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "login-form" }, [
-                                      _c("label", [_vm._v("Password *")]),
-                                      _vm._v(" "),
-                                      _c("input", {
-                                        attrs: {
-                                          type: "password",
-                                          name: "email"
-                                        }
-                                      })
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "login-forget" }, [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v("Forgot your password?")
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("p", [_vm._v("* Required Fields")])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "checkout-login-btn" },
-                                    [
-                                      _c("a", { attrs: { href: "#" } }, [
-                                        _vm._v("Login")
-                                      ])
-                                    ]
-                                  )
-                                ])
-                              ])
-                            ])
-                          ])
-                        ]
+                        [_c("sy-cart-user")],
+                        1
                       )
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "panel panel-default" }, [
-                      _c("div", { staticClass: "panel-heading" }, [
-                        _c("h5", { staticClass: "panel-title" }, [
-                          _c("span", [_vm._v("2.")]),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                "data-bs-toggle": "collapse",
-                                href: "#payment-2"
-                              }
-                            },
-                            [_vm._v("billing information")]
-                          )
-                        ])
-                      ]),
+                      _vm._m(1),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -70188,496 +69090,17 @@ var staticRenderFns = [
                           staticClass: "panel-collapse collapse",
                           attrs: { id: "payment-2", "data-bs-parent": "#faq" }
                         },
-                        [
-                          _c("div", { staticClass: "panel-body" }, [
-                            _c(
-                              "div",
-                              { staticClass: "billing-information-wrapper" },
-                              [
-                                _c("div", { staticClass: "row" }, [
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [_vm._v("First Name")]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [_vm._v("Last Name")]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [_vm._v("Company")]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [
-                                            _vm._v("Email Address")
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "email" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-12 col-md-12" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [_vm._v("Address")]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [_vm._v("city")]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [
-                                            _vm._v("State/Province")
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [
-                                            _vm._v("Zip/Postal Code")
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-select" },
-                                        [
-                                          _c("label", [_vm._v("Country")]),
-                                          _vm._v(" "),
-                                          _c("select", [
-                                            _c(
-                                              "option",
-                                              { attrs: { value: "1" } },
-                                              [_vm._v("United State")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "option",
-                                              { attrs: { value: "2" } },
-                                              [_vm._v("Azerbaijan")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "option",
-                                              { attrs: { value: "3" } },
-                                              [_vm._v("Bahamas")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "option",
-                                              { attrs: { value: "4" } },
-                                              [_vm._v("Bahrain")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "option",
-                                              { attrs: { value: "5" } },
-                                              [_vm._v("Bangladesh")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "option",
-                                              { attrs: { value: "6" } },
-                                              [_vm._v("Barbados")]
-                                            )
-                                          ])
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [_vm._v("Telephone")]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [_vm._v("Fax")]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "ship-wrapper" }, [
-                                  _c("div", { staticClass: "single-ship" }, [
-                                    _c("input", {
-                                      attrs: {
-                                        type: "radio",
-                                        name: "address",
-                                        value: "address",
-                                        checked: ""
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("label", [
-                                      _vm._v("Ship to this address")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "single-ship" }, [
-                                    _c("input", {
-                                      attrs: {
-                                        type: "radio",
-                                        name: "address",
-                                        value: "dadress"
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("label", [
-                                      _vm._v("Ship to different address")
-                                    ])
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "billing-back-btn" }, [
-                                  _c("div", { staticClass: "billing-back" }, [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _c("i", {
-                                        staticClass: "ion-arrow-up-c"
-                                      }),
-                                      _vm._v(" back")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "billing-btn" }, [
-                                    _c(
-                                      "button",
-                                      { attrs: { type: "submit" } },
-                                      [_vm._v("Get a Quote")]
-                                    )
-                                  ])
-                                ])
-                              ]
-                            )
-                          ])
-                        ]
+                        [_c("sy-cart-billing")],
+                        1
                       )
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "panel panel-default" }, [
-                      _c("div", { staticClass: "panel-heading" }, [
-                        _c("h5", { staticClass: "panel-title" }, [
-                          _c("span", [_vm._v("3.")]),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                "data-bs-toggle": "collapse",
-                                href: "#payment-3"
-                              }
-                            },
-                            [_vm._v("shipping information")]
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "panel-collapse collapse",
-                          attrs: { id: "payment-3", "data-bs-parent": "#faq" }
-                        },
-                        [
-                          _c("div", { staticClass: "panel-body" }, [
-                            _c(
-                              "div",
-                              { staticClass: "shipping-information-wrapper" },
-                              [
-                                _c("div", { staticClass: "shipping-info-2" }, [
-                                  _c("span", [_vm._v("HasTech")]),
-                                  _vm._v(" "),
-                                  _c("span", [_vm._v("Bonosrie")]),
-                                  _vm._v(" "),
-                                  _c("span", [_vm._v("D - Block")]),
-                                  _vm._v(" "),
-                                  _c("span", [_vm._v("Dkaka, 1201")]),
-                                  _vm._v(" "),
-                                  _c("span", [_vm._v("Bangladesh")]),
-                                  _vm._v(" "),
-                                  _c("span", [_vm._v("T: +8800 879 9876 ")])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "edit-address" }, [
-                                  _c("a", { attrs: { href: "#" } }, [
-                                    _vm._v("Edit Address")
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "billing-select" }, [
-                                  _c(
-                                    "select",
-                                    { staticClass: "email s-email s-wid" },
-                                    [
-                                      _c("option", [
-                                        _vm._v("Select Your Address")
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("option", [_vm._v("Add New Address")]),
-                                      _vm._v(" "),
-                                      _c("option", [
-                                        _vm._v(
-                                          "\n                            Boot Experts, Bonosrie D- Block, Dkaka, 1201,\n                            Bangladesh\n                          "
-                                        )
-                                      ])
-                                    ]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "ship-wrapper" }, [
-                                  _c("div", { staticClass: "single-ship" }, [
-                                    _c("input", {
-                                      attrs: {
-                                        type: "checkbox",
-                                        checked: "",
-                                        value: "address",
-                                        name: "address"
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("label", [_vm._v("Use Billing Address")])
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "billing-back-btn" }, [
-                                  _c("div", { staticClass: "billing-back" }, [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _c("i", {
-                                        staticClass: "ion-arrow-up-c"
-                                      }),
-                                      _vm._v(" back")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "billing-btn" }, [
-                                    _c(
-                                      "button",
-                                      { attrs: { type: "submit" } },
-                                      [_vm._v("Continue")]
-                                    )
-                                  ])
-                                ])
-                              ]
-                            )
-                          ])
-                        ]
-                      )
-                    ]),
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _vm._m(3),
                     _vm._v(" "),
                     _c("div", { staticClass: "panel panel-default" }, [
-                      _c("div", { staticClass: "panel-heading" }, [
-                        _c("h5", { staticClass: "panel-title" }, [
-                          _c("span", [_vm._v("4.")]),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                "data-bs-toggle": "collapse",
-                                href: "#payment-4"
-                              }
-                            },
-                            [_vm._v("Shipping method")]
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "panel-collapse collapse",
-                          attrs: { id: "payment-4", "data-bs-parent": "#faq" }
-                        },
-                        [
-                          _c("div", { staticClass: "panel-body" }, [
-                            _c(
-                              "div",
-                              { staticClass: "shipping-method-wrapper" },
-                              [
-                                _c("div", { staticClass: "shipping-method" }, [
-                                  _c("p", [_vm._v("Flat Rate")]),
-                                  _vm._v(" "),
-                                  _c("p", [_vm._v("Fixed $40.00")])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "billing-back-btn" }, [
-                                  _c("div", { staticClass: "billing-back" }, [
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _c("i", {
-                                        staticClass: "ion-arrow-up-c"
-                                      }),
-                                      _vm._v(" back")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "billing-btn" }, [
-                                    _c(
-                                      "button",
-                                      { attrs: { type: "submit" } },
-                                      [_vm._v("Continue")]
-                                    )
-                                  ])
-                                ])
-                              ]
-                            )
-                          ])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "panel panel-default" }, [
-                      _c("div", { staticClass: "panel-heading" }, [
-                        _c("h5", { staticClass: "panel-title" }, [
-                          _c("span", [_vm._v("5.")]),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                "data-bs-toggle": "collapse",
-                                href: "#payment-5"
-                              }
-                            },
-                            [_vm._v("payment information")]
-                          )
-                        ])
-                      ]),
+                      _vm._m(4),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -70688,233 +69111,36 @@ var staticRenderFns = [
                         [
                           _c("div", { staticClass: "panel-body" }, [
                             _c("div", { staticClass: "payment-info-wrapper" }, [
-                              _c("div", { staticClass: "ship-wrapper" }, [
-                                _c("div", { staticClass: "single-ship" }, [
-                                  _c("input", {
-                                    attrs: {
-                                      type: "radio",
-                                      checked: "",
-                                      value: "address",
-                                      name: "address"
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("label", [_vm._v("Check / Money order ")])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "single-ship" }, [
-                                  _c("input", {
-                                    attrs: {
-                                      type: "radio",
-                                      value: "dadress",
-                                      name: "address"
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("label", [_vm._v("Credit Card (saved) ")])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "payment-info" }, [
-                                _c("div", { staticClass: "row" }, [
-                                  _c(
+                              _c(
+                                "div",
+                                { staticClass: "ship-wrapper" },
+                                _vm._l(_vm.payment_methods, function(
+                                  item,
+                                  index
+                                ) {
+                                  return _c(
                                     "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
+                                    { key: index, staticClass: "single-ship" },
                                     [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [
-                                            _vm._v("Name on Card ")
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-6 col-md-6" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-select" },
-                                        [
-                                          _c("label", [
-                                            _vm._v("Credit Card Type")
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("select", [
-                                            _c("option", [
-                                              _vm._v("American Express")
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("option", [_vm._v("Visa")]),
-                                            _vm._v(" "),
-                                            _c("option", [
-                                              _vm._v("MasterCard")
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("option", [_vm._v("Discover")])
-                                          ])
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-12 col-md-12" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [
-                                            _vm._v("Credit Card Number ")
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
+                                      _c("input", {
+                                        attrs: {
+                                          type: "radio",
+                                          checked: "",
+                                          value: "address",
+                                          name: "address"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("label", [
+                                        _vm._v("Check / Money order ")
+                                      ])
                                     ]
                                   )
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "expiration-date" }, [
-                                  _c("label", [_vm._v("Expiration Date ")]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "row" }, [
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-lg-6 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "billing-select" },
-                                          [
-                                            _c("select", [
-                                              _c("option", [_vm._v("Month")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("January")]),
-                                              _vm._v(" "),
-                                              _c("option", [
-                                                _vm._v("February")
-                                              ]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("March")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("April")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("May")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("June")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("July")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("August")]),
-                                              _vm._v(" "),
-                                              _c("option", [
-                                                _vm._v("September")
-                                              ]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("October")]),
-                                              _vm._v(" "),
-                                              _c("option", [
-                                                _vm._v("November")
-                                              ]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("December")])
-                                            ])
-                                          ]
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "col-lg-6 col-md-6" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "billing-select" },
-                                          [
-                                            _c("select", [
-                                              _c("option", [_vm._v("Year")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("2015")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("2016")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("2017")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("2018")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("2019")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("2020")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("2021")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("2022")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("2023")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("2024")]),
-                                              _vm._v(" "),
-                                              _c("option", [_vm._v("2025")])
-                                            ])
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row" }, [
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-lg-12 col-md-12" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "billing-info" },
-                                        [
-                                          _c("label", [
-                                            _vm._v("Card Verification Number")
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("input", {
-                                            attrs: { type: "text" }
-                                          })
-                                        ]
-                                      )
-                                    ]
-                                  )
-                                ])
-                              ]),
+                                }),
+                                0
+                              ),
                               _vm._v(" "),
-                              _c("div", { staticClass: "billing-back-btn" }, [
-                                _c("div", { staticClass: "billing-back" }, [
-                                  _c("a", { attrs: { href: "#" } }, [
-                                    _c("i", { staticClass: "ion-arrow-up-c" }),
-                                    _vm._v(" back")
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "billing-btn" }, [
-                                  _c("button", { attrs: { type: "submit" } }, [
-                                    _vm._v("Continue")
-                                  ])
-                                ])
-                              ])
+                              _vm._m(5)
                             ])
                           ])
                         ]
@@ -70922,22 +69148,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "panel panel-default" }, [
-                      _c("div", { staticClass: "panel-heading" }, [
-                        _c("h5", { staticClass: "panel-title" }, [
-                          _c("span", [_vm._v("6.")]),
-                          _vm._v(" "),
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                "data-bs-toggle": "collapse",
-                                href: "#payment-6"
-                              }
-                            },
-                            [_vm._v("Order Review")]
-                          )
-                        ])
-                      ]),
+                      _vm._m(6),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -70946,235 +69157,14 @@ var staticRenderFns = [
                           attrs: { id: "payment-6", "data-bs-parent": "#faq" }
                         },
                         [
-                          _c("div", { staticClass: "panel-body" }, [
-                            _c("div", { staticClass: "order-review-wrapper" }, [
-                              _c("div", { staticClass: "order-review" }, [
-                                _c("div", { staticClass: "table-responsive" }, [
-                                  _c("table", { staticClass: "table" }, [
-                                    _c("thead", [
-                                      _c("tr", [
-                                        _c("th", { staticClass: "width-1" }, [
-                                          _vm._v("Product Name")
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("th", { staticClass: "width-2" }, [
-                                          _vm._v("Price")
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("th", { staticClass: "width-3" }, [
-                                          _vm._v("Qty")
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("th", { staticClass: "width-4" }, [
-                                          _vm._v("Subtotal")
-                                        ])
-                                      ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("tbody", [
-                                      _c("tr", [
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-dec" },
-                                            [_c("p", [_vm._v("Fusce aliquam")])]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-price" },
-                                            [_c("p", [_vm._v("$236.00")])]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-qty" },
-                                            [_c("p", [_vm._v("2")])]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-subtotal" },
-                                            [_c("p", [_vm._v("$236.00")])]
-                                          )
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("tr", [
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-dec" },
-                                            [
-                                              _c("p", [
-                                                _vm._v("Primis in faucibus")
-                                              ])
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-price" },
-                                            [_c("p", [_vm._v("$265.00")])]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-qty" },
-                                            [_c("p", [_vm._v("3")])]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-subtotal" },
-                                            [_c("p", [_vm._v("$265.00")])]
-                                          )
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("tr", [
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-dec" },
-                                            [_c("p", [_vm._v("Etiam gravida")])]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-price" },
-                                            [_c("p", [_vm._v("$363.00")])]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-qty" },
-                                            [_c("p", [_vm._v("2")])]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-subtotal" },
-                                            [_c("p", [_vm._v("$363.00")])]
-                                          )
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("tr", [
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-dec" },
-                                            [
-                                              _c("p", [
-                                                _vm._v("Quisque in arcu")
-                                              ])
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-price" },
-                                            [_c("p", [_vm._v("$328.00")])]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-qty" },
-                                            [_c("p", [_vm._v("2")])]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "div",
-                                            { staticClass: "o-pro-subtotal" },
-                                            [_c("p", [_vm._v("$328.00")])]
-                                          )
-                                        ])
-                                      ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("tfoot", [
-                                      _c("tr", [
-                                        _c("td", { attrs: { colspan: "3" } }, [
-                                          _vm._v("Subtotal")
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", { attrs: { colspan: "1" } }, [
-                                          _vm._v("$4,001.00")
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("tr", { staticClass: "tr-f" }, [
-                                        _c("td", { attrs: { colspan: "3" } }, [
-                                          _vm._v(
-                                            "\n                                  Shipping & Handling (Flat Rate - Fixed\n                                "
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", { attrs: { colspan: "1" } }, [
-                                          _vm._v("$45.00")
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("tr", [
-                                        _c("td", { attrs: { colspan: "3" } }, [
-                                          _vm._v("Grand Total")
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", { attrs: { colspan: "1" } }, [
-                                          _vm._v("$4,722.00")
-                                        ])
-                                      ])
-                                    ])
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "billing-back-btn" }, [
-                                  _c("span", [
-                                    _vm._v(
-                                      "\n                            Forgot an Item?\n                            "
-                                    ),
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v(" Edit Your Cart.")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "billing-btn" }, [
-                                    _c(
-                                      "button",
-                                      { attrs: { type: "submit" } },
-                                      [_vm._v("Continue")]
-                                    )
-                                  ])
-                                ])
-                              ])
-                            ])
-                          ])
-                        ]
+                          _c("sy-cart-item", {
+                            attrs: {
+                              items: _vm.cartList,
+                              totalPrice: _vm.totalPrice
+                            }
+                          })
+                        ],
+                        1
                       )
                     ])
                   ]
@@ -71182,22 +69172,187 @@ var staticRenderFns = [
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-lg-3" }, [
-              _c("div", { staticClass: "checkout-progress" }, [
-                _c("h4", [_vm._v("Checkout Progress")]),
+            _vm._m(7)
+          ])
+        ])
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h5", { staticClass: "panel-title" }, [
+        _c("span", [_vm._v("1.")]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { attrs: { "data-bs-toggle": "collapse", href: "#payment-1" } },
+          [_vm._v("Checkout method")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h5", { staticClass: "panel-title" }, [
+        _c("span", [_vm._v("2.")]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { attrs: { "data-bs-toggle": "collapse", href: "#payment-2" } },
+          [_vm._v("billing information")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel panel-default" }, [
+      _c("div", { staticClass: "panel-heading" }, [
+        _c("h5", { staticClass: "panel-title" }, [
+          _c("span", [_vm._v("3.")]),
+          _vm._v(" "),
+          _c(
+            "a",
+            { attrs: { "data-bs-toggle": "collapse", href: "#payment-3" } },
+            [_vm._v("shipping information")]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "panel-collapse collapse",
+        attrs: { id: "payment-3", "data-bs-parent": "#faq" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel panel-default" }, [
+      _c("div", { staticClass: "panel-heading" }, [
+        _c("h5", { staticClass: "panel-title" }, [
+          _c("span", [_vm._v("4.")]),
+          _vm._v(" "),
+          _c(
+            "a",
+            { attrs: { "data-bs-toggle": "collapse", href: "#payment-4" } },
+            [_vm._v("Shipping method")]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "panel-collapse collapse",
+          attrs: { id: "payment-4", "data-bs-parent": "#faq" }
+        },
+        [
+          _c("div", { staticClass: "panel-body" }, [
+            _c("div", { staticClass: "shipping-method-wrapper" }, [
+              _c("div", { staticClass: "shipping-method" }, [
+                _c("p", [_vm._v("Flat Rate")]),
                 _vm._v(" "),
-                _c("ul", [
-                  _c("li", [_vm._v("Billing Address")]),
-                  _vm._v(" "),
-                  _c("li", [_vm._v("Shipping Address")]),
-                  _vm._v(" "),
-                  _c("li", [_vm._v("Shipping Method")]),
-                  _vm._v(" "),
-                  _c("li", [_vm._v("Payment Method")])
+                _c("p", [_vm._v("Fixed $40.00")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "billing-back-btn" }, [
+                _c("div", { staticClass: "billing-back" }, [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _c("i", { staticClass: "ion-arrow-up-c" }),
+                    _vm._v(" back")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "billing-btn" }, [
+                  _c("button", { attrs: { type: "submit" } }, [
+                    _vm._v("Continue")
+                  ])
                 ])
               ])
             ])
           ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h5", { staticClass: "panel-title" }, [
+        _c("span", [_vm._v("5.")]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { attrs: { "data-bs-toggle": "collapse", href: "#payment-5" } },
+          [_vm._v("payment information")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "billing-back-btn" }, [
+      _c("div", { staticClass: "billing-back" }, [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "ion-arrow-up-c" }),
+          _vm._v(" back")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "billing-btn" }, [
+        _c("button", { attrs: { type: "submit" } }, [_vm._v("Continue")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h5", { staticClass: "panel-title" }, [
+        _c("span", [_vm._v("6.")]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { attrs: { "data-bs-toggle": "collapse", href: "#payment-6" } },
+          [_vm._v("Order Review")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-3" }, [
+      _c("div", { staticClass: "checkout-progress" }, [
+        _c("h4", [_vm._v("Checkout Progress")]),
+        _vm._v(" "),
+        _c("ul", [
+          _c("li", [_vm._v("Billing Address")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("Shipping Address")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("Shipping Method")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("Payment Method")])
         ])
       ])
     ])
@@ -77033,6 +75188,40 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "cart-main-area pt-60 pb-25" }, [
         _c("div", { staticClass: "container" }, [
+          _c(
+            "div",
+            {
+              staticClass: "cart-message carted",
+              staticStyle: { display: "none" }
+            },
+            [
+              _vm.currentProduct
+                ? _c("strong", { staticClass: "single-cart-notice" }, [
+                    _vm._v("“" + _vm._s(_vm.currentProduct.name) + "”")
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("span", [_vm._v("has been added to cart successfully.")])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "cart-message removed",
+              staticStyle: { display: "none" }
+            },
+            [
+              _vm.currentProduct
+                ? _c("strong", { staticClass: "single-cart-notice" }, [
+                    _vm._v("“" + _vm._s(_vm.currentProduct.name) + "”")
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("span", [_vm._v("has been successfully removed.")])
+            ]
+          ),
+          _vm._v(" "),
           _c("h3", { staticClass: "page-title" }, [_vm._v("Your cart items")]),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
@@ -77214,7 +75403,7 @@ var render = function() {
                                   )
                                 ])
                               })
-                            : _vm._e()
+                            : [_vm._m(2)]
                         ],
                         2
                       )
@@ -77247,7 +75436,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Subtotal")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Add To Cart")])
+        _c("th", [_vm._v("Action")])
       ])
     ])
   },
@@ -77262,6 +75451,14 @@ var staticRenderFns = [
           attrs: { type: "text", value: "02", name: "qtybutton" }
         })
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", { attrs: { colspan: "6" } }, [_vm._v("No data found")])
     ])
   }
 ]
