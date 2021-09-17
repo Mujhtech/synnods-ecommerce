@@ -136,7 +136,9 @@
 <script>
 import { required, maxLength } from "vuelidate/lib/validators";
 import * as userService from "../../../services/user";
-import PreLoader from '../commons/PreLoader';
+import * as auth from "../../../services/auth";
+import PreLoader from "../commons/PreLoader";
+import { mapActions } from "vuex";
 export default {
   components: { PreLoader },
   name: "SyCartShipping",
@@ -168,6 +170,8 @@ export default {
     },
   },
   methods: {
+    ...mapActions("user", ["userLogin", "userLogout"]),
+    ...mapActions("notification", ["addNotification"]),
     address: function () {
       if (this.my_address == 11 || this.my_address == 0) return;
       this.$emit("changeAddress", this.my_address);
