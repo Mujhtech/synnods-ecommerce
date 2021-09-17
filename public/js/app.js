@@ -6011,7 +6011,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "SyCartBilling"
+  name: "SyCartBilling",
+  props: {
+    billing: Object
+  }
 });
 
 /***/ }),
@@ -7480,6 +7483,172 @@ __webpack_require__.r(__webpack_exports__);
   name: "RatedProduct",
   props: {
     products: Array
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFive.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFive.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "SyProductFive",
+  props: {
+    product: Object
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFour.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFour.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "SyProductFour",
+  props: {
+    product: Object
   }
 });
 
@@ -10646,9 +10815,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_commons_SyBreadcrumb_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/commons/SyBreadcrumb.vue */ "./resources/js/new/components/commons/SyBreadcrumb.vue");
+/* harmony import */ var _components_commons_SyBreadcrumb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/commons/SyBreadcrumb */ "./resources/js/new/components/commons/SyBreadcrumb.vue");
 /* harmony import */ var _services_category__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/category */ "./resources/js/services/category.js");
 /* harmony import */ var _services_product__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/product */ "./resources/js/services/product.js");
+/* harmony import */ var _components_product_single_SyProductFour__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/product/single/SyProductFour */ "./resources/js/new/components/product/single/SyProductFour.vue");
+/* harmony import */ var _components_product_single_SyProductFive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/product/single/SyProductFive */ "./resources/js/new/components/product/single/SyProductFive.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -11032,2392 +11203,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    SyBreadcrumb: _components_commons_SyBreadcrumb_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    SyBreadcrumb: _components_commons_SyBreadcrumb__WEBPACK_IMPORTED_MODULE_1__["default"],
+    SyProductFour: _components_product_single_SyProductFour__WEBPACK_IMPORTED_MODULE_4__["default"],
+    SyProductFive: _components_product_single_SyProductFive__WEBPACK_IMPORTED_MODULE_5__["default"]
   },
   name: "Shop",
   metaInfo: {
@@ -13434,14 +11229,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   mounted: function mounted() {
     this.getCategoryLists();
     this.getProduct();
-    this.resizeHandler();
-    window.addEventListener("resize", this.resizeHandler, {
-      passive: true
-    });
   },
-  destroyed: function destroyed() {
-    window.removeEventListener("resize", this.resizeHandler);
-  },
+  destroyed: function destroyed() {},
   methods: {
     getCategoryLists: function () {
       var _getCategoryLists = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -13516,17 +11305,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
 
       return getProduct;
-    }(),
-    resizeHandler: function resizeHandler() {
-      this.isSticky = window.innerWidth > 991 ? true : false;
-    },
-    toggleSidebar: function toggleSidebar() {
-      if (document.querySelector("body").classList.contains("sidebar-opened")) {
-        document.querySelector("body").classList.remove("sidebar-opened");
-      } else {
-        document.querySelector("body").classList.add("sidebar-opened");
-      }
-    }
+    }()
   }
 });
 
@@ -14311,8 +12090,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/auth */ "./resources/js/services/auth.js");
 
 
-var baseDonmain = window.config.APP == 'production' ? window.config.BASE_URL : "http://localhost:8000";
-var apiURL = "http://localhost:8000/api/v1";
+var baseDonmain = window.config.APP == 'production' ? window.config.BASE_URL : "http://127.0.0.1:8000";
+var apiURL = "http://127.0.0.1:8000/api/v1";
 var customHeader = {
   "Content-Type": "application/json",
   Accept: "application/json"
@@ -14331,7 +12110,7 @@ function http() {
 }
 function httpFile() {
   return axios__WEBPACK_IMPORTED_MODULE_0___default().create({
-    baseURL: apiURL,
+    baseURL: window.config.APP == 'production' ? window.config.API_URL : apiURL,
     headers: {
       Authorization: "Bearer " + _services_auth__WEBPACK_IMPORTED_MODULE_1__.getAccessToken(),
       "Content-Type": "multipart/form-data",
@@ -60272,6 +58051,84 @@ component.options.__file = "resources/js/new/components/product/SyRelatedProduct
 
 /***/ }),
 
+/***/ "./resources/js/new/components/product/single/SyProductFive.vue":
+/*!**********************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductFive.vue ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SyProductFive_vue_vue_type_template_id_0cc2e650___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SyProductFive.vue?vue&type=template&id=0cc2e650& */ "./resources/js/new/components/product/single/SyProductFive.vue?vue&type=template&id=0cc2e650&");
+/* harmony import */ var _SyProductFive_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SyProductFive.vue?vue&type=script&lang=js& */ "./resources/js/new/components/product/single/SyProductFive.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SyProductFive_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SyProductFive_vue_vue_type_template_id_0cc2e650___WEBPACK_IMPORTED_MODULE_0__.render,
+  _SyProductFive_vue_vue_type_template_id_0cc2e650___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/new/components/product/single/SyProductFive.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/new/components/product/single/SyProductFour.vue":
+/*!**********************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductFour.vue ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SyProductFour_vue_vue_type_template_id_492aa2c4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SyProductFour.vue?vue&type=template&id=492aa2c4& */ "./resources/js/new/components/product/single/SyProductFour.vue?vue&type=template&id=492aa2c4&");
+/* harmony import */ var _SyProductFour_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SyProductFour.vue?vue&type=script&lang=js& */ "./resources/js/new/components/product/single/SyProductFour.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SyProductFour_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SyProductFour_vue_vue_type_template_id_492aa2c4___WEBPACK_IMPORTED_MODULE_0__.render,
+  _SyProductFour_vue_vue_type_template_id_492aa2c4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/new/components/product/single/SyProductFour.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/new/components/product/single/SyProductOne.vue":
 /*!*********************************************************************!*\
   !*** ./resources/js/new/components/product/single/SyProductOne.vue ***!
@@ -61169,6 +59026,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyRatedProduct_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyRatedProduct.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/home/SyRatedProduct.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyRatedProduct_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/new/components/product/single/SyProductFive.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductFive.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductFive_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyProductFive.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFive.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductFive_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/new/components/product/single/SyProductFour.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductFour.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductFour_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyProductFour.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFour.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductFour_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -62137,6 +60026,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyRelatedProduct_vue_vue_type_template_id_54a08366___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyRelatedProduct_vue_vue_type_template_id_54a08366___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyRelatedProduct.vue?vue&type=template&id=54a08366& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/SyRelatedProduct.vue?vue&type=template&id=54a08366&");
+
+
+/***/ }),
+
+/***/ "./resources/js/new/components/product/single/SyProductFive.vue?vue&type=template&id=0cc2e650&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductFive.vue?vue&type=template&id=0cc2e650& ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductFive_vue_vue_type_template_id_0cc2e650___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductFive_vue_vue_type_template_id_0cc2e650___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductFive_vue_vue_type_template_id_0cc2e650___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyProductFive.vue?vue&type=template&id=0cc2e650& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFive.vue?vue&type=template&id=0cc2e650&");
+
+
+/***/ }),
+
+/***/ "./resources/js/new/components/product/single/SyProductFour.vue?vue&type=template&id=492aa2c4&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/new/components/product/single/SyProductFour.vue?vue&type=template&id=492aa2c4& ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductFour_vue_vue_type_template_id_492aa2c4___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductFour_vue_vue_type_template_id_492aa2c4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SyProductFour_vue_vue_type_template_id_492aa2c4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SyProductFour.vue?vue&type=template&id=492aa2c4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFour.vue?vue&type=template&id=492aa2c4&");
 
 
 /***/ }),
@@ -66406,6 +64329,290 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFive.vue?vue&type=template&id=0cc2e650&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFive.vue?vue&type=template&id=0cc2e650& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-12" }, [
+      _c(
+        "div",
+        { staticClass: "product-list-wrapper shop-border mb-40 pb-40" },
+        [
+          _c("div", { staticClass: "product-img" }, [
+            _c("div", { staticClass: "product-img-slider" }, [
+              _c("a", { attrs: { href: "product-details.html" } }, [
+                _c("img", {
+                  attrs: { src: "assets/img/product/product-1.jpg", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "product-details.html" } }, [
+                _c("img", {
+                  attrs: { src: "assets/img/product/product-2.jpg", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "product-details.html" } }, [
+                _c("img", {
+                  attrs: { src: "assets/img/product/product-3.jpg", alt: "" }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "product-list-content" }, [
+            _c("span", [_vm._v("Watch, Accessories")]),
+            _vm._v(" "),
+            _c("h4", [
+              _c("a", { attrs: { href: "#" } }, [
+                _vm._v("Phantom Remote Control Ver 2018")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "product-rating" }, [
+              _c("i", { staticClass: "ion-android-star-outline theme-star" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "ion-android-star-outline theme-star" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "ion-android-star-outline theme-star" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "ion-android-star-outline theme-star" }),
+              _vm._v(" "),
+              _c("i", { staticClass: "ion-android-star-outline" })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "product-price-wrapper" }, [
+              _c("span", [_vm._v("$260.00")]),
+              _vm._v(" "),
+              _c("span", { staticClass: "product-price-old" }, [
+                _vm._v("$162.00 ")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                Mirum est notare quam littera gothica quam putamus parum\n                claram, anteposuerit litterarum formas humanitatis per\n                seacula.\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "product-action" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "action-cart",
+                  attrs: { href: "#", title: "Add To Cart" }
+                },
+                [_vm._v("\n                    Add to Cart\n                ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "same-action",
+                  attrs: { href: "#", title: "Wishlist" }
+                },
+                [_c("i", { staticClass: "fa fa-heart-o" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "same-action compare-mrg",
+                  attrs: {
+                    href: "#",
+                    title: "Compare",
+                    "data-toggle": "modal",
+                    "data-target": "#exampleCompare"
+                  }
+                },
+                [_c("i", { staticClass: "fa fa-sliders fa-rotate-90" })]
+              )
+            ])
+          ])
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFour.vue?vue&type=template&id=492aa2c4&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductFour.vue?vue&type=template&id=492aa2c4& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30" },
+      [
+        _c("div", { staticClass: "devita-product-2 mrg-inherit" }, [
+          _c("div", { staticClass: "product-img" }, [
+            _c("div", { staticClass: "product-img-slider" }, [
+              _c("a", { attrs: { href: "product-details.html" } }, [
+                _c("img", {
+                  attrs: { src: "assets/img/product/product-1.jpg", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "product-details.html" } }, [
+                _c("img", {
+                  attrs: { src: "assets/img/product/product-2.jpg", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "product-details.html" } }, [
+                _c("img", {
+                  attrs: { src: "assets/img/product/product-3.jpg", alt: "" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("span", [_vm._v("-29%")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "list-col" }, [
+            _c("div", { staticClass: "gridview" }, [
+              _c("div", { staticClass: "product-content text-center" }, [
+                _c("span", [_vm._v("Remote, Accessories")]),
+                _vm._v(" "),
+                _c("h4", [
+                  _c("a", { attrs: { href: "product-details.html" } }, [
+                    _vm._v("Phantom Remote Control Ver 2018")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "product-price-wrapper" }, [
+                  _c("span", [_vm._v("$260.00")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "product-price-old" }, [
+                    _vm._v("$162.00 ")
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "product-action-wrapper-2 text-center" },
+                [
+                  _c("div", { staticClass: "product-rating" }, [
+                    _c("i", {
+                      staticClass: "ion-android-star-outline theme-star"
+                    }),
+                    _vm._v(" "),
+                    _c("i", {
+                      staticClass: "ion-android-star-outline theme-star"
+                    }),
+                    _vm._v(" "),
+                    _c("i", {
+                      staticClass: "ion-android-star-outline theme-star"
+                    }),
+                    _vm._v(" "),
+                    _c("i", {
+                      staticClass: "ion-android-star-outline theme-star"
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "ion-android-star-outline" })
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                        Quam elit phasellus nibh sed eget, sed nunc in\n                        ultricies sodales sapien, non velit scelerisque...\n                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "product-action" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "same-action",
+                        attrs: { title: "Wishlist", href: "#" }
+                      },
+                      [_c("i", { staticClass: "fa fa-heart-o" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "action-cart",
+                        attrs: { title: "Add To Cart", href: "#" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Add to Cart\n                        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "same-action compare-mrg",
+                        attrs: {
+                          "data-target": "#exampleCompare",
+                          "data-toggle": "modal",
+                          title: "Compare",
+                          href: "#"
+                        }
+                      },
+                      [_c("i", { staticClass: "fa fa-sliders fa-rotate-90" })]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductOne.vue?vue&type=template&id=69880190&":
 /*!*******************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/new/components/product/single/SyProductOne.vue?vue&type=template&id=69880190& ***!
@@ -70026,19 +68233,24 @@ var render = function() {
                   "div",
                   { staticClass: "panel-group", attrs: { id: "faq" } },
                   [
-                    _c("div", { staticClass: "panel panel-default" }, [
-                      _vm._m(0),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "panel-collapse collapse show",
-                          attrs: { id: "payment-1", "data-bs-parent": "#faq" }
-                        },
-                        [_c("sy-cart-user")],
-                        1
-                      )
-                    ]),
+                    !_vm.user
+                      ? _c("div", { staticClass: "panel panel-default" }, [
+                          _vm._m(0),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "panel-collapse collapse show",
+                              attrs: {
+                                id: "payment-1",
+                                "data-bs-parent": "#faq"
+                              }
+                            },
+                            [_c("sy-cart-user")],
+                            1
+                          )
+                        ])
+                      : _vm._e(),
                     _vm._v(" "),
                     _c("div", { staticClass: "panel panel-default" }, [
                       _vm._m(1),
@@ -70049,7 +68261,11 @@ var render = function() {
                           staticClass: "panel-collapse collapse",
                           attrs: { id: "payment-2", "data-bs-parent": "#faq" }
                         },
-                        [_c("sy-cart-billing")],
+                        [
+                          _c("sy-cart-billing", {
+                            attrs: { billing: _vm.billing }
+                          })
+                        ],
                         1
                       )
                     ]),
@@ -70787,4742 +69003,623 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("sy-breadcrumb"), _vm._v(" "), _vm._m(0)], 1)
+  return _c(
+    "div",
+    [
+      _c("sy-breadcrumb"),
+      _vm._v(" "),
+      _c("div", { staticClass: "shop-page-area pt-30 pb-65" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row flex-row-reverse" }, [
+            _c("div", { staticClass: "col-lg-9" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "tab-content jump" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "tab-pane active pb-20",
+                    attrs: { id: "product-grid" }
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "row" },
+                      [_c("sy-product-four")],
+                      1
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "tab-pane", attrs: { id: "product-list" } },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "row" },
+                      [_c("sy-product-five")],
+                      1
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _vm._m(2)
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(3)
+          ])
+        ])
+      ])
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "shop-page-area pt-30 pb-65" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row flex-row-reverse" }, [
-          _c("div", { staticClass: "col-lg-9" }, [
-            _c("div", { staticClass: "banner-area pb-30" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  attrs: { alt: "", src: "assets/img/banner/banner-49.jpg" }
-                })
-              ])
+    return _c("div", { staticClass: "banner-area pb-30" }, [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("img", {
+          attrs: { alt: "", src: "assets/img/banner/banner-49.jpg" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "shop-topbar-wrapper" }, [
+      _c("div", { staticClass: "shop-topbar-left" }, [
+        _c("div", { staticClass: "grid-list-options nav view-mode" }, [
+          _c(
+            "a",
+            {
+              staticClass: "active",
+              attrs: {
+                href: "#product-grid",
+                "data-view": "product-grid",
+                "data-bs-toggle": "tab"
+              }
+            },
+            [_c("i", { staticClass: "fa fa-th" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              attrs: {
+                href: "#product-list",
+                "data-view": "product-list",
+                "data-bs-toggle": "tab"
+              }
+            },
+            [_c("i", { staticClass: "fa fa-list-ul" })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [_vm._v("Showing 1 - 20 of 30 results")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "product-sorting-wrapper" }, [
+        _c("div", { staticClass: "product-shorting shorting-style" }, [
+          _c("label", [_vm._v("View:")]),
+          _vm._v(" "),
+          _c("select", [
+            _c("option", { attrs: { value: "" } }, [_vm._v(" 20")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "" } }, [_vm._v(" 23")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "" } }, [_vm._v(" 30")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "product-show shorting-style" }, [
+          _c("label", [_vm._v("Sort by:")]),
+          _vm._v(" "),
+          _c("select", [
+            _c("option", { attrs: { value: "" } }, [_vm._v("Default")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "" } }, [_vm._v(" Name")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "" } }, [_vm._v(" price")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "pagination-total-pages" }, [
+      _c("div", { staticClass: "pagination-style" }, [
+        _c("ul", [
+          _c("li", [
+            _c("a", { staticClass: "prev-next prev", attrs: { href: "#" } }, [
+              _c("i", { staticClass: "ion-ios-arrow-left" }),
+              _vm._v("\n                                            Prev")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { staticClass: "active", attrs: { href: "#" } }, [
+              _vm._v("1")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("2")])]),
+          _vm._v(" "),
+          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("3")])]),
+          _vm._v(" "),
+          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("...")])]),
+          _vm._v(" "),
+          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("10")])]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { staticClass: "prev-next next", attrs: { href: "#" } }, [
+              _vm._v("Next"),
+              _c("i", { staticClass: "ion-ios-arrow-right" })
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "total-pages" }, [
+        _c("p", [_vm._v("Showing 1 - 20 of 30 results")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-3" }, [
+      _c(
+        "div",
+        { staticClass: "shop-sidebar-wrapper gray-bg-7 mrg-top-md mrg-top-sm" },
+        [
+          _c("div", { staticClass: "shop-widget" }, [
+            _c("h4", { staticClass: "shop-sidebar-title" }, [
+              _vm._v(
+                "\n                                Shop By Categories\n                            "
+              )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "shop-topbar-wrapper" }, [
-              _c("div", { staticClass: "shop-topbar-left" }, [
-                _c("div", { staticClass: "grid-list-options nav view-mode" }, [
+            _c("div", { staticClass: "shop-catigory" }, [
+              _c("ul", { attrs: { id: "faq" } }, [
+                _c("li", [
                   _c(
                     "a",
                     {
-                      staticClass: "active",
                       attrs: {
-                        href: "#product-grid",
-                        "data-view": "product-grid",
-                        "data-bs-toggle": "tab"
+                        "data-bs-toggle": "collapse",
+                        href: "#shop-catigory-1"
                       }
                     },
-                    [_c("i", { staticClass: "fa fa-th" })]
+                    [
+                      _vm._v(
+                        "Laptop & Computer\n                                            "
+                      ),
+                      _c("i", { staticClass: "ion-ios-arrow-down" })
+                    ]
                   ),
                   _vm._v(" "),
                   _c(
-                    "a",
+                    "ul",
                     {
-                      attrs: {
-                        href: "#product-list",
-                        "data-view": "product-list",
-                        "data-bs-toggle": "tab"
-                      }
+                      staticClass: "panel-collapse collapse show",
+                      attrs: { id: "shop-catigory-1", "data-bs-parent": "#faq" }
                     },
-                    [_c("i", { staticClass: "fa fa-list-ul" })]
+                    [
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Accessories")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Bags & Cases")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Binoculars & Scopes")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Digital Cameras")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Film Photography")
+                        ])
+                      ])
+                    ]
                   )
                 ]),
                 _vm._v(" "),
-                _c("p", [_vm._v("Showing 1 - 20 of 30 results")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "product-sorting-wrapper" }, [
-                _c("div", { staticClass: "product-shorting shorting-style" }, [
-                  _c("label", [_vm._v("View:")]),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        "data-bs-toggle": "collapse",
+                        href: "#shop-catigory-2"
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "Living room\n                                            "
+                      ),
+                      _c("i", { staticClass: "ion-ios-arrow-down" })
+                    ]
+                  ),
                   _vm._v(" "),
-                  _c("select", [
-                    _c("option", { attrs: { value: "" } }, [_vm._v(" 20")]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "" } }, [_vm._v(" 23")]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "" } }, [_vm._v(" 30")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "product-show shorting-style" }, [
-                  _c("label", [_vm._v("Sort by:")]),
-                  _vm._v(" "),
-                  _c("select", [
-                    _c("option", { attrs: { value: "" } }, [_vm._v("Default")]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "" } }, [_vm._v(" Name")]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "" } }, [_vm._v(" price")])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "tab-content jump" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "tab-pane active pb-20",
-                  attrs: { id: "product-grid" }
-                },
-                [
-                  _c("div", { staticClass: "row" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-1.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-29%")])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Remote,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Phantom Remote\n                                                            Control Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [
-                                        _c("span", [_vm._v("$260.00")]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "span",
-                                          { staticClass: "product-price-old" },
-                                          [
-                                            _vm._v(
-                                              "$162.00\n                                                        "
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-1.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Phone,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Awesome Smart\n                                                            Phone Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [_c("span", [_vm._v("$200.00")])]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-29%")])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Speaker,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Full Bast Doule\n                                                            Speaker Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [
-                                        _c("span", [_vm._v("$120.00")]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "span",
-                                          { staticClass: "product-price-old" },
-                                          [
-                                            _vm._v(
-                                              "$172.00\n                                                        "
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-4.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Speaker,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Full Bast Doule\n                                                            Speaker Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [_c("span", [_vm._v("$210.00")])]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-5.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-29%")])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Phone,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Awesome Smart\n                                                            Phone Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [
-                                        _c("span", [_vm._v("$250.00")]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "span",
-                                          { staticClass: "product-price-old" },
-                                          [
-                                            _vm._v(
-                                              "$300.00\n                                                        "
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-6.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Tab,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Featured Tab\n                                                            Windows Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [_c("span", [_vm._v("$160.00")])]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-7.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-29%")])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Watch,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Demoniss\n                                                            Glorior Watch\n                                                            Ver 2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [
-                                        _c("span", [_vm._v("$100.00")]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "span",
-                                          { staticClass: "product-price-old" },
-                                          [
-                                            _vm._v(
-                                              "$150.00\n                                                        "
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-8.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Headphone,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                                            Nice White\n                                                            Headphone Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [_c("span", [_vm._v("$500.00")])]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-9.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-29%")])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Phone,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Awesome Smart\n                                                            Phone Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [
-                                        _c("span", [_vm._v("$180.00")]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "span",
-                                          { staticClass: "product-price-old" },
-                                          [
-                                            _vm._v(
-                                              "$200.00\n                                                        "
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src:
-                                          "assets/img/product/product-10.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Desktop,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Maxclon Desktop\n                                                            C27F5 Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [_c("span", [_vm._v("$260.00")])]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-1.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-29%")])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Remote,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Phantom Remote\n                                                            Control Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [
-                                        _c("span", [_vm._v("$260.00")]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "span",
-                                          { staticClass: "product-price-old" },
-                                          [
-                                            _vm._v(
-                                              "$162.00\n                                                        "
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-1.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Phone,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Awesome Smart\n                                                            Phone Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [_c("span", [_vm._v("$200.00")])]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-29%")])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Speaker,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Full Bast Doule\n                                                            Speaker Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [
-                                        _c("span", [_vm._v("$120.00")]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "span",
-                                          { staticClass: "product-price-old" },
-                                          [
-                                            _vm._v(
-                                              "$172.00\n                                                        "
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-4.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Speaker,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Full Bast Doule\n                                                            Speaker Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [_c("span", [_vm._v("$210.00")])]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-5.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("-29%")])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Phone,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Awesome Smart\n                                                            Phone Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [
-                                        _c("span", [_vm._v("$250.00")]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "span",
-                                          { staticClass: "product-price-old" },
-                                          [
-                                            _vm._v(
-                                              "$300.00\n                                                        "
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-30"
-                      },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "devita-product-2 mrg-inherit" },
-                          [
-                            _c("div", { staticClass: "product-img" }, [
-                              _c("div", { staticClass: "product-img-slider" }, [
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-6.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-2.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "product-details.html" } },
-                                  [
-                                    _c("img", {
-                                      attrs: {
-                                        src: "assets/img/product/product-3.jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "list-col" }, [
-                              _c("div", { staticClass: "gridview" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "product-content text-center"
-                                  },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        "Tab,\n                                                        Accessories"
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("h4", [
-                                      _c(
-                                        "a",
-                                        {
-                                          attrs: {
-                                            href: "product-details.html"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Featured Tab\n                                                            Windows Ver\n                                                            2018"
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-price-wrapper" },
-                                      [_c("span", [_vm._v("$160.00")])]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "product-action-wrapper-2 text-center"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-rating" },
-                                      [
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline theme-star"
-                                        }),
-                                        _vm._v(" "),
-                                        _c("i", {
-                                          staticClass:
-                                            "ion-android-star-outline"
-                                        })
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", [
-                                      _vm._v(
-                                        "\n                                                        Quam elit phasellus\n                                                        nibh sed eget, sed\n                                                        nunc in ultricies\n                                                        sodales sapien, non\n                                                        velit scelerisque...\n                                                    "
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      { staticClass: "product-action" },
-                                      [
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "same-action",
-                                            attrs: {
-                                              title: "Wishlist",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass: "fa fa-heart-o"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass: "action-cart",
-                                            attrs: {
-                                              title: "Add To Cart",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                            Add to Cart\n                                                        "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "same-action compare-mrg",
-                                            attrs: {
-                                              "data-target": "#exampleCompare",
-                                              "data-toggle": "modal",
-                                              title: "Compare",
-                                              href: "#"
-                                            }
-                                          },
-                                          [
-                                            _c("i", {
-                                              staticClass:
-                                                "fa fa-sliders fa-rotate-90"
-                                            })
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      ]
-                    )
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "tab-pane", attrs: { id: "product-list" } },
-                [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col-lg-12" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "product-list-wrapper shop-border mb-40 pb-40"
-                        },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c("div", { staticClass: "product-img-slider" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-1.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-2.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-3.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              )
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "product-list-content" }, [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v(
-                                  "Phantom Remote Control\n                                                    Ver 2018"
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$260.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "$162.00\n                                                "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                                                Mirum est notare quam\n                                                littera gothica quam putamus\n                                                parum claram, anteposuerit\n                                                litterarum formas\n                                                humanitatis per seacula.\n                                            "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { href: "#", title: "Add To Cart" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                                    Add to Cart\n                                                "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { href: "#", title: "Wishlist" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    href: "#",
-                                    title: "Compare",
-                                    "data-toggle": "modal",
-                                    "data-target": "#exampleCompare"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-lg-12" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "product-list-wrapper shop-border mb-40 pb-40"
-                        },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c("div", { staticClass: "product-img-slider" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-2.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-1.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-3.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              )
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "product-list-content" }, [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v(
-                                  "Awesome Smart Phone Ver\n                                                    2018"
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$250.00")])]
-                            ),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                                                Mirum est notare quam\n                                                littera gothica quam putamus\n                                                parum claram, anteposuerit\n                                                litterarum formas\n                                                humanitatis per seacula.\n                                            "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { href: "#", title: "Add To Cart" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                                    Add to Cart\n                                                "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { href: "#", title: "Wishlist" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    href: "#",
-                                    title: "Compare",
-                                    "data-toggle": "modal",
-                                    "data-target": "#exampleCompare"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-lg-12" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "product-list-wrapper shop-border mb-40 pb-40"
-                        },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c("div", { staticClass: "product-img-slider" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-3.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-2.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-3.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              )
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "product-list-content" }, [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v(
-                                  "Full Bast Doule Speaker\n                                                    Ver 2018"
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [
-                                _c("span", [_vm._v("$200.00")]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "product-price-old" },
-                                  [
-                                    _vm._v(
-                                      "$280.00\n                                                "
-                                    )
-                                  ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                                                Mirum est notare quam\n                                                littera gothica quam putamus\n                                                parum claram, anteposuerit\n                                                litterarum formas\n                                                humanitatis per seacula.\n                                            "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { href: "#", title: "Add To Cart" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                                    Add to Cart\n                                                "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { href: "#", title: "Wishlist" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    href: "#",
-                                    title: "Compare",
-                                    "data-toggle": "modal",
-                                    "data-target": "#exampleCompare"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-lg-12" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "product-list-wrapper shop-border mb-40 pb-40"
-                        },
-                        [
-                          _c("div", { staticClass: "product-img" }, [
-                            _c("div", { staticClass: "product-img-slider" }, [
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-4.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-1.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                { attrs: { href: "product-details.html" } },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      src: "assets/img/product/product-3.jpg",
-                                      alt: ""
-                                    }
-                                  })
-                                ]
-                              )
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "product-list-content" }, [
-                            _c("span", [_vm._v("Watch, Accessories")]),
-                            _vm._v(" "),
-                            _c("h4", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v(
-                                  "Full Bast Doule Speaker\n                                                    Ver 2018"
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-rating" }, [
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "ion-android-star-outline theme-star"
-                              }),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass: "ion-android-star-outline"
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "product-price-wrapper" },
-                              [_c("span", [_vm._v("$100.00")])]
-                            ),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                                                Mirum est notare quam\n                                                littera gothica quam putamus\n                                                parum claram, anteposuerit\n                                                litterarum formas\n                                                humanitatis per seacula.\n                                            "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "product-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "action-cart",
-                                  attrs: { href: "#", title: "Add To Cart" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                                    Add to Cart\n                                                "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action",
-                                  attrs: { href: "#", title: "Wishlist" }
-                                },
-                                [_c("i", { staticClass: "fa fa-heart-o" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "same-action compare-mrg",
-                                  attrs: {
-                                    href: "#",
-                                    title: "Compare",
-                                    "data-toggle": "modal",
-                                    "data-target": "#exampleCompare"
-                                  }
-                                },
-                                [
-                                  _c("i", {
-                                    staticClass: "fa fa-sliders fa-rotate-90"
-                                  })
-                                ]
-                              )
-                            ])
-                          ])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-lg-12" }, [
-                      _c("div", { staticClass: "product-list-wrapper mb-40" }, [
-                        _c("div", { staticClass: "product-img" }, [
-                          _c("div", { staticClass: "product-img-slider" }, [
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    src: "assets/img/product/product-5.jpg",
-                                    alt: ""
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    src: "assets/img/product/product-1.jpg",
-                                    alt: ""
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              { attrs: { href: "product-details.html" } },
-                              [
-                                _c("img", {
-                                  attrs: {
-                                    src: "assets/img/product/product-3.jpg",
-                                    alt: ""
-                                  }
-                                })
-                              ]
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "product-list-content" }, [
-                          _c("span", [_vm._v("Watch, Accessories")]),
-                          _vm._v(" "),
-                          _c("h4", [
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v(
-                                "Awesome Smart Phone Ver\n                                                    2018"
-                              )
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "product-rating" }, [
-                            _c("i", {
-                              staticClass: "ion-android-star-outline theme-star"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "ion-android-star-outline theme-star"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "ion-android-star-outline theme-star"
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              staticClass: "ion-android-star-outline theme-star"
-                            }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "ion-android-star-outline" })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "product-price-wrapper" }, [
-                            _c("span", [_vm._v("$120.00")]),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "product-price-old" }, [
-                              _vm._v(
-                                "$190.00\n                                                "
-                              )
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("p", [
-                            _vm._v(
-                              "\n                                                Mirum est notare quam\n                                                littera gothica quam putamus\n                                                parum claram, anteposuerit\n                                                litterarum formas\n                                                humanitatis per seacula.\n                                            "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "product-action" }, [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "action-cart",
-                                attrs: { href: "#", title: "Add To Cart" }
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                                    Add to Cart\n                                                "
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "same-action",
-                                attrs: { href: "#", title: "Wishlist" }
-                              },
-                              [_c("i", { staticClass: "fa fa-heart-o" })]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "same-action compare-mrg",
-                                attrs: {
-                                  href: "#",
-                                  title: "Compare",
-                                  "data-toggle": "modal",
-                                  "data-target": "#exampleCompare"
-                                }
-                              },
-                              [
-                                _c("i", {
-                                  staticClass: "fa fa-sliders fa-rotate-90"
-                                })
-                              ]
-                            )
-                          ])
+                  _c(
+                    "ul",
+                    {
+                      staticClass: "panel-collapse collapse",
+                      attrs: { id: "shop-catigory-2", "data-bs-parent": "#faq" }
+                    },
+                    [
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Accessories")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Bags & Cases")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Binoculars & Scopes")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Digital Cameras")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Film Photography")
                         ])
                       ])
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "pagination-total-pages" }, [
-                _c("div", { staticClass: "pagination-style" }, [
-                  _c("ul", [
-                    _c("li", [
-                      _c(
-                        "a",
-                        { staticClass: "prev-next prev", attrs: { href: "#" } },
-                        [
-                          _c("i", { staticClass: "ion-ios-arrow-left" }),
-                          _vm._v(
-                            "\n                                            Prev"
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { staticClass: "active", attrs: { href: "#" } }, [
-                        _vm._v("1")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("2")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("3")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("...")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("10")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        { staticClass: "prev-next next", attrs: { href: "#" } },
-                        [
-                          _vm._v("Next"),
-                          _c("i", { staticClass: "ion-ios-arrow-right" })
-                        ]
-                      )
-                    ])
-                  ])
+                    ]
+                  )
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "total-pages" }, [
-                  _c("p", [_vm._v("Showing 1 - 20 of 30 results")])
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        "data-bs-toggle": "collapse",
+                        href: "#shop-catigory-3"
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "Lighting Furniture\n                                            "
+                      ),
+                      _c("i", { staticClass: "ion-ios-arrow-down" })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "ul",
+                    {
+                      staticClass: "panel-collapse collapse",
+                      attrs: { id: "shop-catigory-3", "data-bs-parent": "#faq" }
+                    },
+                    [
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Accessories")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Bags & Cases")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Binoculars & Scopes")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Digital Cameras")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Film Photography")
+                        ])
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Outdoor")])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Tablets")])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Accessories")])
                 ])
               ])
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3" }, [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "shop-sidebar-wrapper gray-bg-7 mrg-top-md mrg-top-sm"
-              },
-              [
-                _c("div", { staticClass: "shop-widget" }, [
-                  _c("h4", { staticClass: "shop-sidebar-title" }, [
-                    _vm._v(
-                      "\n                                Shop By Categories\n                            "
-                    )
+          _c(
+            "div",
+            {
+              staticClass: "shop-price-filter mt-40 shop-sidebar-border pt-35"
+            },
+            [
+              _c("h4", { staticClass: "shop-sidebar-title" }, [
+                _vm._v("Price Filter")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "price_filter mt-25" }, [
+                _c("span", [_vm._v("Range: $100.00 - 1.300.00 ")]),
+                _vm._v(" "),
+                _c("div", { attrs: { id: "slider-range" } }),
+                _vm._v(" "),
+                _c("div", { staticClass: "price_slider_amount" }, [
+                  _c("div", { staticClass: "label-input" }, [
+                    _c("input", {
+                      attrs: {
+                        type: "text",
+                        id: "amount",
+                        name: "price",
+                        placeholder: "Add Your Price"
+                      }
+                    })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "shop-catigory" }, [
-                    _c("ul", { attrs: { id: "faq" } }, [
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            attrs: {
-                              "data-bs-toggle": "collapse",
-                              href: "#shop-catigory-1"
-                            }
-                          },
-                          [
-                            _vm._v(
-                              "Laptop & Computer\n                                            "
-                            ),
-                            _c("i", { staticClass: "ion-ios-arrow-down" })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "ul",
-                          {
-                            staticClass: "panel-collapse collapse show",
-                            attrs: {
-                              id: "shop-catigory-1",
-                              "data-bs-parent": "#faq"
-                            }
-                          },
-                          [
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Accessories")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Bags & Cases")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Binoculars & Scopes")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Digital Cameras")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Film Photography")
-                              ])
-                            ])
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            attrs: {
-                              "data-bs-toggle": "collapse",
-                              href: "#shop-catigory-2"
-                            }
-                          },
-                          [
-                            _vm._v(
-                              "Living room\n                                            "
-                            ),
-                            _c("i", { staticClass: "ion-ios-arrow-down" })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "ul",
-                          {
-                            staticClass: "panel-collapse collapse",
-                            attrs: {
-                              id: "shop-catigory-2",
-                              "data-bs-parent": "#faq"
-                            }
-                          },
-                          [
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Accessories")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Bags & Cases")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Binoculars & Scopes")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Digital Cameras")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Film Photography")
-                              ])
-                            ])
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            attrs: {
-                              "data-bs-toggle": "collapse",
-                              href: "#shop-catigory-3"
-                            }
-                          },
-                          [
-                            _vm._v(
-                              "Lighting Furniture\n                                            "
-                            ),
-                            _c("i", { staticClass: "ion-ios-arrow-down" })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "ul",
-                          {
-                            staticClass: "panel-collapse collapse",
-                            attrs: {
-                              id: "shop-catigory-3",
-                              "data-bs-parent": "#faq"
-                            }
-                          },
-                          [
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Accessories")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Bags & Cases")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Binoculars & Scopes")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Digital Cameras")
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("li", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("Film Photography")
-                              ])
-                            ])
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Outdoor")])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Tablets")])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _vm._v("Accessories")
-                        ])
-                      ])
+                  _c("button", { attrs: { type: "button" } }, [
+                    _vm._v("Filter")
+                  ])
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "shop-widget mt-40 shop-sidebar-border pt-35" },
+            [
+              _c("h4", { staticClass: "shop-sidebar-title" }, [
+                _vm._v("By Brand")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "sidebar-list-style mt-20" }, [
+                _c("ul", [
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v(
+                        "Samsung\n                                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v(
+                        "Panasonic\n                                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v(
+                        "Electrolux\n                                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("LG\n                                        ")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v(
+                        "Calvin Klein\n                                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("Diesel\n                                        ")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("Polo\n                                        ")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v(
+                        "Tommy Hilfiger\n                                        "
+                      )
                     ])
                   ])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "shop-price-filter mt-40 shop-sidebar-border pt-35"
-                  },
-                  [
-                    _c("h4", { staticClass: "shop-sidebar-title" }, [
-                      _vm._v("Price Filter")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "price_filter mt-25" }, [
-                      _c("span", [_vm._v("Range: $100.00 - 1.300.00 ")]),
-                      _vm._v(" "),
-                      _c("div", { attrs: { id: "slider-range" } }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "price_slider_amount" }, [
-                        _c("div", { staticClass: "label-input" }, [
-                          _c("input", {
-                            attrs: {
-                              type: "text",
-                              id: "amount",
-                              name: "price",
-                              placeholder: "Add Your Price"
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("button", { attrs: { type: "button" } }, [
-                          _vm._v("Filter")
-                        ])
-                      ])
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "shop-widget mt-40 shop-sidebar-border pt-35" },
+            [
+              _c("h4", { staticClass: "shop-sidebar-title" }, [
+                _vm._v("By Color")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "sidebar-list-style mt-20" }, [
+                _c("ul", [
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("Black\n                                        ")
                     ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "shop-widget mt-40 shop-sidebar-border pt-35"
-                  },
-                  [
-                    _c("h4", { staticClass: "shop-sidebar-title" }, [
-                      _vm._v("By Brand")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "sidebar-list-style mt-20" }, [
-                      _c("ul", [
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Samsung\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Panasonic\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Electrolux\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "LG\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Calvin Klein\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Diesel\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Polo\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Tommy Hilfiger\n                                        "
-                            )
-                          ])
-                        ])
-                      ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("Blue\n                                        ")
                     ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "shop-widget mt-40 shop-sidebar-border pt-35"
-                  },
-                  [
-                    _c("h4", { staticClass: "shop-sidebar-title" }, [
-                      _vm._v("By Color")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "sidebar-list-style mt-20" }, [
-                      _c("ul", [
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Black\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Blue\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Green\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Grey\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Red")])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "White\n                                        "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("input", { attrs: { type: "checkbox" } }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(
-                              "Yellow\n                                        "
-                            )
-                          ])
-                        ])
-                      ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("Green\n                                        ")
                     ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "shop-widget mt-40 shop-sidebar-border pt-35"
-                  },
-                  [
-                    _c("h4", { staticClass: "shop-sidebar-title" }, [
-                      _vm._v(
-                        "\n                                Compare Products\n                            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "compare-product" }, [
-                      _c("p", [_vm._v("You have no item to compare.")]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "compare-product-btn" }, [
-                        _c("span", [_vm._v("Clear all ")]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "#" } }, [
-                          _vm._v("Compare "),
-                          _c("i", { staticClass: "fa fa-check" })
-                        ])
-                      ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("Grey\n                                        ")
                     ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "shop-widget mt-40 shop-sidebar-border pt-35"
-                  },
-                  [
-                    _c("h4", { staticClass: "shop-sidebar-title" }, [
-                      _vm._v("Popular Tags")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "shop-tags mt-25" }, [
-                      _c("ul", [
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Computer")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Cameras")])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Accessories")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Big Sale")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Sony")])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Devita")])
-                        ])
-                      ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Red")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("White\n                                        ")
                     ])
-                  ]
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("Yellow\n                                        ")
+                    ])
+                  ])
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "shop-widget mt-40 shop-sidebar-border pt-35" },
+            [
+              _c("h4", { staticClass: "shop-sidebar-title" }, [
+                _vm._v(
+                  "\n                                Compare Products\n                            "
                 )
-              ]
-            )
-          ])
-        ])
-      ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "compare-product" }, [
+                _c("p", [_vm._v("You have no item to compare.")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "compare-product-btn" }, [
+                  _c("span", [_vm._v("Clear all ")]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("Compare "),
+                    _c("i", { staticClass: "fa fa-check" })
+                  ])
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "shop-widget mt-40 shop-sidebar-border pt-35" },
+            [
+              _c("h4", { staticClass: "shop-sidebar-title" }, [
+                _vm._v("Popular Tags")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "shop-tags mt-25" }, [
+                _c("ul", [
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Computer")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Cameras")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Accessories")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Big Sale")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Sony")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Devita")])
+                  ])
+                ])
+              ])
+            ]
+          )
+        ]
+      )
     ])
   }
 ]

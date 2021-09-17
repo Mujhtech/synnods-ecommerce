@@ -8,7 +8,7 @@
           <div class="col-lg-9">
             <div class="checkout-wrapper">
               <div id="faq" class="panel-group">
-                <div class="panel panel-default">
+                <div class="panel panel-default" v-if="!user">
                   <div class="panel-heading">
                     <h5 class="panel-title">
                       <span>1.</span>
@@ -39,7 +39,7 @@
                     class="panel-collapse collapse"
                     data-bs-parent="#faq"
                   >
-                    <sy-cart-billing></sy-cart-billing>
+                    <sy-cart-billing :billing="billing"></sy-cart-billing>
                   </div>
                 </div>
                 <div class="panel panel-default">

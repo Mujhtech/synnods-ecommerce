@@ -100,6 +100,9 @@
 
 <script>
 export default {
-    name: "SyCartBilling"
+    name: "SyCartBilling",
+    props: {
+      billing: Object
+    }
 }
 </script>

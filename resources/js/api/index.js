@@ -1,9 +1,9 @@
 import axios from "axios";
 import * as auth from "../services/auth";
 
-const baseDonmain = window.config.APP == 'production' ? window.config.BASE_URL : "http://localhost:8000";
+const baseDonmain = window.config.APP == 'production' ? window.config.BASE_URL : "http://127.0.0.1:8000";
 
-const apiURL = "http://localhost:8000/api/v1";
+const apiURL = "http://127.0.0.1:8000/api/v1";
 
 export const customHeader = {
     "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export function http() {
 
 export function httpFile() {
     return axios.create({
-        baseURL: apiURL,
+        baseURL: window.config.APP == 'production' ? window.config.API_URL : apiURL,
         headers: {
             Authorization: "Bearer " + auth.getAccessToken(),
             "Content-Type": "multipart/form-data",
