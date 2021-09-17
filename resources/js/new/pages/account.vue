@@ -642,18 +642,6 @@ export default {
         ];
       }, []);
     },
-    openQuickview: function (product) {
-      this.$modal.show(
-        () => import("../../components/features/product/PvQuickview"),
-        { slug: product.slug },
-        {
-          width: "931",
-          height: "auto",
-          adaptive: true,
-          class: "quickview-modal",
-        }
-      );
-    },
     addCart: function (product) {
       this.currentProduct = product;
       document.querySelector(".cart-message.removed").style.display = "none";

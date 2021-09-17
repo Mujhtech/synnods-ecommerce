@@ -12,6 +12,7 @@ use App\Http\Controllers\API\NewsletterController;
 use App\Http\Controllers\API\AdminController;
 use App\Http\Controllers\API\BrandController;
 use App\Http\Controllers\API\MediaController;
+use App\Http\Controllers\API\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -139,6 +140,13 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('shipping/remove/{address}', [UserController::class, 'removeShippingAddress'])->name('shipping.remove');
 
         Route::get('shipping/default/{address}', [UserController::class, 'makeDefaultAddress'])->name('shipping.default');
+        
+    });
+
+
+    Route::prefix('checkout')->name('checkout.')->middleware('auth:api')->group(function () {
+
+        Route::get('payment-methods', [CheckoutController::class, 'paymentMethod'])->name('payment.method');
         
     });
 
