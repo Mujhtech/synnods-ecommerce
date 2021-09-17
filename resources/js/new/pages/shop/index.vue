@@ -1,6 +1,6 @@
 <template>
     <div>
-        <sy-breadcrumb></sy-breadcrumb>
+        <sy-breadcrumb title="Shop"></sy-breadcrumb>
         <div class="shop-page-area pt-30 pb-65">
             <div class="container">
                 <div class="row flex-row-reverse">
@@ -50,52 +50,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-content jump">
-                            <div
-                                class="tab-pane active pb-20"
-                                id="product-grid"
-                            >
-                                <div class="row">
-                                    <sy-product-four></sy-product-four>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="product-list">
-                                <div class="row">
-                                    <sy-product-five></sy-product-five>
-                                </div>
-                            </div>
-                            <div class="pagination-total-pages">
-                                <div class="pagination-style">
-                                    <ul>
-                                        <li>
-                                            <a class="prev-next prev" href="#"
-                                                ><i
-                                                    class="ion-ios-arrow-left"
-                                                ></i>
-                                                Prev</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <a class="active" href="#">1</a>
-                                        </li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">...</a></li>
-                                        <li><a href="#">10</a></li>
-                                        <li>
-                                            <a class="prev-next next" href="#"
-                                                >Next<i
-                                                    class="ion-ios-arrow-right"
-                                                ></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="total-pages">
-                                    <p>Showing 1 - 20 of 30 results</p>
-                                </div>
-                            </div>
-                        </div>
+                        <sy-product-list-one></sy-product-list-one>
                     </div>
                     <div class="col-lg-3">
                         <div
@@ -107,120 +62,48 @@
                                 </h4>
                                 <div class="shop-catigory">
                                     <ul id="faq">
-                                        <li>
+                                        <li
+                                            v-for="(category,
+                                            index) in categoryList"
+                                            :key="index"
+                                        >
                                             <a
                                                 data-bs-toggle="collapse"
-                                                href="#shop-catigory-1"
-                                                >Laptop & Computer
+                                                :href="
+                                                    `#shop-catigory-${category.id}`
+                                                "
+                                                >{{ category.name }}
                                                 <i
                                                     class="ion-ios-arrow-down"
                                                 ></i
                                             ></a>
                                             <ul
-                                                id="shop-catigory-1"
-                                                class="panel-collapse collapse show"
+                                                :id="
+                                                    `shop-catigory-${category.id}`
+                                                "
+                                                :class="[
+                                                    category.id == 1
+                                                        ? 'panel-collapse collapse show'
+                                                        : 'panel-collapse collapse'
+                                                ]"
                                                 data-bs-parent="#faq"
                                             >
-                                                <li>
-                                                    <a href="#">Accessories</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Bags & Cases</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        >Binoculars & Scopes</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        >Digital Cameras</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        >Film Photography</a
+                                                <li
+                                                    v-for="(sub_cat,
+                                                    i) in category.sub_categories"
+                                                    :key="i"
+                                                >
+                                                    <router-link
+                                                        :to="
+                                                            `/shop?sub_category=${sub_cat.slug}`
+                                                        "
+                                                        >{{
+                                                            sub_cat.name
+                                                        }}</router-link
                                                     >
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a
-                                                data-bs-toggle="collapse"
-                                                href="#shop-catigory-2"
-                                                >Living room
-                                                <i
-                                                    class="ion-ios-arrow-down"
-                                                ></i
-                                            ></a>
-                                            <ul
-                                                id="shop-catigory-2"
-                                                class="panel-collapse collapse"
-                                                data-bs-parent="#faq"
-                                            >
-                                                <li>
-                                                    <a href="#">Accessories</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Bags & Cases</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        >Binoculars & Scopes</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        >Digital Cameras</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        >Film Photography</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a
-                                                data-bs-toggle="collapse"
-                                                href="#shop-catigory-3"
-                                                >Lighting Furniture
-                                                <i
-                                                    class="ion-ios-arrow-down"
-                                                ></i
-                                            ></a>
-                                            <ul
-                                                id="shop-catigory-3"
-                                                class="panel-collapse collapse"
-                                                data-bs-parent="#faq"
-                                            >
-                                                <li>
-                                                    <a href="#">Accessories</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Bags & Cases</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        >Binoculars & Scopes</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        >Digital Cameras</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                        >Film Photography</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Outdoor</a></li>
-                                        <li><a href="#">Tablets</a></li>
-                                        <li><a href="#">Accessories</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -229,7 +112,17 @@
                             >
                                 <h4 class="shop-sidebar-title">Price Filter</h4>
                                 <div class="price_filter mt-25">
-                                    <span>Range: $100.00 - 1.300.00 </span>
+                                    <span
+                                        >Price: ₦{{ prices[0] }} - ₦{{
+                                            prices[1]
+                                        }}</span
+                                    >
+                                    <vue-nouislider
+								:config="priceSettings"
+								:values="prices"
+								v-if="priceReset"
+								id="price-slider"
+							></vue-nouislider>
                                     <div id="slider-range"></div>
                                     <div class="price_slider_amount">
                                         <div class="label-input">
@@ -240,7 +133,12 @@
                                                 placeholder="Add Your Price"
                                             />
                                         </div>
-                                        <button type="button">Filter</button>
+                                        <button
+                                            @click="priceFilterRoute"
+                                            type="button"
+                                        >
+                                            Filter
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -253,85 +151,6 @@
                                         <li>
                                             <input type="checkbox" /><a href="#"
                                                 >Samsung
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Panasonic
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Electrolux
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >LG
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Calvin Klein
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Diesel
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Polo
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Tommy Hilfiger
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div
-                                class="shop-widget mt-40 shop-sidebar-border pt-35"
-                            >
-                                <h4 class="shop-sidebar-title">By Color</h4>
-                                <div class="sidebar-list-style mt-20">
-                                    <ul>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Black
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Blue
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Green
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Grey
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Red</a
-                                            >
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >White
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" /><a href="#"
-                                                >Yellow
                                             </a>
                                         </li>
                                     </ul>
@@ -360,11 +179,6 @@
                                 <div class="shop-tags mt-25">
                                     <ul>
                                         <li><a href="#">Computer</a></li>
-                                        <li><a href="#">Cameras</a></li>
-                                        <li><a href="#">Accessories</a></li>
-                                        <li><a href="#">Big Sale</a></li>
-                                        <li><a href="#">Sony</a></li>
-                                        <li><a href="#">Devita</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -379,11 +193,9 @@
 import SyBreadcrumb from "../../components/commons/SyBreadcrumb";
 import * as catService from "../../../services/category";
 import { fetchProduct } from "../../../services/product";
-import SyProductFour from '../../components/product/single/SyProductFour';
-import SyProductFive from '../../components/product/single/SyProductFive';
-
+import SyProductListOne from "../../components/product/list/SyProductListOne";
 export default {
-    components: { SyBreadcrumb, SyProductFour, SyProductFive },
+    components: { SyBreadcrumb, SyProductListOne },
     name: "Shop",
     metaInfo: {
         title: "Shop",
@@ -393,21 +205,83 @@ export default {
         return {
             categoryList: [],
             featuredProducts: [],
-            isSticky: false
+            isSticky: false,
+            priceOpenened: true,
+            prices: [0, 1000],
+            priceSettings: {
+                connect: true,
+                step: 50,
+                margin: 100,
+                range: {
+                    min: 0,
+                    max: 1000
+                },
+                format: {
+                    from: Number,
+                    to: Number
+                }
+            },
+            emptyObject: {},
+            isFeatured: true,
+            priceReset: true,
+            currentCategory: ""
         };
     },
     mounted: function() {
         this.getCategoryLists();
         this.getProduct();
     },
-    destroyed: function() {
+    watch: {
+        $route: function() {
+            if (this.$route.query.min_price) {
+                this.prices = [
+                    this.$route.query.min_price,
+                    this.$route.query.max_price
+                ];
+            } else {
+                this.prices = [0, 1000];
+            }
+
+            this.priceReset = false;
+
+            this.currentCategory = this.$route.query.category;
+
+            this.$nextTick(function() {
+                this.priceReset = true;
+            });
+        }
+    },
+    created: function() {
+        if (this.$route.query.min_price) {
+            this.prices = [
+                this.$route.query.min_price,
+                this.$route.query.max_price
+            ];
+        } else {
+            this.prices = [0, 1000];
+        }
+    },
+    computed: {
+        isEmptyQuery: function() {
+            for (let key in this.$route.query) {
+                if (
+                    key !== "page" &&
+                    key !== "per_page" &&
+                    this.$route.query[key]
+                ) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     },
     methods: {
         getCategoryLists: async function() {
             try {
                 const response = await catService.category();
                 this.categoryList = response.data.data.data;
-                //console.log(response);
+                console.log(response);
             } catch (err) {
                 console.log(err.response);
             }
@@ -421,6 +295,17 @@ export default {
                 console.log(err.response);
             }
         },
+        priceFilterRoute: function() {
+            this.$router.push({
+                path: this.$route.path,
+                query: {
+                    ...this.$route.query,
+                    page: 1,
+                    max_price: this.prices[1],
+                    min_price: this.prices[0]
+                }
+            });
+        }
     }
 };
 </script>
