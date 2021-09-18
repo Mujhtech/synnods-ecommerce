@@ -41,7 +41,7 @@
                 </div>
             </div>
         </div>
-        <sy-home-best-selling></sy-home-best-selling>
+        <sy-home-best-selling v-if="products.length > 0" :products="products"></sy-home-best-selling>
         <sy-home-headphone v-if="products.length > 0" :products="products"></sy-home-headphone>
     </div>
 </template>

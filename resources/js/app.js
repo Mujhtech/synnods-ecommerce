@@ -1,10 +1,10 @@
 require('./plugins/index');
-//require('./plugins/filters');
+require('./plugins/filters');
 //require('./plugins/localstorage');
-//require('./plugins/directives/animate');
-//require('./plugins/directives/lazyLoad');
-//require('./plugins/directives/parallax');
-//require('./plugins/directives/sticky');
+require('./plugins/directives/animate');
+require('./plugins/directives/lazyLoad');
+require('./plugins/directives/parallax');
+require('./plugins/directives/sticky');
 
 
 window.jQuery = require('jquery');

@@ -1,6 +1,7 @@
 <template>
   <div class="slider-area">
-    <div class="slider-active owl-dot-style-3 owl-carousel">
+    <!--<div class="slider-active owl-dot-style-3 owl-carousel">-->
+    <carousel :autoplay="true" :nav="false" :items="itemPerPage">
       <div
         class="single-slider pt-95 pb-160 bg-img slider-height-3"
         style="background-image: url(assets/img/slider/slider-7.jpg)"
@@ -52,12 +53,21 @@
           </div>
         </div>
       </div>
-    </div>
+    </carousel>
+    <!--</div>-->
   </div>
 </template>
 
 <script>
+import carousel from 'vue-owl-carousel';
 export default {
-  name: "HomeSlider"
+  name: "SyHomeSlider",
+  components: { carousel },
+  data: function() {
+    return {
+      itemPerPage: 1,
+    }
+  }
+
 }
 </script>

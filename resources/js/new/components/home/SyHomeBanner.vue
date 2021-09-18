@@ -1,4 +1,5 @@
 <template>
+
   <div class="banner-area banner-negative-mrg-2">
     <div class="container-fluid p-0">
       <div class="row g-0">
@@ -15,4 +16,11 @@
       </div>
     </div>
   </div>
+
 </template>
+
+<script>
+export default {
+  name: "SyHomeBanner",
+}
+</script>
