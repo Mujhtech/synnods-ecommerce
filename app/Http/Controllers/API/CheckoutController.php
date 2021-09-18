@@ -29,4 +29,16 @@ class CheckoutController extends ApiController
         ]);
 
     }
+
+    public function checkCoupon(Request $request){
+
+
+
+    }
+
+    public function getShippingQoute(Request $request){
+
+        
+
+    }
 }

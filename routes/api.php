@@ -147,6 +147,10 @@ Route::group(['prefix' => 'v1'], function () {
     Route::prefix('checkout')->name('checkout.')->middleware('auth:api')->group(function () {
 
         Route::get('payment-methods', [CheckoutController::class, 'paymentMethod'])->name('payment.method');
+
+        Route::post('coupon', [CheckoutController::class, 'checkCoupon'])->name('coupon');
+
+        Route::post('shipping', [CheckoutController::class, 'getShippingQoute'])->name('shipping');
         
     });
 

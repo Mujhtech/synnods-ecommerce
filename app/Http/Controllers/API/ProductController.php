@@ -74,7 +74,7 @@ class ProductController extends ApiController
             if(!SubCategory::where('slug', $request->sub_category)->exists()){
 
                 return $this->setStatusCode(500)->setStatusMessage('error')->respond([
-                    'message' => 'Cannot find product'
+                    'message' => 'Cannot find sub category'.$request->sub_category
                 ]);
 
             }

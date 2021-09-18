@@ -27,7 +27,6 @@
                       <th></th>
                       <th>Product Name</th>
                       <th>Until Price</th>
-                      <th>Qty</th>
                       <th>Subtotal</th>
                       <th>Action</th>
                     </tr>
@@ -62,18 +61,15 @@
                             <span class="amount"
                               >₦{{ product.sale_price }}</span
                             >
-                            <span class="amount">₦{{ product.price }}</span>
+                            <span
+                              class="amount"
+                              style="
+                                text-decoration: line-through;
+                                color: #b7b7b7;
+                              "
+                              >₦{{ product.price }}</span
+                            >
                           </template>
-                        </td>
-                        <td class="product-quantity">
-                          <div class="pro-dec-cart">
-                            <input
-                              class="cart-plus-minus-box"
-                              type="text"
-                              value="02"
-                              name="qtybutton"
-                            />
-                          </div>
                         </td>
                         <td class="product-subtotal">
                           <template v-if="!product.is_sale">
@@ -84,7 +80,14 @@
                             <span class="amount"
                               >₦{{ product.sale_price }}</span
                             >
-                            <span class="amount">₦{{ product.price }}</span>
+                            <span
+                              class="amount"
+                              style="
+                                text-decoration: line-through;
+                                color: #b7b7b7;
+                              "
+                              >₦{{ product.price }}</span
+                            >
                           </template>
                         </td>
                         <td class="product-wishlist-cart">
@@ -100,9 +103,9 @@
                       </tr>
                     </template>
                     <template v-else>
-                        <tr>
-                            <td colspan="6">No data found</td>
-                        </tr>
+                      <tr>
+                        <td colspan="6">No data found</td>
+                      </tr>
                     </template>
                   </tbody>
                 </table>
@@ -119,6 +122,10 @@ import SyBreadcrumb from "../components/commons/SyBreadcrumb";
 import { mapGetters, mapActions } from "vuex";
 export default {
   name: "Wishlist",
+  metaInfo: {
+    title: "Wishlist",
+    titleTemplate: "%s - Faadaakaa Ecommerce",
+  },
   components: {
     SyBreadcrumb,
   },

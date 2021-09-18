@@ -4,6 +4,10 @@ export function getPaymentMethod() {
     return http().get('/checkout/payment-methods');
 }
 
-export function getShippingQoute() {
-    return http().get('/category');
+export function getShippingQoute(data) {
+    return http().post('/shipping', data);
+}
+
+export function getCouponStatus(data) {
+    return http().post('/checkout/coupon', data);
 }

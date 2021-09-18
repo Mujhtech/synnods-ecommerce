@@ -6,6 +6,7 @@ import wishlist from "./wishlist";
 import user from "./user";
 import setting from "./setting";
 import notification  from "./notification";
+import checkout  from "./checkout";
 
 Vue.use(Vuex);
 
@@ -15,6 +16,7 @@ export default new Vuex.Store({
         cart: cart,
         wishlist: wishlist,
         notification: notification,
-        setting: setting
+        setting: setting,
+        checkout: checkout
     }
 });
