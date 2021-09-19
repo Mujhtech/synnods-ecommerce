@@ -332,7 +332,13 @@ export default {
         console.log(response);
         this.loading = false;
       } catch (err) {
-        console.log(err.response);
+        this.loading = false;
+        this.addNotification({
+          type: "error",
+          message: err.response.data.data
+            ? err.response.data.data.message
+            : "Something went wrong",
+        });
       }
     },
     shippingQuote: async function () {
@@ -347,6 +353,13 @@ export default {
         this.loading = false;
       } catch (err) {
         console.log(err.response);
+        this.loading = false;
+        this.addNotification({
+          type: "error",
+          message: err.response.data.data
+            ? err.response.data.data.message
+            : "Something went wrong",
+        });
       }
     },
   },

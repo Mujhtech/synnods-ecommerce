@@ -5,7 +5,7 @@ export function getPaymentMethod() {
 }
 
 export function getShippingQoute(data) {
-    return http().post('/shipping', data);
+    return http().post('/checkout/shipping', data);
 }
 
 export function getCouponStatus(data) {

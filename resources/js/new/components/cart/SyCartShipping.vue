@@ -2,6 +2,16 @@
   <div class="panel-body">
     <pre-loader v-if="loading"></pre-loader>
     <div class="shipping-information-wrapper">
+      <div class="ship-wrapper">
+        <div class="single-ship">
+          <input type="radio" name="address" value="address" checked="" />
+          <label>Ship to this address</label>
+        </div>
+        <div class="single-ship">
+          <input type="radio" name="address" value="dadress" />
+          <label>Ship to different address</label>
+        </div>
+      </div>
       <div class="billing-select">
         <select
           class="email s-email s-wid"

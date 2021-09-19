@@ -5,85 +5,52 @@
         <div class="col-lg-6 col-md-6">
           <div class="billing-info">
             <label>First Name</label>
-            <input type="text" />
+            <input type="text" v-model="billing.first_name" />
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="billing-info">
             <label>Last Name</label>
-            <input type="text" />
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6">
-          <div class="billing-info">
-            <label>Company</label>
-            <input type="text" />
+            <input type="text" v-model="billing.last_name" />
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="billing-info">
             <label>Email Address</label>
-            <input type="email" />
-          </div>
-        </div>
-        <div class="col-lg-12 col-md-12">
-          <div class="billing-info">
-            <label>Address</label>
-            <input type="text" />
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6">
-          <div class="billing-info">
-            <label>city</label>
-            <input type="text" />
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6">
-          <div class="billing-info">
-            <label>State/Province</label>
-            <input type="text" />
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6">
-          <div class="billing-info">
-            <label>Zip/Postal Code</label>
-            <input type="text" />
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6">
-          <div class="billing-select">
-            <label>Country</label>
-            <select>
-              <option value="1">United State</option>
-              <option value="2">Azerbaijan</option>
-              <option value="3">Bahamas</option>
-              <option value="4">Bahrain</option>
-              <option value="5">Bangladesh</option>
-              <option value="6">Barbados</option>
-            </select>
+            <input type="email" v-model="billing.email" />
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="billing-info">
             <label>Telephone</label>
-            <input type="text" />
+            <input type="text" v-model="billing.phone" />
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12">
+          <div class="billing-info">
+            <label>Address</label>
+            <input type="text" v-model="billing.address" />
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="billing-info">
-            <label>Fax</label>
-            <input type="text" />
+            <label>city</label>
+            <input type="text" v-model="billing.city" />
           </div>
         </div>
-      </div>
-      <div class="ship-wrapper">
-        <div class="single-ship">
-          <input type="radio" name="address" value="address" checked="" />
-          <label>Ship to this address</label>
+        <div class="col-lg-6 col-md-6">
+          <div class="billing-info">
+            <label>State/Province</label>
+            <input type="text" v-model="billing.state" />
+          </div>
         </div>
-        <div class="single-ship">
-          <input type="radio" name="address" value="dadress" />
-          <label>Ship to different address</label>
+        <div class="col-lg-6 col-md-6">
+          <div class="billing-select">
+            <label>Country</label>
+            <select v-model="billing.country">
+              <option value="Nigeria">Nigeria</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="billing-back-btn">
@@ -91,7 +58,7 @@
           <a href="#"><i class="ion-arrow-up-c"></i> back</a>
         </div>
         <div class="billing-btn">
-          <button type="submit">Get a Quote</button>
+          <button type="button">Continue</button>
         </div>
       </div>
     </div>
@@ -100,9 +67,9 @@
 
 <script>
 export default {
-    name: "SyCartBilling",
-    props: {
-      billing: Object
-    }
-}
+  name: "SyCartBilling",
+  props: {
+    billing: Object,
+  },
+};
 </script>

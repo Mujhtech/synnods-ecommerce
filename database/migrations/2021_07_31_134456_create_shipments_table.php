@@ -18,6 +18,10 @@ class CreateShipmentsTable extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('email');
+            $table->string('country');
+            $table->string('state');
+            $table->string('city');
+            $table->string('plans');
             $table->timestamps();
         });
     }
