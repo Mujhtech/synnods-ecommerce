@@ -11,6 +11,7 @@
         :nav="false"
         :items="itemPerPage"
         :dots="false"
+        class=""
       >
         <sy-product-two
           v-for="(product, index) in products"
