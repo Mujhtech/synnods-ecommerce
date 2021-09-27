@@ -8,27 +8,29 @@
               <h4 class="section-title section-bg-white">New Arrivals</h4>
             </div>
             <div class="product-slider-active-2 nav-style">
-              <div class="single-product-bundle">
-                <sy-product-six
-                  v-for="(product, index) in products.slice(0, 3)"
-                  :key="index"
-                  :product="product"
-                ></sy-product-six>
-              </div>
-              <div class="single-product-bundle">
-                <sy-product-six
-                  v-for="(product, index) in products.slice(3, 6)"
-                  :key="index"
-                  :product="product"
-                ></sy-product-six>
-              </div>
-              <div class="single-product-bundle">
-                <sy-product-six
-                  v-for="(product, index) in products.slice(6, 9)"
-                  :key="index"
-                  :product="product"
-                ></sy-product-six>
-              </div>
+              <carousel :autoplay="true" :nav="false" :dots="false" :items="1">
+                <div class="single-product-bundle">
+                  <sy-product-six
+                    v-for="(product, index) in products.slice(0, 3)"
+                    :key="index"
+                    :product="product"
+                  ></sy-product-six>
+                </div>
+                <div class="single-product-bundle">
+                  <sy-product-six
+                    v-for="(product, index) in products.slice(3, 6)"
+                    :key="index"
+                    :product="product"
+                  ></sy-product-six>
+                </div>
+                <div class="single-product-bundle">
+                  <sy-product-six
+                    v-for="(product, index) in products.slice(6, 9)"
+                    :key="index"
+                    :product="product"
+                  ></sy-product-six>
+                </div>
+              </carousel>
             </div>
           </div>
         </div>
@@ -38,27 +40,29 @@
               <h4 class="section-title section-bg-white">On Sale Products</h4>
             </div>
             <div class="product-slider-active-2 nav-style">
-              <div class="single-product-bundle">
-                <sy-product-six
-                  v-for="(product, index) in products.slice(0, 3)"
-                  :key="index"
-                  :product="product"
-                ></sy-product-six>
-              </div>
-              <div class="single-product-bundle">
-                <sy-product-six
-                  v-for="(product, index) in products.slice(3, 6)"
-                  :key="index"
-                  :product="product"
-                ></sy-product-six>
-              </div>
-              <div class="single-product-bundle">
-                <sy-product-six
-                  v-for="(product, index) in products.slice(6, 9)"
-                  :key="index"
-                  :product="product"
-                ></sy-product-six>
-              </div>
+              <carousel :autoplay="true" :nav="false" :dots="false" :items="1">
+                <div class="single-product-bundle">
+                  <sy-product-six
+                    v-for="(product, index) in products.slice(0, 3)"
+                    :key="index"
+                    :product="product"
+                  ></sy-product-six>
+                </div>
+                <div class="single-product-bundle">
+                  <sy-product-six
+                    v-for="(product, index) in products.slice(3, 6)"
+                    :key="index"
+                    :product="product"
+                  ></sy-product-six>
+                </div>
+                <div class="single-product-bundle">
+                  <sy-product-six
+                    v-for="(product, index) in products.slice(6, 9)"
+                    :key="index"
+                    :product="product"
+                  ></sy-product-six>
+                </div>
+              </carousel>
             </div>
           </div>
         </div>
@@ -70,27 +74,29 @@
               </h4>
             </div>
             <div class="product-slider-active-2 nav-style">
-              <div class="single-product-bundle">
-                <sy-product-six
-                  v-for="(product, index) in products.slice(0, 3)"
-                  :key="index"
-                  :product="product"
-                ></sy-product-six>
-              </div>
-              <div class="single-product-bundle">
-                <sy-product-six
-                  v-for="(product, index) in products.slice(3, 6)"
-                  :key="index"
-                  :product="product"
-                ></sy-product-six>
-              </div>
-              <div class="single-product-bundle">
-                <sy-product-six
-                  v-for="(product, index) in products.slice(6, 9)"
-                  :key="index"
-                  :product="product"
-                ></sy-product-six>
-              </div>
+              <carousel :autoplay="true" :nav="false" :dots="false" :items="1">
+                <div class="single-product-bundle">
+                  <sy-product-six
+                    v-for="(product, index) in products.slice(0, 3)"
+                    :key="index"
+                    :product="product"
+                  ></sy-product-six>
+                </div>
+                <div class="single-product-bundle">
+                  <sy-product-six
+                    v-for="(product, index) in products.slice(3, 6)"
+                    :key="index"
+                    :product="product"
+                  ></sy-product-six>
+                </div>
+                <div class="single-product-bundle">
+                  <sy-product-six
+                    v-for="(product, index) in products.slice(6, 9)"
+                    :key="index"
+                    :product="product"
+                  ></sy-product-six>
+                </div>
+              </carousel>
             </div>
           </div>
         </div>
@@ -100,9 +106,10 @@
 </template>
 
 <script>
-import SyProductSix from "../product/single/SyProductSix.vue";
+import SyProductSix from "../product/single/SyProductSix";
+import carousel from "vue-owl-carousel";
 export default {
-  components: { SyProductSix },
+  components: { SyProductSix, carousel },
   name: "SyHomeFooterProduct",
   props: {
     products: Array,

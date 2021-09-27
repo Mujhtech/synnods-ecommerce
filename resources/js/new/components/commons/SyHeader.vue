@@ -31,8 +31,20 @@
                         >{{ getCurrency }}<i class="ion-chevron-down"></i
                       ></a>
                       <ul class="language-dropdown">
-                        <li><a href="javascript:;" v-on:click="changeCurrency('USD')">USD </a></li>
-                        <li><a href="javascript:;" v-on:click="changeCurrency('NGN')">NGN </a></li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            v-on:click="changeCurrency('USD')"
+                            >USD
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="javascript:;"
+                            v-on:click="changeCurrency('NGN')"
+                            >NGN
+                          </a>
+                        </li>
                       </ul>
                     </li>
                   </ul>
@@ -108,7 +120,7 @@
         </div>
       </div>
     </div>
-    <div class="header-bottom">
+    <div class="header-bottom border-bottom-1 header-bottom-3">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -127,36 +139,17 @@
                 <nav id="mobile-menu-active">
                   <ul class="menu-overflow">
                     <li><router-link to="/">Home</router-link></li>
-                    <li class="mega-menu-position">
-                      <a href="javascript:;">Category <i class="ion-chevron-down"></i> </a>
-                      <ul class="mega-menu">
+                    <li>
+                      <a href="javascript:;">Category </a>
+                      <ul>
                         <li
                           v-for="(category, index) in categories.slice(0, 5)"
                           :key="index"
                         >
-                          <ul>
-                            <li>
-                              <ul>
-                                <li class="mega-menu-title">
-                                  <router-link
-                                    :to="`/shop?category=${category.slug}`"
-                                    >{{ category.name }}</router-link
-                                  >
-                                </li>
-                                <li
-                                  v-for="(
-                                    sub_cat, key
-                                  ) in category.sub_categories"
-                                  :key="key"
-                                >
-                                  <router-link
-                                    :to="`/shop?sub_category=${sub_cat.slug}`"
-                                    >{{ sub_cat.name }}</router-link
-                                  >
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
+                          <router-link
+                            :to="`/shop?category=${category.slug}`"
+                            >{{ category.name }}</router-link
+                          >
                         </li>
                       </ul>
                     </li>
@@ -170,15 +163,18 @@
             </div>
           </div>
         </div>
-        <div class="main-menu main-none">
+        <div class="main-menu main-none main-border elec-menu">
           <nav>
             <ul>
+              <li><i style="color: white" class="pe-7s-menu"></i></li>
               <li><router-link to="/">Home</router-link></li>
               <li class="mega-menu-position">
-                <a href="javascript:;">Category <i class="ion-chevron-down"></i> </a>
+                <a href="javascript:;"
+                  >Category <i class="ion-chevron-down"></i>
+                </a>
                 <ul class="mega-menu">
                   <li
-                    v-for="(category, index) in categories.slice(0, 5)"
+                    v-for="(category, index) in categories.slice(0, 4)"
                     :key="index"
                   >
                     <ul>
@@ -203,6 +199,14 @@
                       </li>
                     </ul>
                   </li>
+                  <li style="width: 25%">
+                    <div style="height: 200px; width: 100%; overflow: hidden">
+                      <img
+                        style="margin-top: -200px"
+                        src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/customcmsmenu/item/comp21.png"
+                      />
+                    </div>
+                  </li>
                 </ul>
               </li>
               <li><router-link to="/vendors">Vendors</router-link></li>
@@ -217,11 +221,11 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import SyCart from './SyCart';
+import SyCart from "./SyCart";
 export default {
   name: "SyHeader",
   components: {
-    SyCart
+    SyCart,
   },
   props: {
     categories: Array,
@@ -251,7 +255,6 @@ export default {
         },
       });
     },
-
   },
 };
 </script>
