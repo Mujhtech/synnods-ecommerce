@@ -1,7 +1,15 @@
 <template>
   <div>
     <sy-notification></sy-notification>
-    <sy-header :categories="categories"></sy-header>
+    <sy-header
+      :categories="categories"
+      :phone="phone"
+      :baby="baby"
+      :furniture="furniture"
+      :computer="computer"
+      :home="home"
+      :electronic="electronic"
+    ></sy-header>
     <router-view></router-view>
     <sy-brand></sy-brand>
     <sy-footer></sy-footer>
@@ -31,6 +39,12 @@ export default {
     return {
       isHide: false,
       categories: [],
+      phone: {},
+      electronic: {},
+      computer: {},
+      baby: {},
+      furniture: {},
+      home: {},
     };
   },
   watch: {},
@@ -69,8 +83,26 @@ export default {
     },
     fetchCategory: async function () {
       try {
-        const response = await catService.category();
+        const response = await catService.topLevel();
         this.categories = response.data.data.data;
+        this.phone = response.data.data.data.filter(
+          (item) => item.slug === "phone_&_tablets"
+        )[0];
+        this.electronic = response.data.data.data.filter(
+          (item) => item.slug === "electronics"
+        )[0];
+        this.home = response.data.data.data.filter(
+          (item) => item.slug === "home_&_kitchen"
+        )[0];
+        this.baby = response.data.data.data.filter(
+          (item) => item.slug === "baby_kids_&_toys"
+        )[0];
+        this.computer = response.data.data.data.filter(
+          (item) => item.slug === "computer_&_accessories"
+        )[0];
+        this.furniture = response.data.data.data.filter(
+          (item) => item.slug === "furnitures"
+        )[0];
       } catch (err) {
         console.log(err.response);
       }
@@ -80,7 +112,7 @@ export default {
         const response = await auth.getProfile();
         this.userLogin(response.data.data.user);
       } catch (err) {
-        if(!err.response) return;
+        if (!err.response) return;
         //console.log(err.response);
         localStorage.removeItem("SYNECT");
         localStorage.removeItem("SYNECUS");

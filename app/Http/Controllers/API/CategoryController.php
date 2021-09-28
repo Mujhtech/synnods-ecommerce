@@ -6,7 +6,9 @@ use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use App\Http\Requests\CategoryRequest;
 use App\Http\Resources\CategoryResource;
+use App\Http\Resources\TopLevelCategoryResource;
 use App\Models\Category;
+use App\Models\TopLevelCategory;
 use Storage;
 
 class CategoryController extends ApiController
@@ -19,6 +21,16 @@ class CategoryController extends ApiController
 
         return $this->setStatusCode(200)->setStatusMessage('success')->respond([
             'data' => CategoryResource::collection($categories)
+        ]);
+    }
+
+
+    public function topLevel(){
+
+        $top_level = TopLevelCategory::where('status', 1)->with('categories')->get();
+
+        return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+            'data' => TopLevelCategoryResource::collection($top_level)
         ]);
     }
 

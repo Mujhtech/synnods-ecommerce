@@ -24,245 +24,22 @@
               <div class="best-selling-bundle-2">
                 <div class="row">
                   <div class="col-lg-12 col-xl-8 col-md-12">
-                    <div
-                      class="
-                        best-selling-pro-wrapper
-                        mb-20
-                        best-selling-big-img
-                      "
-                    >
-                      <div class="product-img best-selling-img">
-                        <a href="product-details.html">
-                          <img
-                            alt=""
-                            src="assets/img/product/best-selling-7.jpg"
-                          />
-                        </a>
-                        <span>-10%</span>
-                      </div>
-                      <div
-                        class="
-                          product-content
-                          best-pro-content best-selling-style-2
-                        "
-                      >
-                        <span>Tab, Accessories</span>
-                        <h4>
-                          <a href="product-details.html"
-                            >Headphones, Crabot I65 On-Ear Stereo Sound Bass
-                            Wired Portable Foldable Headsets</a
-                          >
-                        </h4>
-                        <div class="product-price-wrapper">
-                          <span>$260.00</span>
-                          <span class="product-price-old">$162.00 </span>
-                        </div>
-                        <div class="product-list">
-                          <ul>
-                            <li>Bass and Stereo Sound</li>
-                            <li>Comfortable Wearing</li>
-                            <li>
-                              Fit Universal Devices & Tangle-free Braided Cable
-                            </li>
-                            <li>Lightweight Portable Design</li>
-                          </ul>
-                        </div>
-                        <div class="best-pro-action-2">
-                          <a class="action-cart" title="Add To Cart" href="#">
-                            Add to Cart
-                          </a>
-                          <a class="same-action" title="Wishlist" href="#">
-                            <i class="fa fa-heart-o"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    <sy-bs-one :product="products[0]"></sy-bs-one>
                     <div class="row">
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-8.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-9.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Tab, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Featured Demoniss Tab Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$150.00</span>
-                              <span class="product-price-old">$190.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-two
+                        v-for="(product, index) in products.slice(0, 2)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-two>
                     </div>
                   </div>
                   <div class="col-lg-12 col-xl-4 col-md-12">
                     <div class="row">
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-10.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Watch, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Demoniss Glorior Watch Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$180.00</span>
-                              <span class="product-price-old">$200.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-11.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-12.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Tab, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Phantom Remote Control Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$110.00</span>
-                              <span class="product-price-old">$1140.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-three
+                        v-for="(product, index) in products.slice(0, 3)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-three>
                     </div>
                   </div>
                 </div>
@@ -270,247 +47,22 @@
               <div class="best-selling-bundle-2">
                 <div class="row">
                   <div class="col-lg-12 col-xl-8 col-md-12">
-                    <div
-                      class="
-                        best-selling-pro-wrapper
-                        mb-20
-                        best-selling-big-img
-                      "
-                    >
-                      <div class="product-img best-selling-img">
-                        <a href="product-details.html">
-                          <img
-                            alt=""
-                            src="assets/img/product/best-selling-13.jpg"
-                          />
-                        </a>
-                        <span>-10%</span>
-                      </div>
-                      <div
-                        class="
-                          product-content
-                          best-pro-content best-selling-style-2
-                        "
-                      >
-                        <span>Tab, Accessories</span>
-                        <h4>
-                          <a href="product-details.html"
-                            >Headphones, Crabot I65 On-Ear Stereo Sound Bass
-                            Wired Portable Foldable Headsets</a
-                          >
-                        </h4>
-                        <div class="product-price-wrapper">
-                          <span>$260.00</span>
-                          <span class="product-price-old">$162.00 </span>
-                        </div>
-                        <div class="product-list">
-                          <ul>
-                            <li>Bass and Stereo Sound</li>
-                            <li>Comfortable Wearing</li>
-                            <li>
-                              Fit Universal Devices & Tangle-free Braided Cable
-                            </li>
-                            <li>Lightweight Portable Design</li>
-                          </ul>
-                        </div>
-                        <div class="best-pro-action-2">
-                          <a class="action-cart" title="Add To Cart" href="#">
-                            Add to Cart
-                          </a>
-                          <a class="same-action" title="Wishlist" href="#">
-                            <i class="fa fa-heart-o"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    <sy-bs-one :product="products[0]"></sy-bs-one>
                     <div class="row">
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-14.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Monitor, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Maxclon Desktop C27F5 Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-15.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-two
+                        v-for="(product, index) in products.slice(0, 2)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-two>
                     </div>
                   </div>
                   <div class="col-lg-12 col-xl-4 col-md-12">
                     <div class="row">
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-16.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-17.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Remote, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Phantom Remote Control Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-10.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Tab, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Demoniss Glorior Watch Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-three
+                        v-for="(product, index) in products.slice(0, 3)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-three>
                     </div>
                   </div>
                 </div>
@@ -524,247 +76,22 @@
               <div class="best-selling-bundle-2">
                 <div class="row">
                   <div class="col-lg-12 col-xl-8 col-md-12">
-                    <div
-                      class="
-                        best-selling-pro-wrapper
-                        mb-20
-                        best-selling-big-img
-                      "
-                    >
-                      <div class="product-img best-selling-img">
-                        <a href="product-details.html">
-                          <img
-                            alt=""
-                            src="assets/img/product/best-selling-13.jpg"
-                          />
-                        </a>
-                        <span>-10%</span>
-                      </div>
-                      <div
-                        class="
-                          product-content
-                          best-pro-content best-selling-style-2
-                        "
-                      >
-                        <span>Tab, Accessories</span>
-                        <h4>
-                          <a href="product-details.html"
-                            >Headphones, Crabot I65 On-Ear Stereo Sound Bass
-                            Wired Portable Foldable Headsets</a
-                          >
-                        </h4>
-                        <div class="product-price-wrapper">
-                          <span>$260.00</span>
-                          <span class="product-price-old">$162.00 </span>
-                        </div>
-                        <div class="product-list">
-                          <ul>
-                            <li>Bass and Stereo Sound</li>
-                            <li>Comfortable Wearing</li>
-                            <li>
-                              Fit Universal Devices & Tangle-free Braided Cable
-                            </li>
-                            <li>Lightweight Portable Design</li>
-                          </ul>
-                        </div>
-                        <div class="best-pro-action-2">
-                          <a class="action-cart" title="Add To Cart" href="#">
-                            Add to Cart
-                          </a>
-                          <a class="same-action" title="Wishlist" href="#">
-                            <i class="fa fa-heart-o"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    <sy-bs-one :product="products[0]"></sy-bs-one>
                     <div class="row">
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-14.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Monitor, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Maxclon Desktop C27F5 Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-15.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-two
+                        v-for="(product, index) in products.slice(0, 2)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-two>
                     </div>
                   </div>
                   <div class="col-lg-12 col-xl-4 col-md-12">
                     <div class="row">
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-16.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-17.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Remote, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Phantom Remote Control Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-10.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Tab, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Demoniss Glorior Watch Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-three
+                        v-for="(product, index) in products.slice(0, 3)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-three>
                     </div>
                   </div>
                 </div>
@@ -772,245 +99,22 @@
               <div class="best-selling-bundle-2">
                 <div class="row">
                   <div class="col-lg-12 col-xl-8 col-md-12">
-                    <div
-                      class="
-                        best-selling-pro-wrapper
-                        mb-20
-                        best-selling-big-img
-                      "
-                    >
-                      <div class="product-img best-selling-img">
-                        <a href="product-details.html">
-                          <img
-                            alt=""
-                            src="assets/img/product/best-selling-7.jpg"
-                          />
-                        </a>
-                        <span>-10%</span>
-                      </div>
-                      <div
-                        class="
-                          product-content
-                          best-pro-content best-selling-style-2
-                        "
-                      >
-                        <span>Tab, Accessories</span>
-                        <h4>
-                          <a href="product-details.html"
-                            >Headphones, Crabot I65 On-Ear Stereo Sound Bass
-                            Wired Portable Foldable Headsets</a
-                          >
-                        </h4>
-                        <div class="product-price-wrapper">
-                          <span>$260.00</span>
-                          <span class="product-price-old">$162.00 </span>
-                        </div>
-                        <div class="product-list">
-                          <ul>
-                            <li>Bass and Stereo Sound</li>
-                            <li>Comfortable Wearing</li>
-                            <li>
-                              Fit Universal Devices & Tangle-free Braided Cable
-                            </li>
-                            <li>Lightweight Portable Design</li>
-                          </ul>
-                        </div>
-                        <div class="best-pro-action-2">
-                          <a class="action-cart" title="Add To Cart" href="#">
-                            Add to Cart
-                          </a>
-                          <a class="same-action" title="Wishlist" href="#">
-                            <i class="fa fa-heart-o"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    <sy-bs-one :product="products[0]"></sy-bs-one>
                     <div class="row">
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-8.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-9.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Tab, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Featured Demoniss Tab Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$150.00</span>
-                              <span class="product-price-old">$190.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-two
+                        v-for="(product, index) in products.slice(0, 2)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-two>
                     </div>
                   </div>
                   <div class="col-lg-12 col-xl-4 col-md-12">
                     <div class="row">
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-10.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Watch, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Demoniss Glorior Watch Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$180.00</span>
-                              <span class="product-price-old">$200.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-11.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-12.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Tab, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Phantom Remote Control Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$110.00</span>
-                              <span class="product-price-old">$1140.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-three
+                        v-for="(product, index) in products.slice(0, 3)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-three>
                     </div>
                   </div>
                 </div>
@@ -1024,245 +128,22 @@
               <div class="best-selling-bundle-2">
                 <div class="row">
                   <div class="col-lg-12 col-xl-8 col-md-12">
-                    <div
-                      class="
-                        best-selling-pro-wrapper
-                        mb-20
-                        best-selling-big-img
-                      "
-                    >
-                      <div class="product-img best-selling-img">
-                        <a href="product-details.html">
-                          <img
-                            alt=""
-                            src="assets/img/product/best-selling-18.jpg"
-                          />
-                        </a>
-                        <span>-10%</span>
-                      </div>
-                      <div
-                        class="
-                          product-content
-                          best-pro-content best-selling-style-2
-                        "
-                      >
-                        <span>Tab, Accessories</span>
-                        <h4>
-                          <a href="product-details.html"
-                            >Headphones, Crabot I65 On-Ear Stereo Sound Bass
-                            Wired Portable Foldable Headsets</a
-                          >
-                        </h4>
-                        <div class="product-price-wrapper">
-                          <span>$260.00</span>
-                          <span class="product-price-old">$162.00 </span>
-                        </div>
-                        <div class="product-list">
-                          <ul>
-                            <li>Bass and Stereo Sound</li>
-                            <li>Comfortable Wearing</li>
-                            <li>
-                              Fit Universal Devices & Tangle-free Braided Cable
-                            </li>
-                            <li>Lightweight Portable Design</li>
-                          </ul>
-                        </div>
-                        <div class="best-pro-action-2">
-                          <a class="action-cart" title="Add To Cart" href="#">
-                            Add to Cart
-                          </a>
-                          <a class="same-action" title="Wishlist" href="#">
-                            <i class="fa fa-heart-o"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    <sy-bs-one :product="products[0]"></sy-bs-one>
                     <div class="row">
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-16.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-17.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Tab, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Featured Demoniss Tab Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$150.00</span>
-                              <span class="product-price-old">$190.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-two
+                        v-for="(product, index) in products.slice(0, 2)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-two>
                     </div>
                   </div>
                   <div class="col-lg-12 col-xl-4 col-md-12">
                     <div class="row">
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-12.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Watch, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Demoniss Glorior Watch Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$180.00</span>
-                              <span class="product-price-old">$200.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-10.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-15.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Tab, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Phantom Remote Control Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$110.00</span>
-                              <span class="product-price-old">$1140.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-three
+                        v-for="(product, index) in products.slice(0, 3)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-three>
                     </div>
                   </div>
                 </div>
@@ -1270,247 +151,22 @@
               <div class="best-selling-bundle-2">
                 <div class="row">
                   <div class="col-lg-12 col-xl-8 col-md-12">
-                    <div
-                      class="
-                        best-selling-pro-wrapper
-                        mb-20
-                        best-selling-big-img
-                      "
-                    >
-                      <div class="product-img best-selling-img">
-                        <a href="product-details.html">
-                          <img
-                            alt=""
-                            src="assets/img/product/best-selling-13.jpg"
-                          />
-                        </a>
-                        <span>-10%</span>
-                      </div>
-                      <div
-                        class="
-                          product-content
-                          best-pro-content best-selling-style-2
-                        "
-                      >
-                        <span>Tab, Accessories</span>
-                        <h4>
-                          <a href="product-details.html"
-                            >Headphones, Crabot I65 On-Ear Stereo Sound Bass
-                            Wired Portable Foldable Headsets</a
-                          >
-                        </h4>
-                        <div class="product-price-wrapper">
-                          <span>$260.00</span>
-                          <span class="product-price-old">$162.00 </span>
-                        </div>
-                        <div class="product-list">
-                          <ul>
-                            <li>Bass and Stereo Sound</li>
-                            <li>Comfortable Wearing</li>
-                            <li>
-                              Fit Universal Devices & Tangle-free Braided Cable
-                            </li>
-                            <li>Lightweight Portable Design</li>
-                          </ul>
-                        </div>
-                        <div class="best-pro-action-2">
-                          <a class="action-cart" title="Add To Cart" href="#">
-                            Add to Cart
-                          </a>
-                          <a class="same-action" title="Wishlist" href="#">
-                            <i class="fa fa-heart-o"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    <sy-bs-one :product="products[0]"></sy-bs-one>
                     <div class="row">
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-14.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Monitor, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Maxclon Desktop C27F5 Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-15.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-two
+                        v-for="(product, index) in products.slice(0, 2)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-two>
                     </div>
                   </div>
                   <div class="col-lg-12 col-xl-4 col-md-12">
                     <div class="row">
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-16.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Phone, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Awesome Smart Phone Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper mb-20">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-17.jpg"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Remote, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Phantom Remote Control Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-xl-12 col-md-6">
-                        <div class="best-selling-pro-wrapper">
-                          <div class="product-img">
-                            <a href="product-details.html">
-                              <img
-                                alt=""
-                                src="assets/img/product/best-selling-10.jpg"
-                              />
-                            </a>
-                            <span>-10%</span>
-                          </div>
-                          <div class="product-content best-pro-content">
-                            <span>Tab, Accessories</span>
-                            <h4>
-                              <a href="product-details.html"
-                                >Demoniss Glorior Watch Ver 2018</a
-                              >
-                            </h4>
-                            <div class="product-price-wrapper">
-                              <span>$260.00</span>
-                              <span class="product-price-old">$162.00 </span>
-                            </div>
-                            <div class="product-action best-pro-action">
-                              <a class="same-action" title="Wishlist" href="#">
-                                <i class="fa fa-heart-o"></i>
-                              </a>
-                              <a
-                                class="action-cart"
-                                title="Add To Cart"
-                                href="#"
-                              >
-                                Add to Cart
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <sy-bs-three
+                        v-for="(product, index) in products.slice(0, 3)"
+                        :product="product"
+                        :key="index"
+                      ></sy-bs-three>
                     </div>
                   </div>
                 </div>
@@ -1527,6 +183,9 @@
 <script>
 import SyProductThree from "../product/single/SyProductThree";
 import carousel from "vue-owl-carousel";
+import SyBsThree from "../product/bs/SyBsThree";
+import SyBsTwo from "../product/bs/SyBsTwo";
+import SyBsOne from "../product/bs/SyBsOne";
 export default {
   name: "BestSellingProduct",
   props: {
@@ -1535,6 +194,9 @@ export default {
   components: {
     SyProductThree,
     carousel,
+    SyBsThree,
+    SyBsTwo,
+    SyBsOne,
   },
   data: function () {
     return {

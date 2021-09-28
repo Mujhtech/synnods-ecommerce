@@ -17,60 +17,67 @@ class CategorySeeder extends Seeder
         //
         $datas = [
             [
-                "name" => "Electronics",
+                "name" => "Camera",
                 "description" => "",
-                "slug" => "electronics",
+                "slug" => "camera",
                 "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
-                "icon" => "icon-category-fashion"
+                "top_level_category_id" => 1
             ],
             [
-                "name" => "Phone & Tablets",
+                "name" => "Television",
                 "description" => "",
-                "slug" => "phone_&_tablets",
+                "slug" => "television",
                 "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
-                "icon" => "icon-category-gifts"
+                "top_level_category_id" => 1
             ],
             [
-                "name" => "Grocery",
+                "name" => "Audio & Sound System",
                 "description" => "",
-                "slug" => "grocery",
+                "slug" => "audio_&_sound_system",
                 "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
-                "icon" => "icon-category-gifts"
+                "top_level_category_id" => 1
             ],
             [
-                "name" => "Computing",
+                "name" => "Games & Consoles",
                 "description" => "",
-                "slug" => "computing",
+                "slug" => "games_&_consoles",
                 "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
-                "icon" => "icon-category-electronics"
+                "top_level_category_id" => 1
             ],
             [
-                "name" => "Home & Office",
+                "name" => "Phone",
                 "description" => "",
-                "slug" => "home_&_office",
+                "slug" => "phone",
                 "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
-                "icon" => "icon-category-furniture"
+                "top_level_category_id" => 2
             ],
             [
-                "name" => "Fashion",
+                "name" => "Tablet",
                 "description" => "",
-                "slug" => "fashion",
+                "slug" => "tablet",
                 "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
-                "icon" => "icon-category-fashion"
+                "top_level_category_id" => 2
             ],
             [
-                "name" => "Health & Beauty",
+                "name" => "Laptop",
                 "description" => "",
-                "slug" => "health_&_beauty",
+                "slug" => "laptop",
                 "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
-                "icon" => "icon-category-music"
+                "top_level_category_id" => 4
             ],
             [
-                "name" => "Baby Product",
+                "name" => "Desktop & Monitors",
                 "description" => "",
-                "slug" => "baby_product",
+                "slug" => "desktop_&_monitors",
                 "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
-                "icon" => "icon-category-garden"
+                "top_level_category_id" => 4
+            ],
+            [
+                "name" => "Printers & Scanners",
+                "description" => "",
+                "slug" => "printers_&_scanners",
+                "image" => "categories/oVHMrwmM1XYGy89Gl267aTXt043z3ubl1BTSukvY.jpg",
+                "top_level_category_id" => 4
             ],
         ];
 

@@ -102,6 +102,8 @@ Route::group(['prefix' => 'v1'], function () {
 
     Route::prefix('category')->name('category.')->group(function () {
 
+        Route::get('/top-level', [CategoryController::class, 'topLevel'])->name('top');
+
         Route::get('/', [CategoryController::class, 'index'])->name('index');
 
         Route::get('/{slug}', [CategoryController::class, 'single'])->name('single');

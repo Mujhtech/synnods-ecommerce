@@ -1,21 +1,21 @@
 <template>
-  <div class="col-lg-12">
-    <div class="product-list-wrapper shop-border mb-40 pb-40">
+  <div class="col-lg-6 col-xl-12 col-md-6">
+    <div class="best-selling-pro-wrapper mb-20">
       <div class="product-img">
-        <div class="product-img-slider">
-          <router-link :to="`/product/${product.slug}`"
-            ><img
-              v-lazy="`${product.featured_image}`"
-              :alt="product.name"
-              :width="product.featured_image.width"
-              :height="product.featured_image.height"
-          /></router-link>
-        </div>
+        <router-link :to="`/product/${product.slug}`"
+          ><!--<img
+          v-lazy="`${product.featured_image}`"
+          :alt="product.name"
+          width="110"
+          height="110"
+      />-->
+          <img :src="`assets/img/product/product-${product.id}.jpg`" />
+        </router-link>
         <span v-if="product.is_sale && product.price">-{{ discount }}%</span>
       </div>
-      <div class="product-list-content">
-        <span
-          ><router-link
+      <div class="product-content best-pro-content">
+        <span>
+          <router-link
             :to="{
               path: '/shop',
               query: { category: product.category.slug },
@@ -31,20 +31,13 @@
               },
             }"
             >{{ product.sub_category.name }}</router-link
-          ></span
-        >
+          >
+        </span>
         <h4>
           <router-link :to="`/product/${product.slug}`">{{
             product.name
           }}</router-link>
         </h4>
-        <div class="product-rating">
-          <i class="ion-android-star-outline theme-star"></i>
-          <i class="ion-android-star-outline theme-star"></i>
-          <i class="ion-android-star-outline theme-star"></i>
-          <i class="ion-android-star-outline theme-star"></i>
-          <i class="ion-android-star-outline"></i>
-        </div>
         <div class="product-price-wrapper">
           <template v-if="!product.is_sale">
             <span>₦{{ product.price }}</span>
@@ -55,16 +48,7 @@
             <span class="product-price-old">₦{{ product.price }}</span>
           </template>
         </div>
-        <p v-html="product.description.substring(0, 180)"></p>
-        <div class="product-action">
-          <a
-            class="action-cart"
-            title="Add To Cart"
-            href="javascript:;"
-            @click="addCart"
-          >
-            Add to Cart
-          </a>
+        <div class="product-action best-pro-action">
           <router-link
             to="/wishlist"
             class="btn-icon-wish added-wishlist"
@@ -83,31 +67,27 @@
             <i class="fa fa-heart-o"></i>
           </a>
           <a
-            class="same-action compare-mrg"
-            href="#"
-            title="Compare"
-            data-toggle="modal"
-            data-target="#exampleCompare"
+            class="action-cart"
+            title="Add To Cart"
+            href="javascript:;"
+            @click="addCart"
           >
-            <i class="fa fa-sliders fa-rotate-90"></i>
+            Add to Cart
           </a>
         </div>
       </div>
     </div>
   </div>
 </template>
-
 <script>
-import baseUrl from "../../../../api/index";
 import { mapActions, mapGetters } from "vuex";
 export default {
-  name: "SyProductFive",
+  name: "SyBsThree",
   props: {
     product: Object,
   },
   data: function () {
     return {
-      baseUrl: baseUrl,
       discount: 0,
     };
   },

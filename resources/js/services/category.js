@@ -4,6 +4,10 @@ export function category() {
     return http().get('/category');
 }
 
+export function topLevel() {
+    return http().get('/category/top-level');
+}
+
 export function createCategory(data) {
     return httpFile().post('/category/create', data);
 }

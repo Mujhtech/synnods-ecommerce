@@ -167,15 +167,15 @@
               <li><i style="color: white" class="pe-7s-menu"></i></li>
               <li class="mega-menu-position">
                 <a href="javascript:;"
-                  >Category <i class="ion-chevron-down"></i>
+                  >Computer & Accessories <i class="ion-chevron-down"></i>
                 </a>
                 <ul class="mega-menu">
-                  <li
-                    v-for="(category, index) in categories.slice(0, 4)"
-                    :key="index"
-                  >
+                  <li>
                     <ul>
-                      <li>
+                      <li
+                        v-for="(category, index) in computer.categories"
+                        :key="index"
+                      >
                         <ul>
                           <li class="mega-menu-title">
                             <router-link
@@ -194,45 +194,47 @@
                           </li>
                         </ul>
                       </li>
+                      <li style="width: 32%">
+                        <div
+                          style="height: 200px; width: 100%; overflow: hidden"
+                        >
+                          <img
+                            style="margin-top: -200px"
+                            src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/customcmsmenu/item/comp21.png"
+                          />
+                        </div>
+                      </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="mega-menu-position">
-                <a href="shop.html">
+                <a href="javascript:;">
                   Phone & Tablet <i class="ion-chevron-down"></i>
                 </a>
                 <ul class="mega-menu">
                   <li>
                     <ul>
-                      <li>
+                      <li
+                        v-for="(category, index) in phone.categories"
+                        :key="index"
+                      >
                         <ul>
-                          <li class="mega-menu-title">Phone</li>
-                          <li><a href="index.html">Android</a></li>
-                          <li><a href="index-electronics-2.html">iOS</a></li>
-                          <li>
-                            <a href="index-electronics-3.html">Windows</a>
+                          <li class="mega-menu-title">
+                            <router-link
+                              :to="`/shop?category=${category.slug}`"
+                              >{{ category.name }}</router-link
+                            >
                           </li>
-                          <li><a href="index-electronics-4.html">Others</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Tablets</li>
-                          <li><a href="index.html">Android</a></li>
-                          <li><a href="index-electronics-2.html">iOS</a></li>
-                          <li>
-                            <a href="index-electronics-3.html">Windows</a>
+                          <li
+                            v-for="(sub_cat, key) in category.sub_categories"
+                            :key="key"
+                          >
+                            <router-link
+                              :to="`/shop?sub_category=${sub_cat.slug}`"
+                              >{{ sub_cat.name }}</router-link
+                            >
                           </li>
-                          <li><a href="index-electronics-4.html">Others</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Sort by Price</li>
-                          <li><a href="index-jewelry.html"> >= 100,000</a></li>
-                          <li><a href="index-medical.html"> >= 150,000</a></li>
-                          <li><a href="index-sports.html"> >= 200,000</a></li>
                         </ul>
                       </li>
                       <li style="width: 32%">
@@ -250,68 +252,32 @@
                 </ul>
               </li>
               <li class="mega-menu-position">
-                <a href="shop.html">
+                <a href="javascript:;">
                   Electronics <i class="ion-chevron-down"></i>
                 </a>
                 <ul class="mega-menu">
                   <li>
                     <ul>
-                      <li>
+                      <li
+                        v-for="(category, index) in electronic.categories"
+                        :key="index"
+                      >
                         <ul>
-                          <li class="mega-menu-title">Television</li>
-                          <li><a href="index.html">Smart TVs</a></li>
-                          <li><a href="index-electronics-2.html">LED</a></li>
-                          <li><a href="index-electronics-3.html">Plasma</a></li>
-                          <li><a href="index-electronics-4.html">Others</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Audio & Sound Systems</li>
-                          <li><a href="index.html">Home Theatre</a></li>
-                          <li>
-                            <a href="index-electronics-2.html">HiFi Systems</a>
-                          </li>
-                          <li>
-                            <a href="index-electronics-3.html"
-                              >MP3 Players & Speakers</a
+                          <li class="mega-menu-title">
+                            <router-link
+                              :to="`/shop?category=${category.slug}`"
+                              >{{ category.name }}</router-link
                             >
                           </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Games & Consoles</li>
-                          <li><a href="index-jewelry.html"> PS4 & PS3</a></li>
-                          <li><a href="index-sports.html"> Xbox</a></li>
-                          <li><a href="index-sports.html"> Nintendo Wii</a></li>
-                          <li><a href="index-sports.html"> Sony PSP</a></li>
-                          <li><a href="index-sports.html"> PS Vita</a></li>
-                          <li><a href="index-sports.html"> Nintendo 3DS</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Cameras</li>
-                          <li>
-                            <a href="index-jewelry.html"> Digital Cameras</a>
-                          </li>
-                          <li>
-                            <a href="index-medical.html">
-                              Professional & SLR Cameras</a
+                          <li
+                            v-for="(sub_cat, key) in category.sub_categories"
+                            :key="key"
+                          >
+                            <router-link
+                              :to="`/shop?sub_category=${sub_cat.slug}`"
+                              >{{ sub_cat.name }}</router-link
                             >
                           </li>
-                          <li>
-                            <a href="index-sports.html">
-                              Camcorders & Video Cameras</a
-                            >
-                          </li>
-                          <li>
-                            <a href="index-sports.html">
-                              Camera Lenses & Accessories</a
-                            >
-                          </li>
-                          <li><a href="index-sports.html"> CCTV Cameras</a></li>
                         </ul>
                       </li>
                       <li>
@@ -329,68 +295,32 @@
                 </ul>
               </li>
               <li class="mega-menu-position">
-                <a href="shop.html">
+                <a href="javascript:;">
                   Home & kitchen <i class="ion-chevron-down"></i>
                 </a>
                 <ul class="mega-menu">
                   <li>
                     <ul>
-                      <li>
+                      <li
+                        v-for="(category, index) in home.categories"
+                        :key="index"
+                      >
                         <ul>
-                          <li class="mega-menu-title">Television</li>
-                          <li><a href="index.html">Smart TVs</a></li>
-                          <li><a href="index-electronics-2.html">LED</a></li>
-                          <li><a href="index-electronics-3.html">Plasma</a></li>
-                          <li><a href="index-electronics-4.html">Others</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Audio & Sound Systems</li>
-                          <li><a href="index.html">Home Theatre</a></li>
-                          <li>
-                            <a href="index-electronics-2.html">HiFi Systems</a>
-                          </li>
-                          <li>
-                            <a href="index-electronics-3.html"
-                              >MP3 Players & Speakers</a
+                          <li class="mega-menu-title">
+                            <router-link
+                              :to="`/shop?category=${category.slug}`"
+                              >{{ category.name }}</router-link
                             >
                           </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Games & Consoles</li>
-                          <li><a href="index-jewelry.html"> PS4 & PS3</a></li>
-                          <li><a href="index-sports.html"> Xbox</a></li>
-                          <li><a href="index-sports.html"> Nintendo Wii</a></li>
-                          <li><a href="index-sports.html"> Sony PSP</a></li>
-                          <li><a href="index-sports.html"> PS Vita</a></li>
-                          <li><a href="index-sports.html"> Nintendo 3DS</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Cameras</li>
-                          <li>
-                            <a href="index-jewelry.html"> Digital Cameras</a>
-                          </li>
-                          <li>
-                            <a href="index-medical.html">
-                              Professional & SLR Cameras</a
+                          <li
+                            v-for="(sub_cat, key) in category.sub_categories"
+                            :key="key"
+                          >
+                            <router-link
+                              :to="`/shop?sub_category=${sub_cat.slug}`"
+                              >{{ sub_cat.name }}</router-link
                             >
                           </li>
-                          <li>
-                            <a href="index-sports.html">
-                              Camcorders & Video Cameras</a
-                            >
-                          </li>
-                          <li>
-                            <a href="index-sports.html">
-                              Camera Lenses & Accessories</a
-                            >
-                          </li>
-                          <li><a href="index-sports.html"> CCTV Cameras</a></li>
                         </ul>
                       </li>
                       <li>
@@ -408,68 +338,32 @@
                 </ul>
               </li>
               <li class="mega-menu-position">
-                <a href="shop.html">
+                <a href="javascript:;">
                   Furniture <i class="ion-chevron-down"></i>
                 </a>
                 <ul class="mega-menu">
                   <li>
                     <ul>
-                      <li>
+                      <li
+                        v-for="(category, index) in furniture.categories"
+                        :key="index"
+                      >
                         <ul>
-                          <li class="mega-menu-title">Television</li>
-                          <li><a href="index.html">Smart TVs</a></li>
-                          <li><a href="index-electronics-2.html">LED</a></li>
-                          <li><a href="index-electronics-3.html">Plasma</a></li>
-                          <li><a href="index-electronics-4.html">Others</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Audio & Sound Systems</li>
-                          <li><a href="index.html">Home Theatre</a></li>
-                          <li>
-                            <a href="index-electronics-2.html">HiFi Systems</a>
-                          </li>
-                          <li>
-                            <a href="index-electronics-3.html"
-                              >MP3 Players & Speakers</a
+                          <li class="mega-menu-title">
+                            <router-link
+                              :to="`/shop?category=${category.slug}`"
+                              >{{ category.name }}</router-link
                             >
                           </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Games & Consoles</li>
-                          <li><a href="index-jewelry.html"> PS4 & PS3</a></li>
-                          <li><a href="index-sports.html"> Xbox</a></li>
-                          <li><a href="index-sports.html"> Nintendo Wii</a></li>
-                          <li><a href="index-sports.html"> Sony PSP</a></li>
-                          <li><a href="index-sports.html"> PS Vita</a></li>
-                          <li><a href="index-sports.html"> Nintendo 3DS</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Cameras</li>
-                          <li>
-                            <a href="index-jewelry.html"> Digital Cameras</a>
-                          </li>
-                          <li>
-                            <a href="index-medical.html">
-                              Professional & SLR Cameras</a
+                          <li
+                            v-for="(sub_cat, key) in category.sub_categories"
+                            :key="key"
+                          >
+                            <router-link
+                              :to="`/shop?sub_category=${sub_cat.slug}`"
+                              >{{ sub_cat.name }}</router-link
                             >
                           </li>
-                          <li>
-                            <a href="index-sports.html">
-                              Camcorders & Video Cameras</a
-                            >
-                          </li>
-                          <li>
-                            <a href="index-sports.html">
-                              Camera Lenses & Accessories</a
-                            >
-                          </li>
-                          <li><a href="index-sports.html"> CCTV Cameras</a></li>
                         </ul>
                       </li>
                       <li>
@@ -487,68 +381,32 @@
                 </ul>
               </li>
               <li class="mega-menu-position">
-                <a href="shop.html">
+                <a href="javascript:;">
                   Baby, Kids & Toys <i class="ion-chevron-down"></i>
                 </a>
                 <ul class="mega-menu">
                   <li>
                     <ul>
-                      <li>
+                      <li
+                        v-for="(category, index) in baby.categories"
+                        :key="index"
+                      >
                         <ul>
-                          <li class="mega-menu-title">Television</li>
-                          <li><a href="index.html">Smart TVs</a></li>
-                          <li><a href="index-electronics-2.html">LED</a></li>
-                          <li><a href="index-electronics-3.html">Plasma</a></li>
-                          <li><a href="index-electronics-4.html">Others</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Audio & Sound Systems</li>
-                          <li><a href="index.html">Home Theatre</a></li>
-                          <li>
-                            <a href="index-electronics-2.html">HiFi Systems</a>
-                          </li>
-                          <li>
-                            <a href="index-electronics-3.html"
-                              >MP3 Players & Speakers</a
+                          <li class="mega-menu-title">
+                            <router-link
+                              :to="`/shop?category=${category.slug}`"
+                              >{{ category.name }}</router-link
                             >
                           </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Games & Consoles</li>
-                          <li><a href="index-jewelry.html"> PS4 & PS3</a></li>
-                          <li><a href="index-sports.html"> Xbox</a></li>
-                          <li><a href="index-sports.html"> Nintendo Wii</a></li>
-                          <li><a href="index-sports.html"> Sony PSP</a></li>
-                          <li><a href="index-sports.html"> PS Vita</a></li>
-                          <li><a href="index-sports.html"> Nintendo 3DS</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul>
-                          <li class="mega-menu-title">Cameras</li>
-                          <li>
-                            <a href="index-jewelry.html"> Digital Cameras</a>
-                          </li>
-                          <li>
-                            <a href="index-medical.html">
-                              Professional & SLR Cameras</a
+                          <li
+                            v-for="(sub_cat, key) in category.sub_categories"
+                            :key="key"
+                          >
+                            <router-link
+                              :to="`/shop?sub_category=${sub_cat.slug}`"
+                              >{{ sub_cat.name }}</router-link
                             >
                           </li>
-                          <li>
-                            <a href="index-sports.html">
-                              Camcorders & Video Cameras</a
-                            >
-                          </li>
-                          <li>
-                            <a href="index-sports.html">
-                              Camera Lenses & Accessories</a
-                            >
-                          </li>
-                          <li><a href="index-sports.html"> CCTV Cameras</a></li>
                         </ul>
                       </li>
                       <li>
@@ -584,6 +442,12 @@ export default {
   },
   props: {
     categories: Array,
+    phone: Object,
+    computer: Object,
+    baby: Object,
+    furniture: Object,
+    electronic: Object,
+    home: Object,
   },
   data: function () {
     return {

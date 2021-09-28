@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             PaymentMethodSeeder::class,
             SettingSeeder::class,
             EmailTemplateSeeder::class,
+            TopLevelCategorySeeder::class,
             CategorySeeder::class,
             SubCategorySeeder::class,
             UserSeeder::class,

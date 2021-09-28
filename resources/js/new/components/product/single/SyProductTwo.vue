@@ -55,7 +55,7 @@
             <i class="ion-android-star-outline theme-star"></i>
             <i class="ion-android-star-outline"></i>
           </div>
-          <p v-html="product.description"></p>
+          <p v-html="product.description.substring(0, 180)"></p>
           <div class="product-action">
             <router-link
               to="/wishlist"
