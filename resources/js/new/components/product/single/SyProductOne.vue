@@ -13,17 +13,11 @@
             /></router-link>
             <router-link :to="`/product/${product.slug}`"
               ><img
-                v-lazy="`${product.featured_image}`"
-                :alt="product.name"
-                :width="product.featured_image.width"
-                :height="product.featured_image.height"
+                :src="`assets/img/product/product-${product.id}.jpg`"
+                alt=""
             /></router-link>
-            <router-link :to="`/product/${product.slug}`"
-              ><img
-                v-lazy="`${product.featured_image}`"
-                :alt="product.name"
-                :width="product.featured_image.width"
-                :height="product.featured_image.height"
+            <router-link :to="`/product/${product.slug}`">
+              <img src="assets/img/product/product-5.jpg" alt=""
             /></router-link>
           </VueSlickCarousel>
         </div>

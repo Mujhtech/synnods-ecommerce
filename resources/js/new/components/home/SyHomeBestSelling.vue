@@ -20,7 +20,7 @@
       <div class="tab-content jump">
         <div class="tab-pane active" id="home4">
           <div class="best-selling-active-2 nav-style">
-            <carousel :autoplay="true" :nav="true" :dots="false" :items="1">
+            <carousel :autoplay="true" :nav="false" :dots="false" :items="1">
               <div class="best-selling-bundle-2">
                 <div class="row">
                   <div class="col-lg-12 col-xl-8 col-md-12">

@@ -2,12 +2,14 @@
   <div class="single-product-wrapper">
     <div class="single-product-img">
       <router-link :to="`/product/${product.slug}`"
-        ><img
+        ><!--<img
           v-lazy="`${product.featured_image}`"
           :alt="product.name"
           width="110"
           height="110"
-      /></router-link>
+      />-->
+        <img :src="`assets/img/product/product-${product.id}.jpg`" />
+      </router-link>
     </div>
     <div class="product-content">
       <span
