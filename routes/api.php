@@ -1,18 +1,18 @@
 <?php
 
+use App\Http\Controllers\API\AdminController;
+use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\BrandController;
+use App\Http\Controllers\API\CategoryController;
+use App\Http\Controllers\API\CheckoutController;
+use App\Http\Controllers\API\MediaController;
+use App\Http\Controllers\API\NewsletterController;
+use App\Http\Controllers\API\ProductController;
+use App\Http\Controllers\API\SubCategoryController;
+use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\VendorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\API\AuthController;
-use App\Http\Controllers\API\UserController;
-use App\Http\Controllers\API\ProductController;
-use App\Http\Controllers\API\CategoryController;
-use App\Http\Controllers\API\SubCategoryController;
-use App\Http\Controllers\API\VendorController;
-use App\Http\Controllers\API\NewsletterController;
-use App\Http\Controllers\API\AdminController;
-use App\Http\Controllers\API\BrandController;
-use App\Http\Controllers\API\MediaController;
-use App\Http\Controllers\API\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ use App\Http\Controllers\API\CheckoutController;
 Route::get('/', function (Request $request) {
     return response()->json([
         'status' => 'success',
-        'message' => 'Api is up and running'
+        'message' => 'Api is up and running',
     ], 200, $request->header());
 });
 
@@ -40,7 +40,6 @@ Route::group(['prefix' => 'v1'], function () {
     Route::post('unsubcribe', [NewsletterController::class, 'unsubscribe'])->name('unsubscribe');
 
     // Authentication routes
-
 
     Route::prefix('auth')->name('auth.')->group(function () {
 
@@ -59,7 +58,7 @@ Route::group(['prefix' => 'v1'], function () {
         Route::post('verify', [AuthController::class, 'verify'])->name('verify');
 
         Route::get('profile', [AuthController::class, 'user'])->middleware('auth:api')->name('profile');
-        
+
     });
 
     // Product routes
@@ -79,10 +78,10 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('/vendor/{slug}', [ProductController::class, 'byVendor'])->name('index');
 
         Route::post('create', [ProductController::class, 'store'])->name('create');
-        
+
     });
 
-    // Vendors route 
+    // Vendors route
 
     Route::prefix('vendor')->name('vendor.')->group(function () {
 
@@ -95,10 +94,10 @@ Route::group(['prefix' => 'v1'], function () {
         Route::post('create', [VendorController::class, 'store'])->name('create');
 
         Route::put('update', [VendorController::class, 'store'])->name('update');
-        
+
     });
 
-    // Category routes 
+    // Category routes
 
     Route::prefix('category')->name('category.')->group(function () {
 
@@ -107,12 +106,10 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('/', [CategoryController::class, 'index'])->name('index');
 
         Route::get('/{slug}', [CategoryController::class, 'single'])->name('single');
-        
+
     });
 
-
-
-    // Subcategory routes 
+    // Subcategory routes
 
     Route::prefix('sub_category')->name('sub_category.')->group(function () {
 
@@ -125,9 +122,8 @@ Route::group(['prefix' => 'v1'], function () {
         Route::post('create', [SubCategoryController::class, 'store'])->name('create');
 
         Route::put('update', [SubCategoryController::class, 'store'])->name('update');
-        
-    });
 
+    });
 
     // User routes
 
@@ -142,9 +138,8 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('shipping/remove/{address}', [UserController::class, 'removeShippingAddress'])->name('shipping.remove');
 
         Route::get('shipping/default/{address}', [UserController::class, 'makeDefaultAddress'])->name('shipping.default');
-        
-    });
 
+    });
 
     Route::prefix('checkout')->name('checkout.')->middleware('auth:api')->group(function () {
 
@@ -153,7 +148,7 @@ Route::group(['prefix' => 'v1'], function () {
         Route::post('coupon', [CheckoutController::class, 'checkCoupon'])->name('coupon');
 
         Route::post('shipping', [CheckoutController::class, 'getShippingQoute'])->name('shipping');
-        
+
     });
 
 });
@@ -177,18 +172,20 @@ Route::prefix('v2')->group(function () {
         Route::post('verify', [AuthController::class, 'verify'])->name('verify');
 
         Route::get('profile', [AuthController::class, 'user'])->middleware('auth:api')->name('profile');
-        
+
     });
 
     Route::prefix('newsletter')->name('newsletter.')->middleware(["auth:api"])->group(function () {
 
         Route::get('/', [NewsletterController::class, 'index'])->name('index');
-    
+
     });
 
     Route::prefix('category')->name('category.')->middleware(["auth:api"])->group(function () {
 
         Route::get('/', [CategoryController::class, 'index'])->name('index');
+
+        Route::get('/top-level', [CategoryController::class, 'topLevel'])->name('top');
 
         Route::get('/single/{slug}', [CategoryController::class, 'single'])->name('single');
 
@@ -197,9 +194,8 @@ Route::prefix('v2')->group(function () {
         Route::post('create', [CategoryController::class, 'store'])->name('create');
 
         Route::post('update', [CategoryController::class, 'update'])->name('update');
-        
-    });
 
+    });
 
     Route::prefix('sub_category')->name('sub_category.')->middleware(["auth:api"])->group(function () {
 
@@ -212,9 +208,8 @@ Route::prefix('v2')->group(function () {
         Route::post('create', [SubCategoryController::class, 'store'])->name('create');
 
         Route::post('update', [SubCategoryController::class, 'update'])->name('update');
-        
-    });
 
+    });
 
     Route::prefix('brand')->name('brand.')->middleware(["auth:api"])->group(function () {
 
@@ -227,9 +222,8 @@ Route::prefix('v2')->group(function () {
         Route::post('create', [BrandController::class, 'store'])->name('create');
 
         Route::post('update', [BrandController::class, 'update'])->name('update');
-        
-    });
 
+    });
 
     Route::prefix('admin')->name('admin.')->middleware(["auth:api"])->group(function () {
 
@@ -254,9 +248,8 @@ Route::prefix('v2')->group(function () {
         Route::get('/contacts', [AdminController::class, 'contacts'])->name('contact');
 
         Route::get('/contact/{contact}', [AdminController::class, 'getContact'])->name('contact.single');
-        
-    });
 
+    });
 
     Route::prefix('media')->name('media.')->middleware(["auth:api"])->group(function () {
 
@@ -272,9 +265,7 @@ Route::prefix('v2')->group(function () {
 
         Route::post('/delete-file', [MediaController::class, 'destroyFile'])->name('df');
 
-        
     });
-
 
     Route::prefix('product')->name('product.')->group(function () {
 
@@ -289,9 +280,8 @@ Route::prefix('v2')->group(function () {
         Route::post('create', [ProductController::class, 'store'])->name('create');
 
         Route::post('update', [ProductController::class, 'update'])->name('update');
-        
-    });
 
+    });
 
 });
 

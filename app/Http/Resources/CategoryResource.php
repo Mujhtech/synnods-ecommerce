@@ -22,7 +22,9 @@ class CategoryResource extends JsonResource
             'image' => $this->image ? $this->logo_url : null,
             'slug' => $this->slug,
             'status' => $this->status,
-            'sub_categories' => SubCategoryResource::collection($this->sub_categories)
+            'top_level_category_id' => $this->top_level_category_id,
+            'top_level_category' => TopLevelCategoryResource::make($this->top_level),
+            'sub_categories' => SubCategoryResource::collection($this->sub_categories),
         ];
     }
 }
