@@ -178,10 +178,12 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <strong><router-link
-                              :to="`/shop?category=${category.slug}`"
-                              >{{ category.name }}</router-link
-                            ></strong>
+                            <strong
+                              ><router-link
+                                :to="`/shop?category=${category.slug}`"
+                                >{{ category.name }}</router-link
+                              ></strong
+                            >
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
@@ -194,13 +196,13 @@
                           </li>
                         </ul>
                       </li>
-                      <li style="width: 32%">
+                      <li style="width: 32%" v-if="computer.image">
                         <div
                           style="height: 200px; width: 100%; overflow: hidden"
                         >
                           <img
                             style="margin-top: -200px"
-                            src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/customcmsmenu/item/comp21.png"
+                            :src="`${computer.image}`"
                           />
                         </div>
                       </li>
@@ -221,10 +223,12 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <strong><router-link
-                              :to="`/shop?category=${category.slug}`"
-                              >{{ category.name }}</router-link
-                            ></strong>
+                            <strong
+                              ><router-link
+                                :to="`/shop?category=${category.slug}`"
+                                >{{ category.name }}</router-link
+                              ></strong
+                            >
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
@@ -237,13 +241,13 @@
                           </li>
                         </ul>
                       </li>
-                      <li style="width: 32%">
+                      <li style="width: 32%" v-if="phone.image">
                         <div
                           style="height: 200px; width: 100%; overflow: hidden"
                         >
                           <img
                             style="margin-top: -200px"
-                            src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/customcmsmenu/item/phones21.png"
+                            :src="`${phone.image}`"
                           />
                         </div>
                       </li>
@@ -264,10 +268,12 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <strong><router-link
-                              :to="`/shop?category=${category.slug}`"
-                              >{{ category.name }}</router-link
-                            ></strong>
+                            <strong
+                              ><router-link
+                                :to="`/shop?category=${category.slug}`"
+                                >{{ category.name }}</router-link
+                              ></strong
+                            >
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
@@ -280,13 +286,13 @@
                           </li>
                         </ul>
                       </li>
-                      <li>
+                      <li style="width: 32%" v-if="electronic.image">
                         <div
                           style="height: 200px; width: 100%; overflow: hidden"
                         >
                           <img
                             style="margin-top: -200px"
-                            src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/customcmsmenu/item/Electronics21.png"
+                            :src="`${electronic.image}`"
                           />
                         </div>
                       </li>
@@ -307,10 +313,12 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <strong><router-link
-                              :to="`/shop?category=${category.slug}`"
-                              >{{ category.name }}</router-link
-                            ></strong>
+                            <strong
+                              ><router-link
+                                :to="`/shop?category=${category.slug}`"
+                                >{{ category.name }}</router-link
+                              ></strong
+                            >
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
@@ -323,13 +331,13 @@
                           </li>
                         </ul>
                       </li>
-                      <li>
+                      <li style="width: 32%" v-if="home.image">
                         <div
                           style="height: 200px; width: 100%; overflow: hidden"
                         >
                           <img
                             style="margin-top: -200px"
-                            src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/customcmsmenu/item/Electronics21.png"
+                            :src="`${home.image}`"
                           />
                         </div>
                       </li>
@@ -350,10 +358,12 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <strong><router-link
-                              :to="`/shop?category=${category.slug}`"
-                              >{{ category.name }}</router-link
-                            ></strong>
+                            <strong
+                              ><router-link
+                                :to="`/shop?category=${category.slug}`"
+                                >{{ category.name }}</router-link
+                              ></strong
+                            >
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
@@ -366,13 +376,13 @@
                           </li>
                         </ul>
                       </li>
-                      <li>
+                      <li style="width: 32%" v-if="furniture.image">
                         <div
                           style="height: 200px; width: 100%; overflow: hidden"
                         >
                           <img
                             style="margin-top: -200px"
-                            src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/customcmsmenu/item/Electronics21.png"
+                            :src="`${computer.image}`"
                           />
                         </div>
                       </li>
@@ -393,10 +403,12 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <strong><router-link
-                              :to="`/shop?category=${category.slug}`"
-                              >{{ category.name }}</router-link
-                            ></strong>
+                            <strong
+                              ><router-link
+                                :to="`/shop?category=${category.slug}`"
+                                >{{ category.name }}</router-link
+                              ></strong
+                            >
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
@@ -409,13 +421,13 @@
                           </li>
                         </ul>
                       </li>
-                      <li>
+                      <li style="width: 32%" v-if="baby.image">
                         <div
                           style="height: 200px; width: 100%; overflow: hidden"
                         >
                           <img
                             style="margin-top: -200px"
-                            src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/customcmsmenu/item/Electronics21.png"
+                            :src="`${baby.image}`"
                           />
                         </div>
                       </li>
