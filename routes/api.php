@@ -185,7 +185,13 @@ Route::prefix('v2')->group(function () {
 
         Route::get('/', [CategoryController::class, 'index'])->name('index');
 
-        Route::get('/top-level', [CategoryController::class, 'topLevel'])->name('top');
+        Route::get('/top-level', [CategoryController::class, 'topLevel'])->name('top.index');
+
+        Route::get('/top-level/single/{slug}', [CategoryController::class, 'topLevelSingle'])->name('top.single');
+
+        Route::post('/top-level/create', [CategoryController::class, 'storeTopLevel'])->name('top.create');
+
+        Route::post('/top-level/update', [CategoryController::class, 'updateTopLevel'])->name('top.update');
 
         Route::get('/single/{slug}', [CategoryController::class, 'single'])->name('single');
 

@@ -178,10 +178,10 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <router-link
+                            <strong><router-link
                               :to="`/shop?category=${category.slug}`"
                               >{{ category.name }}</router-link
-                            >
+                            ></strong>
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
@@ -221,10 +221,10 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <router-link
+                            <strong><router-link
                               :to="`/shop?category=${category.slug}`"
                               >{{ category.name }}</router-link
-                            >
+                            ></strong>
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
@@ -264,10 +264,10 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <router-link
+                            <strong><router-link
                               :to="`/shop?category=${category.slug}`"
                               >{{ category.name }}</router-link
-                            >
+                            ></strong>
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
@@ -307,10 +307,10 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <router-link
+                            <strong><router-link
                               :to="`/shop?category=${category.slug}`"
                               >{{ category.name }}</router-link
-                            >
+                            ></strong>
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
@@ -350,10 +350,10 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <router-link
+                            <strong><router-link
                               :to="`/shop?category=${category.slug}`"
                               >{{ category.name }}</router-link
-                            >
+                            ></strong>
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
@@ -393,10 +393,10 @@
                       >
                         <ul>
                           <li class="mega-menu-title">
-                            <router-link
+                            <strong><router-link
                               :to="`/shop?category=${category.slug}`"
                               >{{ category.name }}</router-link
-                            >
+                            ></strong>
                           </li>
                           <li
                             v-for="(sub_cat, key) in category.sub_categories"
