@@ -21,6 +21,7 @@ class CreateDiscountsTable extends Migration
             $table->dateTime('start_date');
             $table->dateTime('expiry_date')->nullable();
             $table->boolean('expired')->default(false);
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }

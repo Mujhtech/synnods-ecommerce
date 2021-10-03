@@ -15,13 +15,12 @@ class CreateShipmentsTable extends Migration
     {
         Schema::create('shipments', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('phone');
-            $table->string('email');
             $table->string('country');
             $table->string('state');
             $table->string('city');
-            $table->string('plans');
+            $table->string('type');
+            $table->double('price', 15, 2)->default(0.0);
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }
