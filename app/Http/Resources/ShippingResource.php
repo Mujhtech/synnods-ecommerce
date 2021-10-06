@@ -16,6 +16,12 @@ class ShippingResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'state' => $this->state,
+            'city' => $this->city,
+            'amount' => $this->price,
+            'country' => $this->country,
+            'type' => $this->type,
+            'status' => $this->status ? true : false,
         ];
     }
 }
