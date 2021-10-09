@@ -17,7 +17,9 @@ class PaymentMethodResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'type' => $this->type
+            'type' => $this->type,
+            'description' => $this->description,
+            'status' => $this->status ? true : false,
         ];
     }
 }

@@ -20,6 +20,7 @@ class DiscountResource extends JsonResource
             'amount' => $this->total_price,
             'type' => $this->type,
             'expired' => $this->expired ? true : false,
+            'status' => $this->status ? true : false,
             'start' => $this->start_date->diffForHumans(),
             'end' => $this->expiry_date->diffForHumans(),
         ];

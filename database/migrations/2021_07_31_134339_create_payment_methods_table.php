@@ -17,6 +17,7 @@ class CreatePaymentMethodsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('type');
+            $table->longText('description')->nullable();
             $table->boolean('status')->default(false);
             $table->timestamps();
         });

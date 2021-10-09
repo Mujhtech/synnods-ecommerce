@@ -7,6 +7,7 @@ use App\Http\Resources\ActivityLogResource;
 use App\Http\Resources\ContactResource;
 use App\Http\Resources\DiscountResource;
 use App\Http\Resources\ErrorLogResource;
+use App\Http\Resources\PaymentMethodResource;
 use App\Http\Resources\RoleResource;
 use App\Http\Resources\ShippingResource;
 use App\Http\Resources\UserResource;
@@ -14,6 +15,7 @@ use App\Models\ActivityLog;
 use App\Models\Contact;
 use App\Models\Discount;
 use App\Models\ErrorLog;
+use App\Models\PaymentMethod;
 use App\Models\Role;
 use App\Models\Shipment;
 use App\Models\User;
@@ -265,11 +267,12 @@ class AdminController extends ApiController
 
         $discount = new Discount;
 
-        $discount->country = $request->country;
-        $discount->state = $request->state;
-        $discount->city = $request->city;
+        $discount->start_date = $request->from;
+        $discount->expiry_date = $request->to;
+        $discount->code = $request->code;
         $discount->type = $request->type;
-        $discount->price = $request->amount;
+        $discount->expired = 0;
+        $discount->total_price = $request->amount;
         $discount->status = $request->publish == "true" ? 1 : 0;
 
         if ($discount->save()) {
@@ -302,17 +305,55 @@ class AdminController extends ApiController
 
         }
 
-        $discount->country = $request->country;
-        $discount->state = $request->state;
-        $discount->city = $request->city;
+        $discount->start_date = $request->from;
+        $discount->expiry_date = $request->to;
+        $discount->code = $request->code;
         $discount->type = $request->type;
-        $discount->price = $request->amount;
+        $discount->expired = 0;
+        $discount->total_price = $request->amount;
         $discount->status = $request->publish == "true" ? 1 : 0;
 
         if ($discount->save()) {
 
             return $this->setStatusCode(200)->setStatusMessage('success')->respond([
                 'discount' => DiscountResource::make($discount),
+                'message' => 'Data save successfully',
+            ]);
+
+        } else {
+
+            return $this->setStatusCode(500)->setStatusMessage('error')->respond([
+                'message' => 'Something went wrong',
+            ]);
+
+        }
+
+    }
+
+    public function paymentMethod()
+    {
+
+        $payment_methods = PaymentMethod::get();
+
+        return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+            'data' => PaymentMethodResource::collection($payment_methods),
+        ]);
+
+    }
+
+    public function updatePaymentMethod(Request $request)
+    {
+
+        $payment_method = PaymentMethod::find($request->payment_id);
+
+        $payment_method->status = $request->status == "true" ? 1 : 0;
+
+        $payment_method->description = $request->description;
+
+        if ($payment_method->save()) {
+
+            return $this->setStatusCode(200)->setStatusMessage('success')->respond([
+                'data' => PaymentMethodResource::collection(PaymentMethod::get()),
                 'message' => 'Data save successfully',
             ]);
 

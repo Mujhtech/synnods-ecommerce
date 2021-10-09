@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AdminController;
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\BrandController;
 use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\MediaController;
 use App\Http\Controllers\API\NewsletterController;
@@ -95,6 +96,10 @@ Route::prefix('v2')->group(function () {
         Route::post('/store/update', [VendorController::class, 'update'])->name('store.update');
 
         Route::get('/users', [AdminController::class, 'users'])->name('users');
+
+        Route::get('/payments', [AdminController::class, 'paymentMethod'])->name('payment.method');
+
+        Route::post('/payment/update', [AdminController::class, 'updatePaymentMethod'])->name('payment.update');
 
         Route::get('/customers', [AdminController::class, 'customers'])->name('customers');
 
